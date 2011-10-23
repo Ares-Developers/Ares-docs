@@ -1,0 +1,18 @@
+BuildingType Upgrades Are Not Viable Prerequisites
+``````````````````````````````````````````````````
+
+Before Ares, upgrades did not appear to work as prerequisites if you
+had the upgrade, you still didn't satisfy the prerequisite. In fact,
+only the most recently constructed BuildingType would be checked to
+see if it had the upgrade. With Ares, all upgrades on all
+BuildingTypes are eligible to satisfy any prerequisite logic that a
+normal BuildingType can.
+
+In addition, upgrades can now satisfy a super weapon's `AuxBuilding`.
+Building upgrades can now be used as prerequisites.
+
+.. versionadded:: 0.1
+
+
+
+<<<SEPARATOR>>>

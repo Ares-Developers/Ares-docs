@@ -1,0 +1,12 @@
+PKT Duplication
+```````````````
+
+Multiple loose PKT files can now be used without their contents being
+duplicated (unless you duplicate the mapfilters, of course). Multiple
+loose PKT files no longer have their contents duplicated.
+
+.. versionadded:: 0.1
+
+
+
+<<<SEPARATOR>>>

@@ -1,0 +1,16 @@
+Hardcoded Wall/Gate Interactions
+````````````````````````````````
+
+In Tiberian Sun you could place buildable gates on top of existing
+walls. This logic still exists in Yuri's Revenge. However, the logic
+was hardcoded to only work with GAWALL and NAWALL, so it wouldn't work
+with Yuri's wall (YAWALL) or, indeed, any other walls you might add to
+the game. Ares changes this so that all overlays with `Wall=yes` set
+can have gates "slammed" onto them.
+NB: The automatic joining of walls to the gates still only works for
+GAWALL and NAWALL however this will be fixed in future. Gates can be
+slammed onto any walls, not just GAWALL or NAWALL.
+
+
+
+<<<SEPARATOR>>>

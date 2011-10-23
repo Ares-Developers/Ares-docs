@@ -1,0 +1,14 @@
+OpenTopped Transports Do Not Decloak To Fire
+````````````````````````````````````````````
+
+If a passenger inside an 'open topped' vehicle (e.g. the Battle
+Fortress) fired a weapon with `DecloakToFire=yes` set then the open
+topped vehicle (if it were cloaked) would not decloak when the weapon
+was fired. Now it will. OpenTopped transports will decloak to fire
+when their passengers fire.
+
+.. versionadded:: 0.1
+
+
+
+<<<SEPARATOR>>>

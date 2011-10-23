@@ -1,0 +1,15 @@
+Cloakable AircraftTypes and BuildingTypes
+`````````````````````````````````````````
+
+Until now, AircraftTypes and BuildingTypes have ignored the existence
+of `Cloakable=yes`. Now, if this tag is included on the entry of a
+BuildingType or AircraftType, it will cloak.
+
+Note: AircraftTypes will decloak when told to attack , not once they
+are within firing range.
+
+.. versionadded:: 0.2
+AircraftTypes and BuildingTypes can now be cloakable.
+
+
+<<<SEPARATOR>>>

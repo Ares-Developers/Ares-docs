@@ -1,0 +1,59 @@
+User Interface Colors
+~~~~~~~~~~~~~~~~~~~~~
+
+To complement the graphical user interface elements Yuri's Revenge
+relies on a set of hardcoded colors. Customize the colors used to draw
+texts and borders with these Ares tags. Custom User Interface Colors.
+
+All these uimd.ini tags are RGB colors, that is three comma separated
+values from 0 to 255.
+
+Please note the special combobox (dropdown list) state for dropdown
+lists in Observer mode, that is it has its Observer entry selected.
+Yuri's Revenge uses grey colors and special graphical elements to
+denote this state. Changing the global values will not change the
+Observer colors, you'll have to define the specific `Color.Observer.*`
+tags.
+
+:[UISettings]Color.Border1= (R,G,B): The first color control borders
+  are drawn in. Defaults to `167,190,197`. Color.Border1=
+:[UISettings]Color.Border2= (R,G,B): The second color control borders
+  are drawn in. Defaults to `104,122,128`. Color.Border2=
+:[UISettings]Color.Text= (R,G,B): The default color all texts are
+  drawn in. This does not affect Observer dropdown lists, see
+  `Color.Observer.Text`. Defaults to `255,255,0` (yellow). Color.Text=
+:[UISettings]Color.X.Text= (R,G,B): The text color for certain types
+  of controls. `X` can be one of `Button`, `Label` (descriptions),
+  `List`, `Checkbox`, `Combobox` (dropdown lists), `Observer` (dropdown
+  lists in with Observer selected), `Groupbox` (frames), `Slider`, or
+  `Edit` (text boxes). Defaults to `238,238,238` (light grey) for
+  `Observer`, to `[UISettings]Color.Text` otherwise. Color.X.Text=
+:[UISettings]Color.Selection= (R,G,B): The default background color
+  for selected items. This does not affect Observer dropdown lists, see
+  `Color.Observer.Selection`. Defaults to `255,0,0` (red).
+  Color.Selection=
+:[UISettings]Color.X.Selection= (R,G,B): The background color for
+  selected items of certain types of controls. `X` can be one of `List`,
+  `Combobox` (dropdown lists) or `Observer` (dropdown lists in with
+  Observer selected). Defaults to `98,98,98` (dark grey) for `Observer`,
+  to `[UISettings]Color.Selection` otherwise. Color.X.Selection=
+:[UISettings]Color.Disabled= (R,G,B): The default color texts of
+  disabled controls are drawn in. This does not affect the color of
+  disabled buttons and Observer dropdown lists, see below. Defaults to
+  `159,0,0` (dark red). Color.Disabled=
+:[UISettings]Color.X.Disabled= (R,G,B): The text color of disabled
+  controls of certain types. `X` can be one of `Button`, `Label`
+  (descriptions), `List`, `Checkbox`, `Combobox` (dropdown lists),
+  `Observer` (dropdown lists in with Observer selected), or `Slider`.
+  Defaults to `167,0,0` (dark red) for `Button`, to `143,143,143` (grey)
+  for `Observer`, to `[UISettings]Color.Disabled` otherwise.
+  Color.X.Disabled=
+
+NB: This feature does not support recoloring the dialog prompting for
+the Yuri's Revenge disk when starting the game.
+
+.. versionadded:: 0.2
+
+
+
+<<<SEPARATOR>>>

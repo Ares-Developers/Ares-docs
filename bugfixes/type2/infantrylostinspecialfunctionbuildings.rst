@@ -1,0 +1,20 @@
+Infantry Lost In Special Function Buildings
+```````````````````````````````````````````
+
+Infantry sent into an Armory or old-style Tech Hospital emerge a few
+moments later, having had the relevant benefit applied (e.g. promotion
+or healing). However, if the building were destroyed, sold or
+undeployed whilst the InfantryType were still inside then that
+InfantryType would remain in 'limbo' whilst still counting towards the
+owning player's units (e.g. defeat conditions, build limit, etc). Ares
+will make sure that such InfantryTypes are ejected from the building
+in those situations. Infantry still inside a Hospital or Armory when
+it is destroyed/sold may go into limbo instead of emerging, meaning
+that they still count towards the player's units. Now they will
+emerge.
+
+.. versionadded:: 0.1
+
+
+
+<<<SEPARATOR>>>

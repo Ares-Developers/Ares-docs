@@ -1,0 +1,48 @@
+[#include]
+~~~~~~~~~~
+
+Ares allows you to split your rulesmd.ini file up into separate pieces
+so as to better organise the various settings. Any INI files you list
+under the new `[#include]` section will be loaded once the main file
+itself has finished loading. INI files included in this manner can
+also specify their own `[#include]` section to load further INIs.
+There is no depth limit, and the file loading recursion is depth-first
+(In English: if the original INI file includes multiple files, and an
+included file includes other files itself, those second-level files
+will be included before resuming inclusion of the remaining first-
+level ones. Recurse again if necessary.)
+
+For example, the `[#include]` section you specify in rulesmd.ini may
+look something like this:
+
+
+::
+
+    [#include]
+    1=rules_sw.ini
+    2=rules_vehicles.ini
+    3=rules_buildings.ini
+    4=rules_aircraft.ini
+    5=rules_infantry.ini
+
+
+As each INI file is loaded, any flag that is encountered that has
+already been defined will have its value updated with the newly found
+value. Using the above include list as an example, if
+`[E1]Strength=200` is specified in rulesmd.ini, and `[E1]Strength=300`
+is specified in rules_infantry.ini, then the GI will have
+`Strength=300` in-game.
+
+INI files are taken to be relative to the Red Alert 2 directory.
+Values in the include list can include subfolders (e.g.
+`5=MyMod\rules_infantry.ini`). The currently loaded MIXes are also
+scanned for the files if a loose file of that name cannot be found,
+however, this only works if you do not specify a subfolder.
+`[#include]` section allows rulesmd.ini to be split up into separate
+files. #include
+
+.. versionadded:: 0.1
+
+
+
+<<<SEPARATOR>>>
