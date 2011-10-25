@@ -23,6 +23,9 @@ Collaborators
 ========================  ============
 Project Manager           Nighthawk
 Documentation Maintainer  Steel Mirage
+User Support Agent        GraionDilach
+Project Ambassador        GraionDilach
+Promo Material Creator    Speeder
 ========================  ============
 
 Special Thanks
