@@ -13,6 +13,7 @@ Table of Contents
 .. toctree::
 	:glob:
 	
+	intro
 	bugfixes/index
 	restored/index
 	new/index
