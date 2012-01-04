@@ -1,14 +1,12 @@
-Chronoshift Will Sink Jumpjet Units
-```````````````````````````````````
+.. index:: JumpJet; Jumpjet units will sink when chronoshifted into water.
 
-If a jumpjet unit with `SpeedType=Hover` like the Nighthawk or the
+===================================
+Chronoshift Will Sink Jumpjet Units
+===================================
+
+If a jumpjet unit with ``SpeedType=Hover`` like the Nighthawk or the
 deployed Siege Chopper was chronoshifted into water it originally
 would not sink. The unit would even be able to take off unharmed. Ares
-will let these jumpjet units sink. Jumpjet units will sink when
-chronoshifted into water.
+will let these jumpjet units sink. 
 
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>

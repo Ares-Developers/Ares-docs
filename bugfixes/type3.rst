@@ -1,8 +1,8 @@
 ==========================
 Type 3 Fixes (Performance)
 ==========================
-+ pips.shp was getting reloaded from disk six times in a row.
-+ A commonly used function, ObjectClass::GetCell, performed the same
++ :file:`pips.shp` was getting reloaded from disk six times in a row.
++ A commonly used function, ``ObjectClass::GetCell``, performed the same
   tasks twice.
 + During startup, many superfluous calls were made to the debug log
   file writer.
@@ -11,7 +11,7 @@ Type 3 Fixes (Performance)
   generation).
 + Some particularly fast CPUs could cause the game to crash on
   startup.
-+ There exists a version of ddraw.dll that is often touted as
++ There exists a version of :file:`ddraw.dll` that is often touted as
   improving the performance of Yuri's Revenge. This "magic" DLL forces
   DirectDraw into software emulation mode, which doesn't use any
   hardware accelerated GPU functionality. This means special effects
@@ -21,7 +21,6 @@ Type 3 Fixes (Performance)
   DirectX 10 - which does not support software emulation - so Ares will
   not default to software emulation mode on those versions of Windows
   (otherwise users would just get a completely black screen).
-
 
 .. versionadded:: 0.1
 	Several performance enhancements.

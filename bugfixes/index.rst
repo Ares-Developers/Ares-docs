@@ -15,9 +15,10 @@ Ares provides three types of bug fixes:
 .. note:: Restored features from Tiberian Sun have their own category and are
 	not considered fixed bugs under any of these definitions, particularly 2.
 	
-.. todo:: Link TibSun restores.
+.. todo:: Add link to TibSun restores section.
 
 .. toctree::
-	:glob:
 	
-	**
+	type1/index.rst
+	type2/index.rst
+	type3.rst
