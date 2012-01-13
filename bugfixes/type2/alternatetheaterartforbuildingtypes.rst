@@ -1,7 +1,10 @@
-Alternate Theater Art For BuildingTypes
-```````````````````````````````````````
+.. index:: Theaters; Alternate Theater Art for all BuildingTypes regardless of first letter.
 
-BuildingTypes whose artmd.ini entry has `NewTheater=yes` set would
+=======================================
+Alternate Theater Art For BuildingTypes
+=======================================
+
+BuildingTypes whose artmd.ini entry has ``NewTheater=yes`` set would
 have the second letter of their SHP filenames replaced by another
 letter, depending on the theater of the current map. For example,
 GAWEAP uses SHP files named GAWEAP* on arctic maps, GTWEAP* on
@@ -9,13 +12,8 @@ temperate maps, GDWEAP* on desert maps and so on. In the event that a
 SHP file with the appropriate filename does not exist, the game falls
 back to GGWEAP*.
 However, in Yuri's Revenge this filename-adjusting logic only works
-for BuildingTypes whose `Image` ID starts with G, N, Y or C. Ares
-extends this logic to work for `Image` IDs starting with any letter
+for BuildingTypes whose ``Image`` ID starts with G, N, Y or C. Ares
+extends this logic to work for ``Image`` IDs starting with any letter
 (A-Z or a-z).
-Alternate Theater Art for all BuildingTypes, regardless of first
-letter.
+
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>

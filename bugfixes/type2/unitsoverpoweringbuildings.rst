@@ -1,16 +1,14 @@
+.. index:: Overpowering; Vehicles can overpower buildings.
+
+============================
 Units overpowering buildings
-````````````````````````````
+============================
 
 Tesla Troopers, for example, can overpower Tesla Coils to make them
 fire a more powerful weapon. If the same logic were applied to
 vehicles (for example, the Tesla Tank), to make them overpower
 buildings in the same way, then the overpowering weapon of the vehicle
 would fire but would not, in fact, overpower the building. Now
-vehicles can overpower buildings properly. Vehicles can overpower
-buildings.
+vehicles can overpower buildings properly.
 
 .. versionadded:: 0.1
-
-
-
-<<<SEPARATOR>>>

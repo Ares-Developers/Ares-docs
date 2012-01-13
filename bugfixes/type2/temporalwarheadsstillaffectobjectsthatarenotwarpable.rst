@@ -1,14 +1,14 @@
-Temporal Warheads Still Affect Objects That Are Not Warpable
-````````````````````````````````````````````````````````````
+.. index:: Temporal; Temporal warheads no longer affect objects that are not Warpable.
 
-Attacking a unit with a `Temporal=yes` warhead when it should not be
-susceptible due to having `Warpable=no` set, could still experience
+============================================================
+Temporal Warheads Still Affect Objects That Are Not Warpable
+============================================================
+
+Attacking a unit with a ``Temporal=yes`` warhead when it should not be
+susceptible due to having ``Warpable=no`` set, could still experience
 some negative effects. Units that were mind-controlled by the
 unwarpable unit would be freed and aircraft-spawners would have those
 aircraft destroyed. Unwarpable units are no longer affected in this
-manner. Temporal warheads no longer affect objects that are not
-Warpable
+manner.
 
-
-
-<<<SEPARATOR>>>
+.. versionadded:: 0.1

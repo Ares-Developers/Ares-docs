@@ -10,7 +10,7 @@ Current
 + DCoder
 + AlexB
 + Renegade
-+ GraionDilach
++ Graion Dilach
 
 Past
 ~~~~
@@ -20,13 +20,13 @@ Past
 
 Collaborators
 =============
-========================  ============
+========================  =============
 Project Manager           Nighthawk
 Documentation Maintainer  Steel Mirage
-User Support Agent        GraionDilach
-Project Ambassador        GraionDilach
+User Support Agent        Graion Dilach
+Project Ambassador        Graion Dilach
 Promo Material Creator    Speeder
-========================  ============
+========================  =============
 
 Special Thanks
 ==============
