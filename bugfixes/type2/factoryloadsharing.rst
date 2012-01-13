@@ -9,7 +9,7 @@ could not cope with the rapid exit cycle then the game would search
 for alternative exits other instances of the same BuildingType. In
 Ares this has been extended to search for all BuildingTypes with the
 same ``Factory`` and ``Naval`` settings.
-NB: This fix currently prevents the so-called 'kennel hack' from
-working.
+
+.. note:: This fix currently prevents the so-called 'kennel hack' from working.
 
 .. versionadded:: 0.1

@@ -4,7 +4,7 @@
 Alternate Theater Art For BuildingTypes
 =======================================
 
-BuildingTypes whose artmd.ini entry has ``NewTheater=yes`` set would
+BuildingTypes whose :file:`artmd.ini` entry has ``NewTheater=yes`` set would
 have the second letter of their SHP filenames replaced by another
 letter, depending on the theater of the current map. For example,
 GAWEAP uses SHP files named GAWEAP* on arctic maps, GTWEAP* on

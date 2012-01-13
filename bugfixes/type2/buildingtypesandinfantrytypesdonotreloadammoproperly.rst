@@ -11,7 +11,7 @@ fixes this logic such that these object types will now reload their
 ammo properly. Note that AircraftTypes are hard-coded to require
 docking to reload.
 
-NB: ``Hospital=yes`` and ``Armory=yes`` buildings still not reload ammo.
+.. note:: ``Hospital=yes`` and ``Armory=yes`` buildings still not reload ammo.
 
 .. versionadded:: 0.1
 

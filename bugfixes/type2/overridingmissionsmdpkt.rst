@@ -4,8 +4,8 @@
 Overriding Missionsmd.pkt
 =========================
 
-You can now override the original missionsmd.pkt by placing your own
-version in an expandmd##.mix file (the game has been modified to load
-these files before langmd.mix).
+You can now override the original :file:`missionsmd.pkt` by placing your own
+version in an :file:`expandmd##.mix` file (the game has been modified to load
+these files before :file:`langmd.mix`).
 
 .. versionadded:: 0.1

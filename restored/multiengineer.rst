@@ -4,7 +4,7 @@ Multi Engineer
 Red Alert introduced a way to balance engineers. By being able to
 capture a building only if has been damaged already engineer rushes
 became a lot more difficult. If the building could not be captured the
-engineer would damage it instead. `EngineerDamage` is not present in
+engineer would damage it instead. ``EngineerDamage`` is not present in
 Yuri's Revenge. Ares restores this feature. Multi Engineer.
 
 
@@ -36,6 +36,3 @@ enabled, the game will force the settings defined in rulesmd.ini.
 
 .. versionadded:: 0.2
 
-
-
-<<<SEPARATOR>>>

@@ -10,10 +10,11 @@ function. However, the original game only performed this treatment if
 those units had such weapons as their Primary weapon. The treatment
 would not be applied for Secondary weapons and thus result in crashes.
 Ares performs the treatment for Secondary weapons too.
-NB: The 'special treatment' sets up the object wielding these weapons.
-However, the original code is not designed to handle an object having
-more than one weapon with 'special' functionality so it is not
-recommended to have multiple weapons with the same type of special
-functionality on a single object.
+
+.. note:: The 'special treatment' sets up the object wielding these weapons.
+	However, the original code is not designed to handle an object having
+	more than one weapon with 'special' functionality so it is not
+	recommended to have multiple weapons with the same type of special
+	functionality on a single object.
 
 .. versionadded:: 0.1

@@ -7,8 +7,8 @@ The 100-Unit Bug
 There is no longer an upper limit on the InfantryTypes, VehicleTypes
 and AircraftTypes lists.
 
-NB: The so-called Whiteboy Bug (where graphical glitches and even game
-freezing can occur when there are 74 or more cameos visible on the
-sidebar at the same time) has not been fixed.
+.. note:: The so-called Whiteboy Bug (where graphical glitches and even game
+	freezing can occur when there are 74 or more cameos visible on the
+	sidebar at the same time) has not been fixed.
 
 .. versionadded:: 0.1

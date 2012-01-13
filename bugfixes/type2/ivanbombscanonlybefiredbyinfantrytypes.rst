@@ -8,6 +8,7 @@ If an Ivan Bomb weapon was given to any unit other than an
 InfantryType then the weapon would fire but the Ivan Bomb would not
 actually get attached to the target. Now Ivan Bombs can be fired by
 VehicleTypes, AircraftTypes and BuildingTypes as well.
-NB: BuildingTypes do not get the Dynamite cursor.
+
+.. note:: BuildingTypes do not get the Dynamite cursor.
 
 .. versionadded:: 0.1
