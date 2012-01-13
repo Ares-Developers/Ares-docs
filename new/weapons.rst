@@ -162,7 +162,7 @@ specify the following flags in order to customize that bomb:
 	Whether or not Engineers can remove this bomb from units it has been attached to.
 ``[Weapon]`` |>| ``IvanBomb.DestroysBridges= (boolean)``
 	Whether or not this bomb can be used on Bridge Repair Huts in order to
-	destroy the corresponding Bridge.[#DestroysBridges]_
+	destroy the corresponding Bridge. [#DestroysBridges]_
 ``[Weapon]`` |>| ``IvanBomb.Delay= (integer)``
 	The number of frames that will elapse before the bomb detonates automatically.
 ``[Weapon]`` |>| ``IvanBomb.AttachSound= (Soundname)``
