@@ -19,8 +19,6 @@ However, a bug with the way the floating-point values are compared
 means that these behaviors were not always applied consistently. Ares
 fixes this bug so the behavior should always be consistent now.
 The special behaviors can also now be toggled independently of the
-Verses value (see Additional ArmorTypes and Verses). 
+Verses value (see :doc:`/new/additionalarmortypesandverses`). 
 
 .. versionadded:: 0.1
-
-.. todo:: Fix reference to Additional ArmorTypes and Verses

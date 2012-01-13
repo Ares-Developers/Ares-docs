@@ -19,13 +19,11 @@ Table of Contents
 	new/index
 	ui-features/index
 	*
-	
+
+* :ref:`Overview of Ares's Bugfixes and Features <genindex>`
+* :ref:`search`
+
 .. include:: intro.rst
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 

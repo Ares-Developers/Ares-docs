@@ -1068,6 +1068,7 @@ this super weapon may default to a different amount.
 .. versionadded:: 0.1
 
 
+.. _firestorm:
 
 `Type=Firestorm`
 ++++++++++++++++

@@ -98,17 +98,13 @@ Developer's Pack.
 
 artmd.ini
 ~~~~~~~~~
-[TELE]SecondaryFireFLH=85,0,130
-	See RadBeams And Waves Using The Wrong FLH.
-
-.. todo:: Insert proper link.
+``[TELE]`` |>| ``SecondaryFireFLH=85,0,130``
+	See :doc:`/bugfixes/type2/radbeamsandwavesusingthewrongflh`.
 
 bombcurs.shp
 ~~~~~~~~~~~~
 This animation needs to have its last frame removed if you don't want
-to see the previously unused skull image. See IvanBomb.FlickerRate.
-
-.. todo:: Insert proper link.
+to see the previously unused skull image. See :ref:`IvanBomb.FlickerRate <custom-ivan-bombs>`.
 
 ares.mix
 ~~~~~~~~

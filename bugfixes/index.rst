@@ -12,10 +12,8 @@ Ares provides three types of bug fixes:
    times and in-game lag without affecting gameplay mechanics. Also
    hardware/operating system related crashes.
    
-.. note:: Restored features from Tiberian Sun have their own category and are
+.. note:: Restored features from Tiberian Sun have :doc:`their own category </restored/index>` and are
 	not considered fixed bugs under any of these definitions, particularly 2.
-	
-.. todo:: Add link to TibSun restores section.
 
 .. toctree::
 	
