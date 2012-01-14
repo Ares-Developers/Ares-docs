@@ -90,6 +90,8 @@ rst_prolog = '.. |>| unicode:: 0x25BA\n'
 
 todo_include_todos = True
 
+highlight_language = 'ini'
+
 # -- Options for HTML output ---------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for

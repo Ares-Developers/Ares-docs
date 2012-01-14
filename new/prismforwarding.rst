@@ -221,19 +221,16 @@ the provided example at the end of the following flag list instead.
 
 No other properties of the support weapon are referenced at present,
 however this could be changed in the future.
-
+]]]]]]]]]
 Example support weapon:
-
 ::
-
-    
-    		[NewPrismSupportBeam]
-    		Range=9 ;or 8 if you prefer the original
-    		ROF=45
-    		IsLaser=yes
-    		IsHouseColor=yes
-    		LaserDuration=15
-    		LaserThickness=3
+	[NewPrismSupportBeam]
+	Range=9 ;or 8 if you prefer the original
+	ROF=45
+	IsLaser=yes
+	IsHouseColor=yes
+	LaserDuration=15
+	LaserThickness=3
     		
 
 
