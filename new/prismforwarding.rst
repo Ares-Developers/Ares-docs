@@ -257,6 +257,14 @@ Tower during a charge sequence can cause an Internal Error.
 Extended Prism networks ("Prism Forwarding")
 .. versionadded:: 0.2
 
+Special Note Regarding Prism Forwarding
+```````````````````````````````````````
+A common error that was reported during testing was a tendency for 
+Prism Towers to not auto-target and engage enemy units.  The solution
+for this was to be sure that warhead and/or damage was defined.  If
+this happens to you, be sure to check that your PF modification defines
+warhead values or damage values.
+(Bug #896095)
 
 
 <<<SEPARATOR>>>
