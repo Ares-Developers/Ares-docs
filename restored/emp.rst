@@ -52,11 +52,11 @@ Damage will be delivered independently from EMP paralysis (so a weapon
 can both damage and paralyze its target). Tiberian Sun also used the
 flag EMEffect=yes, which is not used in Ares.
 
-:[Warhead]EMP.Duration= (integer frames) [Warhead]EMP.Cap= (integer
-  frames): The above two flags are used together to determine how long
-  (in frames) the affected units will be EMP'd for. EMP.Duration=
-  EMP.Cap=
+:[Warhead]EMP.Duration= (integer frames): Defaults to `0`.
+:[Warhead]EMP.Cap= (integer frames): Defaults to `-1`.
 
+The above two flags are used together to determine how long (in frames)
+the affected units will be EMP'd for.
 
 The game keeps track of how much longer each unit will remain
 paralyzed. Each unit essentially has a hidden EMP counter that counts
@@ -98,16 +98,16 @@ unit trying to re-activate the already-paralyzed unit.
 
 + `EMP.Cap=-1` The target's EMP counter is reduced by the number of
   frames specified by `EMP.Duration`. Examples: EMP counter is 50,
-  `EMP.Duration=10`. Result: EMP counter will be set to 40. EMP counter
-  is 7, `EMP.Duration=10`. Result: EMP counter will be set to zero and
+  `EMP.Duration=-10`. Result: EMP counter will be set to 40. EMP counter
+  is 7, `EMP.Duration=-10`. Result: EMP counter will be set to zero and
   the unit will re-activate.
 + `EMP.Cap` is greater than zero. The target's EMP counter is reduced
   by the number of frames specified by `EMP.Duration`. If this value is
   still greater than `EMP.Cap` then the EMP counter is reduced further
   so that it is equal to `EMP.Cap`. Examples: EMP counter is 50,
-  `EMP.Duration=10`, `EMP.Cap=70`. Result: EMP counter will be set to
-  40. EMP counter is 50, `EMP.Duration=10`, `EMP.Cap=20`. Result: EMP
-  counter will be set to 20. EMP counter is 7, `EMP.Duration=10`.
+  `EMP.Duration=-10`, `EMP.Cap=70`. Result: EMP counter will be set to
+  40. EMP counter is 50, `EMP.Duration=-10`, `EMP.Cap=20`. Result: EMP
+  counter will be set to 20. EMP counter is 7, `EMP.Duration=-10`.
   Result: EMP counter will be set to zero and the unit will re-activate.
 + `EMP.Cap=0` `EMP.Duration` is irrelevant. The EMP counter will be
   set to zero and the unit will re-activate.
@@ -117,8 +117,8 @@ Quickstart: If you want a unit to be immune to EMP, set
 ImmuneToEMP=yes on the unit.
 
 :[TechnoType]ImmuneToEMP= (boolean): The above flag specifies whether
-or not the TechnoType is immune to the effects of EMP. The default
-immunity status is determined based on the following rules:
+  or not the TechnoType is immune to the effects of EMP. The default
+  immunity status is determined based on the following rules:
 
     + BuildingTypes: `ImmuneToEMP` defaults to no for BuildingTypes that
       have `Powered=yes` and a negative `Power=` value set. `ImmuneToEMP`
@@ -141,16 +141,16 @@ immunity status is determined based on the following rules:
     + VehicleTypes and AircraftTypes: `ImmuneToEMP` defaults to no for
       VehicleTypes and AircraftTypes unless `Organic=yes` is set (in which
       case, `ImmuneToEMP` defaults to yes).
-Manually setting `ImmuneToEMP` always overrides the default. EMP
+  Manually setting `ImmuneToEMP` always overrides the default. EMP
   immunity can also be granted via the new veteran/elite ability
   "EMPIMMUNE". Just set `VeteranAbilities=EMPIMMUNE` or
   `EliteAbilities=EMPIMMUNE` on the TechnoType. EMP immunity also
   respects `TypeImmune`, `AffectsAllies` and `AffectsEnemies` on the
-  warhead. ImmuneToEMP=
+  warhead.
 :[TechnoType]EMP.Modifier= (multiplier): If the EMP effect duration is
   positive it will be multiplied by this factor. You can create units
   that are more or less prone to the Electromagnetic Pulse.
-  `EMP.Modifier` defaults to `100%`. EMP.Modifier=
+  `EMP.Modifier` defaults to `100%`.
 
 
 See Destroy Units by EMP to learn how to crash flying TechnoTypes.
