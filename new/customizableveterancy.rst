@@ -1,8 +1,7 @@
 Customizable Veterancy
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Configure the way units get experience from killing enemies. Veterancy
-options for Passengers, Airstrike and Mind-Control.
+Configure the way units get experience from killing enemies.
 
 :[TechnoType]Experience.FromPassengers= (boolean): Allow
   `OpenTopped=yes` and `Gunner=yes` units to gain experience when a
@@ -31,8 +30,8 @@ options for Passengers, Airstrike and Mind-Control.
   percentage of the experience the original killer gets. This additional
   experience is not subtracted from the original killers gained
   experience. Defaults to `0%`.
-:[TechnoType]Experience.MindControlVictimModifier= (float -
-  multiplier): If a mind-controlled unit kills an enemy, its gained
+:[TechnoType]Experience.MindControlVictimModifier= (float - multiplier):
+  If a mind-controlled unit kills an enemy, its gained
   experience is multiplied by this value. Use this for example to
   subtract the amount the unit's controller gets by having this value
   and `Experience.MindControlSelfModifier` sum up to 100%. Defaults to
@@ -49,8 +48,6 @@ experience. Mind that an open-topped vehicle in the unmodified game
 also could promote its passengers (but without the mind-control check)
 if it had `Trainable=no` set.
 
+.. index:: Veterancy; Veterancy options for Passengers, Airstrike and Mind-Control.
+
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>

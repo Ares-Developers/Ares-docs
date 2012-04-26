@@ -1,8 +1,6 @@
 Avoidable Internal Errors
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-
 Snowmd.ini
 ``````````
 
@@ -11,12 +9,9 @@ Snowmd.ini
   by the user. This change is also needed by the Terrain Expansion.
 
 
-In order to avoid internal errors, Ares sets this to 71 by default if
-it's not specified in the terrain control file. Snowmd.ini defaults
-`Medians=71` (this is needed by the Terrain Expansion and also
-prevents an IE in the Random Map Generator when Urban Ares are
-enabled).
+In order to avoid internal errors, Ares sets this to 71 by default if it's not
+specified in the terrain control file. :file:`Snowmd.ini` defaults `Medians=71`
+(this is needed by the Terrain Expansion and also prevents an IE in the Random
+Map Generator when Urban Ares are enabled).
 
 .. versionadded:: 0.1
-
-

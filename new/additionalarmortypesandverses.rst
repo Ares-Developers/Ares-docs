@@ -23,7 +23,7 @@ standard ArmorTypes (case-insensitively). Their susceptibility to
 specific warheads can be specified as follows:
 
 :[Warhead]Versus.magic=150%: makes this warhead very good at damaging
-  objects with `Armor=magic`. Versus.*=
+  objects with `Armor=magic`.
 
 Note that each individual ArmorType's versus value is specified using
 the new "Versus.*" flag, whereas the original 11 ArmorTypes versus
@@ -32,7 +32,9 @@ misspelling of "versus").
 
 The original `Verses=` flag parser no longer crashes if you specify
 less than 11 values. Additional armor types which can default to
-reacting like an existing armor type. ArmorTypes
+reacting like an existing armor type.
+
+.. index:: ArmorTypes; Add custom ArmorTypes to warheads.
 
 .. versionadded:: 0.1
 
@@ -57,18 +59,17 @@ directly target a unit with that ArmorType).
 
 :[Warhead]Versus.magic.ForceFire= (boolean): Whether or not this
   warhead is allowed to be force-fired on the "magic" ArmorType.
-  Versus.*.ForceFire=
 :[Warhead]Versus.steel.Retaliate= (boolean): Whether or not this
   warhead is allowed to be used in retaliation against the "steel"
-  ArmorType Versus.*.Retaliate=
+  ArmorType.
 :[Warhead]Versus.clingfilm.PassiveAcquire= (boolean): Whether or not
   this warhead is allowed to be used to attack the "clingfilm" ArmorType
-  automatically. Versus.*.PassiveAcquire=
+  automatically.
 
 
-Note Ares' correct spelling of "acquire". Warhead verses special
-behaviours can be decoupled from Verses
-(ForceFire/Retaliate/PassiveAcquire).
+Note Ares' correct spelling of "acquire".
+
+.. index:: ArmorTypes; Warhead verses special behaviours can be decoupled from Verses (ForceFire/Retaliate/PassiveAcquire).
 
 .. versionadded:: 0.1
 
@@ -85,10 +86,10 @@ that the Desolator is immune to damage from the radiation beams fired
 by other Desolators. This immunity system has 2 limitations:
 
 
-+ 1. Only a small handful of working flag pairs exist, and
-+ 2. The immunity only prevents the unit from taking damage from the
-  warhead. It does not prevent the unit from being targeted. In the
-  above example, Desolators can fire at each other ineffectually.
+1. Only a small handful of working flag pairs exist, and
+2. The immunity only prevents the unit from taking damage from the
+   warhead. It does not prevent the unit from being targeted. In the
+   above example, Desolators can fire at each other ineffectually.
 
 
 Ares overcomes these limitations with new armor types, as mentioned
@@ -100,26 +101,27 @@ create a new armor type that will emulate this as follows:
 
 ::
 
-    	[ArmorTypes]
-    	flakImmuneToFrost=flak
-    		
-    	[IceMan]
-    	Armor=flakImmuneToFrost
-    	Primary=IceBlast
-    		
-    	[IceBlast]
-    	Warhead=IceBlastWH
-    		
-    	[IceBlastWH]
-    	Versus.flakImmuneToFrost=0%
-    	Versus.flakImmuneToFrost.ForceFire=yes
-    	Versus.flakImmuneToFrost.Retaliate=yes
-    	Versus.flakImmuneToFrost.PassiveAcquire=yes
+    [ArmorTypes]
+    flakImmuneToFrost=flak
+    
+    [IceMan]
+    Armor=flakImmuneToFrost
+    Primary=IceBlast
+    
+    [IceBlast]
+    Warhead=IceBlastWH
+    
+    [IceBlastWH]
+    Versus.flakImmuneToFrost=0%
+    Versus.flakImmuneToFrost.ForceFire=yes
+    Versus.flakImmuneToFrost.Retaliate=yes
+    Versus.flakImmuneToFrost.PassiveAcquire=yes
 
 
 The above settings give the IceMan unit a damage immunity to the
 IceMan weapon, even though he can still be attacked by that weapon.
 
+.. index:: ArmorTypes; Define your own immunities from certain warheads.
 
+.. versionadded:: 0.1
 
-<<<SEPARATOR>>>

@@ -1,10 +1,10 @@
 AlternateTheaterArt
 ~~~~~~~~~~~~~~~~~~~
 
-The Navy Seal has `AlternateArcticArt=yes` set, which causes the game
-to use the image file seala.shp on arctic maps, instead of seal.shp.
-This logic works for any InfantryType, however this only works for the
-arctic theater and only for InfantryTypes.
+The Navy Seal has `AlternateArcticArt=yes` set, which causes the game to use the
+image file :file:`seala.shp` on arctic maps, instead of :file:`seal.shp`. This
+logic works for any InfantryType, however this only works for the arctic theater
+and only for InfantryTypes.
 
 :[TechnoType]AlternateTheaterArt= (boolean): Specifies whether or not
   this SHP-based unit can have alternate art depending on the theater of
@@ -13,14 +13,12 @@ arctic theater and only for InfantryTypes.
   section `[JUNKA]` on arctic, `[JUNKD]` on desert, and so on according
   to theater. If any of those sections do not exist then the unit will
   fall back to `[JUNK]`. So quite similar to `AlternateArcticArt`, just
-  automatic and smarter. Defaults to no. NB: This only works for SHP-
-  based units. Voxels do not use this system and cannot have theater-
-  specific art (you'd have to use Prerequisite.RequiredTheaters to
-  achieve that). AlternateTheaterArt=
+  automatic and smarter. Defaults to `no`.
 
+.. note:: This only works for SHP-based units. Voxels do not use this system and
+  cannot have theater-specific art (you'd have to use
+  Prerequisite.RequiredTheaters to achieve that).
+
+.. index:: Art; AlternateTheaterArt for InfantryTypes supports all theaters.
 
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>
