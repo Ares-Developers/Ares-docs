@@ -6,7 +6,7 @@ similar manner to a Chrono Legionnaire erasing a unit. Unlike the
 Chrono Legionnaire however, EMP'd vehicles can still be attacked by
 other units.
 EMP paralysis affects units and buildings in various ways (given they
-are not immune to EMP, see below): EMP weapons
+are not immune to EMP, see below):
 
 
 + Primary effect: units will not respond to any commands. They will
@@ -50,7 +50,7 @@ the EMP effect would last. Ares, however, uses 2 new flags
 (EMP.Duration and EMP.Cap) to provide greater control. The weapon's
 Damage will be delivered independently from EMP paralysis (so a weapon
 can both damage and paralyze its target). Tiberian Sun also used the
-flag EMEffect=yes, which is not used in Ares.
+flag `EMEffect=yes`, which is not used in Ares.
 
 :[Warhead]EMP.Duration= (integer frames): Defaults to `0`.
 :[Warhead]EMP.Cap= (integer frames): Defaults to `-1`.

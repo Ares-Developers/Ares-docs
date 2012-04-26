@@ -10,8 +10,8 @@ special_2).
 ::
 
     [ArmorTypes]
-    		paper=steel
-    		magic=11%
+    paper=steel
+    magic=11%
 
 
 `paper=steel` declares a new ArmorType called "paper" whose `Verses`
@@ -24,7 +24,6 @@ specific warheads can be specified as follows:
 
 :[Warhead]Versus.magic=150%: makes this warhead very good at damaging
   objects with `Armor=magic`. Versus.*=
-
 
 Note that each individual ArmorType's versus value is specified using
 the new "Versus.*" flag, whereas the original 11 ArmorTypes versus

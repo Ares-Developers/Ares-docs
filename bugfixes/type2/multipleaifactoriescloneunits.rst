@@ -11,7 +11,7 @@ example, if the AI were made to build a second War Factory then they
 would get a second copy of every vehicle they build. This behavior can
 be disabled in Ares, by the following flag:
 
-``[GlobalControls]`` |>| ``AllowParallelAIQueues=`` :term:`boolean`
+``[GlobalControls]`` |>| ``AllowParallelAIQueues=`` (:term:`boolean`)
 	Set this to no to disable AI factory cloning.
 
 .. versionadded:: 0.1

@@ -15,3 +15,4 @@ docking to reload.
 
 .. versionadded:: 0.1
 
+.. _`ModEnc://Ammo`: http://modenc.renegadeprojects.com/Ammo

@@ -3,8 +3,8 @@
 ===========================
 Firing Voices and Veterancy
 ===========================
-Yuri's Revenge uses different unit voice lists for firing weapons (
-``VoicePrimaryWeaponAttack``, ``VoicePrimaryEliteWeaponAttack``,
+Yuri's Revenge uses different unit voice lists for firing weapons
+(``VoicePrimaryWeaponAttack``, ``VoicePrimaryEliteWeaponAttack``,
 ``VoiceSecondaryWeaponAttack`` and ``VoiceSecondaryEliteWeaponAttack``).
 If the ``*EliteWeaponAttack`` list is empty, ``VoiceAttack`` is used
 instead of the more appropriate non-elite version ``*WeaponAttack``.

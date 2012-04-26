@@ -1,6 +1,5 @@
 .. index:: Paradrops; Vehicles that are paradropped will now be centered correctly on the cell they land on rather than being offset.
 
-
 =======================
 Vehicle Paradrop Offset
 =======================

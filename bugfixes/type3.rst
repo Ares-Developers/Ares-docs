@@ -1,3 +1,5 @@
+.. index:: Performance; Several performance enhancements.
+
 ==========================
 Type 3 Fixes (Performance)
 ==========================
@@ -23,4 +25,3 @@ Type 3 Fixes (Performance)
   (otherwise users would just get a completely black screen).
 
 .. versionadded:: 0.1
-	Several performance enhancements.
