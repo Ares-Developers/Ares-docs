@@ -1,56 +1,57 @@
 Chrono Prisons
 ~~~~~~~~~~~~~~
 
-Originally intended for *Yuri's Revenge*, with published concept art
-and even appearing on the original version of the box art, the Chrono
-Prison was planned as a unit which would suck units into a
-"containment sphere" in its turret; the turret would grow with each
-unit sucked in, and if the prison were destroyed, the units would be
-free again.
+Originally intended for :game:`Yuri's Revenge`, with published concept art and
+even appearing on the original version of the box art, the Chrono Prison was
+planned as a unit which would suck units into a "containment sphere" in its
+turret; the turret would grow with each unit sucked in, and if the prison were
+destroyed, the units would be free again.
 
-Ares includes functionality which can be used to create such a unit,
-but the implementation is liberal enough to use the parts for a
-variety of other units.
+:game:`Ares` includes functionality which can be used to create such a unit, but
+the implementation is liberal enough to use the parts for a variety of other
+units.
 
 (Original requests: `#680 <http://bugs.renegadeprojects.com/view.php?id=680>`_
 and `#1208 <http://bugs.renegadeprojects.com/view.php?id=1208>`_, `original
-concept art on RADEN <http://www.cncgames.com/yuri_concept/chronoprisonturretSphere.jpg>`_)
+concept art on RADEN
+<http://www.cncgames.com/yuri_concept/chronoprisonturretSphere.jpg>`_)
 
-:[Weapon]Abductor= (boolean): If set to yes, weapons with this flag
-  will absorb the target into the attacker's passenger hold. Should the
-  attacking unit be destroyed, its passengers will emerge. Slaves' and spawned
-  units' owner will be changed to `Special`. If the abductor is "full" or the
-  victim cannot be abducted, conventional damage is dealt. Defaults to `no`.
+:[Weapon]Abductor= (boolean): If set to yes, weapons with this flag will absorb
+  the target into the attacker's passenger hold. Should the attacking unit be
+  destroyed, its passengers will emerge. Slaves' and spawned units' owner will
+  be changed to the house `Special`. If the abductor is "full" or the victim
+  cannot be abducted, conventional damage is dealt. Defaults to ``no``.
 
   .. note:: Please make sure you have a passenger hold when using this. Also
-    remember that `SizeLimit` defaults to 0, so if you don't set it, abduction
-    of most units will be denied. As usual, `PipScale` is required for all
-    transports.
+    remember that :tag:`SizeLimit` defaults to 0, so if you don't set it,
+    abduction of most units will be denied. As usual, :tag:`PipScale` is
+    required for all transports.
 
-  .. note:: Due to the way `Passengers` for buildings was tacked on, it is
+  .. note:: Due to the way :tag:`Passengers` for buildings was tacked on, it is
     possible buildings with abducting weapons will not work properly. (Using
-    `InfantryAbsorb`/ `UnitAbsorb` increases your chances.) These malfunctions
-    are considered out of the scope of the request and will not be considered
-    bugs. The same goes for InfantryTypes. Malfunctions on VehicleTypes and
-    AircraftTypes, on the other hand, should be reported immediately.
+    \ :tag:`InfantryAbsorb`/:tag:`UnitAbsorb` increases your chances.) These
+    malfunctions are considered out of the scope of the request and will not be
+    considered bugs. The same goes for :type:`InfantryTypes`. Malfunctions on
+    \ :type:`VehicleTypes` and :type:`AircraftTypes`, on the other hand, should
+    be reported immediately.
 
 :[Weapon]Abductor.Anim= (animation): This animation will be spawned at the
-  location a unit is abducted from. Defaults to `none`.
+  location a unit is abducted from. Defaults to :value:`none`.
 
 :[Weapon]Abductor.ChangeOwner= (boolean): Sets whether the abducted unit shall
   change its owner to the abductor's house. Units which are
-  `ImmuneToPsionics=yes` will not change owner. Defaults to `no`.
+  :tag:`ImmuneToPsionics=yes` will not change owner. Defaults to :value:`no`.
 
 :[Weapon]Abductor.AbductBelowPercent= (float): Specifies the percentage of
   health a unit has to go below to be abducted. Units with more health than this
-  percentage will not be abducted. Defaults to `100%`.
+  percentage will not be abducted. Defaults to :value:`100%`.
 
 :[TechnoType]ImmuneToAbduction= (boolean): Specifies whether the unit can be
-  abducted. Defaults to `no`.
+  abducted. Defaults to :value:`no`.
 
-:[TechnoType]PassengerTurret= (boolean): If set to yes, this unit's
-  turret will switch to the turret with the index equivalent to the
-  number of passengers it holds. Defaults to `no`.
+:[TechnoType]PassengerTurret= (boolean): If set to yes, this unit's turret will
+  switch to the turret with the index equivalent to the number of passengers it
+  holds. Defaults to :value:`no`.
 
 
     + 0 passengers footur.vxl
@@ -59,11 +60,11 @@ concept art on RADEN <http://www.cncgames.com/yuri_concept/chronoprisonturretSph
 
 
   .. note:: In order to use this, you have to use YR's multi-turret logic, that
-    is, you have to specify `Turret=yes`, an appropriate `TurretCount`, and you
-    have to use the `WeaponX` flags to specify weapons.
+    is, you have to specify :tag:`Turret=yes`, an appropriate
+    \ :tag:`TurretCount`, and you have to use the :tag:`WeaponX` flags to specify
+    weapons.
 
 .. index:: Weapons; Make the firer abduct units from the battlefield like a Chrono Prison.
 .. index:: Art; Use turret depending on unit's passengers.
 
 .. versionadded:: 0.2
-

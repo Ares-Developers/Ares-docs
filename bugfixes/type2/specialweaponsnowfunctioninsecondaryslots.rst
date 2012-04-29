@@ -4,12 +4,12 @@
 "Special" Weapons now function in secondary slots
 =================================================
 
-Units with weapons that use ``MindControl=yes``, ``Parasite=yes`` or
-``Temporal=yes`` require special treatment behind-the-scenes in order to
-function. However, the original game only performed this treatment if
-those units had such weapons as their Primary weapon. The treatment
-would not be applied for Secondary weapons and thus result in crashes.
-Ares performs the treatment for Secondary weapons too.
+Units with weapons that use :tag:`MindControl=yes`, :tag:`Parasite=yes` or
+\ :tag:`Temporal=yes` require special treatment behind-the-scenes in order to
+function. However, the original game only performed this treatment if those
+units had such weapons as their :tag:`Primary` weapon. The treatment would not
+be applied for :tag:`Secondary` weapons and thus result in crashes.
+:game:`Ares` performs the treatment for :tag:`Secondary` weapons too.
 
 .. note:: The 'special treatment' sets up the object wielding these weapons.
 	However, the original code is not designed to handle an object having

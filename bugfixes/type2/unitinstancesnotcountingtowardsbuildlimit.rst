@@ -2,15 +2,14 @@
 
 .. index:: BuildLimit; Hijackers inside vehicles now count towards that hijacker's BuildLimit.
 
-==============================================
-Unit Instances Not Counting Towards BuildLimit
-==============================================
+============================================================
+Unit Instances Not Counting Towards :captiontag:`BuildLimit`
+============================================================
 
-If you have a vehicle which deploys into a structure, both the
-deploying vehicle and the structure will now count towards the
-``BuildLimit`` of that vehicle.
+If you have a vehicle which deploys into a structure, both the deploying vehicle
+and the structure will now count towards the :tag:`BuildLimit` of that vehicle.
 
 Hijackers inside stolen vehicles now count towards the Hijacker's
-BuildLimit.
+\ :tag:`BuildLimit`.
 
 .. versionadded:: 0.1

@@ -4,11 +4,10 @@
 Initial Veteran Cameos
 ======================
 
-When you infiltrate, say, an enemy Barracks, any [trainable] infantry
-that you subsequently build will start veteran. The infantry's cameos
-(build icons) will gain the veteran symbol to indicate this. However,
-if the country you are playing as has any units that always 'start
-veteran' then those units did not gain the veteran symbol for their
-cameos. Now they do.
+When you infiltrate, say, an enemy Barracks, any (trainable) infantry that you
+subsequently build will start veteran. The infantry's cameos (build icons) will
+gain the veteran symbol to indicate this. However, if the country you are
+playing as has any units that always 'start veteran' then those units did not
+gain the veteran symbol for their cameos. Now they do.
 
 .. versionadded:: 0.1

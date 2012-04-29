@@ -1,7 +1,7 @@
 .. index:: PKTs; Missionsmd.pkt can now be overridden by your own version inside expandmd##.mix
 
 =========================
-Overriding Missionsmd.pkt
+Overriding missionsmd.pkt
 =========================
 
 You can now override the original :file:`missionsmd.pkt` by placing your own

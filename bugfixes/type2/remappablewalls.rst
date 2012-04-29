@@ -1,12 +1,12 @@
-.. index:: Walls;  Walls remap to the owning player's colour.
+.. index:: Walls;  Walls remap to the owning player's color.
 
 ================
 Remappable Walls
 ================
 
-Walls (i.e. OverlayTypes with ``Wall=yes``) always use the same colour
-in place of the remap for all players, regardless of the owning
-player's colour. Ares will instead draw walls' remappable sections in
-their respective owner's colours.
+Walls (i.e. :type:`OverlayTypes` with :tag:`Wall=yes`) always use the same color
+in place of the remap for all players, regardless of the owning player's color.
+:game:`Ares` will instead draw walls' remappable sections in their respective
+owner's colors.
 
 .. versionadded:: 0.2

@@ -1,11 +1,11 @@
 Custom Building Foundations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Building Foundations can now be any shape and size, not just the few
-predefined options previously available. For example, you can now
-recreate the old Red Alert Repair Depot foundation. The INI coding is
-rather complex, so instead of writing it manually, it's recommended to
-use the `Custom Foundation Generator`_ developed by Renegade.
+Building Foundations can now be any shape and size, not just the few predefined
+options previously available. For example, you can now recreate the old
+:game:`Red Alert` Repair Depot foundation. The INI coding is rather complex, so
+instead of writing it manually, it's recommended to use the `Custom Foundation
+Generator`_ developed by Renegade.
 
 When creating foundations, don't forget to create the outlines.
 
