@@ -13,4 +13,3 @@ delayed until the destruction of the Tank Bunker). Ares prevents the
 error occurring. 
 
 .. versionadded:: 0.1
-
