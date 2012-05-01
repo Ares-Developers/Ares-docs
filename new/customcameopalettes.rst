@@ -6,15 +6,15 @@ own bespoke palette.
 
 In :file:`artmd.ini`:
 
-:[UnitArt]CameoPalette= (filename, *including* the .pal extension): Specifies
-  the palette to use for the unit's cameo (:tag:`Cameo` and :tag:`AltCameo` must
-  use the same palette), in the format "filename.pal". Defaults to
-  :value:`cameo.pal`.
+:tagdef:`[UnitArt]CameoPalette=filename, *including* the .pal extension)`
+  Specifies the palette to use for the unit's cameo (:tag:`Cameo` and
+  :tag:`AltCameo` must use the same palette), in the format "filename.pal".
+  Defaults to :value:`cameo.pal`.
 
 
 In :file:`rulesmd.ini`:
 
-:[SuperWeapon]SidebarPalette= (filename, *including* the .pal extension):
+:tagdef:`[SuperWeapon]SidebarPalette=filename, *including* the .pal extension`
   Specifies the palette to use for the super weapon's :tag:`SidebarImage`, in
   the format "filename.pal". Defaults to :value:`cameo.pal`.
 

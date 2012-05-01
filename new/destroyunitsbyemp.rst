@@ -9,7 +9,7 @@ like the Siege Chopper, Kirov and Yuri's Disk do not count as Aircraft.
 instant the EMP hits. Parachuting :type:`TechnoTypes` do not count as being in
 the air, yet exceeding the positive threshold will kill them, too.
 
-:[TechnoType]EMP.Threshold= (enumeration - one of yes|no|inair *or* integer - frames):
+:tagdef:`[TechnoType]EMP.Threshold=enumeration - one of yes|no|inair *or* integer - frames`
   Specifies whether or not the :type:`TechnoType` will be destroyed by EMP
   weapons. Use an integer to set the exact EMP duration this unit has to exceed
   to get destroyed.

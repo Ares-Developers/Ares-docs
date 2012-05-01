@@ -6,12 +6,15 @@ Requested as a `"Jarmen Kell" functionality
 specific warheads to kill the driver of a vehicle instead of damaging
 it, and allows others to take over the now-neutral vehicle.
 
-:[Warhead]KillDriver= (boolean): Specifies whether this warhead kills the driver
-  of the vehicle, instead of damaging the vehicle itself.
-:[TechnoType]ProtectedDriver= (boolean): Whether the driver of this vehicle
-  cannot be killed, i.e. whether this vehicle is immune to :tag:`KillDriver`.
-:[TechnoType]CanDrive= (boolean): Whether this :type:`InfantryType` can act as
-  the driver of vehicles whose driver has been killed.
+:tagdef:`[Warhead]KillDriver=boolean`
+  Specifies whether this warhead kills the driver of the vehicle, instead of
+  damaging the vehicle itself.
+:tagdef:`[TechnoType]ProtectedDriver=boolean`
+  Whether the driver of this vehicle cannot be killed, i.e. whether this vehicle
+  is immune to :tag:`KillDriver`.
+:tagdef:`[TechnoType]CanDrive=boolean`
+  Whether this :type:`InfantryType` can act as the driver of vehicles whose
+  driver has been killed.
 
 
 NB: As of the time of this writing, the relationship between

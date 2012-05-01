@@ -16,11 +16,12 @@ and `#1208 <http://bugs.renegadeprojects.com/view.php?id=1208>`_, `original
 concept art on RADEN
 <http://www.cncgames.com/yuri_concept/chronoprisonturretSphere.jpg>`_)
 
-:[Weapon]Abductor= (boolean): If set to yes, weapons with this flag will absorb
-  the target into the attacker's passenger hold. Should the attacking unit be
-  destroyed, its passengers will emerge. Slaves' and spawned units' owner will
-  be changed to the house `Special`. If the abductor is "full" or the victim
-  cannot be abducted, conventional damage is dealt. Defaults to ``no``.
+:tagdef:`[Weapon]Abductor=boolean`
+  If set to yes, weapons with this flag will absorb the target into the
+  attacker's passenger hold. Should the attacking unit be destroyed, its
+  passengers will emerge. Slaves' and spawned units' owner will be changed to
+  the house `Special`. If the abductor is "full" or the victim cannot be
+  abducted, conventional damage is dealt. Defaults to :value:`no`.
 
   .. note:: Please make sure you have a passenger hold when using this. Also
     remember that :tag:`SizeLimit` defaults to 0, so if you don't set it,
@@ -35,23 +36,27 @@ concept art on RADEN
     \ :type:`VehicleTypes` and :type:`AircraftTypes`, on the other hand, should
     be reported immediately.
 
-:[Weapon]Abductor.Anim= (animation): This animation will be spawned at the
-  location a unit is abducted from. Defaults to :value:`none`.
+:tagdef:`[Weapon]Abductor.Anim=animation`
+  This animation will be spawned at the location a unit is abducted from.
+  Defaults to :value:`none`.
 
-:[Weapon]Abductor.ChangeOwner= (boolean): Sets whether the abducted unit shall
-  change its owner to the abductor's house. Units which are
-  :tag:`ImmuneToPsionics=yes` will not change owner. Defaults to :value:`no`.
+:tagdef:`[Weapon]Abductor.ChangeOwner=boolean`
+  Sets whether the abducted unit shall change its owner to the abductor's house.
+  Units which are :tag:`ImmuneToPsionics=yes` will not change owner. Defaults to
+  :value:`no`.
 
-:[Weapon]Abductor.AbductBelowPercent= (float): Specifies the percentage of
-  health a unit has to go below to be abducted. Units with more health than this
-  percentage will not be abducted. Defaults to :value:`100%`.
+:tagdef:`[Weapon]Abductor.AbductBelowPercent=float`
+  Specifies the percentage of health a unit has to go below to be abducted.
+  Units with more health than this percentage will not be abducted. Defaults to
+  :value:`100%`.
 
-:[TechnoType]ImmuneToAbduction= (boolean): Specifies whether the unit can be
-  abducted. Defaults to :value:`no`.
+:tagdef:`[TechnoType]ImmuneToAbduction=boolean`
+  Specifies whether the unit cannot be abducted. Only the conventional damage is
+  dealt. Defaults to :value:`no`.
 
-:[TechnoType]PassengerTurret= (boolean): If set to yes, this unit's turret will
-  switch to the turret with the index equivalent to the number of passengers it
-  holds. Defaults to :value:`no`.
+:tagdef:`[TechnoType]PassengerTurret=boolean`
+  If set to yes, this unit's turret will switch to the turret with the index
+  equivalent to the number of passengers it holds. Defaults to :value:`no`.
 
 
     + 0 passengers footur.vxl

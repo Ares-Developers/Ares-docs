@@ -12,30 +12,38 @@ from an airborne unit, the ground beneath the destroyed unit must be clear.
 The following flags control the percent chance of a survivor being spawned, and
 the type of unit that that survivor will be.
 
-:[Unit]Survivor.Side#= (InfantryType) (where # is the zero-based index of the side e.g. 0 for Allied, 1 for Soviet, 2 for Yuri): The
-  :type:`InfantryType` that can emerge from this unit as a survivor when the
+:tagdef:`[Unit]Survivor.Side#=InfantryType) (where # is the zero-based index of the side e.g. 0 for Allied, 1 for Soviet, 2 for Yuri`
+  The :type:`InfantryType` that can emerge from this unit as a survivor when the
   unit was owned by the corresponding side. For example,
   :tag:`Survivor.Side0=E1` would cause the spawned survivor (if any) to be a GI
   when the destroyed unit was owned by an Allied player. If this value is not
   set, the the owning side's :tag:`Crew=` is used. Defaults to :value:`none`.
-:[Unit]Survivor.Pilots= (integer): The number of pilots that will attempt to be
-  spawned when this unit is destroyed (provided that the ground beneath the
-  destroyed unit is clear). Defaults to :value:`1` if the unit has
-  :tag:`Crewed=yes` set, to :value:`0` otherwise.
-:[Unit]Survivor.XPilotChance= (integer between 0 and 100):
-  Use :tag:`Survivor.RookiePilotChance`, :tag:`Survivor.VeteranPilotChance` and
-  :tag:`Survivor.ElitePilotChance`. The percent chance that each individual
-  pilot will be spawned when this unit is destroyed. If this value is negative,
-  :tag:`[General]CrewEscape` will be used. Default to :value:`-1`.
-:[Unit]Survivor.XPassengerChance= (integer between 0 and 100):
-  Use :tag:`Survivor.RookiePassengerChance`,
-  :tag:`Survivor.VeteranPassengerChance` and
-  :tag:`Survivor.ElitePassengerChance`. Determines the percent chance that each
-  of the unit's passengers (if any) will survive. Rookie/Veteran/Elite refers to
-  the veteran level of the transport unit a unit with a higher veteran level
-  could be made to have a greater (or lesser) chance of allowing its passengers
-  to survive. Passengers will be spawned in the cells around the destroyed unit
-  and, so, if these cells are not clear then the passengers will not be spawned.
+:tagdef:`[Unit]Survivor.Pilots=integer`
+  The number of pilots that will attempt to be spawned when this unit is
+  destroyed (provided that the ground beneath the destroyed unit is clear).
+  Defaults to :value:`1` if the unit has :tag:`Crewed=yes` set, to :value:`0`
+  otherwise.
+
+:tagdef:`[Unit]Survivor.RookiePilotChance=integer between 0 and 100`
+
+:tagdef:`[Unit]Survivor.VeteranPilotChance=integer between 0 and 100`
+
+:tagdef:`[Unit]Survivor.ElitePilotChance=integer between 0 and 100`
+  The percent chance that each individual pilot will be spawned when this unit
+  is destroyed. If this value is negative, :tag:`[General]CrewEscape` will be
+  used. Default to :value:`-1`.
+
+:tagdef:`[Unit]Survivor.RookiePassengerChance=integer between 0 and 100`
+
+:tagdef:`[Unit]Survivor.VeteranPassengerChance=integer between 0 and 100`
+
+:tagdef:`[Unit]Survivor.ElitePassengerChance=integer between 0 and 100`
+  Determines the percent chance that each of the unit's passengers (if any) will
+  survive. Rookie/Veteran/Elite refers to the veteran level of the transport
+  unit a unit with a higher veteran level could be made to have a greater (or
+  lesser) chance of allowing its passengers to survive. Passengers will be
+  spawned in the cells around the destroyed unit and, so, if these cells are not
+  clear then the passengers will not be spawned.
 
   These flags default to a special-case value of :value:`-1` which means "use
   the original game logic" (i.e. land-based vehicles such as the Battle Fortress

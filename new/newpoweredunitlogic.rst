@@ -6,9 +6,9 @@ that there could only be one powered :type:`UnitType`, and one building
 providing power, per side. :game:`Ares` extends this with :tag:`PoweredBy=`,
 which allows each side to have multiple buildings power multiple units.
 
-:[UnitType]PoweredBy= (BuildingType): Allows multiple powered units to exist,
-  as well as allowing multiple buildings to provide power. Defaults to
-  \ :value:`none`.
+:tagdef:`[UnitType]PoweredBy=BuildingType`
+  Allows multiple powered units to exist, as well as allowing multiple buildings
+  to provide power. Defaults to :value:`none`.
 
 .. note:: Be advised, if a powered unit is being built when the building that
   powers this unit is destroyed, the immobile unit will jam up that war factory

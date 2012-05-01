@@ -5,11 +5,11 @@ The prerequisite system has been enhanced in several ways. New flags are
 described below, and an issue has been resolved with regard to upgrades as
 prerequisites (see Type 2 Fixes).
 
-:[Unit]Prerequisite.RequiredTheaters= (list of theater names): The map theaters
-  in which the unit is available. Defaults to all theaters. For example, if only
-  the :value:`SNOW` theater were specified then the unit would only be available
-  on arctic maps. This allows you to implement, for example, the
-  :tag:`AlternateArcticArt` functionality used on the Navy SEAL, but for all
+:tagdef:`[Unit]Prerequisite.RequiredTheaters=list of theater names`
+  The map theaters in which the unit is available. Defaults to all theaters. For
+  example, if only the :value:`SNOW` theater were specified then the unit would
+  only be available on arctic maps. This allows you to implement, for example,
+  the :tag:`AlternateArcticArt` functionality used on the Navy SEAL, but for all
   unit types and all theaters (however this may present challenges for your AI).
   The theater names are:
 
@@ -28,10 +28,10 @@ prerequisites (see Type 2 Fixes).
 .. versionadded:: 0.1
 
 
-:[Unit]Prerequisite.Negative= (list of BuildingTypes): The buildings that
-  preclude construction of the unit. If the player owns one or more of the
-  buildings on this list then the unit will not be available. Defaults to
-  :value:`none`.
+:tagdef:`[Unit]Prerequisite.Negative=list of BuildingTypes`
+  The buildings that preclude construction of the unit. If the player owns one
+  or more of the buildings on this list then the unit will not be available.
+  Defaults to :value:`none`.
 
   .. note:: \ :tag:`PrerequisiteOverride` does *not* override
     \ :tag:`Prerequisite.Negative`.
@@ -42,10 +42,11 @@ prerequisites (see Type 2 Fixes).
 .. versionadded:: 0.1
 
 
-:[Unit]Prerequisite.Lists= (integer): Specifies how many extra Prerequisite
-  lists are available (see below). Defaults to :value:`0`.
+:tagdef:`[Unit]Prerequisite.Lists=integer`
+  Specifies how many extra Prerequisite lists are available (see below).
+  Defaults to :value:`0`.
 
-:[Unit]Prerequisite.List#= (list of BuildingTypes) (where # is the 1-based index of the prerequisite list, the maximum specified by Prerequisite.Lists):
+:tagdef:`[Unit]Prerequisite.List#=list of BuildingTypes (where # is the 1-based index of the prerequisite list, the maximum specified by Prerequisite.Lists)`
   Each prerequisite list acts as an independent copy of the existing
   :tag:`Prerequisite` flag. For example, if you set
   :tag:`Prerequisite=GAPILE,GATECH` and :tag:`Prerequisite.List1=NAHAND,NATECH`
@@ -60,9 +61,9 @@ prerequisites (see Type 2 Fixes).
 .. versionadded:: 0.1
 
 
-:[Unit]Prerequisite.StolenTechs= (list of integers): The list of stealable
-  technology types that must be stolen before this object can be built. See
-  Stolen Technology for more information.
+:tagdef:`[Unit]Prerequisite.StolenTechs=list of integers`
+  The list of stealable technology types that must be stolen before this object
+  can be built. See Stolen Technology for more information.
 
 .. index:: Prerequisites; New StolenTech requirements.
 

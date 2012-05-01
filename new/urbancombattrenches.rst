@@ -21,24 +21,28 @@ Urban Combat buildings can now specify what percentage of attacks against them
 will 'pass through' to the occupants inside damaging them rather than the
 building itself.
 
-:[BuildingType]UC.PassThrough= (float - chance): The percentage of shots that
-  will pass through to the occupants (and therefore not damage this building).
-  Defaults to :value:`0%` (i.e. all shots damage the building / no shots damage
-  the occupants). When there are no occupants inside then :tag:`UC.PassThrough`
-  will be ignored (i.e. all shots damage the building).
-:[BuildingType]UC.FatalRate= (float - chance): In the event that a shot has
-  passed through, the percentage of those shots that will instantly kill one
-  occupant, disregarding the weapon entirely. Defaults to :value:`0%`.
-:[BuildingType]UC.DamageMultiplier= (float - multiplier): If a shot has passed
-  through but isn't necessarily fatal then one occupant will be damaged. The
-  damage dealt by the weapon will be multiplied by :tag:`UC.DamageMultiplier`.
-  Defaults to :value:`100%` (i.e. no change to the damage dealt by the weapon).
-:[Projectile]SubjectToTrenches= (boolean): Whether or not this projectile will
-  override the normal :value:`UC.PassThrough` chance on targeted buildings. If
-  the projectile has :tag:`SubjectToTrenches=no` set, and the target building
-  has :tag:`UC.PassThrough` set greater than zero, then the building will be
-  treated as if it had :tag:`UC.PassThrough=100%`, when hit by this projectile.
-  If :tag:`SubjectToTrenches=yes` is set (default), then the normal
+:tagdef:`[BuildingType]UC.PassThrough=float - chance`
+  The percentage of shots that will pass through to the occupants (and therefore
+  not damage this building). Defaults to :value:`0%` (i.e. all shots damage the
+  building / no shots damage the occupants). When there are no occupants inside
+  then :tag:`UC.PassThrough` will be ignored (i.e. all shots damage the
+  building).
+:tagdef:`[BuildingType]UC.FatalRate=float - chance`
+  In the event that a shot has passed through, the percentage of those shots
+  that will instantly kill one occupant, disregarding the weapon entirely.
+  Defaults to :value:`0%`.
+:tagdef:`[BuildingType]UC.DamageMultiplier=float - multiplier`
+  If a shot has passed through but isn't necessarily fatal then one occupant
+  will be damaged. The damage dealt by the weapon will be multiplied by
+  :tag:`UC.DamageMultiplier`. Defaults to :value:`100%` (i.e. no change to the
+  damage dealt by the weapon).
+:tagdef:`[Projectile]SubjectToTrenches=boolean`
+  Whether or not this projectile will override the normal
+  :value:`UC.PassThrough` chance on targeted buildings. If the projectile has
+  :tag:`SubjectToTrenches=no` set, and the target building has
+  :tag:`UC.PassThrough` set greater than zero, then the building will be treated
+  as if it had :tag:`UC.PassThrough=100%`, when hit by this projectile. If
+  :tag:`SubjectToTrenches=yes` is set (default), then the normal
   :tag:`UC.PassThrough` chance will be used when the building is hit by this
   projectile.
 
@@ -62,9 +66,9 @@ You can now specify that Battle Bunkers, for example, can be captured by enemy
 infantry just by having them walk in and garrison the building as if it were
 their own.
 
-:[BuildingType]Bunker.Raidable= (boolean): Whether or not this building can be
-  garrisoned by an enemy player's infantry, provided the building is not already
-  occupied.
+:tagdef:`[BuildingType]Bunker.Raidable=boolean`
+  Whether or not this building can be garrisoned by an enemy player's infantry,
+  provided the building is not already occupied.
 
 
 If :tag:`Bunker.Raidable=yes` is set and the building is empty then the building
@@ -95,10 +99,10 @@ there like nothing ever happened.
 Advanced Rubble is implemented in a similar way to other upgrade systems in
 :game:`Ares`:
 
-:[BuildingType]Rubble.Destroyed= (BuildingType): The new :type:`BuildingType`
-  that this :type:`BuildingType` will transform into upon destruction. Buildings
-  that are created via `Rubble.Destroyed` will have the following properties
-  forced upon them:
+:tagdef:`[BuildingType]Rubble.Destroyed=BuildingType`
+  The new :type:`BuildingType` that this :type:`BuildingType` will transform
+  into upon destruction. Buildings that are created via `Rubble.Destroyed` will
+  have the following properties forced upon them:
 
   ::
 
@@ -110,9 +114,10 @@ Advanced Rubble is implemented in a similar way to other upgrade systems in
 The building will be created with maximum :tag:`Strength`. Engineers will
 always get a repair cursor over the building.
 
-:[BuildingType]Rubble.Intact= (BuildingType): The new :type:`BuildingType`
-  that this :type:`BuildingType` will transform into when it is repaired. The
-  repaired building will be created with 1% :tag:`Strength`.
+:tagdef:`[BuildingType]Rubble.Intact=BuildingType`
+  The new :type:`BuildingType` that this :type:`BuildingType` will transform
+  into when it is repaired. The repaired building will be created with 1%
+  :tag:`Strength`.
 
 
 Note that Engineers will not be 'used up' by this repair process - they keep
@@ -134,10 +139,10 @@ A major concept of trenches is the ability for infantry to move from one segment
 of a trench to the next, on the basis that adjacent segments are connected and,
 in essence, the same trench.
 
-:[BuildingType]IsTrench= (string - trench type ID): Specifies a unique name for
-  this particular trench so that the game knows that it is a trench for
-  traversal purposes, and allows occupants to transfer between segments of the
-  same trench type.
+:tagdef:`[BuildingType]IsTrench=string - trench type ID`
+  Specifies a unique name for this particular trench so that the game knows that
+  it is a trench for traversal purposes, and allows occupants to transfer
+  between segments of the same trench type.
 
 
 For example, let's say you have :tag:`IsTrench=AlliedModern`. You have 2
@@ -162,8 +167,8 @@ Specifying the occupants of a building
 
 You can now specify which infantries are allowed to enter into a building.
 
-:[BuildingType]CanBeOccupiedBy= (list of InfantryTypes): Lists the units which
-  are allowed to enter to this building.
+:tagdef:`[BuildingType]CanBeOccupiedBy=list of InfantryTypes`
+  Lists the units which are allowed to enter to this building.
 
 .. index:: Buildings; Specifying the occupants of a building.
 

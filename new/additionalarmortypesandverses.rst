@@ -23,8 +23,8 @@ These :type:`ArmorTypes` can be assigned to objects in the same way as the
 standard :type:`ArmorTypes` (case-insensitively). Their susceptibility to
 specific warheads can be specified as follows:
 
-:[Warhead]Versus.magic=150%: makes this warhead very good at damaging
-  objects with `Armor=magic`.
+:tagdef:`[Warhead]Versus.magic=float - modifier`
+	Sets the efficiency of this warhead against the armor called :tag:`magic`.
 
 Note that each individual :type:`ArmorType`'s versus value is specified using
 the new :tag:`Versus.*` flag, whereas the original 11 :type:`ArmorTypes` versus
@@ -57,16 +57,18 @@ multiplier (so you can now have a warhead that is 100% effective against an
 armor type but, at the same time, will not directly target a unit with that
 armor type).
 
-:[Warhead]Versus.magic.ForceFire= (boolean): Whether or not this warhead is
-  allowed to be force-fired on the "magic" :type:`ArmorType`.
-:[Warhead]Versus.steel.Retaliate= (boolean): Whether or not this warhead is
-  allowed to be used in retaliation against the "steel" :type:`ArmorType`.
-:[Warhead]Versus.clingfilm.PassiveAcquire= (boolean): Whether or not this
-  warhead is allowed to be used to attack the "clingfilm" :type:`ArmorType`
-  automatically.
+:tagdef:`[Warhead]Versus.magic.ForceFire=boolean`
+  Whether or not this warhead is allowed to be force-fired on the :tag:`magic`
+  :type:`ArmorType`.
+:tagdef:`[Warhead]Versus.steel.Retaliate=boolean`
+  Whether or not this warhead is allowed to be used in retaliation against the
+  :tag:`steel` :type:`ArmorType`.
+:tagdef:`[Warhead]Versus.clingfilm.PassiveAcquire=boolean`
+  Whether or not this warhead is allowed to be used to attack the
+  :tag:`clingfilm` :type:`ArmorType` automatically.
 
 
-Note :tag:`Ares`' correct spelling of "acquire".
+Note :game:`Ares`' correct spelling of "acquire".
 
 .. index:: ArmorTypes; Warhead verses special behaviours can be decoupled from Verses (ForceFire/Retaliate/PassiveAcquire).
 

@@ -4,9 +4,11 @@ Customizable Insignia
 Units can now have custom insignia (chevrons) to represent their veterancy
 level.
 
-:[TechnoType]Insignia.Rookie= (filename, excluding the .shp extension):
-:[TechnoType]Insignia.Veteran= (filename, excluding the .shp extension):
-:[TechnoType]Insignia.Elite= (filename, excluding the .shp extension):
+:tagdef:`[TechnoType]Insignia.Rookie=filename, excluding the .shp extension`
+
+:tagdef:`[TechnoType]Insignia.Veteran=filename, excluding the .shp extension`
+
+:tagdef:`[TechnoType]Insignia.Elite=filename, excluding the .shp extension`
   For example, :tag:`Insignia.Rookie=SAMPLE` would display :file:`sample.shp` as
   the insignia while the object is rookie.
 

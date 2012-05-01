@@ -21,8 +21,8 @@ The jammer will not work on allied countries, including the player himself.
 
 .. index:: TechnoTypes; Radar Jammers.
 
-:[TechnoType]RadarJamRadius= (integer - radius in cells): Specifies the radius
-  around the jamming object within structures with :tag:`Radar=yes` or
-  :tag:`SpySat=yes` will be jammed.
+:tagdef:`[TechnoType]RadarJamRadius=integer - radius in cells`
+  Specifies the radius around the jamming object within structures with
+  :tag:`Radar=yes` or :tag:`SpySat=yes` will be jammed.
 
 .. versionadded:: 0.2

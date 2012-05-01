@@ -5,13 +5,13 @@ In :game:`Red Alert 2`, the Cloning Vats reverse-engineered any infantry it was
 sent into. :game:`Ares` not just reenables this logic but also enables
 customization.
 
-:[BuildingType]ReverseEngineersVictims= (boolean): Enables the
-  reverse-engineering logic. Defaults to :value:`no`.
-:[BuildingType]SpyEffect.UndoReverseEngineer= (boolean): Enables Spies to
-  disable all reverse-engineered technology from that building. Defaults to
-  :value:`no`.
-:[InfantryType]/[VehicleType]CanBeReversed= (boolean): Allows the unit to be
-  reverse-engineered. Defaults to :value:`yes`.
+:tagdef:`[BuildingType]ReverseEngineersVictims=boolean`
+  Enables the reverse-engineering logic. Defaults to :value:`no`.
+:tagdef:`[BuildingType]SpyEffect.UndoReverseEngineer=boolean`
+  Enables Spies to disable all reverse-engineered technology from that building.
+  Defaults to :value:`no`.
+:tagdef:`[InfantryType]/[VehicleType]CanBeReversed=boolean`
+  Allows the unit to be reverse-engineered. Defaults to :value:`yes`.
 
 .. note:: Currently :tag:`Grinding=yes` is needed to the reverse-engineering
   building to have this logic working. Also, reverse-engineered units will

@@ -4,9 +4,10 @@ Avoidable Internal Errors
 Snowmd.ini
 ``````````
 
-:[General]Medians=71: This setting is needed to prevent an Internal Error
-  occurring in the Random Map Generator if Urban Areas are enabled by the user.
-  This change is also needed by the Terrain Expansion.
+:tag:`[General]Medians=71`
+  This setting is needed to prevent an Internal Error occurring in the Random
+  Map Generator if Urban Areas are enabled by the user. This change is also
+  needed by the Terrain Expansion.
 
 In order to avoid internal errors, :game:`Ares` sets this to :value:`71` by
 default if it's not specified in the terrain control file.

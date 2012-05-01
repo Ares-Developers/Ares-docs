@@ -16,8 +16,8 @@ other infantry and was also hard-coded to move around randomly. You can now set
 :tag:`IsCow=yes` on other :type:`InfantryTypes` or, indeed, :tag:`IsCow=no` on
 the :tag:`[COW]`.
 
-:[InfantryType]IsCow= (boolean): Defaults to :value:`yes` for :tag:`[COW]`,
-  otherwise to :value:`no`.
+:tagdef:`[InfantryType]IsCow=boolean`
+  Defaults to :value:`yes` for :tag:`[COW]`, otherwise to :value:`no`.
 
 .. index:: Infantry; Define whether an InfantryType behaves like a cow.
 
@@ -33,8 +33,8 @@ art :tag:`Sequence` although the exact effect has not been investigated. You can
 now set :tag:`IsDesolator=yes` on other :type:`InfantryTypes` or, indeed,
 :tag:`IsDesolator=no` on the :tag:`[DESO]`.
 
-:[InfantryType]IsDesolator= (boolean): Defaults to :value:`yes` for
-  \ :tag:`[DESO]`, otherwise to :value:`no`.
+:tagdef:`[InfantryType]IsDesolator=boolean`
+  Defaults to :value:`yes` for :tag:`[DESO]`, otherwise to :value:`no`.
 
 .. index:: Infantry; Enable or disable the Desolator special handling.
 
@@ -59,10 +59,10 @@ means that you can now have multiple types of IFV.
 
 In :game:`Ares` you can specify the :tag:`VoiceIFVRepair` tag on any IFV unit.
 
-:[VehicleType]VoiceIFVRepair= (soundmd entry): Specifies the response this IFV
-  gives when ordered to repair something. If this value is not set,
-  \ :tag:`[VehicleType]VoiceAttack` is used. Defaults to 
-  \ :tag:`[AudioVisual]VoiceIFVRepair` for :tag:`[FV]`, otherwise to
+:tagdef:`[VehicleType]VoiceIFVRepair=soundmd entry`
+  Specifies the response this IFV gives when ordered to repair something. If
+  this value is not set, :tag:`[VehicleType]VoiceAttack` is used. Defaults to 
+  :tag:`[AudioVisual]VoiceIFVRepair` for :tag:`[FV]`, otherwise to
   :value:`none`.
 
 .. index:: Units; VoiceIFVRepair can be specified on any IFV unit.

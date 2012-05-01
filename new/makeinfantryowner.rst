@@ -8,7 +8,7 @@ case the killing player would get ownership of the new :type:`InfantryType`).
 :game:`Ares` lets you choose which player will gain ownership, from one of
 several options.
 
-:[Animation]MakeInfantryOwner= (enumeration invoker|killer|victim|neutral|random):
+:tagdef:`[Animation]MakeInfantryOwner=enumeration invoker|killer|victim|neutral|random`
   Specifies which house will own the resulting :type:`InfantryType` that gets
   created after this animation has played. The animation's re-mappable colors
   will be shown in that house's color. Defaults to :value:`invoker`.

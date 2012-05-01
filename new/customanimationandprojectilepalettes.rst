@@ -5,7 +5,7 @@ In :game:`Yuri's Revenge`, you could use the animation or the unit palette to
 display animations. :game:`Ares` lets you to specify custom palettes for
 animations and projectiles.
 
-:[Animation]CustomPalette= (filename with .pal extension):
+:tagdef:`[Animation]CustomPalette=filename with .pal extension`
   Specifies the palette used to draw this animation/projectile.
 
 

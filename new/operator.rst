@@ -4,8 +4,8 @@ Operator
 Any :type:`TechnoType` can now require a specific :type:`InfantryType` to be
 among its passengers before it will function.
 
-:[TechnoType]Operator= (string, either an InfantryType or "_ANY_"): Specifies
-  the :type:`InfantryType` that must be among the :type:`TechnoType`'s
+:tagdef:`[TechnoType]Operator=string, either an InfantryType or "_ANY_"`
+  Specifies the :type:`InfantryType` that must be among the :type:`TechnoType`'s
   passengers before the :type:`TechnoType` will function. If ":value:`_ANY_`"
   (sans quotes) is specified then it doesn't matter which :type:`InfantryType`
   is inside as long as some :type:`InfantryType` is.
