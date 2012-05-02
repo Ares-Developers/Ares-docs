@@ -1,17 +1,12 @@
 Loading Screen
 ~~~~~~~~~~~~~~
 
-The initial loading screen displayed when first starting Yuri's
-Revenge now indicates that Ares is active and stresses that it is a
-test version.
+The initial loading screen displayed when first starting :game:`Yuri's Revenge`
+now indicates that :game:`Ares` is active and displays its version information.
 
 .. versionadded:: 0.1
 
-Also, if the country loading screen strings are blank, Ares doesn't
-generate a black box.
+Also, if the country loading screen strings are blank, :game:`Ares` doesn't
+darken the areas where the text were supposed to be drawn.
 
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>

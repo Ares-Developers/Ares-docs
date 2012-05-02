@@ -3,16 +3,17 @@
 ========================
 Amphibious Image Changes
 ========================
-In Tiberian Sun, the Amphibious APC would appear to sink into the
-water. This was achieved by changing the imagery from :file:`apc.vxl` to
-:file:`apcw.vxl`. With Ares, you can now specify:
+In :game:`Tiberian Sun`, the Amphibious APC would appear to sink into the water.
+This was achieved by changing the imagery from :file:`apc.vxl` to
+:file:`apcw.vxl`. With :game:`Ares`, you can now specify:
 
-``[VehicleType]`` |>| ``WaterImage= (VehicleType)``
-	This allows the amphibious unit's image to change from :file:`XXXX.shp` or
-	:file:`XXXX.vxl` (defined by ``Image=``) to :file:`YYYY.shp` or :file:`YYYY.vxl` (defined by
-	``[WaterImage]`` |>| ``Image=``) when in water, similar to UnloadingClass.
-	Please note that SHP units cannot have a voxel WaterImage, and vice
-	versa. The VehicleType has to be defined under ``[VehicleTypes]``.
+:tagdef:`[VehicleType]WaterImage=VehicleType`
+  This allows the amphibious unit's image to change from :file:`XXXX.shp` or
+  :file:`XXXX.vxl` (defined by :tag:`Image=`) to :file:`YYYY.shp` or
+  :file:`YYYY.vxl` (defined by :tag:`[WaterImage]Image=`) when in water, similar
+  to :tag:`UnloadingClass`.
+
+  Please note that SHP units cannot have a voxel :tag:`WaterImage`, and vice
+  versa. The :type:`VehicleType` has to be defined under :tag:`[VehicleTypes]`.
 
 .. versionadded:: 0.1
-

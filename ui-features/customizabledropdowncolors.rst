@@ -1,46 +1,45 @@
 Customizable Dropdown Colors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The player colors shown in the dropdown list in the menu are hardcoded
-in Yuri's Revenge and they map to hardcoded color schemes in-game.
-Ares removes the hardcoding and lets you customize all existing colors
-and even add more of them. Custom Dropdown Colors.
+The player colors shown in the dropdown list in the menu are hardcoded in
+:game:`Yuri's Revenge` and they map to hardcoded color schemes in-game.
+:game:`Ares` removes the hardcoding and lets you customize all existing colors
+and even add more of them.
 
-Using uimd.ini you can define up to 16 colors to be shown in the
-dropdown lists. Replace `X` by the numbers from `1` to `Count`
+.. index:: Interface; Custom Dropdown Colors.
+
+Using :file:`uimd.ini` you can define up to 16 colors to be shown in the
+dropdown lists. Replace :tag:`X` by the numbers from :value:`1` to :tag:`Count`
 (without leading zeros):
 
-:[Colors]Count= (integer): The number of colors to display. Values
-  from 8 to 16 are valid and Ares enforces these limits. Defaults to
-  `8`. Count=
-:[Colors]SlotX.DisplayColor= (R,G,B): The color displayed in the
-  dropdown lists to preview the in-game color scheme in RGB format, that
-  is three comma separated values from 0 to 255. Default depends on slot
-  index. SlotX.DisplayColor=
-:[Colors]SlotX.ColorScheme= (Color scheme): The name of the color
-  scheme defined in rulesmd.ini's `[Colors]` section this slot maps to
-  in-game. Default depends on slot index. SlotX.ColorScheme=
-:[Colors]SlotX.Tooltip= (CSF label): The text shown as tool tip when
-  the player hovers over the color in the dropdown list. Default depends
-  on slot index. SlotX.Tooltip=
+:tagdef:`[Colors]Count=integer`
+  The number of colors to display. Values from 8 to 16 are valid and :tag:`Ares`
+  enforces these limits. Defaults to :value:`8`.
+:tagdef:`[Colors]SlotX.DisplayColor=R,G,B`
+  The color displayed in the dropdown lists to preview the in-game color scheme
+  in RGB format, that is three comma separated values from 0 to 255. Default
+  depends on slot index.
+:tagdef:`[Colors]SlotX.ColorScheme=Color scheme`
+  The name of the color scheme defined in :file:`rulesmd.ini`'s :tag:`[Colors]`
+  section this slot maps to in-game. Default depends on slot index.
+:tagdef:`[Colors]SlotX.Tooltip=CSF label`
+  The text shown as tool tip when the player hovers over the color in the
+  dropdown list. Default depends on slot index.
 
-
-You can use `Observer` instead of `SlotX` to define the colors used
+You can use :tag:`Observer` instead of :tag:`SlotX` to define the colors used
 for observers.
 
-Ares will display all color slots from `1` to `Count`. You may
-redefine any property without having to redefine the entire list.
+:game:`Ares` will display all color slots from :value:`1` to :tag:`Count`. You
+may redefine any property without having to redefine the entire list.
 
-It is your responsibility to select appropriate values. Ares will not
-check whether color values and color schemes are unique and
-distinguishable.
+It is your responsibility to select appropriate values. :game:`Ares` will not
+check whether color values and color schemes are unique and distinguishable.
 
-Quickstart: Ares defaults to the original game's values and adds six
-more definitions not shown by default. To display those new items, set
-`Count=14`. Note that these additional color schemes have been added
-merely for demonstration purposes and they might collide with the
-original color schemes.
-
+.. quickstart:: \ :game:`Ares` defaults to the original game's values and adds
+  six more definitions not shown by default. To display those new items, set
+  :tag:`Count=14`. Note that these additional color schemes have been added
+  merely for demonstration purposes and they might collide with the original
+  color schemes.
 
 
 Default values
@@ -61,8 +60,5 @@ demonstration purposes `Slot14` 128,128,128 Grey
 STT:PlayerColorCharcoal For demonstration purposes ` *(others)*`
 255,255,255 LightGrey NOSTR: `Observer` 96,96,96 LightGrey
 STT:PlayerColorObserver
+
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>
