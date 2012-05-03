@@ -7,6 +7,10 @@ supports you can switch to a campaign list as in :game:`Tiberian Sun`.
 listed in :file:`battlemd.ini` will show up in the list under the name defined
 by :tag:`Description=`.
 
+.. image:: /images/ui_campaignlist.jpg
+  :alt: Campaign list showing both original campaigns with summary
+  :align: center
+
 Enable the campaign list in :file:`uimd.ini`:
 
 :tagdef:`[UISettings]CampaignList=boolean`

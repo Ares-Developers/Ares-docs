@@ -128,6 +128,10 @@ Factories
   been spied, select the building and the cameo of the unit that is being
   produced will be displayed over the building.
 
+.. image:: /images/production_spying.png
+  :alt: Screenshot of a current production being revealed
+  :align: center
+
 .. index:: Spy behaviour; New effect: Reveal production cameo (shows you what the enemy are currently building).
 
 

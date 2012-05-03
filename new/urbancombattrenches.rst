@@ -54,6 +54,14 @@ would therefore definitely harm the occupants.
   thinking about trenches. This has an effect on all occupiable buildings with
   \ :tag:`UC.PassThrough` > 0%.
 
+.. image:: /images/subjecttotrenches.png
+  :alt: Illustration of different SubjectToTrenches values
+  :align: center
+
+.. image:: /images/subjecttotrenches_passthrough.png
+  :alt: Illustration of different UC.PassThrough values
+  :align: center
+
 .. index:: Buildings; Weapons can be made to pass through urban combat buildings
   to the occupants inside (including fatal chance and damage modifier).
 

@@ -25,13 +25,25 @@ problems with your mod or :game:`Ares` itself.
 In the event of an Internal Error, :game:`Ares` can sometimes tell you what
 caused the error. For example:
 
+.. image:: /images/crash0.png
+  :alt: Screenshot of an Ares Internal Error dialog showing the cause of an
+    Internal Error
+  :align: center
 
 Here, :game:`Ares` can determine what caused the error.
 
+.. image:: /images/crash1.png
+  :alt: Screenshot of an Ares Internal Error dialog showing an unsolved Internal
+    Error
+  :align: center
 
 Here, the error cannot be figured out - :game:`Ares` offers to create a full
 crash report.
 
+.. image:: /images/crash2.png
+  :alt: Screenshot of an Ares Internal Error dialog after recording an Internal
+    Error
+  :align: center
 
 The crash report has been generated. :game:`Ares` will close after showing this
 message.

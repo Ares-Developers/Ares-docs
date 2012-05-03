@@ -7,6 +7,9 @@ more difficult. If the building could not be captured the engineer would damage
 it instead. :tag:`EngineerDamage` is not present in :game:`Yuri's Revenge`.
 :game:`Ares` restores this feature.
 
+.. image:: /images/engineerdamage.png
+  :alt: Screenshot of an Engineer going to damage a building
+  :align: center
 
 :tagdef:`[General]EngineerDamage=float - percent`
   If the building can not be captured the engineer will damage it by this amount

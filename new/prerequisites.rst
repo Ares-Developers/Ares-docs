@@ -76,7 +76,9 @@ Below is a flowchart of the current prerequisite system. Blue sections
 are unchanged from the original system. Pink sections have been
 modified or added by :game:`Ares`.
 
-
+.. image:: /images/prerequisite_system.svg
+  :alt: Flowchart of the current prerequisite system
+  :align: center
 
 Generic Prerequisite Groups
 ```````````````````````````

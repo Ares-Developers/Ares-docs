@@ -6,6 +6,10 @@ feed their energy from one tower to another along a whole chain of towers. This,
 of course, is not possible in the released game (which suggests that this
 screenshot has been doctored).
 
+.. image:: /images/prism1.jpg
+  :alt: Red Alert 2 pre-release screenshot
+  :align: center
+
 :game:`Ares` completely replaces the old Prism Tower code to fix a couple of
 minor bugs and also extend it to provide a full set of Prism networking options.
 

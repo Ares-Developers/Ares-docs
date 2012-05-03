@@ -5,6 +5,10 @@ Change some menus to hide certain buttons that don't fit your mod like the
 Campaign and Play Movies buttons. The default button action will be overridden
 by the action you defined. You are not limited to just disable the button.
 
+.. image:: /images/ui_customize.png
+  :alt: Collage demonstrating some button customizations
+  :align: center
+
 The following buttons can be affected by editing :file:`uimd.ini`. They default
 to :value:`default`.
 
@@ -30,14 +34,14 @@ to :value:`default`.
 
 The following action values are valid:
 
-:default: Do not change the action of this button.
-:disable: The button stays where it is, but it won't be clickable.
-:hide: The button will be hidden. The following buttons are moved so there will
-  be no empty space.
-:message: Clicking the button will show a message box with an *OK* button and
-  \ :value:`TXT_X_MSG` as its text. :value:`X` equals the flag's name.
-:credits: Clicking the button starts the credits roll.
-:sneakpeek: Clicking the button starts the sneak peek video.
+  :default: Do not change the action of this button.
+  :disable: The button stays where it is, but it won't be clickable.
+  :hide: The button will be hidden. The following buttons are moved so there will
+    be no empty space.
+  :message: Clicking the button will show a message box with an *OK* button and
+    \ :value:`TXT_X_MSG` as its text. :value:`X` equals the flag's name.
+  :credits: Clicking the button starts the credits roll.
+  :sneakpeek: Clicking the button starts the sneak peek video.
 
 
 Examples:

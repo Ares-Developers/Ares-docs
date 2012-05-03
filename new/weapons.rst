@@ -74,10 +74,12 @@ old disruptor wave from previous games. For now it is referred to as
 :tag:`IsLaser` and :tag:`IsBigLaser` produce two different effects, however
 their naming was established before the effects were fully tested:
 :tag:`IsLaser` appears to actually render a wider beam! See the image below,
-left unit is using :tag:`Wave.IsLaser``, the right one is using
+left unit is using :tag:`Wave.IsLaser`, the right one is using
 :tag:`Wave.IsBigLaser`:
 
-.. todo:: Insert image of different laser widths
+.. image:: /images/wave_lasers.png
+  :alt: Effects of Wave.Is(Big)Laser
+  :align: center
 
 .. versionadded:: 0.1
 
@@ -199,6 +201,10 @@ cut from the game before :game:`Red Alert 2` was released. This hard-coding has
 been changed so that the whole SHP is now considered for the fuse, however this
 means that you'll now see that extra frame from :file:`bombcurs.shp`, unless you
 replace that SHP file.
+
+.. image:: /images/bombcurs.png
+  :alt: Image of bombcurs.shp
+  :align: center
 
 .. versionadded:: 0.1
 

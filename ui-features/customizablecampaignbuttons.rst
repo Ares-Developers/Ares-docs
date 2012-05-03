@@ -5,6 +5,10 @@ With :game:`Ares` you can have up to four campaign buttons on :game:`Yuri's
 Revenge`'s campaign selection menu and customize all of them in
 :file:`uimd.ini`.
 
+.. image:: /images/ui_campaignbuttons.jpg
+  :alt: Campaign menu showing four campaign buttons
+  :align: center
+
 .. index:: Interface; Third Button / Campaign Button Customization.
 
 
