@@ -14,6 +14,7 @@ Table of Contents
 	:glob:
 	
 	intro
+	migration
 	bugfixes/index
 	restored/index
 	new/index

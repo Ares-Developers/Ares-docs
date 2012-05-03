@@ -8,7 +8,8 @@ among its passengers before it will function.
   Specifies the :type:`InfantryType` that must be among the :type:`TechnoType`'s
   passengers before the :type:`TechnoType` will function. If ":value:`_ANY_`"
   (sans quotes) is specified then it doesn't matter which :type:`InfantryType`
-  is inside as long as some :type:`InfantryType` is.
+  is inside as long as some :type:`InfantryType` is. Use :value:`none` to remove
+  the requirement of having an operator. Defaults to :value:`none`.
 
 
 On the :type:`TechnoType` you will need to set :tag:`Passengers=1` (or higher)

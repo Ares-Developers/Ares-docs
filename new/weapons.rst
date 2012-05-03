@@ -170,7 +170,11 @@ the following flags in order to customize that bomb:
   to.
 :tagdef:`[Weapon]IvanBomb.DestroysBridges=boolean`
   Whether or not this bomb can be used on Bridge Repair Huts in order to destroy
-  the corresponding Bridge. [#DestroysBridges]_
+  the corresponding Bridge.
+  
+  .. note:: Bombs can always be attached to Bridge Huts, but the resulting
+    explosion will not destroy the bridge unless
+    \ :tag:`IvanBomb.DestroysBridges=yes` is set.
 :tagdef:`[Weapon]IvanBomb.Delay=integer`
   The number of frames that will elapse before the bomb detonates automatically.
 :tagdef:`[Weapon]IvanBomb.AttachSound=sound name`
@@ -217,8 +221,3 @@ LaserThickness
     works with :tag:`IsHouseColor=yes` and have low quality.
 
 .. versionadded:: 0.2
-
-
-.. rubric:: Footnotes
-
-.. [#DestroysBridges] Bombs can always be attached to Bridge Huts, but the resulting explosion will not destroy the bridge unless ``IvanBomb.DestroysBridges=yes`` is set.

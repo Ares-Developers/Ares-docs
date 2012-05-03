@@ -39,12 +39,18 @@ which happily let it happen. Unfortunately, this is exactly the way
 
 In order for :game:`Syringe`/:game:`Ares` to work with :game:`Comodo Internet
 Security`, you have to make the following changes to Comodo's settings
-(`courtesy of eva-251 <http://forums.renegadeprojects.com/showthread.php?tid=1714&pid=17592#pid17592>`_):
+(`courtesy of eva-251
+<http://forums.renegadeprojects.com/showthread.php?tid=1714&pid=17592#pid17592>`_):
 
-#. :file:`gamemd.exe` and :file:`Syringe.exe` need to be in the "Trusted Files" list.
-#. Under "Computer Security Policy" -> "Defense+ Rules", :file:`gamemd.exe` and :file:`Syringe.exe` need to be marked as "Installer or Updater".
-#. "Defense+ Settings" -> "Execution Control Settings" -> "Detect shellcode injections" should be checked.
-#. Under "Defense+ Settings" -> "Execution Control Settings" -> "Exclusions:" add :file:`Syringe.exe`, :file:`Ares.dll`, :file:`Ares.dll.inj`, :file:`gamemd.exe`.
+#. :file:`gamemd.exe` and :file:`Syringe.exe` need to be in the "Trusted Files"
+   list.
+#. Under "Computer Security Policy" -> "Defense+ Rules", :file:`gamemd.exe` and
+   :file:`Syringe.exe` need to be marked as "Installer or Updater".
+#. "Defense+ Settings" -> "Execution Control Settings" -> "Detect shellcode
+   injections" should be checked.
+#. Under "Defense+ Settings" -> "Execution Control Settings" -> "Exclusions:"
+   add :file:`Syringe.exe`, :file:`Ares.dll`, :file:`Ares.dll.inj`,
+   :file:`gamemd.exe`.
 
 This should allow :game:`Syringe`/:game:`Ares` to work properly.
 
@@ -74,7 +80,8 @@ Known Minor Issues
 Solid Buildings vs. Invisible Projectiles
 -----------------------------------------
 The SolidHeight/Solid Buildings functionality does not work with
-invisible projectiles yet. (`Issue #888 <http://bugs.renegadeprojects.com/view.php?id=888>`_)
+invisible projectiles yet. (`Issue #888
+<http://bugs.renegadeprojects.com/view.php?id=888>`_)
 
 The Whiteboy Bug
 ----------------
