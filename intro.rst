@@ -116,16 +116,17 @@ Mods should not include :file:`ares.mix`. This new MIX file is bundled with
 :game:`Ares` to provide any new/modified files that :game:`Ares`
 changes/additions rely on. This MIX file presently includes:
 
-+ :file:`ares.csf` includes a few new strings:
-	+ `GUI:SelectCampaign=Select your Campaign`
-	+ `GUI:PlayMission=Play`
-	+ `GUI:UrbanAreas=Create Urban Areas`
-	+ `Name:Desert=Desert`
-	+ `STT:RMGUrbanAreas=Choose whether urban areas will be present on the map.`
-	+ `STT:MultiEngineer=Engineers can capture damaged buildings only.`
-	+ `STT:PlayerColorLilac=Choose this to be lilac.`
-	+ `STT:PlayerColorLightBlue=Choose this to be light blue.`
-	+ `STT:PlayerColorLime=Choose this to be lime.`
-	+ `STT:PlayerColorTeal=Choose this to be teal.`
-	+ `STT:PlayerColorBrown=Choose this to be brown.`
-	+ `STT:PlayerColorCharcoal=Choose this to be dark grey.`
+:file:`ares.csf` includes a few new strings:
+
++ `GUI:SelectCampaign=Select your Campaign`
++ `GUI:PlayMission=Play`
++ `GUI:UrbanAreas=Create Urban Areas`
++ `Name:Desert=Desert`
++ `STT:RMGUrbanAreas=Choose whether urban areas will be present on the map.`
++ `STT:MultiEngineer=Engineers can capture damaged buildings only.`
++ `STT:PlayerColorLilac=Choose this to be lilac.`
++ `STT:PlayerColorLightBlue=Choose this to be light blue.`
++ `STT:PlayerColorLime=Choose this to be lime.`
++ `STT:PlayerColorTeal=Choose this to be teal.`
++ `STT:PlayerColorBrown=Choose this to be brown.`
++ `STT:PlayerColorCharcoal=Choose this to be dark grey.`

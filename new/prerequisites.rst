@@ -3,7 +3,8 @@ Prerequisites
 
 The prerequisite system has been enhanced in several ways. New flags are
 described below, and an issue has been resolved with regard to upgrades as
-prerequisites (see Type 2 Fixes).
+prerequisites (see :doc:`Type 2 fixes
+</bugfixes/type2/buildingtypeupgradesarenotviableprerequisites>`).
 
 :tagdef:`[Unit]Prerequisite.RequiredTheaters=list of theater names`
   The map theaters in which the unit is available. Defaults to all theaters. For
@@ -63,7 +64,8 @@ prerequisites (see Type 2 Fixes).
 
 :tagdef:`[Unit]Prerequisite.StolenTechs=list of integers`
   The list of stealable technology types that must be stolen before this object
-  can be built. See Stolen Technology for more information.
+  can be built. See :ref:`Stolen Technology <spybehavior-stolentech>` for more
+  information.
 
 .. index:: Prerequisites; New StolenTech requirements.
 

@@ -10,7 +10,7 @@ customization.
 :tagdef:`[BuildingType]SpyEffect.UndoReverseEngineer=boolean`
   Enables Spies to disable all reverse-engineered technology from that building.
   Defaults to :value:`no`.
-:tagdef:`[InfantryType]/[VehicleType]CanBeReversed=boolean`
+:tagdef:`[InfantryOrVehicle]CanBeReversed=boolean`
   Allows the unit to be reverse-engineered. Defaults to :value:`yes`.
 
 .. note:: Currently :tag:`Grinding=yes` is needed to the reverse-engineering
@@ -23,6 +23,13 @@ customization.
 
 .. note:: While this logic appears to be working, there have also been some
   minor bugs related to this feature. Be advised.
+
+When you are the owner of the reversing facility, reverse-engineering any
+:type:`InfantryType` for the first time will play
+:value:`EVA_ReverseEngineeredInfantry` and :value:`EVA_NewTechnologyAcquired`;
+reverse-engineering any :type:`VehicleType` for the first time will play
+:value:`EVA_ReverseEngineeredVehicle` and :value:`EVA_NewTechnologyAcquired`.
+The undo-reversing spy effect will play :value:`EVA_TechnologyStolen`.
 
 .. index:: Prerequisites; Reverse-Engineering logic.
 

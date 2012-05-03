@@ -40,7 +40,7 @@ Mirage Tanks without their Operator will still maintain their disguise.
 + Operator logic cannot be used on vehicles that deploy into buildings
   (e.g. MCVs) because the passenger deploy function takes precedence
   over :tag:`DeploysInto=`.
-+ Operator logic will render :type:`VehicleTypes` with :tag:`BallonHover=yes`
++ Operator logic will render :type:`VehicleTypes` with :tag:`BalloonHover=yes`
   unusable because they will power down in mid-air without landing, so it is
   impossible to get an Operator into them (even flying infantry like the
   Rocketeer cannot enter them).

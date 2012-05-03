@@ -8,6 +8,8 @@ effects that a Spy can achieve.
 
 All of the following flags default to :value:`no` or :value:`0`.
 
+.. versionadded:: 0.1
+
 :tagdef:`[BuildingType]SpyEffect.Custom=boolean`
   Whether or not to use the :game:`Ares` spy infiltration logic instead of the
   original :game:`Yuri's Revenge` logic.
@@ -75,6 +77,7 @@ Super Weapons
   on attached upgrades) to have their countdown timers restarted.
 
 
+.. _`spybehavior-stolentech`:
 
 Stolen Technology
 `````````````````
@@ -127,4 +130,9 @@ Factories
 
 .. index:: Spy behaviour; New effect: Reveal production cameo (shows you what the enemy are currently building).
 
-.. versionadded:: 0.1
+
+Reverse Engineering
+```````````````````
+
+For a spy effect to reset a player's build options gained by reverse
+engineering, see :doc:`/new/reverseengineerlogic`.

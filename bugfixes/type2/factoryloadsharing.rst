@@ -10,6 +10,7 @@ other instances of the same :type:`BuildingType`. In :game:`Ares` this has been
 extended to search for all :type:`BuildingTypes` with the same :tag:`Factory`
 and :tag:`Naval` settings.
 
-.. note:: This fix currently prevents the so-called 'kennel hack' from working.
+.. note:: This fix prevents the so-called 'kennel hack' from working. See
+  \ :doc:`/new/factoriesandcloning` for a solution.
 
 .. versionadded:: 0.1

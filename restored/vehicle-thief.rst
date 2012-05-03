@@ -1,15 +1,14 @@
 =============
 Vehicle Thief
 =============
-With Ares you can create vehicle thieves like the Mutant Hijacker from
-Tiberian Sun without having to use :command:`Thief=yes`, :command:`Infiltrate=yes`
-or :command:`Agent=yes` also. The logic was amended to allow for some
-customization the original game didn't support.<br>
-		
-.. seealso:: :doc:`hijackers`
+
+With :game:`Ares` you can create vehicle thieves like the Mutant Hijacker from
+:game:`Tiberian Sun` without having to use :tag:`Thief=yes`,
+:tag:`Infiltrate=yes` or :tag:`Agent=yes` also. The logic was amended to allow
+for some customization the original game didn't support.
+
+See the :doc:`/new/hijackers` section for details.
+
+.. index:: Infantry; VehicleThief logic without workarounds.
 
 .. versionadded:: 0.2
-
-.. admonition:: Branch needed
-
-	ft-hijacker

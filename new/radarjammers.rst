@@ -1,7 +1,7 @@
 Radar Jammers
 ~~~~~~~~~~~~~
 
-:game:`Red Alert`-like Radar Jammers, where the mere presence of the jammmer
+:game:`Red Alert`-like Radar Jammers, where the mere presence of the jammer
 within a certain range of the radar causes an outage (i.e. no weapons firing, no
 deploy, etc. needed), are now possible again (`Request #305
 <http://bugs.renegadeprojects.com/view.php?id=305>`_).

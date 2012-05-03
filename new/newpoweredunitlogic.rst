@@ -10,10 +10,6 @@ which allows each side to have multiple buildings power multiple units.
   Allows multiple powered units to exist, as well as allowing multiple buildings
   to provide power. Defaults to :value:`none`.
 
-.. note:: Be advised, if a powered unit is being built when the building that
-  powers this unit is destroyed, the immobile unit will jam up that war factory
-  until destruction or a building from :tag:`PoweredBy=` is rebuilt.
-
 .. note:: \ :tag:`PowersUnit=` is usable but obsolete in Ares. Therefore
   features using :tag:`PowersUnit=` won't be supported by the BugTracker or
   RenProj in general.

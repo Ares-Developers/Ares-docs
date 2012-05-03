@@ -13,6 +13,8 @@ And, of course, the one extra palette was already in use on the Statue of
 Liberty. :game:`Ares` removes this limit and lets you use custom palettes on all
 :type:`TechnoTypes` to your heart's content.
 
+See :doc:`/new/customanimationandprojectilepalettes`.
+
 .. note:: It is not known why this apparently arbitrary limit on custom palettes
   was in place it may have been there to mask a bug that we don't yet know
   about.
