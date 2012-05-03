@@ -42,23 +42,29 @@ check whether color values and color schemes are unique and distinguishable.
   color schemes.
 
 
-Default values
-``````````````
-Slot ID Menu Color Color Scheme Tool Tip Note `Slot1` 221,226,13 Gold
-STT:PlayerColorGold `Slot2` 255,25,25 DarkRed STT:PlayerColorRed
-`Slot3` 42,116,226 DarkBlue STT:PlayerColorBlue `Slot4` 62,209,46
-DarkGreen STT:PlayerColorGreen `Slot5` 255,160,25 Orange
-STT:PlayerColorOrange `Slot6` 50,215,230 DarkSky
-STT:PlayerColorSkyBlue `Slot7` 149,40,189 Purple STT:PlayerColorPurple
-`Slot8` 255,154,235 Magenta STT:PlayerColorPink `Slot9` 148,93,239
-NeonBlue STT:PlayerColorLilac For demonstration purposes `Slot10`
-115,255,231 LightBlue STT:PlayerColorLightBlue For demonstration
-purposes `Slot11` 255,239,99 Yellow STT:PlayerColorLime For
-demonstration purposes `Slot12` 8,195,90 Green STT:PlayerColorTeal For
-demonstration purposes `Slot13` 189,85,0 Red STT:PlayerColorBrown For
-demonstration purposes `Slot14` 128,128,128 Grey
-STT:PlayerColorCharcoal For demonstration purposes ` *(others)*`
-255,255,255 LightGrey NOSTR: `Observer` 96,96,96 LightGrey
-STT:PlayerColorObserver
+Default dropdown color values
+`````````````````````````````
+  .. table::
+
+    =================  ====================  ==================  =================================  ==========================
+    Slot ID            Menu Color            Color Scheme        Tool Tip                           Note
+    =================  ====================  ==================  =================================  ==========================
+    :tag:`Slot1`       :value:`221,226,13`   :value:`Gold`       :value:`STT:PlayerColorGold`
+    :tag:`Slot2`       :value:`255,25,25`    :value:`DarkRed`    :value:`STT:PlayerColorRed`
+    :tag:`Slot3`       :value:`42,116,226`   :value:`DarkBlue`   :value:`STT:PlayerColorBlue`
+    :tag:`Slot4`       :value:`62,209,46`    :value:`DarkGreen`  :value:`STT:PlayerColorGreen`
+    :tag:`Slot5`       :value:`255,160,25`   :value:`Orange`     :value:`STT:PlayerColorOrange`
+    :tag:`Slot6`       :value:`50,215,230`   :value:`DarkSky`    :value:`STT:PlayerColorSkyBlue`
+    :tag:`Slot7`       :value:`149,40,189`   :value:`Purple`     :value:`STT:PlayerColorPurple`
+    :tag:`Slot8`       :value:`255,154,235`  :value:`Magenta`    :value:`STT:PlayerColorPink`
+    :tag:`Slot9`       :value:`148,93,239`   :value:`NeonBlue`   :value:`STT:PlayerColorLilac`      For demonstration purposes
+    :tag:`Slot10`      :value:`115,255,231`  :value:`LightBlue`  :value:`STT:PlayerColorLightBlue`  For demonstration purposes
+    :tag:`Slot11`      :value:`255,239,99`   :value:`Yellow`     :value:`STT:PlayerColorLime`       For demonstration purposes
+    :tag:`Slot12`      :value:`8,195,90`     :value:`Green`      :value:`STT:PlayerColorTeal`       For demonstration purposes
+    :tag:`Slot13`      :value:`189,85,0`     :value:`Red`        :value:`STT:PlayerColorBrown`      For demonstration purposes
+    :tag:`Slot14`      :value:`128,128,128`  :value:`Grey`       :value:`STT:PlayerColorCharcoal`   For demonstration purposes
+    :value:`(others)`  :value:`255,255,255`  :value:`LightGrey`  :value:`NOSTR:`
+    :tag:`Observer`    :value:`96,96,96`     :value:`LightGrey`  :value:`STT:PlayerColorObserver`
+    =================  ====================  ==================  =================================  ==========================
 
 .. versionadded:: 0.2

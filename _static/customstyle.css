@@ -22,3 +22,8 @@ div.quickstart p.admonition-title {
 .captiontag {
     font-family: monospace;
 }
+
+.definition {
+    font-weight: bold;
+}
+

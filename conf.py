@@ -94,6 +94,10 @@ todo_include_todos = True
 
 highlight_language = 'ini'
 
+ares_tag_captionclass = 'type'
+ares_tag_typeclass = 'type'
+ares_tag_defclass = 'definition'
+
 # -- Options for HTML output ---------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for

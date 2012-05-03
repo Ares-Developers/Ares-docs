@@ -15,6 +15,7 @@ def setup(app):
     app.add_config_value('ares_tag_separator', u"\u25BA", 'env')
     app.add_config_value('ares_tag_captionclass', 'type', 'env')
     app.add_config_value('ares_tag_typeclass', 'type', 'env')
+    app.add_config_value('ares_tag_defclass', '', 'env')
 
 def game_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     set_classes(options)
@@ -58,6 +59,7 @@ def tag_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
     separator = config.ares_tag_separator
     captionclass = config.ares_tag_captionclass
     typeclass = config.ares_tag_typeclass
+    defclass = config.ares_tag_defclass
     
 
     node = nodes.inline("", "")
@@ -66,18 +68,16 @@ def tag_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
         # value describes the data type
         if config.ares_tag_defexpanded:
             if scope:
-                node.append(nodes.literal(scope, scope))
+                node.append(nodes.literal(scope, scope, classes=[defclass]))
                 if tag:
                      node.append(nodes.Text(" " + separator + " "))
-            node.append(nodes.literal(tag, tag))
+            node.append(nodes.literal(tag, tag, classes=[defclass]))
         else:
             string = scope + separator + tag
-            node.append(nodes.literal(string, string))
+            node.append(nodes.literal(string, string, classes=[defclass]))
         
         if value:
-            #node.append(nodes.Text(" ("))
-            node.append(nodes.inline(value, " (" + value.strip() + ")", classes=[typeclass]))
-            #node.append(nodes.Text(")"))
+            node.append(nodes.inline(value, " (" + value.strip() + ")", classes=[typeclass, defclass]))
     else:
         # tags in captions and other text
         string = tag + value;
