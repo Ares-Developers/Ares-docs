@@ -38,10 +38,7 @@ section:
   The PCX file to use for the country's flag, in the format "filename.pcx".
 :tagdef:`[Country]File.LoadScreen=filename, *including* the .shp extension`
   The SHP file to use for the country's loading screen, in the format
-  "filename%s.shp". The filename specified *must* include "`%s`", which will be
-  substituted for the current screen width (640 or 800 pixels). For example,
-  :tag:`File.LoadScreen=ls%susstates.shp` will make the game load
-  :file:`ls800usstates.shp`.
+  "filename.shp".
 :tagdef:`[Country]File.LoadScreenPAL=filename, *including* the .pal extension`
   The palette file to use for the country's loading screen, in the format
   "filename.pal".

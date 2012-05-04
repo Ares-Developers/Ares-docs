@@ -10,10 +10,6 @@ which allows each side to have multiple buildings power multiple units.
   Allows multiple powered units to exist, as well as allowing multiple buildings
   to provide power. Defaults to :value:`none`.
 
-.. note:: \ :tag:`PowersUnit=` is usable but obsolete in Ares. Therefore
-  features using :tag:`PowersUnit=` won't be supported by the BugTracker or
-  RenProj in general.
-
 .. note:: \ :tag:`PoweredBy=` can use multiple buildings, but be advised, using
   a comma to separate multiple buildings will be parsed as "or" rather than
   "and". There is no "and" capacity.
