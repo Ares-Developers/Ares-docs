@@ -21,17 +21,17 @@ flags to be considered.
 
 Each possible boon can specify the following flags...
 
-:tagdef:`[Boon]Secret.RequiredHouses=list of countries`
+:tagdef:`[Boon]SecretLab.RequiredHouses=list of countries`
   Which countries are allowed to get this unit as a secret lab boon. This is
   only checked when the boon is picked so if
   :tag:`SecretLab.GenerateOnCapture=no` then the boon can still be obtained by a
-  country not on the :tag:`Secret.RequiredHouses` list (if the original owner's
-  country is on the list).
-:tagdef:`[Boon]Secret.ForbiddenHouses=list of countries`
+  country not on the :tag:`SecretLab.RequiredHouses` list (if the original
+  owner's country is on the list).
+:tagdef:`[Boon]SecretLab.ForbiddenHouses=list of countries`
   Which countries are not allowed to get this unit as a secret lab boon. This is
   only checked when the boon is picked so if
   :tag:`SecretLab.GenerateOnCapture=no` then the boon can still be obtained by a
-  country that is on the :tag:`Secret.RequiredHouses` list (if the original
+  country that is on the :tag:`SecretLab.RequiredHouses` list (if the original
   owner's country is not on the list).
 
 
@@ -41,7 +41,7 @@ pre-placed buildings without :tag:`SecretLab.GenerateOnCapture=yes`) are
 eligible to be picked.
 
 .. note:: This means that such Secret Labs may appear to disobey
-  \ :tag:`Secret.RequiredHouses` and :tag:`Secret.ForbiddenHouses` when
+  \ :tag:`SecretLab.RequiredHouses` and :tag:`SecretLab.ForbiddenHouses` when
   captured. This is not a bug.
 
 .. index:: BuildingTypes; Per-building secret lab boons.
