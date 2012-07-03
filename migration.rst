@@ -30,6 +30,6 @@ Changed tags:
 
 Other changes:
 
-  :game:`Ares` 0.1 supported options in :file:`arda.ini` to configure how
+  :game:`Ares` 0.1 supported options in :file:`ares.ini` to configure how
   graphics surfaces were allocated. The tags :tag:`Surface.*.Memory` and
   :tag:`Surface.*.Force3D` are obsolete now and have no effect any more.
