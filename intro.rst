@@ -137,3 +137,4 @@ changes/additions rely on. This MIX file presently includes:
 + `STT:PlayerColorTeal=Choose this to be teal.`
 + `STT:PlayerColorBrown=Choose this to be brown.`
 + `STT:PlayerColorCharcoal=Choose this to be dark grey.`
++ `TXT_COMMAND_DISABLED=The %s command is not available.`

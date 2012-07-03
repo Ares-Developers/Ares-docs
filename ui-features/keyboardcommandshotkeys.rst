@@ -17,6 +17,9 @@ which can be edited in FinalAlert 2 YR.
   reason for this is not yet known. If you do encounter it then please provide
   the developers with the crash information.
 
+.. note:: This keyboard can be disabled in release versions of your mod. See
+  \ :ref:`Disabling Keyboard Commands <disable-commands>`.
+
 .. index:: Keyboard Commands; Map snapshot command (saves a YRM map file of the current map).
 
 .. versionadded:: 0.1
@@ -44,6 +47,9 @@ weighting, so mod authors can see how the AI is performing over the course of a
 game. Note that :file:`debug.log` file writing must be turned on otherwise the
 data will not be written to the file.
 
+.. note:: This keyboard can be disabled in release versions of your mod. See
+  \ :ref:`Disabling Keyboard Commands <disable-commands>`.
+
 .. index:: Keyboard Commands; Type data dumping command (dump type information to a log file, including AI trigger weights).
 
 .. versionadded:: 0.1
@@ -58,4 +64,33 @@ Please refer to section :doc:`Command Line Arguments
 
 :-AI-CONTROL:
 
+.. note:: This keyboard can be disabled in release versions of your mod. See
+  \ :ref:`Disabling Keyboard Commands <disable-commands>`.
+
 .. versionadded:: 0.1
+
+
+.. _`disable-commands`:
+
+Disabling Keyboard Commands
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+It is possible to disable certain debug keyboard commands from
+:file:`rulesmd.ini` for the release version of a mod. The affected keyboard
+commands are AI Control, Dump Types, Map Snapshot and Dump AI Base Plan.
+
+:tagdef:`[GlobalControls]DebugKeysEnabled=boolean`
+  Whether the debug keyboard commands are enabled. Defaults to :value:`yes`.
+  If set to :value:`no`, executing a disabled keyboard command will display a
+  white text message instead.
+
+The message string displayed to the player is defined by
+:value:`TXT_COMMAND_DISABLED`. You can override this string in your language
+string file. You may include one (not more) "%s" placeholder, which will be
+replaced by the disabled keyboard command's name.
+
+.. warning:: Please note that this is neither a security feature nor any kind of
+  real protection from rippers. This function is merely for convenience to not
+  make it too easy to extract certain files from the game.
+
+.. versionadded:: 0.2
