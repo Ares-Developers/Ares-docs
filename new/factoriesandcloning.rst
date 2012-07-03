@@ -1,18 +1,25 @@
 Factories and Cloning
 ~~~~~~~~~~~~~~~~~~~~~
 
-Different factories for units (Kennel)
-``````````````````````````````````````
+Different factories for units (Kennels)
+```````````````````````````````````````
 
 :tagdef:`[InfantryOrVehicle]BuiltAt=list of BuildingTypes`
   Units will be kicked out of the first not-busy building the house owns that is
   mentioned in this list. If no :type:`BuildingType` is set, all factories that
   can produce this unit will be checked. Defaults to :value:`none`.
 
-  .. quickstart:: To recreate the dog that is trained in a kennel from
-    \ :game:`Red Alert`, set :tag:`[KENN]Factory=InfantryType`,
-    \ :tag:`[DOG]BuiltAt=KENN` and update the :tag:`[DOG]Prerequisite` to
-    contain :tag:`[KENN]`.
+:tagdef:`[BuildingType]Factory.ExplicitOnly=boolean`
+  Set this to :value:`yes` to only allow this factory to produce units that
+  explicitly mention this :type:`BuildingType` in their :tag:`BuiltAt` list.
+  Units with empty :tag:`BuiltAt` lists will not be built here. The effect is
+  the same as stating :tag:`BuiltAt` lists on every unit, omitting all factories
+  that have this tag set. Defaults to :value:`no`.
+
+  .. quickstart:: To recreate the dog from :game:`Red Alert` that is trained in
+    a kennel, set :tag:`[KENN]Factory=InfantryType`,
+    \ :tag:`[KENN]Factory.ExplicitOnly=yes`, :tag:`[DOG]BuiltAt=KENN` and update
+    the :tag:`[DOG]Prerequisite` to contain :tag:`[KENN]`.
 
 
 "Cloning Vats" for :type:`VehicleTypes`
