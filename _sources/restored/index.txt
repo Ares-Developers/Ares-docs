@@ -1,0 +1,21 @@
+===========================
+Restored Tiberian Sun Logic
+===========================
+The :game:`Yuri's Revenge` engine is based on the :game:`Red Alert 2` engine,
+which, in turn, is based on the :game:`Tiberian Sun` engine. Various features
+that existed in :game:`Tiberian Sun` were removed in :game:`Red Alert 2`, and
+further features were removed in :game:`Yuri's Revenge` and in the 1.001 patch.
+
+The extent to which these features no longer exist in :game:`Yuri's Revenge`
+1.001 varies, from not functioning correctly to complete removal of the logic
+(sometimes because simply using the logic causes an Internal Error).
+
+Note that, in many cases, :game:`Ares` has drastically changed the way these
+features are implemented.
+
+.. no index, should be in the new feature category
+
+.. toctree::
+	:glob:
+	
+	**

@@ -1,0 +1,124 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Customizable Parachute Animations &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Customizable Veterancy" href="customizableveterancy.html" />
+    <link rel="prev" title="Customizable Insignia" href="customizableinsignia.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="customizableveterancy.html" title="Customizable Veterancy"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="customizableinsignia.html" title="Customizable Insignia"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="customizableinsignia.html"
+                        title="previous chapter">Customizable Insignia</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="customizableveterancy.html"
+                        title="next chapter">Customizable Veterancy</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="customizable-parachute-animations">
+<h1>Customizable Parachute Animations<a class="headerlink" href="#customizable-parachute-animations" title="Permalink to this headline">¶</a></h1>
+<p>Units can now have their own individual parachute animation.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►Parachute.Anim=</span></tt><span class="type definition"> (animation)</span></span></dt>
+<dd>Specifies the animation from <tt class="file docutils literal docutils literal"><span class="pre">artmd.ini</span></tt> to use as the unit&#8217;s parachute
+when the it is falling. If omitted, <span><tt class="docutils literal"><span class="pre">Parachute.Anim</span></tt></span> will default to
+<cite>PARACH</cite>. The SHP is expected to be in the unit palette.</dd>
+</dl>
+<p>While the animation is playing, the units&#8217;s falling speed will reach, but not
+exceed, <span><tt class="docutils literal"><span class="pre">[General]►ParachuteMaxFallRate=</span></tt></span>. After the animation disappears,
+if the unit is still falling then the object&#8217;s speed will increase to match
+<span><tt class="docutils literal"><span class="pre">[General]►NoParachuteMaxFallRate=</span></tt></span>.</p>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="customizableveterancy.html" title="Customizable Veterancy"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="customizableinsignia.html" title="Customizable Insignia"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

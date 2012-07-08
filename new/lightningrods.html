@@ -1,0 +1,128 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Lightning Rods &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="List Lengths" href="listlengths.html" />
+    <link rel="prev" title="Killing Drivers" href="killingdrivers.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="listlengths.html" title="List Lengths"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="killingdrivers.html" title="Killing Drivers"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="killingdrivers.html"
+                        title="previous chapter">Killing Drivers</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="listlengths.html"
+                        title="next chapter">List Lengths</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="lightning-rods">
+<h1>Lightning Rods<a class="headerlink" href="#lightning-rods" title="Permalink to this headline">¶</a></h1>
+<p>Lightning rods attract Lightning Storms and optionally modify their damage.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►LightningRod=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Specifies whether this building attracts lightning. If this building is the
+closest object to a cloud created randomly, the cloud will be created just
+above the building. Defaults to <cite>no</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►LightningRod.Modifier=</span></tt><span class="type definition"> (float - modifier)</span></span></dt>
+<dd>Buildings with <span><tt class="docutils literal"><span class="pre">LightningRod=yes</span></tt></span> set being hit by lightning get the
+damage multiplied by this value. Values less than 1.0 reduce damage, larger
+values increase the damage. Defaults to <cite>1.0</cite>.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This logic is likely to be expanded in future versions.</p>
+</div>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.2.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="listlengths.html" title="List Lengths"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="killingdrivers.html" title="Killing Drivers"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

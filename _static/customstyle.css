@@ -1,0 +1,29 @@
+div.quickstart {
+    border: 1px solid #2D90FF;
+}
+
+div.quickstart p.admonition-title {
+    background-color: #91C5FF;
+    border-bottom-color: #2D90FF;
+}
+
+.game {
+    font-variant:small-caps;
+}
+
+.file {
+    font-family: monospace;
+}
+
+.type {
+    font-family: monospace;
+}
+
+.captiontag {
+    font-family: monospace;
+}
+
+.definition {
+    font-weight: bold;
+}
+

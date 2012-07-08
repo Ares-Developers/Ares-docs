@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Carryalls &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Chrono Prisons" href="chronoprisons.html" />
+    <link rel="prev" title="Avoidable Internal Errors" href="avoidableinternalerrors.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="chronoprisons.html" title="Chrono Prisons"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="avoidableinternalerrors.html" title="Avoidable Internal Errors"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="avoidableinternalerrors.html"
+                        title="previous chapter">Avoidable Internal Errors</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="chronoprisons.html"
+                        title="next chapter">Chrono Prisons</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="carryalls">
+<h1>Carryalls<a class="headerlink" href="#carryalls" title="Permalink to this headline">¶</a></h1>
+<p>Carryalls were a feature of <span class="game docutils literal">Tiberian Sun</span>. <span class="type docutils literal">AircraftTypes</span> with
+<span><tt class="docutils literal"><span class="pre">Carryall=yes</span></tt></span> could pick up <span class="type docutils literal">UnitTypes</span> from the battlefield, carry
+them around the map and place them anywhere. The carryall logic was not used in
+<span class="game docutils literal">Red Alert 2</span> and was not updated for naval units and other new features.
+<span class="game docutils literal">Ares</span> updates the logic and adds new options.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[AircraftType]►Carryall.SizeLimit=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>The maximum <span><tt class="docutils literal"><span class="pre">Size=</span></tt></span> that this carryall can lift. Use <cite>-1</cite> to allow
+any size. Defaults to <cite>-1</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[UnitType]►Carryall.Allowed=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd><p class="first">Can this unit be picked up by a carryall? If not set, <span><tt class="docutils literal"><span class="pre">Organic=yes</span></tt></span> and
+<span><tt class="docutils literal"><span class="pre">NonVehicle=yes</span></tt></span> units cannot be picked up. If specified,
+<span><tt class="docutils literal"><span class="pre">Carryall.Allowed</span></tt></span> overrules those considerations. Currently it is not
+possible to &#8220;unset&#8221; this tag to use the default again. You have to set it
+explicitly.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Units infected with a Parasite (Terror Drone/Squid) cannot be picked
+up.</p>
+</div>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">By default, carryalls can pick up vessels, which are <span class="type docutils literal">UnitTypes</span>
+with <span><tt class="docutils literal"><span class="pre">Naval=yes</span></tt></span> set, but they cannot be placed back on water again. If a
+ship is placed on ground, it will explode and take the carryall with it. To
+prevent this, set <span><tt class="docutils literal"><span class="pre">Carryall.Allowed=no</span></tt></span> on the ship.</p>
+</div>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.2.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="chronoprisons.html" title="Chrono Prisons"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="avoidableinternalerrors.html" title="Avoidable Internal Errors"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

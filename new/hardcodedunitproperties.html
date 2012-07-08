@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Hard-coded Unit Properties &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Hijackers" href="hijackers.html" />
+    <link rel="prev" title="Factories and Cloning" href="factoriesandcloning.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="hijackers.html" title="Hijackers"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="factoriesandcloning.html" title="Factories and Cloning"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Hard-coded Unit Properties</a><ul>
+<li><a class="reference internal" href="#iscow"><span><span class="type">IsCow</span></span></a></li>
+<li><a class="reference internal" href="#isdesolator"><span><span class="type">IsDesolator</span></span></a></li>
+<li><a class="reference internal" href="#multiple-ifvs-gunner">Multiple IFVs / <span><span class="type">Gunner</span></span></a></li>
+<li><a class="reference internal" href="#voiceifvrepair"><span><span class="type">VoiceIFVRepair</span></span></a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="factoriesandcloning.html"
+                        title="previous chapter">Factories and Cloning</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="hijackers.html"
+                        title="next chapter">Hijackers</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="hard-coded-unit-properties">
+<h1>Hard-coded Unit Properties<a class="headerlink" href="#hard-coded-unit-properties" title="Permalink to this headline">¶</a></h1>
+<p>The game is hard-coded to do certain things with certain unit IDs. Namely the
+<span><tt class="docutils literal"><span class="pre">[COW]</span></tt></span>, <span><tt class="docutils literal"><span class="pre">[DESO]</span></tt></span> and <span><tt class="docutils literal"><span class="pre">[FV]</span></tt></span>. These units can now have said
+special properties switched off, and other units can be given these properties
+if you want. Hard-coded properties of Cows and Desolators can be toggled on/off
+for any infantry.</p>
+<div class="section" id="iscow">
+<h2><span><span class="type">IsCow</span></span><a class="headerlink" href="#iscow" title="Permalink to this headline">¶</a></h2>
+<p>The <span><tt class="docutils literal"><span class="pre">[COW]</span></tt></span> was hard-coded to play its idle animation more frequently than
+other infantry and was also hard-coded to move around randomly. You can now set
+<span><tt class="docutils literal"><span class="pre">IsCow=yes</span></tt></span> on other <span class="type docutils literal">InfantryTypes</span> or, indeed, <span><tt class="docutils literal"><span class="pre">IsCow=no</span></tt></span> on
+the <span><tt class="docutils literal"><span class="pre">[COW]</span></tt></span>.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[InfantryType]►IsCow=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Defaults to <cite>yes</cite> for <span><tt class="docutils literal"><span class="pre">[COW]</span></tt></span>, otherwise to <cite>no</cite>.</dd>
+</dl>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+<div class="section" id="isdesolator">
+<h2><span><span class="type">IsDesolator</span></span><a class="headerlink" href="#isdesolator" title="Permalink to this headline">¶</a></h2>
+<p>The <span><tt class="docutils literal"><span class="pre">[DESO]</span></tt></span> was hard-coded to have different deploy-weapon firing timing
+than other units. The change to the timing appears to be related to the unit&#8217;s
+art <span><tt class="docutils literal"><span class="pre">Sequence</span></tt></span> although the exact effect has not been investigated. You can
+now set <span><tt class="docutils literal"><span class="pre">IsDesolator=yes</span></tt></span> on other <span class="type docutils literal">InfantryTypes</span> or, indeed,
+<span><tt class="docutils literal"><span class="pre">IsDesolator=no</span></tt></span> on the <span><tt class="docutils literal"><span class="pre">[DESO]</span></tt></span>.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[InfantryType]►IsDesolator=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Defaults to <cite>yes</cite> for <span><tt class="docutils literal"><span class="pre">[DESO]</span></tt></span>, otherwise to <cite>no</cite>.</dd>
+</dl>
+<p class="versionadded" id="index-1">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+<div class="section" id="multiple-ifvs-gunner">
+<h2>Multiple IFVs / <span><span class="type">Gunner</span></span><a class="headerlink" href="#multiple-ifvs-gunner" title="Permalink to this headline">¶</a></h2>
+<p>The <span><tt class="docutils literal"><span class="pre">[FV]</span></tt></span> was the only unit to be checked for the special turret and
+weapon flags, such as <span><tt class="docutils literal"><span class="pre">SniperTurretIndex</span></tt></span>. With <span class="game docutils literal">Ares</span>, all
+<span class="type docutils literal">VehicleTypes</span> with <span><tt class="docutils literal"><span class="pre">Gunner=yes</span></tt></span> set will read those flags. This
+means that you can now have multiple types of IFV.</p>
+<p class="versionadded" id="index-2">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+<div class="section" id="voiceifvrepair">
+<h2><span><span class="type">VoiceIFVRepair</span></span><a class="headerlink" href="#voiceifvrepair" title="Permalink to this headline">¶</a></h2>
+<p>In <span class="game docutils literal">Ares</span> you can specify the <span><tt class="docutils literal"><span class="pre">VoiceIFVRepair</span></tt></span> tag on any IFV unit.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[VehicleType]►VoiceIFVRepair=</span></tt><span class="type definition"> (soundmd entry)</span></span></dt>
+<dd>Specifies the response this IFV gives when ordered to repair something. If
+this value is not set, <span><tt class="docutils literal"><span class="pre">[VehicleType]►VoiceAttack</span></tt></span> is used. Defaults to
+<span><tt class="docutils literal"><span class="pre">[AudioVisual]►VoiceIFVRepair</span></tt></span> for <span><tt class="docutils literal"><span class="pre">[FV]</span></tt></span>, otherwise to
+<cite>none</cite>.</dd>
+</dl>
+<p class="versionadded" id="index-3">
+<span class="versionmodified">New in version 0.2.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="hijackers.html" title="Hijackers"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="factoriesandcloning.html" title="Factories and Cloning"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

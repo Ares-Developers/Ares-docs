@@ -1,0 +1,218 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Additional ArmorTypes and Verses &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="AlternateTheaterArt" href="alternatetheaterart.html" />
+    <link rel="prev" title="New &amp; Enhanced In-Game Logic" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="alternatetheaterart.html" title="AlternateTheaterArt"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="New &amp; Enhanced In-Game Logic"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Additional <span class="type docutils literal">ArmorTypes</span> and <span><span class="type">Verses</span></span></a><ul>
+<li><a class="reference internal" href="#warhead-verses-special-values">Warhead <span><span class="type">Verses</span></span>&#8216; Special Values</a></li>
+<li><a class="reference internal" href="#immunities">Immunities</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">New &amp; Enhanced In-Game Logic</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="alternatetheaterart.html"
+                        title="next chapter"><span><span class="type">AlternateTheaterArt</span></span></a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="additional-armortypes-and-verses">
+<h1>Additional <span class="type docutils literal">ArmorTypes</span> and <span><span class="type">Verses</span></span><a class="headerlink" href="#additional-armortypes-and-verses" title="Permalink to this headline">¶</a></h1>
+<p>The new <span><tt class="docutils literal"><span class="pre">[ArmorTypes]</span></tt></span> section can be used to define new <span class="type docutils literal">ArmorTypes</span>
+for objects (in addition to the 11 existing <span class="type docutils literal">ArmorTypes</span>; <cite>none</cite>,
+<cite>flak</cite>, <cite>plate</cite>, <cite>light</cite>, <cite>medium</cite>,
+<cite>heavy</cite>, <cite>wood</cite>, <cite>steel</cite>, <cite>concrete</cite>,
+<cite>special_1</cite> and <cite>special_2</cite>).</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="k">[ArmorTypes]</span>
+<span class="na">paper</span><span class="o">=</span><span class="s">steel</span>
+<span class="na">magic</span><span class="o">=</span><span class="s">11%</span>
+</pre></div>
+</div>
+<p><span><tt class="docutils literal"><span class="pre">paper=steel</span></tt></span> declares a new <span class="type docutils literal">ArmorType</span> called &#8220;paper&#8221; whose
+verses on each warhead defaults to being the same as that warhead&#8217;s verses
+against the &#8220;steel&#8221; <span class="type docutils literal">ArmorType</span>. <span><tt class="docutils literal"><span class="pre">magic=11%</span></tt></span> declares a new
+<span class="type docutils literal">ArmorType</span> called &#8220;magic&#8221; whose Verses on all warheads defaults to 11%.
+These <span class="type docutils literal">ArmorTypes</span> can be assigned to objects in the same way as the
+standard <span class="type docutils literal">ArmorTypes</span> (case-insensitively). Their susceptibility to
+specific warheads can be specified as follows:</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Warhead]►Versus.magic=</span></tt><span class="type definition"> (float - modifier)</span></span></dt>
+<dd>Sets the efficiency of this warhead against the armor called <span><tt class="docutils literal"><span class="pre">magic</span></tt></span>.</dd>
+</dl>
+<p>Note that each individual <span class="type docutils literal">ArmorType</span>&#8216;s versus value is specified using
+the new <span><tt class="docutils literal"><span class="pre">Versus.*</span></tt></span> flag, whereas the original 11 <span class="type docutils literal">ArmorTypes</span> versus
+values are specified using the original <span><tt class="docutils literal"><span class="pre">Verses</span></tt></span> flag (note Westwood&#8217;s
+misspelling of &#8220;versus&#8221;).</p>
+<p>The original <span><tt class="docutils literal"><span class="pre">Verses</span></tt></span> flag parser no longer crashes if you specify less
+than 11 values.</p>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.1.</span></p>
+<div class="section" id="warhead-verses-special-values">
+<h2>Warhead <span><span class="type">Verses</span></span>&#8216; Special Values<a class="headerlink" href="#warhead-verses-special-values" title="Permalink to this headline">¶</a></h2>
+<p>The Verses flag has three special-case values that can be used to define
+additional behavior:</p>
+<ul class="simple">
+<li><cite>0%</cite> means no force fire, no retaliate, no passive acquire</li>
+<li><cite>1%</cite> means no retaliate, no passive acquire</li>
+<li><cite>2%</cite> means no passive acquire</li>
+</ul>
+<p>These behaviors can now be toggled on or off independently of the damage
+multiplier (so you can now have a warhead that is 100% effective against an
+armor type but, at the same time, will not directly target a unit with that
+armor type).</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Warhead]►Versus.magic.ForceFire=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether or not this warhead is allowed to be force-fired on the <span><tt class="docutils literal"><span class="pre">magic</span></tt></span>
+<span class="type docutils literal">ArmorType</span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Warhead]►Versus.steel.Retaliate=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether or not this warhead is allowed to be used in retaliation against the
+<span><tt class="docutils literal"><span class="pre">steel</span></tt></span> <span class="type docutils literal">ArmorType</span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Warhead]►Versus.clingfilm.PassiveAcquire=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether or not this warhead is allowed to be used to attack the
+<span><tt class="docutils literal"><span class="pre">clingfilm</span></tt></span> <span class="type docutils literal">ArmorType</span> automatically.</dd>
+</dl>
+<p>Note <span class="game docutils literal">Ares</span>&#8216; correct spelling of &#8220;acquire&#8221;.</p>
+<p class="versionadded" id="index-1">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+<div class="section" id="immunities">
+<h2>Immunities<a class="headerlink" href="#immunities" title="Permalink to this headline">¶</a></h2>
+<p>The original game has a way to make certain units immune to certain warheads,
+however this is severely limited. For example, the <span><tt class="docutils literal"><span class="pre">[DESO]</span></tt></span> infantry has
+the flag <span><tt class="docutils literal"><span class="pre">ImmuneToRadiation=yes</span></tt></span> and the <span><tt class="docutils literal"><span class="pre">[RadBeamWarhead]</span></tt></span> warhead
+has the flag <span><tt class="docutils literal"><span class="pre">Radiation=yes</span></tt></span>. This means that the Desolator is immune to
+damage from the radiation beams fired by other Desolators. This immunity system
+has two limitations:</p>
+<ol class="arabic simple">
+<li>Only a small handful of working flag pairs exist, and</li>
+<li>The immunity only prevents the unit from taking damage from the warhead. It
+does not prevent the unit from being targeted. In the above example,
+Desolators can fire at each other ineffectually.</li>
+</ol>
+<p><span class="game docutils literal">Ares</span> overcomes these limitations with new armor types, as mentioned
+above. If you want to have additional &#8216;old-style&#8217; immunities that still allow
+units to target things they can&#8217;t damage (e.g. because they will affect enemies
+in an area around the target) then you can create a new armor type that will
+emulate this as follows:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="k">[ArmorTypes]</span>
+<span class="na">flakImmuneToFrost</span><span class="o">=</span><span class="s">flak</span>
+
+<span class="k">[IceMan]</span>
+<span class="na">Armor</span><span class="o">=</span><span class="s">flakImmuneToFrost</span>
+<span class="na">Primary</span><span class="o">=</span><span class="s">IceBlast</span>
+
+<span class="k">[IceBlast]</span>
+<span class="na">Warhead</span><span class="o">=</span><span class="s">IceBlastWH</span>
+
+<span class="k">[IceBlastWH]</span>
+<span class="na">Versus.flakImmuneToFrost</span><span class="o">=</span><span class="s">0%</span>
+<span class="na">Versus.flakImmuneToFrost.ForceFire</span><span class="o">=</span><span class="s">yes</span>
+<span class="na">Versus.flakImmuneToFrost.Retaliate</span><span class="o">=</span><span class="s">yes</span>
+<span class="na">Versus.flakImmuneToFrost.PassiveAcquire</span><span class="o">=</span><span class="s">yes</span>
+</pre></div>
+</div>
+<p>The above settings give the IceMan unit a damage immunity to the IceBlast
+weapon, even though he can still be attacked by that weapon.</p>
+<p class="versionadded" id="index-2">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="alternatetheaterart.html" title="AlternateTheaterArt"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="New &amp; Enhanced In-Game Logic"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

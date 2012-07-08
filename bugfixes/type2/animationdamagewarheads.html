@@ -1,0 +1,122 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Animation Damage Warheads &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../../index.html" />
+    <link rel="up" title="Type 2 Fixes (Mod Logics)" href="index.html" />
+    <link rel="next" title="BaseUnit" href="baseunit.html" />
+    <link rel="prev" title="Amphibious Objects Sink When Chronoshifted Onto Water" href="amphibiousobjectssinkwhenchronoshiftedontowater.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="baseunit.html" title="BaseUnit"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="amphibiousobjectssinkwhenchronoshiftedontowater.html" title="Amphibious Objects Sink When Chronoshifted Onto Water"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Bug Fixes</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Type 2 Fixes (Mod Logics)</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="amphibiousobjectssinkwhenchronoshiftedontowater.html"
+                        title="previous chapter">Amphibious Objects Sink When Chronoshifted Onto Water</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="baseunit.html"
+                        title="next chapter"><span><span class="type">BaseUnit</span></span></a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="animation-damage-warheads">
+<span id="index-0"></span><h1>Animation Damage Warheads<a class="headerlink" href="#animation-damage-warheads" title="Permalink to this headline">¶</a></h1>
+<p>Animations may have appeared to deal damage randomly rather than based on the
+warhead specified. In fact, animations were hard-coded to deal damage using the
+warhead specified by <span><tt class="docutils literal"><span class="pre">[CombatDamage]►FlameDamage2</span></tt></span>, unless the animation ID
+was <span><tt class="docutils literal"><span class="pre">[INVISO]</span></tt></span>, in which case the warhead used
+<span><tt class="docutils literal"><span class="pre">[CombatDamage]►C4Warhead</span></tt></span>. With  <span class="game docutils literal">Ares</span>, the
+<span><tt class="docutils literal"><span class="pre">[Animation]►Warhead`</span></tt></span> flag will be adhered to, with the aforementioned
+warheads used as the default if <span><tt class="docutils literal"><span class="pre">[Animation]►Warhead</span></tt></span> is not specified.</p>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="baseunit.html" title="BaseUnit"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="amphibiousobjectssinkwhenchronoshiftedontowater.html" title="Amphibious Objects Sink When Chronoshifted Onto Water"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Bug Fixes</a> &raquo;</li>
+          <li><a href="index.html" >Type 2 Fixes (Mod Logics)</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

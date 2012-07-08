@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>User Interface Colors &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../index.html" />
+    <link rel="up" title="User Interface Features" href="index.html" />
+    <link rel="next" title="Comparison with other YR Hacks and Patches" href="../comparison.html" />
+    <link rel="prev" title="Random Map Generator" href="randommapgenerator.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../comparison.html" title="Comparison with other YR Hacks and Patches"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="randommapgenerator.html" title="Random Map Generator"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="randommapgenerator.html"
+                        title="previous chapter">Random Map Generator</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../comparison.html"
+                        title="next chapter">Comparison with other YR Hacks and Patches</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="user-interface-colors">
+<h1>User Interface Colors<a class="headerlink" href="#user-interface-colors" title="Permalink to this headline">¶</a></h1>
+<p>To complement the graphical user interface elements <span class="game docutils literal">Yuri&#8217;s Revenge</span>
+relies on a set of hardcoded colors. Customize the colors used to draw texts and
+borders with these <span class="game docutils literal">Ares</span> tags.</p>
+<p>All these <tt class="file docutils literal docutils literal"><span class="pre">uimd.ini</span></tt> tags are RGB colors, that is three comma separated
+values from 0 to 255.</p>
+<p>Please note the special combobox (dropdown list) state for dropdown lists in
+Observer mode, that is it has its Observer entry selected.
+<span class="game docutils literal">Yuri&#8217;s Revenge</span> uses grey colors and special graphical elements to denote
+this state. Changing the global values will not change the Observer colors,
+you&#8217;ll have to define the specific <span><tt class="docutils literal"><span class="pre">Color.Observer.*</span></tt></span> tags.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►Color.Border1=</span></tt><span class="type definition"> (R,G,B)</span></span></dt>
+<dd>The first color control borders are drawn in. Defaults to
+<cite>167,190,197</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►Color.Border2=</span></tt><span class="type definition"> (R,G,B)</span></span></dt>
+<dd>The second color control borders are drawn in. Defaults to
+<cite>104,122,128</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►Color.Text=</span></tt><span class="type definition"> (R,G,B)</span></span></dt>
+<dd>The default color all texts are drawn in. This does not affect Observer
+dropdown lists, see <span><tt class="docutils literal"><span class="pre">Color.Observer.Text</span></tt></span>. Defaults to <cite>255,255,0</cite>
+(yellow).</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►Color.X.Text=</span></tt><span class="type definition"> (R,G,B)</span></span></dt>
+<dd>The text color for certain types of controls. <cite>X</cite> can be one of
+<span><tt class="docutils literal"><span class="pre">Button</span></tt></span>, <span><tt class="docutils literal"><span class="pre">Label</span></tt></span> (descriptions), <span><tt class="docutils literal"><span class="pre">List</span></tt></span>, <span><tt class="docutils literal"><span class="pre">Checkbox</span></tt></span>,
+<span><tt class="docutils literal"><span class="pre">Combobox</span></tt></span> (dropdown lists), <span><tt class="docutils literal"><span class="pre">Observer</span></tt></span> (dropdown lists in with
+Observer selected), <span><tt class="docutils literal"><span class="pre">Groupbox</span></tt></span> (frames), <span><tt class="docutils literal"><span class="pre">Slider</span></tt></span>, or <span><tt class="docutils literal"><span class="pre">Edit</span></tt></span>
+(text boxes). Defaults to <cite>238,238,238</cite> (light grey) for
+<span><tt class="docutils literal"><span class="pre">Observer</span></tt></span>, to <span><tt class="docutils literal"><span class="pre">[UISettings]►Color.Text</span></tt></span> otherwise.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►Color.Selection=</span></tt><span class="type definition"> (R,G,B)</span></span></dt>
+<dd>The default background color for selected items. This does not affect Observer
+dropdown lists, see <span><tt class="docutils literal"><span class="pre">Color.Observer.Selection</span></tt></span>. Defaults to
+<cite>255,0,0</cite> (red).</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►Color.X.Selection=</span></tt><span class="type definition"> (R,G,B)</span></span></dt>
+<dd>The background color for selected items of certain types of controls.
+<cite>X</cite> can be one of <span><tt class="docutils literal"><span class="pre">List</span></tt></span>, <span><tt class="docutils literal"><span class="pre">Combobox</span></tt></span> (dropdown lists) or
+<span><tt class="docutils literal"><span class="pre">Observer</span></tt></span> (dropdown lists in with Observer selected). Defaults to
+<cite>98,98,98</cite> (dark grey) for <span><tt class="docutils literal"><span class="pre">Observer</span></tt></span>, to
+<span><tt class="docutils literal"><span class="pre">[UISettings]►Color.Selection</span></tt></span> otherwise.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►Color.Disabled=</span></tt><span class="type definition"> (R,G,B)</span></span></dt>
+<dd>The default color texts of disabled controls are drawn in. This does not
+affect the color of disabled buttons and Observer dropdown lists, see below.
+Defaults to <cite>159,0,0</cite> (dark red).</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►Color.X.Disabled=</span></tt><span class="type definition"> (R,G,B)</span></span></dt>
+<dd>The text color of disabled controls of certain types. <cite>X</cite> can be one of
+<span><tt class="docutils literal"><span class="pre">Button</span></tt></span>, <span><tt class="docutils literal"><span class="pre">Label</span></tt></span> (descriptions), <span><tt class="docutils literal"><span class="pre">List</span></tt></span>, <span><tt class="docutils literal"><span class="pre">Checkbox</span></tt></span>,
+<span><tt class="docutils literal"><span class="pre">Combobox</span></tt></span> (dropdown lists), <span><tt class="docutils literal"><span class="pre">Observer</span></tt></span> (dropdown lists in with
+Observer selected), or <span><tt class="docutils literal"><span class="pre">Slider</span></tt></span>. Defaults to <cite>167,0,0</cite> (dark red)
+for <span><tt class="docutils literal"><span class="pre">Button</span></tt></span>, to <cite>143,143,143</cite> (grey) for <span><tt class="docutils literal"><span class="pre">Observer</span></tt></span>, to
+<span><tt class="docutils literal"><span class="pre">[UISettings]►Color.Disabled</span></tt></span> otherwise.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This feature does not support recoloring the dialog prompting for the
+<span class="game docutils literal">Yuri&#8217;s Revenge</span> disk when starting the game.</p>
+</div>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.2.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../comparison.html" title="Comparison with other YR Hacks and Patches"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="randommapgenerator.html" title="Random Map Generator"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" >User Interface Features</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

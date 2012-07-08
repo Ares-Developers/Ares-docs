@@ -1,0 +1,134 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>AlternateTheaterArt &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Avoidable Internal Errors" href="avoidableinternalerrors.html" />
+    <link rel="prev" title="Additional ArmorTypes and Verses" href="additionalarmortypesandverses.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="avoidableinternalerrors.html" title="Avoidable Internal Errors"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="additionalarmortypesandverses.html" title="Additional ArmorTypes and Verses"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="additionalarmortypesandverses.html"
+                        title="previous chapter">Additional <span class="type docutils literal">ArmorTypes</span> and <span><span class="type">Verses</span></span></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="avoidableinternalerrors.html"
+                        title="next chapter">Avoidable Internal Errors</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="alternatetheaterart">
+<h1><span><span class="type">AlternateTheaterArt</span></span><a class="headerlink" href="#alternatetheaterart" title="Permalink to this headline">¶</a></h1>
+<p>The Navy Seal has <span><tt class="docutils literal"><span class="pre">AlternateArcticArt=yes</span></tt></span> set, which causes the game to
+use the image file <tt class="file docutils literal docutils literal"><span class="pre">seala.shp</span></tt> on arctic maps, instead of
+<tt class="file docutils literal docutils literal"><span class="pre">seal.shp</span></tt>. This logic works for any <span class="type docutils literal">InfantryType</span>, however this
+only works for the arctic theater and only for <span><tt class="docutils literal"><span class="pre">InfantryTypes</span></tt></span>.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►AlternateTheaterArt=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Specifies whether or not this SHP-based unit can have alternate art depending
+on the theater of the current map. For example, setting <span><tt class="docutils literal"><span class="pre">Image=JUNK</span></tt></span> and
+<span><tt class="docutils literal"><span class="pre">AlternateTheaterArt=yes</span></tt></span> on a unit will make the unit load
+<tt class="file docutils literal docutils literal"><span class="pre">artmd.ini</span></tt> section <span><tt class="docutils literal"><span class="pre">[JUNKA]</span></tt></span> on arctic, <span><tt class="docutils literal"><span class="pre">[JUNKD]</span></tt></span> on desert,
+and so on according to theater. If any of those sections do not exist then the
+unit will fall back to <span><tt class="docutils literal"><span class="pre">[JUNK]</span></tt></span>. So quite similar to
+<span><tt class="docutils literal"><span class="pre">AlternateArcticArt</span></tt></span>, just automatic and smarter. Defaults to
+<cite>no</cite>.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This only works for SHP-based units. Voxels do not use this system and
+cannot have theater-specific art (you&#8217;d have to use
+<span><tt class="docutils literal"><span class="pre">Prerequisite.RequiredTheaters</span></tt></span> to achieve that).</p>
+</div>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.2.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="avoidableinternalerrors.html" title="Avoidable Internal Errors"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="additionalarmortypesandverses.html" title="Additional ArmorTypes and Verses"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

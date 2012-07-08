@@ -1,0 +1,132 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Type 3 Fixes (Performance) &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../index.html" />
+    <link rel="up" title="Bug Fixes" href="index.html" />
+    <link rel="next" title="Restored Tiberian Sun Logic" href="../restored/index.html" />
+    <link rel="prev" title="Vehicle Paradrop Offset" href="type2/vehicleparadropoffset.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../restored/index.html" title="Restored Tiberian Sun Logic"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="type2/vehicleparadropoffset.html" title="Vehicle Paradrop Offset"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Bug Fixes</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="type2/vehicleparadropoffset.html"
+                        title="previous chapter">Vehicle Paradrop Offset</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../restored/index.html"
+                        title="next chapter">Restored Tiberian Sun Logic</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="type-3-fixes-performance">
+<span id="index-0"></span><h1>Type 3 Fixes (Performance)<a class="headerlink" href="#type-3-fixes-performance" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><tt class="file docutils literal docutils literal"><span class="pre">pips.shp</span></tt> was getting reloaded from disk six times in a row.</li>
+<li>A commonly used function, <tt class="docutils literal"><span class="pre">ObjectClass::GetCell</span></tt>, performed the same tasks
+twice.</li>
+<li>During startup, many superfluous calls were made to the debug log file writer.</li>
+<li>Random Map Generator time has been greatly reduced (much time was wasted by
+redrawing the minimap multiple times during a map&#8217;s generation).</li>
+<li>Some particularly fast CPUs could cause the game to crash on startup.</li>
+<li>There exists a version of <tt class="file docutils literal docutils literal"><span class="pre">ddraw.dll</span></tt> that is often touted as improving
+the performance of <span class="game docutils literal">Yuri&#8217;s Revenge</span>. This &#8220;magic&#8221; DLL forces DirectDraw
+into software emulation mode, which doesn&#8217;t use any hardware accelerated GPU
+functionality. This means special effects that are not emulated are simply
+omitted, potentially improving performance. <span class="game docutils literal">Ares</span> uses software
+emulation mode by default, making this DLL unnecessary. However, Windows Vista
+and Windows 7 come with DirectX 10 - which does not support software emulation
+- so <span class="game docutils literal">Ares</span> will not default to software emulation mode on those
+versions of Windows (otherwise users would just get a completely black
+screen).</li>
+</ul>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../restored/index.html" title="Restored Tiberian Sun Logic"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="type2/vehicleparadropoffset.html" title="Vehicle Paradrop Offset"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" >Bug Fixes</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

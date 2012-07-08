@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Survivors &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Urban Combat - Trenches" href="urbancombattrenches.html" />
+    <link rel="prev" title="Super Weapons" href="superweapons.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="urbancombattrenches.html" title="Urban Combat - Trenches"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="superweapons.html" title="Super Weapons"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="superweapons.html"
+                        title="previous chapter">Super Weapons</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="urbancombattrenches.html"
+                        title="next chapter">Urban Combat - Trenches</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="survivors">
+<h1>Survivors<a class="headerlink" href="#survivors" title="Permalink to this headline">¶</a></h1>
+<p>In the original <span class="game docutils literal">Red Alert</span>, pilots would parachute from destroyed
+aircraft. <span class="game docutils literal">Ares</span> reintroduces this feature along with some additional
+improvements, all of which are customizable.</p>
+<p><span class="type docutils literal">AircraftTypes</span> and <span class="type docutils literal">VehicleTypes</span> have the option of spawning a
+pilot (or driver) when they are destroyed. In order for a pilot to be spawned
+from an airborne unit, the ground beneath the destroyed unit must be clear.</p>
+<p>The following flags control the percent chance of a survivor being spawned, and
+the type of unit that that survivor will be.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Unit]►Survivor.Side#=</span></tt><span class="type definition"> (InfantryType) (where # is the zero-based index of the side e.g. 0 for Allied, 1 for Soviet, 2 for Yuri)</span></span></dt>
+<dd>The <span class="type docutils literal">InfantryType</span> that can emerge from this unit as a survivor when the
+unit was owned by the corresponding side. For example,
+<span><tt class="docutils literal"><span class="pre">Survivor.Side0=E1</span></tt></span> would cause the spawned survivor (if any) to be a GI
+when the destroyed unit was owned by an Allied player. If this value is not
+set, the the owning side&#8217;s <span><tt class="docutils literal"><span class="pre">Crew=</span></tt></span> is used. Defaults to <cite>none</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Unit]►Survivor.Pilots=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>The number of pilots that will attempt to be spawned when this unit is
+destroyed (provided that the ground beneath the destroyed unit is clear).
+Defaults to <cite>1</cite> if the unit has <span><tt class="docutils literal"><span class="pre">Crewed=yes</span></tt></span> set, to <cite>0</cite>
+otherwise.</dd>
+</dl>
+<p><span><tt class="definition docutils literal"><span class="pre">[Unit]►Survivor.RookiePilotChance=</span></tt><span class="type definition"> (integer between 0 and 100)</span></span></p>
+<p><span><tt class="definition docutils literal"><span class="pre">[Unit]►Survivor.VeteranPilotChance=</span></tt><span class="type definition"> (integer between 0 and 100)</span></span></p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Unit]►Survivor.ElitePilotChance=</span></tt><span class="type definition"> (integer between 0 and 100)</span></span></dt>
+<dd>The percent chance that each individual pilot will be spawned when this unit
+is destroyed. If this value is negative, <span><tt class="docutils literal"><span class="pre">[General]►CrewEscape</span></tt></span> will be
+used. Default to <cite>-1</cite>.</dd>
+</dl>
+<p><span><tt class="definition docutils literal"><span class="pre">[Unit]►Survivor.RookiePassengerChance=</span></tt><span class="type definition"> (integer between 0 and 100)</span></span></p>
+<p><span><tt class="definition docutils literal"><span class="pre">[Unit]►Survivor.VeteranPassengerChance=</span></tt><span class="type definition"> (integer between 0 and 100)</span></span></p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Unit]►Survivor.ElitePassengerChance=</span></tt><span class="type definition"> (integer between 0 and 100)</span></span></dt>
+<dd><p class="first">Determines the percent chance that each of the unit&#8217;s passengers (if any) will
+survive. Rookie/Veteran/Elite refers to the veteran level of the transport
+unit a unit with a higher veteran level could be made to have a greater (or
+lesser) chance of allowing its passengers to survive. Passengers will be
+spawned in the cells around the destroyed unit and, so, if these cells are not
+clear then the passengers will not be spawned.</p>
+<p class="last">These flags default to a special-case value of <cite>-1</cite> which means &#8220;use
+the original game logic&#8221; (i.e. land-based vehicles such as the Battle Fortress
+will eject their passengers but jumpjet vehicles such as the Nighthawk will
+not). Note that, for airborne vehicles such as the Nighthawk, there is no way
+to say &#8220;passengers can survive on the ground, but aren&#8217;t allowed to paradrop
+from the air&#8221; if they can survive they can survive.</p>
+</dd>
+</dl>
+<p>If either the pilots or any passengers are &#8216;killed&#8217; because they were not
+spawned (i.e. because the ground was not clear or the random chance did not
+luck in) then they count as having been killed by the unit that killed the
+transport. If <span><tt class="docutils literal"><span class="pre">Survivor.PilotChance=0</span></tt></span> then the pilots will not count as
+having been killed (however, passengers will always count as having been killed,
+even if <span><tt class="docutils literal"><span class="pre">Survivor.PassengerChance=0</span></tt></span>).</p>
+<p>Spawned pilots will be spawned with 50% of their maximum health and the same
+amount of experience as the destroyed unit had. Passengers will emerge with both
+their health and their experience unchanged. Percent chance for pilots and/or
+passengers to emerge/parachute from destroyed vehicles/aircraft.</p>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="urbancombattrenches.html" title="Urban Combat - Trenches"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="superweapons.html" title="Super Weapons"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

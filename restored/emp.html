@@ -1,0 +1,314 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>EMP &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../index.html" />
+    <link rel="up" title="Restored Tiberian Sun Logic" href="index.html" />
+    <link rel="next" title="Firestorm Wall" href="firestormwall.html" />
+    <link rel="prev" title="Amphibious Image Changes" href="amphibiousimagechanges.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="firestormwall.html" title="Firestorm Wall"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="amphibiousimagechanges.html" title="Amphibious Image Changes"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Restored Tiberian Sun Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="amphibiousimagechanges.html"
+                        title="previous chapter">Amphibious Image Changes</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="firestormwall.html"
+                        title="next chapter">Firestorm Wall</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="emp">
+<h1>EMP<a class="headerlink" href="#emp" title="Permalink to this headline">¶</a></h1>
+<p>Vehicles affected by EMP (Electromagnetic Pulse) are paralyzed in a similar
+manner to a Chrono Legionnaire erasing a unit. Unlike the Chrono Legionnaire
+however, EMP&#8217;d vehicles can still be attacked by other units.</p>
+<p>EMP paralysis affects units and buildings in various ways (given they are not
+immune to EMP, see below):</p>
+<ul class="simple">
+<li>Primary effect: units will not respond to any commands. They will stop moving
+and will not attack anything.</li>
+<li>Hovering units (such as the Robot Tank) will land.</li>
+<li>Units display the animation specified by
+<span><tt class="docutils literal"><span class="pre">[General]►EMPulseSparkles=EMP_FX01</span></tt></span>. Note that the <tt class="file docutils literal docutils literal"><span class="pre">emp_fx01.shp</span></tt>
+file that comes with <span class="game docutils literal">Red Alert 2</span> is in the <span class="game docutils literal">Tiberian Sun</span>
+palette and needs to be converted.</li>
+<li>Voxel-based units are darkened (SHP-based units are not).</li>
+<li>Buildings that can undeploy into vehicles (e.g. MCVs) still can, but the
+resulting vehicle will remain EMP&#8217;d until the effect wears off.</li>
+<li>Aircraft will immediately crash.</li>
+<li>Power plants cease to produce power.</li>
+<li>Factories will stop working.</li>
+<li>Base defenses will not be able to fire their weapon.</li>
+<li>Gap Generators will stop emitting radar gap.</li>
+<li>Laser Fence Posts will stop emitting laser fences.</li>
+<li>Robot Control Centers will stop working.</li>
+<li>Super weapon buildings will shut down and the super weapons themselves will
+stop charging, if they have <span><tt class="docutils literal"><span class="pre">[SuperWeapon]►IsPowered=yes</span></tt></span> set.</li>
+<li>Radar buildings will stop providing radar.</li>
+<li>SpySat buildings will stop to reveal the map.</li>
+<li>Units that spawn other units will cease to do so. If the spawner unit has
+launched any aircraft then the aircraft will immediately crash.</li>
+<li>Slave Miner slaves will stop working.</li>
+<li>Units that are in their unloading state (such as ore harvesters depositing ore
+or Siege Choppers transforming) will only become EMP&#8217;d once they have finished
+unloading.</li>
+<li>Harvesters that were in the middle of harvesting when hit by EMP will resume
+harvesting after EMP wears off.</li>
+</ul>
+<div class="quickstart admonition" id="quickstart-0">
+<p class="first admonition-title">Quickstart</p>
+<p class="last">If you want a warhead to EMP a target for ten seconds, set
+<span><tt class="docutils literal"><span class="pre">EMP.Duration=150</span></tt></span> on the warhead.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><span class="game docutils literal">Tiberian Sun</span> used the weapon&#8217;s <span><tt class="docutils literal"><span class="pre">Damage</span></tt></span> flag to
+determine how long the EMP effect would last. <span class="game docutils literal">Ares</span>, however, uses 2
+new flags (<span><tt class="docutils literal"><span class="pre">EMP.Duration</span></tt></span> and <span><tt class="docutils literal"><span class="pre">EMP.Cap</span></tt></span>) to provide greater control.
+The weapon&#8217;s <span><tt class="docutils literal"><span class="pre">Damage</span></tt></span> will be delivered independently from EMP paralysis
+(so a weapon can both damage and paralyze its target). <span class="game docutils literal">Tiberian Sun</span>
+also used the flag <span><tt class="docutils literal"><span class="pre">EMEffect=yes</span></tt></span>, which is not used in <span><tt class="docutils literal"><span class="pre">Ares</span></tt></span>.</p>
+</div>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Warhead]►EMP.Duration=</span></tt><span class="type definition"> (integer - frames)</span></span></dt>
+<dd>Defaults to <cite>0</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Warhead]►EMP.Cap=</span></tt><span class="type definition"> (integer - frames)</span></span></dt>
+<dd>Defaults to <cite>-1</cite>.</dd>
+</dl>
+<p>The above two flags are used together to determine how long (in frames) the
+affected units will be EMP&#8217;d for.</p>
+<p>The game keeps track of how much longer each unit will remain paralyzed. Each
+unit essentially has a hidden EMP counter that counts down frame by frame until
+it reaches zero, at which point the unit will be re-activated. This counter is
+what gets modified by EMP warheads.</p>
+<p>A unit does not get affected by EMP if <span><tt class="docutils literal"><span class="pre">Verses</span></tt></span> is equal to <cite>0%</cite>,
+otherwise the target is endowed with the full effect.</p>
+<p>First we will look at positive <span><tt class="docutils literal"><span class="pre">EMP.Duration</span></tt></span> - the targets are going to be
+paralyzed.</p>
+<ul>
+<li><dl class="first docutils">
+<dt><span><tt class="docutils literal"><span class="pre">EMP.Cap</span></tt></span> is greater than zero.</dt>
+<dd><p class="first">Makes this EMP effect stackable, but capped. The target&#8217;s EMP counter is
+increased by <span><tt class="docutils literal"><span class="pre">EMP.Duration</span></tt></span> up to but not exceeding <span><tt class="docutils literal"><span class="pre">EMP.Cap</span></tt></span>. If
+the target&#8217;s EMP counter is already greater than <span><tt class="docutils literal"><span class="pre">EMP.Cap</span></tt></span> (e.g. caused
+by some other EMP weapon) then it will not be reduced.</p>
+<p>Examples:</p>
+<ul class="last simple">
+<li>EMP counter is 0, <span><tt class="docutils literal"><span class="pre">EMP.Duration=10</span></tt></span>, <span><tt class="docutils literal"><span class="pre">EMP.Cap=20</span></tt></span>. Result: EMP
+counter will be set to 10, because the cap is not reached yet.</li>
+<li>EMP counter is 15, <span><tt class="docutils literal"><span class="pre">EMP.Duration=10</span></tt></span>, <span><tt class="docutils literal"><span class="pre">EMP.Cap=20</span></tt></span>. Result: EMP
+counter will be set to 20. This weapon will not go beyond the cap.</li>
+<li>EMP counter is 60, <span><tt class="docutils literal"><span class="pre">EMP.Duration=10</span></tt></span>, <span><tt class="docutils literal"><span class="pre">EMP.Cap=20</span></tt></span>. EMP counter
+will remain at 60, because it was higher than the cap already.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first"><span><tt class="docutils literal"><span class="pre">EMP.Cap=0</span></tt></span>
+Makes this EMP effect stackable, but uncapped. The target&#8217;s EMP counter is
+incremented by <span><tt class="docutils literal"><span class="pre">EMP.Duration</span></tt></span>, without limit. This is <span class="game docutils literal">Ares</span> legacy
+behavior (before the <span><tt class="docutils literal"><span class="pre">EMP.Cap</span></tt></span> flag was added).</p>
+<p>Example:</p>
+<ul class="simple">
+<li>EMP counter is 25, <span><tt class="docutils literal"><span class="pre">EMP.Duration=10</span></tt></span>. Result: EMP counter will be set
+to 35. Because there is no cap, firing this warhead will always add 10.</li>
+</ul>
+</li>
+<li><p class="first"><cite>EMP.Cap=-1</cite>
+The target&#8217;s EMP counter is set to this absolute number of frames specified by
+<span><tt class="docutils literal"><span class="pre">EMP.Duration</span></tt></span>, unless the target&#8217;s EMP counter is already greater than
+this.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li>EMP counter is 5, <span><tt class="docutils literal"><span class="pre">EMP.Duration=10</span></tt></span>. Result: EMP counter will be set to
+the absolute value of 10.</li>
+<li>EMP counter is 20, <span><tt class="docutils literal"><span class="pre">EMP.Duration=10</span></tt></span>. EMP counter will remain at 20,
+because it was already higher.</li>
+</ul>
+</li>
+</ul>
+<p>Next we will look at negative <span><tt class="docutils literal"><span class="pre">EMP.Duration</span></tt></span> - for example, a friendly unit
+trying to re-activate the already-paralyzed unit.</p>
+<ul>
+<li><p class="first"><span><tt class="docutils literal"><span class="pre">EMP.Cap=-1</span></tt></span>
+The target&#8217;s EMP counter is reduced by the number of frames specified by
+<span><tt class="docutils literal"><span class="pre">EMP.Duration</span></tt></span>.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li>EMP counter is 50, <span><tt class="docutils literal"><span class="pre">EMP.Duration=-10</span></tt></span>. Result: EMP counter will be set
+to 40.</li>
+<li>EMP counter is 7, <cite>EMP.Duration=-10</cite>. Result: EMP counter will be set to
+zero and the unit will re-activate, because EMP effect was removed
+completely.</li>
+</ul>
+</li>
+<li><p class="first"><span><tt class="docutils literal"><span class="pre">EMP.Cap</span></tt></span> is greater than zero.
+The target&#8217;s EMP counter is reduced by the number of frames specified by
+<span><tt class="docutils literal"><span class="pre">EMP.Duration</span></tt></span>. If this value is still greater than <span><tt class="docutils literal"><span class="pre">EMP.Cap</span></tt></span> then
+the EMP counter is reduced further to equal <span><tt class="docutils literal"><span class="pre">EMP.Cap</span></tt></span>.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li>EMP counter is 50, <span><tt class="docutils literal"><span class="pre">EMP.Duration=-10</span></tt></span>, <span><tt class="docutils literal"><span class="pre">EMP.Cap=70</span></tt></span>. Result: EMP
+counter will be set to 40.</li>
+<li>EMP counter is 50, <span><tt class="docutils literal"><span class="pre">EMP.Duration=-10</span></tt></span>, <span><tt class="docutils literal"><span class="pre">EMP.Cap=20</span></tt></span>. Result: EMP
+counter will be set to 20. It is reduced to the value of the cap.</li>
+<li>EMP counter is 7, <cite>EMP.Duration=-10</cite>. Result: EMP counter will be set to
+zero and the unit will re-activate. Even without the cap the unit would
+reacivate.</li>
+</ul>
+</li>
+<li><p class="first"><span><tt class="docutils literal"><span class="pre">EMP.Cap=0</span></tt></span>
+<span><tt class="docutils literal"><span class="pre">EMP.Duration</span></tt></span> does not matter because the EMP counter will be set to
+zero by the cap and the unit will re-activate immediately. This is a special
+case of the description above.</p>
+</li>
+</ul>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►ImmuneToEMP=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd><p class="first">The above flag specifies whether or not the <span class="type docutils literal">TechnoType</span> is immune to
+the effects of EMP. The default immunity status is determined based on the
+following rules:</p>
+<blockquote>
+<div><ul>
+<li><p class="first"><span class="type docutils literal">BuildingTypes</span>: <span><tt class="docutils literal"><span class="pre">ImmuneToEMP</span></tt></span> defaults to <cite>no</cite> for
+<span class="type docutils literal">BuildingTypes</span> that have <span><tt class="docutils literal"><span class="pre">Powered=yes</span></tt></span> and a negative
+<span><tt class="docutils literal"><span class="pre">Power=</span></tt></span> value set. <span><tt class="docutils literal"><span class="pre">ImmuneToEMP</span></tt></span> defaults to <cite>no</cite> for
+<span class="type docutils literal">BuildingTypes</span> that provide one or more of the following special
+functions:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Radar</li>
+<li>Super weapons</li>
+<li>Undeploy into a vehicle (e.g. Construction Yards)</li>
+<li>Powers vehicles (e.g. Robot Control Centre)</li>
+<li>Gap Generator</li>
+<li>Sensors</li>
+<li>Laser Fence Posts</li>
+</ul>
+</div></blockquote>
+<p><span><tt class="docutils literal"><span class="pre">ImmuneToEMP</span></tt></span> defaults to <cite>yes</cite> for all other
+<span><tt class="docutils literal"><span class="pre">BuildingTypes</span></tt></span>. For instance, power plants and pillboxes are immune
+to EMP by default, as well as SpySat buildings and factories.</p>
+</li>
+<li><p class="first"><span class="type docutils literal">InfantryTypes</span>: <span><tt class="docutils literal"><span class="pre">ImmuneToEMP</span></tt></span> defaults to <cite>yes</cite> for
+<span class="type docutils literal">InfantryTypes</span> unless <span><tt class="docutils literal"><span class="pre">Cyborg=yes</span></tt></span> is set (in which case,
+<span><tt class="docutils literal"><span class="pre">ImmuneToEMP</span></tt></span> defaults to <cite>no</cite>).</p>
+</li>
+<li><p class="first"><span class="type docutils literal">VehicleTypes</span> and <span class="type docutils literal">AircraftTypes</span>: <span><tt class="docutils literal"><span class="pre">ImmuneToEMP</span></tt></span>
+defaults to <cite>no</cite> for <span class="type docutils literal">VehicleTypes</span> and <span class="type docutils literal">AircraftTypes</span>
+unless <span><tt class="docutils literal"><span class="pre">Organic=yes</span></tt></span> is set (in which case, <cite>ImmuneToEMP</cite> defaults to
+<cite>yes</cite>).</p>
+</li>
+</ul>
+</div></blockquote>
+<p class="last">Manually setting <span><tt class="docutils literal"><span class="pre">ImmuneToEMP</span></tt></span> always overrides the default. EMP immunity
+can also be granted via the new veteran/elite ability &#8220;EMPIMMUNE&#8221;. Just set
+<span><tt class="docutils literal"><span class="pre">VeteranAbilities=EMPIMMUNE</span></tt></span> or <span><tt class="docutils literal"><span class="pre">EliteAbilities=EMPIMMUNE</span></tt></span> on the
+<span class="type docutils literal">TechnoType</span>. EMP immunity also respects <span><tt class="docutils literal"><span class="pre">TypeImmune</span></tt></span> on the
+<span class="type docutils literal">TechnoType</span>, as well as <span><tt class="docutils literal"><span class="pre">AffectsAllies</span></tt></span> and <span><tt class="docutils literal"><span class="pre">AffectsEnemies</span></tt></span>
+on the warhead.</p>
+</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►EMP.Modifier=</span></tt><span class="type definition"> (float - multiplier)</span></span></dt>
+<dd>If the EMP effect duration is positive it will be multiplied by this factor.
+You can create units that are more or less prone to the Electromagnetic Pulse.
+<span><tt class="docutils literal"><span class="pre">EMP.Modifier</span></tt></span> defaults to <cite>100%</cite>.</dd>
+</dl>
+<div class="quickstart admonition" id="quickstart-1">
+<p class="first admonition-title">Quickstart</p>
+<p class="last">If you want a unit to be immune to EMP, set
+<span><tt class="docutils literal"><span class="pre">ImmuneToEMP=yes</span></tt></span> on the unit.</p>
+</div>
+<p>See <a class="reference internal" href="../new/destroyunitsbyemp.html"><em>Destroy Units by EMP</em></a> to learn how to crash flying
+<span class="type docutils literal">TechnoTypes</span> as if they were aircraft.</p>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="firestormwall.html" title="Firestorm Wall"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="amphibiousimagechanges.html" title="Amphibious Image Changes"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" >Restored Tiberian Sun Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

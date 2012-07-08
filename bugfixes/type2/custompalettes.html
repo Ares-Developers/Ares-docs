@@ -1,0 +1,139 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Custom Palettes &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../../index.html" />
+    <link rel="up" title="Type 2 Fixes (Mod Logics)" href="index.html" />
+    <link rel="next" title="Destroyable Cliffs" href="destroyablecliffs.html" />
+    <link rel="prev" title="Cloakable AircraftTypes and BuildingTypes" href="cloakableaircrafttypesandbuildingtypes.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="destroyablecliffs.html" title="Destroyable Cliffs"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cloakableaircrafttypesandbuildingtypes.html" title="Cloakable AircraftTypes and BuildingTypes"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Bug Fixes</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Type 2 Fixes (Mod Logics)</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="cloakableaircrafttypesandbuildingtypes.html"
+                        title="previous chapter">Cloakable <span class="type docutils literal">AircraftTypes</span> and <span class="type docutils literal">BuildingTypes</span></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="destroyablecliffs.html"
+                        title="next chapter">Destroyable Cliffs</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="custom-palettes">
+<span id="index-0"></span><h1>Custom Palettes<a class="headerlink" href="#custom-palettes" title="Permalink to this headline">¶</a></h1>
+<p>The original game supports custom palettes on <span class="type docutils literal">TechnoTypes</span> using
+<span><tt class="docutils literal"><span class="pre">Palette</span></tt></span> (filename, excluding .pal extension) on the <span class="type docutils literal">TechnoType</span>&#8216;s
+entry in <tt class="file docutils literal docutils literal"><span class="pre">artmd.ini</span></tt>. However, the game would crash (with the message &#8220;You
+have violated the limit of having only one extra building Palette&#8221; in the
+[non-existent] log file) if you used the <span><tt class="docutils literal"><span class="pre">Palette</span></tt></span> flag more than once.
+And, of course, the one extra palette was already in use on the Statue of
+Liberty. <span class="game docutils literal">Ares</span> removes this limit and lets you use custom palettes on all
+<span class="type docutils literal">TechnoTypes</span> to your heart&#8217;s content.</p>
+<p>See <a class="reference internal" href="../../new/customanimationandprojectilepalettes.html"><em>Custom Animation and Projectile Palettes</em></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is not known why this apparently arbitrary limit on custom palettes
+was in place it may have been there to mask a bug that we don&#8217;t yet know
+about.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When using custom palettes, the modder must make a new palette for
+each theater. Normally, each building or unit has an associated palette for
+each theater it can be deployed into (e.g. <tt class="file docutils literal docutils literal"><span class="pre">unitsno.pal</span></tt>,
+<tt class="file docutils literal docutils literal"><span class="pre">unittem.pal</span></tt>, etc). If the modder creates a new palette, say
+&#8220;picasso.pal&#8221;, in order for that palette to be used in other theatres, the
+modder must create &#8220;picassosno.pal&#8221;, &#8220;picassotem.pal&#8221;, etc as well.</p>
+</div>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="destroyablecliffs.html" title="Destroyable Cliffs"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cloakableaircrafttypesandbuildingtypes.html" title="Cloakable AircraftTypes and BuildingTypes"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Bug Fixes</a> &raquo;</li>
+          <li><a href="index.html" >Type 2 Fixes (Mod Logics)</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

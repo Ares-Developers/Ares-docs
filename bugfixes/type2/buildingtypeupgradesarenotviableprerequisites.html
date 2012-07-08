@@ -1,0 +1,122 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>BuildingType Upgrades Are Not Viable Prerequisites &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../../index.html" />
+    <link rel="up" title="Type 2 Fixes (Mod Logics)" href="index.html" />
+    <link rel="next" title="Cloakable AircraftTypes and BuildingTypes" href="cloakableaircrafttypesandbuildingtypes.html" />
+    <link rel="prev" title="BuildingTypes and InfantryTypes Do Not Reload Ammo Properly" href="buildingtypesandinfantrytypesdonotreloadammoproperly.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="cloakableaircrafttypesandbuildingtypes.html" title="Cloakable AircraftTypes and BuildingTypes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="buildingtypesandinfantrytypesdonotreloadammoproperly.html" title="BuildingTypes and InfantryTypes Do Not Reload Ammo Properly"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Bug Fixes</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Type 2 Fixes (Mod Logics)</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="buildingtypesandinfantrytypesdonotreloadammoproperly.html"
+                        title="previous chapter"><span class="type docutils literal">BuildingTypes</span> and <span class="type docutils literal">InfantryTypes</span> Do Not Reload Ammo Properly</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="cloakableaircrafttypesandbuildingtypes.html"
+                        title="next chapter">Cloakable <span class="type docutils literal">AircraftTypes</span> and <span class="type docutils literal">BuildingTypes</span></a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="buildingtype-upgrades-are-not-viable-prerequisites">
+<span id="index-0"></span><h1><span class="type docutils literal">BuildingType</span> Upgrades Are Not Viable Prerequisites<a class="headerlink" href="#buildingtype-upgrades-are-not-viable-prerequisites" title="Permalink to this headline">¶</a></h1>
+<p>Before <span class="game docutils literal">Ares</span>, upgrades did not appear to work as prerequisites if you had
+the upgrade, you still didn&#8217;t satisfy the prerequisite. In fact, only the most
+recently constructed <span class="type docutils literal">BuildingType</span> would be checked to see if it had the
+upgrade. With <span class="game docutils literal">Ares</span>, all upgrades on all <span class="type docutils literal">BuildingTypes</span> are
+eligible to satisfy any prerequisite logic that a normal <span class="type docutils literal">BuildingType</span>
+can.</p>
+<p>In addition, upgrades can now satisfy a super weapon&#8217;s <span><tt class="docutils literal"><span class="pre">AuxBuilding</span></tt></span>.</p>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="cloakableaircrafttypesandbuildingtypes.html" title="Cloakable AircraftTypes and BuildingTypes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="buildingtypesandinfantrytypesdonotreloadammoproperly.html" title="BuildingTypes and InfantryTypes Do Not Reload Ammo Properly"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Bug Fixes</a> &raquo;</li>
+          <li><a href="index.html" >Type 2 Fixes (Mod Logics)</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

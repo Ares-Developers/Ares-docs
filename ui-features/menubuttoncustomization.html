@@ -1,0 +1,175 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Menu Button Customization &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../index.html" />
+    <link rel="up" title="User Interface Features" href="index.html" />
+    <link rel="next" title="New Game Resolutions" href="newgameresolutions.html" />
+    <link rel="prev" title="Lone Player Skirmish" href="loneplayerskirmish.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="newgameresolutions.html" title="New Game Resolutions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="loneplayerskirmish.html" title="Lone Player Skirmish"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="loneplayerskirmish.html"
+                        title="previous chapter">Lone Player Skirmish</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="newgameresolutions.html"
+                        title="next chapter">New Game Resolutions</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="menu-button-customization">
+<h1>Menu Button Customization<a class="headerlink" href="#menu-button-customization" title="Permalink to this headline">¶</a></h1>
+<p>Change some menus to hide certain buttons that don&#8217;t fit your mod like the
+Campaign and Play Movies buttons. The default button action will be overridden
+by the action you defined. You are not limited to just disable the button.</p>
+<img alt="Collage demonstrating some button customizations" class="align-center" src="../_images/ui_customize.png" />
+<p>The following buttons can be affected by editing <tt class="file docutils literal docutils literal"><span class="pre">uimd.ini</span></tt>. They default
+to <cite>default</cite>.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►SinglePlayerButton=</span></tt><span class="type definition"> (action)</span></span></dt>
+<dd>The main menu button that leads to the Single Player menu.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►NetworkButton=</span></tt><span class="type definition"> (action)</span></span></dt>
+<dd>The main menu button that leads to the Network menu.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►WWOnlineButton=</span></tt><span class="type definition"> (action)</span></span></dt>
+<dd>The main menu button that leads to the Westwood Online menu.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►MoviesAndCreditsButton=</span></tt><span class="type definition"> (action)</span></span></dt>
+<dd>The main menu button that leads to the Movies And Credits menu.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►CampaignButton=</span></tt><span class="type definition"> (action)</span></span></dt>
+<dd>The Single Player menu button that leads to the Campaign selection menu.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►SkirmishButton=</span></tt><span class="type definition"> (action)</span></span></dt>
+<dd>The Single Player menu button that leads to the Skirmish menu.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►SneakPeeksButton=</span></tt><span class="type definition"> (action)</span></span></dt>
+<dd>The Movies And Credits menu button that starts the sneak peek video.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►PlayMoviesButton=</span></tt><span class="type definition"> (action)</span></span></dt>
+<dd>The Movies And Credits menu button that leads to the Movies menu.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►ViewCreditsButton=</span></tt><span class="type definition"> (action)</span></span></dt>
+<dd>The Movies And Credits menu button that starts the Credits roll.</dd>
+</dl>
+<p>The following action values are valid:</p>
+<blockquote>
+<div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">default:</th><td class="field-body">Do not change the action of this button.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">disable:</th><td class="field-body">The button stays where it is, but it won&#8217;t be clickable.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">hide:</th><td class="field-body">The button will be hidden. The following buttons are moved so there will
+be no empty space.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">message:</th><td class="field-body">Clicking the button will show a message box with an <em>OK</em> button and
+<cite>TXT_X_MSG</cite> as its text. <cite>X</cite> equals the flag&#8217;s name.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">credits:</th><td class="field-body">Clicking the button starts the credits roll.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">sneakpeek:</th><td class="field-body">Clicking the button starts the sneak peek video.</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Examples:</p>
+<ul class="simple">
+<li>For mods without campaign support <span><tt class="docutils literal"><span class="pre">CampaignButton=hide</span></tt></span> will hide the
+campaign selection button. The menu buttons are reordered automatically so the
+Skirmish button takes its place.</li>
+<li>Mods without movies can use <span><tt class="docutils literal"><span class="pre">PlayMoviesButton=hide</span></tt></span>.</li>
+<li>If you don&#8217;t have a preview or sneak peek video either you can define
+<span><tt class="docutils literal"><span class="pre">MoviesAndCreditsButton=credits</span></tt></span> to show your credits roll from the
+main menu. This works best if you change its caption also.</li>
+<li>You can tell the player of your team if you define
+<span><tt class="docutils literal"><span class="pre">ViewCreditsButton=message</span></tt></span> and set the string
+<cite>TXT_VIEWCREDITSBUTTON_MSG</cite> to your short copyright message.</li>
+</ul>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.2.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="newgameresolutions.html" title="New Game Resolutions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="loneplayerskirmish.html" title="Lone Player Skirmish"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" >User Interface Features</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

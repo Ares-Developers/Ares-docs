@@ -1,11 +1,593 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Ares Docs Temporary Index</title>
-</head>
 
-<body>
-This is a test.
-</body>
 
-</html> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Ares Documentation &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="#" />
+    <link rel="next" title="Introduction" href="intro.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="intro.html" title="Introduction"
+             accesskey="N">next</a> |</li>
+        <li><a href="#">Ares 0.2dev documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Ares Documentation</a><ul>
+<li><a class="reference internal" href="#table-of-contents">Table of Contents</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li><a class="reference internal" href="#compatibility-notes">Compatibility Notes</a><ul>
+<li><a class="reference internal" href="#rockpatch-npatch">RockPatch/NPatch</a></li>
+<li><a class="reference internal" href="#comodo-internet-security">Comodo Internet Security</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#known-major-issues">Known Major Issues</a><ul>
+<li><a class="reference internal" href="#save-games">Save Games</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#known-minor-issues">Known Minor Issues</a><ul>
+<li><a class="reference internal" href="#solid-buildings-vs-invisible-projectiles">Solid Buildings vs. Invisible Projectiles</a></li>
+<li><a class="reference internal" href="#the-whiteboy-bug">The Whiteboy Bug</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#required-changes-for-mods-using-ares">Required Changes For Mods Using Ares</a><ul>
+<li><a class="reference internal" href="#artmd-ini">artmd.ini</a></li>
+<li><a class="reference internal" href="#bombcurs-shp">bombcurs.shp</a></li>
+<li><a class="reference internal" href="#ares-mix">ares.mix</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="next chapter">Introduction</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="ares-documentation">
+<h1>Ares Documentation<a class="headerlink" href="#ares-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#compatibility-notes">Compatibility Notes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="intro.html#rockpatch-npatch">RockPatch/NPatch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intro.html#comodo-internet-security">Comodo Internet Security</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#known-major-issues">Known Major Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="intro.html#save-games">Save Games</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#known-minor-issues">Known Minor Issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="intro.html#solid-buildings-vs-invisible-projectiles">Solid Buildings vs. Invisible Projectiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intro.html#the-whiteboy-bug">The Whiteboy Bug</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html#required-changes-for-mods-using-ares">Required Changes For Mods Using Ares</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#artmd-ini">artmd.ini</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#bombcurs-shp">bombcurs.shp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#ares-mix">ares.mix</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="migration.html">Migration Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="migration.html#from-ares-0-1">From Ares 0.1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bugfixes/index.html">Bug Fixes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bugfixes/type1/index.html">Type 1 Fixes (Original Bugs)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/aitargetingcloakedobjectswithmajorsuperweapons.html">AI Targeting Cloaked Objects With Major Super Weapons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/animatedsuperweaponcursor.html">Animated Super Weapon Cursor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/chronoshiftwillsinkjumpjetunits.html">Chronoshift Will Sink Jumpjet Units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/enemyharvesterguardmodeexploit.html">Enemy Harvester Guard Mode Exploit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/firingvoicesandveterancy.html">Firing Voices and Veterancy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/frozenmutationmakeinfantryanimations.html">Frozen Mutation (<span><span class="type">MakeInfantry</span></span>) Animations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/ivanbombsdisappearing.html">Disappearing Ivan Bombs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/loadscreencolors.html">Load Screen Colors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/mindcontrolbuildings.html">Mind-Controlled Buildings Stopped Working When Freed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/misleadingveterannavalcameos.html">Misleading Veteran Naval Cameos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/parasitesinairborneunits.html">Parasites In Airborne Units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/prismsupportbugs.html">Prism Support Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/secretlabboonweighting.html">Secret Lab Boon Weighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/temporalwarheadsandpotentialoccupationtargets.html"><span><span class="type">Temporal</span></span> Warheads and Potential Occupation Targets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/temporalwarheadsearnexperiencebykillingfriendlyunits.html"><span><span class="type">Temporal</span></span> Warheads Earn Experience By Killing Friendly Units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/temporalwarheadsgaindoubleexperience.html"><span><span class="type">Temporal</span></span> Warheads Gain Double Experience</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/toomanysecretlabs.html">Too Many Secret Labs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/unitsoundsplayedatinappropriatetimes.html">Unit Sounds Played At Inappropriate Times</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/warheadversesspecialvalues.html">Warhead <span><span class="type">Verses</span></span>&#8216; Special Values</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bugfixes/type2/index.html">Type 2 Fixes (Mod Logics)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/aircrafttypesandrailguns.html"><span class="type docutils literal">AircraftTypes</span> and Railguns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/airtoaircombat.html">Air-To-Air Combat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/alternatetheaterartforbuildingtypes.html">Alternate Theater Art For <span class="type docutils literal">BuildingTypes</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/amphibiousobjectssinkwhenchronoshiftedontowater.html">Amphibious Objects Sink When Chronoshifted Onto Water</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/animationdamagewarheads.html">Animation Damage Warheads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/baseunit.html"><span><span class="type">BaseUnit</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/buildableconstructionyards.html">Buildable Construction Yards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/buildablesecretlabs.html">Buildable Secret Labs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/buildconst.html"><span><span class="type">BuildConst</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/buildingtypesandinfantrytypesdonotreloadammoproperly.html"><span class="type docutils literal">BuildingTypes</span> and <span class="type docutils literal">InfantryTypes</span> Do Not Reload Ammo Properly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/buildingtypeupgradesarenotviableprerequisites.html"><span class="type docutils literal">BuildingType</span> Upgrades Are Not Viable Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/cloakableaircrafttypesandbuildingtypes.html">Cloakable <span class="type docutils literal">AircraftTypes</span> and <span class="type docutils literal">BuildingTypes</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/custompalettes.html">Custom Palettes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/destroyablecliffs.html">Destroyable Cliffs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/destroyanimscausereconnectionerrors.html"><span><span class="type">DestroyAnims</span></span> Cause Reconnection Errors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/destroyanimsdontremap.html"><span><span class="type">DestroyAnims</span></span> Don&#8217;t Remap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/digsound.html"><span><span class="type">DigSound</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/factoryloadsharing.html">Factory Load Sharing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/hardcodedwallgateinteractions.html">Hardcoded Wall/Gate Interactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/hijackersarereimbursedwhenaunitisgrinded.html">Hijackers are reimbursed when a unit is grinded</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/infantrylostinspecialfunctionbuildings.html">Infantry Lost In Special Function Buildings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/initialveterancameos.html">Initial Veteran Cameos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/ivanbombscanonlybefiredbyinfantrytypes.html">Ivan Bombs Can Only Be Fired By <span class="type docutils literal">InfantryTypes</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/jumpjetshadows.html">Jumpjet Shadows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/mindcontrollerparasites.html">Mind-Controller Parasites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/mindcontrolslaves.html">Slaves Change Ownership If Enslaver Switches Sides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/miragelogicwithturretsbarrels.html">Mirage Logic with Turrets/Barrels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/movingalphalights.html">Moving Alpha Lights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/multipleaifactoriescloneunits.html">Multiple AI Factories Clone Units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/multipleaifactoriescloneunits.html#ai-ignores-buildlimit-when-creating-teams">AI ignores <span><span class="type">BuildLimit</span></span> when creating teams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/negativelydamagingweaponswithanimlist.html">Negatively Damaging Weapons with AnimList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/newconstructionoptions.html">New Construction Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/opentoppedtransportsdonotdecloaktofire.html"><span><span class="type">OpenTopped</span></span> Transports Do Not Decloak To Fire</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/overridingmissionsmdpkt.html">Overriding missionsmd.pkt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/pktduplication.html">PKT Duplication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/radbeamsandwavesusingthewrongflh.html">RadBeams And Waves Using The Wrong FLH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/reinforcementsandmultiplayermaptriggers.html">Reinforcements and Multiplayer Map Triggers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/remappablewalls.html">Remappable Walls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/sonicwaveambientdamage.html">Sonic Wave Ambient Damage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/specialweaponsnowfunctioninsecondaryslots.html">&#8220;Special&#8221; Weapons now function in secondary slots</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/spyplanecountdecoupledfromallyparadropnum.html">SpyPlane Count Decoupled From <span><span class="type">AllyParaDropNum</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/summonedairstrikesnolongerdependentonsovparadropinf.html">Summoned Airstrikes no longer dependent on <span><span class="type">SovParaDropInf</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/temporalwarheadsstillaffectobjectsthatarenotwarpable.html"><span><span class="type">Temporal</span></span> Warheads Still Affect Objects That Are Not Warpable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/the100unitbug.html">The 100-Unit Bug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/unitinstancesnotcountingtowardsbuildlimit.html">Unit Instances Not Counting Towards <span><span class="type">BuildLimit</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/unitsoundsplayedatinappropriatetimes.html">Unit Sounds Played At Inappropriate Times</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/unitsoverpoweringbuildings.html">Units overpowering buildings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/vehicleparadropoffset.html">Vehicle Paradrop Offset</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bugfixes/type3.html">Type 3 Fixes (Performance)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="restored/index.html">Restored Tiberian Sun Logic</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="restored/actionsellunit.html"><span><span class="type">Action=SellUnit</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="restored/actiontogglepower.html"><span><span class="type">Action=TogglePower</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="restored/amphibiousimagechanges.html">Amphibious Image Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restored/emp.html">EMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restored/firestormwall.html">Firestorm Wall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restored/laserfences.html">Laser Fences</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restored/multiengineer.html">Multi Engineer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restored/multiengineercheckbox.html">Multi Engineer Checkbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restored/spotlights.html">Spotlights</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restored/vehicle-thief.html">Vehicle Thief</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="new/index.html">New &amp; Enhanced In-Game Logic</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="new/additionalarmortypesandverses.html">Additional <span class="type docutils literal">ArmorTypes</span> and <span><span class="type">Verses</span></span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new/additionalarmortypesandverses.html#warhead-verses-special-values">Warhead <span><span class="type">Verses</span></span>&#8216; Special Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/additionalarmortypesandverses.html#immunities">Immunities</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="new/alternatetheaterart.html"><span><span class="type">AlternateTheaterArt</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/avoidableinternalerrors.html">Avoidable Internal Errors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new/avoidableinternalerrors.html#snowmd-ini">Snowmd.ini</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="new/carryalls.html">Carryalls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/chronoprisons.html">Chrono Prisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/chronoshift.html">Chronoshift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/customanimationandprojectilepalettes.html">Custom Animation and Projectile Palettes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/custombuildingfoundations.html">Custom Building Foundations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/customcameopalettes.html">Custom Cameo Palettes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/customizableinsignia.html">Customizable Insignia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/customizableparachuteanimations.html">Customizable Parachute Animations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/customizableveterancy.html">Customizable Veterancy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/destroyunitsbyemp.html">Destroy Units by EMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/factoriesandcloning.html">Factories and Cloning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new/factoriesandcloning.html#different-factories-for-units-kennels">Different factories for units (Kennels)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/factoriesandcloning.html#cloning-vats-for-vehicletypes">&#8220;Cloning Vats&#8221; for <span class="type docutils literal">VehicleTypes</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/factoriesandcloning.html#cloning-options">Cloning options</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="new/hardcodedunitproperties.html">Hard-coded Unit Properties</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new/hardcodedunitproperties.html#iscow"><span><span class="type">IsCow</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/hardcodedunitproperties.html#isdesolator"><span><span class="type">IsDesolator</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/hardcodedunitproperties.html#multiple-ifvs-gunner">Multiple IFVs / <span><span class="type">Gunner</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/hardcodedunitproperties.html#voiceifvrepair"><span><span class="type">VoiceIFVRepair</span></span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="new/hijackers.html">Hijackers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/include.html"><span><span class="type">[#include]</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/infantryelectrocuted.html"><span><span class="type">InfantryElectrocuted</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/killingdrivers.html">Killing Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/lightningrods.html">Lightning Rods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/listlengths.html">List Lengths</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/looseaudiofiles.html">Loose Audio Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/makeinfantryowner.html"><span><span class="type">MakeInfantryOwner</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/miscellaneousmoddingenhancements.html">Miscellaneous Modding Enhancements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/mixloadingorder.html">MIX Loading Order</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/mousesha.html">Mouse.sha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/newpoweredunitlogic.html">New Powered Unit Logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/operator.html">Operator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/pcxcameos.html">PCX Cameos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/prerequisites.html">Prerequisites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new/prerequisites.html#generic-prerequisite-groups">Generic Prerequisite Groups</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="new/prismforwarding.html">Prism Forwarding</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new/prismforwarding.html#customizing-the-support-beam">Customizing The Support Beam</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/prismforwarding.html#support-beam-flh">Support Beam FLH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/prismforwarding.html#prism-tower-limitations">Prism Tower Limitations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/prismforwarding.html#special-note-regarding-prism-forwarding">Special Note Regarding Prism Forwarding</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="new/radarjammers.html">Radar Jammers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/reverseengineerlogic.html">Reverse Engineer logic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/secretlabs.html">Secret Labs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/sidescountries.html">Sides &amp; Countries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new/sidescountries.html#countries">Countries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/sidescountries.html#sides">Sides</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="new/solidbuildings.html">Solid Buildings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/spybehavior.html">Spy Behavior</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new/spybehavior.html#radar">Radar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/spybehavior.html#power">Power</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/spybehavior.html#money">Money</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/spybehavior.html#super-weapons">Super Weapons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/spybehavior.html#stolen-technology">Stolen Technology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/spybehavior.html#factories">Factories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/spybehavior.html#reverse-engineering">Reverse Engineering</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="new/stringtableenhancements.html">String Table Enhancements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/superweapons.html">Super Weapons</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new/superweapons.html#building-animations">Building Animations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/superweapons.html#general-properties">General properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/superweapons.html#hardcoded-values">Hardcoded Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/superweapons.html#targeting">Targeting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/superweapons.html#cursors">Cursors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/superweapons.html#charge-drain-super-weapons">Charge/Drain Super Weapons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/superweapons.html#cost">Cost</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/superweapons.html#animation-sound">Animation/Sound</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/superweapons.html#eva-events">EVA Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/superweapons.html#messages">Messages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/superweapons.html#cameo-overlay-texts">Cameo Overlay Texts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/superweapons.html#super-weapon-lighting">Super Weapon Lighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/superweapons.html#enhanced-super-weapon-types">Enhanced Super Weapon Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="new/superweapons.html#type-lightningstorm"><span><span class="type">Type=LightningStorm</span></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="new/superweapons.html#type-multimissile"><span><span class="type">Type=MultiMissile</span></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="new/superweapons.html#type-psychicdominator"><span><span class="type">Type=PsychicDominator</span></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="new/superweapons.html#type-chronosphere"><span><span class="type">Type=ChronoSphere</span></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="new/superweapons.html#type-chronowarp"><span><span class="type">Type=ChronoWarp</span></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="new/superweapons.html#type-ironcurtain-and-type-forceshield"><span><span class="type">Type=IronCurtain</span></span> and <span><span class="type">Type=ForceShield</span></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="new/superweapons.html#type-geneticconverter"><span><span class="type">Type=GeneticConverter</span></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="new/superweapons.html#type-paradrop-and-type-amerparadrop"><span><span class="type">Type=ParaDrop</span></span> and <span><span class="type">Type=AmerParaDrop</span></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="new/superweapons.html#type-spyplane"><span><span class="type">Type=SpyPlane</span></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="new/superweapons.html#type-psychicreveal"><span><span class="type">Type=PsychicReveal</span></span></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="new/superweapons.html#new-super-weapon-types">New Super Weapon Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="new/superweapons.html#type-sonarpulse"><span><span class="type">Type=SonarPulse</span></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="new/superweapons.html#type-genericwarhead"><span><span class="type">Type=GenericWarhead</span></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="new/superweapons.html#type-unitdelivery"><span><span class="type">Type=UnitDelivery</span></span></a></li>
+<li class="toctree-l4"><a class="reference internal" href="new/superweapons.html#type-firestorm"><span><span class="type">Type=Firestorm</span></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="new/survivors.html">Survivors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/urbancombattrenches.html">Urban Combat - Trenches</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new/urbancombattrenches.html#pass-through">Pass Through</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/urbancombattrenches.html#squatters-rights">Squatters&#8217; Rights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/urbancombattrenches.html#advanced-rubble">Advanced Rubble</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/urbancombattrenches.html#traversing-trenches">Traversing Trenches</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/urbancombattrenches.html#specifying-the-occupants-of-a-building">Specifying the occupants of a building</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="new/warheads.html">Warheads</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new/warheads.html#iron-curtain-effect">Iron Curtain Effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/warheads.html#permanent-mind-control">Permanent Mind-Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/warheads.html#customizable-warpaway">Customizable <span><span class="type">WarpAway</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/warheads.html#ion-cannon-ripple-effect">Ion Cannon Ripple Effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/warheads.html#deployed-infantry-damage-multiplier">Deployed Infantry Damage multiplier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/warheads.html#affectsenemies"><span><span class="type">AffectsEnemies</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/warheads.html#non-malicious-warheads">Non-Malicious Warheads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/warheads.html#infdeathanim"><span><span class="type">InfDeathAnim</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/warheads.html#preimpactanim"><span><span class="type">PreImpactAnim</span></span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="new/weapons.html">Weapons</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new/weapons.html#weapontypes-section"><span><span class="type">[WeaponTypes]</span></span> Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/weapons.html#radiation-beams">Radiation Beams</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/weapons.html#electric-bolt-coloring">Electric Bolt Coloring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/weapons.html#wave-effects">Wave Effects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/weapons.html#wave-coloring">Wave Coloring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/weapons.html#wave-direction">Wave Direction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/weapons.html#wave-ambient-damage">Wave Ambient Damage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/weapons.html#customizable-ivan-bombs">Customizable Ivan Bombs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/weapons.html#laserthickness">LaserThickness</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ui-features/index.html">User Interface Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ui-features/bitmapscreenshots.html">Bitmap Screenshots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui-features/campaignlist.html">Campaign List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui-features/campaignloadscreentextcolor.html">Campaign Load Screen Text Color</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui-features/commandlinearguments.html">Command Line Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui-features/customizablecampaignbuttons.html">Customizable Campaign Buttons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui-features/customizabledropdowncolors.html">Customizable Dropdown Colors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ui-features/customizabledropdowncolors.html#default-dropdown-color-values">Default dropdown color values</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ui-features/graphicssurfacedrawing.html">Graphics / Surface Drawing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui-features/internalerrorsdebugging.html">Internal Errors / Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui-features/keyboardcommandshotkeys.html">Keyboard Commands (Hotkeys)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ui-features/keyboardcommandshotkeys.html#map-snapshot">Map Snapshot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui-features/keyboardcommandshotkeys.html#debug-logging">Debug Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui-features/keyboardcommandshotkeys.html#type-data-dumping">Type Data Dumping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui-features/keyboardcommandshotkeys.html#ai-assume-control">AI Assume Control</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ui-features/keyboardcommandshotkeys.html#disabling-keyboard-commands">Disabling Keyboard Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui-features/loadingscreen.html">Loading Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui-features/loneplayerskirmish.html">Lone Player Skirmish</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui-features/menubuttoncustomization.html">Menu Button Customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui-features/newgameresolutions.html">New Game Resolutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui-features/randommapgenerator.html">Random Map Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui-features/userinterfacecolors.html">User Interface Colors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="comparison.html">Comparison with other YR Hacks and Patches</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="credits.html#developers">Developers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="credits.html#current">Current</a></li>
+<li class="toctree-l3"><a class="reference internal" href="credits.html#past">Past</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="credits.html#collaborators">Collaborators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="credits.html#special-thanks">Special Thanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="credits.html#testers">Testers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="credits.html#community-members">Community Members</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="todo.html">Manual To-Do List</a></li>
+</ul>
+</div>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Overview of Ares&#8217;s Bugfixes and Features</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p><span class="game docutils literal">Ares</span> is the new tool to extend the capabilities of <span class="game docutils literal">Yuri&#8217;s
+Revenge</span>. It was conceived by pd near the end of 2007, and is currently in an
+early development and testing cycle.</p>
+<p>This documentation is aimed primarily at <span class="game docutils literal">Ares</span> testers, as <span class="game docutils literal">Ares</span>
+is a work in progress and subject to many further changes. However, the
+documentation is also aimed at mod authors wishing to make use of the new
+functionality that <span class="game docutils literal">Ares</span> offers.</p>
+<p><span class="game docutils literal">Ares</span> is incorporated into <span class="game docutils literal">Yuri&#8217;s Revenge</span> via the use of
+<span class="game docutils literal">Syringe</span>, a program developed by pd to &#8216;inject&#8217; DLL code into a running
+executable without modifying the executable itself. In this case, the
+<span class="game docutils literal">Ares</span> DLL is injected into the <span class="game docutils literal">Yuri&#8217;s Revenge</span> 1.001 main
+executable, <tt class="file docutils literal docutils literal"><span class="pre">gamemd.exe</span></tt>.</p>
+<p><span class="game docutils literal">Syringe</span> can be run directly via a command line prompt, or automatically
+using <span class="game docutils literal">Launch Base</span>. See the respective documentations of those programs
+for further details.</p>
+<div class="section" id="compatibility-notes">
+<h3>Compatibility Notes<a class="headerlink" href="#compatibility-notes" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="rockpatch-npatch">
+<h4>RockPatch/NPatch<a class="headerlink" href="#rockpatch-npatch" title="Permalink to this headline">¶</a></h4>
+<p><span class="game docutils literal">Ares</span> is not intended to be used in conjunction with any third party
+patch that modifies the executable of the game. <span class="game docutils literal">Ares</span> works by having
+its code injected into <span class="game docutils literal">Yuri&#8217;s Revenge</span> at very specific points, and
+modifications to the executable change the locations of these points. This would
+lead to <span class="game docutils literal">Ares</span>&#8216;s code being injected in the wrong places, leading to
+unforeseeable, bad consequences.</p>
+</div>
+<div class="section" id="comodo-internet-security">
+<h4>Comodo Internet Security<a class="headerlink" href="#comodo-internet-security" title="Permalink to this headline">¶</a></h4>
+<p>Commendably, <span class="game docutils literal">Comodo Internet Security</span> actually complains when one
+program tries to modify another at runtime, unlike other anti-virus products,
+which happily let it happen. Unfortunately, this is exactly the way
+<span class="game docutils literal">Syringe</span>/<span class="game docutils literal">Ares</span> works, making it a so-called &#8220;false positive&#8221;.</p>
+<p>In order for <span class="game docutils literal">Syringe</span>/<span class="game docutils literal">Ares</span> to work with <span class="game docutils literal">Comodo Internet
+Security</span>, you have to make the following changes to Comodo&#8217;s settings
+(<a class="reference external" href="http://forums.renegadeprojects.com/showthread.php?tid=1714&amp;pid=17592#pid17592">courtesy of eva-251</a>):</p>
+<ol class="arabic simple">
+<li><tt class="file docutils literal docutils literal"><span class="pre">gamemd.exe</span></tt> and <tt class="file docutils literal docutils literal"><span class="pre">Syringe.exe</span></tt> need to be in the &#8220;Trusted Files&#8221;
+list.</li>
+<li>Under &#8220;Computer Security Policy&#8221; -&gt; &#8220;Defense+ Rules&#8221;, <tt class="file docutils literal docutils literal"><span class="pre">gamemd.exe</span></tt> and
+<tt class="file docutils literal docutils literal"><span class="pre">Syringe.exe</span></tt> need to be marked as &#8220;Installer or Updater&#8221;.</li>
+<li>&#8220;Defense+ Settings&#8221; -&gt; &#8220;Execution Control Settings&#8221; -&gt; &#8220;Detect shellcode
+injections&#8221; should be checked.</li>
+<li>Under &#8220;Defense+ Settings&#8221; -&gt; &#8220;Execution Control Settings&#8221; -&gt; &#8220;Exclusions:&#8221;
+add <tt class="file docutils literal docutils literal"><span class="pre">Syringe.exe</span></tt>, <tt class="file docutils literal docutils literal"><span class="pre">Ares.dll</span></tt>, <tt class="file docutils literal docutils literal"><span class="pre">Ares.dll.inj</span></tt>,
+<tt class="file docutils literal docutils literal"><span class="pre">gamemd.exe</span></tt>.</li>
+</ol>
+<p>This should allow <span class="game docutils literal">Syringe</span>/<span class="game docutils literal">Ares</span> to work properly.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">For your own safety, do not <em>ever</em> run a Windows-computer without
+active anti-virus protection. Computer worms actively scan the Internet
+for vulnerable machines, so even if you don&#8217;t do anything, you could
+be infected within minutes.</p>
+</div>
+</div>
+</div>
+<div class="section" id="known-major-issues">
+<h3>Known Major Issues<a class="headerlink" href="#known-major-issues" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="save-games">
+<h4>Save Games<a class="headerlink" href="#save-games" title="Permalink to this headline">¶</a></h4>
+<p><span class="game docutils literal">Ares</span> does not support loading save games or scripted IPB videos that
+were created with any other version of the game than the very same version of
+<span class="game docutils literal">Ares</span> (not even the original <span class="game docutils literal">Yuri&#8217;s Revenge</span> save games are
+supported).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Even adding load/save functionality for the exact same <span class="game docutils literal">Ares</span>
+version is a huge and complex undertaking, so while the developers would like
+to add loading and saving one day, it will not happen in the foreseeable
+future.</p>
+</div>
+</div>
+</div>
+<div class="section" id="known-minor-issues">
+<h3>Known Minor Issues<a class="headerlink" href="#known-minor-issues" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="solid-buildings-vs-invisible-projectiles">
+<h4>Solid Buildings vs. Invisible Projectiles<a class="headerlink" href="#solid-buildings-vs-invisible-projectiles" title="Permalink to this headline">¶</a></h4>
+<p>The SolidHeight/Solid Buildings functionality does not work with
+invisible projectiles yet. (<a class="reference external" href="http://bugs.renegadeprojects.com/view.php?id=888">Issue #888</a>)</p>
+</div>
+<div class="section" id="the-whiteboy-bug">
+<h4>The Whiteboy Bug<a class="headerlink" href="#the-whiteboy-bug" title="Permalink to this headline">¶</a></h4>
+<p>There remains an upper limit, 74, on the number of units that can be displayed
+per construction tab on the UI bar. Going over this results in a frozen game.
+(<a class="reference external" href="http://bugs.renegadeprojects.com/view.php?id=1416">Issue #1416</a>)</p>
+</div>
+</div>
+</div>
+<div class="section" id="required-changes-for-mods-using-ares">
+<h2>Required Changes For Mods Using Ares<a class="headerlink" href="#required-changes-for-mods-using-ares" title="Permalink to this headline">¶</a></h2>
+<p>Unfortunately, <span class="game docutils literal">Ares</span> will not simply &#8220;work&#8221; without changes to the
+original game files. The reason for this is that maintaining compatibility with
+the original game files whilst still offering the enhancements that are
+<span class="game docutils literal">Ares</span>&#8216; raison d&#8217;être would make implementing <span class="game docutils literal">Ares</span> features
+(both for us, the developers, and you, the mod author) considerably more
+complex, ultimately wasting time that would be better spent on other tasks.</p>
+<p>This section details the modifications you&#8217;ll most likely need to make to ensure
+your mod does not receive any unexpected changes from simply being run whilst
+<span class="game docutils literal">Ares</span> is active.</p>
+<p>In future these changes will be provided as extensions to the standard files
+that are included with the <span class="game docutils literal">YR Unofficial 1.002 Mini-Patch Developer&#8217;s
+Pack</span>.</p>
+<div class="section" id="artmd-ini">
+<h3>artmd.ini<a class="headerlink" href="#artmd-ini" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><span><tt class="docutils literal"><span class="pre">[TELE]►SecondaryFireFLH=85,0,130</span></tt></span></dt>
+<dd>See <a class="reference internal" href="bugfixes/type2/radbeamsandwavesusingthewrongflh.html"><em>RadBeams And Waves Using The Wrong FLH</em></a>.</dd>
+</dl>
+</div>
+<div class="section" id="bombcurs-shp">
+<h3>bombcurs.shp<a class="headerlink" href="#bombcurs-shp" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="file docutils literal docutils literal"><span class="pre">bombcurs.shp</span></tt> animation needs to have its last frame removed if you
+don&#8217;t want to see the previously unused skull image. See
+<a class="reference internal" href="new/weapons.html#custom-ivan-bombs"><em>IvanBomb.FlickerRate</em></a>.</p>
+</div>
+<div class="section" id="ares-mix">
+<h3>ares.mix<a class="headerlink" href="#ares-mix" title="Permalink to this headline">¶</a></h3>
+<p>Mods should not include <tt class="file docutils literal docutils literal"><span class="pre">ares.mix</span></tt>. This new MIX file is bundled with
+<span class="game docutils literal">Ares</span> to provide any new/modified files that <span class="game docutils literal">Ares</span>
+changes/additions rely on. This MIX file presently includes:</p>
+<p><tt class="file docutils literal docutils literal"><span class="pre">ares.csf</span></tt> includes a few new strings:</p>
+<ul class="simple">
+<li><cite>GUI:SelectCampaign=Select your Campaign</cite></li>
+<li><cite>GUI:PlayMission=Play</cite></li>
+<li><cite>GUI:UrbanAreas=Create Urban Areas</cite></li>
+<li><cite>Name:Desert=Desert</cite></li>
+<li><cite>STT:RMGUrbanAreas=Choose whether urban areas will be present on the map.</cite></li>
+<li><cite>STT:MultiEngineer=Engineers can capture damaged buildings only.</cite></li>
+<li><cite>STT:PlayerColorLilac=Choose this to be lilac.</cite></li>
+<li><cite>STT:PlayerColorLightBlue=Choose this to be light blue.</cite></li>
+<li><cite>STT:PlayerColorLime=Choose this to be lime.</cite></li>
+<li><cite>STT:PlayerColorTeal=Choose this to be teal.</cite></li>
+<li><cite>STT:PlayerColorBrown=Choose this to be brown.</cite></li>
+<li><cite>STT:PlayerColorCharcoal=Choose this to be dark grey.</cite></li>
+<li><cite>TXT_COMMAND_DISABLED=The %s command is not available.</cite></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="intro.html" title="Introduction"
+             >next</a> |</li>
+        <li><a href="#">Ares 0.2dev documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

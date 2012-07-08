@@ -1,0 +1,220 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Prerequisites &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Prism Forwarding" href="prismforwarding.html" />
+    <link rel="prev" title="PCX Cameos" href="pcxcameos.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="prismforwarding.html" title="Prism Forwarding"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="pcxcameos.html" title="PCX Cameos"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Prerequisites</a><ul>
+<li><a class="reference internal" href="#generic-prerequisite-groups">Generic Prerequisite Groups</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="pcxcameos.html"
+                        title="previous chapter">PCX Cameos</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="prismforwarding.html"
+                        title="next chapter">Prism Forwarding</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="prerequisites">
+<h1>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h1>
+<p>The prerequisite system has been enhanced in several ways. New flags are
+described below, and an issue has been resolved with regard to upgrades as
+prerequisites (see <a class="reference internal" href="../bugfixes/type2/buildingtypeupgradesarenotviableprerequisites.html"><em>Type 2 fixes</em></a>).</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Unit]►Prerequisite.RequiredTheaters=</span></tt><span class="type definition"> (list of theater names)</span></span></dt>
+<dd><p class="first">The map theaters in which the unit is available. Defaults to all theaters. For
+example, if only the <cite>SNOW</cite> theater were specified then the unit would
+only be available on arctic maps. This allows you to implement, for example,
+the <span><tt class="docutils literal"><span class="pre">AlternateArcticArt</span></tt></span> functionality used on the Navy SEAL, but for all
+unit types and all theaters (however this may present challenges for your AI).
+The theater names are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><cite>TEMPERATE</cite> - most maps</li>
+<li><cite>SNOW</cite> - arctic/snowy maps</li>
+<li><cite>URBAN</cite> - some city maps</li>
+<li><cite>DESERT</cite> - some desert maps, older maps use Temperate</li>
+<li><cite>LUNAR</cite> - Soviet Mission 6</li>
+<li><cite>NEWURBAN</cite> - most YR urban maps</li>
+</ul>
+</div></blockquote>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><span><tt class="docutils literal"><span class="pre">PrerequisiteOverride</span></tt></span> does <em>not</em> override
+<span><tt class="docutils literal"><span class="pre">Prerequisite.RequiredTheaters</span></tt></span>.</p>
+</div>
+</dd>
+</dl>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.1.</span></p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Unit]►Prerequisite.Negative=</span></tt><span class="type definition"> (list of BuildingTypes)</span></span></dt>
+<dd><p class="first">The buildings that preclude construction of the unit. If the player owns one
+or more of the buildings on this list then the unit will not be available.
+Defaults to <cite>none</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><span><tt class="docutils literal"><span class="pre">PrerequisiteOverride</span></tt></span> does <em>not</em> override
+<span><tt class="docutils literal"><span class="pre">Prerequisite.Negative</span></tt></span>.</p>
+</div>
+</dd>
+</dl>
+<p class="versionadded" id="index-1">
+<span class="versionmodified">New in version 0.1.</span></p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Unit]►Prerequisite.Lists=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>Specifies how many extra Prerequisite lists are available (see below).
+Defaults to <cite>0</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Unit]►Prerequisite.List#=</span></tt><span class="type definition"> (list of BuildingTypes (where # is the 1-based index of the prerequisite list, the maximum specified by Prerequisite.Lists))</span></span></dt>
+<dd>Each prerequisite list acts as an independent copy of the existing
+<span><tt class="docutils literal"><span class="pre">Prerequisite</span></tt></span> flag. For example, if you set
+<span><tt class="docutils literal"><span class="pre">Prerequisite=GAPILE,GATECH</span></tt></span> and <span><tt class="docutils literal"><span class="pre">Prerequisite.List1=NAHAND,NATECH</span></tt></span>
+then the unit will be available to any player who owns both an Allied Barracks
+and Battle Lab, or a Soviet Barracks and Battle Lab (a minimum of one of the
+prerequisite lists must be satisfied). <span><tt class="docutils literal"><span class="pre">Prerequisite.List0</span></tt></span>, if
+specified, overrides the existing <span><tt class="docutils literal"><span class="pre">Prerequisite</span></tt></span> flag.</dd>
+</dl>
+<p class="versionadded" id="index-2">
+<span class="versionmodified">New in version 0.1.</span></p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Unit]►Prerequisite.StolenTechs=</span></tt><span class="type definition"> (list of integers)</span></span></dt>
+<dd>The list of stealable technology types that must be stolen before this object
+can be built. See <a class="reference internal" href="spybehavior.html#spybehavior-stolentech"><em>Stolen Technology</em></a> for more
+information.</dd>
+</dl>
+<p class="versionadded" id="index-3">
+<span class="versionmodified">New in version 0.1.</span></p>
+<p>Below is a flowchart of the current prerequisite system. Blue sections
+are unchanged from the original system. Pink sections have been
+modified or added by <span class="game docutils literal">Ares</span>.</p>
+<div align="center" class="align-center"><img alt="Flowchart of the current prerequisite system" src="../_images/prerequisite_system.svg" /></div>
+<div class="section" id="generic-prerequisite-groups">
+<h2>Generic Prerequisite Groups<a class="headerlink" href="#generic-prerequisite-groups" title="Permalink to this headline">¶</a></h2>
+<p>You can now create custom generic prerequisite groups like the existing
+<cite>POWER</cite> (<span><tt class="docutils literal"><span class="pre">PrerequisitePower</span></tt></span>), <cite>FACTORY</cite>
+(<span><tt class="docutils literal"><span class="pre">PrerequisiteFactory</span></tt></span>), <cite>BARRACKS</cite> (<span><tt class="docutils literal"><span class="pre">PrerequisiteBarracks</span></tt></span>),
+<cite>RADAR</cite> (<span><tt class="docutils literal"><span class="pre">PrerequisiteRadar</span></tt></span>), <cite>TECH</cite>
+(<span><tt class="docutils literal"><span class="pre">PrerequisiteTech</span></tt></span>) and <cite>PROC</cite> (<span><tt class="docutils literal"><span class="pre">PrerequisiteProc</span></tt></span> and
+<span><tt class="docutils literal"><span class="pre">PrerequisiteProcAlternate</span></tt></span>) groups.</p>
+<p>To create new groups simply include the new <span><tt class="docutils literal"><span class="pre">[GenericPrerequisites]</span></tt></span>
+section and add flags with the format <span><tt class="docutils literal"><span class="pre">GROUPNAME=</span></tt></span> (list of BuildingTypes).
+For example:</p>
+<div class="highlight-ini"><pre>[GenericPrerequisites]
+NAVALYARD=GAYARD,NAYARD,YAYARD
+etc...</pre>
+</div>
+<div class="highlight-ini"><pre>[TechnoType]
+...
+Prerequisites=NAVALYARD
+...</pre>
+</div>
+<p>If you declare any of the existing groups (<cite>POWER</cite>/<cite>FACTORY</cite>/<cite>BARRACKS</cite>/<cite>RADAR</cite>/<cite>TECH</cite>/<cite>PROC</cite>) then the
+BuildingTypes specified in the <span><tt class="docutils literal"><span class="pre">[GenericPrerequisites]</span></tt></span> section will be
+used <em>instead</em> of those specified on the original PrerequisiteGroup flags
+(i.e. <span><tt class="docutils literal"><span class="pre">[GenericPrerequisites]►POWER=</span></tt></span>, if specified, overrides
+<span><tt class="docutils literal"><span class="pre">[General]►PrerequisitePower=</span></tt></span>). Take note that
+<span><tt class="docutils literal"><span class="pre">[GenericPrerequisites]►PROC=</span></tt></span> does not override or nullify
+<span><tt class="docutils literal"><span class="pre">[General]►PrerequisiteProcAlternate=</span></tt></span>.</p>
+<p class="versionadded" id="index-4">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="prismforwarding.html" title="Prism Forwarding"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="pcxcameos.html" title="PCX Cameos"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Warhead Verses‘ Special Values &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../../index.html" />
+    <link rel="up" title="Type 1 Fixes (Original Bugs)" href="index.html" />
+    <link rel="next" title="Type 2 Fixes (Mod Logics)" href="../type2/index.html" />
+    <link rel="prev" title="Unit Sounds Played At Inappropriate Times" href="unitsoundsplayedatinappropriatetimes.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../type2/index.html" title="Type 2 Fixes (Mod Logics)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="unitsoundsplayedatinappropriatetimes.html" title="Unit Sounds Played At Inappropriate Times"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Bug Fixes</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Type 1 Fixes (Original Bugs)</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="unitsoundsplayedatinappropriatetimes.html"
+                        title="previous chapter">Unit Sounds Played At Inappropriate Times</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../type2/index.html"
+                        title="next chapter">Type 2 Fixes (Mod Logics)</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="warhead-verses-special-values">
+<span id="index-0"></span><h1>Warhead <span><span class="type">Verses</span></span>&#8216; Special Values<a class="headerlink" href="#warhead-verses-special-values" title="Permalink to this headline">¶</a></h1>
+<p>The <span><tt class="docutils literal"><span class="pre">Verses</span></tt></span> flag (which is used on warheads to manipulate the damage dealt
+versus different armor types) has three special-case values used to define
+additional behavior:</p>
+<dl class="docutils">
+<dt><cite>0%</cite></dt>
+<dd>means no force fire, no retaliate, no passive acquire</dd>
+<dt><cite>1%</cite></dt>
+<dd>means no retaliate, no passive acquire</dd>
+<dt><cite>2%</cite></dt>
+<dd>means no passive acquire</dd>
+</dl>
+<p>However, a bug with the way the floating-point values are compared means that
+these behaviors were not always applied consistently. <span class="game docutils literal">Ares</span> fixes this
+bug so the behavior should always be consistent now. The special behaviors can
+also now be toggled independently of the <span><tt class="docutils literal"><span class="pre">Verses</span></tt></span> value (see
+<a class="reference internal" href="../../new/additionalarmortypesandverses.html"><em>Additional ArmorTypes and Verses</em></a>).</p>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../type2/index.html" title="Type 2 Fixes (Mod Logics)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="unitsoundsplayedatinappropriatetimes.html" title="Unit Sounds Played At Inappropriate Times"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Bug Fixes</a> &raquo;</li>
+          <li><a href="index.html" >Type 1 Fixes (Original Bugs)</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

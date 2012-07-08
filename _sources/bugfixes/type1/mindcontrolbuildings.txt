@@ -1,0 +1,15 @@
+.. index:: Mind Control; Mind-controlled buildings won't stop working.
+
+====================================================
+Mind-Controlled Buildings Stopped Working When Freed
+====================================================
+
+If a mind-controller captured a building and it was either freed or the
+mind-controller let go of it, the building would just sit there, doing nothing.
+They didn't even retaliate when fired upon previously. This was because freed
+units are supposed to go on a hunt mission. Buildings cannot go hunting and so
+they stayed lethargic.
+
+Now the freed building will be put on guard.
+
+.. versionadded:: 0.2

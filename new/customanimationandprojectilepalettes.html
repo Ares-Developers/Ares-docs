@@ -1,0 +1,133 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Custom Animation and Projectile Palettes &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Custom Building Foundations" href="custombuildingfoundations.html" />
+    <link rel="prev" title="Chronoshift" href="chronoshift.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="custombuildingfoundations.html" title="Custom Building Foundations"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="chronoshift.html" title="Chronoshift"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="chronoshift.html"
+                        title="previous chapter">Chronoshift</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="custombuildingfoundations.html"
+                        title="next chapter">Custom Building Foundations</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="custom-animation-and-projectile-palettes">
+<h1>Custom Animation and Projectile Palettes<a class="headerlink" href="#custom-animation-and-projectile-palettes" title="Permalink to this headline">¶</a></h1>
+<p>In <span class="game docutils literal">Yuri&#8217;s Revenge</span>, you could use the animation or the unit palette to
+display animations. <span class="game docutils literal">Ares</span> lets you to specify custom palettes for
+animations and projectiles.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Animation]►CustomPalette=</span></tt><span class="type definition"> (filename with .pal extension)</span></span></dt>
+<dd>Specifies the palette used to draw this animation/projectile.</dd>
+</dl>
+<p>You can specify theater-specific palettes by putting three <cite>~</cite> marks to the
+theater specific part of the filename. <cite>~~~</cite> is replaced with the theater&#8217;s
+three-letter extension.</p>
+<ul class="simple">
+<li><span><tt class="docutils literal"><span class="pre">CustomPalette=abcd.pal</span></tt></span> always uses <tt class="file docutils literal docutils literal"><span class="pre">abcd.pal</span></tt>.</li>
+<li><span><tt class="docutils literal"><span class="pre">CustomPalette=lib~~~.pal</span></tt></span> uses <tt class="file docutils literal docutils literal"><span class="pre">libtem.pal</span></tt>, <tt class="file docutils literal docutils literal"><span class="pre">libsno.pal</span></tt>,
+etc.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Note that if you&#8217;re using this on projectiles, you have to add the
+projectile to the <span><tt class="docutils literal"><span class="pre">[Animations]</span></tt></span> list.</p>
+</div>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.2.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="custombuildingfoundations.html" title="Custom Building Foundations"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="chronoshift.html" title="Chronoshift"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Firing Voices and Veterancy &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../../index.html" />
+    <link rel="up" title="Type 1 Fixes (Original Bugs)" href="index.html" />
+    <link rel="next" title="Frozen Mutation (MakeInfantry) Animations" href="frozenmutationmakeinfantryanimations.html" />
+    <link rel="prev" title="Enemy Harvester Guard Mode Exploit" href="enemyharvesterguardmodeexploit.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="frozenmutationmakeinfantryanimations.html" title="Frozen Mutation (MakeInfantry) Animations"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="enemyharvesterguardmodeexploit.html" title="Enemy Harvester Guard Mode Exploit"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Bug Fixes</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Type 1 Fixes (Original Bugs)</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="enemyharvesterguardmodeexploit.html"
+                        title="previous chapter">Enemy Harvester Guard Mode Exploit</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="frozenmutationmakeinfantryanimations.html"
+                        title="next chapter">Frozen Mutation (<span><span class="type">MakeInfantry</span></span>) Animations</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="firing-voices-and-veterancy">
+<span id="index-0"></span><h1>Firing Voices and Veterancy<a class="headerlink" href="#firing-voices-and-veterancy" title="Permalink to this headline">¶</a></h1>
+<p><span class="game docutils literal">Yuri&#8217;s Revenge</span> uses different unit voice lists for firing weapons
+(<span><tt class="docutils literal"><span class="pre">VoicePrimaryWeaponAttack</span></tt></span>, <span><tt class="docutils literal"><span class="pre">VoicePrimaryEliteWeaponAttack</span></tt></span>,
+<span><tt class="docutils literal"><span class="pre">VoiceSecondaryWeaponAttack</span></tt></span> and <span><tt class="docutils literal"><span class="pre">VoiceSecondaryEliteWeaponAttack</span></tt></span>).
+If the <span><tt class="docutils literal"><span class="pre">*EliteWeaponAttack</span></tt></span> list is empty, <span><tt class="docutils literal"><span class="pre">VoiceAttack</span></tt></span> is used
+instead of the more appropriate non-elite version <span><tt class="docutils literal"><span class="pre">*WeaponAttack</span></tt></span>.</p>
+<p>This behavior makes units like Boris, Magnetrons, Siege Choppers, Boomers and
+Floating Discs lose their special voices once they become elite. <span class="game docutils literal">Ares</span>
+falls back to the non-elite weapon firing voices instead of using the generic
+<span><tt class="docutils literal"><span class="pre">VoiceAttack</span></tt></span> ones.</p>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.2.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="frozenmutationmakeinfantryanimations.html" title="Frozen Mutation (MakeInfantry) Animations"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="enemyharvesterguardmodeexploit.html" title="Enemy Harvester Guard Mode Exploit"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Bug Fixes</a> &raquo;</li>
+          <li><a href="index.html" >Type 1 Fixes (Original Bugs)</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

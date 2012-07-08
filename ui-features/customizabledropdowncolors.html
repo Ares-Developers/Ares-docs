@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Customizable Dropdown Colors &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../index.html" />
+    <link rel="up" title="User Interface Features" href="index.html" />
+    <link rel="next" title="Graphics / Surface Drawing" href="graphicssurfacedrawing.html" />
+    <link rel="prev" title="Customizable Campaign Buttons" href="customizablecampaignbuttons.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="graphicssurfacedrawing.html" title="Graphics / Surface Drawing"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="customizablecampaignbuttons.html" title="Customizable Campaign Buttons"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Customizable Dropdown Colors</a><ul>
+<li><a class="reference internal" href="#default-dropdown-color-values">Default dropdown color values</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="customizablecampaignbuttons.html"
+                        title="previous chapter">Customizable Campaign Buttons</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="graphicssurfacedrawing.html"
+                        title="next chapter">Graphics / Surface Drawing</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="customizable-dropdown-colors">
+<h1>Customizable Dropdown Colors<a class="headerlink" href="#customizable-dropdown-colors" title="Permalink to this headline">¶</a></h1>
+<p>The player colors shown in the dropdown list in the menu are hardcoded in
+<span class="game docutils literal">Yuri&#8217;s Revenge</span> and they map to hardcoded color schemes in-game.
+<span class="game docutils literal">Ares</span> removes the hardcoding and lets you customize all existing colors
+and even add more of them.</p>
+<p id="index-0">Using <tt class="file docutils literal docutils literal"><span class="pre">uimd.ini</span></tt> you can define up to 16 colors to be shown in the
+dropdown lists. Replace <span><tt class="docutils literal"><span class="pre">X</span></tt></span> by the numbers from <cite>1</cite> to <span><tt class="docutils literal"><span class="pre">Count</span></tt></span>
+(without leading zeros):</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Colors]►Count=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>The number of colors to display. Values from 8 to 16 are valid and <span><tt class="docutils literal"><span class="pre">Ares</span></tt></span>
+enforces these limits. Defaults to <cite>8</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Colors]►SlotX.DisplayColor=</span></tt><span class="type definition"> (R,G,B)</span></span></dt>
+<dd>The color displayed in the dropdown lists to preview the in-game color scheme
+in RGB format, that is three comma separated values from 0 to 255. Default
+depends on slot index.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Colors]►SlotX.ColorScheme=</span></tt><span class="type definition"> (Color scheme)</span></span></dt>
+<dd>The name of the color scheme defined in <tt class="file docutils literal docutils literal"><span class="pre">rulesmd.ini</span></tt>&#8216;s <span><tt class="docutils literal"><span class="pre">[Colors]</span></tt></span>
+section this slot maps to in-game. Default depends on slot index.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Colors]►SlotX.Tooltip=</span></tt><span class="type definition"> (CSF label)</span></span></dt>
+<dd>The text shown as tool tip when the player hovers over the color in the
+dropdown list. Default depends on slot index.</dd>
+</dl>
+<p>You can use <span><tt class="docutils literal"><span class="pre">Observer</span></tt></span> instead of <span><tt class="docutils literal"><span class="pre">SlotX</span></tt></span> to define the colors used
+for observers.</p>
+<p><span class="game docutils literal">Ares</span> will display all color slots from <cite>1</cite> to <span><tt class="docutils literal"><span class="pre">Count</span></tt></span>. You
+may redefine any property without having to redefine the entire list.</p>
+<p>It is your responsibility to select appropriate values. <span class="game docutils literal">Ares</span> will not
+check whether color values and color schemes are unique and distinguishable.</p>
+<div class="quickstart admonition" id="quickstart-0">
+<p class="first admonition-title">Quickstart</p>
+<p class="last"><span class="game docutils literal">Ares</span> defaults to the original game&#8217;s values and adds
+six more definitions not shown by default. To display those new items, set
+<span><tt class="docutils literal"><span class="pre">Count=14</span></tt></span>. Note that these additional color schemes have been added
+merely for demonstration purposes and they might collide with the original
+color schemes.</p>
+</div>
+<div class="section" id="default-dropdown-color-values">
+<h2>Default dropdown color values<a class="headerlink" href="#default-dropdown-color-values" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="18%" />
+<col width="16%" />
+<col width="29%" />
+<col width="23%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Slot ID</th>
+<th class="head">Menu Color</th>
+<th class="head">Color Scheme</th>
+<th class="head">Tool Tip</th>
+<th class="head">Note</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><span><tt class="docutils literal"><span class="pre">Slot1</span></tt></span></td>
+<td><cite>221,226,13</cite></td>
+<td><cite>Gold</cite></td>
+<td><cite>STT:PlayerColorGold</cite></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><span><tt class="docutils literal"><span class="pre">Slot2</span></tt></span></td>
+<td><cite>255,25,25</cite></td>
+<td><cite>DarkRed</cite></td>
+<td><cite>STT:PlayerColorRed</cite></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><span><tt class="docutils literal"><span class="pre">Slot3</span></tt></span></td>
+<td><cite>42,116,226</cite></td>
+<td><cite>DarkBlue</cite></td>
+<td><cite>STT:PlayerColorBlue</cite></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><span><tt class="docutils literal"><span class="pre">Slot4</span></tt></span></td>
+<td><cite>62,209,46</cite></td>
+<td><cite>DarkGreen</cite></td>
+<td><cite>STT:PlayerColorGreen</cite></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><span><tt class="docutils literal"><span class="pre">Slot5</span></tt></span></td>
+<td><cite>255,160,25</cite></td>
+<td><cite>Orange</cite></td>
+<td><cite>STT:PlayerColorOrange</cite></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><span><tt class="docutils literal"><span class="pre">Slot6</span></tt></span></td>
+<td><cite>50,215,230</cite></td>
+<td><cite>DarkSky</cite></td>
+<td><cite>STT:PlayerColorSkyBlue</cite></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><span><tt class="docutils literal"><span class="pre">Slot7</span></tt></span></td>
+<td><cite>149,40,189</cite></td>
+<td><cite>Purple</cite></td>
+<td><cite>STT:PlayerColorPurple</cite></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><span><tt class="docutils literal"><span class="pre">Slot8</span></tt></span></td>
+<td><cite>255,154,235</cite></td>
+<td><cite>Magenta</cite></td>
+<td><cite>STT:PlayerColorPink</cite></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><span><tt class="docutils literal"><span class="pre">Slot9</span></tt></span></td>
+<td><cite>148,93,239</cite></td>
+<td><cite>NeonBlue</cite></td>
+<td><cite>STT:PlayerColorLilac</cite></td>
+<td>For demonstration purposes</td>
+</tr>
+<tr class="row-odd"><td><span><tt class="docutils literal"><span class="pre">Slot10</span></tt></span></td>
+<td><cite>115,255,231</cite></td>
+<td><cite>LightBlue</cite></td>
+<td><cite>STT:PlayerColorLightBlue</cite></td>
+<td>For demonstration purposes</td>
+</tr>
+<tr class="row-even"><td><span><tt class="docutils literal"><span class="pre">Slot11</span></tt></span></td>
+<td><cite>255,239,99</cite></td>
+<td><cite>Yellow</cite></td>
+<td><cite>STT:PlayerColorLime</cite></td>
+<td>For demonstration purposes</td>
+</tr>
+<tr class="row-odd"><td><span><tt class="docutils literal"><span class="pre">Slot12</span></tt></span></td>
+<td><cite>8,195,90</cite></td>
+<td><cite>Green</cite></td>
+<td><cite>STT:PlayerColorTeal</cite></td>
+<td>For demonstration purposes</td>
+</tr>
+<tr class="row-even"><td><span><tt class="docutils literal"><span class="pre">Slot13</span></tt></span></td>
+<td><cite>189,85,0</cite></td>
+<td><cite>Red</cite></td>
+<td><cite>STT:PlayerColorBrown</cite></td>
+<td>For demonstration purposes</td>
+</tr>
+<tr class="row-odd"><td><span><tt class="docutils literal"><span class="pre">Slot14</span></tt></span></td>
+<td><cite>128,128,128</cite></td>
+<td><cite>Grey</cite></td>
+<td><cite>STT:PlayerColorCharcoal</cite></td>
+<td>For demonstration purposes</td>
+</tr>
+<tr class="row-even"><td><cite>(others)</cite></td>
+<td><cite>255,255,255</cite></td>
+<td><cite>LightGrey</cite></td>
+<td><cite>NOSTR:</cite></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><span><tt class="docutils literal"><span class="pre">Observer</span></tt></span></td>
+<td><cite>96,96,96</cite></td>
+<td><cite>LightGrey</cite></td>
+<td><cite>STT:PlayerColorObserver</cite></td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.2.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="graphicssurfacedrawing.html" title="Graphics / Surface Drawing"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="customizablecampaignbuttons.html" title="Customizable Campaign Buttons"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" >User Interface Features</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

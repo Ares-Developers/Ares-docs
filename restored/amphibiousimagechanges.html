@@ -1,0 +1,126 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Amphibious Image Changes &mdash; Ares 0.2dev documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.2dev',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.2dev documentation" href="../index.html" />
+    <link rel="up" title="Restored Tiberian Sun Logic" href="index.html" />
+    <link rel="next" title="EMP" href="emp.html" />
+    <link rel="prev" title="Action=TogglePower" href="actiontogglepower.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="emp.html" title="EMP"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="actiontogglepower.html" title="Action=TogglePower"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Restored Tiberian Sun Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="actiontogglepower.html"
+                        title="previous chapter"><span><span class="type">Action=TogglePower</span></span></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="emp.html"
+                        title="next chapter">EMP</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="amphibious-image-changes">
+<span id="index-0"></span><h1>Amphibious Image Changes<a class="headerlink" href="#amphibious-image-changes" title="Permalink to this headline">¶</a></h1>
+<p>In <span class="game docutils literal">Tiberian Sun</span>, the Amphibious APC would appear to sink into the water.
+This was achieved by changing the imagery from <tt class="file docutils literal docutils literal"><span class="pre">apc.vxl</span></tt> to
+<tt class="file docutils literal docutils literal"><span class="pre">apcw.vxl</span></tt>. With <span class="game docutils literal">Ares</span>, you can now specify:</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[VehicleType]►WaterImage=</span></tt><span class="type definition"> (VehicleType)</span></span></dt>
+<dd><p class="first">This allows the amphibious unit&#8217;s image to change from <tt class="file docutils literal docutils literal"><span class="pre">XXXX.shp</span></tt> or
+<tt class="file docutils literal docutils literal"><span class="pre">XXXX.vxl</span></tt> (defined by <span><tt class="docutils literal"><span class="pre">Image=</span></tt></span>) to <tt class="file docutils literal docutils literal"><span class="pre">YYYY.shp</span></tt> or
+<tt class="file docutils literal docutils literal"><span class="pre">YYYY.vxl</span></tt> (defined by <span><tt class="docutils literal"><span class="pre">[WaterImage]►Image=</span></tt></span>) when in water, similar
+to <span><tt class="docutils literal"><span class="pre">UnloadingClass</span></tt></span>.</p>
+<p class="last">Please note that SHP units cannot have a voxel <span><tt class="docutils literal"><span class="pre">WaterImage</span></tt></span>, and vice
+versa. The <span class="type docutils literal">VehicleType</span> has to be defined under <span><tt class="docutils literal"><span class="pre">[VehicleTypes]</span></tt></span>.</p>
+</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="emp.html" title="EMP"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="actiontogglepower.html" title="Action=TogglePower"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.2dev documentation</a> &raquo;</li>
+          <li><a href="index.html" >Restored Tiberian Sun Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
