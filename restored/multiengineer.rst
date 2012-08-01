@@ -17,6 +17,10 @@ it instead. :tag:`EngineerDamage` is not present in :game:`Yuri's Revenge`.
 :tagdef:`[General]EngineerAlwaysCaptureTech=boolean`
   Specifies whether tech buildings can be captured no matter what their current
   health status is.
+
+  .. note:: All structures originally owned by countries with
+    \ :tag:`MultiplayPassive=yes` are considered tech structures. This
+    definition  is likely to change in a later version.
 :tagdef:`[General]EngineerDamageCursor.*=Cursor`
   Specifies the cursor to indicate an engineer will only damage the building
   instead of capturing it. See :ref:`Super weapon cursors <sw-cursors>`.
