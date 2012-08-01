@@ -84,10 +84,12 @@ Stolen Technology
 
 :tagdef:`[BuildingType]SpyEffect.StolenTechIndex=integer`
   The stealable technology type that is stolen upon spying this enemy building.
+  Only values from 0 to 31 (inclusive) are supported. Use :value:`-1` to
+  disable the effect. Defaults to :value:`-1`.
 :tagdef:`[TechnoType]Prerequisite.StolenTechs=list of integers`
   The list of stealable technology types that must be stolen before this object
-  can be built. Use :value:`-1` to disable this requirement. Defaults to
-  :value:`-1`.
+  can be built. Only values from 0 to 31 (inclusive) are supported. Use
+  :value:`-1` to disable this requirement. Defaults to :value:`-1`.
 
 .. index:: Spy behaviour; New effect: Stolen tech index (multiple new stolen techs).
 
