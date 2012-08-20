@@ -24,6 +24,15 @@ Command Line Arguments
   Due to this, feature complexity, lack of interest and a change in
   personnel, please note that this feature is NOT officially supported.
 
+<<<SEPARATOR>>>
+
+ NOTE:
+ For those who do not know how or where to put these, just go to the 
+ RunAres.bat and Edit it with notepad.
+ For Example:
+ if you want to use the "-NOLOGO" it's should be look like 
+ this - Syringe "gamemd.exe" -NOLOGO %* - (without "-" ) and save it as
+ RunAres.bat (yeah .bat it should be)
 
 .. versionadded:: 0.1
 
