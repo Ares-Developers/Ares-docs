@@ -35,7 +35,7 @@ number of passengers it holds.
 NB: In order to use this, you have to use YR's multi-turret logic,
   that is, you have to specify `Turret=yes`, an appropriate
   `TurretCount`, and you have to use the `WeaponX` flags to specify
-  weapons. PassengerTurret=
+  weapons. Also try putting `WeaponCount` if did not work. PassengerTurret=
 
 
 .. versionadded:: 0.2
