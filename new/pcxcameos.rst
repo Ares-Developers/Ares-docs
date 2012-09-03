@@ -24,7 +24,3 @@ NB: Like other PCX files used by the game, the PCX files used for this
 feature *must* have 256 colors and dimensions of 60x48 pixels .
 
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>
