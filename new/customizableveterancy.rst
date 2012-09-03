@@ -50,7 +50,3 @@ also could promote its passengers (but without the mind-control check)
 if it had `Trainable=no` set.
 
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>
