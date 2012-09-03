@@ -17,7 +17,3 @@ damage. Rudimentary Lightning Rods.
 NB: This logic is likely to be expanded in future versions.
 
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>
