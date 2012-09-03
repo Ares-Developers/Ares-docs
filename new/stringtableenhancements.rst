@@ -13,7 +13,3 @@ characters. Object names can be written directly into rulesmd.ini
 rather than adding them to the string table.
 
 .. versionadded:: 0.1
-
-
-
-<<<SEPARATOR>>>
