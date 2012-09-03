@@ -67,7 +67,3 @@ Percent chance for pilots and/or passengers to emerge/parachute from
 destroyed vehicles/aircraft.
 
 .. versionadded:: 0.1
-
-
-
-<<<SEPARATOR>>>
