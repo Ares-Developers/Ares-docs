@@ -54,7 +54,3 @@ In Ares you can specify the VoiceIFVRepair tag on any IFV unit.
 VoiceIFVRepair can be specified on any IFV unit. VoiceIFVRepair=
 
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>
