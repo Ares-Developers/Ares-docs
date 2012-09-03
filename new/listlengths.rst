@@ -10,7 +10,3 @@ lists is now 2048 characters. Several INI flag lists have been
 extended to allow more text to be parsed.
 
 .. versionadded:: 0.1
-
-
-
-<<<SEPARATOR>>>
