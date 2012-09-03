@@ -23,7 +23,3 @@ NB: The cameo must not use the color at index 0 of the palette. It
 will be transparent in-game.
 
 .. versionadded:: 0.1
-
-
-
-<<<SEPARATOR>>>
