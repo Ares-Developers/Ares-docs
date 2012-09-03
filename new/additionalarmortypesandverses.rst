@@ -120,7 +120,3 @@ create a new armor type that will emulate this as follows:
 
 The above settings give the IceMan unit a damage immunity to the
 IceMan weapon, even though he can still be attacked by that weapon.
-
-
-
-<<<SEPARATOR>>>
