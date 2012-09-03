@@ -19,7 +19,3 @@ specified will still display the 15th/16th frames of pips.shp as
 usual. Custom insignia for veteran/elite units.
 
 .. versionadded:: 0.1
-
-
-
-<<<SEPARATOR>>>
