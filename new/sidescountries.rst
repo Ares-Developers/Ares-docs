@@ -167,7 +167,3 @@ flags in the side's INI section:
 
 
 .. versionadded:: 0.1
-
-
-
-<<<SEPARATOR>>>
