@@ -45,7 +45,3 @@ Secret.RequiredHouses and Secret.ForbiddenHouses when captured. This
 is not a bug. Per-building secret lab boons.
 
 .. versionadded:: 0.1
-
-
-
-<<<SEPARATOR>>>

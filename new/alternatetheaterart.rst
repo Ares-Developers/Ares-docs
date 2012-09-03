@@ -20,7 +20,3 @@ arctic theater and only for InfantryTypes.
 
 
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>

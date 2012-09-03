@@ -17,7 +17,3 @@ Per-unit Chronosphere options.
 
 
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>

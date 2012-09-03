@@ -6,7 +6,3 @@ content from langmd.mix. expandmd##.mix can override content from
 langmd.mix.
 
 .. versionadded:: 0.1
-
-
-
-<<<SEPARATOR>>>

@@ -1112,7 +1112,3 @@ relatively small amount of game time that the Wall is active for.
 Firestorm Wall Firestorm.Wall= SubjectToFirestorm=
 
 .. versionadded:: 0.1
-
-
-
-<<<SEPARATOR>>>

@@ -42,7 +42,3 @@ unit palette instead of anim.pal. MakeInfantry animations
 be as killer|victim|neutral|random. MakeInfantryOwner=
 
 .. versionadded:: 0.1
-
-
-
-<<<SEPARATOR>>>

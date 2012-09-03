@@ -36,7 +36,3 @@ implemented. You will need a ` `VehicleThief``_ to acquire a neutral
 vehicle.
 
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>

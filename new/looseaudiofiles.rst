@@ -8,7 +8,3 @@ in the Red Alert 2 directory or in the MIX files can now be played,
 without having to include them in audio.bag.
 
 .. versionadded:: 0.1
-
-
-
-<<<SEPARATOR>>>

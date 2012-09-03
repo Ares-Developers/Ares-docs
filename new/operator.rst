@@ -65,7 +65,3 @@ Vehicles and buildings can be made to require an operator (driver)
 before they will function.
 
 .. versionadded:: 0.1
-
-
-
-<<<SEPARATOR>>>

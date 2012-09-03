@@ -265,6 +265,3 @@ for this was to be sure that warhead and/or damage was defined.  If
 this happens to you, be sure to check that your PF modification defines
 warhead values or damage values.
 (`Bug #896095 <https://bugs.launchpad.net/ares/+bug/896095>`_)
-
-
-<<<SEPARATOR>>>

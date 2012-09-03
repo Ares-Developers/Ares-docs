@@ -8,6 +8,3 @@ game. SHP compression can be used on mouse.sha.
 .. versionadded:: 0.1
 
 NB: Not yet successfully implemented.
-
-
-<<<SEPARATOR>>>

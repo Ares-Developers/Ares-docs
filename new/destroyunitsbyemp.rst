@@ -30,7 +30,3 @@ Using `inair` causes the Siege Chopper not to be destroyed when it is
 deployed.
 
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>

@@ -21,7 +21,3 @@ Ares's jammers also jam the SpySat Uplink. Radar jammers.
 
 
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>

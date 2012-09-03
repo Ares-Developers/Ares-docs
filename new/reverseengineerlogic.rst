@@ -16,18 +16,16 @@ customization.
 
 NB: Currently `Grinding=yes` is needed to the reverse-engineering
 building to have this logic working. Also, reverse-engineered units
-will ignore `Prerequisite=`, `PrerequisiteLists`,
+will ignore `Prerequisite=`, `Prerequisite.Lists`,
 `PrerequisiteOverride`, `StolenTech`, both old and new models,
 `TechLevel`, `RequiredHouses` and `ForbiddenHouses`, but obeying
-`BuildLimit`, `PrerequisiteTheaters`, `NegativePrerequisite`,
+`BuildLimit`, `Prerequisite.RequiredTheaters`, `Prerequisite.Negative`,
 `Factory=` and `Naval=` settings.
 
 NB: While this logic appears to be working, there have also been some
 minor bugs related to this feature. Be advised.
 Reverse-Engineering logic. ReverseEngineersVictims=
 SpyEffect.UndoReverseEngineer= CanBeReversed=
+
+
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>

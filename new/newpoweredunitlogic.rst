@@ -10,7 +10,7 @@ allows each side to have multiple buildings power multiple units.
   as allowing multiple buildings to provide power.
 
 
-Introduced in version 0.2
+.. versionadded:: 0.2
 
 NB: Be advised, if a powered unit is being built when the powers.units
 building is destroyed, the immobile unit will jam up that WarFactory
@@ -23,7 +23,3 @@ general.
 NB: `PoweredBy=` can use multiple buildings, but be advised, using a
 comma to separate multiple buildings will be parsed as "or" rather
 than "and". There is no "and" capacity.
-
-
-
-<<<SEPARATOR>>>

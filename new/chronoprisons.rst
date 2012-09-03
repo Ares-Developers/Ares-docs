@@ -39,7 +39,3 @@ NB: In order to use this, you have to use YR's multi-turret logic,
 
 
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>

@@ -171,7 +171,3 @@ building.
 Specifying the occupants of a building.
 
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>

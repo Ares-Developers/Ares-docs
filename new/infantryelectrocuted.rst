@@ -12,7 +12,3 @@ using `InfantryElectrocuted=` (instead of using the second animation
 from [Animations]). InfantryElectrocuted=
 
 .. versionadded:: 0.1
-
-
-
-<<<SEPARATOR>>>

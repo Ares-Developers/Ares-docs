@@ -16,7 +16,3 @@ will increase to match `[General]NoParachuteMaxFallRate=`. Custom
 parachute animations.
 
 .. versionadded:: 0.1
-
-
-
-<<<SEPARATOR>>>

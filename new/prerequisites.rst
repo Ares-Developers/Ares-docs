@@ -96,7 +96,3 @@ does not override or nullify
 GenericPrerequisites
 
 .. versionadded:: 0.1
-
-
-
-<<<SEPARATOR>>>

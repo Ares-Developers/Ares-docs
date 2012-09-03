@@ -42,7 +42,3 @@ however, this only works if you do not specify a subfolder.
 files. #include
 
 .. versionadded:: 0.1
-
-
-
-<<<SEPARATOR>>>

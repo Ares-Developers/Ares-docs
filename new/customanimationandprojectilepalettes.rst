@@ -14,8 +14,6 @@ the theater specific part of the filename. Note that if you're using
 this on projectiles, you have to add the projectile to the
 `[Animations]` list.
 Custom animation and projectile palettes. CustomPalette=
+
+
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>
