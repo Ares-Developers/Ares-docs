@@ -197,7 +197,3 @@ with the ID `NUKE`. Ares enables this for arbitrary warheads.
 
 
 .. versionadded:: 0.2
-
-
-
-<<<SEPARATOR>>>
