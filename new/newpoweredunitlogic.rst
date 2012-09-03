@@ -23,7 +23,3 @@ general.
 NB: `PoweredBy=` can use multiple buildings, but be advised, using a
 comma to separate multiple buildings will be parsed as "or" rather
 than "and". There is no "and" capacity.
-
-
-
-<<<SEPARATOR>>>
