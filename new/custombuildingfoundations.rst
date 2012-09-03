@@ -20,7 +20,3 @@ Network is incompatible with Google Chrome, and results in gibberish.
 Be advised.
 
 .. versionadded:: 0.1
-
-
-
-<<<SEPARATOR>>>
