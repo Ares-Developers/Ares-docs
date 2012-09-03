@@ -26,7 +26,3 @@ In artmd.ini:
 
 
 .. versionadded:: 0.1
-
-
-
-<<<SEPARATOR>>>
