@@ -6,7 +6,7 @@ that there could only be one powered :type:`UnitType`, and one building
 providing power, per side. :game:`Ares` extends this with :tag:`PoweredBy=`,
 which allows each side to have multiple buildings power multiple units.
 
-:tagdef:`[UnitType]PoweredBy=BuildingType`
+:tagdef:`[UnitType]PoweredBy=list of BuildingType`
   Allows multiple powered units to exist, as well as allowing multiple buildings
   to provide power. Defaults to :value:`none`.
 
