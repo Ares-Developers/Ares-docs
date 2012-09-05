@@ -21,6 +21,9 @@ them around the map and place them anywhere. The carryall logic was not used in
   .. note:: Units infected with a Parasite (Terror Drone/Squid) cannot be picked
     up.
 
+.. note:: For the Carryall to work it must have :tag:`AirportBound=no` and no
+  \ :tag:`Dock=` set, otherwise they will be unable to pick up units.
+
 .. note:: By default, carryalls can pick up vessels, which are :type:`UnitTypes`
   with :tag:`Naval=yes` set, but they cannot be placed back on water again. If a
   ship is placed on ground, it will explode and take the carryall with it. To

@@ -86,12 +86,23 @@ it instead. <span><tt class="docutils literal"><span class="pre">EngineerDamage<
 <span class="game docutils literal">Ares</span> restores this feature.</p>
 <img alt="Screenshot of an Engineer going to damage a building" class="align-center" src="../_images/engineerdamage.png" />
 <dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[General]►EngineerCaptureLevel=</span></tt><span class="type definition"> (float - percent)</span></span></dt>
+<dd>If the building&#8217;s health is equal to or below this percentage of its strength
+it can be captured by an engineer instead of being damaged. Defaults to
+<cite>1.0</cite>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[General]►EngineerDamage=</span></tt><span class="type definition"> (float - percent)</span></span></dt>
-<dd>If the building can not be captured the engineer will damage it by this amount
-of its full health.</dd>
+<dd>If the building cannot be captured the engineer will damage it by this amount
+of its full health. Defaults to <cite>0.0</cite>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[General]►EngineerAlwaysCaptureTech=</span></tt><span class="type definition"> (boolean)</span></span></dt>
-<dd>Specifies whether tech buildings can be captured no matter what their current
-health status is.</dd>
+<dd><p class="first">Specifies whether tech buildings can be captured no matter what their current
+health status is. Defaults to <cite>yes</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All structures originally owned by countries with
+<span><tt class="docutils literal"><span class="pre">MultiplayPassive=yes</span></tt></span> are considered tech structures. This
+definition  is likely to change in a later version.</p>
+</div>
+</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[General]►EngineerDamageCursor.*=</span></tt><span class="type definition"> (Cursor)</span></span></dt>
 <dd>Specifies the cursor to indicate an engineer will only damage the building
 instead of capturing it. See <a class="reference internal" href="../new/superweapons.html#sw-cursors"><em>Super weapon cursors</em></a>.

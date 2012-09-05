@@ -161,11 +161,13 @@ on attached upgrades) to have their countdown timers restarted.</dd>
 <span id="spybehavior-stolentech"></span><h2>Stolen Technology<a class="headerlink" href="#stolen-technology" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►SpyEffect.StolenTechIndex=</span></tt><span class="type definition"> (integer)</span></span></dt>
-<dd>The stealable technology type that is stolen upon spying this enemy building.</dd>
+<dd>The stealable technology type that is stolen upon spying this enemy building.
+Only values from 0 to 31 (inclusive) are supported. Use <cite>-1</cite> to
+disable the effect. Defaults to <cite>-1</cite>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►Prerequisite.StolenTechs=</span></tt><span class="type definition"> (list of integers)</span></span></dt>
 <dd>The list of stealable technology types that must be stolen before this object
-can be built. Use <cite>-1</cite> to disable this requirement. Defaults to
-<cite>-1</cite>.</dd>
+can be built. Only values from 0 to 31 (inclusive) are supported. Use
+<cite>-1</cite> to disable this requirement. Defaults to <cite>-1</cite>.</dd>
 </dl>
 <p id="index-4">In <span class="game docutils literal">Yuri&#8217;s Revenge</span>, there were only three types of stealable technology
 available and these were hard-coded to specific buildings.</p>
@@ -202,10 +204,15 @@ infiltration logic.</p>
 </div>
 </dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►SpyEffect.RevealProduction=</span></tt><span class="type definition"> (boolean)</span></span></dt>
-<dd><strong>NEW EFFECT</strong> Whether or not spying this enemy factory will allow you to see
+<dd><p class="first"><strong>NEW EFFECT</strong> Whether or not spying this enemy factory will allow you to see
 what the enemy is presently building from that factory. Once the building has
 been spied, select the building and the cameo of the unit that is being
-produced will be displayed over the building.</dd>
+produced will be displayed over the building.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">At the moment PCX cameos are not supported.</p>
+</div>
+</dd>
 </dl>
 <img alt="Screenshot of a current production being revealed" class="align-center" src="../_images/production_spying.png" />
 </div>

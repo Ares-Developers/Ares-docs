@@ -11,12 +11,20 @@ it instead. :tag:`EngineerDamage` is not present in :game:`Yuri's Revenge`.
   :alt: Screenshot of an Engineer going to damage a building
   :align: center
 
+:tagdef:`[General]EngineerCaptureLevel=float - percent`
+  If the building's health is equal to or below this percentage of its strength
+  it can be captured by an engineer instead of being damaged. Defaults to
+  \ :value:`1.0`.
 :tagdef:`[General]EngineerDamage=float - percent`
-  If the building can not be captured the engineer will damage it by this amount
-  of its full health.
+  If the building cannot be captured the engineer will damage it by this amount
+  of its full health. Defaults to :value:`0.0`.
 :tagdef:`[General]EngineerAlwaysCaptureTech=boolean`
   Specifies whether tech buildings can be captured no matter what their current
-  health status is.
+  health status is. Defaults to :value:`yes`.
+
+  .. note:: All structures originally owned by countries with
+    \ :tag:`MultiplayPassive=yes` are considered tech structures. This
+    definition  is likely to change in a later version.
 :tagdef:`[General]EngineerDamageCursor.*=Cursor`
   Specifies the cursor to indicate an engineer will only damage the building
   instead of capturing it. See :ref:`Super weapon cursors <sw-cursors>`.

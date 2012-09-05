@@ -206,9 +206,14 @@ the map. Default is <cite>yes</cite>.</dd>
 players. If this is set to <cite>yes</cite>, the AI targeting options are used to
 infer the best target cell. Defaults to <cite>no</cite>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.ManualFire=</span></tt><span class="type definition"> (boolean)</span></span></dt>
-<dd>Sets whether this super weapon can be fired by the owning player. If set to
-<cite>no</cite>, the player will not be able to launch the super weapon. This
-setting is ignored if <span><tt class="docutils literal"><span class="pre">SW.AutoFire=no</span></tt></span> is set. Defaults to <cite>yes</cite>.</dd>
+<dd>Sets whether this super weapon can be manually fired by the owning player. If
+set to <cite>no</cite>, the player will not be able to get a selection cursor for
+this super weapon when clicking the cameo. This setting is ignored if
+<span><tt class="docutils literal"><span class="pre">SW.AutoFire=no</span></tt></span> is set, because the player would have no way to fire
+this super weapon. You can use this on auto-firing super weapons where the
+targeting mode might prevents it from being fired (like the Lightning Storm
+or Psychic Dominator, if another super weapon of this type is currently
+active). Defaults to <cite>yes</cite>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.RequiresTarget=</span></tt><span class="type definition"> (enum land|water|empty|infantry|units|buildings)</span></span></dt>
 <dd><p class="first">Which items this super weapon can fire upon. Hovering above an allowed item
 will show the <span><tt class="docutils literal"><span class="pre">Cursor</span></tt></span>, otherwise the player gets the <span><tt class="docutils literal"><span class="pre">NoCursor</span></tt></span> and
