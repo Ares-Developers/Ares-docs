@@ -131,6 +131,8 @@ Factories
   been spied, select the building and the cameo of the unit that is being
   produced will be displayed over the building.
 
+  .. note:: At the moment PCX cameos are not supported.
+
 .. image:: /images/production_spying.png
   :alt: Screenshot of a current production being revealed
   :align: center
