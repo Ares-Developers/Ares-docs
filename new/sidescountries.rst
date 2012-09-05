@@ -4,12 +4,13 @@ Sides & Countries
 In the original game the sides and countries were, for the most part,
 hard-coded. You could not add to, remove or reorder the 10 countries or 3 sides.
 :game:`Ares`, however, makes these tasks possible - you can now have up to 16
-countries and 16 sides, and you can customize these in numerous ways...
+fully functional countries and sides, and you can customize these in numerous
+ways...
 
-.. note:: Theoretically there's no limit to the amount of countries you can
-  define in the list. However, certain flags only work properly for up to 32
-  countries, and yet others fail after merely 16 - it is recommended to not have
-  any more than 16 playable countries and 32 total countries.
+.. note:: Certain flags work properly for up to 32 countries, and yet others
+  fail after merely 16 - it is recommended to not have any more than 16
+  playable countries and 32 total countries. Put the playable countries first in
+  the list, followed by the other countries.
 
 .. index:: Sides; New sides & countries (including numerous enhancements).
 
@@ -44,9 +45,9 @@ section:
   "filename.pal".
 :tagdef:`[Country]File.Taunt=filename, *including* the Taunts\ directory and .wav extension`
   Path of the files to use for the country's taunts, in the format
-  "Taunts\filename%02i.wav". The filename specified *must* include "`%02i`",
+  "Taunts\\filename%02i.wav". The filename specified *must* include "`%02i`",
   which will be substituted for the taunt ID (01 through 08). For example,
-  :tag:`File.Taunt=Taunts\tauam%02i.wav` will make the game load taunts
+  :tag:`File.Taunt=Taunts\\tauam%02i.wav` will make the game load taunts
   :file:`tauam01.wav` through :file:`tauam08.wav`.
 
   .. note:: Taunts will only be registered for up to 16 countries.
