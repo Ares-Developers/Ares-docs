@@ -99,9 +99,14 @@ Targeting
   players. If this is set to :value:`yes`, the AI targeting options are used to
   infer the best target cell. Defaults to :value:`no`.
 :tagdef:`[SuperWeapon]SW.ManualFire=boolean`
-  Sets whether this super weapon can be fired by the owning player. If set to
-  :value:`no`, the player will not be able to launch the super weapon. This
-  setting is ignored if :tag:`SW.AutoFire=no` is set. Defaults to :value:`yes`.
+  Sets whether this super weapon can be manually fired by the owning player. If
+  set to :value:`no`, the player will not be able to get a selection cursor for
+  this super weapon when clicking the cameo. This setting is ignored if
+  :tag:`SW.AutoFire=no` is set, because the player would have no way to fire
+  this super weapon. You can use this on auto-firing super weapons where the
+  targeting mode might prevents it from being fired (like the Lightning Storm
+  or Psychic Dominator, if another super weapon of this type is currently
+  active). Defaults to :value:`yes`.
 :tagdef:`[SuperWeapon]SW.RequiresTarget=enum land|water|empty|infantry|units|buildings`
   Which items this super weapon can fire upon. Hovering above an allowed item
   will show the :tag:`Cursor`, otherwise the player gets the :tag:`NoCursor` and
