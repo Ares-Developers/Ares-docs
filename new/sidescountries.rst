@@ -135,8 +135,11 @@ side's INI section:
 :tagdef:`[Side]AI.BaseDefenses=list of BuildingTypes`
   List of base defense buildings that the AI can build.
 :tagdef:`[Side]AI.BaseDefenseCounts=list of integers`
-  The maximum number of each corresponding base defense building (listed against
-  :tag:`AI.BaseDefenses`) that the AI can build.
+  The maximum amount of base defense building that the AI can build.
+  (listed as AI difficulties: hard, medium, easy)  Defaults to
+  :tag:`[General]AlliedBaseDefenseCounts` for GDI (Allied),
+  :tag:`[General]SovietBaseDefenseCounts` for Nod (Soviet), and
+  :tag:`[General]ThirdBaseDefenseCounts` for ThirdSide (Yuri).
 :tagdef:`[Side]ParaDrop.Types=list of InfantryTypes and/or VehicleTypes`
   The units that will be paradropped by :tag:`Type=ParaDrop` super weapons (such
   as the one normally provided by a Tech Airport) for this side. Defaults to
