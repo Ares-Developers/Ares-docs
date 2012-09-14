@@ -80,8 +80,9 @@ minor bugs and also extend it to provide a full set of Prism networking options.
     dialing down the damage bonus, otherwise the firing beam may end up becoming
     a healing weapon.
     
-  You can input your own values into the `Prism Forwarding spreadsheet`_ to see
-  the effect this has on the damage dealt by your prism networks.
+  You can input your own values into the :download:`Prism Forwarding spreadsheet
+  <../extras/PrismForwarding.xls>` to see the effect this has on the damage
+  dealt by your prism networks.
 
 :tagdef:`[BuildingType]PrismForwarding.MyHeight=integer - leptons`
   The height (in leptons) at which this tower's "prism receiver" is considered
