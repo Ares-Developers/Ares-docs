@@ -118,9 +118,9 @@ NB: Below are listed some results of modifying the tag values.
 Deployed Infantry Damage multiplier
 ```````````````````````````````````
 
-:[Warhead]Deployed.Damage= (float - multiplier): A multiplier applied
+:[Warhead]Damage.Deployed= (float - multiplier): A multiplier applied
   to `Damage` if the InfantryType receiving it is currently deployed.
-  Deployed.Damage=
+  Damage.Deployed=
 
 
 Note that this is not the same as the existing `ProneDamage=` flag;
