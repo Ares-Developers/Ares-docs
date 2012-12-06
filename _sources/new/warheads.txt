@@ -120,7 +120,7 @@ Ion Cannon Ripple Effect
 Deployed Infantry Damage multiplier
 ```````````````````````````````````
 
-:tagdef:`[Warhead]Deployed.Damage=float - multiplier`
+:tagdef:`[Warhead]Damage.Deployed=float - multiplier`
   A multiplier applied to :tag:`Damage` if the :type:`InfantryType` receiving it
   is currently deployed.
 

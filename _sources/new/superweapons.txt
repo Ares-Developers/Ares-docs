@@ -828,6 +828,10 @@ Default values for general tags:
   The warhead used to deal the damage. Defaults to
   :tag:`[SpecialWeapons]MutateExplosionWarhead` if :tag:`Mutate.Explosion=yes`,
   to :tag:`[SpecialWeapons]MutateWarhead` otherwise.
+:tagdef:`[SuperWeapon]SW.Animation=Animation`
+  Defaults to :tag:`[General]IonBlast`.
+:tagdef:`[SuperWeapon]SW.AnimationHeight=integer`
+  Defaults to :value:`5`.
 :tagdef:`[SuperWeapon]SW.Sound=Sound`
   Defaults to :tag:`[AudioVisual]GeneticMutatorActivateSound`.
 :tagdef:`[SuperWeapon]SW.AITargeting=enum`
