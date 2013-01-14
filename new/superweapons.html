@@ -958,7 +958,7 @@ corresponding country&#8217;s <span><tt class="docutils literal"><span class="pr
 <p>You can define every plane for each country, side or the super weapon
 separately. The syntax is as follows:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Superweapon]►Paradrop.ID.PlaneX.*=</span></tt></span></dt>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Superweapon]►ParaDrop.ID.PlaneX.*=</span></tt></span></dt>
 <dd><em>ID</em> is name of the country or side. <em>X</em> is a positive integer, with no
 leading zeros, starting with <em>2</em> up to <cite>Count</cite>. To customize the first plane
 (which will also act as the default plane), do not use the <em>PlaneX</em> segment.
@@ -973,32 +973,32 @@ versa.</p>
 change the number of units without restating the types.</p>
 <p>Values are read in this order, top down. The first value found is used.</p>
 <ol class="arabic simple">
-<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►Paradrop.Country.PlaneX.*=</span></tt></span> (the SW&#8217;s country-specific
+<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Country.PlaneX.*=</span></tt></span> (the SW&#8217;s country-specific
 plane number X)</li>
-<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►Paradrop.Side.PlaneX.*=</span></tt></span> (the SW&#8217;s side-specific plane
+<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Side.PlaneX.*=</span></tt></span> (the SW&#8217;s side-specific plane
 number X)</li>
-<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►Paradrop.PlaneX.*=</span></tt></span> (the SW&#8217;s default plane number X)</li>
-<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►Paradrop.Country.*=</span></tt></span> (the SW&#8217;s country-specific default
+<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.PlaneX.*=</span></tt></span> (the SW&#8217;s default plane number X)</li>
+<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Country.*=</span></tt></span> (the SW&#8217;s country-specific default
 plane)</li>
-<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►Paradrop.Side.*=</span></tt></span> (the SW&#8217;s side-specific default plane)</li>
-<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►Paradrop.*=</span></tt></span> (the SW&#8217;s default plane)</li>
-<li><span><tt class="docutils literal"><span class="pre">[Country]►Paradrop.*=</span></tt></span> (the country-specific default plane)</li>
-<li><span><tt class="docutils literal"><span class="pre">[Side]►Paradrop.*=</span></tt></span> (the side-specific default plane)</li>
+<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Side.*=</span></tt></span> (the SW&#8217;s side-specific default plane)</li>
+<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.*=</span></tt></span> (the SW&#8217;s default plane)</li>
+<li><span><tt class="docutils literal"><span class="pre">[Country]►ParaDrop.*=</span></tt></span> (the country-specific default plane)</li>
+<li><span><tt class="docutils literal"><span class="pre">[Side]►ParaDrop.*=</span></tt></span> (the side-specific default plane)</li>
 <li><span><tt class="docutils literal"><span class="pre">[General]►*=</span></tt></span> (the Rules&#8217; default plane)</li>
 </ol>
 <p>Examples:</p>
 <ul class="simple">
-<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►Paradrop.Russia.Plane3.Types=BORIS</span></tt></span> (and proper
+<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Russia.Plane3.Types=BORIS</span></tt></span> (and proper
 <span><tt class="docutils literal"><span class="pre">Nums</span></tt></span>) would replace the contents of the third plane for the country
 <span><tt class="docutils literal"><span class="pre">Russia</span></tt></span>.</li>
-<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►Paradrop.Nod.Aircraft=SPLANE</span></tt></span> would replace the aircraft
+<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Nod.Aircraft=SPLANE</span></tt></span> would replace the aircraft
 for all Soviet side countries.</li>
 </ul>
 <div class="quickstart admonition" id="quickstart-0">
 <p class="first admonition-title">Quickstart</p>
 <p class="last">To give all countries the same items, use
-<span><tt class="docutils literal"><span class="pre">[Superweapon]►Paradrop.Count=</span></tt></span>, <span><tt class="docutils literal"><span class="pre">[Superweapon]►Paradrop.Aircraft=</span></tt></span>,
-<span><tt class="docutils literal"><span class="pre">[Superweapon]►Paradrop.Types=</span></tt></span>, and <span><tt class="docutils literal"><span class="pre">[Superweapon]►Paradrop.Num=</span></tt></span>.
+<span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Count=</span></tt></span>, <span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Aircraft=</span></tt></span>,
+<span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Types=</span></tt></span>, and <span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Num=</span></tt></span>.
 This creates a clone of the American Paradrop.</p>
 </div>
 <p>You can create unlimited new paradrop superweapons with different properties.

@@ -917,7 +917,7 @@ Each plane consists of the following properties:
 You can define every plane for each country, side or the super weapon
 separately. The syntax is as follows:
 
-:tagdef:`[Superweapon]Paradrop.ID.PlaneX.*=`
+:tagdef:`[Superweapon]ParaDrop.ID.PlaneX.*=`
   *ID* is name of the country or side. *X* is a positive integer, with no
   leading zeros, starting with *2* up to `Count`. To customize the first plane
   (which will also act as the default plane), do not use the *PlaneX* segment.
@@ -934,31 +934,31 @@ change the number of units without restating the types.
 
 Values are read in this order, top down. The first value found is used.
 
-#. :tag:`[Superweapon]Paradrop.Country.PlaneX.*=` (the SW's country-specific
+#. :tag:`[Superweapon]ParaDrop.Country.PlaneX.*=` (the SW's country-specific
    plane number X)
-#. :tag:`[Superweapon]Paradrop.Side.PlaneX.*=` (the SW's side-specific plane
+#. :tag:`[Superweapon]ParaDrop.Side.PlaneX.*=` (the SW's side-specific plane
    number X)
-#. :tag:`[Superweapon]Paradrop.PlaneX.*=` (the SW's default plane number X)
-#. :tag:`[Superweapon]Paradrop.Country.*=` (the SW's country-specific default
+#. :tag:`[Superweapon]ParaDrop.PlaneX.*=` (the SW's default plane number X)
+#. :tag:`[Superweapon]ParaDrop.Country.*=` (the SW's country-specific default
    plane)
-#. :tag:`[Superweapon]Paradrop.Side.*=` (the SW's side-specific default plane)
-#. :tag:`[Superweapon]Paradrop.*=` (the SW's default plane)
-#. :tag:`[Country]Paradrop.*=` (the country-specific default plane)
-#. :tag:`[Side]Paradrop.*=` (the side-specific default plane)
+#. :tag:`[Superweapon]ParaDrop.Side.*=` (the SW's side-specific default plane)
+#. :tag:`[Superweapon]ParaDrop.*=` (the SW's default plane)
+#. :tag:`[Country]ParaDrop.*=` (the country-specific default plane)
+#. :tag:`[Side]ParaDrop.*=` (the side-specific default plane)
 #. :tag:`[General]*=` (the Rules' default plane)
 
 Examples:
 
-+ :tag:`[Superweapon]Paradrop.Russia.Plane3.Types=BORIS` (and proper
++ :tag:`[Superweapon]ParaDrop.Russia.Plane3.Types=BORIS` (and proper
   :tag:`Nums`) would replace the contents of the third plane for the country
   :tag:`Russia`.
 
-+ :tag:`[Superweapon]Paradrop.Nod.Aircraft=SPLANE` would replace the aircraft
++ :tag:`[Superweapon]ParaDrop.Nod.Aircraft=SPLANE` would replace the aircraft
   for all Soviet side countries.
 
 .. quickstart:: \ To give all countries the same items, use
-  \ :tag:`[Superweapon]Paradrop.Count=`, :tag:`[Superweapon]Paradrop.Aircraft=`,
-  \ :tag:`[Superweapon]Paradrop.Types=`, and :tag:`[Superweapon]Paradrop.Num=`.
+  \ :tag:`[Superweapon]ParaDrop.Count=`, :tag:`[Superweapon]ParaDrop.Aircraft=`,
+  \ :tag:`[Superweapon]ParaDrop.Types=`, and :tag:`[Superweapon]ParaDrop.Num=`.
   This creates a clone of the American Paradrop.
 
 You can create unlimited new paradrop superweapons with different properties.
