@@ -13,9 +13,9 @@ Map Snapshot
 A key can be assigned to save a snapshot of the current game as a YRM map file,
 which can be edited in FinalAlert 2 YR.
 
-.. note:: Loading the generated map file in-game causes an Internal Error. The
-  reason for this is not yet known. If you do encounter it then please provide
-  the developers with the crash information.
+.. note:: Loading the generated map file in-game causes an Internal Error,
+  because the radar preview image is not saved. To circumvent this, add
+  \ :tag:`[Preview]Size=0,0,1,1` to the map file.
 
 .. note:: This keyboard can be disabled in release versions of your mod. See
   \ :ref:`Disabling Keyboard Commands <disable-commands>`.
