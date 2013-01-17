@@ -169,7 +169,8 @@ using the following flags:
   How often to animate the cursor? Default is :value:`5`.
 :tagdef:`[SuperWeapon]Cursor.MiniFrame=integer`
   Same as :tag:`Cursor.Frame`, except this is for the mouse cursor when
-  positioned on the minimap.
+  positioned on the minimap. Set this to :value:`-1` to disable the minimap
+  cursor and to only allow players to click on the battlefield.
 :tagdef:`[SuperWeapon]Cursor.MiniCount=integer`
   Same as :tag:`Cursor.Count`, except this is for the mouse cursor when
   positioned on the minimap.
