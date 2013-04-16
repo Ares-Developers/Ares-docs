@@ -83,12 +83,6 @@ The SolidHeight/Solid Buildings functionality does not work with
 invisible projectiles yet. (`Issue #888
 <http://bugs.renegadeprojects.com/view.php?id=888>`_)
 
-The Whiteboy Bug
-----------------
-There remains an upper limit, 74, on the number of units that can be displayed
-per construction tab on the UI bar. Going over this results in a frozen game.
-(`Issue #1416 <http://bugs.renegadeprojects.com/view.php?id=1416>`_)
-
 Required Changes For Mods Using Ares
 ====================================
 Unfortunately, :game:`Ares` will not simply "work" without changes to the
