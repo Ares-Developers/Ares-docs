@@ -11,5 +11,8 @@ would appear, unscathed, on the ground beneath the destroyed unit. In
 destroyed airborne unit and fall to the ground - where it will be destroyed by
 the impact.
 
+.. note:: \ :tag:`JumpJet=yes` parasites are not supported yet and also fall to
+  the ground like other parasites.
+
 .. versionadded:: 0.1
 
