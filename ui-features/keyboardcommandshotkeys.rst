@@ -70,6 +70,20 @@ Please refer to section :doc:`Command Line Arguments
 .. versionadded:: 0.1
 
 
+
+FPS Counter
+```````````
+
+This keyboard command allows players to display the current frames per second
+the game processes, and their total average value. The text is displayed in
+white color in the left hand side lower corner of the screen. Pressing the key
+again hides the FPS Counter.
+
+.. index:: Keyboard Commands; Display the current and the average frame rate on the screen.
+
+.. versionadded:: 0.3
+
+
 .. _`disable-commands`:
 
 Disabling Keyboard Commands
