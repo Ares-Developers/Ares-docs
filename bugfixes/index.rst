@@ -21,4 +21,4 @@ Bug Fixes
 	
 	type1/index.rst
 	type2/index.rst
-	type3.rst
+	type3/index.rst
