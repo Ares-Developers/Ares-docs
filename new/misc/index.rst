@@ -3,3 +3,14 @@ Miscellaneous Modding Enhancements
 
 All the changes/additions that make various tasks easier for the mod author, but
 don't directly provide any new functionality.
+
+.. toctree::
+	:glob:
+	
+	include
+	stringtableenhancements
+	listlengths
+	mixloadingorder
+	looseaudiofiles
+	mousesha
+	avoidableinternalerrors
