@@ -59,6 +59,18 @@ This should allow :game:`Syringe`/:game:`Ares` to work properly.
 	for vulnerable machines, so even if you don't do anything, you could
 	be infected within minutes.
 
+ZoneAlarm
+---------
+:game:`ZoneAlarm` is known to prevent :game:`Syringe`/:game:`Ares` from
+starting. In case :game:`Yuri's Revenge` does not start (:game:`Syringe`
+closes immediately), add :file:`gamemd.exe` and :file:`Syringe.exe` to the
+exceptions list.
+
+If this does not help, try to stop the service called :game:`ZoneAlarm
+ForceField Service` (:file:`ISWSVC.exe`). This is not recommended and you
+should re-enable the service as quickly as possible. `Thanks to FS-21
+<https://bugs.launchpad.net/ares/+bug/1090588/comments/3>`_.
+
 
 Known Major Issues
 ~~~~~~~~~~~~~~~~~~
