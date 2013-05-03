@@ -6,10 +6,10 @@ longer it keeps firing. Once the highest stage is reached, it will  maintain
 the last weapon until the target is destroyed or the unit is given another
 order.
 
-By the use of :tag:`FireOnce` on the last weapon stage the gattling can be made
-to switch back to the first stage and start spinning up again. This workaround
-comes with side effects; the most notable is that the unit will lose its target
-and thus may not fire at a single unit continuously.
+By the use of :tag:`FireOnce=yes` on the last weapon stage the gattling can be
+made to switch back to the first stage and start spinning up again. This
+workaround comes with side effects; the most notable is that the unit will lose
+its target and thus may not fire at a single unit continuously.
 
 :tagdef:`[TechnoType]Gattling.Cycle=boolean`
   When the last :tag:`Stage` or :tag:`EliteStage` is completed, the counter

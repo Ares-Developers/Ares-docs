@@ -12,18 +12,18 @@ from that, the missiles work the same way the original launcher/missile pairs
 work. This allows you to create an arbitrary number of new missiles.
 
 :tagdef:`[AircraftType]Missile.Custom=boolean`
-  Specifies whether this :type:`AircraftType` is a new missile, which enables
-  the missile tags listed below, which must be set to valid values. Not
-  recommended on :tag:`V3RocketType`, :tag:`DMislType` and :tag:`CMislType`.
-  Defaults to :value:`no`.
+  Specifies whether this :type:`AircraftType` should exhibit missile behavior.
+  If set to :value:`yes` it enables the missile tags listed below, which must
+  be set to meaningful values. Not recommended on :tag:`V3RocketType`,
+  :tag:`DMislType` and :tag:`CMislType`. Defaults to :value:`no`.
 
   .. note:: If you intend to override the original missiles defined as
     \ :tag:`V3RocketType`, :tag:`DMislType` and :tag:`CMislType`, you also have
     to define the following tags. :game:`Ares` will not default to the original
     game tags for these types defined in the :tag:`[General]` section.
 
-The following tags are only respected when
-:tag:`[AircraftType]Missile.Custom=yes`.
+The following tags are used only if :tag:`[AircraftType]Missile.Custom=yes` is
+set.
 
 :tagdef:`[AircraftType]Missile.PauseFrames=integer`
   Defines how many frames the missile pauses on the launching unit before
