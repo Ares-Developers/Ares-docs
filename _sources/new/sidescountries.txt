@@ -37,6 +37,17 @@ section:
 
 :tagdef:`[Country]File.Flag=filename, *including* the .pcx extension`
   The PCX file to use for the country's flag, in the format "filename.pcx".
+:tagdef:`[Country]File.ObserverBackground=filename, *including* the .pcx or .shp extension`
+  The SHP or PCX file to use for the country's background in observer mode, in
+  the format "filename.shp" or "filename.pcx". The size should be 121x96. The
+  SHP file will be drawn using :file:`observer.pal`.
+:tagdef:`[Country]File.ObserverFlag=filename, *including* the .pcx or .shp extension`
+  The SHP or PCX file to use for the country's flag in observer mode, in the
+  format "filename.shp" or "filename.pcx".
+:tagdef:`[Country]File.ObserverFlagAltPalette=boolean`
+  If :value:`yes`, draw SHP file :tag:`File.ObserverFlag=` using
+  :file:`yrii.pal`. Otherwise the SHP file will be drawn using
+  :file:`observer.pal`.
 :tagdef:`[Country]File.LoadScreen=filename, *including* the .shp extension`
   The SHP file to use for the country's loading screen, in the format
   "filename.shp".

@@ -169,7 +169,8 @@ using the following flags:
   How often to animate the cursor? Default is :value:`5`.
 :tagdef:`[SuperWeapon]Cursor.MiniFrame=integer`
   Same as :tag:`Cursor.Frame`, except this is for the mouse cursor when
-  positioned on the minimap.
+  positioned on the minimap. Set this to :value:`-1` to disable the minimap
+  cursor and to only allow players to click on the battlefield.
 :tagdef:`[SuperWeapon]Cursor.MiniCount=integer`
   Same as :tag:`Cursor.Count`, except this is for the mouse cursor when
   positioned on the minimap.
@@ -1099,6 +1100,8 @@ cell. This uses the CellSpread model to place the units.
 
 Default values for general tags:
 
+:tagdef:`[SuperWeapon]SW.Deferment=integer - frames`
+  Defaults to :value:`20`.
 :tagdef:`[SuperWeapon]SW.AITargeting=enum`
   Defaults to :value:`ParaDrop`.
 
@@ -1126,10 +1129,8 @@ exist.
 If you have more than one building, the resulting placement might look
 odd.
 
-The actual delivery of the units happens all at once, on the 20th frame after
-firing the super weapon. This delayed-effect logic will most likely be
-customizable in future and so, in future, the delay for this super weapon may
-default to a different amount.
+The actual delivery of the units happens all at once, after firing the super
+weapon and awaiting its deferment.
 
 .. index:: Super Weapons; New super weapon type: UnitDelivery (create unit(s) at
   target cell).

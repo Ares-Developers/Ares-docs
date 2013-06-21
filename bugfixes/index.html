@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Bug Fixes &mdash; Ares 0.2 documentation</title>
+    <title>Bug Fixes &mdash; Ares 0.3 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.2',
+        VERSION:     '0.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.2 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.3 documentation" href="../index.html" />
     <link rel="next" title="Type 1 Fixes (Original Bugs)" href="type1/index.html" />
     <link rel="prev" title="Migration Guide" href="../migration.html" /> 
   </head>
@@ -43,7 +43,7 @@
         <li class="right" >
           <a href="../migration.html" title="Migration Guide"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.2 documentation</a> &raquo;</li> 
+        <li><a href="../index.html">Ares 0.3 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar">
@@ -130,12 +130,16 @@ definitions, particularly 2.</p>
 <li class="toctree-l2"><a class="reference internal" href="type2/buildconst.html"><span><span class="type">BuildConst</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/buildingtypesandinfantrytypesdonotreloadammoproperly.html"><span class="type docutils literal">BuildingTypes</span> and <span class="type docutils literal">InfantryTypes</span> Do Not Reload Ammo Properly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/buildingtypeupgradesarenotviableprerequisites.html"><span class="type docutils literal">BuildingType</span> Upgrades Are Not Viable Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type2/chronotransportdeploy.html">Chrono-Transport Deploy Inconsistency</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/cloakableaircrafttypesandbuildingtypes.html">Cloakable <span class="type docutils literal">AircraftTypes</span> and <span class="type docutils literal">BuildingTypes</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/custompalettes.html">Custom Palettes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/destroyablecliffs.html">Destroyable Cliffs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/destroyanimscausereconnectionerrors.html"><span><span class="type">DestroyAnims</span></span> Cause Reconnection Errors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/destroyanimsdontremap.html"><span><span class="type">DestroyAnims</span></span> Don&#8217;t Remap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/digsound.html"><span><span class="type">DigSound</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="type2/ejectlastpassenger.html">Passengers and <span><span class="type">TurretCount</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="type2/engineertechniciancrew.html">Crew with <span><span class="type">Engineer=yes</span></span> could freeze the game</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type2/engineertechniciancrew.html#crash-with-undefined-engineer-technician-and-crew">Crash with undefined <span><span class="type">Engineer</span></span>, <span><span class="type">Technician</span></span> and <span><span class="type">Crew</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/factoryloadsharing.html">Factory Load Sharing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/hardcodedwallgateinteractions.html">Hardcoded Wall/Gate Interactions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/hijackersarereimbursedwhenaunitisgrinded.html">Hijackers are reimbursed when a unit is grinded</a></li>
@@ -155,6 +159,7 @@ definitions, particularly 2.</p>
 <li class="toctree-l2"><a class="reference internal" href="type2/overridingmissionsmdpkt.html">Overriding missionsmd.pkt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/pktduplication.html">PKT Duplication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/radbeamsandwavesusingthewrongflh.html">RadBeams And Waves Using The Wrong FLH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type2/radiationcolorsandsnow.html">Radiation Color and Snow Theater</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/reinforcementsandmultiplayermaptriggers.html">Reinforcements and Multiplayer Map Triggers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/remappablewalls.html">Remappable Walls</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/sonicwaveambientdamage.html">Sonic Wave Ambient Damage</a></li>
@@ -167,9 +172,19 @@ definitions, particularly 2.</p>
 <li class="toctree-l2"><a class="reference internal" href="type2/unitsoundsplayedatinappropriatetimes.html">Unit Sounds Played At Inappropriate Times</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/unitsoverpoweringbuildings.html">Units overpowering buildings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/vehicleparadropoffset.html">Vehicle Paradrop Offset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type2/whiteboybug.html">The Whiteboy Bug</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="type3.html">Type 3 Fixes (Performance)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="type3/index.html">Type 3 Fixes (Performance)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="type3/pipsloading.html">Pips Loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type3/objectgetcell.html"><cite>ObjectClass::GetCell</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="type3/startuplog.html">Logging Startup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type3/randommapgenerator.html">Random Map Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type3/fastcpucrash.html">Crash on Fast CPUs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type3/ddrawdll.html">DirectDraw and Software Emulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type3/mapactions.html">Inefficient Map Actions</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -192,11 +207,11 @@ definitions, particularly 2.</p>
         <li class="right" >
           <a href="../migration.html" title="Migration Guide"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.2 documentation</a> &raquo;</li> 
+        <li><a href="../index.html">Ares 0.3 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2012, The Ares Contributors.
+        &copy; Copyright 2013, The Ares Contributors.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>

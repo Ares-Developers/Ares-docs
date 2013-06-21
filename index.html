@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Ares Documentation &mdash; Ares 0.2 documentation</title>
+    <title>Ares Documentation &mdash; Ares 0.3 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.2',
+        VERSION:     '0.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.2 documentation" href="#" />
+    <link rel="top" title="Ares 0.3 documentation" href="#" />
     <link rel="next" title="Introduction" href="intro.html" /> 
   </head>
   <body>
@@ -39,7 +39,7 @@
         <li class="right" >
           <a href="intro.html" title="Introduction"
              accesskey="N">next</a> |</li>
-        <li><a href="#">Ares 0.2 documentation</a> &raquo;</li> 
+        <li><a href="#">Ares 0.3 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar">
@@ -54,6 +54,7 @@
 <li><a class="reference internal" href="#compatibility-notes">Compatibility Notes</a><ul>
 <li><a class="reference internal" href="#rockpatch-npatch">RockPatch/NPatch</a></li>
 <li><a class="reference internal" href="#comodo-internet-security">Comodo Internet Security</a></li>
+<li><a class="reference internal" href="#zonealarm">ZoneAlarm</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#known-major-issues">Known Major Issues</a><ul>
@@ -62,7 +63,6 @@
 </li>
 <li><a class="reference internal" href="#known-minor-issues">Known Minor Issues</a><ul>
 <li><a class="reference internal" href="#solid-buildings-vs-invisible-projectiles">Solid Buildings vs. Invisible Projectiles</a></li>
-<li><a class="reference internal" href="#the-whiteboy-bug">The Whiteboy Bug</a></li>
 </ul>
 </li>
 </ul>
@@ -111,6 +111,7 @@
 <li class="toctree-l2"><a class="reference internal" href="intro.html#compatibility-notes">Compatibility Notes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="intro.html#rockpatch-npatch">RockPatch/NPatch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="intro.html#comodo-internet-security">Comodo Internet Security</a></li>
+<li class="toctree-l3"><a class="reference internal" href="intro.html#zonealarm">ZoneAlarm</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="intro.html#known-major-issues">Known Major Issues</a><ul>
@@ -119,7 +120,6 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="intro.html#known-minor-issues">Known Minor Issues</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="intro.html#solid-buildings-vs-invisible-projectiles">Solid Buildings vs. Invisible Projectiles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="intro.html#the-whiteboy-bug">The Whiteboy Bug</a></li>
 </ul>
 </li>
 </ul>
@@ -132,6 +132,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="migration.html">Migration Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="migration.html#from-ares-0-1">From Ares 0.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migration.html#from-ares-0-2-and-below">From Ares 0.2 and below</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="bugfixes/index.html">Bug Fixes</a><ul>
@@ -169,12 +170,16 @@
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/buildconst.html"><span><span class="type">BuildConst</span></span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/buildingtypesandinfantrytypesdonotreloadammoproperly.html"><span class="type docutils literal">BuildingTypes</span> and <span class="type docutils literal">InfantryTypes</span> Do Not Reload Ammo Properly</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/buildingtypeupgradesarenotviableprerequisites.html"><span class="type docutils literal">BuildingType</span> Upgrades Are Not Viable Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/chronotransportdeploy.html">Chrono-Transport Deploy Inconsistency</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/cloakableaircrafttypesandbuildingtypes.html">Cloakable <span class="type docutils literal">AircraftTypes</span> and <span class="type docutils literal">BuildingTypes</span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/custompalettes.html">Custom Palettes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/destroyablecliffs.html">Destroyable Cliffs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/destroyanimscausereconnectionerrors.html"><span><span class="type">DestroyAnims</span></span> Cause Reconnection Errors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/destroyanimsdontremap.html"><span><span class="type">DestroyAnims</span></span> Don&#8217;t Remap</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/digsound.html"><span><span class="type">DigSound</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/ejectlastpassenger.html">Passengers and <span><span class="type">TurretCount</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/engineertechniciancrew.html">Crew with <span><span class="type">Engineer=yes</span></span> could freeze the game</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/engineertechniciancrew.html#crash-with-undefined-engineer-technician-and-crew">Crash with undefined <span><span class="type">Engineer</span></span>, <span><span class="type">Technician</span></span> and <span><span class="type">Crew</span></span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/factoryloadsharing.html">Factory Load Sharing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/hardcodedwallgateinteractions.html">Hardcoded Wall/Gate Interactions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/hijackersarereimbursedwhenaunitisgrinded.html">Hijackers are reimbursed when a unit is grinded</a></li>
@@ -194,6 +199,7 @@
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/overridingmissionsmdpkt.html">Overriding missionsmd.pkt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/pktduplication.html">PKT Duplication</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/radbeamsandwavesusingthewrongflh.html">RadBeams And Waves Using The Wrong FLH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/radiationcolorsandsnow.html">Radiation Color and Snow Theater</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/reinforcementsandmultiplayermaptriggers.html">Reinforcements and Multiplayer Map Triggers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/remappablewalls.html">Remappable Walls</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/sonicwaveambientdamage.html">Sonic Wave Ambient Damage</a></li>
@@ -206,9 +212,19 @@
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/unitsoundsplayedatinappropriatetimes.html">Unit Sounds Played At Inappropriate Times</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/unitsoverpoweringbuildings.html">Units overpowering buildings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/vehicleparadropoffset.html">Vehicle Paradrop Offset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type2/whiteboybug.html">The Whiteboy Bug</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="bugfixes/type3.html">Type 3 Fixes (Performance)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bugfixes/type3/index.html">Type 3 Fixes (Performance)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type3/pipsloading.html">Pips Loading</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type3/objectgetcell.html"><cite>ObjectClass::GetCell</cite></a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type3/startuplog.html">Logging Startup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type3/randommapgenerator.html">Random Map Generator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type3/fastcpucrash.html">Crash on Fast CPUs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type3/ddrawdll.html">DirectDraw and Software Emulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type3/mapactions.html">Inefficient Map Actions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="restored/index.html">Restored Tiberian Sun Logic</a><ul>
@@ -231,10 +247,6 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="new/alternatetheaterart.html"><span><span class="type">AlternateTheaterArt</span></span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="new/avoidableinternalerrors.html">Avoidable Internal Errors</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="new/avoidableinternalerrors.html#snowmd-ini">Snowmd.ini</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="new/carryalls.html">Carryalls</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/chronoprisons.html">Chrono Prisons</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/chronoshift.html">Chronoshift</a></li>
@@ -244,6 +256,7 @@
 <li class="toctree-l2"><a class="reference internal" href="new/customizableinsignia.html">Customizable Insignia</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/customizableparachuteanimations.html">Customizable Parachute Animations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/customizableveterancy.html">Customizable Veterancy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/custommissiles.html">Custom Missiles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/destroyunitsbyemp.html">Destroy Units by EMP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/factoriesandcloning.html">Factories and Cloning</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/factoriesandcloning.html#different-factories-for-units-kennels">Different factories for units (Kennels)</a></li>
@@ -251,6 +264,7 @@
 <li class="toctree-l3"><a class="reference internal" href="new/factoriesandcloning.html#cloning-options">Cloning options</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="new/gattlingcycle.html">Gattling Enhancements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/hardcodedunitproperties.html">Hard-coded Unit Properties</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/hardcodedunitproperties.html#iscow"><span><span class="type">IsCow</span></span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/hardcodedunitproperties.html#isdesolator"><span><span class="type">IsDesolator</span></span></a></li>
@@ -259,16 +273,10 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="new/hijackers.html">Hijackers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="new/include.html"><span><span class="type">[#include]</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/infantryelectrocuted.html"><span><span class="type">InfantryElectrocuted</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/killingdrivers.html">Killing Drivers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/lightningrods.html">Lightning Rods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="new/listlengths.html">List Lengths</a></li>
-<li class="toctree-l2"><a class="reference internal" href="new/looseaudiofiles.html">Loose Audio Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/makeinfantryowner.html"><span><span class="type">MakeInfantryOwner</span></span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="new/miscellaneousmoddingenhancements.html">Miscellaneous Modding Enhancements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="new/mixloadingorder.html">MIX Loading Order</a></li>
-<li class="toctree-l2"><a class="reference internal" href="new/mousesha.html">Mouse.sha</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/newpoweredunitlogic.html">New Powered Unit Logic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/operator.html">Operator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/pcxcameos.html">PCX Cameos</a></li>
@@ -302,7 +310,6 @@
 <li class="toctree-l3"><a class="reference internal" href="new/spybehavior.html#reverse-engineering">Reverse Engineering</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="new/stringtableenhancements.html">String Table Enhancements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/superweapons.html">Super Weapons</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/superweapons.html#building-animations">Building Animations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/superweapons.html#general-properties">General properties</a></li>
@@ -371,6 +378,19 @@
 <li class="toctree-l3"><a class="reference internal" href="new/weapons.html#laserthickness">LaserThickness</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="new/misc/index.html">Miscellaneous Modding Enhancements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new/misc/include.html"><span><span class="type">[#include]</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/misc/stringtableenhancements.html">String Table Enhancements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/misc/listlengths.html">List Lengths</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/misc/mixloadingorder.html">MIX Loading Order</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/misc/looseaudiofiles.html">Loose Audio Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/misc/mousesha.html">Mouse.sha</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/misc/avoidableinternalerrors.html">Avoidable Internal Errors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="new/misc/avoidableinternalerrors.html#snowmd-ini">Snowmd.ini</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ui-features/index.html">User Interface Features</a><ul>
@@ -390,6 +410,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ui-features/keyboardcommandshotkeys.html#debug-logging">Debug Logging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ui-features/keyboardcommandshotkeys.html#type-data-dumping">Type Data Dumping</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ui-features/keyboardcommandshotkeys.html#ai-assume-control">AI Assume Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui-features/keyboardcommandshotkeys.html#fps-counter">FPS Counter</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ui-features/keyboardcommandshotkeys.html#disabling-keyboard-commands">Disabling Keyboard Commands</a></li>
@@ -481,6 +502,16 @@ for vulnerable machines, so even if you don&#8217;t do anything, you could
 be infected within minutes.</p>
 </div>
 </div>
+<div class="section" id="zonealarm">
+<h4>ZoneAlarm<a class="headerlink" href="#zonealarm" title="Permalink to this headline">¶</a></h4>
+<p><span class="game docutils literal">ZoneAlarm</span> is known to prevent <span class="game docutils literal">Syringe</span>/<span class="game docutils literal">Ares</span> from
+starting. In case <span class="game docutils literal">Yuri&#8217;s Revenge</span> does not start (<span class="game docutils literal">Syringe</span>
+closes immediately), add <tt class="file docutils literal docutils literal"><span class="pre">gamemd.exe</span></tt> and <tt class="file docutils literal docutils literal"><span class="pre">Syringe.exe</span></tt> to the
+exceptions list.</p>
+<p>If this does not help, try to stop the service called <span class="game docutils literal">ZoneAlarm
+ForceField Service</span> (<tt class="file docutils literal docutils literal"><span class="pre">ISWSVC.exe</span></tt>). This is not recommended and you
+should re-enable the service as quickly as possible. <a class="reference external" href="https://bugs.launchpad.net/ares/+bug/1090588/comments/3">Thanks to FS-21</a>.</p>
+</div>
 </div>
 <div class="section" id="known-major-issues">
 <h3>Known Major Issues<a class="headerlink" href="#known-major-issues" title="Permalink to this headline">¶</a></h3>
@@ -505,12 +536,6 @@ future.</p>
 <h4>Solid Buildings vs. Invisible Projectiles<a class="headerlink" href="#solid-buildings-vs-invisible-projectiles" title="Permalink to this headline">¶</a></h4>
 <p>The SolidHeight/Solid Buildings functionality does not work with
 invisible projectiles yet. (<a class="reference external" href="http://bugs.renegadeprojects.com/view.php?id=888">Issue #888</a>)</p>
-</div>
-<div class="section" id="the-whiteboy-bug">
-<h4>The Whiteboy Bug<a class="headerlink" href="#the-whiteboy-bug" title="Permalink to this headline">¶</a></h4>
-<p>There remains an upper limit, 74, on the number of units that can be displayed
-per construction tab on the UI bar. Going over this results in a frozen game.
-(<a class="reference external" href="http://bugs.renegadeprojects.com/view.php?id=1416">Issue #1416</a>)</p>
 </div>
 </div>
 </div>
@@ -581,11 +606,11 @@ changes/additions rely on. This MIX file presently includes:</p>
         <li class="right" >
           <a href="intro.html" title="Introduction"
              >next</a> |</li>
-        <li><a href="#">Ares 0.2 documentation</a> &raquo;</li> 
+        <li><a href="#">Ares 0.3 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2012, The Ares Contributors.
+        &copy; Copyright 2013, The Ares Contributors.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>

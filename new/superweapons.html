@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Super Weapons &mdash; Ares 0.2 documentation</title>
+    <title>Super Weapons &mdash; Ares 0.3 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.2',
+        VERSION:     '0.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,10 +26,10 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.2 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.3 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Survivors" href="survivors.html" />
-    <link rel="prev" title="String Table Enhancements" href="stringtableenhancements.html" /> 
+    <link rel="prev" title="Spy Behavior" href="spybehavior.html" /> 
   </head>
   <body>
     <div class="related">
@@ -42,9 +42,9 @@
           <a href="survivors.html" title="Survivors"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="stringtableenhancements.html" title="String Table Enhancements"
+          <a href="spybehavior.html" title="Spy Behavior"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.2 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.3 documentation</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -90,8 +90,8 @@
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="stringtableenhancements.html"
-                        title="previous chapter">String Table Enhancements</a></p>
+  <p class="topless"><a href="spybehavior.html"
+                        title="previous chapter">Spy Behavior</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="survivors.html"
                         title="next chapter">Survivors</a></p>
@@ -277,7 +277,8 @@ cursor.</dd>
 <dd>How often to animate the cursor? Default is <cite>5</cite>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Cursor.MiniFrame=</span></tt><span class="type definition"> (integer)</span></span></dt>
 <dd>Same as <span><tt class="docutils literal"><span class="pre">Cursor.Frame</span></tt></span>, except this is for the mouse cursor when
-positioned on the minimap.</dd>
+positioned on the minimap. Set this to <cite>-1</cite> to disable the minimap
+cursor and to only allow players to click on the battlefield.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Cursor.MiniCount=</span></tt><span class="type definition"> (integer)</span></span></dt>
 <dd>Same as <span><tt class="docutils literal"><span class="pre">Cursor.Count</span></tt></span>, except this is for the mouse cursor when
 positioned on the minimap.</dd>
@@ -1113,6 +1114,8 @@ capable of damaging the firing building.</p>
 cell. This uses the CellSpread model to place the units.</p>
 <p>Default values for general tags:</p>
 <dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Deferment=</span></tt><span class="type definition"> (integer - frames)</span></span></dt>
+<dd>Defaults to <cite>20</cite>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></tt><span class="type definition"> (enum)</span></span></dt>
 <dd>Defaults to <cite>ParaDrop</cite>.</dd>
 </dl>
@@ -1135,10 +1138,8 @@ skip an item if it has not been placed after testing 100 cells.</p>
 exist.</p>
 <p>If you have more than one building, the resulting placement might look
 odd.</p>
-<p>The actual delivery of the units happens all at once, on the 20th frame after
-firing the super weapon. This delayed-effect logic will most likely be
-customizable in future and so, in future, the delay for this super weapon may
-default to a different amount.</p>
+<p>The actual delivery of the units happens all at once, after firing the super
+weapon and awaiting its deferment.</p>
 <p class="versionadded" id="index-10">
 <span class="versionmodified">New in version 0.1.</span></p>
 </div>
@@ -1203,14 +1204,14 @@ amount of game time that the Wall is active for.</p>
           <a href="survivors.html" title="Survivors"
              >next</a> |</li>
         <li class="right" >
-          <a href="stringtableenhancements.html" title="String Table Enhancements"
+          <a href="spybehavior.html" title="Spy Behavior"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.2 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.3 documentation</a> &raquo;</li>
           <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2012, The Ares Contributors.
+        &copy; Copyright 2013, The Ares Contributors.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>

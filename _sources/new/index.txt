@@ -7,4 +7,5 @@ the game.
 .. toctree::
 	:glob:
 	
-	**
+	*
+	misc/index

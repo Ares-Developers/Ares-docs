@@ -9,12 +9,12 @@ Current
 ~~~~~~~
 + DCoder
 + AlexB
-+ Renegade
 + Graion Dilach
 
 Past
 ~~~~
 + pd
++ Renegade
 + Electro
 + Marshall
 
@@ -38,6 +38,9 @@ Marshall
 	For developing :game:`Launch Base` and the :game:`YR Unofficial 1.002
 	Mini-Patch` (UMP), whipping this documentation into shape and developing
 	:game:`Ares`' Prism Forwarding feature.
+Renegade
+	For providing the infrastructure for the :game:`Ares` website and the unstable
+	development builds page.
 eva-251
 	For researching and providing the proper Comodo Internet Security settings for
 	Syringe/Ares.

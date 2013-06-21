@@ -1,0 +1,202 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Custom Missiles &mdash; Ares 0.3 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.3 documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Destroy Units by EMP" href="destroyunitsbyemp.html" />
+    <link rel="prev" title="Customizable Veterancy" href="customizableveterancy.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="destroyunitsbyemp.html" title="Destroy Units by EMP"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="customizableveterancy.html" title="Customizable Veterancy"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.3 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="customizableveterancy.html"
+                        title="previous chapter">Customizable Veterancy</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="destroyunitsbyemp.html"
+                        title="next chapter">Destroy Units by EMP</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="custom-missiles">
+<h1>Custom Missiles<a class="headerlink" href="#custom-missiles" title="Permalink to this headline">¶</a></h1>
+<p><span class="game docutils literal">Ares</span> allows you to create new missile types and customize the existing
+types (<span><tt class="docutils literal"><span class="pre">V3RocketType</span></tt></span>, <span><tt class="docutils literal"><span class="pre">DMislType</span></tt></span>, <span><tt class="docutils literal"><span class="pre">CMislType</span></tt></span>). Missiles are
+<span class="type docutils literal">AircraftTypes</span> which have special logic attached to behave like a
+projectile launched from another unit and carrying a warhead to its target.</p>
+<p>Instead of defining the missile settings in the <span><tt class="docutils literal"><span class="pre">[General]</span></tt></span> section,
+<span class="game docutils literal">Ares</span> allows you to put them directly on the <span class="type docutils literal">AircraftType</span>. Apart
+from that, the missiles work the same way the original launcher/missile pairs
+work. This allows you to create an arbitrary number of new missiles.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[AircraftType]►Missile.Custom=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd><p class="first">Specifies whether this <span class="type docutils literal">AircraftType</span> should exhibit missile behavior.
+If set to <cite>yes</cite> it enables the missile tags listed below, which must
+be set to meaningful values. Not recommended on <span><tt class="docutils literal"><span class="pre">V3RocketType</span></tt></span>,
+<span><tt class="docutils literal"><span class="pre">DMislType</span></tt></span> and <span><tt class="docutils literal"><span class="pre">CMislType</span></tt></span>. Defaults to <cite>no</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you intend to override the original missiles defined as
+<span><tt class="docutils literal"><span class="pre">V3RocketType</span></tt></span>, <span><tt class="docutils literal"><span class="pre">DMislType</span></tt></span> and <span><tt class="docutils literal"><span class="pre">CMislType</span></tt></span>, you also have
+to define the following tags. <span class="game docutils literal">Ares</span> will not default to the original
+game tags for these types defined in the <span><tt class="docutils literal"><span class="pre">[General]</span></tt></span> section.</p>
+</div>
+</dd>
+</dl>
+<p>The following tags are used only if <span><tt class="docutils literal"><span class="pre">[AircraftType]►Missile.Custom=yes</span></tt></span> is
+set.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[AircraftType]►Missile.PauseFrames=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>Defines how many frames the missile pauses on the launching unit before
+tilting. Defaults to <cite>0</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[AircraftType]►Missile.TiltFrames=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>Defines how many frames it takes for the missile to tilt to firing position.
+Defaults to <cite>0</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[AircraftType]►Missile.PitchInitial=</span></tt><span class="type definition"> (float)</span></span></dt>
+<dd>Defines the starting pitch of the missile before tilting up. Valid range is
+<cite>0.0</cite> (horizontal) to <cite>1.0</cite> (vertical). Defaults to
+<cite>0.0</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[AircraftType]►Missile.PitchFinal=</span></tt><span class="type definition"> (float)</span></span></dt>
+<dd>Defines the ending pitch of the missile after tilting up and when firing.
+Valid range is <cite>0.0</cite> (horizontal) to <cite>1.0</cite> (vertical).
+Defaults to <cite>0.0</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[AircraftType]►Missile.TurnRate=</span></tt><span class="type definition"> (float)</span></span></dt>
+<dd>Defines the pitch maneuverability of the missile in air. See original
+missiles for examples. Valid range is <cite>0.0</cite> to <cite>1.0</cite>. Defaults
+to <cite>0.0</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[AircraftType]►Missile.RaiseRate=</span></tt><span class="type definition"> (float)</span></span></dt>
+<dd>Defines how much the missile will raise each turn on the launching unit.
+Defaults to <cite>0.0</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[AircraftType]►Missile.Acceleration=</span></tt><span class="type definition"> (float)</span></span></dt>
+<dd>Defines how much is added to the missile&#8217;s velocity each frame during launch.
+Defaults to <cite>0.0</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[AircraftType]►Missile.Altitude=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>Defines the cruising altitude in leptons at which height missile begins
+leveling off. Defaults to <cite>0</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[AircraftType]►Missile.Damage=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>Defines how much damage the missile does when launched from a rookie or
+veteran unit. Defaults to <cite>0</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[AircraftType]►Missile.EliteDamage=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>Defines how much damage the missile does when launched from an elite unit.
+Defaults to <cite>0</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[AircraftType]►Missile.BodyLength=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>Defines how long the body of the missile is in leptons. This is used to draw
+the trailer. Defaults to <cite>0</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[AircraftType]►Missile.LazyCurve=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether the missile&#8217;s path is a ballistic curve like the original V3 rocket.
+Otherwise the missile maintains the defined altitude. Defaults to
+<cite>no</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[AircraftType]►Missile.Warhead=</span></tt><span class="type definition"> (Warhead)</span></span></dt>
+<dd>Defines the warhead the missile uses to deliver damage when launching from
+a rookie or veteran unit. Defaults to <cite>none</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[AircraftType]►Missile.EliteWarhead=</span></tt><span class="type definition"> (Warhead)</span></span></dt>
+<dd>Defines the warhead the missile uses to deliver damage when launching from
+an elite unit. Defaults to <cite>none</cite>.</dd>
+</dl>
+<p>Aside from the missile settings you can customize the takeoff and trailer
+animations. These settings can be used for any missile, whether they are custom
+or not. <span class="game docutils literal">Ares</span> also optimizes away the lookup of the animation types,
+thus it does not happen each time a new animation is to be created for each
+missile.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[AircraftType]►Missile.TakeOffAnim=</span></tt><span class="type definition"> (Animation)</span></span></dt>
+<dd>Defines the optional animation played when the missile takes off. Defaults to
+<cite>V3TAKOFF</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[AircraftType]►Missile.TrailerAnim=</span></tt><span class="type definition"> (Animation)</span></span></dt>
+<dd>Defines the optional animation that is used to draw the trailer of this
+missile. Defaults to <cite>V3TRAIL</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[AircraftType]►Missile.TrailerSeparation=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>Defines the number of frames to the creation of another trailer animation.
+Defaults to <cite>3</cite>.</dd>
+</dl>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.3.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="destroyunitsbyemp.html" title="Destroy Units by EMP"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="customizableveterancy.html" title="Customizable Veterancy"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.3 documentation</a> &raquo;</li>
+          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

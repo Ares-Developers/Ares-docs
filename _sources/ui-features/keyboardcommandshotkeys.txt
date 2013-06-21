@@ -13,9 +13,9 @@ Map Snapshot
 A key can be assigned to save a snapshot of the current game as a YRM map file,
 which can be edited in FinalAlert 2 YR.
 
-.. note:: Loading the generated map file in-game causes an Internal Error. The
-  reason for this is not yet known. If you do encounter it then please provide
-  the developers with the crash information.
+.. note:: Loading the generated map file in-game causes an Internal Error,
+  because the radar preview image is not saved. To circumvent this, add
+  \ :tag:`[Preview]Size=0,0,1,1` to the map file.
 
 .. note:: This keyboard can be disabled in release versions of your mod. See
   \ :ref:`Disabling Keyboard Commands <disable-commands>`.
@@ -68,6 +68,20 @@ Please refer to section :doc:`Command Line Arguments
   \ :ref:`Disabling Keyboard Commands <disable-commands>`.
 
 .. versionadded:: 0.1
+
+
+
+FPS Counter
+```````````
+
+This keyboard command allows players to display the current frames per second
+the game processes, and their total average value. The text is displayed in
+white color in the left hand side lower corner of the screen. Pressing the key
+again hides the FPS Counter.
+
+.. index:: Keyboard Commands; Display the current and the average frame rate on the screen.
+
+.. versionadded:: 0.3
 
 
 .. _`disable-commands`:

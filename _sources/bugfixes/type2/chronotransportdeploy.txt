@@ -1,0 +1,13 @@
+.. index:: Units; Inconsistent Chrono-Transport deploy behavior
+
+=====================================
+Chrono-Transport Deploy Inconsistency
+=====================================
+
+If armed vehicles using the teleport locomotor carry passengers, they cannot
+deploy using the keyboard or the Advanced Command Bar while still phasing in
+after a move order. Yet, using the mouse on the vehicle gives the deploy cursor
+and, when clicked, the passengers are ejected successfully. This inconsistency
+has been resolved and phasing in vehicles are not allowed to deploy any longer.
+
+.. versionadded:: 0.3
