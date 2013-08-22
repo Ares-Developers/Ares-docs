@@ -12,6 +12,9 @@ Command Line Arguments
     mods that do not include their own video.
 :-LOG: Turns :file:`debug.log` file writing on initially. See :doc:`Internal
   Errors/Debugging </ui-features/internalerrorsdebugging>`.
+:-LOG-CSF: Outputs all CSF labels that cannot be found in the language files
+  into :file:`debug.log`. Each label is written only once, and prefixed with
+  :value:`[CSFLoader]`.
 :-STRICT: Throws an Internal Error on game load if a not-necessarily-critical
   error is detected. For example, when you set a flag to a non-empty value that
   cannot be parsed.
