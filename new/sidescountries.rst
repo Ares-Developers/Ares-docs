@@ -116,6 +116,9 @@ section:
   This country's default parachute used if not overridden by a
   :type:`TechnoType`. Defaults to the corresponding side's
   :tag:`Parachute.Anim=`.
+:tagdef:`[Country]VeteranBuildings=list of BuildingTypes`
+  All buildings in this list start as veteran for this country and, if
+  available, veteran cameos are displayed in the sidebar.
 
 .. versionadded:: 0.1
 
