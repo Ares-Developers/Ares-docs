@@ -294,12 +294,16 @@ EVA Events
   The EVA event that will be triggered when a super weapon can't be fired
   because the player doesn't have enough money. Defaults to
   :value:`EVA_InsufficientFunds`.
+:tagdef:`[SuperWeapon]EVA.SelectTarget=EVA event`
+  The EVA event that will be triggered when the super weapon cameo is clicked
+  in the sidebar and the player is required to select a target.
 
 To disable an EVA event, use the value :value:`none`.
 
 .. index:: Super Weapons; Custom EVA events.
 
 .. versionadded:: 0.1
+.. versionchanged:: 0.4
 
 
 
