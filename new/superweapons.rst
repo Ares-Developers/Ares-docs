@@ -231,6 +231,8 @@ The firing of a super weapon can now add or subtract credits from the firing
 player's cash reserve. If the player doesn't have enough funds the launch is
 aborted and an EVA event is triggered to notify the player. Super weapons
 costing money will show the needed amount in the super weapon's cameo tool tip.
+If the player has not enough money to use the super weapon, the sidebar cameo
+is grayed out.
 
 :tagdef:`[SuperWeapon]Money.Amount=integer - credits`
   This many credits are added to the firing player's account when the super
@@ -248,6 +250,7 @@ costing money will show the needed amount in the super weapon's cameo tool tip.
 .. index:: Super Weapons; Money deductable when firing a superweapon.
 
 .. versionadded:: 0.1
+.. versionchanged:: 0.4
 
 
 
