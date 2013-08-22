@@ -178,12 +178,17 @@ side's INI section:
 :tagdef:`[Side]Sidebar.YuriFileNames=boolean`
   Whether or not to use the Yuri sidebar file names (sidec02md.mix and the
   Yuri-specific files within that MIX).
-:tagdef:`[Side]EVA.Tag=string`
-  Name of the INI tag to load from :file:`evamd.ini` for this side's EVA (vocal
-  interface assistant e.g. Eva for Allied, Sofia for Soviet and Some Guy for
-  Yuri).
-  
-  .. note:: EVA.Tag is not yet implemented.
+
+.. _sides-evatag:
+
+:tagdef:`[Side]EVA.Tag=EVA Type`
+  Name of the EVA Type tag to load from :file:`evamd.ini` for this side's EVA
+  announcer. Use :value:`none` to disable EVA. Defaults to :value:`Russian` for
+  side :value:`Nod`, to :value:`Yuri` for side :value:`ThirdSide`, to
+  :value:`Allied` otherwise.
+
+  See :doc:`EVA Types </new/evatypes>` on how to define values that can be used
+  here.
 
 .. index:: Sides; Sides can specify their own unique UI.
 
