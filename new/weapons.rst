@@ -175,6 +175,9 @@ the following flags in order to customize that bomb:
   .. note:: Bombs can always be attached to Bridge Huts, but the resulting
     explosion will not destroy the bridge unless
     \ :tag:`IvanBomb.DestroysBridges=yes` is set.
+:tagdef:`[Weapon]IvanBomb.CanDetonateTimeBomb=boolean`
+  Whether or not players can manually detonate bombs attached by this weapon.
+  Defaults to :tag:`[CombatDamage]CanDetonateTimeBomb`.
 :tagdef:`[Weapon]IvanBomb.Delay=integer`
   The number of frames that will elapse before the bomb detonates automatically.
 :tagdef:`[Weapon]IvanBomb.AttachSound=sound name`
