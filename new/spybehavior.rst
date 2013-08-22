@@ -31,6 +31,11 @@ Radar
   **NEW EFFECT** Whether or not spying this enemy radar will reveal to you, the
   infiltrator, all of the terrain that they, the enemy, have thus far explored.
   The building must also have :tag:`Radar=yes` set.
+:tagdef:`[BuildingType]SpyEffect.KeepRadar=boolean`
+  **NEW EFFECT** If enabled, a player infiltrating this building will still have
+  access to the owning player's radar even if the building is destroyed, sold or
+  captured. Otherwise the spy effect is removed. Requires
+  :tag:`SpyEffect.RevealRadar=yes` and a :tag:`Radar=yes` building.
 
 .. index Spy behaviour; New effect: Reveal radar (shows you what the enemy can see).
 
