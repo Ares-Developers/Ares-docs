@@ -1108,7 +1108,9 @@ cell. This uses the CellSpread model to place the units.
 Default values for general tags:
 
 :tagdef:`[SuperWeapon]SW.Deferment=integer - frames`
-  Defaults to :value:`20`.
+  Delay before the units are placed. Defaults to :value:`20`.
+:tagdef:`[SuperWeapon]SW.ActivationSound=Sound`
+  Played when the units are placed. Defaults to :value:`none`.
 :tagdef:`[SuperWeapon]SW.AITargeting=enum`
   Defaults to :value:`ParaDrop`.
 
@@ -1143,6 +1145,7 @@ weapon and awaiting its deferment.
   target cell).
 
 .. versionadded:: 0.1
+.. versionchanged:: 0.4
 
 
 .. _firestorm:
