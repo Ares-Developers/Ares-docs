@@ -52,3 +52,48 @@ Other changes:
   comma separated numbers were expected. In that case, the value became
   inconsistent. This is no longer allowed and will result in a message in the
   debug log.
+
+From Ares 0.3 and below
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Changed tags:
+
+  The following tags have been changed to use the actual value of their default
+  tags, not the value the default tags have in :file:`rulesmd.ini`. If a default
+  is changed in a game mode or map file, this updated value will be used. In
+  other words: It now uses the last value, while previously the first would have
+  been used.
+
+  If you do not change a default tag in game modes or maps, no action is needed.
+  If you want to use the value the default tag has in :file:`rulesmd.ini`, you
+  have to copy the default value to the respective tag. 
+
+  :tag:`[Weapon]IvanBomb.AttachSound`
+    Defaults to :tag:`[AudioVisual]BombAttachSound`.
+
+  :tag:`[Weapon]IvanBomb.TickingSound`
+    Defaults to :tag:`[AudioVisual]BombTickingSound`.
+
+  :tag:`[Superweapon]Lightning.Sounds`
+    Defaults to :tag:`[AudioVisual]LightningSounds`.
+
+  :tag:`[Superweapon]Lightning.Clouds`
+    Defaults to :tag:`[General]WeatherConClouds`.
+
+  :tag:`[Superweapon]Lightning.Bolts`
+    Defaults to :tag:`[General]WeatherConBolts`.
+
+  :tag:`[Superweapon]Lightning.Debris`
+    Defaults to :tag:`[General]MetallicDebris`.
+
+Other changes:
+
+  Animations that have an owner now also respect :tag:`AffectsAllies`.
+  Previously only :tag:`AffectsEnemies` was supported.
+
+  The original tag :tag:`Crashable` does now also apply to
+  :type:`AircraftTypes`. Previously it had no function.
+
+  The original tags :tag:`Pip` and :tag:`OccupyPip` have been changed to also
+  support integers. Previously, integers were invalid and defaulted to
+  :value:`green`.

@@ -181,11 +181,13 @@ the following flags in order to customize that bomb:
 :tagdef:`[Weapon]IvanBomb.Delay=integer`
   The number of frames that will elapse before the bomb detonates automatically.
 :tagdef:`[Weapon]IvanBomb.AttachSound=sound name`
-  The sound that will be played when the bomb is attached to a target.
+  The sound that will be played when the bomb is attached to a target. Defaults
+  to :tag:`[AudioVisual]BombAttachSound`.
 :tagdef:`[Weapon][Weapon]IvanBomb.TickingSound=sound name`
   The sound that will be played whilst the bomb is attached to a unit. In order
   for this sound to loop correctly, the sound must have :tag:`Control=loop` set
-  in its INI section in :file:`soundmd.ini`.
+  in its INI section in :file:`soundmd.ini`. Defaults to
+  :tag:`[AudioVisual]BombTickingSound`.
 :tagdef:`[Weapon]IvanBomb.Image=filename, *excluding*the .shp extension`
   The SHP file for the image to display over a unit that has a bomb attached to
   them, in the format "filename"(the ".shp" extension is automatically added by
