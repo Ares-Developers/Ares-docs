@@ -124,15 +124,17 @@ Targeting
 
 + :value:`None`: The AI will not use this super weapon and it cannot auto-fire.
 + :value:`LightningStorm`: Targets offensively, but waits until a currently
-  striking Lightning Storm subsides.
+  striking Lightning Storm subsides. Supports map action 135.
 + :value:`Nuke`: Targets offensively, or strikes the waypoint set by map
-  triggers.
-+ :value:`PsychicDominator`: Targets the largest group of enemy units.
+  triggers. Supports map action 135.
++ :value:`PsychicDominator`: Targets the largest group of enemy units. Supports
+  map action 135.
 + :value:`GeneticMutator`: Targets the largest group of enemy infantry (in a 3x3
-  area). 
-+ :value:`ParaDrop`: Targets the least defended cell near the enemy base. 
+  area). Supports map action 135.
++ :value:`ParaDrop`: Targets the least defended cell near the enemy base.
+  Supports map action 135.
 + :value:`ForceShield`: Targets the position an enemy super weapon is about to
-  hit to protect against it.
+  hit to protect against it. Supports map action 140.
 + :value:`NoTarget`: This super weapon doesn't need any valid coordinates to
   strike. You can use this for map-wide super weapons.
 + :value:`Offensive`: Targets offensively, without any special handling like
