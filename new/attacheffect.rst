@@ -1,9 +1,9 @@
-Attach Effect
-~~~~~~~~~~~~~
+AttachEffect
+~~~~~~~~~~~~
 
 .. warning:: This documentation is preliminary. Please report factual errors.
   There is still time to change it, and to add examples for some interesting use
-  cases. 
+  cases.
 
 The AttachEffect system was designed as a spiritual successor to
 :game:`NPatch`'s Upgrade logic, but it was aimed to not be limited only to
@@ -22,6 +22,10 @@ superweapons. AttachEffect tags can be applied to both the Big Four (all
 :tagdef:`[Section]AttachEffect.Animation=AnimationType`
   The optional animation to play on the affected unit. The animation is attached
   to the unit and moves along with it. Defaults to :value:`none`.
+
+  The animation is removed when the unit is cloaked. The animation is recreated
+  once the unit is uncloaked again. While cloaked, the AttachEffect is still
+  applied, but the effects caused by the animation are not.
 
   .. note:: The animation always loops until the effect subsides.
     \ :tag:`LoopCount` is ignored.
@@ -69,6 +73,6 @@ The following tags are valid on Warheads only:
   If this type of AttachEffect is not stackable, enabling this flag resets the
   animation on every time of reapplying. Defaults to :value:`no`.
 
-.. index:: Weapons; Attach Effect
+.. index:: Weapons; AttachEffect
 
 .. versionadded:: 0.4
