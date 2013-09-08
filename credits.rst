@@ -7,13 +7,13 @@ Developers
 
 Current
 ~~~~~~~
-+ DCoder
 + AlexB
 + Graion Dilach
 
 Past
 ~~~~
 + pd
++ DCoder
 + Renegade
 + Electro
 + Marshall
