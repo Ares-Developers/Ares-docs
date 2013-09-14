@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Weapons &mdash; Ares 0.3 documentation</title>
+    <title>Weapons &mdash; Ares 0.4 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.3',
+        VERSION:     '0.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.3 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.4 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Miscellaneous Modding Enhancements" href="misc/index.html" />
     <link rel="prev" title="Warheads" href="warheads.html" /> 
@@ -44,7 +44,7 @@
         <li class="right" >
           <a href="warheads.html" title="Warheads"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.3 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -235,10 +235,7 @@ flags that control this are:</p>
 <p>As with many other features of <span class="game docutils literal">Yuri&#8217;s Revenge</span>, the settings that control
 Crazy Ivan Bombs are global so you can&#8217;t have multiple variations of them with
 their own controls. With <span class="game docutils literal">Ares</span> it is now possible to create new Ivan
-Bomb-esque weapons new types of sticky bomb with whatever settings you like. The
-only aspect of Ivan Bombs that hasn&#8217;t been de-globalized is the ability to
-remote detonate the bombs this feature is either enabled or disabled for all
-Ivan Bomb types.</p>
+Bomb-esque weapons new types of sticky bomb with whatever settings you like.</p>
 <p>When <span><tt class="docutils literal"><span class="pre">IvanBomb=yes</span></tt></span> is set on the weapon&#8217;s warhead, the weapon can specify
 the following flags in order to customize that bomb:</p>
 <dl class="docutils">
@@ -259,14 +256,19 @@ explosion will not destroy the bridge unless
 <span><tt class="docutils literal"><span class="pre">IvanBomb.DestroysBridges=yes</span></tt></span> is set.</p>
 </div>
 </dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.CanDetonateTimeBomb=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether or not players can manually detonate bombs attached by this weapon.
+Defaults to <span><tt class="docutils literal"><span class="pre">[CombatDamage]►CanDetonateTimeBomb</span></tt></span>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Delay=</span></tt><span class="type definition"> (integer)</span></span></dt>
 <dd>The number of frames that will elapse before the bomb detonates automatically.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.AttachSound=</span></tt><span class="type definition"> (sound name)</span></span></dt>
-<dd>The sound that will be played when the bomb is attached to a target.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►[Weapon]IvanBomb.TickingSound=</span></tt><span class="type definition"> (sound name)</span></span></dt>
+<dd>The sound that will be played when the bomb is attached to a target. Defaults
+to <span><tt class="docutils literal"><span class="pre">[AudioVisual]►BombAttachSound</span></tt></span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.TickingSound=</span></tt><span class="type definition"> (sound name)</span></span></dt>
 <dd>The sound that will be played whilst the bomb is attached to a unit. In order
 for this sound to loop correctly, the sound must have <span><tt class="docutils literal"><span class="pre">Control=loop</span></tt></span> set
-in its INI section in <tt class="file docutils literal docutils literal"><span class="pre">soundmd.ini</span></tt>.</dd>
+in its INI section in <tt class="file docutils literal docutils literal"><span class="pre">soundmd.ini</span></tt>. Defaults to
+<span><tt class="docutils literal"><span class="pre">[AudioVisual]►BombTickingSound</span></tt></span>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Image=</span></tt><span class="type definition"> (filename, *excluding*the .shp extension)</span></span></dt>
 <dd>The SHP file for the image to display over a unit that has a bomb attached to
 them, in the format &#8220;filename&#8221;(the &#8221;.shp&#8221; extension is automatically added by
@@ -328,7 +330,7 @@ works with <span><tt class="docutils literal"><span class="pre">IsHouseColor=yes
         <li class="right" >
           <a href="warheads.html" title="Warheads"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.3 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
           <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

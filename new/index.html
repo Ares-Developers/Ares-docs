@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>New &amp; Enhanced In-Game Logic &mdash; Ares 0.3 documentation</title>
+    <title>New &amp; Enhanced In-Game Logic &mdash; Ares 0.4 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.3',
+        VERSION:     '0.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.3 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.4 documentation" href="../index.html" />
     <link rel="next" title="Additional ArmorTypes and Verses" href="additionalarmortypesandverses.html" />
     <link rel="prev" title="Vehicle Thief" href="../restored/vehicle-thief.html" /> 
   </head>
@@ -43,7 +43,7 @@
         <li class="right" >
           <a href="../restored/vehicle-thief.html" title="Vehicle Thief"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.3 documentation</a> &raquo;</li> 
+        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar">
@@ -87,9 +87,11 @@ the game.</p>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="alternatetheaterart.html"><span><span class="type">AlternateTheaterArt</span></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="attacheffect.html">AttachEffect</a></li>
 <li class="toctree-l1"><a class="reference internal" href="carryalls.html">Carryalls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chronoprisons.html">Chrono Prisons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chronoprisons.html">Chrono Prisons / Abductors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chronoshift.html">Chronoshift</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crashableaircraft.html"><span><span class="type">Crashable</span></span> and Aircraft</a></li>
 <li class="toctree-l1"><a class="reference internal" href="customanimationandprojectilepalettes.html">Custom Animation and Projectile Palettes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custombuildingfoundations.html">Custom Building Foundations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="customcameopalettes.html">Custom Cameo Palettes</a></li>
@@ -98,12 +100,14 @@ the game.</p>
 <li class="toctree-l1"><a class="reference internal" href="customizableveterancy.html">Customizable Veterancy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custommissiles.html">Custom Missiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="destroyunitsbyemp.html">Destroy Units by EMP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evatypes.html">EVA Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="factoriesandcloning.html">Factories and Cloning</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="factoriesandcloning.html#different-factories-for-units-kennels">Different factories for units (Kennels)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="factoriesandcloning.html#cloning-vats-for-vehicletypes">&#8220;Cloning Vats&#8221; for <span class="type docutils literal">VehicleTypes</span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="factoriesandcloning.html#cloning-options">Cloning options</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="gates.html">Gates</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gattlingcycle.html">Gattling Enhancements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hardcodedunitproperties.html">Hard-coded Unit Properties</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="hardcodedunitproperties.html#iscow"><span><span class="type">IsCow</span></span></a></li>
@@ -120,6 +124,7 @@ the game.</p>
 <li class="toctree-l1"><a class="reference internal" href="newpoweredunitlogic.html">New Powered Unit Logic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="operator.html">Operator</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pcxcameos.html">PCX Cameos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pips.html">Pips</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="prerequisites.html#generic-prerequisite-groups">Generic Prerequisite Groups</a></li>
 </ul>
@@ -253,7 +258,7 @@ the game.</p>
         <li class="right" >
           <a href="../restored/vehicle-thief.html" title="Vehicle Thief"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.3 documentation</a> &raquo;</li> 
+        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

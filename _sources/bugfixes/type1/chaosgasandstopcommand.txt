@@ -1,0 +1,13 @@
+.. index:: Chronosphere; EVA report when aborting target selection
+
+==============================================================
+Chaos Gas (:captiontag:`Psychedelic=yes`) and the Stop Command
+==============================================================
+
+Units under the influence of Chaos gas (from warheads with
+:tag:`Psychedelic=yes`) were supposed to act on their own and not take any
+orders from their owners, yet a player was still able to use the stop command on
+them. This could prevent berserking units from attacking and damaging friendly
+units and thus soften the psychedelic effect. This is no longer possible.
+
+.. versionadded:: 0.4

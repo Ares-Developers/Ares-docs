@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Ares Documentation &mdash; Ares 0.3 documentation</title>
+    <title>Ares Documentation &mdash; Ares 0.4 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.3',
+        VERSION:     '0.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.3 documentation" href="#" />
+    <link rel="top" title="Ares 0.4 documentation" href="#" />
     <link rel="next" title="Introduction" href="intro.html" /> 
   </head>
   <body>
@@ -39,7 +39,7 @@
         <li class="right" >
           <a href="intro.html" title="Introduction"
              accesskey="N">next</a> |</li>
-        <li><a href="#">Ares 0.3 documentation</a> &raquo;</li> 
+        <li><a href="#">Ares 0.4 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar">
@@ -133,12 +133,15 @@
 <li class="toctree-l1"><a class="reference internal" href="migration.html">Migration Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="migration.html#from-ares-0-1">From Ares 0.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="migration.html#from-ares-0-2-and-below">From Ares 0.2 and below</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migration.html#from-ares-0-3-and-below">From Ares 0.3 and below</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="bugfixes/index.html">Bug Fixes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="bugfixes/type1/index.html">Type 1 Fixes (Original Bugs)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/aitargetingcloakedobjectswithmajorsuperweapons.html">AI Targeting Cloaked Objects With Major Super Weapons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/animatedsuperweaponcursor.html">Animated Super Weapon Cursor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/chaosgasandstopcommand.html">Chaos Gas (<span><span class="type">Psychedelic=yes</span></span>) and the Stop Command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/chronoshiftabort.html">Aborting the Chronoshift announces the Chronosphere as ready</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/chronoshiftwillsinkjumpjetunits.html">Chronoshift Will Sink Jumpjet Units</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/enemyharvesterguardmodeexploit.html">Enemy Harvester Guard Mode Exploit</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/firingvoicesandveterancy.html">Firing Voices and Veterancy</a></li>
@@ -148,8 +151,11 @@
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/mindcontrolbuildings.html">Mind-Controlled Buildings Stopped Working When Freed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/misleadingveterannavalcameos.html">Misleading Veteran Naval Cameos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/parasitesinairborneunits.html">Parasites In Airborne Units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/pipdistortionbug.html">Pip Distortion Bug</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/prismsupportbugs.html">Prism Support Bugs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/secretlabboonweighting.html">Secret Lab Boon Weighting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/soundsplayingwhenloading.html">Robot Tank Sounds On Loading Screen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/spyingalliedbuildings.html">Spying on Allied Buildings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/temporalwarheadsandpotentialoccupationtargets.html"><span><span class="type">Temporal</span></span> Warheads and Potential Occupation Targets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/temporalwarheadsearnexperiencebykillingfriendlyunits.html"><span><span class="type">Temporal</span></span> Warheads Earn Experience By Killing Friendly Units</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugfixes/type1/temporalwarheadsgaindoubleexperience.html"><span><span class="type">Temporal</span></span> Warheads Gain Double Experience</a></li>
@@ -247,9 +253,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="new/alternatetheaterart.html"><span><span class="type">AlternateTheaterArt</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/attacheffect.html">AttachEffect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/carryalls.html">Carryalls</a></li>
-<li class="toctree-l2"><a class="reference internal" href="new/chronoprisons.html">Chrono Prisons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/chronoprisons.html">Chrono Prisons / Abductors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/chronoshift.html">Chronoshift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/crashableaircraft.html"><span><span class="type">Crashable</span></span> and Aircraft</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/customanimationandprojectilepalettes.html">Custom Animation and Projectile Palettes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/custombuildingfoundations.html">Custom Building Foundations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/customcameopalettes.html">Custom Cameo Palettes</a></li>
@@ -258,12 +266,14 @@
 <li class="toctree-l2"><a class="reference internal" href="new/customizableveterancy.html">Customizable Veterancy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/custommissiles.html">Custom Missiles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/destroyunitsbyemp.html">Destroy Units by EMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/evatypes.html">EVA Types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/factoriesandcloning.html">Factories and Cloning</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/factoriesandcloning.html#different-factories-for-units-kennels">Different factories for units (Kennels)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/factoriesandcloning.html#cloning-vats-for-vehicletypes">&#8220;Cloning Vats&#8221; for <span class="type docutils literal">VehicleTypes</span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/factoriesandcloning.html#cloning-options">Cloning options</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="new/gates.html">Gates</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/gattlingcycle.html">Gattling Enhancements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/hardcodedunitproperties.html">Hard-coded Unit Properties</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/hardcodedunitproperties.html#iscow"><span><span class="type">IsCow</span></span></a></li>
@@ -280,6 +290,7 @@
 <li class="toctree-l2"><a class="reference internal" href="new/newpoweredunitlogic.html">New Powered Unit Logic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/operator.html">Operator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/pcxcameos.html">PCX Cameos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/pips.html">Pips</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/prerequisites.html">Prerequisites</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/prerequisites.html#generic-prerequisite-groups">Generic Prerequisite Groups</a></li>
 </ul>
@@ -419,6 +430,7 @@
 <li class="toctree-l2"><a class="reference internal" href="ui-features/menubuttoncustomization.html">Menu Button Customization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ui-features/newgameresolutions.html">New Game Resolutions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ui-features/randommapgenerator.html">Random Map Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui-features/releasenote.html">Release Note</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ui-features/userinterfacecolors.html">User Interface Colors</a></li>
 </ul>
 </li>
@@ -586,6 +598,7 @@ changes/additions rely on. This MIX file presently includes:</p>
 <li><cite>STT:PlayerColorBrown=Choose this to be brown.</cite></li>
 <li><cite>STT:PlayerColorCharcoal=Choose this to be dark grey.</cite></li>
 <li><cite>TXT_COMMAND_DISABLED=The %s command is not available.</cite></li>
+<li><cite>TXT_RELEASE_NOTE=</cite> (empty text)</li>
 </ul>
 </div>
 </div>
@@ -606,7 +619,7 @@ changes/additions rely on. This MIX file presently includes:</p>
         <li class="right" >
           <a href="intro.html" title="Introduction"
              >next</a> |</li>
-        <li><a href="#">Ares 0.3 documentation</a> &raquo;</li> 
+        <li><a href="#">Ares 0.4 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

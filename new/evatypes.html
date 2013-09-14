@@ -1,0 +1,137 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>EVA Types &mdash; Ares 0.4 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.4 documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Factories and Cloning" href="factoriesandcloning.html" />
+    <link rel="prev" title="Destroy Units by EMP" href="destroyunitsbyemp.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="factoriesandcloning.html" title="Factories and Cloning"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="destroyunitsbyemp.html" title="Destroy Units by EMP"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="destroyunitsbyemp.html"
+                        title="previous chapter">Destroy Units by EMP</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="factoriesandcloning.html"
+                        title="next chapter">Factories and Cloning</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="eva-types">
+<h1>EVA Types<a class="headerlink" href="#eva-types" title="Permalink to this headline">¶</a></h1>
+<p><span class="game docutils literal">Ares</span> supports defining new EVA voice types in addition to the three
+announcers for the original sides. You can add as many new types as you like.</p>
+<p>All new EVA types have to be named in the new <cite>[EVATypes]</cite> list in
+<tt class="file docutils literal docutils literal"><span class="pre">evamd.ini</span></tt>. This is a list like every other list, that is, the part left
+of the equal sign is ignored. The original voices called <span><tt class="docutils literal"><span class="pre">Allied</span></tt></span>,
+<span><tt class="docutils literal"><span class="pre">Russian</span></tt></span> and <span><tt class="docutils literal"><span class="pre">Yuri</span></tt></span> are added by default.</p>
+<blockquote>
+<div><div class="highlight-ini"><div class="highlight"><pre><span class="k">[EVATypes]</span>
+<span class="na">0</span><span class="o">=</span><span class="s">GDI</span>
+<span class="na">1</span><span class="o">=</span><span class="s">Cabal</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Now, these names can be used as keys in the EVA sound sections to point to an
+EVA-specific filename. Filenames can have a length of up to eight characters. If
+you don&#8217;t specify a filename for an EVA Type, no sound will play.</p>
+<blockquote>
+<div><div class="highlight-ini"><div class="highlight"><pre><span class="k">[EVA_LowPower]</span>
+<span class="na">Cabal</span><span class="o">=</span><span class="s">ccab053</span>
+<span class="na">GDI</span><span class="o">=</span><span class="s">cgdi053</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Now you are ready to use this new EVA Type. See <a class="reference internal" href="sidescountries.html#sides-evatag"><em>EVA.Tag for Sides</em></a>.</p>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.4.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="factoriesandcloning.html" title="Factories and Cloning"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="destroyunitsbyemp.html" title="Destroy Units by EMP"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
+          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

@@ -31,6 +31,11 @@ Radar
   **NEW EFFECT** Whether or not spying this enemy radar will reveal to you, the
   infiltrator, all of the terrain that they, the enemy, have thus far explored.
   The building must also have :tag:`Radar=yes` set.
+:tagdef:`[BuildingType]SpyEffect.KeepRadar=boolean`
+  **NEW EFFECT** If enabled, a player infiltrating this building will still have
+  access to the owning player's radar even if the building is destroyed, sold or
+  captured. Otherwise the spy effect is removed. Requires
+  :tag:`SpyEffect.RevealRadar=yes` and a :tag:`Radar=yes` building.
 
 .. index Spy behaviour; New effect: Reveal radar (shows you what the enemy can see).
 
@@ -130,8 +135,6 @@ Factories
   what the enemy is presently building from that factory. Once the building has
   been spied, select the building and the cameo of the unit that is being
   produced will be displayed over the building.
-
-  .. note:: At the moment PCX cameos are not supported.
 
 .. image:: /images/production_spying.png
   :alt: Screenshot of a current production being revealed

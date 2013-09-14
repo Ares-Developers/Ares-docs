@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Super Weapons &mdash; Ares 0.3 documentation</title>
+    <title>Super Weapons &mdash; Ares 0.4 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.3',
+        VERSION:     '0.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.3 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.4 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Survivors" href="survivors.html" />
     <link rel="prev" title="Spy Behavior" href="spybehavior.html" /> 
@@ -44,7 +44,7 @@
         <li class="right" >
           <a href="spybehavior.html" title="Spy Behavior"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.3 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -235,15 +235,17 @@ weapon:</dd>
 <ul class="simple">
 <li><cite>None</cite>: The AI will not use this super weapon and it cannot auto-fire.</li>
 <li><cite>LightningStorm</cite>: Targets offensively, but waits until a currently
-striking Lightning Storm subsides.</li>
+striking Lightning Storm subsides. Supports map action 135.</li>
 <li><cite>Nuke</cite>: Targets offensively, or strikes the waypoint set by map
-triggers.</li>
-<li><cite>PsychicDominator</cite>: Targets the largest group of enemy units.</li>
+triggers. Supports map action 135.</li>
+<li><cite>PsychicDominator</cite>: Targets the largest group of enemy units. Supports
+map action 135.</li>
 <li><cite>GeneticMutator</cite>: Targets the largest group of enemy infantry (in a 3x3
-area).</li>
-<li><cite>ParaDrop</cite>: Targets the least defended cell near the enemy base.</li>
+area). Supports map action 135.</li>
+<li><cite>ParaDrop</cite>: Targets the least defended cell near the enemy base.
+Supports map action 135.</li>
 <li><cite>ForceShield</cite>: Targets the position an enemy super weapon is about to
-hit to protect against it.</li>
+hit to protect against it. Supports map action 140.</li>
 <li><cite>NoTarget</cite>: This super weapon doesn&#8217;t need any valid coordinates to
 strike. You can use this for map-wide super weapons.</li>
 <li><cite>Offensive</cite>: Targets offensively, without any special handling like
@@ -328,7 +330,9 @@ unexpected results.</p>
 <p>The firing of a super weapon can now add or subtract credits from the firing
 player&#8217;s cash reserve. If the player doesn&#8217;t have enough funds the launch is
 aborted and an EVA event is triggered to notify the player. Super weapons
-costing money will show the needed amount in the super weapon&#8217;s cameo tool tip.</p>
+costing money will show the needed amount in the super weapon&#8217;s cameo tool tip.
+If the player has not enough money to use the super weapon, the sidebar cameo
+is grayed out.</p>
 <dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Money.Amount=</span></tt><span class="type definition"> (integer - credits)</span></span></dt>
 <dd>This many credits are added to the firing player&#8217;s account when the super
@@ -345,6 +349,8 @@ weapon is active. Defaults to <cite>0</cite>.</dd>
 </dl>
 <p class="versionadded" id="index-4">
 <span class="versionmodified">New in version 0.1.</span></p>
+<p class="versionchanged">
+<span class="versionmodified">Changed in version 0.4.</span></p>
 </div>
 <div class="section" id="animation-sound">
 <h2>Animation/Sound<a class="headerlink" href="#animation-sound" title="Permalink to this headline">¶</a></h2>
@@ -383,10 +389,15 @@ isn&#8217;t ready to fire yet.</dd>
 <dd>The EVA event that will be triggered when a super weapon can&#8217;t be fired
 because the player doesn&#8217;t have enough money. Defaults to
 <cite>EVA_InsufficientFunds</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►EVA.SelectTarget=</span></tt><span class="type definition"> (EVA event)</span></span></dt>
+<dd>The EVA event that will be triggered when the super weapon cameo is clicked
+in the sidebar and the player is required to select a target.</dd>
 </dl>
 <p>To disable an EVA event, use the value <cite>none</cite>.</p>
 <p class="versionadded" id="index-7">
 <span class="versionmodified">New in version 0.1.</span></p>
+<p class="versionchanged">
+<span class="versionmodified">Changed in version 0.4.</span></p>
 </div>
 <div class="section" id="messages">
 <h2>Messages<a class="headerlink" href="#messages" title="Permalink to this headline">¶</a></h2>
@@ -1115,7 +1126,9 @@ cell. This uses the CellSpread model to place the units.</p>
 <p>Default values for general tags:</p>
 <dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Deferment=</span></tt><span class="type definition"> (integer - frames)</span></span></dt>
-<dd>Defaults to <cite>20</cite>.</dd>
+<dd>Delay before the units are placed. Defaults to <cite>20</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.ActivationSound=</span></tt><span class="type definition"> (Sound)</span></span></dt>
+<dd>Played when the units are placed. Defaults to <cite>none</cite>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></tt><span class="type definition"> (enum)</span></span></dt>
 <dd>Defaults to <cite>ParaDrop</cite>.</dd>
 </dl>
@@ -1142,6 +1155,8 @@ odd.</p>
 weapon and awaiting its deferment.</p>
 <p class="versionadded" id="index-10">
 <span class="versionmodified">New in version 0.1.</span></p>
+<p class="versionchanged">
+<span class="versionmodified">Changed in version 0.4.</span></p>
 </div>
 <div class="section" id="type-firestorm">
 <span id="firestorm"></span><h3><span><span class="type">Type=Firestorm</span></span><a class="headerlink" href="#type-firestorm" title="Permalink to this headline">¶</a></h3>
@@ -1206,7 +1221,7 @@ amount of game time that the Wall is active for.</p>
         <li class="right" >
           <a href="spybehavior.html" title="Spy Behavior"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.3 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
           <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

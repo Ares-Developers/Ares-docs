@@ -1,5 +1,5 @@
-Chrono Prisons
-~~~~~~~~~~~~~~
+Chrono Prisons / Abductors
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Originally intended for :game:`Yuri's Revenge`, with published concept art and
 even appearing on the original version of the box art, the Chrono Prison was

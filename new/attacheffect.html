@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>AttachEffect &mdash; Ares 0.4 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.4 documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Carryalls" href="carryalls.html" />
+    <link rel="prev" title="AlternateTheaterArt" href="alternatetheaterart.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="carryalls.html" title="Carryalls"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="alternatetheaterart.html" title="AlternateTheaterArt"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="alternatetheaterart.html"
+                        title="previous chapter"><span><span class="type">AlternateTheaterArt</span></span></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="carryalls.html"
+                        title="next chapter">Carryalls</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="attacheffect">
+<h1>AttachEffect<a class="headerlink" href="#attacheffect" title="Permalink to this headline">¶</a></h1>
+<p>The AttachEffect system was designed as a spiritual successor to
+<span class="game docutils literal">NPatch</span>&#8216;s Upgrade logic, but it was aimed to not be limited only to
+superweapons. AttachEffect tags can be applied to both the Big Four (all
+<span class="type docutils literal">TechnoTypes</span>) and Warheads, unless stated otherwise.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The state of AttachEffects on units does not update while in a
+transport, while under a temporal effect and so on. In this matter, they
+behave like IvanBombs.</p>
+</div>
+<div class="quickstart admonition" id="quickstart-0">
+<p class="first admonition-title">Quickstart</p>
+<p class="last">To create a healing/repairing or residual damage effect, attach
+an animation with appropriate <span><tt class="docutils literal"><span class="pre">Warhead</span></tt></span> and <span><tt class="docutils literal"><span class="pre">Damage</span></tt></span> settings. This
+will affect the target unit for the entire duration of the AttachEffect,
+applying damage using the animation damage mechanism.</p>
+</div>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Section]►AttachEffect.Animation=</span></tt><span class="type definition"> (AnimationType)</span></span></dt>
+<dd><p class="first">The optional animation to play on the affected unit. The animation is attached
+to the unit and moves along with it. Defaults to <cite>none</cite>.</p>
+<p>The animation is removed when the unit is cloaked. The animation is recreated
+once the unit is uncloaked again. While cloaked, the AttachEffect is still
+applied, but the effects caused by the animation are not.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The animation always loops until the effect subsides.
+<span><tt class="docutils literal"><span class="pre">LoopCount</span></tt></span> is ignored.</p>
+</div>
+</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Section]►AttachEffect.Duration=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>The duration of the effect in frames. Use <cite>-1</cite> for infinite duration.
+Defaults to <cite>0</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Section]►AttachEffect.TemporalHidesAnim=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether a <span class="type docutils literal">TechnoType</span> with this type of AttachEffect applied on it
+should remove the animation while being warped out by a <span><tt class="docutils literal"><span class="pre">Temporal=yes</span></tt></span>
+weapon. Otherwise the animation stays active and unaffected by the temporal
+weapon. Defaults to <cite>no</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Section]►AttachEffect.SpeedMultiplier=</span></tt><span class="type definition"> (float - multiplier)</span></span></dt>
+<dd>Speed bonus while the AttachEffect lasts. Defaults to <cite>1.0</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Section]►AttachEffect.ArmorMultiplier=</span></tt><span class="type definition"> (float - multiplier)</span></span></dt>
+<dd>Armor bonus while the AttachEffect lasts. Defaults to <cite>1.0</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Section]►AttachEffect.FirepowerMultiplier=</span></tt><span class="type definition"> (float - multiplier)</span></span></dt>
+<dd>Firepower bonus while the AttachEffect lasts. Defaults to <cite>1.0</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Section]►AttachEffect.Cloakable=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether the unit gains cloaking ability while the AttachEffect lasts. Defaults
+to <cite>no</cite>.</dd>
+</dl>
+<p>The following tags are valid on TechnoTypes only:</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►AttachEffect.Delay=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>Defines how many frames after the previous effect subsides the AttachEffect is
+recreated on the unit itself. Negative values do not renew the effect.
+Defaults to <cite>0</cite> (immediately).</dd>
+</dl>
+<p>The following tags are valid on Warheads only:</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Warhead]►AttachEffect.Cumulative=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>If set to <cite>yes</cite>, an unlimited amount of this type of AttachEffect from
+this warhead can be applied to the target (it is stackable). If <cite>no</cite>,
+only one instance of this type of the AttachEffect can be on a single unit and
+that one instance gets updated if it is to be applied again. Defaults to
+<cite>no</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Warhead]►AttachEffect.AnimResetOnReapply=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>If this type of AttachEffect is not stackable, enabling this flag resets the
+animation on every time of reapplying. Defaults to <cite>no</cite>.</dd>
+</dl>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.4.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="carryalls.html" title="Carryalls"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="alternatetheaterart.html" title="AlternateTheaterArt"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
+          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Command Line Arguments &mdash; Ares 0.3 documentation</title>
+    <title>Command Line Arguments &mdash; Ares 0.4 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.3',
+        VERSION:     '0.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.3 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.4 documentation" href="../index.html" />
     <link rel="up" title="User Interface Features" href="index.html" />
     <link rel="next" title="Customizable Campaign Buttons" href="customizablecampaignbuttons.html" />
     <link rel="prev" title="Campaign Load Screen Text Color" href="campaignloadscreentextcolor.html" /> 
@@ -44,7 +44,7 @@
         <li class="right" >
           <a href="campaignloadscreentextcolor.html" title="Campaign Load Screen Text Color"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.3 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
       </ul>
     </div>
@@ -102,7 +102,12 @@ mods that do not include their own video.</p>
 Errors/Debugging</em></a>.</p>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">-STRICT:</th><td class="field-body"><p class="first">Throws an Internal Error on game load if a not-necessarily-critical
+<tr class="field-even field"><th class="field-name">-LOG-CSF:</th><td class="field-body"><p class="first">Outputs all CSF labels that cannot be found in the language files
+into <tt class="file docutils literal docutils literal"><span class="pre">debug.log</span></tt>. Each label is written only once, and prefixed with
+<cite>[CSFLoader]</cite>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">-STRICT:</th><td class="field-body"><p class="first">Throws an Internal Error on game load if a not-necessarily-critical
 error is detected. For example, when you set a flag to a non-empty value that
 cannot be parsed.</p>
 <div class="admonition note">
@@ -112,7 +117,7 @@ this so you will need to clean them up before using it.</p>
 </div>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">-AI-CONTROL:</th><td class="field-body"><p class="first">Enables AI Control feature. Entering this command in the command
+<tr class="field-even field"><th class="field-name">-AI-CONTROL:</th><td class="field-body"><p class="first">Enables AI Control feature. Entering this command in the command
 line before opening <span class="game docutils literal">Yuri&#8217;s Revenge</span> allows the player to assign a
 hotkey to allowing AI control.</p>
 <div class="last admonition warning">
@@ -148,7 +153,7 @@ officially supported.</p>
         <li class="right" >
           <a href="campaignloadscreentextcolor.html" title="Campaign Load Screen Text Color"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.3 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
           <li><a href="index.html" >User Interface Features</a> &raquo;</li> 
       </ul>
     </div>

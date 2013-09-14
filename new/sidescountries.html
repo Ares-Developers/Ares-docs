@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Sides &amp; Countries &mdash; Ares 0.3 documentation</title>
+    <title>Sides &amp; Countries &mdash; Ares 0.4 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.3',
+        VERSION:     '0.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.3 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.4 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Solid Buildings" href="solidbuildings.html" />
     <link rel="prev" title="Secret Labs" href="secretlabs.html" /> 
@@ -44,7 +44,7 @@
         <li class="right" >
           <a href="secretlabs.html" title="Secret Labs"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.3 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -205,6 +205,9 @@ corresponding side&#8217;s <span><tt class="docutils literal"><span class="pre">
 <dd>This country&#8217;s default parachute used if not overridden by a
 <span class="type docutils literal">TechnoType</span>. Defaults to the corresponding side&#8217;s
 <span><tt class="docutils literal"><span class="pre">Parachute.Anim=</span></tt></span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►VeteranBuildings=</span></tt><span class="type definition"> (list of BuildingTypes)</span></span></dt>
+<dd>All buildings in this list start as veteran for this country and, if
+available, veteran cameos are displayed in the sidebar.</dd>
 </dl>
 <p class="versionadded">
 <span class="versionmodified">New in version 0.1.</span></p>
@@ -266,14 +269,25 @@ sidec01.mix, <cite>2</cite> for the Soviet sidec02.mix).</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[Side]►Sidebar.YuriFileNames=</span></tt><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether or not to use the Yuri sidebar file names (sidec02md.mix and the
 Yuri-specific files within that MIX).</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►EVA.Tag=</span></tt><span class="type definition"> (string)</span></span></dt>
-<dd><p class="first">Name of the INI tag to load from <tt class="file docutils literal docutils literal"><span class="pre">evamd.ini</span></tt> for this side&#8217;s EVA (vocal
-interface assistant e.g. Eva for Allied, Sofia for Soviet and Some Guy for
-Yuri).</p>
-<div class="last admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">EVA.Tag is not yet implemented.</p>
-</div>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►ToolTipColor=</span></tt><span class="type definition"> (R,G,B)</span></span></dt>
+<dd>Interface text and border color for tool tips, the credits counter, and other
+UI elements. Defaults to <cite>255,255,0</cite> for sides <cite>Nod</cite> and
+<cite>ThirdSide</cite>, otherwise to <cite>164,210,255</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►MessageTextColor=</span></tt><span class="type definition"> (Color scheme)</span></span></dt>
+<dd>The color scheme used for printing ingame messages triggered by map action 11.
+Defaults to the 6th color scheme for side <cite>Nod</cite>, the 13th color scheme
+for side <cite>ThirdSide</cite>, to 11th color scheme otherwise. In the unmodified
+game, the colors are <cite>DarkRed</cite>, <cite>DarkSky</cite> and <cite>DarkBlue</cite>
+respectively.</dd>
+</dl>
+<dl class="docutils" id="sides-evatag">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►EVA.Tag=</span></tt><span class="type definition"> (EVA Type)</span></span></dt>
+<dd><p class="first">Name of the EVA Type tag to load from <tt class="file docutils literal docutils literal"><span class="pre">evamd.ini</span></tt> for this side&#8217;s EVA
+announcer. Use <cite>none</cite> to disable EVA. Defaults to <cite>Russian</cite> for
+side <cite>Nod</cite>, to <cite>Yuri</cite> for side <cite>ThirdSide</cite>, to
+<cite>Allied</cite> otherwise.</p>
+<p class="last">See <a class="reference internal" href="evatypes.html"><em>EVA Types</em></a> on how to define values that can be used
+here.</p>
 </dd>
 </dl>
 <p class="versionadded" id="index-1">
@@ -299,7 +313,7 @@ Yuri).</p>
         <li class="right" >
           <a href="secretlabs.html" title="Secret Labs"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.3 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
           <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

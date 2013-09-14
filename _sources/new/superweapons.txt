@@ -124,15 +124,17 @@ Targeting
 
 + :value:`None`: The AI will not use this super weapon and it cannot auto-fire.
 + :value:`LightningStorm`: Targets offensively, but waits until a currently
-  striking Lightning Storm subsides.
+  striking Lightning Storm subsides. Supports map action 135.
 + :value:`Nuke`: Targets offensively, or strikes the waypoint set by map
-  triggers.
-+ :value:`PsychicDominator`: Targets the largest group of enemy units.
+  triggers. Supports map action 135.
++ :value:`PsychicDominator`: Targets the largest group of enemy units. Supports
+  map action 135.
 + :value:`GeneticMutator`: Targets the largest group of enemy infantry (in a 3x3
-  area). 
-+ :value:`ParaDrop`: Targets the least defended cell near the enemy base. 
+  area). Supports map action 135.
++ :value:`ParaDrop`: Targets the least defended cell near the enemy base.
+  Supports map action 135.
 + :value:`ForceShield`: Targets the position an enemy super weapon is about to
-  hit to protect against it.
+  hit to protect against it. Supports map action 140.
 + :value:`NoTarget`: This super weapon doesn't need any valid coordinates to
   strike. You can use this for map-wide super weapons.
 + :value:`Offensive`: Targets offensively, without any special handling like
@@ -231,6 +233,8 @@ The firing of a super weapon can now add or subtract credits from the firing
 player's cash reserve. If the player doesn't have enough funds the launch is
 aborted and an EVA event is triggered to notify the player. Super weapons
 costing money will show the needed amount in the super weapon's cameo tool tip.
+If the player has not enough money to use the super weapon, the sidebar cameo
+is grayed out.
 
 :tagdef:`[SuperWeapon]Money.Amount=integer - credits`
   This many credits are added to the firing player's account when the super
@@ -248,6 +252,7 @@ costing money will show the needed amount in the super weapon's cameo tool tip.
 .. index:: Super Weapons; Money deductable when firing a superweapon.
 
 .. versionadded:: 0.1
+.. versionchanged:: 0.4
 
 
 
@@ -294,12 +299,16 @@ EVA Events
   The EVA event that will be triggered when a super weapon can't be fired
   because the player doesn't have enough money. Defaults to
   :value:`EVA_InsufficientFunds`.
+:tagdef:`[SuperWeapon]EVA.SelectTarget=EVA event`
+  The EVA event that will be triggered when the super weapon cameo is clicked
+  in the sidebar and the player is required to select a target.
 
 To disable an EVA event, use the value :value:`none`.
 
 .. index:: Super Weapons; Custom EVA events.
 
 .. versionadded:: 0.1
+.. versionchanged:: 0.4
 
 
 
@@ -1101,7 +1110,9 @@ cell. This uses the CellSpread model to place the units.
 Default values for general tags:
 
 :tagdef:`[SuperWeapon]SW.Deferment=integer - frames`
-  Defaults to :value:`20`.
+  Delay before the units are placed. Defaults to :value:`20`.
+:tagdef:`[SuperWeapon]SW.ActivationSound=Sound`
+  Played when the units are placed. Defaults to :value:`none`.
 :tagdef:`[SuperWeapon]SW.AITargeting=enum`
   Defaults to :value:`ParaDrop`.
 
@@ -1136,6 +1147,7 @@ weapon and awaiting its deferment.
   target cell).
 
 .. versionadded:: 0.1
+.. versionchanged:: 0.4
 
 
 .. _firestorm:
