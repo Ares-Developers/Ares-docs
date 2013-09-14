@@ -1,10 +1,6 @@
 AttachEffect
 ~~~~~~~~~~~~
 
-.. warning:: This documentation is preliminary. Please report factual errors.
-  There is still time to change it, and to add examples for some interesting use
-  cases.
-
 The AttachEffect system was designed as a spiritual successor to
 :game:`NPatch`'s Upgrade logic, but it was aimed to not be limited only to
 superweapons. AttachEffect tags can be applied to both the Big Four (all
