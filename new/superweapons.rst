@@ -1038,8 +1038,7 @@ New Super Weapon Types
 
 The Sonar Pulse is a variation of the original Sonar Pulse known from
 Red Alert it will cause any cloaked units in range or on the entire
-map to temporarily decloak. New super weapon type: SonarPulse (briefly
-reveals cloaked units).
+map to temporarily decloak, even if it is under a Cloak Generator or not.
 
 Default values for general tags:
 
@@ -1063,12 +1062,10 @@ Sonar Pulse specific tags:
 :tagdef:`[SuperWeapon]SonarPulse.Delay=integer - frames`
   The duration that the decloak effect will last. Defaults to :value:`60`.
 
-
-.. note:: If the affected unit gained its cloaking ability via
-  \ :tag:`VeteranAbilities` or :tag:`EliteAbilities` then it will only decloak
-  for a moment, as opposed to the full duration specified by the super weapon.
+.. index:: Super Weapons; SonarPulse briefly reveals cloaked units.
 
 .. versionadded:: 0.1
+.. versionchanged:: 0.5
 
 
 
