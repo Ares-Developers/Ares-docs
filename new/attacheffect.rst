@@ -56,6 +56,14 @@ The following tags are valid on TechnoTypes only:
   recreated on the unit itself. Negative values do not renew the effect.
   Defaults to :value:`0` (immediately).
 
+:tagdef:`[TechnoType]AttachEffect.ForceDecloak=boolean`
+  Whether units will be forced to decloak when the AttachEffect gets applied
+  (useful for non-damaging anim-based AttachEffects). Defaults to :value:`no`.
+
+:tagdef:`[TechnoType]AttachEffect.DiscardOnEntry=boolean`
+  Whether the AttachEffect will be removed when the unit is removed from the map
+  (entering a building or another unit). Defaults to :value:`no`.
+
 The following tags are valid on Warheads only:
 
 :tagdef:`[Warhead]AttachEffect.Cumulative=boolean`
@@ -72,3 +80,4 @@ The following tags are valid on Warheads only:
 .. index:: Weapons; AttachEffect
 
 .. versionadded:: 0.4
+.. versionchanged:: 0.5
