@@ -9,4 +9,5 @@ the game.
 	
 	*
 	cloak/index
+	tiberium/index
 	misc/index
