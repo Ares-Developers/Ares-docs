@@ -142,6 +142,14 @@ side's INI section:
   The :type:`InfantryType` that is spawned as a survivor when objects (with
   :tag:`Crewed=yes` set) owned by this side are destroyed (or, in the case of
   buildings, sold).
+:tagdef:`[Side]Engineer=InfantryType`
+  The :type:`InfantryType` that has a chance to be spawned when buildings with
+  :tag:`Factory=BuildingType` owned by this side are destroyed or sold. Defaults
+  to :tag:`[General]Engineer`.
+:tagdef:`[Side]Technician=InfantryType`
+  The :type:`InfantryType` that has a chance to be spawned when armed objects
+  owned by this side are destroyed or sold. Defaults to
+  :tag:`[General]Technician`.
 :tagdef:`[Side]SurvivorDivisor=integer`
   An object's refund amount is divided by this number to determine how many
   survivors will be spawned when this object is destroyed (or, in the case of
