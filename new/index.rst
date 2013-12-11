@@ -8,4 +8,5 @@ the game.
 	:glob:
 	
 	*
+	cloak/index
 	misc/index
