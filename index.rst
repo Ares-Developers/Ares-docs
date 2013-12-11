@@ -12,6 +12,7 @@ Table of Contents
 
 .. toctree::
 	:glob:
+	:hidden:
 	
 	intro
 	migration
@@ -20,6 +21,26 @@ Table of Contents
 	new/index
 	ui-features/index
 	*
+
+
+.. toctree::
+	intro
+	migration
+
+.. toctree::
+	:maxdepth: 2
+	
+	bugfixes/index
+
+.. toctree::
+	
+	restored/index
+	new/index
+	ui-features/index
+	
+	comparison
+	credits
+	glossary
 
 * :ref:`Overview of Ares's Bugfixes and Features <genindex>`
 * :ref:`search`
