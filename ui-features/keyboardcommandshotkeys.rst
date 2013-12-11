@@ -55,6 +55,23 @@ data will not be written to the file.
 .. versionadded:: 0.1
 
 
+AI Base Plan Dumping
+````````````````````
+
+To output the current AI players' base plan for debug purposes, you can use this
+keyboard command. Each AI player's base plan is dumped into :file:`debug.log`.
+This can help diagnose problems in the computer's choice of buildings. Note that
+:file:`debug.log` file writing must be turned on otherwise the data will not be
+written to the file.
+
+.. note:: This keyboard can be disabled in release versions of your mod. See
+  \ :ref:`Disabling Keyboard Commands <disable-commands>`.
+
+.. index:: Keyboard Commands; AI Base Plan data dumping command (see what the AI
+  plans to build).
+
+.. versionadded:: 0.1
+
 
 AI Assume Control
 `````````````````
