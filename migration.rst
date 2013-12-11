@@ -97,3 +97,49 @@ Other changes:
   The original tags :tag:`Pip` and :tag:`OccupyPip` have been changed to also
   support integers. Previously, integers were invalid and defaulted to
   :value:`green`.
+
+From Ares 0.4 and below
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Changed tags:
+
+  The following tags have been changed to use the actual value of their default
+  tags. (Continued work from the :game:`Ares` 0.4 release.)
+
+  :tag:`[Side]DefaultDisguise`
+    Defaults to the original tag for a side.
+
+  :tag:`[Side]Crew`
+    Defaults to the original tag for a side.
+
+  :tag:`[Side]SurvivorDivisor`
+    Defaults to the original tag for a side.
+
+  :tag:`[Side]AI.BaseDefenses`
+    Defaults to the original tag for a side.
+
+  :tag:`[Side]AI.BaseDefenseCounts`
+    Defaults to the original tag for a side.
+
+  :tag:`[Weapon]IvanBomb.Warhead`
+    Defaults to :tag:`[CombatDamage]IvanWarhead`.
+
+  :tag:`[Weapon]IvanBomb.Damage`
+    Defaults to :tag:`[CombatDamage]IvanDamage`.
+
+  :tag:`[Weapon]IvanBomb.Delay`
+    Defaults to :tag:`[CombatDamage]IvanTimedDelay`.
+
+  :tag:`[Weapon]IvanBomb.FlickerRate`
+    Defaults to :tag:`[CombatDamage]IvanIconFlickerRate`.
+
+Other changes:
+
+  Values in :tag:`[Side]Crew` and :tag:`[Side]DefaultDisguise` will not be added
+  to the list of :type:`InfantryTypes` automatically any more. Make sure these
+  values are listed under the :type:`InfantryTypes` list.
+
+  Previously, destroyed units did not eject survivors if they were owned by
+  :value:`Neutral` or :value:`Special`, because :game:`Ares` did not support
+  survivors for them. The original handling has been restored, and these houses
+  will use :tag:`[General]Technician` as crew.
