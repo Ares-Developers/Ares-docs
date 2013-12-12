@@ -49,20 +49,21 @@ superweapons. AttachEffect tags can be applied to both the Big Four (all
   Whether the unit gains cloaking ability while the AttachEffect lasts. Defaults
   to :value:`no`.
 
+:tagdef:`[Section]AttachEffect.ForceDecloak=boolean`
+  Whether affected units will be forced to decloak when the AttachEffect gets
+  applied (useful for non-damaging anim-based AttachEffects). Defaults to
+  :value:`no`.
+
+:tagdef:`[Section]AttachEffect.DiscardOnEntry=boolean`
+  Whether the AttachEffect will be removed when the affected unit is removed
+  from the map (entering a building or another unit). Defaults to :value:`no`.
+
 The following tags are valid on TechnoTypes only:
 
 :tagdef:`[TechnoType]AttachEffect.Delay=integer`
   Defines how many frames after the previous effect subsides the AttachEffect is
   recreated on the unit itself. Negative values do not renew the effect.
   Defaults to :value:`0` (immediately).
-
-:tagdef:`[TechnoType]AttachEffect.ForceDecloak=boolean`
-  Whether units will be forced to decloak when the AttachEffect gets applied
-  (useful for non-damaging anim-based AttachEffects). Defaults to :value:`no`.
-
-:tagdef:`[TechnoType]AttachEffect.DiscardOnEntry=boolean`
-  Whether the AttachEffect will be removed when the unit is removed from the map
-  (entering a building or another unit). Defaults to :value:`no`.
 
 The following tags are valid on Warheads only:
 
