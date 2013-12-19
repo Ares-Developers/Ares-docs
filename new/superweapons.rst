@@ -861,8 +861,8 @@ Genetic Mutator specific tags:
   Switches between two modes. If :value:`yes`, the Genetic Mutator will cause an
   explosion using :tag:`SW.Warhad` and :tag:`SW.Damage` without respecting any
   other Genetic Mutator specific tags. Otherwise all infantry units in range are
-  killed using :tag:`SW.Warhead`, verses and immunities are ignored. Defaults to
-  :tag:`[General]MutateExplosion`.
+  damaged using :tag:`SW.Warhead` and :tag:`SW.Damage`, verses and immunities
+  are respected. Defaults to :tag:`[General]MutateExplosion`.
 :tagdef:`[SuperWeapon]Mutate.IgnoreCyborg=boolean`
   Whether the Genetic Mutator will not affect infantry with :tag:`Cyborg=yes`
   set. Ignored if :tag:`Mutate.Explosion=yes`. Defaults to :value:`no`.
