@@ -123,7 +123,7 @@ otherwise specified.
   target is an :type:`InfantryType`.
 :tagdef:`[Weapon]Wave.ReverseAgainstAircraft=boolean`
   Whether or not the wave will be drawn from the target to the firer when the
-  target is an :tag:`AircraftType`.
+  target is an :type:`AircraftType`.
 :tagdef:`[Weapon]Wave.ReverseAgainstOthers=boolean`
   Whether or not the wave will be drawn from target to firer when the target is
   anything not covered by the other :tag:`ReverseAgainst` flags (i.e. trees,
@@ -169,10 +169,10 @@ the following flags in order to customize that bomb:
   :tag:`[CombatDamage]IvanDamage`.
 :tagdef:`[Weapon]IvanBomb.Detachable=boolean`
   Whether or not Engineers can remove this bomb from units it has been attached
-  to.
+  to. Defaults to :value:`yes`.
 :tagdef:`[Weapon]IvanBomb.DestroysBridges=boolean`
   Whether or not this bomb can be used on Bridge Repair Huts in order to destroy
-  the corresponding Bridge.
+  the corresponding Bridge. Defaults to :value:`yes`.
   
   .. note:: Bombs can always be attached to Bridge Huts, but the resulting
     explosion will not destroy the bridge unless
