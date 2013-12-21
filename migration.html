@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Migration Guide &mdash; Ares 0.4 documentation</title>
+    <title>Migration Guide &mdash; Ares 0.5 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.4',
+        VERSION:     '0.5',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.4 documentation" href="index.html" />
+    <link rel="top" title="Ares 0.5 documentation" href="index.html" />
     <link rel="next" title="Bug Fixes" href="bugfixes/index.html" />
     <link rel="prev" title="Introduction" href="intro.html" /> 
   </head>
@@ -43,7 +43,7 @@
         <li class="right" >
           <a href="intro.html" title="Introduction"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">Ares 0.4 documentation</a> &raquo;</li> 
+        <li><a href="index.html">Ares 0.5 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar">
@@ -54,6 +54,7 @@
 <li><a class="reference internal" href="#from-ares-0-1">From Ares 0.1</a></li>
 <li><a class="reference internal" href="#from-ares-0-2-and-below">From Ares 0.2 and below</a></li>
 <li><a class="reference internal" href="#from-ares-0-3-and-below">From Ares 0.3 and below</a></li>
+<li><a class="reference internal" href="#from-ares-0-4-and-below">From Ares 0.4 and below</a></li>
 </ul>
 </li>
 </ul>
@@ -169,6 +170,44 @@ support integers. Previously, integers were invalid and defaulted to
 <cite>green</cite>.</p>
 </div></blockquote>
 </div>
+<div class="section" id="from-ares-0-4-and-below">
+<h2>From Ares 0.4 and below<a class="headerlink" href="#from-ares-0-4-and-below" title="Permalink to this headline">¶</a></h2>
+<p>Changed tags:</p>
+<blockquote>
+<div><p>The following tags have been changed to use the actual value of their default
+tags. (Continued work from the <span class="game docutils literal">Ares</span> 0.4 release.)</p>
+<dl class="docutils">
+<dt><span><tt class="docutils literal"><span class="pre">[Side]►DefaultDisguise</span></tt></span></dt>
+<dd>Defaults to the original tag for a side.</dd>
+<dt><span><tt class="docutils literal"><span class="pre">[Side]►Crew</span></tt></span></dt>
+<dd>Defaults to the original tag for a side.</dd>
+<dt><span><tt class="docutils literal"><span class="pre">[Side]►SurvivorDivisor</span></tt></span></dt>
+<dd>Defaults to the original tag for a side.</dd>
+<dt><span><tt class="docutils literal"><span class="pre">[Side]►AI.BaseDefenses</span></tt></span></dt>
+<dd>Defaults to the original tag for a side.</dd>
+<dt><span><tt class="docutils literal"><span class="pre">[Side]►AI.BaseDefenseCounts</span></tt></span></dt>
+<dd>Defaults to the original tag for a side.</dd>
+<dt><span><tt class="docutils literal"><span class="pre">[Weapon]►IvanBomb.Warhead</span></tt></span></dt>
+<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[CombatDamage]►IvanWarhead</span></tt></span>.</dd>
+<dt><span><tt class="docutils literal"><span class="pre">[Weapon]►IvanBomb.Damage</span></tt></span></dt>
+<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[CombatDamage]►IvanDamage</span></tt></span>.</dd>
+<dt><span><tt class="docutils literal"><span class="pre">[Weapon]►IvanBomb.Delay</span></tt></span></dt>
+<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[CombatDamage]►IvanTimedDelay</span></tt></span>.</dd>
+<dt><span><tt class="docutils literal"><span class="pre">[Weapon]►IvanBomb.FlickerRate</span></tt></span></dt>
+<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[CombatDamage]►IvanIconFlickerRate</span></tt></span>.</dd>
+</dl>
+</div></blockquote>
+<p>Other changes:</p>
+<blockquote>
+<div><p>Values in <span><tt class="docutils literal"><span class="pre">[Side]►Crew</span></tt></span> and <span><tt class="docutils literal"><span class="pre">[Side]►DefaultDisguise</span></tt></span> will not be added
+to the list of <span class="type docutils literal">InfantryTypes</span> automatically any more. Make sure these
+values are listed under the <span class="type docutils literal">InfantryTypes</span> list.</p>
+<p>Previously, destroyed units did not eject survivors if they were owned by
+<cite>Neutral</cite> or <cite>Special</cite>, because <span class="game docutils literal">Ares</span> did not support
+survivors for them. The original handling has been restored, and these houses
+will use <span><tt class="docutils literal"><span class="pre">[General]►Technician</span></tt></span> as crew.</p>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -189,7 +228,7 @@ support integers. Previously, integers were invalid and defaulted to
         <li class="right" >
           <a href="intro.html" title="Introduction"
              >previous</a> |</li>
-        <li><a href="index.html">Ares 0.4 documentation</a> &raquo;</li> 
+        <li><a href="index.html">Ares 0.5 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

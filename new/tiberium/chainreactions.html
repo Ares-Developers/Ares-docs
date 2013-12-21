@@ -1,0 +1,183 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Chain Reactions &mdash; Ares 0.5 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.5 documentation" href="../../index.html" />
+    <link rel="up" title="Tiberium" href="index.html" />
+    <link rel="next" title="Miscellaneous Modding Enhancements" href="../misc/index.html" />
+    <link rel="prev" title="Tiberium Explosive" href="explosive.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../misc/index.html" title="Miscellaneous Modding Enhancements"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="explosive.html" title="Tiberium Explosive"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.5 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Tiberium</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Chain Reactions</a><ul>
+<li><a class="reference internal" href="#tiberium-explosion">Tiberium Explosion</a></li>
+<li><a class="reference internal" href="#chain-reaction">Chain Reaction</a></li>
+<li><a class="reference internal" href="#customizable-settings">Customizable Settings</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#minimum-damage-to-trigger-explodes-yes">Minimum Damage to Trigger <span><span class="type">Explodes=yes</span></span></a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="explosive.html"
+                        title="previous chapter">Tiberium Explosive</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../misc/index.html"
+                        title="next chapter">Miscellaneous Modding Enhancements</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="chain-reactions">
+<h1>Chain Reactions<a class="headerlink" href="#chain-reactions" title="Permalink to this headline">¶</a></h1>
+<p>There are two distinct logics that have their part in the tiberium chain
+reactions as seen in <span class="game docutils literal">Tiberian Sun</span>. Chain Reactions were not supported
+in <span class="game docutils literal">Yuri&#8217;s Revenge</span> and has now been restored, and both have been made
+more customizable.</p>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.5.</span></p>
+<div class="section" id="tiberium-explosion">
+<h2>Tiberium Explosion<a class="headerlink" href="#tiberium-explosion" title="Permalink to this headline">¶</a></h2>
+<p>Tiberium Explosion occurs if an animation with <span><tt class="docutils literal"><span class="pre">TiberiumChainReaction=yes</span></tt></span>
+hits a cell containing tiberium. There is a chance that debris is spawned. For a
+more detailled description, refer to <a class="reference external" href="http://modenc.renegadeprojects.com/TiberiumChainReaction">TiberiumChainReaction on ModEnc</a>.</p>
+<p>The warhead, the damage delivered and the chance to spawn debris can be
+customized for each of the <span class="type docutils literal">Tiberiums</span>.</p>
+</div>
+<div class="section" id="chain-reaction">
+<h2>Chain Reaction<a class="headerlink" href="#chain-reaction" title="Permalink to this headline">¶</a></h2>
+<p>Overlay can be made to trigger a chain reaction when damaged. An animation is
+spawned on the neighbour cells that can propagate the effect. For a more
+detailled description, refer to <a class="reference external" href="http://modenc.renegadeprojects.com/ChainReaction">ChainReaction on ModEnc</a>.</p>
+<p>The logic has been restored and new works as in <span class="game docutils literal">Tiberian Sun</span>. The
+warhead can be customized for each of the <span class="type docutils literal">Tiberiums</span>.</p>
+</div>
+<div class="section" id="customizable-settings">
+<h2>Customizable Settings<a class="headerlink" href="#customizable-settings" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Tiberium]►ExplosionWarhead=</span></tt><span class="type definition"> (warhead)</span></span></dt>
+<dd><p class="first">The warhead used to deliver the damage of the chain reaction effect, as well
+as the damage of the Tiberium Explosion effect. Defaults to
+<span><tt class="docutils literal"><span class="pre">[General]►C4Warhead</span></tt></span>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><span class="game docutils literal">Tiberian Sun</span>&#8216;s <span><tt class="docutils literal"><span class="pre">C4Warhead</span></tt></span> was <cite>HE</cite>, which had
+<span><tt class="docutils literal"><span class="pre">Spread</span></tt></span> set. <span class="game docutils literal">Red Alert 2</span> uses <cite>Super</cite>, which does
+not.</p>
+</div>
+</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Tiberium]►ExplosionDamage=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>The damage an animation with <span><tt class="docutils literal"><span class="pre">TiberiumChainReaction=yes</span></tt></span> deals to the
+cell it impacts at. Defaults to <span><tt class="docutils literal"><span class="pre">[CombatDamage]►TiberiumExplosionDamage</span></tt></span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Tiberium]►Debris.Chance=</span></tt><span class="type definition"> (integer - percent)</span></span></dt>
+<dd>The chance a cell containing this tiberium type hit by an animation with
+<span><tt class="docutils literal"><span class="pre">TiberiumChainReaction=yes</span></tt></span> will spawn one of its <span><tt class="docutils literal"><span class="pre">Debris</span></tt></span>. Defaults
+to <cite>33</cite>.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="minimum-damage-to-trigger-explodes-yes">
+<h1>Minimum Damage to Trigger <span><span class="type">Explodes=yes</span></span><a class="headerlink" href="#minimum-damage-to-trigger-explodes-yes" title="Permalink to this headline">¶</a></h1>
+<p>Overlay with <span><tt class="docutils literal"><span class="pre">Explodes=yes</span></tt></span> detonates when taking even the slightest amount
+of damage. With <span class="game docutils literal">Ares</span> you can raise this limit so overlay only explodes
+if the damage is higher than a certain value.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[General]►OverlayExplodeThreshold=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>Only if the damage to a cell is higher than this does an overlay with
+<span><tt class="docutils literal"><span class="pre">Explodes=yes</span></tt></span> explode. Below this value, the overlay stays intact.
+Defaults to <cite>0</cite>.</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.5.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../misc/index.html" title="Miscellaneous Modding Enhancements"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="explosive.html" title="Tiberium Explosive"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.5 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" >Tiberium</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Storage and Silos &mdash; Ares 0.5 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.5 documentation" href="../../index.html" />
+    <link rel="up" title="Tiberium" href="index.html" />
+    <link rel="next" title="Tiberium Spill" href="spill.html" />
+    <link rel="prev" title="Tiberium" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="spill.html" title="Tiberium Spill"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Tiberium"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.5 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Tiberium</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Storage and Silos</a><ul>
+<li><a class="reference internal" href="#enabling-storage">Enabling Storage</a></li>
+<li><a class="reference internal" href="#eva-notice">EVA Notice</a></li>
+<li><a class="reference internal" href="#pipscale-tiberium"><span><span class="type">PipScale=Tiberium</span></span></a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Tiberium</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="spill.html"
+                        title="next chapter">Tiberium Spill</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="storage-and-silos">
+<h1>Storage and Silos<a class="headerlink" href="#storage-and-silos" title="Permalink to this headline">¶</a></h1>
+<p>In the earlier games, tiberium and ore were not converted to credits directly.
+Instead, the resouces were dumped at the refiniery, and then stored in silos.
+This feature was not used in <span class="game docutils literal">Red Alert 2</span> and wasn&#8217;t working any more.
+<span class="game docutils literal">Ares</span> restores the Storage feature.</p>
+<p>Bonus money created by ore purifiers is always stored on the bank account
+instead of in the silos. This is because the bonus is calculated in tiberium
+bails, which would count against storage. When the silo is destroyed, this bonus
+money would be placed on the map, which would create tiberium out of nothing.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Storage on undeployable refineries like the Slave Miner is not
+supported. Slave Miners cannot provide storage space, because it is lost
+whenever the building undeploys.</p>
+</div>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.5.</span></p>
+<div class="section" id="enabling-storage">
+<h2>Enabling Storage<a class="headerlink" href="#enabling-storage" title="Permalink to this headline">¶</a></h2>
+<p><span><tt class="docutils literal"><span class="pre">Storage</span></tt></span> works as it did in <span class="game docutils literal">Tiberian Sun</span>. For reasons of backwards
+compatibility you have to use one new tag on a building where tiberium is
+dumped:</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►Refinery.UseStorage=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether the refinery building will store the Tiberium instead of converting it
+to money directly. Tiberium that is converted directly does not require
+storage space. Defaults to <cite>no</cite>.</dd>
+</dl>
+</div>
+<div class="section" id="eva-notice">
+<h2>EVA Notice<a class="headerlink" href="#eva-notice" title="Permalink to this headline">¶</a></h2>
+<p>In case the storage capacity is either depleted or nearly so, EVA will warn the
+player by giving a <cite>EVA_SilosNeeded</cite> notice.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The game does not have this EVA message defined and has no audio files
+for it. You have to add them before you can use them.</p>
+</div>
+</div>
+<div class="section" id="pipscale-tiberium">
+<h2><span><span class="type">PipScale=Tiberium</span></span><a class="headerlink" href="#pipscale-tiberium" title="Permalink to this headline">¶</a></h2>
+<p><cite>Tiberium</cite> is again supported as a valid <span><tt class="docutils literal"><span class="pre">PipScale</span></tt></span> value. For
+buildings with positive <span><tt class="docutils literal"><span class="pre">Storage</span></tt></span>, the pips will show the currently used
+storage space compared to the overall space of that building. Ore will show as
+yellow pips, gems as blue ones.</p>
+<p>To enable <span><tt class="docutils literal"><span class="pre">PipScale=Tiberium</span></tt></span> on buildings with <span><tt class="docutils literal"><span class="pre">Refinery=yes</span></tt></span> or
+<span><tt class="docutils literal"><span class="pre">ResourceDestination=yes</span></tt></span>, you also have to enable
+<span><tt class="docutils literal"><span class="pre">Refinery.UseStorage=yes</span></tt></span>. This requirement was added because otherwise the
+original game would show the tiberium scale for the unmodded refineries, which
+have <span><tt class="docutils literal"><span class="pre">PipScale=Tiberium</span></tt></span> and valid <span><tt class="docutils literal"><span class="pre">Storage</span></tt></span> defined.</p>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.5.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="spill.html" title="Tiberium Spill"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Tiberium"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.5 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" >Tiberium</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

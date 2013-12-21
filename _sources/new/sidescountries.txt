@@ -31,6 +31,9 @@ will only work for 16 of these.
 Each country can be customized using the following flags in the country's INI
 section:
 
+Loading Screen, Flags and Taunts
+--------------------------------
+
 .. warning:: The following filename specifications (where raw C-style format
   specifiers like %s are required) are going to be changed into safer versions
   in the future. The replacement style has not been decided yet.
@@ -80,6 +83,10 @@ section:
   Brief description of the country, displayed in the status bar of the country
   selection screen when the player mouse-overs that country in the country
   selection drop-down list.
+
+Selection and Position
+----------------------
+
 :tagdef:`[Country]RandomSelectionWeight=integer`
   Specifies how likely it is that this country will be randomly selected when a
   player chooses 'Random'. The probability of this country being picked is
@@ -95,8 +102,16 @@ section:
   list and thus without risking game crashes. To also prevent such countries
   from being selected randomly, set :tag:`RandomSelectionWeight=0`. Defaults to
   :value:`100`.
+
+AI and Base-Building
+--------------------
+
 :tagdef:`[Country]AI.PowerPlants=list of BuildingTypes`
   A list of buildings that the AI will treat as this country's power plants.
+
+Paradrop Defaults
+-----------------
+
 :tagdef:`[Country]ParaDrop.Types=list of InfantryTypes and/or VehicleTypes`
   The units that will be paradropped by :tag:`Type=ParaDrop` super weapons (such
   as the one normally provided by a Tech Airport) for this country. Defaults to
@@ -116,6 +131,10 @@ section:
   This country's default parachute used if not overridden by a
   :type:`TechnoType`. Defaults to the corresponding side's
   :tag:`Parachute.Anim=`.
+
+Others
+------
+
 :tagdef:`[Country]VeteranBuildings=list of BuildingTypes`
   All buildings in this list start as veteran for this country and, if
   available, veteran cameos are displayed in the sidebar.
@@ -135,6 +154,9 @@ fully-working countries can be implemented (see above).
 Each side can (and should) define its own values for the following flags in the
 side's INI section:
 
+Crew and Infantry
+-----------------
+
 :tagdef:`[Side]DefaultDisguise=InfantryType`
   Default :type:`InfantryType` that disguisable infantry will be disguised as
   when first created.
@@ -142,10 +164,22 @@ side's INI section:
   The :type:`InfantryType` that is spawned as a survivor when objects (with
   :tag:`Crewed=yes` set) owned by this side are destroyed (or, in the case of
   buildings, sold).
+:tagdef:`[Side]Engineer=InfantryType`
+  The :type:`InfantryType` that has a chance to be spawned when buildings with
+  :tag:`Factory=BuildingType` owned by this side are destroyed or sold. Defaults
+  to :tag:`[General]Engineer`.
+:tagdef:`[Side]Technician=InfantryType`
+  The :type:`InfantryType` that has a chance to be spawned when armed objects
+  owned by this side are destroyed or sold. Defaults to
+  :tag:`[General]Technician`.
 :tagdef:`[Side]SurvivorDivisor=integer`
   An object's refund amount is divided by this number to determine how many
   survivors will be spawned when this object is destroyed (or, in the case of
   buildings, sold).
+
+AI and Base-Building
+--------------------
+
 :tagdef:`[Side]AI.BaseDefenses=list of BuildingTypes`
   List of base defense buildings that the AI can build.
 :tagdef:`[Side]AI.BaseDefenseCounts=list of integers`
@@ -154,6 +188,10 @@ side's INI section:
   :tag:`[General]AlliedBaseDefenseCounts` for GDI (Allied),
   :tag:`[General]SovietBaseDefenseCounts` for Nod (Soviet), and
   :tag:`[General]ThirdBaseDefenseCounts` for ThirdSide (Yuri).
+
+Paradrop Defaults
+-----------------
+
 :tagdef:`[Side]ParaDrop.Types=list of InfantryTypes and/or VehicleTypes`
   The units that will be paradropped by :tag:`Type=ParaDrop` super weapons (such
   as the one normally provided by a Tech Airport) for this side. Defaults to
@@ -175,6 +213,10 @@ side's INI section:
 :tagdef:`[Side]Parachute.Anim=Animation`
   This side's default parachute used if not overridden by the country or a
   :type:`TechnoType`. Defaults to :value:`PARACH`.
+
+Sidebar, EVA and Colors
+-----------------------
+
 :tagdef:`[Side]Sidebar.MixFileIndex=integer`
   The MIX file number to use for the sidebar (e.g. :value:`1` for the Allied
   sidec01.mix, :value:`2` for the Soviet sidec02.mix).

@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Type Selection Groups &mdash; Ares 0.5 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.5 documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Unit Lost EVA Report" href="unitlost.html" />
+    <link rel="prev" title="Survivors" href="survivors.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="unitlost.html" title="Unit Lost EVA Report"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="survivors.html" title="Survivors"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.5 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="survivors.html"
+                        title="previous chapter">Survivors</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="unitlost.html"
+                        title="next chapter">Unit Lost EVA Report</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="type-selection-groups">
+<h1>Type Selection Groups<a class="headerlink" href="#type-selection-groups" title="Permalink to this headline">¶</a></h1>
+<p>In <span class="game docutils literal">Yuri&#8217;s Revenge</span>, each of the three original sides have own dogs and
+own engineer. If one player gets hold of equivalent units of other types, they
+will not be considered for Type Selection. Thus you could have 20 dogs, but only
+three would be selected, because the others are of different type.</p>
+<p><span class="game docutils literal">Ares</span> adds a method that has none of the limitations of the known
+workarounds, that is, you can group an arbitrary amount of types, it is not
+limited to infantry (it actually supports mixed types), has no side effects when
+types are modified in maps and it doesn&#8217;t crash.</p>
+<div class="quickstart admonition" id="quickstart-0">
+<p class="first admonition-title">Quickstart</p>
+<p class="last">To group all dogs as one type of unit, set <span><tt class="docutils literal"><span class="pre">GroupAs=DOG</span></tt></span> on
+all of them. For engineers, use <span><tt class="docutils literal"><span class="pre">GroupAs=ENGINEER</span></tt></span>.</p>
+</div>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►GroupAs=</span></tt><span class="type definition"> (string)</span></span></dt>
+<dd><p class="first">The group name this unit is considered as. Name length can be up to 30
+characters. Defaults to the type&#8217;s ID.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Check that you don&#8217;t accidentally use an existing ID of a probably
+unrelated type as group name. This would include this type in this selection
+group, if it doesn&#8217;t have <span><tt class="docutils literal"><span class="pre">GroupAs</span></tt></span> set to some other value itself.</p>
+</div>
+</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[General]►TypeSelectUseDeploy=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd><p class="first">Whether the types in <span><tt class="docutils literal"><span class="pre">DeploysInto</span></tt></span> and <span><tt class="docutils literal"><span class="pre">UndeploysInto</span></tt></span> should be
+included for selection automatically. Defaults to <cite>yes</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you set this to <cite>no</cite>, Slave Miners, Tick Tanks and the
+like will differentiate between their deployed and undeployed forms. You
+will have to manually set <span><tt class="docutils literal"><span class="pre">GroupAs</span></tt></span> on the groups you want to keep.</p>
+</div>
+</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.5.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="unitlost.html" title="Unit Lost EVA Report"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="survivors.html" title="Survivors"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.5 documentation</a> &raquo;</li>
+          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

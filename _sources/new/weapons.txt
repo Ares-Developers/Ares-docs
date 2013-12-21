@@ -123,7 +123,7 @@ otherwise specified.
   target is an :type:`InfantryType`.
 :tagdef:`[Weapon]Wave.ReverseAgainstAircraft=boolean`
   Whether or not the wave will be drawn from the target to the firer when the
-  target is an :tag:`AircraftType`.
+  target is an :type:`AircraftType`.
 :tagdef:`[Weapon]Wave.ReverseAgainstOthers=boolean`
   Whether or not the wave will be drawn from target to firer when the target is
   anything not covered by the other :tag:`ReverseAgainst` flags (i.e. trees,
@@ -155,19 +155,24 @@ Crazy Ivan Bombs are global so you can't have multiple variations of them with
 their own controls. With :game:`Ares` it is now possible to create new Ivan
 Bomb-esque weapons new types of sticky bomb with whatever settings you like.
 
+:game:`Ares` now also supports shrapnel weapons, as long as they have a
+:tag:`CellSpread` of :value:`0.5` or more.
+
 When :tag:`IvanBomb=yes` is set on the weapon's warhead, the weapon can specify
 the following flags in order to customize that bomb:
 
 :tagdef:`[Weapon]IvanBomb.Warhead=WarheadType`
-  The warhead that will be used when the bomb detonates.
+  The warhead that will be used when the bomb detonates. Defaults to
+  :tag:`[CombatDamage]IvanWarhead`.
 :tagdef:`[Weapon]IvanBomb.Damage=integer`
-  The damage that will be dealt when the bomb detonates.
+  The damage that will be dealt when the bomb detonates. Defaults to
+  :tag:`[CombatDamage]IvanDamage`.
 :tagdef:`[Weapon]IvanBomb.Detachable=boolean`
   Whether or not Engineers can remove this bomb from units it has been attached
-  to.
+  to. Defaults to :value:`yes`.
 :tagdef:`[Weapon]IvanBomb.DestroysBridges=boolean`
   Whether or not this bomb can be used on Bridge Repair Huts in order to destroy
-  the corresponding Bridge.
+  the corresponding Bridge. Defaults to :value:`yes`.
   
   .. note:: Bombs can always be attached to Bridge Huts, but the resulting
     explosion will not destroy the bridge unless
@@ -177,6 +182,7 @@ the following flags in order to customize that bomb:
   Defaults to :tag:`[CombatDamage]CanDetonateTimeBomb`.
 :tagdef:`[Weapon]IvanBomb.Delay=integer`
   The number of frames that will elapse before the bomb detonates automatically.
+  Defaults to :tag:`[CombatDamage]IvanTimedDelay`.
 :tagdef:`[Weapon]IvanBomb.AttachSound=sound name`
   The sound that will be played when the bomb is attached to a target. Defaults
   to :tag:`[AudioVisual]BombAttachSound`.
@@ -192,14 +198,14 @@ the following flags in order to customize that bomb:
   default :file:`bombcurs.shp`.
 :tagdef:`[Weapon]IvanBomb.FlickerRate=integer`
   The rate at which the bomb SHP will flip back and forth between two frames to
-  give the impression of a flickering fuse. On every game frame, the frame of
-  the bomb SHP is calculated as follows:
+  give the impression of a flickering fuse. Must be higher than :value:`0`.
+  Defaults to :tag:`[CombatDamage]IvanIconFlickerRate`.
   
-  ``frameToShow = (Game.CurrentFrame - Bomb.PlantingFrame) / (Bomb.Delay /
-  (Bomb.Image.Frames - 1))``
-  
-  ``IF (CurrentFrame mod (2 * Bomb.FlickerRate) >=  Bomb.FlickerRate) THEN``
-    ``frameToShow = frameToShow + 1``
+  The animation is slowed down to play over the entire lifetime of the bomb
+  (:tag:`IvanBomb.Delay`). The flicker rate is the number of frames between
+  alternating between the current frame and the following frame.
+  :tag:`IvanBomb.FlickerRate=5` means the current frame is shown 5 frames, then
+  the next one for 5 frames, then the current one again for 5 frames, ....
 
 Originally this logic was hard-coded to ignore the last frame of the bomb SHP,
 which was originally planned to be used for so called "death bombs" which were
@@ -213,6 +219,7 @@ replace that SHP file.
   :align: center
 
 .. versionadded:: 0.1
+.. versionchanged:: 0.5
 
 LaserThickness
 --------------

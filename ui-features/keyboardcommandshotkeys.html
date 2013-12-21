@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Keyboard Commands (Hotkeys) &mdash; Ares 0.4 documentation</title>
+    <title>Keyboard Commands (Hotkeys) &mdash; Ares 0.5 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.4',
+        VERSION:     '0.5',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.4 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.5 documentation" href="../index.html" />
     <link rel="up" title="User Interface Features" href="index.html" />
     <link rel="next" title="Loading Screen" href="loadingscreen.html" />
     <link rel="prev" title="Internal Errors / Debugging" href="internalerrorsdebugging.html" /> 
@@ -44,7 +44,7 @@
         <li class="right" >
           <a href="internalerrorsdebugging.html" title="Internal Errors / Debugging"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.5 documentation</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
       </ul>
     </div>
@@ -56,6 +56,7 @@
 <li><a class="reference internal" href="#map-snapshot">Map Snapshot</a></li>
 <li><a class="reference internal" href="#debug-logging">Debug Logging</a></li>
 <li><a class="reference internal" href="#type-data-dumping">Type Data Dumping</a></li>
+<li><a class="reference internal" href="#ai-base-plan-dumping">AI Base Plan Dumping</a></li>
 <li><a class="reference internal" href="#ai-assume-control">AI Assume Control</a></li>
 <li><a class="reference internal" href="#fps-counter">FPS Counter</a></li>
 </ul>
@@ -137,6 +138,21 @@ data will not be written to the file.</p>
 <p class="versionadded" id="index-1">
 <span class="versionmodified">New in version 0.1.</span></p>
 </div>
+<div class="section" id="ai-base-plan-dumping">
+<h2>AI Base Plan Dumping<a class="headerlink" href="#ai-base-plan-dumping" title="Permalink to this headline">¶</a></h2>
+<p>To output the current AI players&#8217; base plan for debug purposes, you can use this
+keyboard command. Each AI player&#8217;s base plan is dumped into <tt class="file docutils literal docutils literal"><span class="pre">debug.log</span></tt>.
+This can help diagnose problems in the computer&#8217;s choice of buildings. Note that
+<tt class="file docutils literal docutils literal"><span class="pre">debug.log</span></tt> file writing must be turned on otherwise the data will not be
+written to the file.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This keyboard can be disabled in release versions of your mod. See
+<a class="reference internal" href="#disable-commands"><em>Disabling Keyboard Commands</em></a>.</p>
+</div>
+<p class="versionadded" id="index-2">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
 <div class="section" id="ai-assume-control">
 <h2>AI Assume Control<a class="headerlink" href="#ai-assume-control" title="Permalink to this headline">¶</a></h2>
 <p>Please refer to section <a class="reference internal" href="commandlinearguments.html"><em>Command Line Arguments</em></a> under the tag:</p>
@@ -162,7 +178,7 @@ data will not be written to the file.</p>
 the game processes, and their total average value. The text is displayed in
 white color in the left hand side lower corner of the screen. Pressing the key
 again hides the FPS Counter.</p>
-<p class="versionadded" id="index-2">
+<p class="versionadded" id="index-3">
 <span class="versionmodified">New in version 0.3.</span></p>
 </div>
 </div>
@@ -209,7 +225,7 @@ make it too easy to extract certain files from the game.</p>
         <li class="right" >
           <a href="internalerrorsdebugging.html" title="Internal Errors / Debugging"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.5 documentation</a> &raquo;</li>
           <li><a href="index.html" >User Interface Features</a> &raquo;</li> 
       </ul>
     </div>

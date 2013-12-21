@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Super Weapons &mdash; Ares 0.4 documentation</title>
+    <title>Super Weapons &mdash; Ares 0.5 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.4',
+        VERSION:     '0.5',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.4 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.5 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Survivors" href="survivors.html" />
     <link rel="prev" title="Spy Behavior" href="spybehavior.html" /> 
@@ -44,7 +44,7 @@
         <li class="right" >
           <a href="spybehavior.html" title="Spy Behavior"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.5 documentation</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -909,8 +909,8 @@ ignored. Ignored if <span><tt class="docutils literal"><span class="pre">Mutate.
 <dd>Switches between two modes. If <cite>yes</cite>, the Genetic Mutator will cause an
 explosion using <span><tt class="docutils literal"><span class="pre">SW.Warhad</span></tt></span> and <span><tt class="docutils literal"><span class="pre">SW.Damage</span></tt></span> without respecting any
 other Genetic Mutator specific tags. Otherwise all infantry units in range are
-killed using <span><tt class="docutils literal"><span class="pre">SW.Warhead</span></tt></span>, verses and immunities are ignored. Defaults to
-<span><tt class="docutils literal"><span class="pre">[General]►MutateExplosion</span></tt></span>.</dd>
+damaged using <span><tt class="docutils literal"><span class="pre">SW.Warhead</span></tt></span> and <span><tt class="docutils literal"><span class="pre">SW.Damage</span></tt></span>, verses and immunities
+are respected. Defaults to <span><tt class="docutils literal"><span class="pre">[General]►MutateExplosion</span></tt></span>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Mutate.IgnoreCyborg=</span></tt><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether the Genetic Mutator will not affect infantry with <span><tt class="docutils literal"><span class="pre">Cyborg=yes</span></tt></span>
 set. Ignored if <span><tt class="docutils literal"><span class="pre">Mutate.Explosion=yes</span></tt></span>. Defaults to <cite>no</cite>.</dd>
@@ -1065,8 +1065,7 @@ limitation, set <span><tt class="docutils literal"><span class="pre">SW.Range</s
 <h3><span><span class="type">Type=SonarPulse</span></span><a class="headerlink" href="#type-sonarpulse" title="Permalink to this headline">¶</a></h3>
 <p>The Sonar Pulse is a variation of the original Sonar Pulse known from
 Red Alert it will cause any cloaked units in range or on the entire
-map to temporarily decloak. New super weapon type: SonarPulse (briefly
-reveals cloaked units).</p>
+map to temporarily decloak, even if it is under a Cloak Generator or not.</p>
 <p>Default values for general tags:</p>
 <dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Range=</span></tt><span class="type definition"> (float,integer)</span></span></dt>
@@ -1088,14 +1087,10 @@ types situated on water cells.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SonarPulse.Delay=</span></tt><span class="type definition"> (integer - frames)</span></span></dt>
 <dd>The duration that the decloak effect will last. Defaults to <cite>60</cite>.</dd>
 </dl>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If the affected unit gained its cloaking ability via
-<span><tt class="docutils literal"><span class="pre">VeteranAbilities</span></tt></span> or <span><tt class="docutils literal"><span class="pre">EliteAbilities</span></tt></span> then it will only decloak
-for a moment, as opposed to the full duration specified by the super weapon.</p>
-</div>
-<p class="versionadded">
+<p class="versionadded" id="index-9">
 <span class="versionmodified">New in version 0.1.</span></p>
+<p class="versionchanged">
+<span class="versionmodified">Changed in version 0.5.</span></p>
 </div>
 <div class="section" id="type-genericwarhead">
 <h3><span><span class="type">Type=GenericWarhead</span></span><a class="headerlink" href="#type-genericwarhead" title="Permalink to this headline">¶</a></h3>
@@ -1116,7 +1111,7 @@ sure the desired targets (especially <span class="type docutils literal">Infantr
 <p>Don&#8217;t forget that the <span class="type docutils literal">BuildingType</span> will need <span><tt class="docutils literal"><span class="pre">DamageSelf=yes</span></tt></span> set
 (just like the Soviet Nuclear Missile Silo) if you want the warhead to be
 capable of damaging the firing building.</p>
-<p class="versionadded" id="index-9">
+<p class="versionadded" id="index-10">
 <span class="versionmodified">New in version 0.1.</span></p>
 </div>
 <div class="section" id="type-unitdelivery">
@@ -1153,7 +1148,7 @@ exist.</p>
 odd.</p>
 <p>The actual delivery of the units happens all at once, after firing the super
 weapon and awaiting its deferment.</p>
-<p class="versionadded" id="index-10">
+<p class="versionadded" id="index-11">
 <span class="versionmodified">New in version 0.1.</span></p>
 <p class="versionchanged">
 <span class="versionmodified">Changed in version 0.4.</span></p>
@@ -1197,7 +1192,7 @@ is required to make it activate from a single click of the sidebar icon.</p>
 Wall, although this should not be a major problem due to the relatively small
 amount of game time that the Wall is active for.</p>
 </div>
-<p class="versionadded" id="index-11">
+<p class="versionadded" id="index-12">
 <span class="versionmodified">New in version 0.1.</span></p>
 </div>
 </div>
@@ -1221,7 +1216,7 @@ amount of game time that the Wall is active for.</p>
         <li class="right" >
           <a href="spybehavior.html" title="Spy Behavior"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.5 documentation</a> &raquo;</li>
           <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

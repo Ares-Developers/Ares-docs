@@ -1,4 +1,5 @@
-.. index:: Alphalights; Alpha lights will now move with the object they are attached to., Alphalights; Alpha lights can now have multiple facings.
+.. index:: Alphalights; Alpha lights will now move with the object they are attached to.
+.. index:: Alphalights; Alpha lights can now have multiple facings.
 
 ===================
 Moving Alpha Lights
@@ -19,8 +20,14 @@ without any compression (just like :file:`mouse.sha`).
 + If the SHP has multiple frames then it is interpreted as a multi-facing image,
   and the largest N frames in the image are used as facing-specific versions (in
   this case, N is the largest power of 2 that is less than or equal to the
-  number of frames in the SHP, e.g. 2/4/8/16/32/64...).
+  number of frames in the SHP, e.g. 2/4/8/16/32/64...). This is supported only
+  for :type:`TechnoTypes`.
 
 .. note:: Alpha Lights on moving objects are a potential source of lag.
 
+.. note:: Only :type:`TechnoTypes` are fully supported. :type:`Animations` are
+  supported since :game:`Ares` 0.5.
+
 .. versionadded:: 0.1
+
+.. versionchanged:: 0.5

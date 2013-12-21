@@ -1,0 +1,198 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Tiberium Heal &mdash; Ares 0.5 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.5 documentation" href="../../index.html" />
+    <link rel="up" title="Tiberium" href="index.html" />
+    <link rel="next" title="Tiberium Damage" href="damage.html" />
+    <link rel="prev" title="Tiberium Spill" href="spill.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="damage.html" title="Tiberium Damage"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spill.html" title="Tiberium Spill"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.5 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Tiberium</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Tiberium Heal</a><ul>
+<li><a class="reference internal" href="#enabling-tiberium-heal">Enabling Tiberium Heal</a></li>
+<li><a class="reference internal" href="#who-will-heal">Who will heal</a></li>
+<li><a class="reference internal" href="#how-much-how-often">How much how often</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tiberium-remains">Tiberium Remains</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="spill.html"
+                        title="previous chapter">Tiberium Spill</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="damage.html"
+                        title="next chapter">Tiberium Damage</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="tiberium-heal">
+<h1>Tiberium Heal<a class="headerlink" href="#tiberium-heal" title="Permalink to this headline">¶</a></h1>
+<p>Tiberium Heal is the effect of units gaining hitpoints when standing or moving
+over cells containing tiberium. This feature from <span class="game docutils literal">Tiberian Sun</span> has been
+restored and made more customizable.</p>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.5.</span></p>
+<div class="section" id="enabling-tiberium-heal">
+<h2>Enabling Tiberium Heal<a class="headerlink" href="#enabling-tiberium-heal" title="Permalink to this headline">¶</a></h2>
+<p><span class="game docutils literal">Ares</span> requires a new tag to be set to enable the Heal feature, and it
+does no longer heal units that are positioned above <span><tt class="docutils literal"><span class="pre">[General]►HoverHeight</span></tt></span>.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[General]►TiberiumHealEnabled=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether tiberium is allowed to heal units. Required for the following tags to
+work. Defaults to <cite>no</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[General]►TiberiumHeal=</span></tt><span class="type definition"> (float - minutes)</span></span></dt>
+<dd>The interval between healing steps being applied in minutes. Defaults to
+<cite>1.13333</cite> (once each 68 seconds).</dd>
+</dl>
+</div>
+<div class="section" id="who-will-heal">
+<h2>Who will heal<a class="headerlink" href="#who-will-heal" title="Permalink to this headline">¶</a></h2>
+<p>Enabling the Tiberium Heal feature depending on the unit type can be done by
+setting a tag or by granting the <cite>TIBERIUM_HEAL</cite> veteran ability like in
+<span class="game docutils literal">Tiberian Sun</span>.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►TiberiumHeal=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd><p class="first">Whether this unit heals if standing on a cell containing Tiberium. Defaults to
+<cite>no</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If <cite>yes</cite>, units leave behind a random amount of tiberium when
+destroyed or killed by default. This can be customized. See <a class="reference internal" href="#tiberium-remains"><em>Tiberium
+Remains</em></a>.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="how-much-how-often">
+<h2>How much how often<a class="headerlink" href="#how-much-how-often" title="Permalink to this headline">¶</a></h2>
+<p>The delay between the effect being applied and amout of hitpoints to be restored
+can be customized for each unit type and for each of the <span class="type docutils literal">Tiberiums</span>. The
+default tags are also used for other repair logics, so the following tags can be
+used to balance the Tiberium Heal independently from them.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Tiberium]►Heal.Delay=</span></tt><span class="type definition"> (float - minutes)</span></span></dt>
+<dd>The interval between healing steps being applied in minutes. Defaults to
+<span><tt class="docutils literal"><span class="pre">[General]►TiberiumHeal</span></tt></span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Tiberium]►Heal.Step=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>The health to restore for <span class="type docutils literal">AircraftTypes</span> after each delay. Defaults to
+<span><tt class="docutils literal"><span class="pre">[General]►RepairStep</span></tt></span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Tiberium]►Heal.IStep=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>The health to restore for <span class="type docutils literal">InfantryTypes</span> after each delay. Defaults to
+<span><tt class="docutils literal"><span class="pre">[General]►IRepairStep</span></tt></span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Tiberium]►Heal.UStep=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>The health to restore for <span class="type docutils literal">VehicleTypes</span> after each delay. Defaults to
+<span><tt class="docutils literal"><span class="pre">[General]►URepairStep</span></tt></span>.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="tiberium-remains">
+<span id="id1"></span><h1>Tiberium Remains<a class="headerlink" href="#tiberium-remains" title="Permalink to this headline">¶</a></h1>
+<p>In <span><tt class="docutils literal"><span class="pre">Tiberian</span> <span class="pre">Sun</span></tt></span> units that had <span><tt class="docutils literal"><span class="pre">TiberiumHeal=yes</span></tt></span> (not the
+<cite>TIBERIUM_HEAL</cite> veteran ability) left behind a random amount of tiberium
+when destroyed or killed. This hardcoded behavior is now customizable and
+working independently of Tiberium Heal.</p>
+<p>Up to five bails are left behind in the adjacent cells, depending on whether the
+tiberium can be added to them.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►TiberiumRemains=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether this unit leaves behind tiberium when destroyed. Defaults to
+<span><tt class="docutils literal"><span class="pre">TiberiumHeal</span></tt></span> if <span><tt class="docutils literal"><span class="pre">[General]►TiberiumHealEnabled=yes</span></tt></span>, to <cite>no</cite>
+otherwise.</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.5.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="damage.html" title="Tiberium Damage"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spill.html" title="Tiberium Spill"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.5 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" >Tiberium</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

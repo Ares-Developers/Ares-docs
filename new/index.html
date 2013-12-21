@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>New &amp; Enhanced In-Game Logic &mdash; Ares 0.4 documentation</title>
+    <title>New &amp; Enhanced In-Game Logic &mdash; Ares 0.5 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.4',
+        VERSION:     '0.5',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.4 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.5 documentation" href="../index.html" />
     <link rel="next" title="Additional ArmorTypes and Verses" href="additionalarmortypesandverses.html" />
     <link rel="prev" title="Vehicle Thief" href="../restored/vehicle-thief.html" /> 
   </head>
@@ -43,7 +43,7 @@
         <li class="right" >
           <a href="../restored/vehicle-thief.html" title="Vehicle Thief"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li> 
+        <li><a href="../index.html">Ares 0.5 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar">
@@ -95,9 +95,18 @@ the game.</p>
 <li class="toctree-l1"><a class="reference internal" href="customanimationandprojectilepalettes.html">Custom Animation and Projectile Palettes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custombuildingfoundations.html">Custom Building Foundations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="customcameopalettes.html">Custom Cameo Palettes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="customizableinsignia.html">Customizable Insignia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customizableinsignia.html">Veterancy Insignia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="customizableinsignia.html#chevrons">Chevrons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="customizableinsignia.html#hiding-enemy-insignia">Hiding Enemy Insignia</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="customizableparachuteanimations.html">Customizable Parachute Animations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="customizableveterancy.html">Customizable Veterancy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customizableveterancy.html">Customizable Veterancy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="customizableveterancy.html#from-passengers">From Passengers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="customizableveterancy.html#from-airstrikes">From Airstrikes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="customizableveterancy.html#from-mind-controlled">From Mind-Controlled</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="custommissiles.html">Custom Missiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="destroyunitsbyemp.html">Destroy Units by EMP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="evatypes.html">EVA Types</a></li>
@@ -140,8 +149,21 @@ the game.</p>
 <li class="toctree-l1"><a class="reference internal" href="reverseengineerlogic.html">Reverse Engineer logic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="secretlabs.html">Secret Labs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sidescountries.html">Sides &amp; Countries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sidescountries.html#countries">Countries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sidescountries.html#sides">Sides</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sidescountries.html#countries">Countries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sidescountries.html#loading-screen-flags-and-taunts">Loading Screen, Flags and Taunts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sidescountries.html#selection-and-position">Selection and Position</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sidescountries.html#ai-and-base-building">AI and Base-Building</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sidescountries.html#paradrop-defaults">Paradrop Defaults</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sidescountries.html#others">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sidescountries.html#sides">Sides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sidescountries.html#crew-and-infantry">Crew and Infantry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sidescountries.html#id1">AI and Base-Building</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sidescountries.html#id2">Paradrop Defaults</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sidescountries.html#sidebar-eva-and-colors">Sidebar, EVA and Colors</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="solidbuildings.html">Solid Buildings</a></li>
@@ -190,7 +212,14 @@ the game.</p>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="survivors.html">Survivors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="survivors.html">Survivors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="survivors.html#units-and-buildings">Units and Buildings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="survivors.html#unit-specific">Unit-specific</a></li>
+<li class="toctree-l2"><a class="reference internal" href="survivors.html#building-specific">Building-specific</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="typeselect.html">Type Selection Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unitlost.html">Unit Lost EVA Report</a></li>
 <li class="toctree-l1"><a class="reference internal" href="urbancombattrenches.html">Urban Combat - Trenches</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="urbancombattrenches.html#pass-through">Pass Through</a></li>
 <li class="toctree-l2"><a class="reference internal" href="urbancombattrenches.html#squatters-rights">Squatters&#8217; Rights</a></li>
@@ -221,6 +250,61 @@ the game.</p>
 <li class="toctree-l2"><a class="reference internal" href="weapons.html#wave-ambient-damage">Wave Ambient Damage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="weapons.html#customizable-ivan-bombs">Customizable Ivan Bombs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="weapons.html#laserthickness">LaserThickness</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cloak/index.html">Cloak, Stealth and Sensor Arrays</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cloak/general.html">General Changes and Updates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloak/general.html#powered-units">Powered Units</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloak/general.html#parasites">Parasites</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloak/cloakheight.html">Cloaking and Units Above Ground</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloak/cloaksound.html">Cloak Sounds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloak/cloakstages.html">Cloaking Stages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cloak/cloakstates.html">Cloak Depending On State</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloak/cloakstates.html#cloak-only-if-standing-still-cloakstop">Cloak Only If Standing Still (CloakStop)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloak/cloakstates.html#cloak-only-if-deployed">Cloak Only If Deployed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloak/cloakstates.html#cloak-only-if-powered">Cloak Only If Powered</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloak/cloakstates.html#disallow-cloaking">Disallow Cloaking</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cloak/sensorarray.html">Sensor Arrays</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cloak/sensorarray.html#changes">Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cloak/sensorarray.html#suppress-sensor-array-warnings">Suppress Sensor Array Warnings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tiberium/index.html">Tiberium</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tiberium/storage.html">Storage and Silos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tiberium/storage.html#enabling-storage">Enabling Storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tiberium/storage.html#eva-notice">EVA Notice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tiberium/storage.html#pipscale-tiberium"><span><span class="type">PipScale=Tiberium</span></span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tiberium/spill.html">Tiberium Spill</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tiberium/heal.html">Tiberium Heal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tiberium/heal.html#enabling-tiberium-heal">Enabling Tiberium Heal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tiberium/heal.html#who-will-heal">Who will heal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tiberium/heal.html#how-much-how-often">How much how often</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tiberium/heal.html#tiberium-remains">Tiberium Remains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tiberium/damage.html">Tiberium Damage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tiberium/damage.html#enabling-tiberium-damage">Enabling Tiberium Damage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tiberium/damage.html#who-gets-damaged">Who gets damaged</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tiberium/damage.html#damage-and-warhead">Damage and Warhead</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tiberium/damage.html#visceroids">Visceroids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tiberium/explosive.html">Tiberium Explosive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tiberium/chainreactions.html">Chain Reactions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tiberium/chainreactions.html#tiberium-explosion">Tiberium Explosion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tiberium/chainreactions.html#chain-reaction">Chain Reaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tiberium/chainreactions.html#customizable-settings">Customizable Settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tiberium/chainreactions.html#minimum-damage-to-trigger-explodes-yes">Minimum Damage to Trigger <span><span class="type">Explodes=yes</span></span></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="misc/index.html">Miscellaneous Modding Enhancements</a><ul>
@@ -258,7 +342,7 @@ the game.</p>
         <li class="right" >
           <a href="../restored/vehicle-thief.html" title="Vehicle Thief"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li> 
+        <li><a href="../index.html">Ares 0.5 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

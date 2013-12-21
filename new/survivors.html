@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Survivors &mdash; Ares 0.4 documentation</title>
+    <title>Survivors &mdash; Ares 0.5 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.4',
+        VERSION:     '0.5',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,9 +26,9 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.4 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.5 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
-    <link rel="next" title="Urban Combat - Trenches" href="urbancombattrenches.html" />
+    <link rel="next" title="Type Selection Groups" href="typeselect.html" />
     <link rel="prev" title="Super Weapons" href="superweapons.html" /> 
   </head>
   <body>
@@ -39,23 +39,33 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="urbancombattrenches.html" title="Urban Combat - Trenches"
+          <a href="typeselect.html" title="Type Selection Groups"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="superweapons.html" title="Super Weapons"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.5 documentation</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Survivors</a><ul>
+<li><a class="reference internal" href="#units-and-buildings">Units and Buildings</a></li>
+<li><a class="reference internal" href="#unit-specific">Unit-specific</a></li>
+<li><a class="reference internal" href="#building-specific">Building-specific</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="superweapons.html"
                         title="previous chapter">Super Weapons</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="urbancombattrenches.html"
-                        title="next chapter">Urban Combat - Trenches</a></p>
+  <p class="topless"><a href="typeselect.html"
+                        title="next chapter">Type Selection Groups</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
@@ -87,13 +97,33 @@ pilot (or driver) when they are destroyed. In order for a pilot to be spawned
 from an airborne unit, the ground beneath the destroyed unit must be clear.</p>
 <p>The following flags control the percent chance of a survivor being spawned, and
 the type of unit that that survivor will be.</p>
+<div class="section" id="units-and-buildings">
+<h2>Units and Buildings<a class="headerlink" href="#units-and-buildings" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Unit]►Survivor.Side#=</span></tt><span class="type definition"> (InfantryType) (where # is the zero-based index of the side e.g. 0 for Allied, 1 for Soviet, 2 for Yuri)</span></span></dt>
-<dd>The <span class="type docutils literal">InfantryType</span> that can emerge from this unit as a survivor when the
-unit was owned by the corresponding side. For example,
+<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►Survivor.Side#=</span></tt><span class="type definition"> (InfantryType) (where # is the zero-based index of the side e.g. 0 for Allied, 1 for Soviet, 2 for Yuri)</span></span></dt>
+<dd>The <span class="type docutils literal">InfantryType</span> that can emerge from this object as a survivor when
+the object was owned by the corresponding side. For example,
 <span><tt class="docutils literal"><span class="pre">Survivor.Side0=E1</span></tt></span> would cause the spawned survivor (if any) to be a GI
-when the destroyed unit was owned by an Allied player. If this value is not
-set, the the owning side&#8217;s <span><tt class="docutils literal"><span class="pre">Crew=</span></tt></span> is used. Defaults to <cite>none</cite>.</dd>
+when the destroyed unit was owned by an Allied player. Defaults to the owning
+side&#8217;s <span><tt class="docutils literal"><span class="pre">Crew</span></tt></span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►Crew.TechnicianChance=</span></tt><span class="type definition"> (integer - percent between 0 and 100)</span></span></dt>
+<dd><p class="first">The chance the owning side&#8217;s <span><tt class="docutils literal"><span class="pre">Technician</span></tt></span> is spawned instead of an
+ordinary crew member. Defaults to <cite>15</cite> for <span class="type docutils literal">BuildingTypes</span> with
+<span><tt class="docutils literal"><span class="pre">Primary=</span></tt></span> set, to <cite>0</cite> otherwise.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><span class="game docutils literal">Yuri&#8217;s Revenge</span> also ejects <span><tt class="docutils literal"><span class="pre">Technician</span></tt></span> from units
+with <span><tt class="docutils literal"><span class="pre">Primary=</span></tt></span> set. Previous versions of <span class="game docutils literal">Ares</span> did not, so the
+default value has been changed so there is no difference to previous
+versions. If you want to eject <span><tt class="docutils literal"><span class="pre">Technician</span></tt></span> from units, you have to
+manually set <span><tt class="docutils literal"><span class="pre">Crew.TechnicianChance</span></tt></span>.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="unit-specific">
+<h2>Unit-specific<a class="headerlink" href="#unit-specific" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[Unit]►Survivor.Pilots=</span></tt><span class="type definition"> (integer)</span></span></dt>
 <dd>The number of pilots that will attempt to be spawned when this unit is
 destroyed (provided that the ground beneath the destroyed unit is clear).
@@ -134,10 +164,27 @@ having been killed (however, passengers will always count as having been killed,
 even if <span><tt class="docutils literal"><span class="pre">Survivor.PassengerChance=0</span></tt></span>).</p>
 <p>Spawned pilots will be spawned with 50% of their maximum health and the same
 amount of experience as the destroyed unit had. Passengers will emerge with both
-their health and their experience unchanged. Percent chance for pilots and/or
-passengers to emerge/parachute from destroyed vehicles/aircraft.</p>
-<p class="versionadded">
+their health and their experience unchanged.</p>
+<p class="versionadded" id="index-0">
 <span class="versionmodified">New in version 0.1.</span></p>
+</div>
+<div class="section" id="building-specific">
+<h2>Building-specific<a class="headerlink" href="#building-specific" title="Permalink to this headline">¶</a></h2>
+<p>Buildings can spawn the owning side&#8217;s <span><tt class="docutils literal"><span class="pre">Engineers</span></tt></span> in addition to
+<span><tt class="docutils literal"><span class="pre">Crew</span></tt></span> and <span><tt class="docutils literal"><span class="pre">Technician</span></tt></span>. The number of crew members is determined by
+the refund price of the building divided by the side&#8217;s <span><tt class="docutils literal"><span class="pre">SurvivorDivisor</span></tt></span>.
+If the building has been captured, the divisor is double, and thus the number of
+survivors is halved. At least one survivor is spawned, but no more than five.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►Crew.EngineerChance=</span></tt><span class="type definition"> (integer - percent between 0 and 100)</span></span></dt>
+<dd>The chance the owning side&#8217;s <span><tt class="docutils literal"><span class="pre">Engineer</span></tt></span> is spawned instead of an ordinary
+crew member. If the building has been captured, engineers are not allowed to
+be spawned regardless of this setting. Defaults to <cite>25</cite> if
+<span><tt class="docutils literal"><span class="pre">Factory=BuildingType</span></tt></span>, to <cite>0</cite> otherwise.</dd>
+</dl>
+<span class="target" id="index-1"></span><p class="versionadded" id="index-2">
+<span class="versionmodified">New in version 0.5.</span></p>
+</div>
 </div>
 
 
@@ -153,12 +200,12 @@ passengers to emerge/parachute from destroyed vehicles/aircraft.</p>
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="urbancombattrenches.html" title="Urban Combat - Trenches"
+          <a href="typeselect.html" title="Type Selection Groups"
              >next</a> |</li>
         <li class="right" >
           <a href="superweapons.html" title="Super Weapons"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.5 documentation</a> &raquo;</li>
           <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

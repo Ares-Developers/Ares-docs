@@ -1,0 +1,35 @@
+Type Selection Groups
+`````````````````````
+
+In :game:`Yuri's Revenge`, each of the three original sides have own dogs and
+own engineer. If one player gets hold of equivalent units of other types, they
+will not be considered for Type Selection. Thus you could have 20 dogs, but only
+three would be selected, because the others are of different type.
+
+:game:`Ares` adds a method that has none of the limitations of the known
+workarounds, that is, you can group an arbitrary amount of types, it is not
+limited to infantry (it actually supports mixed types), has no side effects when
+types are modified in maps and it doesn't crash.
+
+.. quickstart:: To group all dogs as one type of unit, set :tag:`GroupAs=DOG` on
+  all of them. For engineers, use :tag:`GroupAs=ENGINEER`.
+
+:tagdef:`[TechnoType]GroupAs=string`
+  The group name this unit is considered as. Name length can be up to 30
+  characters. Defaults to the type's ID.
+  
+  .. note:: Check that you don't accidentally use an existing ID of a probably
+    unrelated type as group name. This would include this type in this selection
+    group, if it doesn't have :tag:`GroupAs` set to some other value itself.
+
+:tagdef:`[General]TypeSelectUseDeploy=boolean`
+  Whether the types in :tag:`DeploysInto` and :tag:`UndeploysInto` should be
+  included for selection automatically. Defaults to :value:`yes`.
+  
+  .. note:: If you set this to :value:`no`, Slave Miners, Tick Tanks and the
+    like will differentiate between their deployed and undeployed forms. You
+    will have to manually set :tag:`GroupAs` on the groups you want to keep.
+
+.. index: Type Select; Consider many different types as one.
+
+.. versionadded:: 0.5

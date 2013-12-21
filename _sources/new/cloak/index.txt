@@ -1,0 +1,16 @@
+Cloak, Stealth and Sensor Arrays
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+All extensions related to the cloak feature. That is stealth units and buildings
+hiding themselves from unfriendly eyes or being concealed by Cloak Generators,
+as well as methods of detection like Sensor Arrays.
+
+.. toctree::
+	:glob:
+	
+	general
+	cloakheight
+	cloaksound
+	cloakstages
+	cloakstates
+	sensorarray

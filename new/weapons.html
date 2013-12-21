@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Weapons &mdash; Ares 0.4 documentation</title>
+    <title>Weapons &mdash; Ares 0.5 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.4',
+        VERSION:     '0.5',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,9 +26,9 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.4 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.5 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
-    <link rel="next" title="Miscellaneous Modding Enhancements" href="misc/index.html" />
+    <link rel="next" title="Cloak, Stealth and Sensor Arrays" href="cloak/index.html" />
     <link rel="prev" title="Warheads" href="warheads.html" /> 
   </head>
   <body>
@@ -39,12 +39,12 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="misc/index.html" title="Miscellaneous Modding Enhancements"
+          <a href="cloak/index.html" title="Cloak, Stealth and Sensor Arrays"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="warheads.html" title="Warheads"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.5 documentation</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -70,8 +70,8 @@
   <p class="topless"><a href="warheads.html"
                         title="previous chapter">Warheads</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="misc/index.html"
-                        title="next chapter">Miscellaneous Modding Enhancements</a></p>
+  <p class="topless"><a href="cloak/index.html"
+                        title="next chapter">Cloak, Stealth and Sensor Arrays</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
@@ -207,7 +207,7 @@ target is a <span class="type docutils literal">BuildingType</span>.</dd>
 target is an <span class="type docutils literal">InfantryType</span>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►Wave.ReverseAgainstAircraft=</span></tt><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether or not the wave will be drawn from the target to the firer when the
-target is an <span><tt class="docutils literal"><span class="pre">AircraftType</span></tt></span>.</dd>
+target is an <span class="type docutils literal">AircraftType</span>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►Wave.ReverseAgainstOthers=</span></tt><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether or not the wave will be drawn from target to firer when the target is
 anything not covered by the other <span><tt class="docutils literal"><span class="pre">ReverseAgainst</span></tt></span> flags (i.e. trees,
@@ -236,19 +236,23 @@ flags that control this are:</p>
 Crazy Ivan Bombs are global so you can&#8217;t have multiple variations of them with
 their own controls. With <span class="game docutils literal">Ares</span> it is now possible to create new Ivan
 Bomb-esque weapons new types of sticky bomb with whatever settings you like.</p>
+<p><span class="game docutils literal">Ares</span> now also supports shrapnel weapons, as long as they have a
+<span><tt class="docutils literal"><span class="pre">CellSpread</span></tt></span> of <cite>0.5</cite> or more.</p>
 <p>When <span><tt class="docutils literal"><span class="pre">IvanBomb=yes</span></tt></span> is set on the weapon&#8217;s warhead, the weapon can specify
 the following flags in order to customize that bomb:</p>
 <dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Warhead=</span></tt><span class="type definition"> (WarheadType)</span></span></dt>
-<dd>The warhead that will be used when the bomb detonates.</dd>
+<dd>The warhead that will be used when the bomb detonates. Defaults to
+<span><tt class="docutils literal"><span class="pre">[CombatDamage]►IvanWarhead</span></tt></span>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Damage=</span></tt><span class="type definition"> (integer)</span></span></dt>
-<dd>The damage that will be dealt when the bomb detonates.</dd>
+<dd>The damage that will be dealt when the bomb detonates. Defaults to
+<span><tt class="docutils literal"><span class="pre">[CombatDamage]►IvanDamage</span></tt></span>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Detachable=</span></tt><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether or not Engineers can remove this bomb from units it has been attached
-to.</dd>
+to. Defaults to <cite>yes</cite>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.DestroysBridges=</span></tt><span class="type definition"> (boolean)</span></span></dt>
 <dd><p class="first">Whether or not this bomb can be used on Bridge Repair Huts in order to destroy
-the corresponding Bridge.</p>
+the corresponding Bridge. Defaults to <cite>yes</cite>.</p>
 <div class="last admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Bombs can always be attached to Bridge Huts, but the resulting
@@ -260,7 +264,8 @@ explosion will not destroy the bridge unless
 <dd>Whether or not players can manually detonate bombs attached by this weapon.
 Defaults to <span><tt class="docutils literal"><span class="pre">[CombatDamage]►CanDetonateTimeBomb</span></tt></span>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Delay=</span></tt><span class="type definition"> (integer)</span></span></dt>
-<dd>The number of frames that will elapse before the bomb detonates automatically.</dd>
+<dd>The number of frames that will elapse before the bomb detonates automatically.
+Defaults to <span><tt class="docutils literal"><span class="pre">[CombatDamage]►IvanTimedDelay</span></tt></span>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.AttachSound=</span></tt><span class="type definition"> (sound name)</span></span></dt>
 <dd>The sound that will be played when the bomb is attached to a target. Defaults
 to <span><tt class="docutils literal"><span class="pre">[AudioVisual]►BombAttachSound</span></tt></span>.</dd>
@@ -276,14 +281,13 @@ the engine). If the image cannot be loaded then the game will fall back to the
 default <tt class="file docutils literal docutils literal"><span class="pre">bombcurs.shp</span></tt>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.FlickerRate=</span></tt><span class="type definition"> (integer)</span></span></dt>
 <dd><p class="first">The rate at which the bomb SHP will flip back and forth between two frames to
-give the impression of a flickering fuse. On every game frame, the frame of
-the bomb SHP is calculated as follows:</p>
-<p><tt class="docutils literal"><span class="pre">frameToShow</span> <span class="pre">=</span> <span class="pre">(Game.CurrentFrame</span> <span class="pre">-</span> <span class="pre">Bomb.PlantingFrame)</span> <span class="pre">/</span> <span class="pre">(Bomb.Delay</span> <span class="pre">/</span>
-<span class="pre">(Bomb.Image.Frames</span> <span class="pre">-</span> <span class="pre">1))</span></tt></p>
-<dl class="last docutils">
-<dt><tt class="docutils literal"><span class="pre">IF</span> <span class="pre">(CurrentFrame</span> <span class="pre">mod</span> <span class="pre">(2</span> <span class="pre">*</span> <span class="pre">Bomb.FlickerRate)</span> <span class="pre">&gt;=</span>&nbsp; <span class="pre">Bomb.FlickerRate)</span> <span class="pre">THEN</span></tt></dt>
-<dd><tt class="docutils literal"><span class="pre">frameToShow</span> <span class="pre">=</span> <span class="pre">frameToShow</span> <span class="pre">+</span> <span class="pre">1</span></tt></dd>
-</dl>
+give the impression of a flickering fuse. Must be higher than <cite>0</cite>.
+Defaults to <span><tt class="docutils literal"><span class="pre">[CombatDamage]►IvanIconFlickerRate</span></tt></span>.</p>
+<p class="last">The animation is slowed down to play over the entire lifetime of the bomb
+(<span><tt class="docutils literal"><span class="pre">IvanBomb.Delay</span></tt></span>). The flicker rate is the number of frames between
+alternating between the current frame and the following frame.
+<span><tt class="docutils literal"><span class="pre">IvanBomb.FlickerRate=5</span></tt></span> means the current frame is shown 5 frames, then
+the next one for 5 frames, then the current one again for 5 frames, ....</p>
 </dd>
 </dl>
 <p>Originally this logic was hard-coded to ignore the last frame of the bomb SHP,
@@ -295,6 +299,8 @@ replace that SHP file.</p>
 <img alt="Image of bombcurs.shp" class="align-center" src="../_images/bombcurs.png" />
 <p class="versionadded">
 <span class="versionmodified">New in version 0.1.</span></p>
+<p class="versionchanged">
+<span class="versionmodified">Changed in version 0.5.</span></p>
 </div>
 <div class="section" id="laserthickness">
 <h2>LaserThickness<a class="headerlink" href="#laserthickness" title="Permalink to this headline">¶</a></h2>
@@ -325,12 +331,12 @@ works with <span><tt class="docutils literal"><span class="pre">IsHouseColor=yes
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="misc/index.html" title="Miscellaneous Modding Enhancements"
+          <a href="cloak/index.html" title="Cloak, Stealth and Sensor Arrays"
              >next</a> |</li>
         <li class="right" >
           <a href="warheads.html" title="Warheads"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.5 documentation</a> &raquo;</li>
           <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

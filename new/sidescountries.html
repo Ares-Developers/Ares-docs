@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Sides &amp; Countries &mdash; Ares 0.4 documentation</title>
+    <title>Sides &amp; Countries &mdash; Ares 0.5 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.4',
+        VERSION:     '0.5',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.4 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.5 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Solid Buildings" href="solidbuildings.html" />
     <link rel="prev" title="Secret Labs" href="secretlabs.html" /> 
@@ -44,7 +44,7 @@
         <li class="right" >
           <a href="secretlabs.html" title="Secret Labs"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.5 documentation</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -53,8 +53,21 @@
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Sides &amp; Countries</a><ul>
-<li><a class="reference internal" href="#countries">Countries</a></li>
-<li><a class="reference internal" href="#sides">Sides</a></li>
+<li><a class="reference internal" href="#countries">Countries</a><ul>
+<li><a class="reference internal" href="#loading-screen-flags-and-taunts">Loading Screen, Flags and Taunts</a></li>
+<li><a class="reference internal" href="#selection-and-position">Selection and Position</a></li>
+<li><a class="reference internal" href="#ai-and-base-building">AI and Base-Building</a></li>
+<li><a class="reference internal" href="#paradrop-defaults">Paradrop Defaults</a></li>
+<li><a class="reference internal" href="#others">Others</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#sides">Sides</a><ul>
+<li><a class="reference internal" href="#crew-and-infantry">Crew and Infantry</a></li>
+<li><a class="reference internal" href="#id1">AI and Base-Building</a></li>
+<li><a class="reference internal" href="#id2">Paradrop Defaults</a></li>
+<li><a class="reference internal" href="#sidebar-eva-and-colors">Sidebar, EVA and Colors</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -111,6 +124,8 @@ differing weights.</p>
 will only work for 16 of these.</p>
 <p>Each country can be customized using the following flags in the country&#8217;s INI
 section:</p>
+<div class="section" id="loading-screen-flags-and-taunts">
+<h3>Loading Screen, Flags and Taunts<a class="headerlink" href="#loading-screen-flags-and-taunts" title="Permalink to this headline">¶</a></h3>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">The following filename specifications (where raw C-style format
@@ -166,6 +181,11 @@ this color from the <span><tt class="docutils literal"><span class="pre">[Colors
 <dd>Brief description of the country, displayed in the status bar of the country
 selection screen when the player mouse-overs that country in the country
 selection drop-down list.</dd>
+</dl>
+</div>
+<div class="section" id="selection-and-position">
+<h3>Selection and Position<a class="headerlink" href="#selection-and-position" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[Country]►RandomSelectionWeight=</span></tt><span class="type definition"> (integer)</span></span></dt>
 <dd>Specifies how likely it is that this country will be randomly selected when a
 player chooses &#8216;Random&#8217;. The probability of this country being picked is
@@ -181,8 +201,18 @@ effectively hide countries without having to change the <span><tt class="docutil
 list and thus without risking game crashes. To also prevent such countries
 from being selected randomly, set <span><tt class="docutils literal"><span class="pre">RandomSelectionWeight=0</span></tt></span>. Defaults to
 <cite>100</cite>.</dd>
+</dl>
+</div>
+<div class="section" id="ai-and-base-building">
+<h3>AI and Base-Building<a class="headerlink" href="#ai-and-base-building" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[Country]►AI.PowerPlants=</span></tt><span class="type definition"> (list of BuildingTypes)</span></span></dt>
 <dd>A list of buildings that the AI will treat as this country&#8217;s power plants.</dd>
+</dl>
+</div>
+<div class="section" id="paradrop-defaults">
+<h3>Paradrop Defaults<a class="headerlink" href="#paradrop-defaults" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[Country]►ParaDrop.Types=</span></tt><span class="type definition"> (list of InfantryTypes and/or VehicleTypes)</span></span></dt>
 <dd><p class="first">The units that will be paradropped by <span><tt class="docutils literal"><span class="pre">Type=ParaDrop</span></tt></span> super weapons (such
 as the one normally provided by a Tech Airport) for this country. Defaults to
@@ -205,12 +235,18 @@ corresponding side&#8217;s <span><tt class="docutils literal"><span class="pre">
 <dd>This country&#8217;s default parachute used if not overridden by a
 <span class="type docutils literal">TechnoType</span>. Defaults to the corresponding side&#8217;s
 <span><tt class="docutils literal"><span class="pre">Parachute.Anim=</span></tt></span>.</dd>
+</dl>
+</div>
+<div class="section" id="others">
+<h3>Others<a class="headerlink" href="#others" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[Country]►VeteranBuildings=</span></tt><span class="type definition"> (list of BuildingTypes)</span></span></dt>
 <dd>All buildings in this list start as veteran for this country and, if
 available, veteran cameos are displayed in the sidebar.</dd>
 </dl>
 <p class="versionadded">
 <span class="versionmodified">New in version 0.1.</span></p>
+</div>
 </div>
 <div class="section" id="sides">
 <h2>Sides<a class="headerlink" href="#sides" title="Permalink to this headline">¶</a></h2>
@@ -219,6 +255,8 @@ available, veteran cameos are displayed in the sidebar.</dd>
 fully-working countries can be implemented (see above).</p>
 <p>Each side can (and should) define its own values for the following flags in the
 side&#8217;s INI section:</p>
+<div class="section" id="crew-and-infantry">
+<h3>Crew and Infantry<a class="headerlink" href="#crew-and-infantry" title="Permalink to this headline">¶</a></h3>
 <dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[Side]►DefaultDisguise=</span></tt><span class="type definition"> (InfantryType)</span></span></dt>
 <dd>Default <span class="type docutils literal">InfantryType</span> that disguisable infantry will be disguised as
@@ -227,10 +265,23 @@ when first created.</dd>
 <dd>The <span class="type docutils literal">InfantryType</span> that is spawned as a survivor when objects (with
 <span><tt class="docutils literal"><span class="pre">Crewed=yes</span></tt></span> set) owned by this side are destroyed (or, in the case of
 buildings, sold).</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►Engineer=</span></tt><span class="type definition"> (InfantryType)</span></span></dt>
+<dd>The <span class="type docutils literal">InfantryType</span> that has a chance to be spawned when buildings with
+<span><tt class="docutils literal"><span class="pre">Factory=BuildingType</span></tt></span> owned by this side are destroyed or sold. Defaults
+to <span><tt class="docutils literal"><span class="pre">[General]►Engineer</span></tt></span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►Technician=</span></tt><span class="type definition"> (InfantryType)</span></span></dt>
+<dd>The <span class="type docutils literal">InfantryType</span> that has a chance to be spawned when armed objects
+owned by this side are destroyed or sold. Defaults to
+<span><tt class="docutils literal"><span class="pre">[General]►Technician</span></tt></span>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[Side]►SurvivorDivisor=</span></tt><span class="type definition"> (integer)</span></span></dt>
 <dd>An object&#8217;s refund amount is divided by this number to determine how many
 survivors will be spawned when this object is destroyed (or, in the case of
 buildings, sold).</dd>
+</dl>
+</div>
+<div class="section" id="id1">
+<h3>AI and Base-Building<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[Side]►AI.BaseDefenses=</span></tt><span class="type definition"> (list of BuildingTypes)</span></span></dt>
 <dd>List of base defense buildings that the AI can build.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[Side]►AI.BaseDefenseCounts=</span></tt><span class="type definition"> (list of integers)</span></span></dt>
@@ -239,6 +290,11 @@ buildings, sold).</dd>
 <span><tt class="docutils literal"><span class="pre">[General]►AlliedBaseDefenseCounts</span></tt></span> for GDI (Allied),
 <span><tt class="docutils literal"><span class="pre">[General]►SovietBaseDefenseCounts</span></tt></span> for Nod (Soviet), and
 <span><tt class="docutils literal"><span class="pre">[General]►ThirdBaseDefenseCounts</span></tt></span> for ThirdSide (Yuri).</dd>
+</dl>
+</div>
+<div class="section" id="id2">
+<h3>Paradrop Defaults<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[Side]►ParaDrop.Types=</span></tt><span class="type definition"> (list of InfantryTypes and/or VehicleTypes)</span></span></dt>
 <dd><p class="first">The units that will be paradropped by <span><tt class="docutils literal"><span class="pre">Type=ParaDrop</span></tt></span> super weapons (such
 as the one normally provided by a Tech Airport) for this side. Defaults to
@@ -263,6 +319,11 @@ that will be paradropped. Defaults to <span><tt class="docutils literal"><span c
 <dt><span><tt class="definition docutils literal"><span class="pre">[Side]►Parachute.Anim=</span></tt><span class="type definition"> (Animation)</span></span></dt>
 <dd>This side&#8217;s default parachute used if not overridden by the country or a
 <span class="type docutils literal">TechnoType</span>. Defaults to <cite>PARACH</cite>.</dd>
+</dl>
+</div>
+<div class="section" id="sidebar-eva-and-colors">
+<h3>Sidebar, EVA and Colors<a class="headerlink" href="#sidebar-eva-and-colors" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[Side]►Sidebar.MixFileIndex=</span></tt><span class="type definition"> (integer)</span></span></dt>
 <dd>The MIX file number to use for the sidebar (e.g. <cite>1</cite> for the Allied
 sidec01.mix, <cite>2</cite> for the Soviet sidec02.mix).</dd>
@@ -294,6 +355,7 @@ here.</p>
 <span class="versionmodified">New in version 0.1.</span></p>
 </div>
 </div>
+</div>
 
 
           </div>
@@ -313,7 +375,7 @@ here.</p>
         <li class="right" >
           <a href="secretlabs.html" title="Secret Labs"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.4 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.5 documentation</a> &raquo;</li>
           <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

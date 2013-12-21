@@ -27,7 +27,4 @@ a way to restore the original behavior.
 	difficulty: easy, medium, hard. Use :value:`yes` to let the AI bypass build
 	limits. Defaults to :value:`no,no,no`.
 
-	.. warning:: You have to use :value:`yes` to enable this setting. :value:`1`
-	  and :value:`true` will not work here.
-
 .. versionadded:: 0.1
