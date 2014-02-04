@@ -138,9 +138,9 @@ Targeting
 + :value:`NoTarget`: This super weapon doesn't need any valid coordinates to
   strike. You can use this for map-wide super weapons.
 + :value:`Offensive`: Targets offensively, without any special handling like
-  :value:`LightningStorm` or :value:`Nuke`.
+  :value:`LightningStorm` or :value:`Nuke`. Respects :value:`SW.AffectsHouse`.
 + :value:`Stealth`: Targets stealth units or buildings only. Respects
-  :value:`SW.RequiresTarget` and :value:`SW.RequiresHouse`.
+  :value:`SW.AffectsTarget` and :value:`SW.AffectsHouse`.
 + :value:`Base`: Targets the owning player's base center.
 + :value:`Self`: Targets buildings providing this very super weapon, belonging
   to the owning player only.
