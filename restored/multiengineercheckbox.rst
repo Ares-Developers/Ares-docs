@@ -12,6 +12,8 @@ an engineer, otherwise the settings in :file:`rulesmd.ini` are used.
   :alt: Screenshot of the skirmish menu with Multi-Engineer turned on
   :align: center
 
+This tag goes into :file:`uimd.ini`:
+
 :tagdef:`[UISettings]AllowMultiEngineer=bool`
   Specifies whether the user can turn the Multi Engineer feature on and off from
   the menu. Defaults to :value:`no`. If the checkbox is not shown the settings
