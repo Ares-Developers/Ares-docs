@@ -1,10 +1,10 @@
-.. index:: DestroyAnims; DestroyAnims don't cause reconnection errors anymore.
+.. index:: DestroyAnim; DestroyAnims don't cause reconnection errors anymore.
 
-====================================================
-:captiontag:`DestroyAnims` Cause Reconnection Errors
-====================================================
+======================================================
+:captiontag:`DestroyAnim`\ s Cause Reconnection Errors
+======================================================
 
-The :tag:`DestroyAnims` flag used to cause reconnection errors in multiplayer
+The :tag:`DestroyAnim` flag used to cause reconnection errors in multiplayer
 whenever it was used. This should not happen anymore.
 
 .. versionadded:: 0.1
