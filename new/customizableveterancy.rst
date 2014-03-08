@@ -48,9 +48,10 @@ From Mind-Controlled
 
 :tagdef:`[TechnoType]Experience.MindControlSelfModifier=float - multiplier`
   If a mind-controlled unit kills an enemy, its controller gets this percentage
-  of the experience the original killer gets. This additional experience is not
-  subtracted from the experience gained by the original killer. Defaults to
-  :value:`0%`.
+  of the experience the original killer can get (the amount before
+  :tag:`Experience.MindControlVictimModifier` is applied). This additional
+  experience is not subtracted from the experience gained by the original
+  killer. Defaults to :value:`0%`.
 :tagdef:`[TechnoType]Experience.MindControlVictimModifier=float - multiplier`
   If a mind-controlled unit kills an enemy, its gained experience is multiplied
   by this value. Use this for example to subtract the amount the unit's
