@@ -84,6 +84,37 @@ Require Stolen Technology
 .. versionadded:: 0.1
 
 
+Require Factory Built By Country
+````````````````````````````````
+
+:tagdef:`[BuildingType]FactoryOwners.HaveAllPlans=boolean`
+  Whether a player capturing a building of this type would permanently gain all
+  plans of its initial owner. The initial owner is the player who owned it
+  first: the player who built it, or the owner of buildings pre-placed on the
+  map. For neutral structures, this would be the neutral country. Defaults to
+  :value:`no`.
+:tagdef:`[TechnoType]FactoryOwners=list of houses`
+  The list of countries whose factories can build this object. If empty, every
+  country is allowed to build this object. Otherwise, players need to own at
+  least one factory built by a country in this list or the plans of at least one
+  of these countries to produce it.
+:tagdef:`[TechnoType]FactoryOwners.Forbidden=list of houses`
+  The list of countries whose factories cannot build this object. Players owning
+  only factories built by countries in this list and only having plans of these
+  countries are prevented from producing it.
+
+.. note:: AI ignores :tag:`FactoryOwners` and :tag:`FactoryOwners.Forbidden` on
+  buildings, but not on units.
+
+.. note:: When undeploying, buildings will lose their initial owner and the
+  undeployed vehicle will be initially owned by the actual player. This might
+  change in the future.
+
+.. index:: Prerequisites; Require building built by certain country.
+
+.. versionadded:: 0.6
+
+
 Overview
 ````````
 
