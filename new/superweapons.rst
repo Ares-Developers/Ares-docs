@@ -818,6 +818,10 @@ Iron Curtain and Force Shield specific tags:
   :tag:`[General]ForceShieldPlayFadeSoundTime` for :value:`ForceShield`, to
   :value:`0` otherwise.
 
+The duration of the protection can be customized for each :type:`TechnoType`.
+See the :doc:`Force Shield Modifier </new/forceshield>` section for
+:tag:`Type=ForceShield`, otherwise see the :ref:`Iron Curtain Effect on Warheads
+<wh-ironcurtain>` section.
 
 .. versionadded:: 0.2
 

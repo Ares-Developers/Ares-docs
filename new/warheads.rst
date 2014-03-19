@@ -2,6 +2,7 @@ Warheads
 ~~~~~~~~
 
 
+.. _wh-ironcurtain:
 
 Iron Curtain Effect
 ```````````````````
