@@ -11,6 +11,10 @@ it, and allows others to take over the now-neutral vehicle.
   damaging the vehicle itself. The first passenger matching the vehicle's
   :tag:`Operator` is considered the driver. All other passengers will be
   ejected. Defaults to :value:`no`.
+:tagdef:`[Warhead]KillDriver.KillBelowPercent=float`
+  Specifies the percentage of health a unit has to go below to have its driver
+  killed by a :tag:`KillDriver=yes` warhead. A unit not below this health level
+  is only damaged and the driver is not killed. Defaults to :value:`100%`.
 :tagdef:`[TechnoType]ProtectedDriver=boolean`
   Whether the driver of this vehicle cannot be killed, i.e. whether this vehicle
   is immune to :tag:`KillDriver`. :tag:`Organic=yes` and :tag:`Natural=yes`
