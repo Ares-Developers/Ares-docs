@@ -26,8 +26,8 @@ mind-control) and weren't updated for temporal weapons. All of this should work
 now.
 
 Two new EVA warnings have been added, :value:`EVA_CloakedUnitDetected` and
-:value:`EVA_SubterraneanUnitDetected`, which are played when a Sensor Array
-detects cloaked units or units moving underground respectively.
+:value:`EVA_SubterraneanUnitDetected`, which are played when a detector like a
+Sensor Array detects cloaked units or units moving underground respectively.
 
 .. note:: You have to add these EVA voices to :file:`evamd.ini` before you can
   use them. The game does not contain audio files for the three original EVA
