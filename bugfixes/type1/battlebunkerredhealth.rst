@@ -1,0 +1,15 @@
+.. index:: Battle Bunkers; Infantry can enter Battle Bunkers even in red health.
+
+==================================================
+Infantry Cannot Enter Battle Bunkers in Red Health
+==================================================
+
+Occupiable neutral structures are abandoned by their occupants when they are
+damaged to red health. As long as the building isn't repaired, no infantry could
+occupy it again. Battle Bunkers will not throw out their occupiers once they
+reach red health, though new infantry still could not enter them.
+
+This has been changed so infantry is still allowed to enter Battle Bunkers when
+in red health.
+
+.. versionadded:: 0.6
