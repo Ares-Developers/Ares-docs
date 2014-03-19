@@ -63,3 +63,26 @@ Mind-controlled open-topped vehicles will not gain any experience from their
 passengers if the mind-controller's and the open-topped's players aren't allied.
 Mind-controllers will not gain experience from killing enemies with a captured
 allied unit.
+
+From Spawns
+```````````
+
+Spawners like the Aircraft Carrier or the Destroyer can get experience from
+their spawned aircrafts' kills. For this to work, both the spawn and the spawner
+must be :tag:`Trainable=yes`. The following two tags go on the unit that spawns,
+not the spawns themselves.
+
+:tagdef:`[TechnoType]Experience.SpawnOwnerModifier=float - multiplier`
+  The percentage of experience the unit owning a spawn gains when the spawn
+  kills an enemy. This tag has to be set on the spawner unit, not the spawn.
+  Defaults to :value:`0%`.
+:tagdef:`[TechnoType]Experience.SpawnModifier=float - multiplier`
+  The percentage of experience a spawn of this unit gains when the spawn kills
+  an enemy. This tag has to be set on the spawner unit, not the spawn.
+  Defaults to :value:`100%`.
+
+To split the experience between spawner and spawns, make these values sum up to
+100%. This is not required, though.
+
+If a spawner is mind-controlled, both the spawner's and the spawn's experience
+is multiplied by :tag:`Experience.MindControlVictimModifier`.
