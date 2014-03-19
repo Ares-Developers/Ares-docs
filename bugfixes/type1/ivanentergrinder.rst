@@ -1,0 +1,17 @@
+.. index:: Crazy Ivan; Ivan cannot enter a Grinder without bombing it first.
+
+=================================
+Crazy Ivans Cannot Enter Grinders
+=================================
+
+Crazy Ivan always got the Ivan Bomb cursor on an allied Grinder and thus could
+not be ordered to enter it normally. Once the Grinder was rigged with a bomb,
+Crazy Ivan was allowed to enter it. Force fire or force move keys could not
+alter this behavior.
+
+:game:`Ares` changes this so Crazy Ivan gets the enter cursor on allied Grinders
+by default. Enemy Grinders get the Ivan Bomb cursor. You can still override this
+behavior if you want to plant a  bomb on a Grinder by pressing the force fire
+key.
+
+.. versionadded:: 0.6
