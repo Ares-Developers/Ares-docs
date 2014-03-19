@@ -6,6 +6,9 @@ described below, and an issue has been resolved with regard to upgrades as
 prerequisites (see :doc:`Type 2 fixes
 </bugfixes/type2/buildingtypeupgradesarenotviableprerequisites>`).
 
+Require Theater
+```````````````
+
 :tagdef:`[Unit]Prerequisite.RequiredTheaters=list of theater names`
   The map theaters in which the unit is available. Defaults to all theaters. For
   example, if only the :value:`SNOW` theater were specified then the unit would
@@ -29,6 +32,9 @@ prerequisites (see :doc:`Type 2 fixes
 .. versionadded:: 0.1
 
 
+Negative Prerequisites
+``````````````````````
+
 :tagdef:`[Unit]Prerequisite.Negative=list of BuildingTypes`
   The buildings that preclude construction of the unit. If the player owns one
   or more of the buildings on this list then the unit will not be available.
@@ -42,6 +48,9 @@ prerequisites (see :doc:`Type 2 fixes
 
 .. versionadded:: 0.1
 
+
+Multiple Alternative Prerequisites Lists
+````````````````````````````````````````
 
 :tagdef:`[Unit]Prerequisite.Lists=integer`
   Specifies how many extra Prerequisite lists are available (see below).
@@ -62,6 +71,9 @@ prerequisites (see :doc:`Type 2 fixes
 .. versionadded:: 0.1
 
 
+Require Stolen Technology
+`````````````````````````
+
 :tagdef:`[Unit]Prerequisite.StolenTechs=list of integers`
   The list of stealable technology types that must be stolen before this object
   can be built. See :ref:`Stolen Technology <spybehavior-stolentech>` for more
@@ -71,6 +83,9 @@ prerequisites (see :doc:`Type 2 fixes
 
 .. versionadded:: 0.1
 
+
+Overview
+````````
 
 Below is a flowchart of the current prerequisite system. Blue sections
 are unchanged from the original system. Pink sections have been
