@@ -10,22 +10,22 @@ From Ares 0.1
 
 Changed tags:
 
-  :tag:`[Superweapon]SW.Deliver` --> :tag:`[Superweapon]Deliver.Types`.
+  :tag:`[SuperWeapon]SW.Deliver` --> :tag:`[SuperWeapon]Deliver.Types`.
     Replace the old tag name by the new tag name.
   
-  :tag:`[Superweapon]SW.DeliverBuildups` --> :tag:`[Superweapon]Deliver.Buildups`.
+  :tag:`[SuperWeapon]SW.DeliverBuildups` --> :tag:`[SuperWeapon]Deliver.Buildups`.
     Replace the old tag name by the new tag name.
   
-  :tag:`[Superweapon]SonarPulse.Range` --> :tag:`[Superweapon]SW.Range`.
+  :tag:`[SuperWeapon]SonarPulse.Range` --> :tag:`[SuperWeapon]SW.Range`.
     Replace the old tag name by the new tag name.
   
-  :tag:`[Superweapon]GenericWarhead.Warhead` --> :tag:`[Superweapon]SW.Warhead`.
+  :tag:`[SuperWeapon]GenericWarhead.Warhead` --> :tag:`[SuperWeapon]SW.Warhead`.
     Replace the old tag name by the new tag name.
   
-  :tag:`[Superweapon]GenericWarhead.Damage` --> :tag:`[Superweapon]SW.Damage`.
+  :tag:`[SuperWeapon]GenericWarhead.Damage` --> :tag:`[SuperWeapon]SW.Damage`.
     Replace the old tag name by the new tag name.
   
-  :tag:`[Superweapon]Nuke.Sound` --> :tag:`[Superweapon]SW.ActivationSound`.
+  :tag:`[SuperWeapon]Nuke.Sound` --> :tag:`[SuperWeapon]SW.ActivationSound`.
     Replace the old tag name by the new tag name.
 
 Other changes:
@@ -74,16 +74,16 @@ Changed tags:
   :tag:`[Weapon]IvanBomb.TickingSound`
     Defaults to :tag:`[AudioVisual]BombTickingSound`.
 
-  :tag:`[Superweapon]Lightning.Sounds`
+  :tag:`[SuperWeapon]Lightning.Sounds`
     Defaults to :tag:`[AudioVisual]LightningSounds`.
 
-  :tag:`[Superweapon]Lightning.Clouds`
+  :tag:`[SuperWeapon]Lightning.Clouds`
     Defaults to :tag:`[General]WeatherConClouds`.
 
-  :tag:`[Superweapon]Lightning.Bolts`
+  :tag:`[SuperWeapon]Lightning.Bolts`
     Defaults to :tag:`[General]WeatherConBolts`.
 
-  :tag:`[Superweapon]Lightning.Debris`
+  :tag:`[SuperWeapon]Lightning.Debris`
     Defaults to :tag:`[General]MetallicDebris`.
 
 Other changes:
