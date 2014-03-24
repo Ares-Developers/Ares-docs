@@ -143,3 +143,88 @@ Other changes:
   :value:`Neutral` or :value:`Special`, because :game:`Ares` did not support
   survivors for them. The original handling has been restored, and these houses
   will use :tag:`[General]Technician` as crew.
+
+
+From Ares 0.5 and below
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Changed tags:
+
+  The following tags have been changed to use the actual value of their default
+  tags. (Continued work from earlier :game:`Ares` releases.)
+
+  :tag:`[Side]ParaDrop.Num`
+    Defaults to the original tag for a side.
+
+  :tag:`[Side]ParaDrop.Types`
+    Defaults to the original tag for a side.
+
+  :tag:`[Side]Parachute.Anim`
+    Defaults to :tag:`[General]Parachute`.
+
+  :tag:`[Country]ParaDrop.Num`
+    Defaults to the side's :tag:`ParaDrop.Num`.
+
+  :tag:`[Country]ParaDrop.Types`
+    Defaults to the side's :tag:`ParaDrop.Types`.
+
+  :tag:`[Country]AI.PowerPlants`
+    If empty or not set, the side's default power plants are used.
+
+  :tag:`[Weapon]Wave.Color`
+    Default depends on wave type.
+
+  :tag:`[SuperWeapon]SW.Damage`
+    Defaults depends on :tag:`Type`.
+
+  :tag:`[SuperWeapon]SW.Range`
+    Defaults depends on :tag:`Type`.
+
+  :tag:`[SuperWeapon]SW.Deferment`
+    Defaults to :tag:`[General]LightningDeferment` for
+    :tag:`Type=LightningStorm`.
+
+  :tag:`[SuperWeapon]SW.Animation`
+    Defaults depends on :tag:`Type`.
+
+  :tag:`[SuperWeapon]SW.Sound`
+    Defaults depends on :tag:`Type`.
+
+  :tag:`[SuperWeapon]SW.ActivationSound`
+    Defaults depends on :tag:`Type`.
+
+  :tag:`[SuperWeapon]Lightning.Duration`
+    Defaults to :tag:`[General]LightningStormDuration`.
+
+  :tag:`[SuperWeapon]Lightning.RadarOutage`
+    Defaults to :tag:`[General]LightningStormDuration`.
+
+  :tag:`[SuperWeapon]Lightning.HitDelay`
+    Defaults to :tag:`[General]LightningHitDelay`.
+
+  :tag:`[SuperWeapon]Lightning.ScatterDelay`
+    Defaults to :tag:`[General]LightningScatterDelay`.
+
+  :tag:`[SuperWeapon]Lightning.Separation`
+    Defaults to :tag:`[General]LightningSeparation`.
+
+  :tag:`[SuperWeapon]Lightning.PrintText`
+    Defaults to :tag:`[General]LightningPrintText`.
+
+  :tag:`[SuperWeapon]Lightning.BoltExplosion`
+    Defaults to :tag:`[General]WeatherConBoltExplosion`.
+
+  :tag:`[SuperWeapon]Nuke.TakeOff`
+    Defaults to :tag:`[General]NukeTakeOff`.
+
+  :tag:`[SuperWeapon]Dominator.FireAtPercentage`
+    Defaults to :tag:`[General]DominatorFireAtPercentage`.
+
+  :tag:`[SuperWeapon]Chronosphere.BlastSrc`
+    Defaults to :tag:`[General]ChronoBlast`.
+
+  :tag:`[SuperWeapon]Chronosphere.BlastDest`
+    Defaults to :tag:`[General]ChronoBlastDest`.
+
+  :tag:`[SuperWeapon]Mutate.Explosion`
+    Defaults to :tag:`[General]MutateExplosion`.
