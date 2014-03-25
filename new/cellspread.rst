@@ -1,6 +1,28 @@
 :captiontag:`CellSpread` Enhancements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+:captiontag:`CellSpread`
+------------------------
+
+:game:`Yuri's Revenge` used a lookup table to iterate all the cells affected by
+area of effect weapons using :tag:`CellSpread`. This lookup table was limited
+because it only supported a maximum range of 11 (which contained errors).
+
+:game:`Ares` replaces this lookup table and makes it possible to use larger
+values for :tag:`CellSpread`. All area of effect weapon features :game:`Ares`
+added (like :doc:`AttachEffects on Warheads <attacheffect>`,
+:doc:`EMP </restored/emp>`, :ref:`IronCurtain on Weapons <wh-ironcurtain>`)
+have been updated to support this as well.
+
+.. warning:: Consider: If you double the range, the number of affected cells is
+  quadrupled. For performance reasons it is not advised to use :tag:`CellSpread`
+  for frequent or map wide effects.
+
+.. index:: Warheads; CellSpread supports larger values.
+
+.. versionadded:: 0.6
+
+
 :captiontag:`CellSpread` Hit Limit
 ----------------------------------
 
