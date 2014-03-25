@@ -4,7 +4,7 @@ AttachEffect
 The AttachEffect system was designed as a spiritual successor to
 :game:`NPatch`'s Upgrade logic, but it was aimed to not be limited only to
 superweapons. AttachEffect tags can be applied to both the Big Four (all
-:type:`TechnoTypes`) and Warheads, unless stated otherwise.
+:type:`TechnoTypes`) and :type:`Warheads`, unless stated otherwise.
 
 .. note:: The state of AttachEffects on units does not update while in a
   transport, while under a temporal effect and so on. In this matter, they
