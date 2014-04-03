@@ -1,0 +1,31 @@
+Spawners
+~~~~~~~~
+
+Spawners have been enhanced to support cloak. A cloaking Destroyer or Aircraft
+Carrier will not cause all its spawns to self-destruct any more. Spawners now
+have rudimentary support for :tag:`BalloonHover=yes`.
+
+Flying Aircraft Carriers
+------------------------
+
+Non-Missile spawns were always put on the ground for take-off, even if the
+carrier was in the air. This has been changed and spawns now start from the the
+carrier.
+
+Spawned units now return to :tag:`BalloonHover=yes` spawners, instead of flying
+off the map and potentially crashing the game. If the spawner unit is moving, it
+is possible that the spawns lower on the wrong cell and then gain altitude
+again.
+
+For best effects, the :tag:`FlightLevel` of spawns should be higher than the
+:tag:`FlightLevel` of the spawning unit. Otherwise the spawns would disappear
+from mid-air when docking, or even try to lower down to the ground instead of
+going up to the carrier.
+
+.. note:: Please note that this logics still has some shortcomings and it has
+  many opportunities for improvements. For example, move sounds do not work
+  correctly once a spawn has launched once.
+
+.. index:: Spawners; Flying Aircraft Carriers
+
+.. versionadded:: 0.6

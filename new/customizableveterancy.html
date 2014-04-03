@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Customizable Veterancy &mdash; Ares 0.5 documentation</title>
+    <title>Customizable Veterancy &mdash; Ares 0.6 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.5',
+        VERSION:     '0.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.5 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.6 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Custom Missiles" href="custommissiles.html" />
     <link rel="prev" title="Customizable Parachute Animations" href="customizableparachuteanimations.html" /> 
@@ -44,7 +44,7 @@
         <li class="right" >
           <a href="customizableparachuteanimations.html" title="Customizable Parachute Animations"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.5 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.6 documentation</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -56,6 +56,7 @@
 <li><a class="reference internal" href="#from-passengers">From Passengers</a></li>
 <li><a class="reference internal" href="#from-airstrikes">From Airstrikes</a></li>
 <li><a class="reference internal" href="#from-mind-controlled">From Mind-Controlled</a></li>
+<li><a class="reference internal" href="#from-spawns">From Spawns</a></li>
 </ul>
 </li>
 </ul>
@@ -133,9 +134,10 @@ Defaults to <cite>no</cite>.</dd>
 <dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►Experience.MindControlSelfModifier=</span></tt><span class="type definition"> (float - multiplier)</span></span></dt>
 <dd>If a mind-controlled unit kills an enemy, its controller gets this percentage
-of the experience the original killer gets. This additional experience is not
-subtracted from the experience gained by the original killer. Defaults to
-<cite>0%</cite>.</dd>
+of the experience the original killer can get (the amount before
+<span><tt class="docutils literal"><span class="pre">Experience.MindControlVictimModifier</span></tt></span> is applied). This additional
+experience is not subtracted from the experience gained by the original
+killer. Defaults to <cite>0%</cite>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►Experience.MindControlVictimModifier=</span></tt><span class="type definition"> (float - multiplier)</span></span></dt>
 <dd>If a mind-controlled unit kills an enemy, its gained experience is multiplied
 by this value. Use this for example to subtract the amount the unit&#8217;s
@@ -147,6 +149,27 @@ controller gets by having this value and
 passengers if the mind-controller&#8217;s and the open-topped&#8217;s players aren&#8217;t allied.
 Mind-controllers will not gain experience from killing enemies with a captured
 allied unit.</p>
+</div>
+<div class="section" id="from-spawns">
+<h2>From Spawns<a class="headerlink" href="#from-spawns" title="Permalink to this headline">¶</a></h2>
+<p>Spawners like the Aircraft Carrier or the Destroyer can get experience from
+their spawned aircrafts&#8217; kills. For this to work, both the spawn and the spawner
+must be <span><tt class="docutils literal"><span class="pre">Trainable=yes</span></tt></span>. The following two tags go on the unit that spawns,
+not the spawns themselves.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►Experience.SpawnOwnerModifier=</span></tt><span class="type definition"> (float - multiplier)</span></span></dt>
+<dd>The percentage of experience the unit owning a spawn gains when the spawn
+kills an enemy. This tag has to be set on the spawner unit, not the spawn.
+Defaults to <cite>0%</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►Experience.SpawnModifier=</span></tt><span class="type definition"> (float - multiplier)</span></span></dt>
+<dd>The percentage of experience a spawn of this unit gains when the spawn kills
+an enemy. This tag has to be set on the spawner unit, not the spawn.
+Defaults to <cite>100%</cite>.</dd>
+</dl>
+<p>To split the experience between spawner and spawns, make these values sum up to
+100%. This is not required, though.</p>
+<p>If a spawner is mind-controlled, both the spawner&#8217;s and the spawn&#8217;s experience
+is multiplied by <span><tt class="docutils literal"><span class="pre">Experience.MindControlVictimModifier</span></tt></span>.</p>
 </div>
 </div>
 
@@ -168,12 +191,12 @@ allied unit.</p>
         <li class="right" >
           <a href="customizableparachuteanimations.html" title="Customizable Parachute Animations"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.5 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.6 documentation</a> &raquo;</li>
           <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2013, The Ares Contributors.
+        &copy; Copyright 2014, The Ares Contributors.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>

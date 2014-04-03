@@ -1,10 +1,10 @@
 .. index:: DestroyAnims; DestroyAnims can use remappable colors.
 
-======================================
-:captiontag:`DestroyAnims` Don't Remap
-======================================
+========================================
+:captiontag:`DestroyAnim`\ s Don't Remap
+========================================
 
-The remappable parts of animations played via the use of the :tag:`DestroyAnims`
+The remappable parts of animations played via the use of the :tag:`DestroyAnim`
 flag (when a building is destroyed) used to remain red in color they would not
 get remapped to the owning player's house color. Now they will.
 

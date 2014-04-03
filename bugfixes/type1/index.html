@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Type 1 Fixes (Original Bugs) &mdash; Ares 0.5 documentation</title>
+    <title>Type 1 Fixes (Original Bugs) &mdash; Ares 0.6 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.5',
+        VERSION:     '0.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.5 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.6 documentation" href="../../index.html" />
     <link rel="up" title="Bug Fixes" href="../index.html" />
     <link rel="next" title="AI Targeting Cloaked Objects With Major Super Weapons" href="aitargetingcloakedobjectswithmajorsuperweapons.html" />
     <link rel="prev" title="Bug Fixes" href="../index.html" /> 
@@ -44,7 +44,7 @@
         <li class="right" >
           <a href="../index.html" title="Bug Fixes"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.5 documentation</a> &raquo;</li>
+        <li><a href="../../index.html">Ares 0.6 documentation</a> &raquo;</li>
           <li><a href="../index.html" accesskey="U">Bug Fixes</a> &raquo;</li> 
       </ul>
     </div>
@@ -86,6 +86,7 @@ does).</p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="aitargetingcloakedobjectswithmajorsuperweapons.html">AI Targeting Cloaked Objects With Major Super Weapons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="animatedsuperweaponcursor.html">Animated Super Weapon Cursor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="battlebunkerredhealth.html">Infantry Cannot Enter Battle Bunkers in Red Health</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chaosgasandstopcommand.html">Chaos Gas (<span><span class="type">Psychedelic=yes</span></span>) and the Stop Command</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chronoshiftabort.html">Aborting the Chronoshift announces the Chronosphere as ready</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chronoshiftwillsinkjumpjetunits.html">Chronoshift Will Sink Jumpjet Units</a></li>
@@ -93,15 +94,19 @@ does).</p>
 <li class="toctree-l1"><a class="reference internal" href="firingvoicesandveterancy.html">Firing Voices and Veterancy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="frozenmutationmakeinfantryanimations.html">Frozen Mutation (<span><span class="type">MakeInfantry</span></span>) Animations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ivanbombsdisappearing.html">Disappearing Ivan Bombs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ivanentergrinder.html">Crazy Ivans Cannot Enter Grinders</a></li>
 <li class="toctree-l1"><a class="reference internal" href="loadscreencolors.html">Load Screen Colors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mindcontrolbuildings.html">Mind-Controlled Buildings Stopped Working When Freed</a></li>
 <li class="toctree-l1"><a class="reference internal" href="misleadingveterannavalcameos.html">Misleading Veteran Naval Cameos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opentoppedjambuildings.html">Open-Topped Vehicles and Defensive Structures Exploit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="parasitesinairborneunits.html">Parasites In Airborne Units</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pipdistortionbug.html">Pip Distortion Bug</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prismsupportbugs.html">Prism Support Bugs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="secretlabboonweighting.html">Secret Lab Boon Weighting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shipyardrepairimmune.html">Units Being Repaired on Shipyards are Immune to Damage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="soundsplayingwhenloading.html">Robot Tank Sounds On Loading Screen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spyingalliedbuildings.html">Spying on Allied Buildings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="techstructuresneedsengineer.html">Tech Structures and Animations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="temporalwarheadsandpotentialoccupationtargets.html"><span><span class="type">Temporal</span></span> Warheads and Potential Occupation Targets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="temporalwarheadsearnexperiencebykillingfriendlyunits.html"><span><span class="type">Temporal</span></span> Warheads Earn Experience By Killing Friendly Units</a></li>
 <li class="toctree-l1"><a class="reference internal" href="temporalwarheadsgaindoubleexperience.html"><span><span class="type">Temporal</span></span> Warheads Gain Double Experience</a></li>
@@ -130,12 +135,12 @@ does).</p>
         <li class="right" >
           <a href="../index.html" title="Bug Fixes"
              >previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.5 documentation</a> &raquo;</li>
+        <li><a href="../../index.html">Ares 0.6 documentation</a> &raquo;</li>
           <li><a href="../index.html" >Bug Fixes</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2013, The Ares Contributors.
+        &copy; Copyright 2014, The Ares Contributors.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>

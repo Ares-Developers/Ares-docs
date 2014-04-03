@@ -1,0 +1,45 @@
+:captiontag:`CellSpread` Enhancements
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:captiontag:`CellSpread`
+------------------------
+
+:game:`Yuri's Revenge` used a lookup table to iterate all the cells affected by
+area of effect weapons using :tag:`CellSpread`. This lookup table was limited
+because it only supported a maximum range of 11 (which contained errors).
+
+:game:`Ares` replaces this lookup table and makes it possible to use larger
+values for :tag:`CellSpread`. All area of effect weapon features :game:`Ares`
+added (like :doc:`AttachEffects on Warheads <attacheffect>`,
+:doc:`EMP </restored/emp>`, :ref:`IronCurtain on Weapons <wh-ironcurtain>`)
+have been updated to support this as well.
+
+.. warning:: Consider: If you double the range, the number of affected cells is
+  quadrupled. For performance reasons it is not advised to use :tag:`CellSpread`
+  for frequent or map wide effects.
+
+.. index:: Warheads; CellSpread supports larger values.
+
+.. versionadded:: 0.6
+
+
+:captiontag:`CellSpread` Hit Limit
+----------------------------------
+
+The :tag:`CellSpread` logic iterates all cells in range, and affects all objects
+on these cells. If an object occupies more than one cell like buildings with a
+foundation larger than 1x1, it could be encountered multiple times and thus
+would take multiple hits (potentially one for each cell of its foundation).
+
+The following tag limits the number of times the same object can be hit by the
+same cause. If an object is hit more often than allowed, the hits closest to the
+impact site are used, all others are discarded.
+
+:tagdef:`[Warhead]CellSpread.MaxAffect=integer`
+  The number of times an object can be affected at most when hit by a warhead
+  using :tag:`CellSpread`. Set this to :value:`1` to make the same object not be
+  hit not more than once. Defaults to :value:`-1` (infinite).
+
+.. index:: Warheads; Limit how often CellSpread hits the same object.
+
+.. versionadded:: 0.6

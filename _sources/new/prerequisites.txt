@@ -6,6 +6,9 @@ described below, and an issue has been resolved with regard to upgrades as
 prerequisites (see :doc:`Type 2 fixes
 </bugfixes/type2/buildingtypeupgradesarenotviableprerequisites>`).
 
+Require Theater
+```````````````
+
 :tagdef:`[Unit]Prerequisite.RequiredTheaters=list of theater names`
   The map theaters in which the unit is available. Defaults to all theaters. For
   example, if only the :value:`SNOW` theater were specified then the unit would
@@ -29,6 +32,9 @@ prerequisites (see :doc:`Type 2 fixes
 .. versionadded:: 0.1
 
 
+Negative Prerequisites
+``````````````````````
+
 :tagdef:`[Unit]Prerequisite.Negative=list of BuildingTypes`
   The buildings that preclude construction of the unit. If the player owns one
   or more of the buildings on this list then the unit will not be available.
@@ -42,6 +48,9 @@ prerequisites (see :doc:`Type 2 fixes
 
 .. versionadded:: 0.1
 
+
+Multiple Alternative Prerequisites Lists
+````````````````````````````````````````
 
 :tagdef:`[Unit]Prerequisite.Lists=integer`
   Specifies how many extra Prerequisite lists are available (see below).
@@ -62,6 +71,9 @@ prerequisites (see :doc:`Type 2 fixes
 .. versionadded:: 0.1
 
 
+Require Stolen Technology
+`````````````````````````
+
 :tagdef:`[Unit]Prerequisite.StolenTechs=list of integers`
   The list of stealable technology types that must be stolen before this object
   can be built. See :ref:`Stolen Technology <spybehavior-stolentech>` for more
@@ -71,6 +83,40 @@ prerequisites (see :doc:`Type 2 fixes
 
 .. versionadded:: 0.1
 
+
+Require Factory Built By Country
+````````````````````````````````
+
+:tagdef:`[BuildingType]FactoryOwners.HaveAllPlans=boolean`
+  Whether a player capturing a building of this type would permanently gain all
+  plans of its initial owner. The initial owner is the player who owned it
+  first: the player who built it, or the owner of buildings pre-placed on the
+  map. For neutral structures, this would be the neutral country. Defaults to
+  :value:`no`.
+:tagdef:`[TechnoType]FactoryOwners=list of houses`
+  The list of countries whose factories can build this object. If empty, every
+  country is allowed to build this object. Otherwise, players need to own at
+  least one factory built by a country in this list or the plans of at least one
+  of these countries to produce it.
+:tagdef:`[TechnoType]FactoryOwners.Forbidden=list of houses`
+  The list of countries whose factories cannot build this object. Players owning
+  only factories built by countries in this list and only having plans of these
+  countries are prevented from producing it.
+
+.. note:: AI ignores :tag:`FactoryOwners` and :tag:`FactoryOwners.Forbidden` on
+  buildings, but not on units.
+
+.. note:: When undeploying, buildings will lose their initial owner and the
+  undeployed vehicle will be initially owned by the actual player. This might
+  change in the future.
+
+.. index:: Prerequisites; Require building built by certain country.
+
+.. versionadded:: 0.6
+
+
+Overview
+````````
 
 Below is a flowchart of the current prerequisite system. Blue sections
 are unchanged from the original system. Pink sections have been

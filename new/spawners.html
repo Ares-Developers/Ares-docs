@@ -1,0 +1,144 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Spawners &mdash; Ares 0.6 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.6 documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Spy Behavior" href="spybehavior.html" />
+    <link rel="prev" title="Solid Buildings" href="solidbuildings.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="spybehavior.html" title="Spy Behavior"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="solidbuildings.html" title="Solid Buildings"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.6 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Spawners</a><ul>
+<li><a class="reference internal" href="#flying-aircraft-carriers">Flying Aircraft Carriers</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="solidbuildings.html"
+                        title="previous chapter">Solid Buildings</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="spybehavior.html"
+                        title="next chapter">Spy Behavior</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="spawners">
+<h1>Spawners<a class="headerlink" href="#spawners" title="Permalink to this headline">¶</a></h1>
+<p>Spawners have been enhanced to support cloak. A cloaking Destroyer or Aircraft
+Carrier will not cause all its spawns to self-destruct any more. Spawners now
+have rudimentary support for <span><tt class="docutils literal"><span class="pre">BalloonHover=yes</span></tt></span>.</p>
+<div class="section" id="flying-aircraft-carriers">
+<h2>Flying Aircraft Carriers<a class="headerlink" href="#flying-aircraft-carriers" title="Permalink to this headline">¶</a></h2>
+<p>Non-Missile spawns were always put on the ground for take-off, even if the
+carrier was in the air. This has been changed and spawns now start from the the
+carrier.</p>
+<p>Spawned units now return to <span><tt class="docutils literal"><span class="pre">BalloonHover=yes</span></tt></span> spawners, instead of flying
+off the map and potentially crashing the game. If the spawner unit is moving, it
+is possible that the spawns lower on the wrong cell and then gain altitude
+again.</p>
+<p>For best effects, the <span><tt class="docutils literal"><span class="pre">FlightLevel</span></tt></span> of spawns should be higher than the
+<span><tt class="docutils literal"><span class="pre">FlightLevel</span></tt></span> of the spawning unit. Otherwise the spawns would disappear
+from mid-air when docking, or even try to lower down to the ground instead of
+going up to the carrier.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Please note that this logics still has some shortcomings and it has
+many opportunities for improvements. For example, move sounds do not work
+correctly once a spawn has launched once.</p>
+</div>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.6.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="spybehavior.html" title="Spy Behavior"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="solidbuildings.html" title="Solid Buildings"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.6 documentation</a> &raquo;</li>
+          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Bug Fixes &mdash; Ares 0.5 documentation</title>
+    <title>Bug Fixes &mdash; Ares 0.6 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.5',
+        VERSION:     '0.6',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.5 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.6 documentation" href="../index.html" />
     <link rel="next" title="Type 1 Fixes (Original Bugs)" href="type1/index.html" />
     <link rel="prev" title="Migration Guide" href="../migration.html" /> 
   </head>
@@ -43,7 +43,7 @@
         <li class="right" >
           <a href="../migration.html" title="Migration Guide"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.5 documentation</a> &raquo;</li> 
+        <li><a href="../index.html">Ares 0.6 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar">
@@ -99,6 +99,7 @@ definitions, particularly 2.</p>
 <li class="toctree-l1"><a class="reference internal" href="type1/index.html">Type 1 Fixes (Original Bugs)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="type1/aitargetingcloakedobjectswithmajorsuperweapons.html">AI Targeting Cloaked Objects With Major Super Weapons</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type1/animatedsuperweaponcursor.html">Animated Super Weapon Cursor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type1/battlebunkerredhealth.html">Infantry Cannot Enter Battle Bunkers in Red Health</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type1/chaosgasandstopcommand.html">Chaos Gas (<span><span class="type">Psychedelic=yes</span></span>) and the Stop Command</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type1/chronoshiftabort.html">Aborting the Chronoshift announces the Chronosphere as ready</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type1/chronoshiftwillsinkjumpjetunits.html">Chronoshift Will Sink Jumpjet Units</a></li>
@@ -106,15 +107,19 @@ definitions, particularly 2.</p>
 <li class="toctree-l2"><a class="reference internal" href="type1/firingvoicesandveterancy.html">Firing Voices and Veterancy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type1/frozenmutationmakeinfantryanimations.html">Frozen Mutation (<span><span class="type">MakeInfantry</span></span>) Animations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type1/ivanbombsdisappearing.html">Disappearing Ivan Bombs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type1/ivanentergrinder.html">Crazy Ivans Cannot Enter Grinders</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type1/loadscreencolors.html">Load Screen Colors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type1/mindcontrolbuildings.html">Mind-Controlled Buildings Stopped Working When Freed</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type1/misleadingveterannavalcameos.html">Misleading Veteran Naval Cameos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type1/opentoppedjambuildings.html">Open-Topped Vehicles and Defensive Structures Exploit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type1/parasitesinairborneunits.html">Parasites In Airborne Units</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type1/pipdistortionbug.html">Pip Distortion Bug</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type1/prismsupportbugs.html">Prism Support Bugs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type1/secretlabboonweighting.html">Secret Lab Boon Weighting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type1/shipyardrepairimmune.html">Units Being Repaired on Shipyards are Immune to Damage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type1/soundsplayingwhenloading.html">Robot Tank Sounds On Loading Screen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type1/spyingalliedbuildings.html">Spying on Allied Buildings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type1/techstructuresneedsengineer.html">Tech Structures and Animations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type1/temporalwarheadsandpotentialoccupationtargets.html"><span><span class="type">Temporal</span></span> Warheads and Potential Occupation Targets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type1/temporalwarheadsearnexperiencebykillingfriendlyunits.html"><span><span class="type">Temporal</span></span> Warheads Earn Experience By Killing Friendly Units</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type1/temporalwarheadsgaindoubleexperience.html"><span><span class="type">Temporal</span></span> Warheads Gain Double Experience</a></li>
@@ -135,13 +140,15 @@ definitions, particularly 2.</p>
 <li class="toctree-l2"><a class="reference internal" href="type2/buildconst.html"><span><span class="type">BuildConst</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/buildingtypesandinfantrytypesdonotreloadammoproperly.html"><span class="type docutils literal">BuildingTypes</span> and <span class="type docutils literal">InfantryTypes</span> Do Not Reload Ammo Properly</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/buildingtypeupgradesarenotviableprerequisites.html"><span class="type docutils literal">BuildingType</span> Upgrades Are Not Viable Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type2/buildlimitqueues.html"><span><span class="type">BuildLimit</span></span> and Queues</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/c4veteranability.html"><cite>C4</cite> Veteran Ability</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/chronotransportdeploy.html">Chrono-Transport Deploy Inconsistency</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/cloakableaircrafttypesandbuildingtypes.html">Cloakable <span class="type docutils literal">AircraftTypes</span> and <span class="type docutils literal">BuildingTypes</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="type2/cloakablespawners.html">Cloakable Spawners</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/custompalettes.html">Custom Palettes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/destroyablecliffs.html">Destroyable Cliffs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="type2/destroyanimscausereconnectionerrors.html"><span><span class="type">DestroyAnims</span></span> Cause Reconnection Errors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="type2/destroyanimsdontremap.html"><span><span class="type">DestroyAnims</span></span> Don&#8217;t Remap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type2/destroyanimscausereconnectionerrors.html"><span><span class="type">DestroyAnim</span></span>s Cause Reconnection Errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type2/destroyanimsdontremap.html"><span><span class="type">DestroyAnim</span></span>s Don&#8217;t Remap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/digsound.html"><span><span class="type">DigSound</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/ejectlastpassenger.html">Passengers and <span><span class="type">TurretCount</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/engineertechniciancrew.html">Crew with <span><span class="type">Engineer=yes</span></span> could freeze the game</a></li>
@@ -152,7 +159,9 @@ definitions, particularly 2.</p>
 <li class="toctree-l2"><a class="reference internal" href="type2/infantrylostinspecialfunctionbuildings.html">Infantry Lost In Special Function Buildings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/initialveterancameos.html">Initial Veteran Cameos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/ivanbombscanonlybefiredbyinfantrytypes.html">Ivan Bombs Can Only Be Fired By <span class="type docutils literal">InfantryTypes</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="type2/ivanbombscloak.html">Ivan Bombs and Cloaked Ivans</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/jumpjetshadows.html">Jumpjet Shadows</a></li>
+<li class="toctree-l2"><a class="reference internal" href="type2/looseshpfilecrash.html">Crash with Loose SHP Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/mindcontrollerparasites.html">Mind-Controller Parasites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/mindcontrolslaves.html">Slaves Change Ownership If Enslaver Switches Sides</a></li>
 <li class="toctree-l2"><a class="reference internal" href="type2/miragelogicwithturretsbarrels.html">Mirage Logic with Turrets/Barrels</a></li>
@@ -214,11 +223,11 @@ definitions, particularly 2.</p>
         <li class="right" >
           <a href="../migration.html" title="Migration Guide"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.5 documentation</a> &raquo;</li> 
+        <li><a href="../index.html">Ares 0.6 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2013, The Ares Contributors.
+        &copy; Copyright 2014, The Ares Contributors.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>
