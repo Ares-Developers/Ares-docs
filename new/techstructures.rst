@@ -14,7 +14,7 @@ The country the buildings are given back to is their initial owner.
   Whether structures will by default return to the civilian side when a player
   is defeated or giving up. Defaults to :value:`no`.
 
-:tagdef:`[General]Returnable=boolean`
+:tagdef:`[BuildingType]Returnable=boolean`
   Whether this building type will return to the civilian side when the owning
   player is defeated or giving up. Defaults to :tag:`[General]ReturnStructures`.
 
