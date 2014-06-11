@@ -35,6 +35,27 @@ Text Colors
 .. versionadded:: 0.4
 
 
+
+Dialogs
+-------
+
+The side specific dialog background is used when a Reconnection error occurs or
+while loading or saving a game.
+
+:tagdef:`[Side]DialogBackground.Image=filename, *including* the .shp extension`
+The shp file used as background for dialog boxes for this side. Should be
+452x326. Defaults to :value:`PUDLGBGA.SHP`, :value:`PUDLGBGS.SHP`, and
+:value:`PUDLGBGY.SHP` for sides 1, 2 and all others respectively. Requires
+:tag:`DialogBackground.Palette` to be set.
+
+:tagdef:`[Side]DialogBackground.Palette=filename, *including* the .pal extension`
+The palette used to draw the background of dialog boxes for this side. Defaults
+to :value:`DIALOG.PAL` for sides 1 and 2, to :value:`DIALOG.PAL` otherwise.
+Requires :tag:`DialogBackground.Image` to be set.
+
+.. versionadded:: 0.7
+
+
 .. _sides-evatag:
 
 EVA
