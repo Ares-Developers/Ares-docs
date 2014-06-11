@@ -1,0 +1,22 @@
+Settings by Super Weapon Type
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Each super weapon type has its own set of default values for the general tags as
+well as custom tags that only apply to this type.
+
+.. toctree::
+	:glob:
+	
+	lightningstorm
+	multimissile
+	psychicdominator
+	chronosphere
+	protect
+	geneticconverter
+	paradrop
+	spyplane
+	psychicreveal
+	sonarpulse
+	genericwarhead
+	unitdelivery
+	firestorm

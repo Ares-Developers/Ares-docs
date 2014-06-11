@@ -9,5 +9,6 @@ the game.
 	
 	*
 	cloak/index
+	superweapons/index
 	tiberium/index
 	misc/index

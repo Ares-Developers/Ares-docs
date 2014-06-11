@@ -1,0 +1,27 @@
+Cost
+````
+
+The firing of a super weapon can now add or subtract credits from the firing
+player's cash reserve. If the player doesn't have enough funds the launch is
+aborted and an EVA event is triggered to notify the player. Super weapons
+costing money will show the needed amount in the super weapon's cameo tool tip.
+If the player has not enough money to use the super weapon, the sidebar cameo
+is grayed out.
+
+:tagdef:`[SuperWeapon]Money.Amount=integer - credits`
+  This many credits are added to the firing player's account when the super
+  weapon is fired. Use a negative number to subtract credits. Defaults to
+  :value:`0`.
+:tagdef:`[SuperWeapon]Money.DrainAmount=integer - credits`
+  This many credits are added to the firing player's account when a
+  :tag:`UseChargeDrain=yes` super weapon is active. Use a negative number to
+  subtract credits. Defaults to :value:`0`.
+:tagdef:`[SuperWeapon]Money.DrainDelay=integer - frames`
+  After this many frames the credits defined in :tag:`Money.DrainAmount=` are
+  added to the firing player's account when a :tag:`UseChargeDrain=yes` super
+  weapon is active. Defaults to :value:`0`.
+
+.. index:: Super Weapons; Money deductable when firing a superweapon.
+
+.. versionadded:: 0.1
+.. versionchanged:: 0.4

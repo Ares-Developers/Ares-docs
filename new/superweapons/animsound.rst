@@ -1,0 +1,22 @@
+Animation/Sound
+```````````````
+
+The default values depend on the super weapon's actual :tag:`Type`.
+
+:tagdef:`[SuperWeapon]SW.Animation=animation`
+  The animation to display at the super weapon's target cell.
+:tagdef:`[SuperWeapon]SW.AnimationHeight=integer`
+  How high above the target cell to display the animation.
+:tagdef:`[SuperWeapon]SW.AnimationVisibility=enumeration none|owner|allies|team|enemies|all`
+  Defines who will see this animation.
+:tagdef:`[SuperWeapon]SW.Sound=sound`
+  The sound to play at the super weapon's target cell.
+:tagdef:`[SuperWeapon]SW.ActivationSound=sound`
+  The sound to play when a Nuke is fired or a deferrable super weapon like the
+  Lightning Storm is activated.
+
+.. index:: Super Weapons; Custom animation played at target cell.
+
+.. index:: Super Weapons; Custom SW animation visibility.
+
+.. versionadded:: 0.1
