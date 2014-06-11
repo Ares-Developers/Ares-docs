@@ -44,9 +44,10 @@ while loading or saving a game.
 
 :tagdef:`[Side]DialogBackground.Image=filename, *including* the .shp extension`
 The shp file used as background for dialog boxes for this side. Should be
-452x326. Defaults to :value:`PUDLGBGA.SHP`, :value:`PUDLGBGS.SHP`, and
-:value:`PUDLGBGY.SHP` for sides 1, 2 and all others respectively. Requires
-:tag:`DialogBackground.Palette` to be set.
+452x326; the image is aligned on the top left corner of the dialog. Defaults to
+:value:`PUDLGBGA.SHP`, :value:`PUDLGBGS.SHP`, and :value:`PUDLGBGY.SHP` for
+sides 1, 2 and all others respectively. Requires :tag:`DialogBackground.Palette`
+to be set.
 
 :tagdef:`[Side]DialogBackground.Palette=filename, *including* the .pal extension`
 The palette used to draw the background of dialog boxes for this side. Defaults
