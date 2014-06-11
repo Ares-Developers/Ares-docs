@@ -21,3 +21,4 @@ well as custom tags that only apply to this type.
 	unitdelivery
 	firestorm
 	hunterseeker
+	droppod
