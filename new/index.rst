@@ -8,6 +8,7 @@ the game.
 	:glob:
 	
 	*
+	sidescountries/index
 	cloak/index
 	superweapons/index
 	tiberium/index
