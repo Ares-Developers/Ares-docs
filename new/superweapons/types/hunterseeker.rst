@@ -1,0 +1,50 @@
+:captiontag:`Type=HunterSeeker`
+```````````````````````````````
+
+The Hunter Seeker super weapon known from :game:`Tiberian Sun` has been restored
+and expanded. The Hunter Seeker is a :type:`VehicleType` that is launched from a
+building and then flys into an enemy object, detonating on impact.
+
+Default values for general tags:
+
+:tagdef:`[SuperWeapon]SW.AITargeting=enum`
+  Defaults to :value:`NoTarget`.
+:tagdef:`[SuperWeapon]SW.AffectsHouse=enum`
+  Specifies the houses targeted. Defaults to :value:`enemies`.
+:tagdef:`[SuperWeapon]SW.AffectsTarget=enum`
+  Specifies which types are targeted. Defaults to :value:`all`.
+:tagdef:`[SuperWeapon]EVA.Detected=EVA event`
+  Defaults to :value:`EVA_HunterSeekerDetected`.
+:tagdef:`[SuperWeapon]EVA.Ready=EVA event`
+  Defaults to :value:`EVA_HunterSeekerReady`.
+:tagdef:`[SuperWeapon]EVA.Activated=EVA event`
+  Defaults to :value:`EVA_HunterSeekerLaunched`.
+:tagdef:`[SuperWeapon]Text.Ready=CSF label`
+  Defaults to :value:`TXT_RELEASE`.
+
+
+Hunter Seeker specific tags:
+
+:tagdef:`[SuperWeapon]HunterSeeker.Buildings=list of BuildingType`
+  The list of :type:`BuildingTypes` that can launch this Hunter Seeker. Does not
+  have to be the same buildings that provide this super weapon. If the player
+  does not own a building of any type, the super weapon discharges without
+  launching a Hunter Seeker. Defaults to :tag:`[SpecialWeapons]HSBuilding`.
+:tagdef:`[SuperWeapon]HunterSeeker.Type=VehicleType`
+  The Hunter Seeker unit to spawn. Only set this to use a specific unit instead
+  of each players' side default. Defaults to the side's :tag:`HunterSeeker`.
+:tagdef:`[SuperWeapon]HunterSeeker.RandomOnly=boolean`
+  Whether every enemy object on the map has an equal chance of being targeted by
+  the Hunter Seeker. If :value:`no`, non-civilian targets are preferred for
+  human players in multiplayer games, and only if no preferred target is found,
+  a random target is chosen. Defaults to :value:`no`.
+
+
+See :doc:`Hunter Seeker </new/hunterseeker>` for information on how to define a
+valid Hunter Seeker unit and how to prevent certain :type:`TechnoTypes` to be
+targeted. See :ref:`Sides & Countries <sides-hunterseeker>` on how to define a
+default Hunter Seeker unit for each side.
+
+.. index:: Super Weapons; HunterSeeker recreated.
+
+.. versionadded:: 0.7

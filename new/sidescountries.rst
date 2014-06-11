@@ -214,6 +214,18 @@ Paradrop Defaults
   This side's default parachute used if not overridden by the country or a
   :type:`TechnoType`. Defaults to :value:`PARACH`.
 
+Hunter Seeker Defaults
+----------------------
+
+.. _sides-hunterseeker:
+
+:tagdef:`[Side]HunterSeeker=VehicleType`
+  The unit used as default Hunter Seeker for the Hunter Seeker super weapon.
+  Replaces :tag:`[General]GDIHunterSeeker` and :tag:`[General]NodHunterSeeker`
+  from :game:`Tiberian Sun`. Set this to a :type:`VehicleType` with Fly
+  locomotor as specified under :doc:`Hunter Seeker </new/hunterseeker>`.
+  Defaults to :value:`none`.
+
 Sidebar, EVA and Colors
 -----------------------
 
