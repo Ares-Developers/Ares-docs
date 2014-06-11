@@ -31,6 +31,7 @@ side's INI section.
 	
 	defaultside
 	uiside
+	scorescreens
 
 
 Countries
