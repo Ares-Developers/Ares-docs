@@ -77,7 +77,16 @@ Options regarding the text drawn on the background:
   this color from the :tag:`[Colors]` enumeration. For example,
   :tag:`LoadScreenText.Color=AlliedLoad`.
 
+The music theme for multiplayer matches can be customized with the following
+tag. For single player mission loading themes, please see :doc:`Campaign Load
+Screen </ui-features/campaignloadscreen>`.
+
+:tagdef:`[Country]LoadingTheme=theme id`
+  The theme playing for a player of this side while the multiplayer match is
+  loading. Defaults to :value:`LOADING`.
+
 .. versionadded:: 0.1
+.. versionchanged:: 0.7
 
 
 Taunts
