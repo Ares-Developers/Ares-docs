@@ -11,7 +11,8 @@ several options.
 :tagdef:`[Animation]MakeInfantryOwner=enumeration invoker|killer|victim|neutral|random`
   Specifies which house will own the resulting :type:`InfantryType` that gets
   created after this animation has played. The animation's re-mappable colors
-  will be shown in that house's color. Defaults to :value:`invoker`.
+  will be shown in that house's color, if not noted otherwise. Defaults to
+  :value:`invoker`.
 
   .. note:: If you are creating a chain of animations using the :tag:`Next=` tag
     then :tag:`MakeInfantry=` goes on the last animation whereas
@@ -21,13 +22,22 @@ several options.
 Note that this is not a warhead property; it goes on the corresponding animation
 entry in :file:`artmd.ini`. However, :tag:`MakeInfantryOwner` only works for
 specific animations; namely those invoked by :tag:`InfDeathAnim`,
-:tag:`DeathAnims` and map triggers. The default :tag:`MakeInfantryOwner` is
-:value:`invoker`, which corresponds to a different player depending on the
-animation.
+:tag:`DeathAnims`, :tag:`InfantryExplode`, :tag:`FlamingInfantry`,
+:tag:`InfantryElectrocuted`, :tag:`InfantryHeadPop`, :tag:`InfantryNuked`,
+:tag:`InfantryVirus`, :tag:`InfantryMutate`, :tag:`InfantryBrute`, and map
+triggers. The default :tag:`MakeInfantryOwner` is :value:`invoker`, which
+corresponds to a different player depending on the animation.
 
 
-+ For :tag:`InfDeathAnim`, :value:`invoker` represents :value:`killer` (the
-  owner of the killing unit).
++ For :tag:`InfDeathAnim`, :tag:`InfantryVirus` and :tag:`InfantryMutate`,
+  :value:`invoker` represents :value:`killer` (the owner of the killing unit).
+  For :tag:`InfantryVirus` on a :tag:`NotHuman=no` victim, the remappable colors
+  are **not** used. If you want them, use :value:`killer` explicitly.
++ For :tag:`InfantryExplode`, :tag:`FlamingInfantry`,
+  :tag:`InfantryElectrocuted`, :tag:`InfantryHeadPop`, :tag:`InfantryNuked`, and
+  :tag:`InfantryBrute`, :value:`invoker` represents the neutral house with the
+  remappable colors **not** being used. If you want the remapped colors, you
+  have to use :value:`neutral` explicitly.
 + For :tag:`DeathAnims`, :value:`invoker` represents :value:`victim` (the owner
   of the dying unit).
 + For map triggers, :value:`invoker`, :value:`killer` and :value:`victim` all
@@ -37,9 +47,12 @@ animation.
 :value:`random` will pick a random player from all players in the game,
 including neutral.
 
-.. note:: Like :tag:`InfDeath=9`, all mutation animations will be rendered in
-  the unit palette instead of :file:`anim.pal`.
+.. note:: Like :tag:`InfDeath=9`, mutation animations will be rendered in the
+  unit palette with remap colors instead of :file:`anim.pal`, if not noted
+  otherwise.
 
-.. index:: Animations; MakeInfantry animations (InfDeathAnim, DeathAnims, map triggers) can choose who the owner will be as killer|victim|neutral|random.
+.. index:: Animations; MakeInfantry animations (InfDeathAnim, DeathAnims, ..., and map triggers) can choose who the owner will be.
 
 .. versionadded:: 0.1
+
+.. versionchanged:: 0.7
