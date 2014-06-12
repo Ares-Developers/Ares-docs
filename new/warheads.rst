@@ -204,3 +204,16 @@ warheads.
   :value:`NUKEBALL` for :tag:`NUKE`, otherwise to :value:`none`.
 
 .. versionadded:: 0.2
+
+
+Prevent scattering
+``````````````````
+
+A unit hit by a warhead might scatter on impact. This tag on the attacking
+warhead prevents this.
+
+:tagdef:`[Warhead]PreventScatter=boolean`
+  Whether units should not scatter when attacked with this warhead even if they
+  have the ability to. Defaults to :value:`no`.
+
+.. versionadded:: 0.7
