@@ -1,0 +1,13 @@
+.. index:: Cloaking; Cloakable infantry will not constantly uncloak and cloak during an attack mission.
+
+========================================
+Cloakable Infantry Constantly Uncloaking
+========================================
+
+When cloakable infantry received an attack order, they would uncloak even if the
+target was not in range, then cloak again. This would happen until they came
+close enough to the target. Vehicles on the other hand did not have this problem
+and they would only uncloak when necessary. :game:`Ares` applies the vehicles'
+behavior to infantry, too.
+
+.. versionadded:: 0.7
