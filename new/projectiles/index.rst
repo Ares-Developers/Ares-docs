@@ -5,3 +5,4 @@ Projectiles
 	:glob:
 	
 	ranged
+	splits
