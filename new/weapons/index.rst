@@ -10,3 +10,4 @@ Weapons
 	electricbolts
 	waves
 	laser
+	projectilerange
