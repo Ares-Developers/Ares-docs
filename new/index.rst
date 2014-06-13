@@ -10,6 +10,7 @@ the game.
 	*
 	sidescountries/index
 	cloak/index
+	weapons/index
 	superweapons/index
 	tiberium/index
 	misc/index
