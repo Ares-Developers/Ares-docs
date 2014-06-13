@@ -1,0 +1,7 @@
+Projectiles
+~~~~~~~~~~~
+
+.. toctree::
+	:glob:
+	
+	ranged
