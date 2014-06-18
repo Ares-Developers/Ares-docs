@@ -10,7 +10,7 @@ because it only supported a maximum range of 11 (which contained errors).
 
 :game:`Ares` replaces this lookup table and makes it possible to use larger
 values for :tag:`CellSpread`. All area of effect weapon features :game:`Ares`
-added (like :doc:`AttachEffects on Warheads <attacheffect>`,
+added (like :doc:`AttachEffects on Warheads </new/attacheffect>`,
 :doc:`EMP </restored/emp>`, :ref:`IronCurtain on Weapons <wh-ironcurtain>`)
 have been updated to support this as well.
 

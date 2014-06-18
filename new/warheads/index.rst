@@ -5,6 +5,7 @@ Warheads
 	:glob:
 	
 	general
+	cellspread
 	ironcurtain
 	mindcontrol
 	temporal
