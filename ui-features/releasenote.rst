@@ -10,7 +10,7 @@ The release note is the text in the CSF files labelled
 :value:`TXT_RELEASE_NOTE`. Include a string with this label in a stringtable
 file (not in :file:`ra2md.csf`) to enable the text.
 
-.. note:: \ :game:`Ares` includes an empty text by this label to ensure the
+.. note:: \ :game:`Ares` includes an empty text for this label to ensure the
   string can be found and "MISSING:TXT_RELEASE_TEXT" is not displayed on the
   screen.
 

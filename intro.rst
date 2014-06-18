@@ -125,8 +125,8 @@ don't want to see the previously unused skull image. See
 
 ares.mix
 ~~~~~~~~
-Mods should not include :file:`ares.mix`. This new MIX file is bundled with
-:game:`Ares` to provide any new/modified files that :game:`Ares`
+Mods should not include their own version of :file:`ares.mix`. This new MIX file
+is bundled with :game:`Ares` to provide any new/modified files that :game:`Ares`
 changes/additions rely on. This MIX file presently includes:
 
 :file:`ares.csf` includes a few new strings:

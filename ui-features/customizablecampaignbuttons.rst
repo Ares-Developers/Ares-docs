@@ -19,11 +19,11 @@ replacing :tag:`X` by the numbers from :tag:`1` to :tag:`4`:
   The mission from :file:`battle.ini` started by clicking the image button. To
   hide a button set :tag:`CampaignX=no`. Defaults to :value:`ALL1`,
   :value:`SOV1`, :value:`TUT1` or :value:`no` respectively.
-:tagdef:`[UISettings]CampaignX.Image=filename, *including* the .shp  extension`
+:tagdef:`[UISettings]CampaignX.Image=filename, *including* the .shp extension`
   The 260x136 image shown on the campaign selection menu. Have a look at
   :file:`fsalg.shp` to see an example. Defaults to :value:`fsalg.shp` or
   :value:`fsslg.shp` respectively.
-:tagdef:`[UISettings]CampaignX.Palette=filename, *including* the .pal  extension`
+:tagdef:`[UISettings]CampaignX.Palette=filename, *including* the .pal extension`
   The palette used to render the image. Defaults to :value:`fsalg.pal`,
   :value:`fsslg.pal` or :value:`fsbclg.pal` respectively.
 :tagdef:`[UISettings]CampaignX.Subline=CSF label`
