@@ -12,6 +12,7 @@ the game.
 	cloak/index
 	projectiles/index
 	weapons/index
+	warheads/index
 	superweapons/index
 	tiberium/index
 	misc/index
