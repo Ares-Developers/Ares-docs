@@ -228,3 +228,16 @@ Changed tags:
 
   :tag:`[SuperWeapon]Mutate.Explosion`
     Defaults to :tag:`[General]MutateExplosion`.
+
+From Ares 0.6 and below
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Changed tags:
+
+  No changes required.
+
+Other changes:
+
+  Only unpowered units create sparkle particle systems. Deactivation because of
+  EMP and Operator logics does not make the unit sparkle any more. This is not
+  optional at the moment.
