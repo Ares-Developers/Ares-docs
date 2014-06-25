@@ -13,8 +13,8 @@ units.
 
 (Original requests: `#680 <http://bugs.renegadeprojects.com/view.php?id=680>`_
 and `#1208 <http://bugs.renegadeprojects.com/view.php?id=1208>`_, `original
-concept art on RADEN
-<http://www.cncgames.com/yuri_concept/chronoprisonturretSphere.jpg>`_)
+concept art on the Command & Conquer Wiki
+<http://cnc.wikia.com/wiki/Chrono_Prison>`_)
 
 :tagdef:`[Weapon]Abductor=boolean`
   If set to yes, weapons with this flag will absorb the target into the
