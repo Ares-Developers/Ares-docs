@@ -5,7 +5,7 @@ The Hunter Seeker known from :game:`Tiberian Sun` is a :type:`VehicleType` that
 uses the Fly locomotor and has :tag:`HunterSeeker=yes` set. It is launched by
 the :doc:`Hunter Seeker super weapon </new/superweapons/types/hunterseeker>`.
 
-Refer to `ModEnc <http://http://modenc.renegadeprojects.com/HunterSeeker>`_ for
+Refer to `ModEnc <http://modenc.renegadeprojects.com/HunterSeeker>`_ for
 more information about Hunter Seeker's movement and targeting logic.
 
 .. index:: Hunter Seeker; How to set up
