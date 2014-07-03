@@ -260,7 +260,7 @@ Example support weapon::
 Support Beam FLH
 ````````````````
 
-The firing origing of the support beam can be set by using the FLH controls on
+The firing origin of the support beam can be set by using the FLH controls on
 the buliding's art entry - :tag:`AlternateFLH0` specifies the rookie support
 beam origin, :tag:`AlternateFLH1` specifies the elite support beam origin. If
 either of these are set to :value:`0,0,0` (the default FLH value) then they will
