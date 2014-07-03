@@ -15,6 +15,7 @@ Table of Contents
 	:hidden:
 	
 	intro
+	whatsnew
 	migration
 	bugfixes/index
 	restored/index
@@ -25,6 +26,7 @@ Table of Contents
 
 .. toctree::
 	intro
+	whatsnew
 	migration
 
 .. toctree::
