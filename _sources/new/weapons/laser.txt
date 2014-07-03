@@ -1,0 +1,10 @@
+LaserThickness
+
+
+[Weapon]LaserThickness=integer
+  Enables the customization of laser widths.
+
+ Currently this has the same bugs as the NPatch version, only
+    works with IsHouseColor=yes and have low quality.
+
+ 0.2

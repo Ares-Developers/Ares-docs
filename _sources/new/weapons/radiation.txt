@@ -1,0 +1,28 @@
+Radiation Beams
+
+
+Before Ares, Radiation beams could not be customized they were always
+either green or blue depending on the type of weapon. Now, however, radiation
+beams can be customized using the following flags (which affect weapons with
+IsRadBeam=yes set and/or IsRadEruption=yes set) in the weapon's
+INI section: 
+
+[Weapon]Beam.Color=R,G,B
+  The color that the beam will be drawn in. Defaults to
+  [AudioVisual]►ChronoBeamColor for weapons with a Temporal warhead, and
+  [Radiation]►RadColor for weapons with a non-Temporal warhead.
+[Weapon]Beam.IsHouseColor=boolean
+  Whether or not the beam should be drawn using the firing unit's player color
+  instead of the specific color specified by Beam.Color.
+[Weapon]Beam.Duration=integer
+  The number of frames for which the beam should be visible. Default is
+  15 as per original RadBeams. The RadEruption effect originally used
+  a random value between 5 and 20.
+[Weapon]Beam.Amplitude=float
+  The amplitude of the beam (possibly measured in pixels?). Defaults to
+  40.0 as per original RadBeams. The RadEruption effect originally used
+  a random value between 100.0 and 500.0.
+
+ Rad beams can have custom colors and duration and amplitude.
+
+ 0.1

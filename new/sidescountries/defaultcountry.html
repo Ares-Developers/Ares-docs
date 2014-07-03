@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Country Defaults &mdash; Ares 0.7 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.7 documentation" href="../../index.html" />
+    <link rel="up" title="Sides &amp; Countries" href="index.html" />
+    <link rel="next" title="User Interface" href="uicountry.html" />
+    <link rel="prev" title="Score Screens and Themes" href="scorescreens.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="uicountry.html" title="User Interface"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="scorescreens.html" title="Score Screens and Themes"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Sides &amp; Countries</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Country Defaults</a><ul>
+<li><a class="reference internal" href="#ai-and-base-building">AI and Base-Building</a></li>
+<li><a class="reference internal" href="#paradrop-defaults">Paradrop Defaults</a></li>
+<li><a class="reference internal" href="#others">Others</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="scorescreens.html"
+                        title="previous chapter">Score Screens and Themes</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="uicountry.html"
+                        title="next chapter">User Interface</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="country-defaults">
+<h1>Country Defaults<a class="headerlink" href="#country-defaults" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ai-and-base-building">
+<h2>AI and Base-Building<a class="headerlink" href="#ai-and-base-building" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►AI.PowerPlants=</span></tt><span class="type definition"> (list of BuildingTypes)</span></span></dt>
+<dd>A list of buildings that the AI will treat as this country&#8217;s power plants.</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+<div class="section" id="paradrop-defaults">
+<h2>Paradrop Defaults<a class="headerlink" href="#paradrop-defaults" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►ParaDrop.Types=</span></tt><span class="type definition"> (list of InfantryTypes and/or VehicleTypes)</span></span></dt>
+<dd><p class="first">The units that will be paradropped by <span><tt class="docutils literal"><span class="pre">Type=ParaDrop</span></tt></span> super weapons (such
+as the one normally provided by a Tech Airport) for this country. Defaults to
+the corresponding side&#8217;s <span><tt class="docutils literal"><span class="pre">ParaDrop.Types=</span></tt></span>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The original flags used to control the paradrop units only accept
+<span class="type docutils literal">InfantryTypes</span>. To include <span class="type docutils literal">VehicleTypes</span> in a paradrop you
+<em>have to</em> use the new <span><tt class="docutils literal"><span class="pre">ParaDrop.Types</span></tt></span> and <span><tt class="docutils literal"><span class="pre">ParaDrop.Num</span></tt></span> flags.</p>
+</div>
+</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►ParaDrop.Num=</span></tt><span class="type definition"> (list of integers)</span></span></dt>
+<dd>The quantity of each corresponding unit (listed against <span><tt class="docutils literal"><span class="pre">ParaDrop.Types</span></tt></span>)
+that will be paradropped. Defaults to the corresponding side&#8217;s
+<span><tt class="docutils literal"><span class="pre">ParaDrop.Num=</span></tt></span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►ParaDrop.Aircraft=</span></tt><span class="type definition"> (AircraftType)</span></span></dt>
+<dd>The aircraft type that will be used to deliver paradrops. Defaults to the
+corresponding side&#8217;s <span><tt class="docutils literal"><span class="pre">ParaDrop.Aircraft=</span></tt></span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►Parachute.Anim=</span></tt><span class="type definition"> (Animation)</span></span></dt>
+<dd>This country&#8217;s default parachute used if not overridden by a
+<span class="type docutils literal">TechnoType</span>. Defaults to the corresponding side&#8217;s
+<span><tt class="docutils literal"><span class="pre">Parachute.Anim=</span></tt></span>.</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.2.</span></p>
+</div>
+<div class="section" id="others">
+<h2>Others<a class="headerlink" href="#others" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►VeteranBuildings=</span></tt><span class="type definition"> (list of BuildingTypes)</span></span></dt>
+<dd>All buildings in this list start as veteran for this country and, if
+available, veteran cameos are displayed in the sidebar.</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.4.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="uicountry.html" title="User Interface"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="scorescreens.html" title="Score Screens and Themes"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" >Sides &amp; Countries</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

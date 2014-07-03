@@ -1,0 +1,212 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Side Defaults &mdash; Ares 0.7 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.7 documentation" href="../../index.html" />
+    <link rel="up" title="Sides &amp; Countries" href="index.html" />
+    <link rel="next" title="User Interface" href="uiside.html" />
+    <link rel="prev" title="Sides &amp; Countries" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="uiside.html" title="User Interface"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Sides &amp; Countries"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Sides &amp; Countries</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Side Defaults</a><ul>
+<li><a class="reference internal" href="#crew-survivors-and-other-types">Crew, Survivors and Other Types</a></li>
+<li><a class="reference internal" href="#ai-and-base-building">AI and Base-Building</a></li>
+<li><a class="reference internal" href="#paradrop-defaults">Paradrop Defaults</a></li>
+<li><a class="reference internal" href="#hunter-seeker-defaults">Hunter Seeker Defaults</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Sides &amp; Countries</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="uiside.html"
+                        title="next chapter">User Interface</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="side-defaults">
+<h1>Side Defaults<a class="headerlink" href="#side-defaults" title="Permalink to this headline">¶</a></h1>
+<p>These are the side defaults used instead of global tags.</p>
+<div class="section" id="crew-survivors-and-other-types">
+<h2>Crew, Survivors and Other Types<a class="headerlink" href="#crew-survivors-and-other-types" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►Crew=</span></tt><span class="type definition"> (InfantryType)</span></span></dt>
+<dd>The <span class="type docutils literal">InfantryType</span> that is spawned as a survivor when objects (with
+<span><tt class="docutils literal"><span class="pre">Crewed=yes</span></tt></span> set) owned by this side are destroyed (or, in the case of
+buildings, sold).</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►Engineer=</span></tt><span class="type definition"> (InfantryType)</span></span></dt>
+<dd>The <span class="type docutils literal">InfantryType</span> that has a chance to be spawned when buildings with
+<span><tt class="docutils literal"><span class="pre">Factory=BuildingType</span></tt></span> owned by this side are destroyed or sold. Defaults
+to <span><tt class="docutils literal"><span class="pre">[General]►Engineer</span></tt></span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►Technician=</span></tt><span class="type definition"> (InfantryType)</span></span></dt>
+<dd>The <span class="type docutils literal">InfantryType</span> that has a chance to be spawned when armed objects
+owned by this side are destroyed or sold. Defaults to
+<span><tt class="docutils literal"><span class="pre">[General]►Technician</span></tt></span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►DefaultDisguise=</span></tt><span class="type definition"> (InfantryType)</span></span></dt>
+<dd>Default <span class="type docutils literal">InfantryType</span> that disguisable infantry will be disguised as
+when first created.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►SurvivorDivisor=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>An object&#8217;s refund amount is divided by this number to determine how many
+survivors will be spawned when this object is destroyed (or, in the case of
+buildings, sold).</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.1.</span></p>
+<p class="versionchanged">
+<span class="versionmodified">Changed in version 0.5.</span></p>
+</div>
+<div class="section" id="ai-and-base-building">
+<h2>AI and Base-Building<a class="headerlink" href="#ai-and-base-building" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►AI.BaseDefenses=</span></tt><span class="type definition"> (list of BuildingTypes)</span></span></dt>
+<dd>List of base defense buildings that the AI can build.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►AI.BaseDefenseCounts=</span></tt><span class="type definition"> (list of integers)</span></span></dt>
+<dd>The maximum amount of base defense building that the AI can build.
+(listed as AI difficulties: hard, medium, easy)  Defaults to
+<span><tt class="docutils literal"><span class="pre">[General]►AlliedBaseDefenseCounts</span></tt></span> for GDI (Allied),
+<span><tt class="docutils literal"><span class="pre">[General]►SovietBaseDefenseCounts</span></tt></span> for Nod (Soviet), and
+<span><tt class="docutils literal"><span class="pre">[General]►ThirdBaseDefenseCounts</span></tt></span> for ThirdSide (Yuri).</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+<div class="section" id="paradrop-defaults">
+<h2>Paradrop Defaults<a class="headerlink" href="#paradrop-defaults" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►ParaDrop.Types=</span></tt><span class="type definition"> (list of InfantryTypes and/or VehicleTypes)</span></span></dt>
+<dd><p class="first">The units that will be paradropped by <span><tt class="docutils literal"><span class="pre">Type=ParaDrop</span></tt></span> super weapons (such
+as the one normally provided by a Tech Airport) for this side. Defaults to
+<span><tt class="docutils literal"><span class="pre">[General]►AllyParaDropInf</span></tt></span> for GDI (Allied),
+<span><tt class="docutils literal"><span class="pre">[General]►SovParaDropInf</span></tt></span> for Nod (Soviet), and
+<span><tt class="docutils literal"><span class="pre">[General]►YuriParaDropInf</span></tt></span> for ThirdSide (Yuri).</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The original flags used to control the paradrop units only accept
+<span class="type docutils literal">InfantryTypes</span>. To include <span class="type docutils literal">VehicleTypes</span> in a paradrop you
+<em>have to</em> use the new <span><tt class="docutils literal"><span class="pre">ParaDrop.Types</span></tt></span> and <span><tt class="docutils literal"><span class="pre">ParaDrop.Num</span></tt></span> flags.</p>
+</div>
+</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►ParaDrop.Num=</span></tt><span class="type definition"> (list of integers)</span></span></dt>
+<dd>The quantity of each corresponding unit (listed against <span><tt class="docutils literal"><span class="pre">ParaDrop.Types</span></tt></span>)
+that will be paradropped. Defaults to <span><tt class="docutils literal"><span class="pre">[General]►AllyParaDropNum</span></tt></span> for GDI
+(Allied), <span><tt class="docutils literal"><span class="pre">[General]►SovParaDropNum</span></tt></span> for Nod (Soviet), and
+<span><tt class="docutils literal"><span class="pre">[General]►YuriParaDropNum</span></tt></span> for ThirdSide (Yuri).</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►ParaDrop.Aircraft=</span></tt><span class="type definition"> (AircraftType)</span></span></dt>
+<dd>The aircraft type that will be used to deliver paradrops. Defaults to
+<cite>PDPLANE</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►Parachute.Anim=</span></tt><span class="type definition"> (Animation)</span></span></dt>
+<dd>This side&#8217;s default parachute used if not overridden by the country or a
+<span class="type docutils literal">TechnoType</span>. Defaults to <cite>PARACH</cite>.</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.2.</span></p>
+</div>
+<div class="section" id="hunter-seeker-defaults">
+<h2>Hunter Seeker Defaults<a class="headerlink" href="#hunter-seeker-defaults" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils" id="sides-hunterseeker">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►HunterSeeker=</span></tt><span class="type definition"> (VehicleType)</span></span></dt>
+<dd>The unit used as default Hunter Seeker for the Hunter Seeker super weapon.
+Replaces <span><tt class="docutils literal"><span class="pre">[General]►GDIHunterSeeker</span></tt></span> and <span><tt class="docutils literal"><span class="pre">[General]►NodHunterSeeker</span></tt></span>
+from <span class="game docutils literal">Tiberian Sun</span>. Set this to a <span class="type docutils literal">VehicleType</span> with Fly
+locomotor as specified under <a class="reference internal" href="../hunterseeker.html"><em>Hunter Seeker</em></a>.
+Defaults to <cite>none</cite>.</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.7.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="uiside.html" title="User Interface"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Sides &amp; Countries"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" >Sides &amp; Countries</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

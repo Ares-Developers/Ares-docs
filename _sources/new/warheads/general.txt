@@ -1,0 +1,43 @@
+General Settings
+
+
+AffectsEnemies
+
+
+[Warhead]AffectsEnemies=boolean
+  Specifies whether or not this warhead can damage enemy units. This has no
+  effect on the warhead's ability to target enemy units. A counterpart to the
+  existing AffectsAllies flag.
+
+ AffectsEnemies= flag added (counterpart for AffectsAllies=).
+
+ 0.1
+
+
+Non-Malicious Warheads
+
+
+[Warhead]Malicious=boolean
+  Specifies whether or not EVA should notify a ore miner's owner of an attack
+  (EVA_OreMinerUnderAttack). No other EVA messages are suppressed. For
+  example, if a warhead's purpose is to spread ore dealing damage as a side
+  effect only you can use Malicious=no to disable unreasonable EVA attack
+  warnings for ore miners. Defaults to yes.
+
+ Warheads; Malicious= warhead flag suppresses EVA's *ore miner under
+  attack* warnings.
+
+ 0.2
+
+
+Prevent scattering
+
+
+A unit hit by a warhead might scatter on impact. This tag on the attacking
+warhead prevents this.
+
+[Warhead]PreventScatter=boolean
+  Whether units should not scatter when attacked with this warhead even if they
+  have the ability to. Defaults to no.
+
+ 0.7

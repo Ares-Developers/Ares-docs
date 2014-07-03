@@ -1,15 +1,15 @@
-.. index:: Ivan Bombs; Ivan Bombs won't disappear when victim is sold, deployed or undeployed.
+ Ivan Bombs; Ivan Bombs won't disappear when victim is sold, deployed or undeployed.
 
-=======================
+
 Disappearing Ivan Bombs
-=======================
+
 
 Ivan Bombs attached to a unit just vanished when the unit deployed into a
 building and vice versa. The bomb would also disappear if a rigged building
 changed its owner. If a building was sold while a bomb was attached to it, the
 bomb was sold along with it, without being triggered.
 
-:game:`Ares` transfers the bomb in such cases and prevents the bomb from getting
+Ares transfers the bomb in such cases and prevents the bomb from getting
 lost in the process. If a unit or building is sold, the bomb will now go off.
 
-.. versionadded:: 0.2
+ 0.2

@@ -1,0 +1,159 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>General Settings &mdash; Ares 0.7 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.7 documentation" href="../../index.html" />
+    <link rel="up" title="Warheads" href="index.html" />
+    <link rel="next" title="CellSpread Enhancements" href="cellspread.html" />
+    <link rel="prev" title="Warheads" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="cellspread.html" title="CellSpread Enhancements"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Warheads"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Warheads</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">General Settings</a><ul>
+<li><a class="reference internal" href="#affectsenemies"><span><span class="type">AffectsEnemies</span></span></a></li>
+<li><a class="reference internal" href="#non-malicious-warheads">Non-Malicious Warheads</a></li>
+<li><a class="reference internal" href="#prevent-scattering">Prevent scattering</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Warheads</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="cellspread.html"
+                        title="next chapter"><span><span class="type">CellSpread</span></span> Enhancements</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="general-settings">
+<h1>General Settings<a class="headerlink" href="#general-settings" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="affectsenemies">
+<h2><span><span class="type">AffectsEnemies</span></span><a class="headerlink" href="#affectsenemies" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Warhead]►AffectsEnemies=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Specifies whether or not this warhead can damage enemy units. This has no
+effect on the warhead&#8217;s ability to target enemy units. A counterpart to the
+existing <span><tt class="docutils literal"><span class="pre">AffectsAllies</span></tt></span> flag.</dd>
+</dl>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+<div class="section" id="non-malicious-warheads">
+<h2>Non-Malicious Warheads<a class="headerlink" href="#non-malicious-warheads" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Warhead]►Malicious=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Specifies whether or not EVA should notify a ore miner&#8217;s owner of an attack
+(<cite>EVA_OreMinerUnderAttack</cite>). No other EVA messages are suppressed. For
+example, if a warhead&#8217;s purpose is to spread ore dealing damage as a side
+effect only you can use <span><tt class="docutils literal"><span class="pre">Malicious=no</span></tt></span> to disable unreasonable EVA attack
+warnings for ore miners. Defaults to <cite>yes</cite>.</dd>
+</dl>
+<p class="versionadded" id="index-1">
+<span class="versionmodified">New in version 0.2.</span></p>
+</div>
+<div class="section" id="prevent-scattering">
+<h2>Prevent scattering<a class="headerlink" href="#prevent-scattering" title="Permalink to this headline">¶</a></h2>
+<p>A unit hit by a warhead might scatter on impact. This tag on the attacking
+warhead prevents this.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Warhead]►PreventScatter=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether units should not scatter when attacked with this warhead even if they
+have the ability to. Defaults to <cite>no</cite>.</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.7.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="cellspread.html" title="CellSpread Enhancements"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Warheads"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" >Warheads</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

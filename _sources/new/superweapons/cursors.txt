@@ -1,0 +1,43 @@
+.. _sw-cursors:
+
+Cursors
+
+
+Ares allows you to specify custom mouse cursors for the super weapon,
+using the following flags:
+
+[SuperWeapon]Cursor.Frame=integer
+  Starting frame of the cursor from \ mouse.sha. Defaults to the Attack
+  cursor.
+[SuperWeapon]Cursor.Count=integer
+  Number of frames in the animated cursor.
+[SuperWeapon]Cursor.Interval=integer
+  How often to animate the cursor? Default is 5.
+[SuperWeapon]Cursor.MiniFrame=integer
+  Same as Cursor.Frame, except this is for the mouse cursor when
+  positioned on the minimap. Set this to -1 to disable the minimap
+  cursor and to only allow players to click on the battlefield.
+[SuperWeapon]Cursor.MiniCount=integer
+  Same as Cursor.Count, except this is for the mouse cursor when
+  positioned on the minimap.
+[SuperWeapon]Cursor.HotSpot=HotSpot X, HotSpot Y
+  Specifies the coordinates on the cursor that are considered to be the 'tip'
+  that is, the point from which the click event will handled. HotSpot X should
+  be one of Left, Center or Right. HotSpot Y should
+  be one of Top, Middle or Bottom. For example,
+  Cursor.HotSpot=Left,Top will treat the top-left corner of the cursor as
+  the tip. Default is Center,Middle.
+
+
+All of the above Cursor.* flags have a corresponding NoCursor.*
+flag, which allows you to specify the cursor that will be displayed when the
+mouse pointer is positioned over a point where the super weapon cannot be fired
+(e.g. the Force Shield cannot be fired over empty ground, so will display an
+alternate cursor to indicate this).
+
+The NoCursor.* flags default to the same value as their Cursor.*
+counterparts.
+
+ Super Weapons; Custom SW Cursors.
+
+ 0.1

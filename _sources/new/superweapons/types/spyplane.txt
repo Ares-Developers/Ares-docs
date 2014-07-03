@@ -1,0 +1,25 @@
+Type=SpyPlane
+
+
+Default values for general tags:
+
+[SuperWeapon]SW.AITargeting=enum
+  Defaults to ParaDrop.
+
+
+Spy Plane specific tags:
+
+[SuperWeapon]SpyPlane.Type=AircraftType
+  The AircraftType that will be sent as a spy plane. Defaults to
+  SPYP.
+[SuperWeapon]SpyPlane.Count=integer
+  The number of spy planes to be sent out. Defaults to 1.
+[SuperWeapon]SpyPlane.Mission=mission
+  The mission that the aircraft will be sent on (Guard,
+  Attack, Move, etc). Defaults to SpyPlane_Approach.
+
+ Super Weapons; SpyPlane can now specify which AircraftType, how many,
+  and what mission to perform.
+
+
+ 0.1

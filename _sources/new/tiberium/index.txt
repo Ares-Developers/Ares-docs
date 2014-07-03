@@ -1,11 +1,11 @@
 Tiberium
-~~~~~~~~
 
-A group of previous features that were working in :game:`Tiberian Sun` but were
-not in :game:`Red Alert 2` and :game:`Yuri's Revenge`, as well as several
-extensions related to :type:`Tiberiums`.
 
-.. toctree::
+A group of previous features that were working in Tiberian Sun but were
+not in Red Alert 2 and Yuri's Revenge, as well as several
+extensions related to Tiberiums.
+
+
 	:glob:
 	
 	storage

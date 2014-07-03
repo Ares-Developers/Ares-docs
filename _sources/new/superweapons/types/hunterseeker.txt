@@ -1,0 +1,50 @@
+Type=HunterSeeker
+
+
+The Hunter Seeker super weapon known from Tiberian Sun has been restored
+and expanded. The Hunter Seeker is a VehicleType that is launched from a
+building and then flys into an enemy object, detonating on impact.
+
+Default values for general tags:
+
+[SuperWeapon]SW.AITargeting=enum
+  Defaults to NoTarget.
+[SuperWeapon]SW.AffectsHouse=enum
+  Specifies the houses targeted. Defaults to enemies.
+[SuperWeapon]SW.AffectsTarget=enum
+  Specifies which types are targeted. Defaults to all.
+[SuperWeapon]EVA.Detected=EVA event
+  Defaults to EVA_HunterSeekerDetected.
+[SuperWeapon]EVA.Ready=EVA event
+  Defaults to EVA_HunterSeekerReady.
+[SuperWeapon]EVA.Activated=EVA event
+  Defaults to EVA_HunterSeekerLaunched.
+[SuperWeapon]Text.Ready=CSF label
+  Defaults to TXT_RELEASE.
+
+
+Hunter Seeker specific tags:
+
+[SuperWeapon]HunterSeeker.Buildings=list of BuildingType
+  The list of BuildingTypes that can launch this Hunter Seeker. Does not
+  have to be the same buildings that provide this super weapon. If the player
+  does not own a building of any type, the super weapon discharges without
+  launching a Hunter Seeker. Defaults to [SpecialWeapons]►HSBuilding.
+[SuperWeapon]HunterSeeker.Type=VehicleType
+  The Hunter Seeker unit to spawn. Only set this to use a specific unit instead
+  of each players' side default. Defaults to the side's HunterSeeker.
+[SuperWeapon]HunterSeeker.RandomOnly=boolean
+  Whether every enemy object on the map has an equal chance of being targeted by
+  the Hunter Seeker. If no, non-civilian targets are preferred for
+  human players in multiplayer games, and only if no preferred target is found,
+  a random target is chosen. Defaults to no.
+
+
+See ... for information on how to define a
+valid Hunter Seeker unit and how to prevent certain TechnoTypes to be
+targeted. See Sides & Countries <sides-hunterseeker> on how to define a
+default Hunter Seeker unit for each side.
+
+ Super Weapons; HunterSeeker recreated.
+
+ 0.7

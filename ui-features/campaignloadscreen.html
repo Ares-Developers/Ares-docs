@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Campaign Load Screen &mdash; Ares 0.7 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.7 documentation" href="../index.html" />
+    <link rel="up" title="User Interface Features" href="index.html" />
+    <link rel="next" title="Command Line Arguments" href="commandlinearguments.html" />
+    <link rel="prev" title="Campaign List" href="campaignlist.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="commandlinearguments.html" title="Command Line Arguments"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="campaignlist.html" title="Campaign List"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Campaign Load Screen</a><ul>
+<li><a class="reference internal" href="#text-color">Text Color</a></li>
+<li><a class="reference internal" href="#music-theme">Music Theme</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="campaignlist.html"
+                        title="previous chapter">Campaign List</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="commandlinearguments.html"
+                        title="next chapter">Command Line Arguments</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="campaign-load-screen">
+<h1>Campaign Load Screen<a class="headerlink" href="#campaign-load-screen" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="text-color">
+<h2>Text Color<a class="headerlink" href="#text-color" title="Permalink to this headline">¶</a></h2>
+<p><span class="game docutils literal">Yuri&#8217;s Revenge</span> always draws single player campaign load screen texts in
+red. <span class="game docutils literal">Ares</span> uses the correct values, inferred by the mission name prefix.
+You can override these defaults for each mission using this new
+<tt class="file docutils literal docutils literal"><span class="pre">missionmd.ini</span></tt> tag.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Mission]►LoadScreenText.Color=</span></tt><span class="type definition"> (Color scheme)</span></span></dt>
+<dd>Text on the campaign loading screens for this mission will be drawn using this
+color from the <span><tt class="docutils literal"><span class="pre">[Colors]</span></tt></span> list. For example,
+<span><tt class="docutils literal"><span class="pre">LoadScreenText.Color=AlliedLoad</span></tt></span>.</dd>
+</dl>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.2.</span></p>
+</div>
+<div class="section" id="music-theme">
+<h2>Music Theme<a class="headerlink" href="#music-theme" title="Permalink to this headline">¶</a></h2>
+<p>The loading theme for a single player mission is read from the map file itself.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Basic]►LoadingTheme=</span></tt><span class="type definition"> (theme id)</span></span></dt>
+<dd>The theme playing when loading this mission. Use <cite>none</cite> to disable the
+loading screen music. Defaults to <cite>LOADING</cite>.</dd>
+</dl>
+<p class="versionadded" id="index-1">
+<span class="versionmodified">New in version 0.7.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="commandlinearguments.html" title="Command Line Arguments"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="campaignlist.html" title="Campaign List"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="index.html" >User Interface Features</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

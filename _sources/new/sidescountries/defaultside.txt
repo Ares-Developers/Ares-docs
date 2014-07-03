@@ -1,0 +1,89 @@
+Side Defaults
+
+
+These are the side defaults used instead of global tags.
+
+
+Crew, Survivors and Other Types
+
+
+[Side]Crew=InfantryType
+  The InfantryType that is spawned as a survivor when objects (with
+  Crewed=yes set) owned by this side are destroyed (or, in the case of
+  buildings, sold).
+[Side]Engineer=InfantryType
+  The InfantryType that has a chance to be spawned when buildings with
+  Factory=BuildingType owned by this side are destroyed or sold. Defaults
+  to [General]►Engineer.
+[Side]Technician=InfantryType
+  The InfantryType that has a chance to be spawned when armed objects
+  owned by this side are destroyed or sold. Defaults to
+  [General]►Technician.
+[Side]DefaultDisguise=InfantryType
+  Default InfantryType that disguisable infantry will be disguised as
+  when first created.
+[Side]SurvivorDivisor=integer
+  An object's refund amount is divided by this number to determine how many
+  survivors will be spawned when this object is destroyed (or, in the case of
+  buildings, sold).
+
+ 0.1
+ 0.5
+
+
+AI and Base-Building
+
+
+[Side]AI.BaseDefenses=list of BuildingTypes
+  List of base defense buildings that the AI can build.
+[Side]AI.BaseDefenseCounts=list of integers
+  The maximum amount of base defense building that the AI can build.
+  (listed as AI difficulties: hard, medium, easy)  Defaults to
+  [General]►AlliedBaseDefenseCounts for GDI (Allied),
+  [General]►SovietBaseDefenseCounts for Nod (Soviet), and
+  [General]►ThirdBaseDefenseCounts for ThirdSide (Yuri).
+
+ 0.1
+
+
+Paradrop Defaults
+
+
+[Side]ParaDrop.Types=list of InfantryTypes and/or VehicleTypes
+  The units that will be paradropped by Type=ParaDrop super weapons (such
+  as the one normally provided by a Tech Airport) for this side. Defaults to
+  [General]►AllyParaDropInf for GDI (Allied),
+  [General]►SovParaDropInf for Nod (Soviet), and
+  [General]►YuriParaDropInf for ThirdSide (Yuri).
+
+   The original flags used to control the paradrop units only accept
+    InfantryTypes. To include VehicleTypes in a paradrop you
+    *have to* use the new ParaDrop.Types and ParaDrop.Num flags.
+[Side]ParaDrop.Num=list of integers
+  The quantity of each corresponding unit (listed against ParaDrop.Types)
+  that will be paradropped. Defaults to [General]►AllyParaDropNum for GDI
+  (Allied), [General]►SovParaDropNum for Nod (Soviet), and
+  [General]►YuriParaDropNum for ThirdSide (Yuri).
+[Side]ParaDrop.Aircraft=AircraftType
+  The aircraft type that will be used to deliver paradrops. Defaults to
+  PDPLANE.
+[Side]Parachute.Anim=Animation
+  This side's default parachute used if not overridden by the country or a
+  TechnoType. Defaults to PARACH.
+
+ 0.2
+
+
+Hunter Seeker Defaults
+
+
+.. _sides-hunterseeker:
+
+[Side]HunterSeeker=VehicleType
+  The unit used as default Hunter Seeker for the Hunter Seeker super weapon.
+  Replaces [General]►GDIHunterSeeker and [General]►NodHunterSeeker
+  from Tiberian Sun. Set this to a VehicleType with Fly
+  locomotor as specified under ....
+  Defaults to none.
+
+ 0.7

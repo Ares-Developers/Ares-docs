@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Ion Cannon Ripple Effect &mdash; Ares 0.7 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.7 documentation" href="../../index.html" />
+    <link rel="up" title="Warheads" href="index.html" />
+    <link rel="next" title="PreImpactAnim" href="preimpactanim.html" />
+    <link rel="prev" title="Customizable WarpAway" href="temporal.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="preimpactanim.html" title="PreImpactAnim"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="temporal.html" title="Customizable WarpAway"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Warheads</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="temporal.html"
+                        title="previous chapter">Customizable <span><span class="type">WarpAway</span></span></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="preimpactanim.html"
+                        title="next chapter"><span><span class="type">PreImpactAnim</span></span></a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="ion-cannon-ripple-effect">
+<h1>Ion Cannon Ripple Effect<a class="headerlink" href="#ion-cannon-ripple-effect" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Warhead]►Ripple.Radius=</span></tt><span class="type definition"> (integer, scale unknown)</span></span></dt>
+<dd><p class="first">This generates a visual shockwave when the warhead detonates, identical to the
+one produced by <span class="game docutils literal">Tiberian Sun</span>&#8216;s Ion Cannon. It is recommended that you
+don&#8217;t set Radius above 79. Note that this is a visual effect only.</p>
+<p>Below are listed some results of modifying the tag values.</p>
+<ul class="last simple">
+<li><span><tt class="docutils literal"><span class="pre">Ripple.Radius=1</span></tt></span> - Forget it, nothing.</li>
+<li><span><tt class="docutils literal"><span class="pre">Ripple.Radius=5</span></tt></span> - Target cell, only voxel rippling</li>
+<li><span><tt class="docutils literal"><span class="pre">Ripple.Radius=8</span></tt></span> - Target cell, both voxel and SHP rippling.</li>
+<li><span><tt class="docutils literal"><span class="pre">Ripple.Radius=10</span></tt></span> - 1 cell radius</li>
+<li><span><tt class="docutils literal"><span class="pre">Ripple.Radius=15</span></tt></span> - 2 cell radius</li>
+<li><span><tt class="docutils literal"><span class="pre">Ripple.Radius=20</span></tt></span> - 3 cell radius</li>
+<li><span><tt class="docutils literal"><span class="pre">Ripple.Radius=25</span></tt></span> - 3 cell radius</li>
+<li><span><tt class="docutils literal"><span class="pre">Ripple.Radius=28</span></tt></span> - 3 cell unit-rippling, 4 cell terrain rippling
+radius</li>
+<li><span><tt class="docutils literal"><span class="pre">Ripple.Radius=30</span></tt></span> and onwards - 3 cell unit-rippling, 5 cell
+terrain-rippling radius</li>
+</ul>
+</dd>
+</dl>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="preimpactanim.html" title="PreImpactAnim"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="temporal.html" title="Customizable WarpAway"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" >Warheads</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+Airstrike Voices
+
+
+Ares supports custom airstrike related voices. These flags can be
+defined on the designator unit like Boris and the aircraft (the designator's
+flags take precedence). If a flag isn't set on any of those, the respective
+[AudioVisual]► flag is used. To disable an airstrike voice, set it to an
+empty sound.
+
+[TechnoType]VoiceAirstrikeAttack=soundmd entry
+  Specifies the voice played when the airstrike is called in and the team enters
+  the map. Defaults to AirstrikeAttackVoice.
+
+[TechnoType]VoiceAirstrikeAbort=soundmd entry
+  Specifies the voice played when the designator unit is killed before the
+  aircraft had a chance to fire. Defaults to AirstrikeAbortSound.
+
+ Airstrikes; Custom attack and abort voices.
+
+ 0.7

@@ -1,0 +1,54 @@
+Type=DropPod
+
+
+Ares re-implements the Drop Pod SW (Type=DropPod) known from
+Firestorm. A super weapon of this type spawns between a minimum and a
+maximum random units from a list of types, which all arrive in drop pods.
+
+ \ Firestorm had the Drop Pods hardcoded to use E1
+  (Rifle Soldier) and E2 (Disk Thrower), a behavior that has not been
+  recreated. Ares uses no default types, thus do not forget to set them
+  correctly.
+
+
+Default values for general tags:
+
+[SuperWeapon]SW.AITargeting=enum
+  Defaults to ParaDrop.
+[SuperWeapon]EVA.Detected=EVA event
+  Defaults to EVA_DropPodDetected.
+[SuperWeapon]EVA.Ready=EVA event
+  Defaults to EVA_DropPodReady.
+[SuperWeapon]EVA.Activated=EVA event
+  Defaults to EVA_DropPodActivated.
+
+
+Drop Pod specific tags:
+
+[SuperWeapon]DropPod.Types=list of InfantryTypes
+  The types to chose from. Each type has an equal chance of being selected. You
+  can add types more than once. Only infantry is supported. Defaults to
+  [General]►DropPodTypes.
+[SuperWeapon]DropPod.Veterancy=float
+  The veterancy level the units will start with, if they do not have a higher
+  initial rank already. Values between 0.0 and
+  [General]►VeteranCap are valid. Defaults to 2.0 (elite).
+[SuperWeapon]DropPod.Minimum=integer
+  The minimum number of Drop Pods being created. Defaults to
+  [General]►DropPodMinimum.
+[SuperWeapon]DropPod.Maximum=integer
+  The maximum number of Drop Pods being created. Defaults to
+  [General]►DropPodMaximum.
+
+Drop pods need clear ground around them to be spawned. If a unit cannot find a
+place to land and another cell to spawn above, another random unit and new cell
+close to the last cell are picked. The maximum number of retries for placing all
+units is 3 times the number of units to spawn. In case this limit is exceeded,
+the super weapon stops to place more units.
+
+See ... for information about the global defaults
+and other related additions.
+
+ Super Weapons; DropPod reinforcements.
+
+ 0.7

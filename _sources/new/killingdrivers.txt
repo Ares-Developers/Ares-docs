@@ -1,37 +1,37 @@
 Killing Drivers
-~~~~~~~~~~~~~~~
 
-Requested as a `"Jarmen Kell" functionality
-<http://bugs.renegadeprojects.com/view.php?id=733>`_, this feature allows
+
+Requested as a "Jarmen Kell" functionality
+, this feature allows
 specific warheads to kill the driver of a vehicle instead of damaging
 it, and allows others to take over the now-neutral vehicle.
 
-:tagdef:`[Warhead]KillDriver=boolean`
+[Warhead]KillDriver=boolean
   Specifies whether this warhead kills the driver of the vehicle, instead of
   damaging the vehicle itself. The first passenger matching the vehicle's
-  :tag:`Operator` is considered the driver. All other passengers will be
-  ejected. Defaults to :value:`no`.
-:tagdef:`[Warhead]KillDriver.KillBelowPercent=float`
-  Specifies the percentage of health a unit has to go below to have its driver
-  killed by a :tag:`KillDriver=yes` warhead. A unit not below this health level
-  is only damaged and the driver is not killed. Defaults to :value:`100%`.
-:tagdef:`[TechnoType]ProtectedDriver=boolean`
+  Operator is considered the driver. All other passengers will be
+  ejected. Defaults to no.
+[Warhead]KillDriver.KillBelowPercent=float
+  Specifies the percentage of health a unit can not exceed to have its driver
+  killed by a KillDriver=yes warhead. A unit above this health level
+  is only damaged and the driver is not killed. Defaults to 100%.
+[TechnoType]ProtectedDriver=boolean
   Whether the driver of this vehicle cannot be killed, i.e. whether this vehicle
-  is immune to :tag:`KillDriver`. :tag:`Organic=yes` and :tag:`Natural=yes`
-  units are always immune to :tag:`KillDriver`. Defaults to :value:`no`.
-:tagdef:`[TechnoType]CanDrive=boolean`
-  Whether this :type:`InfantryType` can act as the driver of vehicles whose
+  is immune to KillDriver. Organic=yes and Natural=yes
+  units are always immune to KillDriver. Defaults to no.
+[TechnoType]CanDrive=boolean
+  Whether this InfantryType can act as the driver of vehicles whose
   driver has been killed, effectively reclaiming the vehicle. If the vehicle
-  requires an :tag:`Operator` the infantry driver turns the unit and enters as
+  requires an Operator the infantry driver turns the unit and enters as
   passenger that can be ejected later, otherwise the driver is swallowed,
-  becoming the permanent driver of the vehicle. Defaults to :value:`no`.
+  becoming the permanent driver of the vehicle. Defaults to no.
 
-.. note:: Vehicle Thieves cannot drive neutralized vehicles by default, but
-  \ :tag:`VehicleThief=yes` can be combined with :tag:`CanDrive=yes` without
+ Vehicle Thieves cannot drive neutralized vehicles by default, but
+  VehicleThief=yes can be combined with CanDrive=yes without
   problems.
 
-See :doc:`/new/hijackers` for more options that relate to :tag:`CanDrive`.
+See ... for more options that relate to CanDrive.
 
-.. index:: Warheads; Warheads can be set to kill the driver of a vehicle, instead of damaging it.
+ Warheads; Warheads can be set to kill the driver of a vehicle, instead of damaging it.
 
-.. versionadded:: 0.2
+ 0.2

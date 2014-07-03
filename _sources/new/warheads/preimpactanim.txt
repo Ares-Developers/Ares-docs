@@ -1,0 +1,20 @@
+.. _preimpactanim:
+
+PreImpactAnim
+
+
+In Yuri's Revenge the nuke uses a special animation called
+NUKEBALL which was shown prior to displaying the actual mushroom
+explosion and dealing damage. The game was hard-coded to use this only for
+warheads with the ID NUKE. Ares enables this for arbitrary
+warheads.
+
+[Warhead]PreImpactAnim=string, animation ID
+  Specifies the animation to display when a projectile which uses this warhead
+  impacts. After the animation is over, the actual explosion is created and
+  damage is dealt. The animation may not be looping. Defaults to
+  NUKEBALL for NUKE, otherwise to none.
+
+ Warheads; PreImpactAnim= optional for every warhead, not just for NUKE.
+
+ 0.2

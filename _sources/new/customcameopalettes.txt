@@ -1,26 +1,26 @@
 Custom Cameo Palettes
-~~~~~~~~~~~~~~~~~~~~~
+
 
 Rather than always using the cameo palette, individual cameos can now use their
 own bespoke palette.
 
-In :file:`artmd.ini`:
+In artmd.ini:
 
-:tagdef:`[UnitArt]CameoPalette=filename, *including* the .pal extension)`
-  Specifies the palette to use for the unit's cameo (:tag:`Cameo` and
-  :tag:`AltCameo` must use the same palette), in the format "filename.pal".
-  Defaults to :value:`cameo.pal`.
+[UnitArt]CameoPalette=filename, *including* the .pal extension)
+  Specifies the palette to use for the unit's cameo (Cameo and
+  AltCameo must use the same palette), in the format "filename.pal".
+  Defaults to cameo.pal.
 
 
-In :file:`rulesmd.ini`:
+In rulesmd.ini:
 
-:tagdef:`[SuperWeapon]SidebarPalette=filename, *including* the .pal extension`
-  Specifies the palette to use for the super weapon's :tag:`SidebarImage`, in
-  the format "filename.pal". Defaults to :value:`cameo.pal`.
+[SuperWeapon]SidebarPalette=filename, *including* the .pal extension
+  Specifies the palette to use for the super weapon's SidebarImage, in
+  the format "filename.pal". Defaults to cameo.pal.
 
-.. note:: The cameo must not use the color at index 0 of the palette. It
+ The cameo must not use the color at index 0 of the palette. It
   will be transparent in-game.
 
-.. index:: Art; Custom palettes for cameos.
+ Art; Custom palettes for cameos.
 
-.. versionadded:: 0.1
+ 0.1

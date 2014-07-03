@@ -1,0 +1,17 @@
+Type=PsychicReveal
+
+
+Default values for general tags:
+
+[SuperWeapon]SW.Range=float,integer
+  Range revealed by this super weapon. Defaults to
+  [CombatDamage]►PsychicRevealRadius. The default value is capped at 10,
+  mimicking the original implementation using Cell Spread. To disable this
+  limitation, set SW.Range explicitly.
+[SuperWeapon]SW.Sound=Sound
+  Defaults to [AudioVisual]►PsychicRevealActivateSound.
+[SuperWeapon]SW.AITargeting=enum
+  Defaults to ParaDrop.
+
+
+ 0.2

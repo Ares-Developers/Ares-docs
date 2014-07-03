@@ -1,0 +1,163 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Civilian Enemies &mdash; Ares 0.7 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.7 documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Crashing" href="crashableaircraft.html" />
+    <link rel="prev" title="Chronoshift" href="chronoshift.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="crashableaircraft.html" title="Crashing"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="chronoshift.html" title="Chronoshift"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Civilian Enemies</a><ul>
+<li><a class="reference internal" href="#treat-civilians-as-enemies">Treat Civilians as Enemies</a></li>
+<li><a class="reference internal" href="#repelling-civilian-attacks">Repelling Civilian Attacks</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="chronoshift.html"
+                        title="previous chapter">Chronoshift</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="crashableaircraft.html"
+                        title="next chapter">Crashing</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="civilian-enemies">
+<h1>Civilian Enemies<a class="headerlink" href="#civilian-enemies" title="Permalink to this headline">¶</a></h1>
+<p>In <span class="game docutils literal">Red Alert 2</span> the environment is pretty much friendly and factions do
+not have to fear an attack of inhabitants of the territory they are fighting in.
+The engine would not know how to deal with them, and this is what <span class="game docutils literal">Ares</span>
+changes.</p>
+<div class="section" id="treat-civilians-as-enemies">
+<h2>Treat Civilians as Enemies<a class="headerlink" href="#treat-civilians-as-enemies" title="Permalink to this headline">¶</a></h2>
+<p><span class="game docutils literal">Yuri&#8217;s Revenge</span> makes a distinction between single player and multi
+player games. In multiplay matches all objects belonging to a house with
+<span><tt class="docutils literal"><span class="pre">MultiplayPassive=yes</span></tt></span> are considered neutral, with the exception of tech
+and occupiable structures. In single player missions units are not considered
+neutral if they are <span><tt class="docutils literal"><span class="pre">Insignificant=no</span></tt></span>.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►CivilianEnemy=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether this unit is considered an enemy when auto-acquiring a target.
+Enabling this prevents a unit of this type to be considered neutral in
+multiplayer matches. Defaults to <cite>no</cite>.</dd>
+</dl>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.7.</span></p>
+</div>
+<div class="section" id="repelling-civilian-attacks">
+<h2>Repelling Civilian Attacks<a class="headerlink" href="#repelling-civilian-attacks" title="Permalink to this headline">¶</a></h2>
+<p>If civilians are not recognized as dangerous, only units or structures attacked
+by such neutral units will retaliate against them. This way units like the
+Visceroid or the Tiberium Fiend can bring down a house&#8217;s buildings one by one.</p>
+<p>This new tag makes the AI&#8217;s or the player&#8217;s unit smarter in defending against
+such threats as civilians attacking a power plant will be repelled by all allies
+in range, or alligators eating Engineers with armed bystanders just idling.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[CombatDamage]►AutoRepel=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether AI players will consider civilian units attacking allied objects as
+enemy when auto-acquiring targets. This makes units nearby help protect
+against an offender. Otherwise, only the attacked unit retaliates. Defaults to
+<cite>no</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[CombatDamage]►PlayerAutoRepel=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether human players will consider civilian units attacking allied objects as
+enemy when auto-acquiring targets. This makes units nearby help protect
+against an offender. Otherwise, only the attacked unit retaliates. Defaults to
+<cite>no</cite>.</dd>
+</dl>
+<p class="versionadded" id="index-1">
+<span class="versionmodified">New in version 0.7.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="crashableaircraft.html" title="Crashing"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="chronoshift.html" title="Chronoshift"
+             >previous</a> |</li>
+        <li><a href="../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

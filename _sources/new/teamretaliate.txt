@@ -1,0 +1,25 @@
+Team Retaliate
+
+
+If a unit attacked a member of an idling team in Tiberian Sun and didn't
+kill it right away, the team would collectively retaliate against the offender.
+This logic has been removed from Red Alert 2 and Ares brings it
+back as an optional feature.
+
+While the original logic just ignored AircraftTypes, the restored logic
+also excludes ConsideredAircraft=yes units and parasites. Another
+difference is that the team members' current targets are no longer reset when a
+second offender attacks the team, which might prevent target juggling in case of
+multiple attackers.
+
+This feature can only be enabled globally using a tag to not change the original
+game's behavior. Also, Ares does not extend TeamTypes yet to
+allow custom tags per team.
+
+[General]TeamRetaliate=boolean
+  Whether teams are allowed to retaliate if a member is attacked and not killed
+  immediately. Defaults to no.
+
+ AI; Team retaliates if a member is attacked
+
+ 0.7

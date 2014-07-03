@@ -1,0 +1,85 @@
+Hunter Seeker
+
+
+The Hunter Seeker known from Tiberian Sun is a VehicleType that
+uses the Fly locomotor and has HunterSeeker=yes set. It is launched by
+the ....
+
+Refer to ModEnc  for
+more information about Hunter Seeker's movement and targeting logic.
+
+ Hunter Seeker; How to set up
+
+ 0.7
+
+
+Global Settings
+
+
+The following tags define the defaults for the Hunter Seeker super weapons and
+all VehicleTypes with HunterSeeker=yes set. The tags do not
+default to meaningful values, but the values Tiberian Sun uses are given
+here for reference.
+
+Default for super weapons:
+
+[SpecialWeapons]HSBuilding=list of BuildingTypes
+  Buildings that can launch Hunter Seekers. BuildingTypes in this list
+  do not have to provide the Hunter Seeker super weapon. Either this or the
+  corresponding tag on the super weapon have to be set. If the player does not
+  own any building from this list, the super weapon will discharge without a
+  Hunter Seeker being launched. Defaults to none, Tiberian Sun
+  uses GAPLUG,NATMPL.
+
+Defaults for VehicleTypes:
+
+[General]HunterSeekerDetonateProximity=integer
+  Distance to target in leptons below which the Hunter Seeker will detonate.
+  Defaults to 0, Tiberian Sun uses 150.
+[General]HunterSeekerDescendProximity=integer
+  Distance to target in leptons where the Hunter Seeker will start to descend.
+  Defaults to 0, Tiberian Sun uses 700.
+[General]HunterSeekerAscentSpeed=integer
+  Speed value used while rising to a higher flight level. Defaults to
+  0, Tiberian Sun uses 40.
+[General]HunterSeekerDescentSpeed=integer
+  Speed value used while going down to a lower flight level. Defaults to
+  0, Tiberian Sun uses 50.
+[General]HunterSeekerEmergeSpeed=integer
+  Speed value used when ascending from the launch site. Defaults to 0,
+  Tiberian Sun uses 6.
+
+Hunter Seeker Unit Settings
+
+
+These tags override the global tags for each unit type. Only the Fly locomotor
+makes use of these values.
+
+[VehicleType]HunterSeeker.DetonateProximity=integer
+  Distance to target in leptons below which the Hunter Seeker will detonate.
+  Defaults to [General]►HunterSeekerDetonateProximity.
+[VehicleType]HunterSeeker.DescendProximity=integer
+  Distance to target in leptons where the Hunter Seeker will start to descend.
+  Defaults to [General]►HunterSeekerDescendProximity.
+[VehicleType]HunterSeeker.AscentSpeed=integer
+  Speed value used while rising to a higher flight level. Defaults to
+  [General]►HunterSeekerAscentSpeed.
+[VehicleType]HunterSeeker.DescentSpeed=integer
+  Speed value used while going down to a lower flight level. Defaults to
+  [General]►HunterSeekerDescentSpeed.
+[VehicleType]HunterSeeker.EmergeSpeed=integer
+  Speed value used when ascending from the launch site. Defaults to
+  [General]►HunterSeekerEmergeSpeed.
+
+Disallow Targeting
+
+
+A TechnoType can be exempt from the target scan of all Hunter Seekers
+enabling the tag below. This can help reduce frustration because vital or overly
+expensive objects or insignificant or unreasonably cheap objects can be spared.
+It can also be used for mission-critical objects in campaigns.
+
+[TechnoType]HunterSeeker.Ignore=boolean
+  Whether the Hunter Seeker will ignore targets of this type altogether, and not
+  even randomly select them when no other target is eligible. Defaults to
+  no.

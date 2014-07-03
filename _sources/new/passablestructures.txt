@@ -1,0 +1,22 @@
+Passable Structures
+
+
+There are two ways to create buildings that units can move over, but both have
+side effects: LaserFence=yes makes the building immune to damage and
+enforces the electro infantry death in case it has a weapon, while
+Firestorm.Wall=yes makes the building part of the Firestorm logic.
+
+In Firestorm, IsLimpetMine serves a similar purpose, though it
+has other effects like not taking attack orders and being destroyed by EMP.
+
+To create a proper land mine that occupies a cell transparently to moving units
+while not having any other effect, Ares adds a new tag to overcome these
+considerations.
+
+[BuildingType]IsPassable=boolean
+  Whether the cells the building occupies can still be entered or stood on by
+  vehicles and infantry. Defaults to no.
+
+ Structures; Buildings that can be driven upon.
+
+ 0.7

@@ -1,14 +1,14 @@
-.. index:: Ivan Bombs; Ivan Bombs will not damage cloaked Ivans.
+ Ivan Bombs; Ivan Bombs will not damage cloaked Ivans.
 
-============================
+
 Ivan Bombs and Cloaked Ivans
-============================
 
-In :game:`Yuri's Revenge`, a unit delivering damage is immune to this damage,
-unless stated otherwise by :tag:`DamageSelf=yes`. If an Ivan cloaked after
+
+In Yuri's Revenge, a unit delivering damage is immune to this damage,
+unless stated otherwise by DamageSelf=yes. If an Ivan cloaked after
 placing a bomb, the bomb 'forgot' who planted it. Thus, the Ivan was not counted
 as the source of the damage once the bomb exploded, and thus it could take
-damage from it. :game:`Ares` prevents this from happening, and cloaking Ivans
+damage from it. Ares prevents this from happening, and cloaking Ivans
 are now as immune to their own bombs as non-cloaking Ivans are.
 
-.. versionadded:: 0.6
+ 0.6

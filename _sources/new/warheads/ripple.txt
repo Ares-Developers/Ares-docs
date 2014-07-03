@@ -1,0 +1,25 @@
+Ion Cannon Ripple Effect
+
+
+[Warhead]Ripple.Radius=integer, scale unknown
+  This generates a visual shockwave when the warhead detonates, identical to the
+  one produced by Tiberian Sun's Ion Cannon. It is recommended that you
+  don't set Radius above 79. Note that this is a visual effect only.
+
+  Below are listed some results of modifying the tag values.
+
+  + Ripple.Radius=1 - Forget it, nothing.
+  + Ripple.Radius=5 - Target cell, only voxel rippling
+  + Ripple.Radius=8 - Target cell, both voxel and SHP rippling.
+  + Ripple.Radius=10 - 1 cell radius
+  + Ripple.Radius=15 - 2 cell radius
+  + Ripple.Radius=20 - 3 cell radius
+  + Ripple.Radius=25 - 3 cell radius
+  + Ripple.Radius=28 - 3 cell unit-rippling, 4 cell terrain rippling
+    radius
+  + Ripple.Radius=30 and onwards - 3 cell unit-rippling, 5 cell
+    terrain-rippling radius
+
+ Warheads; Ion Cannon ripple effect for weapons.
+
+ 0.1

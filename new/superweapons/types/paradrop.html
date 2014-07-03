@@ -1,0 +1,207 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Type=ParaDrop and Type=AmerParaDrop &mdash; Ares 0.7 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.7 documentation" href="../../../index.html" />
+    <link rel="up" title="Settings by Super Weapon Type" href="index.html" />
+    <link rel="next" title="Type=SpyPlane" href="spyplane.html" />
+    <link rel="prev" title="Type=GeneticConverter" href="geneticconverter.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="spyplane.html" title="Type=SpyPlane"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="geneticconverter.html" title="Type=GeneticConverter"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="geneticconverter.html"
+                        title="previous chapter"><span><span class="type">Type=GeneticConverter</span></span></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="spyplane.html"
+                        title="next chapter"><span><span class="type">Type=SpyPlane</span></span></a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="type-paradrop-and-type-amerparadrop">
+<h1><span><span class="type">Type=ParaDrop</span></span> and <span><span class="type">Type=AmerParaDrop</span></span><a class="headerlink" href="#type-paradrop-and-type-amerparadrop" title="Permalink to this headline">¶</a></h1>
+<p>Default values for general tags:</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></tt><span class="type definition"> (enum)</span></span></dt>
+<dd>Defaults to <cite>ParaDrop</cite>.</dd>
+</dl>
+<p>The original flags that control the units provided by the generic paradrop super
+weapons (<span><tt class="docutils literal"><span class="pre">AllyParaDropInf</span></tt></span>, <span><tt class="docutils literal"><span class="pre">SovParaDropInf</span></tt></span> and
+<span><tt class="docutils literal"><span class="pre">YuriParaDropInf</span></tt></span>) and the American paradrop (<span><tt class="docutils literal"><span class="pre">AmerParaDropInf</span></tt></span>) only
+accept <span class="type docutils literal">InfantryTypes</span>. If you try to include a <span class="type docutils literal">VehicleType</span> via
+these lists then the game will create a new <span class="type docutils literal">InfantryType</span> instead - with
+the same parameters as the existing <span class="type docutils literal">VehicleType</span> - ultimately resulting
+in an invisible <span class="type docutils literal">InfantryType</span> being delivered in the paradrop.</p>
+<p>With <span class="game docutils literal">Ares</span>, there are new country-specific flags that override the old
+flags and enhance the way paradrops are delivered. <span><tt class="docutils literal"><span class="pre">ParaDrop.Types</span></tt></span> will
+accept <span class="type docutils literal">VehicleTypes</span> as well as <span class="type docutils literal">InfantryTypes</span>. You can send
+multiple airplanes of user-defined type.</p>
+<p>Each plane consists of the following properties:</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►ParaDrop.Types=</span></tt><span class="type definition"> (list of InfantryTypes and/or VehicleTypes)</span></span></dt>
+<dd><p class="first">The units that will be paradropped by this super weapon. For
+<span><tt class="docutils literal"><span class="pre">Type=AmerParaDrop</span></tt></span> super weapons, this defaults to
+<span><tt class="docutils literal"><span class="pre">AmerParaDropInf=</span></tt></span>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The original flags used to control the paradrop units only accept
+<span class="type docutils literal">InfantryTypes</span>. To include <span class="type docutils literal">VehicleTypes</span> in a paradrop you
+must use the new <span><tt class="docutils literal"><span class="pre">ParaDrop.Types</span></tt></span> and <span><tt class="docutils literal"><span class="pre">ParaDrop.Num</span></tt></span> flags.</p>
+</div>
+</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►ParaDrop.Num=</span></tt><span class="type definition"> (list of integers)</span></span></dt>
+<dd>The quantity of each corresponding unit (listed against <span><tt class="docutils literal"><span class="pre">ParaDrop.Types</span></tt></span>)
+that will be paradropped. For <span><tt class="docutils literal"><span class="pre">Type=AmerParaDrop</span></tt></span> super weapons, this
+defaults to <span><tt class="docutils literal"><span class="pre">AmerParaDropNum=</span></tt></span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►ParaDrop.Aircraft=</span></tt><span class="type definition"> (AircraftType)</span></span></dt>
+<dd>The type of aircraft that will deliver the units. Defaults to the
+corresponding country&#8217;s <span><tt class="docutils literal"><span class="pre">ParaDrop.Aircraft=</span></tt></span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►ParaDrop.Count=</span></tt><span class="type definition"> (integer - number of planes)</span></span></dt>
+<dd>This controls how many planes should be send to drop paratroopers. Defaults to
+<cite>1</cite>.</dd>
+</dl>
+<p>You can define every plane for each country, side or the super weapon
+separately. The syntax is as follows:</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Superweapon]►ParaDrop.ID.PlaneX.*=</span></tt></span></dt>
+<dd><em>ID</em> is name of the country or side. <em>X</em> is a positive integer, with no
+leading zeros, starting with <em>2</em> up to <cite>Count</cite>. To customize the first plane
+(which will also act as the default plane), do not use the <em>PlaneX</em> segment.
+If you want to set the default properties for all sides, do not use the <em>ID</em>
+segment. The <span><tt class="docutils literal"><span class="pre">Count</span></tt></span> tags can&#8217;t have a <em>PlaneX</em> segment.</dd>
+</dl>
+<p>The Airplane and its contents will be read separately, thus it is possible to
+only define <span><tt class="docutils literal"><span class="pre">Aircraft</span></tt></span>; <span><tt class="docutils literal"><span class="pre">Types</span></tt></span> and <span><tt class="docutils literal"><span class="pre">Nums</span></tt></span> will use the default
+value by going though the list until the tags are defined. This also works vice
+versa.</p>
+<p><span><tt class="docutils literal"><span class="pre">Types</span></tt></span> and <span><tt class="docutils literal"><span class="pre">Nums</span></tt></span> have to be defined together; it is not possible to
+change the number of units without restating the types.</p>
+<p>Values are read in this order, top down. The first value found is used.</p>
+<ol class="arabic simple">
+<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Country.PlaneX.*=</span></tt></span> (the SW&#8217;s country-specific
+plane number X)</li>
+<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Side.PlaneX.*=</span></tt></span> (the SW&#8217;s side-specific plane
+number X)</li>
+<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.PlaneX.*=</span></tt></span> (the SW&#8217;s default plane number X)</li>
+<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Country.*=</span></tt></span> (the SW&#8217;s country-specific default
+plane)</li>
+<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Side.*=</span></tt></span> (the SW&#8217;s side-specific default plane)</li>
+<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.*=</span></tt></span> (the SW&#8217;s default plane)</li>
+<li><span><tt class="docutils literal"><span class="pre">[Country]►ParaDrop.*=</span></tt></span> (the country-specific default plane)</li>
+<li><span><tt class="docutils literal"><span class="pre">[Side]►ParaDrop.*=</span></tt></span> (the side-specific default plane)</li>
+<li><span><tt class="docutils literal"><span class="pre">[General]►*=</span></tt></span> (the Rules&#8217; default plane)</li>
+</ol>
+<p>Examples:</p>
+<ul class="simple">
+<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Russia.Plane3.Types=BORIS</span></tt></span> (and proper
+<span><tt class="docutils literal"><span class="pre">Nums</span></tt></span>) would replace the contents of the third plane for the country
+<span><tt class="docutils literal"><span class="pre">Russia</span></tt></span>.</li>
+<li><span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Nod.Aircraft=SPLANE</span></tt></span> would replace the aircraft
+for all Soviet side countries.</li>
+</ul>
+<div class="quickstart admonition" id="quickstart-0">
+<p class="first admonition-title">Quickstart</p>
+<p class="last">To give all countries the same items, use
+<span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Count=</span></tt></span>, <span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Aircraft=</span></tt></span>,
+<span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Types=</span></tt></span>, and <span><tt class="docutils literal"><span class="pre">[Superweapon]►ParaDrop.Num=</span></tt></span>.
+This creates a clone of the American Paradrop.</p>
+</div>
+<p>You can create unlimited new paradrop superweapons with different properties.
+<span><tt class="docutils literal"><span class="pre">Type=ParaDrop</span></tt></span> and <span><tt class="docutils literal"><span class="pre">Type=AmerParaDrop</span></tt></span> are treated equally, but they
+differ by the default values. The AI will use both types as in the unmodified
+game.</p>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.2.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="spyplane.html" title="Type=SpyPlane"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="geneticconverter.html" title="Type=GeneticConverter"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

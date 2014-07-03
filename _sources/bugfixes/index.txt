@@ -1,9 +1,9 @@
-=========
-Bug Fixes
-=========
-:game:`Ares` provides three types of bug fixes:
 
-#. Fixes to genuine bugs in the original, unmodded :game:`Yuri's Revenge` 1.001,
+Bug Fixes
+
+Ares provides three types of bug fixes:
+
+#. Fixes to genuine bugs in the original, unmodded Yuri's Revenge 1.001,
    which cannot be fixed simply by modifying INI files or graphics (like the UMP
    does).
 #. Fixes to logic that goes unused in the unmodded game, or at least not used to
@@ -13,11 +13,10 @@ Bug Fixes
    in-game lag without affecting gameplay mechanics. Also hardware/operating
    system related crashes.
    
-.. note:: Restored features from Tiberian Sun have :doc:`their own category
-   </restored/index>` and are not considered fixed bugs under any of these
+ Restored features from Tiberian Sun have ... and are not considered fixed bugs under any of these
    definitions, particularly 2.
 
-.. toctree::
+
 	
 	type1/index.rst
 	type2/index.rst

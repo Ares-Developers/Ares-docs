@@ -1,0 +1,53 @@
+Type=GeneticConverter
+
+
+Default values for general tags:
+
+[SuperWeapon]SW.Range=float,integer
+  The area the Genetic Mutator affects. Ignored if Mutate.Explosion=yes.
+  Defaults to 3,3.
+[SuperWeapon]SW.Damage=integer
+  The damage the Genetic Mutator delivers if Mutate.Explosion=yes.
+  Defaults to 10000.
+[SuperWeapon]SW.Warhead=Warhead
+  The warhead used to deal the damage. Defaults to
+  [SpecialWeapons]►MutateExplosionWarhead if Mutate.Explosion=yes,
+  to [SpecialWeapons]►MutateWarhead otherwise.
+[SuperWeapon]SW.Animation=Animation
+  Defaults to [General]►IonBlast.
+[SuperWeapon]SW.AnimationHeight=integer
+  Defaults to 5.
+[SuperWeapon]SW.Sound=Sound
+  Defaults to [AudioVisual]►GeneticMutatorActivateSound.
+[SuperWeapon]SW.AITargeting=enum
+  Defaults to GeneticMutator.
+[SuperWeapon]SW.AffectsHouse=enum
+  Specifies the houses affected by the mutation, if Mutate.Explosion=no.
+  Defaults to all.
+[SuperWeapon]SW.AffectsTarget=enum
+  Specifies whether the mutation effect should be limited to land or
+  water targets. You cannot define any unit type here and they will be
+  ignored. Ignored if Mutate.Explosion=yes. Defaults to all.
+
+
+Genetic Mutator specific tags:
+
+[SuperWeapon]Mutate.Explosion=boolean
+  Switches between two modes. If yes, the Genetic Mutator will cause an
+  explosion using SW.Warhad and SW.Damage without respecting any
+  other Genetic Mutator specific tags. Otherwise all infantry units in range are
+  damaged using SW.Warhead and SW.Damage, verses and immunities
+  are respected. Defaults to [General]►MutateExplosion.
+[SuperWeapon]Mutate.IgnoreCyborg=boolean
+  Whether the Genetic Mutator will not affect infantry with Cyborg=yes
+  set. Ignored if Mutate.Explosion=yes. Defaults to no.
+[SuperWeapon]Mutate.IgnoreNotHuman=boolean
+  Whether the Genetic Mutator will not affect infantry with NotHuman=yes
+  set. Ignored if Mutate.Explosion=yes. Defaults to no.
+[SuperWeapon]Mutate.KillNatural=boolean
+  Whether the Genetic Mutator will just kill infantry with Natural=yes
+  set opposed to affecting it using SW.Warhead. Ignored if
+  Mutate.Explosion=yes. Defaults to yes.
+
+
+ 0.2

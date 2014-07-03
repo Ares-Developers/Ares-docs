@@ -1,0 +1,77 @@
+.. _custom-ivan-bombs:
+
+Ivan Bombs
+
+
+As with many other features of Yuri's Revenge, the settings that control
+Crazy Ivan Bombs are global so you can't have multiple variations of them with
+their own controls. With Ares it is now possible to create new Ivan
+Bomb-esque weapons new types of sticky bomb with whatever settings you like.
+
+Ares now also supports shrapnel weapons, as long as they have a
+CellSpread of 0.5 or more.
+
+When IvanBomb=yes is set on the weapon's warhead, the weapon can specify
+the following flags in order to customize that bomb:
+
+[Weapon]IvanBomb.Warhead=WarheadType
+  The warhead that will be used when the bomb detonates. Defaults to
+  [CombatDamage]►IvanWarhead.
+[Weapon]IvanBomb.Damage=integer
+  The damage that will be dealt when the bomb detonates. Defaults to
+  [CombatDamage]►IvanDamage.
+[Weapon]IvanBomb.Detachable=boolean
+  Whether or not Engineers can remove this bomb from units it has been attached
+  to. Defaults to yes.
+[Weapon]IvanBomb.DestroysBridges=boolean
+  Whether or not this bomb can be used on Bridge Repair Huts in order to destroy
+  the corresponding Bridge. Defaults to yes.
+  
+   Bombs can always be attached to Bridge Huts, but the resulting
+    explosion will not destroy the bridge unless
+    IvanBomb.DestroysBridges=yes is set.
+[Weapon]IvanBomb.CanDetonateTimeBomb=boolean
+  Whether or not players can manually detonate bombs attached by this weapon.
+  Defaults to [CombatDamage]►CanDetonateTimeBomb.
+[Weapon]IvanBomb.Delay=integer
+  The number of frames that will elapse before the bomb detonates automatically.
+  Defaults to [CombatDamage]►IvanTimedDelay.
+[Weapon]IvanBomb.AttachSound=sound name
+  The sound that will be played when the bomb is attached to a target. Defaults
+  to [AudioVisual]►BombAttachSound.
+[Weapon]IvanBomb.TickingSound=sound name
+  The sound that will be played whilst the bomb is attached to a unit. In order
+  for this sound to loop correctly, the sound must have Control=loop set
+  in its INI section in soundmd.ini. Defaults to
+  [AudioVisual]►BombTickingSound.
+[Weapon]IvanBomb.Image=filename, *excluding*the .shp extension
+  The SHP file for the image to display over a unit that has a bomb attached to
+  them, in the format "filename"(the ".shp" extension is automatically added by
+  the engine). If the image cannot be loaded then the game will fall back to the
+  default bombcurs.shp.
+[Weapon]IvanBomb.FlickerRate=integer
+  The rate at which the bomb SHP will flip back and forth between two frames to
+  give the impression of a flickering fuse. Must be higher than 0.
+  Defaults to [CombatDamage]►IvanIconFlickerRate.
+  
+  The animation is slowed down to play over the entire lifetime of the bomb
+  (IvanBomb.Delay). The flicker rate is the number of frames between
+  alternating between the current frame and the following frame.
+  IvanBomb.FlickerRate=5 means the current frame is shown 5 frames, then
+  the next one for 5 frames, then the current one again for 5 frames, ....
+
+Originally this logic was hard-coded to ignore the last frame of the bomb SHP,
+which was originally planned to be used for so called "death bombs" which were
+cut from the game before Red Alert 2 was released. This hard-coding has
+been changed so that the whole SHP is now considered for the fuse, however this
+means that you'll now see that extra frame from bombcurs.shp, unless you
+replace that SHP file.
+
+ /images/bombcurs.png
+  :alt: Image of bombcurs.shp
+  :align: center
+
+ Customisable Ivan bomb clones.
+
+ 0.1
+ 0.5

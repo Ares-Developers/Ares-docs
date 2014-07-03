@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Sides &amp; Countries &mdash; Ares 0.7 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.7 documentation" href="../../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="../index.html" />
+    <link rel="next" title="Side Defaults" href="defaultside.html" />
+    <link rel="prev" title="Urban Combat - Trenches" href="../urbancombattrenches.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="defaultside.html" title="Side Defaults"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../urbancombattrenches.html" title="Urban Combat - Trenches"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Sides &amp; Countries</a><ul>
+<li><a class="reference internal" href="#sides">Sides</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#countries">Countries</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../urbancombattrenches.html"
+                        title="previous chapter">Urban Combat - Trenches</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="defaultside.html"
+                        title="next chapter">Side Defaults</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="sides-countries">
+<h1>Sides &amp; Countries<a class="headerlink" href="#sides-countries" title="Permalink to this headline">¶</a></h1>
+<p>In the original game the sides and countries were, for the most part,
+hard-coded. You could not add to, remove or reorder the 10 countries or 3 sides.
+<span class="game docutils literal">Ares</span>, however, makes these tasks possible - you can now have up to 16
+fully functional countries and sides, and you can customize these in numerous
+ways...</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Certain flags work properly for up to 32 countries, and yet others
+fail after merely 16 - it is recommended to not have any more than 16
+playable countries and 32 total countries. Put the playable countries first in
+the list, followed by the other countries.</p>
+</div>
+<div class="section" id="sides">
+<span id="index-0"></span><h2>Sides<a class="headerlink" href="#sides" title="Permalink to this headline">¶</a></h2>
+<p>Sides are specified in the <span><tt class="docutils literal"><span class="pre">[Sides]</span></tt></span> list in <tt class="file docutils literal docutils literal"><span class="pre">rulesmd.ini</span></tt>.</p>
+<p>There is no limit to the number of sides that can be defined. However, only 16
+fully-working countries can be implemented (see above).</p>
+<p>Each side can (and should) define its own values for the following flags in the
+side&#8217;s INI section.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="defaultside.html">Side Defaults</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="defaultside.html#crew-survivors-and-other-types">Crew, Survivors and Other Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="defaultside.html#ai-and-base-building">AI and Base-Building</a></li>
+<li class="toctree-l2"><a class="reference internal" href="defaultside.html#paradrop-defaults">Paradrop Defaults</a></li>
+<li class="toctree-l2"><a class="reference internal" href="defaultside.html#hunter-seeker-defaults">Hunter Seeker Defaults</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uiside.html">User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uiside.html#sidebar">Sidebar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uiside.html#text-colors">Text Colors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uiside.html#dialogs">Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uiside.html#eva">EVA</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scorescreens.html">Score Screens and Themes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scorescreens.html#campaign">Campaign</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scorescreens.html#multiplayer">Multiplayer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scorescreens.html#graphical-text-banner">Graphical Text Banner</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="countries">
+<h2>Countries<a class="headerlink" href="#countries" title="Permalink to this headline">¶</a></h2>
+<p>Countries are specified in the <span><tt class="docutils literal"><span class="pre">[Countries]</span></tt></span> list in <tt class="file docutils literal docutils literal"><span class="pre">rulesmd.ini</span></tt>.
+Any country with <span><tt class="docutils literal"><span class="pre">Multiplay=yes</span></tt></span> set will appear in the country selection
+drop-down list and be eligible for random selection if the player chooses
+&#8216;Random&#8217;. Countries can be excluded from the &#8216;random country&#8217; option, or given
+differing weights.</p>
+<p>The <span><tt class="docutils literal"><span class="pre">[Countries]</span></tt></span> list can contain up to 32 countries, however taunts
+will only work for 16 of these.</p>
+<p>Each country can be customized using the following flags in the country&#8217;s INI
+section.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="defaultcountry.html">Country Defaults</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="defaultcountry.html#ai-and-base-building">AI and Base-Building</a></li>
+<li class="toctree-l2"><a class="reference internal" href="defaultcountry.html#paradrop-defaults">Paradrop Defaults</a></li>
+<li class="toctree-l2"><a class="reference internal" href="defaultcountry.html#others">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uicountry.html">User Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uicountry.html#display-and-selection-chance">Display and Selection Chance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uicountry.html#flags-and-observer-graphics">Flags and Observer Graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uicountry.html#loading-screen">Loading Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uicountry.html#taunts">Taunts</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="defaultside.html" title="Side Defaults"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../urbancombattrenches.html" title="Urban Combat - Trenches"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

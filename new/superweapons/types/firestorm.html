@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Type=Firestorm &mdash; Ares 0.7 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.7 documentation" href="../../../index.html" />
+    <link rel="up" title="Settings by Super Weapon Type" href="index.html" />
+    <link rel="next" title="Type=HunterSeeker" href="hunterseeker.html" />
+    <link rel="prev" title="Type=UnitDelivery" href="unitdelivery.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="hunterseeker.html" title="Type=HunterSeeker"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="unitdelivery.html" title="Type=UnitDelivery"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="unitdelivery.html"
+                        title="previous chapter"><span><span class="type">Type=UnitDelivery</span></span></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="hunterseeker.html"
+                        title="next chapter"><span><span class="type">Type=HunterSeeker</span></span></a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="type-firestorm">
+<span id="firestorm"></span><h1><span><span class="type">Type=Firestorm</span></span><a class="headerlink" href="#type-firestorm" title="Permalink to this headline">¶</a></h1>
+<p>This superweapon is a recreation of the <span class="game docutils literal">Tiberian Sun</span> Firestorm
+superweapon.</p>
+<p>When activated, all structures owned by the firing player that have
+<span><tt class="docutils literal"><span class="pre">Firestorm.Wall=yes</span></tt></span> set will emit an energy field, blocking all hostile
+projectiles (except those with <span><tt class="docutils literal"><span class="pre">SubjectToFirestorm=no</span></tt></span> set) from passing
+through. The energy field also destroys any friend or foe unlucky (or stupid)
+enough to come into direct contact with active cells.</p>
+<p><span class="type docutils literal">BuildingTypes</span> with <span><tt class="docutils literal"><span class="pre">Firestorm.Wall=yes</span></tt></span> set will act as a section
+of the Firestorm Wall and auto-connect to other nearby pieces (check the
+original building&#8217;s SHP from <span class="game docutils literal">Tiberian Sun</span> to see how the art is
+controlled).</p>
+<p>This super weapon uses the old Charge/Drain logic: once activated, the effect
+will persist for a duration determined by <span><tt class="docutils literal"><span class="pre">SW.ChargeToDrainRatio</span></tt></span>, after
+which it will automatically shut down and the superweapon will restart its
+charging process. Whilst the effect is active you can click the super weapon
+button again to manually deactivate it, thus allowing the recharge process to
+begin earlier and finish faster. See <a class="reference internal" href="../chargedrain.html#charge-drain-sw"><em>Charge/Drain</em></a>.
+Refer to <a class="reference external" href="http://modenc.renegadeprojects.com/ChargeToDrainRatio">ModEnc</a> for
+more information about Charge/Drain logic.</p>
+<p>In <span class="game docutils literal">Tiberian Sun</span>, the Charge/Drain feature was disableable through an
+INI flag (<span><tt class="docutils literal"><span class="pre">[SuperWeapon]►UseChargeDrain=no</span></tt></span>) however: <span class="game docutils literal">Ares</span> forces
+this logic to be used regardless of the value of that flag. <span class="game docutils literal">Ares</span> also
+forces this super weapon to ignore its assigned <span><tt class="docutils literal"><span class="pre">Action</span></tt></span>, if any, as this
+is required to make it activate from a single click of the sidebar icon.</p>
+<p>The AI will not use this super weapon.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The animations used by this logic are temporarily hard-coded to
+<cite>FSIDLE</cite>, <cite>FSGRND</cite> and <cite>FSAIR</cite>, as was used in
+<span class="game docutils literal">Tiberian Sun</span>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The AI has a lot of problems with targets behind an active Firestorm
+Wall, although this should not be a major problem due to the relatively small
+amount of game time that the Wall is active for.</p>
+</div>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="hunterseeker.html" title="Type=HunterSeeker"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="unitdelivery.html" title="Type=UnitDelivery"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

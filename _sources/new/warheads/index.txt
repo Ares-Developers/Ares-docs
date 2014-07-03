@@ -1,0 +1,14 @@
+Warheads
+
+
+
+	:glob:
+	
+	general
+	cellspread
+	ironcurtain
+	mindcontrol
+	temporal
+	ripple
+	preimpactanim
+	infantry

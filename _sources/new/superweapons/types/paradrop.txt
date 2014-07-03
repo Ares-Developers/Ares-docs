@@ -1,0 +1,98 @@
+Type=ParaDrop and Type=AmerParaDrop
+
+
+Default values for general tags:
+
+[SuperWeapon]SW.AITargeting=enum
+  Defaults to ParaDrop.
+
+
+The original flags that control the units provided by the generic paradrop super
+weapons (AllyParaDropInf, SovParaDropInf and
+YuriParaDropInf) and the American paradrop (AmerParaDropInf) only
+accept InfantryTypes. If you try to include a VehicleType via
+these lists then the game will create a new InfantryType instead - with
+the same parameters as the existing VehicleType - ultimately resulting
+in an invisible InfantryType being delivered in the paradrop.
+
+With Ares, there are new country-specific flags that override the old
+flags and enhance the way paradrops are delivered. ParaDrop.Types will
+accept VehicleTypes as well as InfantryTypes. You can send
+multiple airplanes of user-defined type.
+
+Each plane consists of the following properties:
+
+[SuperWeapon]ParaDrop.Types=list of InfantryTypes and/or VehicleTypes
+  The units that will be paradropped by this super weapon. For
+  Type=AmerParaDrop super weapons, this defaults to
+  AmerParaDropInf=.
+
+   The original flags used to control the paradrop units only accept
+    InfantryTypes. To include VehicleTypes in a paradrop you
+    must use the new ParaDrop.Types and ParaDrop.Num flags.
+
+[SuperWeapon]ParaDrop.Num=list of integers
+  The quantity of each corresponding unit (listed against ParaDrop.Types)
+  that will be paradropped. For Type=AmerParaDrop super weapons, this
+  defaults to AmerParaDropNum=.
+[SuperWeapon]ParaDrop.Aircraft=AircraftType
+  The type of aircraft that will deliver the units. Defaults to the
+  corresponding country's ParaDrop.Aircraft=.
+[SuperWeapon]ParaDrop.Count=integer - number of planes
+  This controls how many planes should be send to drop paratroopers. Defaults to
+  1.
+
+
+You can define every plane for each country, side or the super weapon
+separately. The syntax is as follows:
+
+[Superweapon]ParaDrop.ID.PlaneX.*=
+  *ID* is name of the country or side. *X* is a positive integer, with no
+  leading zeros, starting with *2* up to `Count`. To customize the first plane
+  (which will also act as the default plane), do not use the *PlaneX* segment.
+  If you want to set the default properties for all sides, do not use the *ID*
+  segment. The Count tags can't have a *PlaneX* segment.
+
+The Airplane and its contents will be read separately, thus it is possible to
+only define Aircraft; Types and Nums will use the default
+value by going though the list until the tags are defined. This also works vice
+versa.
+
+Types and Nums have to be defined together; it is not possible to
+change the number of units without restating the types.
+
+Values are read in this order, top down. The first value found is used.
+
+#. [Superweapon]►ParaDrop.Country.PlaneX.*= (the SW's country-specific
+   plane number X)
+#. [Superweapon]►ParaDrop.Side.PlaneX.*= (the SW's side-specific plane
+   number X)
+#. [Superweapon]►ParaDrop.PlaneX.*= (the SW's default plane number X)
+#. [Superweapon]►ParaDrop.Country.*= (the SW's country-specific default
+   plane)
+#. [Superweapon]►ParaDrop.Side.*= (the SW's side-specific default plane)
+#. [Superweapon]►ParaDrop.*= (the SW's default plane)
+#. [Country]►ParaDrop.*= (the country-specific default plane)
+#. [Side]►ParaDrop.*= (the side-specific default plane)
+#. [General]►*= (the Rules' default plane)
+
+Examples:
+
++ [Superweapon]►ParaDrop.Russia.Plane3.Types=BORIS (and proper
+  Nums) would replace the contents of the third plane for the country
+  Russia.
+
++ [Superweapon]►ParaDrop.Nod.Aircraft=SPLANE would replace the aircraft
+  for all Soviet side countries.
+
+ \ To give all countries the same items, use
+  [Superweapon]►ParaDrop.Count=, [Superweapon]►ParaDrop.Aircraft=,
+  [Superweapon]►ParaDrop.Types=, and [Superweapon]►ParaDrop.Num=.
+  This creates a clone of the American Paradrop.
+
+You can create unlimited new paradrop superweapons with different properties.
+Type=ParaDrop and Type=AmerParaDrop are treated equally, but they
+differ by the default values. The AI will use both types as in the unmodified
+game.
+
+ 0.2

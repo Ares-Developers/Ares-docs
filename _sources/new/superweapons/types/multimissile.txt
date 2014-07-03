@@ -1,0 +1,59 @@
+Type=MultiMissile
+
+
+Default values for general tags:
+
+[SuperWeapon]SW.Damage=integer
+  The damage the nuclear missile delivers. Negative values indicate to use the
+  payload weapon's damage. Defaults to -1.
+[SuperWeapon]SW.Warhead=Warhead
+  The warhead used to deal the damage of the nuke. If this is empty, the payload
+  weapon's warhead will be used. Defaults to none.
+[SuperWeapon]SW.ActivationSound=Sound
+  The nuke warn siren played at the destination. Defaults to
+  [AudioVisual]►DigSound.
+[SuperWeapon]SW.AITargeting=enum
+  Defaults to Nuke.
+[SuperWeapon]Light.*=integer
+  Default to Light.Ambient=200, Light.Red=175,
+  Light.Green=150, and Light.Blue=125 respectively.
+
+
+Nuclear missile specific tags:
+
+[SuperWeapon]Nuke.Payload=Weapon
+  The Weapon used to display the downward-pointing nuke and as default, if
+  SW.Damage and SW.Warhead aren't set. Defaults to
+  NukePayload.
+[SuperWeapon]Nuke.TakeOff=Animation
+  The Animation played on the missile silo when the missile is launched.
+  Defaults to [General]►NukeTakeOff.
+[SuperWeapon]Nuke.PsiWarning=Animation
+  The Animation played at the nuke target, detectable by Psychic Sensors.
+  Defaults to PSIWARN.
+[SuperWeapon]Nuke.SiloLaunch=boolean
+  Whether this missile is launched from a building with NukeSilo=yes
+  providing this super weapon. Otherwise the weapon defined by
+  Nuke.Payload is created off-screen, aiming for the target cell.
+  Defaults to yes.
+
+
+Other changes:
+
+Use WeaponType to control the properties of the upward flying animation
+(especially its Projectile). Ares respects the WeaponType
+for every nuke, it will not use the WeaponType of the first superweapon
+with Type=Nuke like Yuri's Revenge did. Also mind to set
+NukeMaker=yes on the WeaponType, otherwise the nuke will not come
+down again.
+
+Ares supports multiple buildings with NukeSilo=yes providing this
+super weapon. Yuri's Revenge only tried to find the first building type
+that matched those criteria.
+
+Yuri's Revenge supported the nuke impact animation only for the warhead
+called NUKE, hardcoded to NUKEBALL. To change this animation in
+Ares, have a look at PreImpactAnim <preimpactanim>.
+
+ 0.2
+

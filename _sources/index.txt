@@ -3,18 +3,19 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-==================
+
 Ares Documentation
-==================
+
 
 Table of Contents
-=================
 
-.. toctree::
+
+
 	:glob:
 	:hidden:
 	
 	intro
+	whatsnew
 	migration
 	bugfixes/index
 	restored/index
@@ -23,16 +24,18 @@ Table of Contents
 	*
 
 
-.. toctree::
+
 	intro
+	whatsnew
 	migration
 
-.. toctree::
+
 	:maxdepth: 2
 	
 	bugfixes/index
 
-.. toctree::
+
+	:maxdepth: 3
 	
 	restored/index
 	new/index
@@ -42,10 +45,10 @@ Table of Contents
 	credits
 	glossary
 
-* :ref:`Overview of Ares's Bugfixes and Features <genindex>`
-* :ref:`search`
+* Overview of Ares's Bugfixes and Features <genindex>
+* search
 
-.. include:: intro.rst
+ intro.rst
 
 
 

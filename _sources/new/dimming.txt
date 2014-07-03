@@ -1,0 +1,25 @@
+Dimming Deactivated Units
+
+
+The level deactivated voxel VehicleTypes are dimmed can be configured
+here. The first applicable value is used, the other values will not be
+considered. That is, if an unpowered unit is under EMP, DeactivateDimEMP
+is used. This is purely cosmetic and the order may change in the future. A value
+of 1.0 disables the dimming effect. Supported range is 0.0 to
+1.0, higher values will brighten the unit.
+
+ Shp VehicleTypes, as well as BuildingTypes,
+  AircraftTypes and InfantryTypes are not affected by dimming.
+
+[AudioVisual]DeactivateDimEMP=float - multiplier
+  The light level for voxel units under EMP. See .... Defaults to 0.8.
+
+[AudioVisual]DeactivateDimOperator=float - multiplier
+  The light level for unoperated voxel units. See .... Defaults to 0.65.
+
+[AudioVisual]DeactivateDimPowered=float - multiplier
+  The light level for unpowered voxel units. See .... Defaults to 0.5.
+
+ Units; Dimming deactivated voxel VehicleTypes
+
+ 0.7

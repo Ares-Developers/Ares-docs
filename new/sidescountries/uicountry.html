@@ -1,0 +1,239 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>User Interface &mdash; Ares 0.7 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.7 documentation" href="../../index.html" />
+    <link rel="up" title="Sides &amp; Countries" href="index.html" />
+    <link rel="next" title="Cloak, Stealth and Sensor Arrays" href="../cloak/index.html" />
+    <link rel="prev" title="Country Defaults" href="defaultcountry.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../cloak/index.html" title="Cloak, Stealth and Sensor Arrays"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="defaultcountry.html" title="Country Defaults"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Sides &amp; Countries</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">User Interface</a><ul>
+<li><a class="reference internal" href="#display-and-selection-chance">Display and Selection Chance</a></li>
+<li><a class="reference internal" href="#flags-and-observer-graphics">Flags and Observer Graphics</a></li>
+<li><a class="reference internal" href="#loading-screen">Loading Screen</a></li>
+<li><a class="reference internal" href="#taunts">Taunts</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="defaultcountry.html"
+                        title="previous chapter">Country Defaults</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../cloak/index.html"
+                        title="next chapter">Cloak, Stealth and Sensor Arrays</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="user-interface">
+<h1>User Interface<a class="headerlink" href="#user-interface" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="display-and-selection-chance">
+<h2>Display and Selection Chance<a class="headerlink" href="#display-and-selection-chance" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►MenuText.Status=</span></tt><span class="type definition"> (CSF label)</span></span></dt>
+<dd>Brief description of the country, displayed in the status bar of the country
+selection screen when the player mouse-overs that country in the country
+selection drop-down list.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►ListIndex=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>Specifies which position this country should appear in the country dropdown
+list. If two or more countries use the same <span><tt class="docutils literal"><span class="pre">ListIndex</span></tt></span>, the order is
+defined by their appearance in the <span><tt class="docutils literal"><span class="pre">[Countries]</span></tt></span> enumeration. Countries
+with negative values will not appear in the dropdown list; you can use this to
+effectively hide countries without having to change the <span><tt class="docutils literal"><span class="pre">[Countries]</span></tt></span>
+list and thus without risking game crashes. To also prevent such countries
+from being selected randomly, set <span><tt class="docutils literal"><span class="pre">RandomSelectionWeight=0</span></tt></span>. Defaults to
+<cite>100</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►RandomSelectionWeight=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>Specifies how likely it is that this country will be randomly selected when a
+player chooses &#8216;Random&#8217;. The probability of this country being picked is
+calculated by dividing this country&#8217;s <span><tt class="docutils literal"><span class="pre">RandomSelectionWeight</span></tt></span> value by
+the sum of all <span><tt class="docutils literal"><span class="pre">Multiplay=yes</span></tt></span> countries&#8217; <span><tt class="docutils literal"><span class="pre">RandomSelectionWeight</span></tt></span>
+values. Defaults to <cite>1</cite>.</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.1.</span></p>
+<p class="versionchanged">
+<span class="versionmodified">Changed in version 0.2.</span></p>
+</div>
+<div class="section" id="flags-and-observer-graphics">
+<h2>Flags and Observer Graphics<a class="headerlink" href="#flags-and-observer-graphics" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►File.Flag=</span></tt><span class="type definition"> (filename, *including* the .pcx extension)</span></span></dt>
+<dd>The PCX file to use for the country&#8217;s flag, in the format &#8220;filename.pcx&#8221;.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►File.ObserverBackground=</span></tt><span class="type definition"> (filename, *including* the .pcx or .shp extension)</span></span></dt>
+<dd>The SHP or PCX file to use for the country&#8217;s background in observer mode, in
+the format &#8220;filename.shp&#8221; or &#8220;filename.pcx&#8221;. The size should be 121x96. The
+SHP file will be drawn using <tt class="file docutils literal docutils literal"><span class="pre">observer.pal</span></tt>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►File.ObserverFlag=</span></tt><span class="type definition"> (filename, *including* the .pcx or .shp extension)</span></span></dt>
+<dd>The SHP or PCX file to use for the country&#8217;s flag in observer mode, in the
+format &#8220;filename.shp&#8221; or &#8220;filename.pcx&#8221;.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►File.ObserverFlagAltPalette=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>If <cite>yes</cite>, draw SHP file <span><tt class="docutils literal"><span class="pre">File.ObserverFlag=</span></tt></span> using
+<tt class="file docutils literal docutils literal"><span class="pre">yrii.pal</span></tt>. Otherwise the SHP file will be drawn using
+<tt class="file docutils literal docutils literal"><span class="pre">observer.pal</span></tt>.</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.1.</span></p>
+<p class="versionchanged">
+<span class="versionmodified">Changed in version 0.3.</span></p>
+</div>
+<div class="section" id="loading-screen">
+<h2>Loading Screen<a class="headerlink" href="#loading-screen" title="Permalink to this headline">¶</a></h2>
+<p>Loading screen background options:</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►File.LoadScreen=</span></tt><span class="type definition"> (filename, *including* the .shp extension)</span></span></dt>
+<dd>The SHP file to use for the country&#8217;s loading screen, in the format
+&#8220;filename.shp&#8221;.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►File.LoadScreenPAL=</span></tt><span class="type definition"> (filename, *including* the .pal extension)</span></span></dt>
+<dd>The palette file to use for the country&#8217;s loading screen, in the format
+&#8220;filename.pal&#8221;.</dd>
+</dl>
+<p>Options regarding the text drawn on the background:</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►LoadScreenText.Name=</span></tt><span class="type definition"> (CSF label)</span></span></dt>
+<dd>Name of the country, displayed on the loading screen (where a map of the
+country is usually shown). For example,
+<span><tt class="docutils literal"><span class="pre">LoadScreenText.Name=Name:Americans</span></tt></span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►LoadScreenText.SpecialName=</span></tt><span class="type definition"> (CSF label)</span></span></dt>
+<dd>Name of the country&#8217;s special weapon, displayed on the loading screen. For
+example, <span><tt class="docutils literal"><span class="pre">LoadScreenText.SpecialName=Name:apara</span></tt></span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►LoadScreenText.Brief=</span></tt><span class="type definition"> (CSF label)</span></span></dt>
+<dd>Description of the country and its special weapon, displayed on the loading
+screen. For example, <span><tt class="docutils literal"><span class="pre">LoadScreenText.Brief=loadbrief:usa</span></tt></span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►LoadScreenText.Color=</span></tt><span class="type definition"> (Color scheme)</span></span></dt>
+<dd>Text on the multiplayer loading screens for this country will be drawn using
+this color from the <span><tt class="docutils literal"><span class="pre">[Colors]</span></tt></span> enumeration. For example,
+<span><tt class="docutils literal"><span class="pre">LoadScreenText.Color=AlliedLoad</span></tt></span>.</dd>
+</dl>
+<p>The music theme for multiplayer matches can be customized with the following
+tag. For single player mission loading themes, please see <a class="reference internal" href="../../ui-features/campaignloadscreen.html"><em>Campaign Load
+Screen</em></a>.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►LoadingTheme=</span></tt><span class="type definition"> (theme id)</span></span></dt>
+<dd>The theme playing for a player of this side while the multiplayer match is
+loading. Defaults to <cite>LOADING</cite>.</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.1.</span></p>
+<p class="versionchanged">
+<span class="versionmodified">Changed in version 0.7.</span></p>
+</div>
+<div class="section" id="taunts">
+<h2>Taunts<a class="headerlink" href="#taunts" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The following filename specifications (where raw C-style format
+specifiers like %s are required) are going to be changed into safer versions
+in the future. The replacement style has not been decided yet.</p>
+</div>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Country]►File.Taunt=</span></tt><span class="type definition"> (filename, *including* the Taunts  directory and .wav extension)</span></span></dt>
+<dd><p class="first">Path of the files to use for the country&#8217;s taunts, in the format
+&#8220;Taunts\filename%02i.wav&#8221;. The filename specified <em>must</em> include &#8220;<cite>%02i</cite>&#8221;,
+which will be substituted for the taunt ID (01 through 08). For example,
+<span><tt class="docutils literal"><span class="pre">File.Taunt=Taunts \tauam%02i.wav</span></tt></span> will make the game load taunts
+<tt class="file docutils literal docutils literal"><span class="pre">tauam01.wav</span></tt> through <tt class="file docutils literal docutils literal"><span class="pre">tauam08.wav</span></tt>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Taunts will only be registered for up to 16 countries.</p>
+</div>
+</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.1.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../cloak/index.html" title="Cloak, Stealth and Sensor Arrays"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="defaultcountry.html" title="Country Defaults"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" >Sides &amp; Countries</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

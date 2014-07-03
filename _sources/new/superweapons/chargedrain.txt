@@ -1,0 +1,24 @@
+.. _charge-drain-sw:
+
+Charge/Drain Super Weapons
+
+
+Instead of one global setting, Ares supports customizable
+ChargeToDrainRatio settings for each super weapon. All settings here
+only apply for super weapons with UseChargeDrain=yes set.
+
+[SuperWeapon]SW.ChargeToDrainRatio=float multiplier
+  The recharge time multiplied by this value is how long the super weapon will
+  stay active. Must not be 0. Defaults to
+  [General]►ChargeToDrainRatio.
+[SuperWeapon]SW.Unstoppable=boolean
+  Whether this super weapon can be stopped when active. Otherwise clicks on the
+  super weapon's cameo are ignored. Defaults to no.
+
+ Note that UseChargeDrain is supported for the Firewall super
+  weapon only. Using it along with any other super weapon types it will lead to
+  unexpected results.
+
+ Super Weapons; Customizable charge to drain ratio for each superweapon.
+
+ 0.2

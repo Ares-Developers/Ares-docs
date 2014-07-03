@@ -1,0 +1,34 @@
+Infantry-related Settings
+
+
+Deployed Infantry Damage multiplier
+
+
+[Warhead]Damage.Deployed=float - multiplier
+  A multiplier applied to Damage if the InfantryType receiving it
+  is currently deployed.
+
+
+Note that this is not the same as the existing ProneDamage= flag;
+deployed units are not considered to be prone. Defaults to 100%.
+
+ Warheads; Per-warhead damage multiplier against deployed infantry.
+
+ 0.1
+
+InfDeathAnim
+
+
+[Warhead]InfDeathAnim=string, animation ID
+  Specifies the animation to display when an InfantryType (with
+  NotHuman=no) is killed by this warhead. Works in the same way as
+  existing InfDeath animations except this flag allows you to specify an
+  animation ID rather than an integer. Further more, the animation will be
+  treated as the correct type (e.g. mutation or non-mutation) automatically,
+  which means that you can now have any number of mutations that produce
+  player-owned InfantryTypes. See ... for how to control which player will gain control of
+  'mutated' infantry.
+
+ Warheads; New InfDeaths (InfDeathAnim= any animation, auto-detect mutation).
+
+ 0.1

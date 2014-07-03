@@ -1,0 +1,107 @@
+User Interface
+
+
+Display and Selection Chance
+
+
+[Country]MenuText.Status=CSF label
+  Brief description of the country, displayed in the status bar of the country
+  selection screen when the player mouse-overs that country in the country
+  selection drop-down list.
+[Country]ListIndex=integer
+  Specifies which position this country should appear in the country dropdown
+  list. If two or more countries use the same ListIndex, the order is
+  defined by their appearance in the [Countries]► enumeration. Countries
+  with negative values will not appear in the dropdown list; you can use this to
+  effectively hide countries without having to change the [Countries]►
+  list and thus without risking game crashes. To also prevent such countries
+  from being selected randomly, set RandomSelectionWeight=0. Defaults to
+  100.
+[Country]RandomSelectionWeight=integer
+  Specifies how likely it is that this country will be randomly selected when a
+  player chooses 'Random'. The probability of this country being picked is
+  calculated by dividing this country's RandomSelectionWeight value by
+  the sum of all Multiplay=yes countries' RandomSelectionWeight
+  values. Defaults to 1.
+
+ 0.1
+ 0.2
+
+
+Flags and Observer Graphics
+
+
+[Country]File.Flag=filename, *including* the .pcx extension
+  The PCX file to use for the country's flag, in the format "filename.pcx".
+[Country]File.ObserverBackground=filename, *including* the .pcx or .shp extension
+  The SHP or PCX file to use for the country's background in observer mode, in
+  the format "filename.shp" or "filename.pcx". The size should be 121x96. The
+  SHP file will be drawn using observer.pal.
+[Country]File.ObserverFlag=filename, *including* the .pcx or .shp extension
+  The SHP or PCX file to use for the country's flag in observer mode, in the
+  format "filename.shp" or "filename.pcx".
+[Country]File.ObserverFlagAltPalette=boolean
+  If yes, draw SHP file File.ObserverFlag= using
+  yrii.pal. Otherwise the SHP file will be drawn using
+  observer.pal.
+
+ 0.1
+ 0.3
+
+Loading Screen
+
+
+Loading screen background options:
+
+[Country]File.LoadScreen=filename, *including* the .shp extension
+  The SHP file to use for the country's loading screen, in the format
+  "filename.shp".
+[Country]File.LoadScreenPAL=filename, *including* the .pal extension
+  The palette file to use for the country's loading screen, in the format
+  "filename.pal".
+
+Options regarding the text drawn on the background:
+
+[Country]LoadScreenText.Name=CSF label
+  Name of the country, displayed on the loading screen (where a map of the
+  country is usually shown). For example,
+  LoadScreenText.Name=Name:Americans.
+[Country]LoadScreenText.SpecialName=CSF label
+  Name of the country's special weapon, displayed on the loading screen. For
+  example, LoadScreenText.SpecialName=Name:apara.
+[Country]LoadScreenText.Brief=CSF label
+  Description of the country and its special weapon, displayed on the loading
+  screen. For example, LoadScreenText.Brief=loadbrief:usa.
+[Country]LoadScreenText.Color=Color scheme
+  Text on the multiplayer loading screens for this country will be drawn using
+  this color from the [Colors]► enumeration. For example,
+  LoadScreenText.Color=AlliedLoad.
+
+The music theme for multiplayer matches can be customized with the following
+tag. For single player mission loading themes, please see ....
+
+[Country]LoadingTheme=theme id
+  The theme playing for a player of this side while the multiplayer match is
+  loading. Defaults to LOADING.
+
+ 0.1
+ 0.7
+
+
+Taunts
+
+
+ The following filename specifications (where raw C-style format
+  specifiers like %s are required) are going to be changed into safer versions
+  in the future. The replacement style has not been decided yet.
+
+[Country]File.Taunt=filename, *including* the Taunts\ directory and .wav extension
+  Path of the files to use for the country's taunts, in the format
+  "Taunts\\filename%02i.wav". The filename specified *must* include "`%02i`",
+  which will be substituted for the taunt ID (01 through 08). For example,
+  File.Taunt=Taunts\\tauam%02i.wav will make the game load taunts
+  tauam01.wav through tauam08.wav.
+
+   Taunts will only be registered for up to 16 countries.
+
+ 0.1

@@ -1,0 +1,33 @@
+Campaign Load Screen
+
+
+Text Color
+
+
+Yuri's Revenge always draws single player campaign load screen texts in
+red. Ares uses the correct values, inferred by the mission name prefix.
+You can override these defaults for each mission using this new
+missionmd.ini tag.
+
+[Mission]LoadScreenText.Color=Color scheme
+  Text on the campaign loading screens for this mission will be drawn using this
+  color from the [Colors]► list. For example,
+  LoadScreenText.Color=AlliedLoad.
+
+ Interface; Campaign load screen text color customizable per mission.
+
+ 0.2
+
+
+Music Theme
+
+
+The loading theme for a single player mission is read from the map file itself.
+
+[Basic]LoadingTheme=theme id
+  The theme playing when loading this mission. Use none to disable the
+  loading screen music. Defaults to LOADING.
+
+ Interface; Campaign load theme music customizable.
+
+ 0.7

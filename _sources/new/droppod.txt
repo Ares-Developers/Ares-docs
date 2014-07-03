@@ -1,0 +1,51 @@
+Drop Pods
+
+
+These are the collected settings that apply to the Drop Pod locomotor in general
+and the ...
+specifically.
+
+ Drop Pods; Locomotor
+
+ 0.7
+
+
+Trailer
+
+
+The original Drop Pod trailer was not customizable and also not implemented in
+an optimal way. Now the animation is looked up only once, not once for each Drop
+Pod every six frames. Also, the smoke trailer now is created even if the Drop
+Pod does not have a [General]►DropPodWeapon set.
+
+[General]DropPodTrailer=AnimationType
+  The animation used as smoke trailer for Drop Pods. Defaults to
+  SMOKEY.
+
+
+Global Super Weapon Defaults
+
+
+The following tags define the defaults for the Drop Pod super weapons. The tags
+do not default to meaningful values, but the values Firestorm uses are
+given here for reference.
+
+[General]DropPodTypes=list of InfantryTypes
+  The types to randomly chose from when spawing units for the Drop Pod super
+  weapon. Each type has an equal chance of being selected. You can add types
+  more than once. Only infantry is supported. Defaults to none,
+  Firestorm uses an equivalent E1,E2.
+[General]DropPodMinimum=integer
+  The minimum number of Drop Pods being created. Defaults to 0,
+  Firestorm uses 5.
+[General]DropPodMaximum=integer
+  The maximum number of Drop Pods being created. Defaults to 0,
+  Firestorm uses 8.
+
+
+Miscellaneous
+
+
+If the weapon used as [General]►DropPodWeapon does not have at least one
+valid Report sound set, the game will not crash any more when a Drop Pod
+is spawned.

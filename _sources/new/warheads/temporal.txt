@@ -1,0 +1,9 @@
+Customizable WarpAway
+
+
+If [Warhead]►Temporal.WarpAway is set, it specifies the animation to be
+played when this warhead erases an object, instead of [General]►WarpAway=.
+
+ Warheads; Per-weapon WarpAway animation.
+
+ 0.1

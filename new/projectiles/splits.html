@@ -1,0 +1,185 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Splits and Airburst &mdash; Ares 0.7 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.7 documentation" href="../../index.html" />
+    <link rel="up" title="Projectiles" href="index.html" />
+    <link rel="next" title="Weapons" href="../weapons/index.html" />
+    <link rel="prev" title="Ranged" href="ranged.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../weapons/index.html" title="Weapons"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ranged.html" title="Ranged"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Projectiles</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><span><span class="type">Splits</span></span> and <span><span class="type">Airburst</span></span></a><ul>
+<li><a class="reference internal" href="#splits"><span><span class="type">Splits</span></span></a></li>
+<li><a class="reference internal" href="#airburst"><span><span class="type">Airburst</span></span></a></li>
+<li><a class="reference internal" href="#common-settings">Common Settings</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ranged.html"
+                        title="previous chapter"><span><span class="type">Ranged</span></span></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../weapons/index.html"
+                        title="next chapter">Weapons</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="splits-and-airburst">
+<h1><span><span class="type">Splits</span></span> and <span><span class="type">Airburst</span></span><a class="headerlink" href="#splits-and-airburst" title="Permalink to this headline">¶</a></h1>
+<p>The <span><tt class="docutils literal"><span class="pre">Splits</span></tt></span> missile feature of <span class="game docutils literal">Firestorm</span> fame has been ported over
+to <span class="game docutils literal">Yuri&#8217;s Revenge</span>, with several changes and additions. The related
+<span><tt class="docutils literal"><span class="pre">Airburst</span></tt></span> logic has been expanded.</p>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.7.</span></p>
+<div class="section" id="splits">
+<h2><span><span class="type">Splits</span></span><a class="headerlink" href="#splits" title="Permalink to this headline">¶</a></h2>
+<p>The split weapon of the Cyborg Reaper from <span class="game docutils literal">Firestorm</span> fired two missiles.
+Each of them split in mid-air after gaining some altitude, releasing two new
+projectiles each, which would either travel on to the initial target, aim for a
+new target no more than two cells nearby, or impact on a random cell in a 7 by 7
+area.</p>
+<p>The actual split happens when an <span><tt class="docutils literal"><span class="pre">Airburst=yes</span></tt></span> projectile is above its
+target, a <span><tt class="docutils literal"><span class="pre">Ranged=yes</span></tt></span> projectile exceeds its weapon&#8217;s
+<a class="reference internal" href="../weapons/projectilerange.html"><em>ProjectileRange</em></a> or the projectile
+detonates otherwise.</p>
+<p>Refer to <a class="reference external" href="http://modenc.renegadeprojects.com/Splits">Splits on ModEnc</a> for a
+more detailled description of the logic.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The Splits logic has been de-hardcoded compared to <span class="game docutils literal">Tiberian
+Sun</span>. The <span><tt class="docutils literal"><span class="pre">AirburstWeapon</span></tt></span>&#8216;s <span><tt class="docutils literal"><span class="pre">Damage</span></tt></span> is no longer multiplied by
+<cite>10</cite>. Its <span><tt class="docutils literal"><span class="pre">Speed</span></tt></span> is used instead of the hardcoded <cite>19</cite>,
+and its <span><tt class="docutils literal"><span class="pre">Bright</span></tt></span> setting is now also respected instead of just being
+disabled.</p>
+</div>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Projectile]►Splits=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether the projectile will split into a number of other projectiles defined
+by <span><tt class="docutils literal"><span class="pre">Cluster</span></tt></span> and <span><tt class="docutils literal"><span class="pre">AirburstWeapon</span></tt></span>. Can be combined with
+<span><tt class="docutils literal"><span class="pre">Airburst</span></tt></span>. Defaults to <cite>no</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Projectile]►RetargetAccuracy=</span></tt><span class="type definition"> (float - percentage)</span></span></dt>
+<dd>The probability that a split cluster will aim for the same target the original
+projectile was shot at. The higher the value, the less likely it is for the
+split projectile to chose another target. Valid range is <cite>0.0</cite> to
+<cite>1.0</cite>. Defaults to <cite>0.0</cite>.</dd>
+</dl>
+</div>
+<div class="section" id="airburst">
+<h2><span><span class="type">Airburst</span></span><a class="headerlink" href="#airburst" title="Permalink to this headline">¶</a></h2>
+<p>The <span><tt class="docutils literal"><span class="pre">Airburst</span></tt></span> logic was used for the MultiMissile in <span class="game docutils literal">Tiberian Sun</span>
+to deal damage to randomly selected cells below the target area. In <span class="game docutils literal">Red
+Alert 2</span> the logic has been changed and it always bursts into nine clusters
+covering an area of 3 by 3 cells.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Projectile]►AirburstSpread=</span></tt><span class="type definition"> (float - cell range)</span></span></dt>
+<dd>The range the airburst effect covers. Each cell in range will be targeted by
+the <span><tt class="docutils literal"><span class="pre">AirburstWeapon</span></tt></span>. Requires <span><tt class="docutils literal"><span class="pre">Airburst=yes</span></tt></span>. Cannot be combined
+with <span><tt class="docutils literal"><span class="pre">Splits=yes</span></tt></span>. Defaults to <cite>1.5</cite>.</dd>
+</dl>
+</div>
+<div class="section" id="common-settings">
+<h2>Common Settings<a class="headerlink" href="#common-settings" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Projectile]►AroundTarget=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether a projectile with <span><tt class="docutils literal"><span class="pre">Splits=yes</span></tt></span> or <span><tt class="docutils literal"><span class="pre">Airburst=yes</span></tt></span> should use
+the area around the original target to look for new targets for each cluster.
+If enabled, the clusters will continue their way to the originally intended
+target. Otherwise, the clusters will search for new targets in the area where
+the projectile split up. Defaults to <span><tt class="docutils literal"><span class="pre">Splits</span></tt></span>.</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../weapons/index.html" title="Weapons"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ranged.html" title="Ranged"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" >Projectiles</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

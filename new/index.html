@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>New &amp; Enhanced In-Game Logic &mdash; Ares 0.6 documentation</title>
+    <title>New &amp; Enhanced In-Game Logic &mdash; Ares 0.7 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.6',
+        VERSION:     '0.7',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.6 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.7 documentation" href="../index.html" />
     <link rel="next" title="Additional ArmorTypes and Verses" href="additionalarmortypesandverses.html" />
     <link rel="prev" title="Vehicle Thief" href="../restored/vehicle-thief.html" /> 
   </head>
@@ -43,7 +43,7 @@
         <li class="right" >
           <a href="../restored/vehicle-thief.html" title="Vehicle Thief"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.6 documentation</a> &raquo;</li> 
+        <li><a href="../index.html">Ares 0.7 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar">
@@ -86,17 +86,19 @@ the game.</p>
 <li class="toctree-l2"><a class="reference internal" href="additionalarmortypesandverses.html#immunities">Immunities</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="aircraftsmoke.html">Aircraft Smoke</a></li>
 <li class="toctree-l1"><a class="reference internal" href="airrate.html">AirRate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="airstrike.html">Airstrike Voices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="alternatetheaterart.html"><span><span class="type">AlternateTheaterArt</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="attacheffect.html">AttachEffect</a></li>
 <li class="toctree-l1"><a class="reference internal" href="carryalls.html">Carryalls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cellspread.html"><span><span class="type">CellSpread</span></span> Enhancements</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cellspread.html#cellspread"><span><span class="type">CellSpread</span></span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="cellspread.html#cellspread-hit-limit"><span><span class="type">CellSpread</span></span> Hit Limit</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="chronoprisons.html">Chrono Prisons / Abductors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chronoshift.html">Chronoshift</a></li>
+<li class="toctree-l1"><a class="reference internal" href="civilianenemies.html">Civilian Enemies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="civilianenemies.html#treat-civilians-as-enemies">Treat Civilians as Enemies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="civilianenemies.html#repelling-civilian-attacks">Repelling Civilian Attacks</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="crashableaircraft.html">Crashing</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="crashableaircraft.html#crashable-and-aircraft"><span><span class="type">Crashable</span></span> and Aircraft</a></li>
 <li class="toctree-l2"><a class="reference internal" href="crashableaircraft.html#spinning">Spinning</a></li>
@@ -119,8 +121,20 @@ the game.</p>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="custommissiles.html">Custom Missiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="damageparticlesystems.html">Damage Particle Systems</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="damageparticlesystems.html#damage-sparks">Damage Sparks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="damageparticlesystems.html#smoke-and-spark-damageparticlesystems">Smoke and Spark <span><span class="type">DamageParticleSystems</span></span></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="destroyunitsbyemp.html">Destroy Units by EMP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dimming.html">Dimming Deactivated Units</a></li>
 <li class="toctree-l1"><a class="reference internal" href="drain.html">Drain Weapon Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="droppod.html">Drop Pods</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="droppod.html#trailer">Trailer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="droppod.html#global-super-weapon-defaults">Global Super Weapon Defaults</a></li>
+<li class="toctree-l2"><a class="reference internal" href="droppod.html#miscellaneous">Miscellaneous</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="evatypes.html">EVA Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="factoriesandcloning.html">Factories and Cloning</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="factoriesandcloning.html#different-factories-for-units-kennels">Different factories for units (Kennels)</a></li>
@@ -139,12 +153,19 @@ the game.</p>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="hijackers.html">Hijackers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hunterseeker.html">Hunter Seeker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hunterseeker.html#global-settings">Global Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hunterseeker.html#hunter-seeker-unit-settings">Hunter Seeker Unit Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hunterseeker.html#disallow-targeting">Disallow Targeting</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="infantryelectrocuted.html"><span><span class="type">InfantryElectrocuted</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="killingdrivers.html">Killing Drivers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lightningrods.html">Lightning Rods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="makeinfantryowner.html"><span><span class="type">MakeInfantryOwner</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="newpoweredunitlogic.html">New Powered Unit Logic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="operator.html">Operator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="passablestructures.html">Passable Structures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pcxcameos.html">PCX Cameos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pips.html">Pips</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a><ul>
@@ -167,24 +188,6 @@ the game.</p>
 <li class="toctree-l1"><a class="reference internal" href="radarjammers.html">Radar Jammers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reverseengineerlogic.html">Reverse Engineer logic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="secretlabs.html">Secret Labs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sidescountries.html">Sides &amp; Countries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="sidescountries.html#countries">Countries</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="sidescountries.html#loading-screen-flags-and-taunts">Loading Screen, Flags and Taunts</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sidescountries.html#selection-and-position">Selection and Position</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sidescountries.html#ai-and-base-building">AI and Base-Building</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sidescountries.html#paradrop-defaults">Paradrop Defaults</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sidescountries.html#others">Others</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="sidescountries.html#sides">Sides</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="sidescountries.html#crew-and-infantry">Crew and Infantry</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sidescountries.html#id1">AI and Base-Building</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sidescountries.html#id2">Paradrop Defaults</a></li>
-<li class="toctree-l3"><a class="reference internal" href="sidescountries.html#sidebar-eva-and-colors">Sidebar, EVA and Colors</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="sight.html">Sight</a></li>
 <li class="toctree-l1"><a class="reference internal" href="solidbuildings.html">Solid Buildings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spawners.html">Spawners</a><ul>
@@ -201,47 +204,13 @@ the game.</p>
 <li class="toctree-l2"><a class="reference internal" href="spybehavior.html#reverse-engineering">Reverse Engineering</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="superweapons.html">Super Weapons</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="superweapons.html#building-animations">Building Animations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="superweapons.html#general-properties">General properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="superweapons.html#hardcoded-values">Hardcoded Values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="superweapons.html#targeting">Targeting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="superweapons.html#cursors">Cursors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="superweapons.html#charge-drain-super-weapons">Charge/Drain Super Weapons</a></li>
-<li class="toctree-l2"><a class="reference internal" href="superweapons.html#cost">Cost</a></li>
-<li class="toctree-l2"><a class="reference internal" href="superweapons.html#animation-sound">Animation/Sound</a></li>
-<li class="toctree-l2"><a class="reference internal" href="superweapons.html#eva-events">EVA Events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="superweapons.html#messages">Messages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="superweapons.html#cameo-overlay-texts">Cameo Overlay Texts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="superweapons.html#super-weapon-lighting">Super Weapon Lighting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="superweapons.html#enhanced-super-weapon-types">Enhanced Super Weapon Types</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="superweapons.html#type-lightningstorm"><span><span class="type">Type=LightningStorm</span></span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="superweapons.html#type-multimissile"><span><span class="type">Type=MultiMissile</span></span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="superweapons.html#type-psychicdominator"><span><span class="type">Type=PsychicDominator</span></span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="superweapons.html#type-chronosphere"><span><span class="type">Type=ChronoSphere</span></span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="superweapons.html#type-chronowarp"><span><span class="type">Type=ChronoWarp</span></span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="superweapons.html#type-ironcurtain-and-type-forceshield"><span><span class="type">Type=IronCurtain</span></span> and <span><span class="type">Type=ForceShield</span></span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="superweapons.html#type-geneticconverter"><span><span class="type">Type=GeneticConverter</span></span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="superweapons.html#type-paradrop-and-type-amerparadrop"><span><span class="type">Type=ParaDrop</span></span> and <span><span class="type">Type=AmerParaDrop</span></span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="superweapons.html#type-spyplane"><span><span class="type">Type=SpyPlane</span></span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="superweapons.html#type-psychicreveal"><span><span class="type">Type=PsychicReveal</span></span></a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="superweapons.html#new-super-weapon-types">New Super Weapon Types</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="superweapons.html#type-sonarpulse"><span><span class="type">Type=SonarPulse</span></span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="superweapons.html#type-genericwarhead"><span><span class="type">Type=GenericWarhead</span></span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="superweapons.html#type-unitdelivery"><span><span class="type">Type=UnitDelivery</span></span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="superweapons.html#type-firestorm"><span><span class="type">Type=Firestorm</span></span></a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="survivors.html">Survivors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="survivors.html#units-and-buildings">Units and Buildings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="survivors.html#unit-specific">Unit-specific</a></li>
 <li class="toctree-l2"><a class="reference internal" href="survivors.html#building-specific">Building-specific</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="teamretaliate.html">Team Retaliate</a></li>
 <li class="toctree-l1"><a class="reference internal" href="techstructures.html">Tech Structures Return to Neutral</a></li>
 <li class="toctree-l1"><a class="reference internal" href="typeselect.html">Type Selection Groups</a></li>
 <li class="toctree-l1"><a class="reference internal" href="unitlost.html">Unit Lost EVA Report</a></li>
@@ -253,28 +222,46 @@ the game.</p>
 <li class="toctree-l2"><a class="reference internal" href="urbancombattrenches.html#specifying-the-occupants-of-a-building">Specifying the occupants of a building</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="warheads.html">Warheads</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="warheads.html#iron-curtain-effect">Iron Curtain Effect</a></li>
-<li class="toctree-l2"><a class="reference internal" href="warheads.html#permanent-mind-control">Permanent Mind-Control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="warheads.html#customizable-warpaway">Customizable <span><span class="type">WarpAway</span></span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="warheads.html#ion-cannon-ripple-effect">Ion Cannon Ripple Effect</a></li>
-<li class="toctree-l2"><a class="reference internal" href="warheads.html#deployed-infantry-damage-multiplier">Deployed Infantry Damage multiplier</a></li>
-<li class="toctree-l2"><a class="reference internal" href="warheads.html#affectsenemies"><span><span class="type">AffectsEnemies</span></span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="warheads.html#non-malicious-warheads">Non-Malicious Warheads</a></li>
-<li class="toctree-l2"><a class="reference internal" href="warheads.html#infdeathanim"><span><span class="type">InfDeathAnim</span></span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="warheads.html#preimpactanim"><span><span class="type">PreImpactAnim</span></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="sidescountries/index.html">Sides &amp; Countries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sidescountries/index.html#sides">Sides</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sidescountries/defaultside.html">Side Defaults</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/defaultside.html#crew-survivors-and-other-types">Crew, Survivors and Other Types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/defaultside.html#ai-and-base-building">AI and Base-Building</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/defaultside.html#paradrop-defaults">Paradrop Defaults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/defaultside.html#hunter-seeker-defaults">Hunter Seeker Defaults</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="weapons.html">Weapons</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="weapons.html#weapontypes-section"><span><span class="type">[WeaponTypes]</span></span> Section</a></li>
-<li class="toctree-l2"><a class="reference internal" href="weapons.html#radiation-beams">Radiation Beams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="weapons.html#electric-bolt-coloring">Electric Bolt Coloring</a></li>
-<li class="toctree-l2"><a class="reference internal" href="weapons.html#wave-effects">Wave Effects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="weapons.html#wave-coloring">Wave Coloring</a></li>
-<li class="toctree-l2"><a class="reference internal" href="weapons.html#wave-direction">Wave Direction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="weapons.html#wave-ambient-damage">Wave Ambient Damage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="weapons.html#customizable-ivan-bombs">Customizable Ivan Bombs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="weapons.html#laserthickness">LaserThickness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sidescountries/uiside.html">User Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/uiside.html#sidebar">Sidebar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/uiside.html#text-colors">Text Colors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/uiside.html#dialogs">Dialogs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/uiside.html#eva">EVA</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sidescountries/scorescreens.html">Score Screens and Themes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/scorescreens.html#campaign">Campaign</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/scorescreens.html#multiplayer">Multiplayer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/scorescreens.html#graphical-text-banner">Graphical Text Banner</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sidescountries/index.html#countries">Countries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="sidescountries/defaultcountry.html">Country Defaults</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/defaultcountry.html#ai-and-base-building">AI and Base-Building</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/defaultcountry.html#paradrop-defaults">Paradrop Defaults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/defaultcountry.html#others">Others</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sidescountries/uicountry.html">User Interface</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/uicountry.html#display-and-selection-chance">Display and Selection Chance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/uicountry.html#flags-and-observer-graphics">Flags and Observer Graphics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/uicountry.html#loading-screen">Loading Screen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/uicountry.html#taunts">Taunts</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="cloak/index.html">Cloak, Stealth and Sensor Arrays</a><ul>
@@ -296,6 +283,92 @@ the game.</p>
 <li class="toctree-l2"><a class="reference internal" href="cloak/sensorarray.html">Sensor Arrays</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="cloak/sensorarray.html#changes">Changes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="cloak/sensorarray.html#suppress-sensor-array-warnings">Suppress Sensor Array Warnings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projectiles/index.html">Projectiles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projectiles/av.html">Anti-Vehicle (<span><span class="type">AV</span></span>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectiles/ballisticscatter.html"><span><span class="type">BallisticScatter</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectiles/ranged.html"><span><span class="type">Ranged</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectiles/splits.html"><span><span class="type">Splits</span></span> and <span><span class="type">Airburst</span></span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="projectiles/splits.html#splits"><span><span class="type">Splits</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="projectiles/splits.html#airburst"><span><span class="type">Airburst</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="projectiles/splits.html#common-settings">Common Settings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="weapons/index.html">Weapons</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="weapons/weapontypes.html"><span><span class="type">[WeaponTypes]</span></span> Section</a></li>
+<li class="toctree-l2"><a class="reference internal" href="weapons/ivanbombs.html">Ivan Bombs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="weapons/radiation.html">Radiation Beams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="weapons/electricbolts.html">Electric Bolt Coloring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="weapons/waves.html">Waves</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="weapons/waves.html#wave-effects">Wave Effects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="weapons/waves.html#wave-coloring">Wave Coloring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="weapons/waves.html#wave-direction">Wave Direction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="weapons/waves.html#wave-ambient-damage">Wave Ambient Damage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="weapons/laser.html">LaserThickness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="weapons/projectilerange.html"><span><span class="type">ProjectileRange</span></span></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="warheads/index.html">Warheads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="warheads/general.html">General Settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="warheads/general.html#affectsenemies"><span><span class="type">AffectsEnemies</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="warheads/general.html#non-malicious-warheads">Non-Malicious Warheads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="warheads/general.html#prevent-scattering">Prevent scattering</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="warheads/cellspread.html"><span><span class="type">CellSpread</span></span> Enhancements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="warheads/cellspread.html#cellspread"><span><span class="type">CellSpread</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="warheads/cellspread.html#cellspread-hit-limit"><span><span class="type">CellSpread</span></span> Hit Limit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="warheads/ironcurtain.html">Iron Curtain Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="warheads/mindcontrol.html">Permanent Mind-Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="warheads/temporal.html">Customizable <span><span class="type">WarpAway</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="warheads/ripple.html">Ion Cannon Ripple Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="warheads/preimpactanim.html"><span><span class="type">PreImpactAnim</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="warheads/infantry.html">Infantry-related Settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="warheads/infantry.html#deployed-infantry-damage-multiplier">Deployed Infantry Damage multiplier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="warheads/infantry.html#infdeathanim"><span><span class="type">InfDeathAnim</span></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="superweapons/index.html">Super Weapons</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="superweapons/buildinganims.html">Building Animations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superweapons/general.html">General properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superweapons/hardcoded.html">Hardcoded Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superweapons/targeting.html">Targeting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superweapons/cursors.html">Cursors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superweapons/chargedrain.html">Charge/Drain Super Weapons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superweapons/cost.html">Cost</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superweapons/animsound.html">Animation/Sound</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superweapons/evaevents.html">EVA Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superweapons/messages.html">Messages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superweapons/cameooverlay.html">Cameo Overlay Texts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superweapons/lighting.html">Lighting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="superweapons/types/index.html">Settings by Super Weapon Type</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="superweapons/types/lightningstorm.html"><span><span class="type">Type=LightningStorm</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="superweapons/types/multimissile.html"><span><span class="type">Type=MultiMissile</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="superweapons/types/psychicdominator.html"><span><span class="type">Type=PsychicDominator</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="superweapons/types/chronosphere.html"><span><span class="type">Type=ChronoSphere</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="superweapons/types/chronosphere.html#type-chronowarp"><span><span class="type">Type=ChronoWarp</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="superweapons/types/protect.html"><span><span class="type">Type=IronCurtain</span></span> and <span><span class="type">Type=ForceShield</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="superweapons/types/geneticconverter.html"><span><span class="type">Type=GeneticConverter</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="superweapons/types/paradrop.html"><span><span class="type">Type=ParaDrop</span></span> and <span><span class="type">Type=AmerParaDrop</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="superweapons/types/spyplane.html"><span><span class="type">Type=SpyPlane</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="superweapons/types/psychicreveal.html"><span><span class="type">Type=PsychicReveal</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="superweapons/types/sonarpulse.html"><span><span class="type">Type=SonarPulse</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="superweapons/types/genericwarhead.html"><span><span class="type">Type=GenericWarhead</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="superweapons/types/unitdelivery.html"><span><span class="type">Type=UnitDelivery</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="superweapons/types/firestorm.html"><span><span class="type">Type=Firestorm</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="superweapons/types/hunterseeker.html"><span><span class="type">Type=HunterSeeker</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="superweapons/types/droppod.html"><span><span class="type">Type=DropPod</span></span></a></li>
 </ul>
 </li>
 </ul>
@@ -367,7 +440,7 @@ the game.</p>
         <li class="right" >
           <a href="../restored/vehicle-thief.html" title="Vehicle Thief"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.6 documentation</a> &raquo;</li> 
+        <li><a href="../index.html">Ares 0.7 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

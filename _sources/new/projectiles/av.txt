@@ -1,0 +1,29 @@
+Anti-Vehicle (AV)
+
+
+In Firestorm, the Limpet Mine could attach to VehicleTypes only:
+It would ignore infantry and aircraft. This was achieved by not allowing players
+to command the mine to attack objects directly, and by using the newly
+introduced AV, which auto-acquired only vehicles.
+
+ This logic uses this definition of *vehicles*: VehicleTypes on
+  the ground that are Naval=no and ConsideredAircraft=no. This
+  includes hovering units.
+
+Opposed to Tiberian Sun, this does not override AG and AA,
+for acquiring a new target and it can be defined independently of the two. This
+means both being able to automatically acquire ground units but not vehicles, as
+well as not acquiring other ground units while still being able to acquire
+vehicles.
+
+With AV=no, Ares also prohibits targeting vehicles and players
+will not get an attack cursor on them. Vehicles in the air fall into the
+responsibility of AA, and AV does not interfere with targeting.
+
+[Projectile]AV=boolean
+  Whether this projectile can be fired at VehicleTypes on the ground
+  that are not ConsideredAircraft=yes. Defaults to AG for
+  passive-acquiring targets; for firing it is enabled if LandTargeting is
+  set to a value not equal to 1.
+
+ 0.7

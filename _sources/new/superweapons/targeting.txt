@@ -1,0 +1,64 @@
+Targeting
+
+
+[SuperWeapon]SW.FireIntoShroud=boolean
+  Whether or not this super weapon is allowed to fire into an unexplored area of
+  the map. Default is yes.
+[SuperWeapon]SW.AutoFire=boolean
+  Sets whether this super weapon should be launched automatically even for human
+  players. If this is set to yes, the AI targeting options are used to
+  infer the best target cell. Defaults to no.
+[SuperWeapon]SW.ManualFire=boolean
+  Sets whether this super weapon can be manually fired by the owning player. If
+  set to no, the player will not be able to get a selection cursor for
+  this super weapon when clicking the cameo. This setting is ignored if
+  SW.AutoFire=no is set, because the player would have no way to fire
+  this super weapon. You can use this on auto-firing super weapons where the
+  targeting mode might prevents it from being fired (like the Lightning Storm
+  or Psychic Dominator, if another super weapon of this type is currently
+  active). Defaults to yes.
+[SuperWeapon]SW.RequiresTarget=enum land|water|empty|infantry|units|buildings
+  Which items this super weapon can fire upon. Hovering above an allowed item
+  will show the Cursor, otherwise the player gets the NoCursor and
+  it is not possible to launch the super weapon. For an example see
+  SW.AffectsTarget=.
+  
+   Please be aware of the problems that can arise if this and
+    SW.AffectsTarget= are set to mutually exclusive values not allowing
+    the super weapon to affect anything.
+[SuperWeapon]SW.RequiresHouse=enum none|owner|allies|team|enemies|all
+  Which house's items this super weapon can fire upon.
+[SuperWeapon]SW.AITargeting=enum SW Targeting Type
+  Select one of the following values to define how the AI will use this super
+  weapon:
+
++ None: The AI will not use this super weapon and it cannot auto-fire.
++ LightningStorm: Targets offensively, but waits until a currently
+  striking Lightning Storm subsides. Supports map action 135.
++ Nuke: Targets offensively, or strikes the waypoint set by map
+  triggers. Supports map action 135.
++ PsychicDominator: Targets the largest group of enemy units. Supports
+  map action 135.
++ GeneticMutator: Targets the largest group of enemy infantry (in a 3x3
+  area). Supports map action 135.
++ ParaDrop: Targets the least defended cell near the enemy base.
+  Supports map action 135.
++ ForceShield: Targets the position an enemy super weapon is about to
+  hit to protect against it. Supports map action 140.
++ NoTarget: This super weapon doesn't need any valid coordinates to
+  strike. You can use this for map-wide super weapons.
++ Offensive: Targets offensively, without any special handling like
+  LightningStorm or Nuke.
++ Stealth: Targets stealth units or buildings only. Respects
+  SW.RequiresTarget and SW.RequiresHouse.
++ Base: Targets the owning player's base center.
++ Self: Targets buildings providing this very super weapon, belonging
+  to the owning player only.
+
+ The AI will only respect SW.AITargeting when finding a target,
+  if not noted otherwise. For example, this means Nuke cannot be used
+  to target allies only.
+
+ Super Weapons; FireIntoShroud optional.
+
+ 0.2

@@ -1,0 +1,160 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Super Weapons &mdash; Ares 0.7 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.7 documentation" href="../../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="../index.html" />
+    <link rel="next" title="Building Animations" href="buildinganims.html" />
+    <link rel="prev" title="Infantry-related Settings" href="../warheads/infantry.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="buildinganims.html" title="Building Animations"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../warheads/infantry.html" title="Infantry-related Settings"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../warheads/infantry.html"
+                        title="previous chapter">Infantry-related Settings</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="buildinganims.html"
+                        title="next chapter">Building Animations</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="super-weapons">
+<h1>Super Weapons<a class="headerlink" href="#super-weapons" title="Permalink to this headline">¶</a></h1>
+<p>In <span class="game docutils literal">Yuri&#8217;s Revenge</span>, there is very little you can do to change or add to
+the existing super weapons - most super weapon-related features are hard-coded
+to only work as designed for the original super weapons. Ares, however, includes
+several new ways to customize existing super weapons as well as several wholly
+new super weapons.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You cannot change a super weapon&#8217;s <span><tt class="docutils literal"><span class="pre">Type=</span></tt></span> or <span><tt class="docutils literal"><span class="pre">Action=</span></tt></span>
+values in any of the game mode specific INI files (like
+<tt class="file docutils literal docutils literal"><span class="pre">mpfreeforallmd.ini</span></tt>) or map files. To achive the same effect, add a
+new super weapon to <tt class="file docutils literal docutils literal"><span class="pre">rulesmd.ini</span></tt> with the different <span><tt class="docutils literal"><span class="pre">Type=</span></tt></span> or
+<span><tt class="docutils literal"><span class="pre">Action=</span></tt></span> and change <span><tt class="docutils literal"><span class="pre">SuperWeapon=</span></tt></span> for the respective owner
+buildings to use the new super weapon in the INI file instead.</p>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="buildinganims.html">Building Animations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general.html">General properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardcoded.html">Hardcoded Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="targeting.html">Targeting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cursors.html">Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chargedrain.html">Charge/Drain Super Weapons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cost.html">Cost</a></li>
+<li class="toctree-l1"><a class="reference internal" href="animsound.html">Animation/Sound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="evaevents.html">EVA Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="messages.html">Messages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cameooverlay.html">Cameo Overlay Texts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lighting.html">Lighting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="types/index.html">Settings by Super Weapon Type</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="types/lightningstorm.html"><span><span class="type">Type=LightningStorm</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/multimissile.html"><span><span class="type">Type=MultiMissile</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/psychicdominator.html"><span><span class="type">Type=PsychicDominator</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/chronosphere.html"><span><span class="type">Type=ChronoSphere</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/chronosphere.html#type-chronowarp"><span><span class="type">Type=ChronoWarp</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/protect.html"><span><span class="type">Type=IronCurtain</span></span> and <span><span class="type">Type=ForceShield</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/geneticconverter.html"><span><span class="type">Type=GeneticConverter</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/paradrop.html"><span><span class="type">Type=ParaDrop</span></span> and <span><span class="type">Type=AmerParaDrop</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/spyplane.html"><span><span class="type">Type=SpyPlane</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/psychicreveal.html"><span><span class="type">Type=PsychicReveal</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/sonarpulse.html"><span><span class="type">Type=SonarPulse</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/genericwarhead.html"><span><span class="type">Type=GenericWarhead</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/unitdelivery.html"><span><span class="type">Type=UnitDelivery</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/firestorm.html"><span><span class="type">Type=Firestorm</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/hunterseeker.html"><span><span class="type">Type=HunterSeeker</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="types/droppod.html"><span><span class="type">Type=DropPod</span></span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="buildinganims.html" title="Building Animations"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../warheads/infantry.html" title="Infantry-related Settings"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

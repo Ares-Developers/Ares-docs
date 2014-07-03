@@ -1,0 +1,151 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Type=UnitDelivery &mdash; Ares 0.7 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.7 documentation" href="../../../index.html" />
+    <link rel="up" title="Settings by Super Weapon Type" href="index.html" />
+    <link rel="next" title="Type=Firestorm" href="firestorm.html" />
+    <link rel="prev" title="Type=GenericWarhead" href="genericwarhead.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="firestorm.html" title="Type=Firestorm"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="genericwarhead.html" title="Type=GenericWarhead"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="genericwarhead.html"
+                        title="previous chapter"><span><span class="type">Type=GenericWarhead</span></span></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="firestorm.html"
+                        title="next chapter"><span><span class="type">Type=Firestorm</span></span></a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="type-unitdelivery">
+<h1><span><span class="type">Type=UnitDelivery</span></span><a class="headerlink" href="#type-unitdelivery" title="Permalink to this headline">¶</a></h1>
+<p>The Unit Delivery super weapon will create the specified unit(s) in the target
+cell. This uses the CellSpread model to place the units.</p>
+<p>Default values for general tags:</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Deferment=</span></tt><span class="type definition"> (integer - frames)</span></span></dt>
+<dd>Delay before the units are placed. Defaults to <cite>20</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.ActivationSound=</span></tt><span class="type definition"> (Sound)</span></span></dt>
+<dd>Played when the units are placed. Defaults to <cite>none</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></tt><span class="type definition"> (enum)</span></span></dt>
+<dd>Defaults to <cite>ParaDrop</cite>.</dd>
+</dl>
+<p>Unit Delivery specific tags:</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Deliver.Types=</span></tt><span class="type definition"> (list of TechnoTypes)</span></span></dt>
+<dd>The list of units that will be delivered. This works for infantry, vehicles,
+aircraft and buildings.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Deliver.Buildups=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether or not buildings delivered by this super weapon should play their
+buildup animation prior to becoming available. Defaults to <cite>no</cite>.</dd>
+</dl>
+<p>All objects are placed on the ground, including aircraft. Flying units that
+never land (e.g. the Rocketeer and Kirovs) will take off. If a cell is occupied,
+the super weapon will retry on the next cell and so on, until the object gets
+placed. Once the first unit is placed, this process starts again for the next
+item in the list. Infantry squads are grouped in a single cell. The search will
+skip an item if it has not been placed after testing 100 cells.</p>
+<p>You can mix in naval units and they will be placed where they can normally
+exist.</p>
+<p>If you have more than one building, the resulting placement might look
+odd.</p>
+<p>The actual delivery of the units happens all at once, after firing the super
+weapon and awaiting its deferment.</p>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.1.</span></p>
+<p class="versionchanged">
+<span class="versionmodified">Changed in version 0.4.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="firestorm.html" title="Type=Firestorm"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="genericwarhead.html" title="Type=GenericWarhead"
+             >previous</a> |</li>
+        <li><a href="../../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

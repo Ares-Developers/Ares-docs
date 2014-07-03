@@ -1,0 +1,132 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Lighting &mdash; Ares 0.7 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.7 documentation" href="../../index.html" />
+    <link rel="up" title="Super Weapons" href="index.html" />
+    <link rel="next" title="Settings by Super Weapon Type" href="types/index.html" />
+    <link rel="prev" title="Cameo Overlay Texts" href="cameooverlay.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="types/index.html" title="Settings by Super Weapon Type"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cameooverlay.html" title="Cameo Overlay Texts"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Super Weapons</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="cameooverlay.html"
+                        title="previous chapter">Cameo Overlay Texts</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="types/index.html"
+                        title="next chapter">Settings by Super Weapon Type</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="lighting">
+<h1>Lighting<a class="headerlink" href="#lighting" title="Permalink to this headline">¶</a></h1>
+<p>The three major super weapons allow for a temporary change of lighting. You can
+change any of these values without having to change the others too. If you want
+to use the scenario&#8217;s respective default value, use <cite>-1</cite> for ambient or
+colors.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Light.Enabled=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether the lighting gets respected or not. Currently only the primary super
+weapons support lighting changes.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Light.Ambient=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>The brightness of the environment. Too high values will cause a slow-down.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Light.Red=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>The red component of the lighting.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Light.Green=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>The green component of the lighting.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Light.Blue=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>The blue component of the lighting.</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.2.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="types/index.html" title="Settings by Super Weapon Type"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cameooverlay.html" title="Cameo Overlay Texts"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" >Super Weapons</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

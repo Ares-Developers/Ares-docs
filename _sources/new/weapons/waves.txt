@@ -1,0 +1,94 @@
+Waves
+
+
+Wave Effects
+
+
+An unused weapon effect (present in the game code but disabled) has been
+enabled. It is similar in appearance to the old laser beam or the old Disruptor
+wave from previous games. For now it is referred to as *Laser*.
+
+[Weapon]Wave.IsLaser=boolean
+  Should the *Laser* effect be applied to this weapon?
+[Weapon]Wave.IsBigLaser=boolean
+  Should the *BigLaser* effect be applied to this weapon?
+
+Wave.IsLaser and Wave.IsBigLaser produce two different effects,
+however their naming was established before the effects were fully tested:
+Wave.IsLaser appears to actually render a wider beam! See the image
+below, left unit is using Wave.IsLaser, the right one is using
+Wave.IsBigLaser:
+
+ /images/wave_lasers.png
+  :alt: Effects of Wave.Is(Big)Laser
+  :align: center
+
+ Enabled unused IsLaser wave effect.
+
+ 0.1
+
+The following flags are applicable to all Wave effects; the aforementioned
+Wave.Is(Big)Laser=yes as well as Sonic=yes and
+IsMagBeam=yes.
+
+
+Wave Coloring
+
+
+[Weapon]Wave.Color=R,G,B
+  The color of the wave. Default value is different depending on the type of
+  Wave.
+[Weapon]Wave.IsHouseColor=boolean
+  If this is set to yes then the wave will be drawn in the firing
+  unit's house color instead of the color specified by Wave.Color.
+  
+ Sonic Waves do no yet have a sensible default Wave.Color.
+
+ Waves can have custom colors.
+
+ 0.1
+
+
+Wave Direction
+
+
+Waves are drawn in different directions (from firer to target or vice versa)
+depending on the type of wave and the circumstances. This direction can now be
+customized in several ways. The following flags all default to no
+unless otherwise specified.
+
+[Weapon]Wave.ReverseAgainstVehicles=boolean
+  Whether or not the wave will be drawn from the target to the firer when the
+  target is a VehicleType. Defaults to yes if
+  IsMagBeam=yes is set on the weapon.
+[Weapon]Wave.ReverseAgainstBuildings=boolean
+  Whether or not the wave will be drawn from the target to the firer when the
+  target is a BuildingType.
+[Weapon]Wave.ReverseAgainstInfantry=boolean
+  Whether or not the wave will be drawn from the target to the firer when the
+  target is an InfantryType.
+[Weapon]Wave.ReverseAgainstAircraft=boolean
+  Whether or not the wave will be drawn from the target to the firer when the
+  target is an AircraftType.
+[Weapon]Wave.ReverseAgainstOthers=boolean
+  Whether or not the wave will be drawn from target to firer when the target is
+  anything not covered by the other ReverseAgainst flags (i.e. trees,
+  overlays, empty cells, etc.). 
+
+ Customisable wave direction.
+
+ 0.1
+
+
+Wave Ambient Damage
+
+All waves can now deal disruptor-style damage to objects that they pass through,
+a feature that was previously limited to Sonic Waves only. As a reminder, the
+flags that control this are:
+
+[Weapon]AmbientDamage=integer
+  How much damage the wave deals to objects it passes through. Defaults to zero.
+[Weapon]Warhead=WarheadType
+  The warhead used to deal ambient damage as well as normal damage.
+
+ 0.1

@@ -1,0 +1,68 @@
+Splits and Airburst
+
+
+The Splits missile feature of Firestorm fame has been ported over
+to Yuri's Revenge, with several changes and additions. The related
+Airburst logic has been expanded.
+
+ 0.7
+
+
+Splits
+
+
+The split weapon of the Cyborg Reaper from Firestorm fired two missiles.
+Each of them split in mid-air after gaining some altitude, releasing two new
+projectiles each, which would either travel on to the initial target, aim for a
+new target no more than two cells nearby, or impact on a random cell in a 7 by 7
+area.
+
+The actual split happens when an Airburst=yes projectile is above its
+target, a Ranged=yes projectile exceeds its weapon's
+... or the projectile
+detonates otherwise.
+
+Refer to Splits on ModEnc  for a
+more detailled description of the logic.
+
+ The Splits logic has been de-hardcoded compared to Tiberian
+  Sun. The AirburstWeapon's Damage is no longer multiplied by
+  10. Its Speed is used instead of the hardcoded 19,
+  and its Bright setting is now also respected instead of just being
+  disabled.
+
+[Projectile]Splits=boolean
+  Whether the projectile will split into a number of other projectiles defined
+  by Cluster and AirburstWeapon. Can be combined with
+  Airburst. Defaults to no.
+
+[Projectile]RetargetAccuracy=float - percentage
+  The probability that a split cluster will aim for the same target the original
+  projectile was shot at. The higher the value, the less likely it is for the
+  split projectile to chose another target. Valid range is 0.0 to
+  1.0. Defaults to 0.0.
+
+
+Airburst
+
+
+The Airburst logic was used for the MultiMissile in Tiberian Sun
+to deal damage to randomly selected cells below the target area. In Red
+Alert 2 the logic has been changed and it always bursts into nine clusters
+covering an area of 3 by 3 cells.
+
+[Projectile]AirburstSpread=float - cell range
+  The range the airburst effect covers. Each cell in range will be targeted by
+  the AirburstWeapon. Requires Airburst=yes. Cannot be combined
+  with Splits=yes. Defaults to 1.5.
+
+
+Common Settings
+
+
+[Projectile]AroundTarget=boolean
+  Whether a projectile with Splits=yes or Airburst=yes should use
+  the area around the original target to look for new targets for each cluster.
+  If enabled, the clusters will continue their way to the originally intended
+  target. Otherwise, the clusters will search for new targets in the area where
+  the projectile split up. Defaults to Splits.

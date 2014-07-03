@@ -1,41 +1,41 @@
----------------
-Migration Guide
----------------
 
-If you are upgrading from previous versions of :game:`Ares`, you may have to
+Migration Guide
+
+
+If you are upgrading from previous versions of Ares, you may have to
 account for the following changes.
 
 From Ares 0.1
-~~~~~~~~~~~~~
+
 
 Changed tags:
 
-  :tag:`[SuperWeapon]SW.Deliver` --> :tag:`[SuperWeapon]Deliver.Types`.
+  [SuperWeapon]►SW.Deliver --> [SuperWeapon]►Deliver.Types.
     Replace the old tag name by the new tag name.
   
-  :tag:`[SuperWeapon]SW.DeliverBuildups` --> :tag:`[SuperWeapon]Deliver.Buildups`.
+  [SuperWeapon]►SW.DeliverBuildups --> [SuperWeapon]►Deliver.Buildups.
     Replace the old tag name by the new tag name.
   
-  :tag:`[SuperWeapon]SonarPulse.Range` --> :tag:`[SuperWeapon]SW.Range`.
+  [SuperWeapon]►SonarPulse.Range --> [SuperWeapon]►SW.Range.
     Replace the old tag name by the new tag name.
   
-  :tag:`[SuperWeapon]GenericWarhead.Warhead` --> :tag:`[SuperWeapon]SW.Warhead`.
+  [SuperWeapon]►GenericWarhead.Warhead --> [SuperWeapon]►SW.Warhead.
     Replace the old tag name by the new tag name.
   
-  :tag:`[SuperWeapon]GenericWarhead.Damage` --> :tag:`[SuperWeapon]SW.Damage`.
+  [SuperWeapon]►GenericWarhead.Damage --> [SuperWeapon]►SW.Damage.
     Replace the old tag name by the new tag name.
   
-  :tag:`[SuperWeapon]Nuke.Sound` --> :tag:`[SuperWeapon]SW.ActivationSound`.
+  [SuperWeapon]►Nuke.Sound --> [SuperWeapon]►SW.ActivationSound.
     Replace the old tag name by the new tag name.
 
 Other changes:
 
-  :game:`Ares` 0.1 supported options in :file:`ares.ini` to configure how
-  graphics surfaces were allocated. The tags :tag:`Surface.*.Memory` and
-  :tag:`Surface.*.Force3D` are obsolete now and have no effect any more.
+  Ares 0.1 supported options in ares.ini to configure how
+  graphics surfaces were allocated. The tags Surface.*.Memory and
+  Surface.*.Force3D are obsolete now and have no effect any more.
 
 From Ares 0.2 and below
-~~~~~~~~~~~~~~~~~~~~~~~
+
 
 Changed tags:
 
@@ -43,9 +43,9 @@ Changed tags:
 
 Other changes:
 
-  The ini file reader has been updated for :game:`Ares` 0.3. Values that were
+  The ini file reader has been updated for Ares 0.3. Values that were
   invalid previously might now be valid, and previously valid notations might
-  have become invalid. If values cannot be parsed correctly, :game:`Ares`
+  have become invalid. If values cannot be parsed correctly, Ares
   puts a message to the debug log.
 
   For example, it was possible to supply only one or two numbers when three
@@ -54,177 +54,190 @@ Other changes:
   debug log.
 
 From Ares 0.3 and below
-~~~~~~~~~~~~~~~~~~~~~~~
+
 
 Changed tags:
 
   The following tags have been changed to use the actual value of their default
-  tags, not the value the default tags have in :file:`rulesmd.ini`. If a default
+  tags, not the value the default tags have in rulesmd.ini. If a default
   is changed in a game mode or map file, this updated value will be used. In
   other words: It now uses the last value, while previously the first would have
   been used.
 
   If you do not change a default tag in game modes or maps, no action is needed.
-  If you want to use the value the default tag has in :file:`rulesmd.ini`, you
+  If you want to use the value the default tag has in rulesmd.ini, you
   have to copy the default value to the respective tag. 
 
-  :tag:`[Weapon]IvanBomb.AttachSound`
-    Defaults to :tag:`[AudioVisual]BombAttachSound`.
+  [Weapon]►IvanBomb.AttachSound
+    Defaults to [AudioVisual]►BombAttachSound.
 
-  :tag:`[Weapon]IvanBomb.TickingSound`
-    Defaults to :tag:`[AudioVisual]BombTickingSound`.
+  [Weapon]►IvanBomb.TickingSound
+    Defaults to [AudioVisual]►BombTickingSound.
 
-  :tag:`[SuperWeapon]Lightning.Sounds`
-    Defaults to :tag:`[AudioVisual]LightningSounds`.
+  [SuperWeapon]►Lightning.Sounds
+    Defaults to [AudioVisual]►LightningSounds.
 
-  :tag:`[SuperWeapon]Lightning.Clouds`
-    Defaults to :tag:`[General]WeatherConClouds`.
+  [SuperWeapon]►Lightning.Clouds
+    Defaults to [General]►WeatherConClouds.
 
-  :tag:`[SuperWeapon]Lightning.Bolts`
-    Defaults to :tag:`[General]WeatherConBolts`.
+  [SuperWeapon]►Lightning.Bolts
+    Defaults to [General]►WeatherConBolts.
 
-  :tag:`[SuperWeapon]Lightning.Debris`
-    Defaults to :tag:`[General]MetallicDebris`.
+  [SuperWeapon]►Lightning.Debris
+    Defaults to [General]►MetallicDebris.
 
 Other changes:
 
-  Animations that have an owner now also respect :tag:`AffectsAllies`.
-  Previously only :tag:`AffectsEnemies` was supported.
+  Animations that have an owner now also respect AffectsAllies.
+  Previously only AffectsEnemies was supported.
 
-  The original tag :tag:`Crashable` does now also apply to
-  :type:`AircraftTypes`. Previously it had no function.
+  The original tag Crashable does now also apply to
+  AircraftTypes. Previously it had no function.
 
-  The original tags :tag:`Pip` and :tag:`OccupyPip` have been changed to also
+  The original tags Pip and OccupyPip have been changed to also
   support integers. Previously, integers were invalid and defaulted to
-  :value:`green`.
+  green.
 
 From Ares 0.4 and below
-~~~~~~~~~~~~~~~~~~~~~~~
+
 
 Changed tags:
 
   The following tags have been changed to use the actual value of their default
-  tags. (Continued work from the :game:`Ares` 0.4 release.)
+  tags. (Continued work from the Ares 0.4 release.)
 
-  :tag:`[Side]DefaultDisguise`
+  [Side]►DefaultDisguise
     Defaults to the original tag for a side.
 
-  :tag:`[Side]Crew`
+  [Side]►Crew
     Defaults to the original tag for a side.
 
-  :tag:`[Side]SurvivorDivisor`
+  [Side]►SurvivorDivisor
     Defaults to the original tag for a side.
 
-  :tag:`[Side]AI.BaseDefenses`
+  [Side]►AI.BaseDefenses
     Defaults to the original tag for a side.
 
-  :tag:`[Side]AI.BaseDefenseCounts`
+  [Side]►AI.BaseDefenseCounts
     Defaults to the original tag for a side.
 
-  :tag:`[Weapon]IvanBomb.Warhead`
-    Defaults to :tag:`[CombatDamage]IvanWarhead`.
+  [Weapon]►IvanBomb.Warhead
+    Defaults to [CombatDamage]►IvanWarhead.
 
-  :tag:`[Weapon]IvanBomb.Damage`
-    Defaults to :tag:`[CombatDamage]IvanDamage`.
+  [Weapon]►IvanBomb.Damage
+    Defaults to [CombatDamage]►IvanDamage.
 
-  :tag:`[Weapon]IvanBomb.Delay`
-    Defaults to :tag:`[CombatDamage]IvanTimedDelay`.
+  [Weapon]►IvanBomb.Delay
+    Defaults to [CombatDamage]►IvanTimedDelay.
 
-  :tag:`[Weapon]IvanBomb.FlickerRate`
-    Defaults to :tag:`[CombatDamage]IvanIconFlickerRate`.
+  [Weapon]►IvanBomb.FlickerRate
+    Defaults to [CombatDamage]►IvanIconFlickerRate.
 
 Other changes:
 
-  Values in :tag:`[Side]Crew` and :tag:`[Side]DefaultDisguise` will not be added
-  to the list of :type:`InfantryTypes` automatically any more. Make sure these
-  values are listed under the :type:`InfantryTypes` list.
+  Values in [Side]►Crew and [Side]►DefaultDisguise will not be added
+  to the list of InfantryTypes automatically any more. Make sure these
+  values are listed under the InfantryTypes list.
 
   Previously, destroyed units did not eject survivors if they were owned by
-  :value:`Neutral` or :value:`Special`, because :game:`Ares` did not support
+  Neutral or Special, because Ares did not support
   survivors for them. The original handling has been restored, and these houses
-  will use :tag:`[General]Technician` as crew.
+  will use [General]►Technician as crew.
 
 
 From Ares 0.5 and below
-~~~~~~~~~~~~~~~~~~~~~~~
+
 
 Changed tags:
 
   The following tags have been changed to use the actual value of their default
-  tags. (Continued work from earlier :game:`Ares` releases.)
+  tags. (Continued work from earlier Ares releases.)
 
-  :tag:`[Side]ParaDrop.Num`
+  [Side]►ParaDrop.Num
     Defaults to the original tag for a side.
 
-  :tag:`[Side]ParaDrop.Types`
+  [Side]►ParaDrop.Types
     Defaults to the original tag for a side.
 
-  :tag:`[Side]Parachute.Anim`
-    Defaults to :tag:`[General]Parachute`.
+  [Side]►Parachute.Anim
+    Defaults to [General]►Parachute.
 
-  :tag:`[Country]ParaDrop.Num`
-    Defaults to the side's :tag:`ParaDrop.Num`.
+  [Country]►ParaDrop.Num
+    Defaults to the side's ParaDrop.Num.
 
-  :tag:`[Country]ParaDrop.Types`
-    Defaults to the side's :tag:`ParaDrop.Types`.
+  [Country]►ParaDrop.Types
+    Defaults to the side's ParaDrop.Types.
 
-  :tag:`[Country]AI.PowerPlants`
+  [Country]►AI.PowerPlants
     If empty or not set, the side's default power plants are used.
 
-  :tag:`[Weapon]Wave.Color`
+  [Weapon]►Wave.Color
     Default depends on wave type.
 
-  :tag:`[SuperWeapon]SW.Damage`
-    Defaults depends on :tag:`Type`.
+  [SuperWeapon]►SW.Damage
+    Defaults depends on Type.
 
-  :tag:`[SuperWeapon]SW.Range`
-    Defaults depends on :tag:`Type`.
+  [SuperWeapon]►SW.Range
+    Defaults depends on Type.
 
-  :tag:`[SuperWeapon]SW.Deferment`
-    Defaults to :tag:`[General]LightningDeferment` for
-    :tag:`Type=LightningStorm`.
+  [SuperWeapon]►SW.Deferment
+    Defaults to [General]►LightningDeferment for
+    Type=LightningStorm.
 
-  :tag:`[SuperWeapon]SW.Animation`
-    Defaults depends on :tag:`Type`.
+  [SuperWeapon]►SW.Animation
+    Defaults depends on Type.
 
-  :tag:`[SuperWeapon]SW.Sound`
-    Defaults depends on :tag:`Type`.
+  [SuperWeapon]►SW.Sound
+    Defaults depends on Type.
 
-  :tag:`[SuperWeapon]SW.ActivationSound`
-    Defaults depends on :tag:`Type`.
+  [SuperWeapon]►SW.ActivationSound
+    Defaults depends on Type.
 
-  :tag:`[SuperWeapon]Lightning.Duration`
-    Defaults to :tag:`[General]LightningStormDuration`.
+  [SuperWeapon]►Lightning.Duration
+    Defaults to [General]►LightningStormDuration.
 
-  :tag:`[SuperWeapon]Lightning.RadarOutage`
-    Defaults to :tag:`[General]LightningStormDuration`.
+  [SuperWeapon]►Lightning.RadarOutage
+    Defaults to [General]►LightningStormDuration.
 
-  :tag:`[SuperWeapon]Lightning.HitDelay`
-    Defaults to :tag:`[General]LightningHitDelay`.
+  [SuperWeapon]►Lightning.HitDelay
+    Defaults to [General]►LightningHitDelay.
 
-  :tag:`[SuperWeapon]Lightning.ScatterDelay`
-    Defaults to :tag:`[General]LightningScatterDelay`.
+  [SuperWeapon]►Lightning.ScatterDelay
+    Defaults to [General]►LightningScatterDelay.
 
-  :tag:`[SuperWeapon]Lightning.Separation`
-    Defaults to :tag:`[General]LightningSeparation`.
+  [SuperWeapon]►Lightning.Separation
+    Defaults to [General]►LightningSeparation.
 
-  :tag:`[SuperWeapon]Lightning.PrintText`
-    Defaults to :tag:`[General]LightningPrintText`.
+  [SuperWeapon]►Lightning.PrintText
+    Defaults to [General]►LightningPrintText.
 
-  :tag:`[SuperWeapon]Lightning.BoltExplosion`
-    Defaults to :tag:`[General]WeatherConBoltExplosion`.
+  [SuperWeapon]►Lightning.BoltExplosion
+    Defaults to [General]►WeatherConBoltExplosion.
 
-  :tag:`[SuperWeapon]Nuke.TakeOff`
-    Defaults to :tag:`[General]NukeTakeOff`.
+  [SuperWeapon]►Nuke.TakeOff
+    Defaults to [General]►NukeTakeOff.
 
-  :tag:`[SuperWeapon]Dominator.FireAtPercentage`
-    Defaults to :tag:`[General]DominatorFireAtPercentage`.
+  [SuperWeapon]►Dominator.FireAtPercentage
+    Defaults to [General]►DominatorFireAtPercentage.
 
-  :tag:`[SuperWeapon]Chronosphere.BlastSrc`
-    Defaults to :tag:`[General]ChronoBlast`.
+  [SuperWeapon]►Chronosphere.BlastSrc
+    Defaults to [General]►ChronoBlast.
 
-  :tag:`[SuperWeapon]Chronosphere.BlastDest`
-    Defaults to :tag:`[General]ChronoBlastDest`.
+  [SuperWeapon]►Chronosphere.BlastDest
+    Defaults to [General]►ChronoBlastDest.
 
-  :tag:`[SuperWeapon]Mutate.Explosion`
-    Defaults to :tag:`[General]MutateExplosion`.
+  [SuperWeapon]►Mutate.Explosion
+    Defaults to [General]►MutateExplosion.
+
+From Ares 0.6 and below
+
+
+Changed tags:
+
+  No changes required.
+
+Other changes:
+
+  Only unpowered units create sparkle particle systems. Deactivation because of
+  EMP and Operator logics does not make the unit sparkle any more. This is not
+  optional at the moment.

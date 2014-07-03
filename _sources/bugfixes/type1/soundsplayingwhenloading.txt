@@ -1,8 +1,8 @@
-===================================
+
 Robot Tank Sounds On Loading Screen
-===================================
+
 
 Starting another match after there were robot tanks in the last game might play
 their deactivation sound on the load screen. This is fixed.
 
-.. versionadded:: 0.4
+ 0.4

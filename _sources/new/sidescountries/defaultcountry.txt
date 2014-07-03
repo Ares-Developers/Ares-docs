@@ -1,0 +1,46 @@
+Country Defaults
+
+
+AI and Base-Building
+
+
+[Country]AI.PowerPlants=list of BuildingTypes
+  A list of buildings that the AI will treat as this country's power plants.
+
+ 0.1
+
+
+Paradrop Defaults
+
+
+[Country]ParaDrop.Types=list of InfantryTypes and/or VehicleTypes
+  The units that will be paradropped by Type=ParaDrop super weapons (such
+  as the one normally provided by a Tech Airport) for this country. Defaults to
+  the corresponding side's ParaDrop.Types=.
+
+   The original flags used to control the paradrop units only accept
+    InfantryTypes. To include VehicleTypes in a paradrop you
+    *have to* use the new ParaDrop.Types and ParaDrop.Num flags.
+[Country]ParaDrop.Num=list of integers
+  The quantity of each corresponding unit (listed against ParaDrop.Types)
+  that will be paradropped. Defaults to the corresponding side's
+  ParaDrop.Num=.
+[Country]ParaDrop.Aircraft=AircraftType
+  The aircraft type that will be used to deliver paradrops. Defaults to the
+  corresponding side's ParaDrop.Aircraft=.
+[Country]Parachute.Anim=Animation
+  This country's default parachute used if not overridden by a
+  TechnoType. Defaults to the corresponding side's
+  Parachute.Anim=.
+
+ 0.2
+
+
+Others
+
+
+[Country]VeteranBuildings=list of BuildingTypes
+  All buildings in this list start as veteran for this country and, if
+  available, veteran cameos are displayed in the sidebar.
+
+ 0.4
