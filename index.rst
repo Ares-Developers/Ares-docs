@@ -35,6 +35,7 @@ Table of Contents
 	bugfixes/index
 
 .. toctree::
+	:maxdepth: 3
 	
 	restored/index
 	new/index
