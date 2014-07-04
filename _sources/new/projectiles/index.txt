@@ -4,7 +4,6 @@ Projectiles
 
 	:glob:
 	
-	av
 	ballisticscatter
 	ranged
 	splits
