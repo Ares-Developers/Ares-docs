@@ -22,6 +22,12 @@ Unit Delivery specific tags:
 :tagdef:`[SuperWeapon]Deliver.Buildups=boolean`
   Whether or not buildings delivered by this super weapon should play their
   buildup animation prior to becoming available. Defaults to :value:`no`.
+:tagdef:`[SuperWeapon]Deliver.Owner=enum invoker|neutral|special|civilian`
+  The country the delivered units will belong to. :value:`invoker` is the player
+  who fired the super weapon, :value:`civilian` is the first country of the side
+  named :value:`Civilian`, :value:`special` is the country named
+  :value:`Special` and :value:`neutral` is the country named 'Neutral'. Defaults
+  to :value:`invoker`.
 
 
 The delivery of the units happens all at once, after firing the super weapon and
