@@ -41,6 +41,9 @@ All objects are placed on the ground, including aircraft. Flying units that
 never land (e.g. the Rocketeer and Kirovs) will take off. Infantry squads are
 grouped in a single cell.
 
+Units owned by AI are set to go on a hunt mission, buildings and human owned
+units are put on a guard mission.
+
 You can mix in naval units and they will be placed where they can normally
 exist.
 
