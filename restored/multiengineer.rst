@@ -25,10 +25,10 @@ it instead. :tag:`EngineerDamage` is not present in :game:`Yuri's Revenge`.
   .. note:: All structures originally owned by countries with
     \ :tag:`MultiplayPassive=yes` are considered tech structures. This
     definition  is likely to change in a later version.
-:tagdef:`[General]EngineerDamageCursor.*=Cursor`
+:tagdef:`[General]EngineerDamageCursor.*=cursor definition`
   Specifies the cursor to indicate an engineer will only damage the building
-  instead of capturing it. See :ref:`Super weapon cursors <sw-cursors>`.
-  Defaults to a previously unused detonator cursor.
+  instead of capturing it. See :doc:`Mouse Cursors </new/cursors>`. Defaults to
+  a previously unused detonator cursor.
 
 .. note:: Use sensible defaults. Generally, :tag:`EngineerDamage` should never
   be higher than :tag:`EngineerCaptureLevel` or there might be situations an
