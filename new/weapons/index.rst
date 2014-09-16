@@ -5,6 +5,7 @@ Weapons
 	:glob:
 	
 	weapontypes
+	damage
 	ivanbombs
 	radiation
 	electricbolts
