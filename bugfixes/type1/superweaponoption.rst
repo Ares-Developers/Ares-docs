@@ -1,0 +1,15 @@
+.. index:: Super Weapons; Multiplayer option affecting campaigns
+
+======================================
+Super Weapon Option Affected Campaigns
+======================================
+
+The option to disable super weapons in multiplayer matches had an effect on
+single player missions also. Thus there was a possibility that players could not
+use super weapons and could not even build the buildings providing those super
+weapons if they were :tag:`DisableableFromShell=yes`. Other options like the
+redeployable MCV feature are explicitly prevented from affecting campaigns. Such
+checks have been added for the super weapon option also, and thus super weapons
+will always be available in campaign mode.
+
+.. versionadded:: 0.8
