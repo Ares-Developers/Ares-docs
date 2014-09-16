@@ -22,3 +22,4 @@ well as custom tags that only apply to this type.
 	firestorm
 	hunterseeker
 	droppod
+	empulse
