@@ -21,6 +21,7 @@ new super weapons.
 	general
 	hardcoded
 	targeting
+	range
 	cursors
 	chargedrain
 	cost
