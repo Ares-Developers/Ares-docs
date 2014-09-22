@@ -31,6 +31,10 @@ more detailled description of the logic.
   and its :tag:`Bright` setting is now also respected instead of just being
   disabled.
 
+.. warning:: Even though speed is not hardcoded any more, you cannot use
+  \ :tag:`Speed` values lower than :value:`19` on the :tag:`AirburstWeapon` or
+  the logic will start to fail and behave erratically.
+
 :tagdef:`[Projectile]Splits=boolean`
   Whether the projectile will split into a number of other projectiles defined
   by :tag:`Cluster` and :tag:`AirburstWeapon`. Can be combined with
