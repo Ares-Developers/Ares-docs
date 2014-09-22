@@ -65,6 +65,7 @@ would therefore definitely harm the occupants.
 .. index:: Buildings; Weapons can be made to pass through urban combat buildings
   to the occupants inside (including fatal chance and damage modifier).
 
+.. versionadded:: 0.1
 
 
 Squatters' Rights
@@ -89,6 +90,7 @@ to its original owner. Whilst a building is held by a player that is not the
 
 .. index:: Buildings; Unoccupied player buildings can be garrisoned by enemy infantry.
 
+.. versionadded:: 0.1
 
 
 Advanced Rubble
@@ -104,30 +106,6 @@ there like nothing ever happened.
 .. index:: Buildings; Buildings can be converted into a different building on
   destruction (rubble) and back again on repair by an engineer.
 
-Advanced Rubble is implemented in a similar way to other upgrade systems in
-:game:`Ares`:
-
-:tagdef:`[BuildingType]Rubble.Destroyed=BuildingType`
-  The new :type:`BuildingType` that this :type:`BuildingType` will transform
-  into upon destruction. Buildings that are created via `Rubble.Destroyed` will
-  have the following properties forced upon them:
-
-  ::
-
-    Capturable=no
-    TogglePower=no
-    Unsellable=yes
-    CanBeOccupied=no
-
-The building will be created with maximum :tag:`Strength`. Engineers will
-always get a repair cursor over the building.
-
-:tagdef:`[BuildingType]Rubble.Intact=BuildingType`
-  The new :type:`BuildingType` that this :type:`BuildingType` will transform
-  into when it is repaired. The repaired building will be created with 1%
-  :tag:`Strength`.
-
-
 Note that Engineers will not be 'used up' by this repair process - they keep
 existing outside of the trench. This is very much intended for trenches: an
 Engineer would not be repairing/rebuilding an entire building, just re-digging a
@@ -138,6 +116,79 @@ trench so his work would not be too exhausting.
   Custom foundations never match built-in foundations. A fatal error will be
   raised if you do not comply with this requirement and the game will exit.
 
+Advanced Rubble is implemented in a similar way to other upgrade systems in
+:game:`Ares`. The first set is for converting a building to rubble:
+
+:tagdef:`[BuildingType]Rubble.Destroyed=BuildingType`
+  The new :type:`BuildingType` that this :type:`BuildingType` will transform
+  into upon destruction. By default the building will be created with maximum
+  :tag:`Strength`. Engineers will always get a repair cursor over the building.
+  Buildings that are created via `Rubble.Destroyed` will have the following
+  properties forced upon them:
+
+  ::
+
+    Capturable=no
+    TogglePower=no
+    Unsellable=yes
+    CanBeOccupied=no
+
+  .. warning:: Do not create loops using :tag:`Rubble.Destroyed`. This can
+    freeze the game. A building cannot be its own rubble, neither directly nor
+    indirectly over one or more other :type:`BuildingTypes`.
+
+:tagdef:`[BuildingType]Rubble.Destroyed.Remove=boolean`
+  Whether the building should just disappear instead of being converted to
+  rubble. Overrides :tag:`Rubble.Destroyed`. Defaults to :value:`no`.
+
+:tagdef:`[BuildingType]Rubble.Destroyed.Owner=enum default|civilian|special|neutral`
+  The country the destroyed building will belong to. :value:`default` is the
+  current owner, :value:`civilian` is the first country from the side called
+  :value:`Civilian`, :value:`special` and :value:`neutral` are the countries
+  named :value:`Special` and :value:`Neutral` respectively. Defaults to
+  :value:`default`.
+
+:tagdef:`[BuildingType]Rubble.Destroyed.Strength=integer`
+  The health the rubble building is created with. Positive values up to
+  :tag:`Strength` are used directly. Negative values down to :value:`-99` are a
+  percentage of full health, :value:`-1` meaning 1% of health. All other values
+  mean full health. Defaults to :tag:`Strength`.
+
+:tagdef:`[BuildingType]Rubble.Destroyed.Anim=AnimationType`
+  An animation played when a building converted to rubble or removed. Defaults
+  to :value:`none`.
+
+There is a second set of tags to recover a building from rubble, which mirrors
+the first set:
+
+:tagdef:`[BuildingType]Rubble.Intact=BuildingType`
+  The new :type:`BuildingType` that this :type:`BuildingType` will transform
+  into when it is repaired. The repaired building will be created with 1%
+  :tag:`Strength`, unless set otherwise.
+
+:tagdef:`[BuildingType]Rubble.Intact.Remove=boolean`
+  Whether the building should just disappear instead of being recovered when an
+  Engineer enters. Overrides :tag:`Rubble.Intact`. Defaults to :value:`no`.
+
+:tagdef:`[BuildingType]Rubble.Intact.Owner=enum default|civilian|special|neutral`
+  The country the recovered building will belong to. :value:`default` is the
+  current owner, :value:`civilian` is the first country from the side called
+  :value:`Civilian`, :value:`special` and :value:`neutral` are the countries
+  named :value:`Special` and :value:`Neutral` respectively. Defaults to
+  :value:`default`.
+
+:tagdef:`[BuildingType]Rubble.Intact.Strength=integer`
+  The health the recovered building is created with. Positive values up to
+  :tag:`Strength` are used directly. Negative values down to :value:`-99` are a
+  percentage of full health, :value:`-1` meaning 1% of health. All other values
+  mean full health. Defaults to :tag:`-1`, 1% of :tag:`Strength`.
+
+:tagdef:`[BuildingType]Rubble.Intact.Anim=AnimationType`
+  An animation played when a building is recovered or removed. Defaults to
+  :value:`none`.
+
+.. versionadded:: 0.1
+.. versionchanged:: 0.8
 
 
 Traversing Trenches
