@@ -10,6 +10,10 @@ deliver conventional damage and rely on other means like ambient damage.
   :value:`no` if either :tag:`IsSonic=yes` or :tag:`UseFireParticles=yes`, to
   :value:`yes` otherwise.
 
+  .. note:: If :tag:`ApplyDamage=no`, the damage is reduced to 0, thus some
+    weapon effects like the warhead's animation will not play. This might change
+    in the future.
+
 .. index:: Weapons; Ordinary damage for IsSonic and UseFireParticles weapons
 
 .. versionadded:: 0.8
