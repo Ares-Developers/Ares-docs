@@ -1,0 +1,12 @@
+.. index:: Temporal weapons; Repair animation on attacked buildings
+
+======================================
+Repair Wrench Playing When Warping Out
+======================================
+
+The wrench animation even played when a building being repaired was targeted by
+a temporal weapon, even though no repairs would take place during this time and
+the health remains the same while being warped out. Now the repair wrench will
+not be shown in this situation.
+
+.. versionadded:: 0.8
