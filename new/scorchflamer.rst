@@ -18,7 +18,8 @@ crash when a new animation of these types is about to be created.
 
   .. note:: Do not set :tag:`Scorch=yes` on :tag:`[AudioVisual]SmallFire`,
     because this would create a loop: if the animation expires, a new animation
-    of the same type is created and attached to the same object.
+    of the same type is created and attached to the same object. It also causes
+    trees on fire to never burn down.
 
 :tagdef:`[Animation]Flamer=boolean`
   Whether new :tag:`[AudioVisual]SmallFire` and :tag:`[AudioVisual]LargeFire`
