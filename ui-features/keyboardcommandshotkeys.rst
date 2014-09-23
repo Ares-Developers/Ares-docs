@@ -101,6 +101,15 @@ again hides the FPS Counter.
 .. versionadded:: 0.3
 
 
+Toggle Power
+````````````
+
+The feature known from :game:`Tiberian Sun` is now accessible from a keyboard
+command. See :doc:`Toggle Power </new/togglepower>`.
+
+.. versionadded:: 0.8
+
+
 .. _`disable-commands`:
 
 Disabling Keyboard Commands
