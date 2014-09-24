@@ -8,7 +8,7 @@ case the killing player would get ownership of the new :type:`InfantryType`).
 :game:`Ares` lets you choose which player will gain ownership, from one of
 several options.
 
-:tagdef:`[Animation]MakeInfantryOwner=enumeration invoker|killer|victim|neutral|random`
+:tagdef:`[Animation]MakeInfantryOwner=enumeration invoker|killer|victim|civilian|special|neutral|random`
   Specifies which house will own the resulting :type:`InfantryType` that gets
   created after this animation has played. The animation's re-mappable colors
   will be shown in that house's color, if not noted otherwise. Defaults to
@@ -45,7 +45,8 @@ corresponds to a different player depending on the animation.
 
 
 :value:`random` will pick a random player from all players in the game,
-including neutral.
+including the houses available as :value:`neutral`, :value:`special` and
+:value:`civilian`.
 
 .. note:: Like :tag:`InfDeath=9`, mutation animations will be rendered in the
   unit palette with remap colors instead of :file:`anim.pal`, if not noted
