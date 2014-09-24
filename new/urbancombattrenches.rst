@@ -93,6 +93,8 @@ to its original owner. Whilst a building is held by a player that is not the
 .. versionadded:: 0.1
 
 
+.. _`trenches-rubble`:
+
 Advanced Rubble
 ```````````````
 

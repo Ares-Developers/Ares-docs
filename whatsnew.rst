@@ -2,9 +2,37 @@
 What's New
 ==========
 
-This section contains non-conclusive lists of features and bugfixes that were
+This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of :game:`Ares`. Internal changes, optimizations
-and updates are mentioned here only if they are notable. 
+and updates are mentioned here only if they are notable.
+
+.. rubric:: Ares 0.8
+
++ **Toggle Power** :doc:`keyboard command, customizable cursors and optional
+  support for AI players </new/togglepower>`
+
++ **EM Pulse** :doc:`Super Weapon </new/superweapons/types/empulse>`, with lots
+  of enhancements
+
++ **Super Weapon ranges** :doc:`can be restricted around the firing structures
+  and/or around designator units </new/superweapons/range>`
+
++ **Tech Academies** :doc:`are structures that allow training units with initial
+  veterancy </new/academy>`
+
++ **Forest Fires** :doc:`restored, optional per tree type </new/forestfires>`
+
++ **Advanced Rubble** :ref:`expanded with customizable owner and inital health
+  <trenches-rubble>`
+
++ **Animation tags** :doc:`Scorch and Flamer have been restored </new/scorchflamer>`
+
++ **Repair wrenches** can be :doc:`hidden from enemies <new/enemywrench>`, and
+  :doc:`no longer reveal cloaked buildings <bugfixes/type2/cloakwrench>`
+
++ **Unit Delivery** :doc:`placement changed, units guard or hunt, and support
+  for giving units to neutral countries </new/superweapons/types/unitdelivery>`
+
 
 .. rubric:: Ares 0.7
 
