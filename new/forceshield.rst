@@ -9,6 +9,10 @@ Like the Iron Curtain the Force Shield duration can be customized for each
   Valid values are :value:`0%` (Force Shield disallowed) or higher. Defaults to
   :value:`100%`.
 
+  .. note:: Buildings with a :tag:`ForceShield.Modifier` value of :value:`0.0`
+    or less are not eligible to fire a Force Shield super weapon on.
+
 .. index:: Force Shield; Modify the duration per building.
 
 .. versionadded:: 0.6
+.. versionchanged:: 0.8
