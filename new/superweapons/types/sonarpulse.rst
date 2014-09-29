@@ -2,7 +2,7 @@
 `````````````````````````````
 
 The Sonar Pulse is a variation of the original Sonar Pulse known from
-Red Alert it will cause any cloaked units in range or on the entire
+:game:`Red Alert` -- it will cause any cloaked units in range or on the entire
 map to temporarily decloak, even if it is under a Cloak Generator or not.
 
 Default values for general tags:

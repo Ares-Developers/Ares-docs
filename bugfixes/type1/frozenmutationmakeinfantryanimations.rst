@@ -12,7 +12,7 @@ the final frame until the obstacle is cleared.
 The original game would allocate memory for the new infantry on every frame but
 would fail to de-allocate that memory when the infantry could not be placed.
 The more time that passes with the animation in this state, the worse the memory
-leak gets resulting in the game eventually grinding to a halt. :game:`Ares`
+leak gets -- resulting in the game eventually grinding to a halt. :game:`Ares`
 fixes this by simply deleting the animation if the new infantry unit cannot be
 spawned. 
 

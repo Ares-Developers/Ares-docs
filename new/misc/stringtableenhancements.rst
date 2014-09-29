@@ -1,7 +1,7 @@
 String Table Enhancements
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In addition to :file:`ra2md.csf`, the game will now load
+In addition to :file:`ra2md.csf`, the game will now load --
 :file:`stringtable00.csf` through :file:`stringtable99.csf`. These string tables
 will add to or replace strings that were included in previously loaded string
 tables.

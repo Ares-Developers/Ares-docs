@@ -28,7 +28,7 @@ name. Replace this with the actual name. The default values depend on the base.
   positioned on the minimap.
 
 :tagdef:`[Section]BaseTag.HotSpot=HotSpotX,HotSpotY`
-  Specifies the coordinates on the cursor that are considered to be the 'tip'
+  Specifies the coordinates on the cursor that are considered to be the 'tip' --
   that is, the point from which the click event will handled. HotSpotX should
   be one of :value:`Left`, :value:`Center` or :value:`Right`. HotSpotY should
   be one of :value:`Top`, :value:`Middle` or :value:`Bottom`. For example,

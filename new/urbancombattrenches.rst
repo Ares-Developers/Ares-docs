@@ -18,7 +18,7 @@ Pass Through
 ````````````
 
 Urban Combat buildings can now specify what percentage of attacks against them
-will 'pass through' to the occupants inside damaging them rather than the
+will 'pass through' to the occupants inside -- damaging them rather than the
 building itself.
 
 :tagdef:`[BuildingType]UC.PassThrough=float - chance`

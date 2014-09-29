@@ -16,10 +16,10 @@ using new :game:`Ares` warhead settings.
   If this value is negative the :tag:`IronCurtain.Duration` is absolute and will
   not stack up if a target is fired upon multiple times. If this value is
   :value:`0` the effect duration can stack up indefinitely. Otherwise the Iron
-  Curtain effect can not stack up to durations longer than this value except for
-  when a unit's duration already is higher and :tag:`IronCurtain.Duration` isn't
-  negative (the duration will not be decreased, then). :tag:`IronCurtain.Cap`
-  defaults to :value:`-1` (non-stacking, absolute duration).
+  Curtain effect can not stack up to durations longer than this value -- except
+  for when a unit's duration already is higher and :tag:`IronCurtain.Duration`
+  isn't negative (the duration will not be decreased, then).
+  :tag:`IronCurtain.Cap` defaults to :value:`-1` (non-stacking, absolute duration).
 
 
 To change the effect the Iron Curtain has on specific units:

@@ -1,14 +1,14 @@
 Random Map Generator
 ~~~~~~~~~~~~~~~~~~~~
 
-:game:`Ares` lets you create random maps using some new map styles - Archipelago
-terrain and the Desert tileset.
+:game:`Ares` lets you create random maps using some new map styles --
+Archipelago terrain and the Desert tileset.
 
 The RMG will now place bridges at random on maps that include rivers.
 
 Random Map Generator enhancements:
 
-A new checkbox `Place Urban Areas` allows the user to add an assortment of
+A new checkbox -- `Place Urban Areas` -- allows the user to add an assortment of
 streets and urban combat buildings at random spots throughout the generated map.
 The objects placed by this feature can be modified by adding the heading
 :tag:`[URBAN]` in the :file:`rgdmd.ini` file, and adding the following lists
@@ -23,7 +23,7 @@ after :tag:`Structure=`, :tag:`Vehicles=` and :tag:`Infantry=` respectively:
   Defaults to :value:`CIV1,CIV2,CIV3,CIVA,CIVB,CIVC`.
 
 .. note:: Urban areas generated in the minimap preview do not always correspond
-  to content generated ingame, especially in Desert maps this is still being
+  to content generated ingame, especially in Desert maps -- this is still being
   investigated. In addition, there are reports of this feature not working at
   all with certain settings. (Known issue: `#794
   <http://bugs.renegadeprojects.com/view.php?id=794>`_)

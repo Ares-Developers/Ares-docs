@@ -7,7 +7,7 @@ Bug Fixes
    which cannot be fixed simply by modifying INI files or graphics (like the UMP
    does).
 #. Fixes to logic that goes unused in the unmodded game, or at least not used to
-   its full capabilities i.e. game logic that often does not work as expected
+   its full capabilities -- i.e. game logic that often does not work as expected
    when used in mods.
 #. Corrections and enhancements to code efficiency that reduce loading times and
    in-game lag without affecting gameplay mechanics. Also hardware/operating

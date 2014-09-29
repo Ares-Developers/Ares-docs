@@ -17,9 +17,9 @@ and :tag:`SizeLimit=1` (or higher).
 
 For :type:`BuildingTypes` you will also need to set :tag:`InfantryAbsorb=yes`.
 
-If the needed passenger is not inside then the :tag:`TechnoType` will power down
-in a similar fashion to the Robot Tank when the Robot Control Centre is offline
-the unit will not be able to move or fire.
+If the needed passenger is not inside then the :type:`TechnoType` will power
+down in a similar fashion to the Robot Tank when the Robot Control Centre is
+offline -- the unit will not be able to move or fire.
 
 :type:`BuildingTypes` without their Operator will not be able to fire their
 weapon, if they have one.
@@ -30,8 +30,7 @@ being a factory, undeploying, super weapons, radar, etc).
 Mirage Tanks without their Operator will still maintain their disguise.
 
 
-+ Operator logic has no effect on Service Depots the Operator cannot
-  enter.
++ Operator logic has no effect on Service Depots -- the Operator cannot enter.
 + Operator logic has no effect on deployed Siege Choppers. An Operator is never
   needed.
 + Operator logic will render Refineries unusable because the Operator will not

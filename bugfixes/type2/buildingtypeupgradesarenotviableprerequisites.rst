@@ -4,10 +4,10 @@
 :type:`BuildingType` Upgrades Are Not Viable Prerequisites
 ==========================================================
 
-Before :game:`Ares`, upgrades did not appear to work as prerequisites if you had
-the upgrade, you still didn't satisfy the prerequisite. In fact, only the most
-recently constructed :type:`BuildingType` would be checked to see if it had the
-upgrade. With :game:`Ares`, all upgrades on all :type:`BuildingTypes` are
+Before :game:`Ares`, upgrades did not appear to work as prerequisites -- if you
+had the upgrade, you still didn't satisfy the prerequisite. In fact, only the
+most recently constructed :type:`BuildingType` would be checked to see if it had
+the upgrade. With :game:`Ares`, all upgrades on all :type:`BuildingTypes` are
 eligible to satisfy any prerequisite logic that a normal :type:`BuildingType`
 can.
 

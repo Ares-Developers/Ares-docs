@@ -8,7 +8,7 @@ Permanent Mind-Control
 .. versionadded:: 0.1
 
 Permanent mind-control is handled in the same way as the Psychic Dominator
-effect previously-mind-controlled units (even permanently) are
+effect -- previously-mind-controlled units (even permanently) are
 re-mind-controlled, and the mind-controller does not have a limit on the number
 of units that it can permanently mind-control.
 

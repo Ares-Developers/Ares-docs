@@ -5,7 +5,7 @@ Default values for general tags:
 
 :tagdef:`[SuperWeapon]SW.Range=float,integer`
   Area around the target location the Lightning Storm strikes. Note that a
-  single value denotes the diameter of a circle - this is not the radius.
+  single value denotes the diameter of a circle -- this is not the radius.
   Defaults to :tag:`[General]LightningCellSpread`.
 :tagdef:`[SuperWeapon]SW.Damage=integer`
   The damage each lightning bolt delivers. Defaults to

@@ -2,7 +2,7 @@ Super Weapons
 ~~~~~~~~~~~~~
 
 In :game:`Yuri's Revenge`, there is very little you can do to change or add to
-the existing super weapons - most super weapon-related features are hard-coded
+the existing super weapons -- most super weapon-related features are hard-coded
 to only work as designed for the original super weapons. Ares, however, includes
 several new ways to customize existing super weapons as well as several wholly
 new super weapons.

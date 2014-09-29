@@ -16,7 +16,7 @@ Liberty. :game:`Ares` removes this limit and lets you use custom palettes on all
 See :doc:`/new/customanimationandprojectilepalettes`.
 
 .. note:: It is not known why this apparently arbitrary limit on custom palettes
-  was in place it may have been there to mask a bug that we don't yet know
+  was in place -- it may have been there to mask a bug that we don't yet know
   about.
 
 .. note:: When using custom palettes, the modder must make a new palette for

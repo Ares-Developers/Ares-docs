@@ -6,7 +6,7 @@ Ivan Bombs
 As with many other features of :game:`Yuri's Revenge`, the settings that control
 Crazy Ivan Bombs are global so you can't have multiple variations of them with
 their own controls. With :game:`Ares` it is now possible to create new Ivan
-Bomb-esque weapons new types of sticky bomb with whatever settings you like.
+Bomb-esque weapons -- new types of sticky bomb with whatever settings you like.
 
 :game:`Ares` now also supports shrapnel weapons, as long as they have a
 :tag:`CellSpread` of :value:`0.5` or more.
