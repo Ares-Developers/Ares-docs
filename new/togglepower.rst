@@ -40,6 +40,8 @@ The two mouse cursors this feature uses can be customized with the following
 :tagdef:`[General]TogglePowerNoCursor=cursor definition`
   Shown if the building's power cannot be toggled.
 
+.. note:: The mini cursor on the radar map is not supported.
+
 .. index:: Toggle Power; Customizable cursors
 
 
@@ -53,7 +55,7 @@ this overlay, and other players will just see a building without power.
 If a powered down building is repaired at the same time, both overlay animations
 are moved to be shown simultaneously.
 
-:file:`poweroff.shp` is drawn using the :file:`mouse.pal` palette.
+:file:`poweroff.shp` is drawn using the :file:`mousepal.pal` palette.
 
 .. index:: Toggle Power; Overlay image for powered down buildings
 
