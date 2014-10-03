@@ -26,8 +26,8 @@ Unit Delivery specific tags:
   The country the delivered units will belong to. :value:`invoker` is the player
   who fired the super weapon, :value:`civilian` is the first country of the side
   named :value:`Civilian`, :value:`special` is the country named
-  :value:`Special` and :value:`neutral` is the country named 'Neutral'. Defaults
-  to :value:`invoker`.
+  :value:`Special` and :value:`neutral` is the country named :value:`Neutral`.
+  Defaults to :value:`invoker`.
 
 
 The delivery of the units happens all at once, after firing the super weapon and
