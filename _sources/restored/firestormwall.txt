@@ -4,7 +4,7 @@ Firestorm Wall
 
 The Firestorm Wall and super weapon can now be implemented in Yuri's
 Revenge.
-See the New Super Weapon Types: Firestorm section <firestorm> for
+See the New Super Weapon Types: Firestorm section for
 details.
 
  0.1

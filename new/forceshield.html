@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Force Shield &mdash; Ares 0.7 documentation</title>
+    <title>Force Shield &mdash; Ares 0.8 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.7',
+        VERSION:     '0.8',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,9 +26,9 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.7 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.8 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
-    <link rel="next" title="Gates" href="gates.html" />
+    <link rel="next" title="Forest Fires" href="forestfires.html" />
     <link rel="prev" title="Factories and Cloning" href="factoriesandcloning.html" /> 
   </head>
   <body>
@@ -39,12 +39,12 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="gates.html" title="Gates"
+          <a href="forestfires.html" title="Forest Fires"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="factoriesandcloning.html" title="Factories and Cloning"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.7 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.8 documentation</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -54,8 +54,8 @@
   <p class="topless"><a href="factoriesandcloning.html"
                         title="previous chapter">Factories and Cloning</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="gates.html"
-                        title="next chapter">Gates</a></p>
+  <p class="topless"><a href="forestfires.html"
+                        title="next chapter">Forest Fires</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
@@ -83,12 +83,20 @@
 <span class="type docutils literal">BuildingType</span>.</p>
 <dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►ForceShield.Modifier=</span></tt><span class="type definition"> (float - multiplier)</span></span></dt>
-<dd>The number of seconds of Force Shield duration is multiplied by this value.
+<dd><p class="first">The number of seconds of Force Shield duration is multiplied by this value.
 Valid values are <cite>0%</cite> (Force Shield disallowed) or higher. Defaults to
-<cite>100%</cite>.</dd>
+<cite>100%</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Buildings with a <span><tt class="docutils literal"><span class="pre">ForceShield.Modifier</span></tt></span> value of <cite>0.0</cite>
+or less are not eligible to fire a Force Shield super weapon on.</p>
+</div>
+</dd>
 </dl>
 <p class="versionadded" id="index-0">
 <span class="versionmodified">New in version 0.6.</span></p>
+<p class="versionchanged">
+<span class="versionmodified">Changed in version 0.8.</span></p>
 </div>
 
 
@@ -104,12 +112,12 @@ Valid values are <cite>0%</cite> (Force Shield disallowed) or higher. Defaults t
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="gates.html" title="Gates"
+          <a href="forestfires.html" title="Forest Fires"
              >next</a> |</li>
         <li class="right" >
           <a href="factoriesandcloning.html" title="Factories and Cloning"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.7 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.8 documentation</a> &raquo;</li>
           <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

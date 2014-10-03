@@ -19,7 +19,7 @@ area.
 
 The actual split happens when an Airburst=yes projectile is above its
 target, a Ranged=yes projectile exceeds its weapon's
-... or the projectile
+ProjectileRange or the projectile
 detonates otherwise.
 
 Refer to Splits on ModEnc  for a
@@ -30,6 +30,10 @@ more detailled description of the logic.
   10. Its Speed is used instead of the hardcoded 19,
   and its Bright setting is now also respected instead of just being
   disabled.
+
+ Even though speed is not hardcoded any more, you cannot use
+  Speed values lower than 19 on the AirburstWeapon or
+  the logic will start to fail and behave erratically.
 
 [Projectile]Splits=boolean
   Whether the projectile will split into a number of other projectiles defined

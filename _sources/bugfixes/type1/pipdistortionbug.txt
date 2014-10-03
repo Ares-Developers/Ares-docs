@@ -9,6 +9,6 @@ OccupyPip were corrupted whenever a section was present in an INI file
 but these both tags were not defined in it. This made the game use the wrong pip
 image for occupied buildings or transporters. Ares fixes this.
 
-See also ....
+See also Pips.
 
  0.4

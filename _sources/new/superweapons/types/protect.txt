@@ -53,8 +53,7 @@ Iron Curtain and Force Shield specific tags:
   0 otherwise.
 
 The duration of the protection can be customized for each TechnoType.
-See the ... section for
-Type=ForceShield, otherwise see the Iron Curtain Effect on Warheads
-<wh-ironcurtain> section.
+See the Force Shield Modifier section for
+Type=ForceShield, otherwise see the Iron Curtain Effect on Warheads section.
 
  0.2

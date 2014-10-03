@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Urban Combat - Trenches &mdash; Ares 0.7 documentation</title>
+    <title>Urban Combat - Trenches &mdash; Ares 0.8 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.7',
+        VERSION:     '0.8',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.7 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.8 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Sides &amp; Countries" href="sidescountries/index.html" />
     <link rel="prev" title="Unit Lost EVA Report" href="unitlost.html" /> 
@@ -44,7 +44,7 @@
         <li class="right" >
           <a href="unitlost.html" title="Unit Lost EVA Report"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.7 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.8 documentation</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -105,7 +105,7 @@ with other trench-related flags.</p>
 <div class="section" id="pass-through">
 <span id="index-0"></span><h2>Pass Through<a class="headerlink" href="#pass-through" title="Permalink to this headline">¶</a></h2>
 <p>Urban Combat buildings can now specify what percentage of attacks against them
-will &#8216;pass through&#8217; to the occupants inside damaging them rather than the
+will &#8216;pass through&#8217; to the occupants inside &#8211; damaging them rather than the
 building itself.</p>
 <dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►UC.PassThrough=</span></tt><span class="type definition"> (float - chance)</span></span></dt>
@@ -144,9 +144,11 @@ thinking about trenches. This has an effect on all occupiable buildings with
 </div>
 <img alt="Illustration of different SubjectToTrenches values" class="align-center" src="../_images/subjecttotrenches.png" />
 <img alt="Illustration of different UC.PassThrough values" class="align-center" src="../_images/subjecttotrenches_passthrough.png" />
+<p class="versionadded" id="index-1">
+<span class="versionmodified">New in version 0.1.</span></p>
 </div>
 <div class="section" id="squatters-rights">
-<span id="index-1"></span><h2>Squatters&#8217; Rights<a class="headerlink" href="#squatters-rights" title="Permalink to this headline">¶</a></h2>
+<h2>Squatters&#8217; Rights<a class="headerlink" href="#squatters-rights" title="Permalink to this headline">¶</a></h2>
 <p>You can now specify that Battle Bunkers, for example, can be captured by enemy
 infantry just by having them walk in and garrison the building as if it were
 their own.</p>
@@ -162,39 +164,18 @@ can only be further garrisoned by the player whose troops are inside. If the
 occupants leave the building then ownership of the building is transferred back
 to its original owner. Whilst a building is held by a player that is not the
 &#8220;true&#8221; owner, that building cannot be sold.</p>
+<p class="versionadded" id="index-2">
+<span class="versionmodified">New in version 0.1.</span></p>
 </div>
 <div class="section" id="advanced-rubble">
-<span id="index-2"></span><h2>Advanced Rubble<a class="headerlink" href="#advanced-rubble" title="Permalink to this headline">¶</a></h2>
+<span id="trenches-rubble"></span><h2>Advanced Rubble<a class="headerlink" href="#advanced-rubble" title="Permalink to this headline">¶</a></h2>
 <p>If you really hit a trench hard enough to destroy it you&#8217;re only doing one of
 two things; either you&#8217;re turning a small hole into a larger hole, or you&#8217;re
 making it collapse. Either way, you don&#8217;t really remove the trench from the
 battlefield - just render it unusable. It will be easier to re-dig a trench
 there than on untouched soil, and, on the other hand, you can&#8217;t just build
 there like nothing ever happened.</p>
-<p id="index-3">Advanced Rubble is implemented in a similar way to other upgrade systems in
-<span class="game docutils literal">Ares</span>:</p>
-<dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►Rubble.Destroyed=</span></tt><span class="type definition"> (BuildingType)</span></span></dt>
-<dd><p class="first">The new <span class="type docutils literal">BuildingType</span> that this <span class="type docutils literal">BuildingType</span> will transform
-into upon destruction. Buildings that are created via <cite>Rubble.Destroyed</cite> will
-have the following properties forced upon them:</p>
-<div class="last highlight-ini"><div class="highlight"><pre><span class="na">Capturable</span><span class="o">=</span><span class="s">no</span>
-<span class="na">TogglePower</span><span class="o">=</span><span class="s">no</span>
-<span class="na">Unsellable</span><span class="o">=</span><span class="s">yes</span>
-<span class="na">CanBeOccupied</span><span class="o">=</span><span class="s">no</span>
-</pre></div>
-</div>
-</dd>
-</dl>
-<p>The building will be created with maximum <span><tt class="docutils literal"><span class="pre">Strength</span></tt></span>. Engineers will
-always get a repair cursor over the building.</p>
-<dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►Rubble.Intact=</span></tt><span class="type definition"> (BuildingType)</span></span></dt>
-<dd>The new <span class="type docutils literal">BuildingType</span> that this <span class="type docutils literal">BuildingType</span> will transform
-into when it is repaired. The repaired building will be created with 1%
-<span><tt class="docutils literal"><span class="pre">Strength</span></tt></span>.</dd>
-</dl>
-<p>Note that Engineers will not be &#8216;used up&#8217; by this repair process - they keep
+<p id="index-3">Note that Engineers will not be &#8216;used up&#8217; by this repair process - they keep
 existing outside of the trench. This is very much intended for trenches: an
 Engineer would not be repairing/rebuilding an entire building, just re-digging a
 trench so his work would not be too exhausting.</p>
@@ -205,6 +186,75 @@ and <span><tt class="docutils literal"><span class="pre">Rubble.Intact=</span></
 Custom foundations never match built-in foundations. A fatal error will be
 raised if you do not comply with this requirement and the game will exit.</p>
 </div>
+<p>Advanced Rubble is implemented in a similar way to other upgrade systems in
+<span class="game docutils literal">Ares</span>. The first set is for converting a building to rubble:</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►Rubble.Destroyed=</span></tt><span class="type definition"> (BuildingType)</span></span></dt>
+<dd><p class="first">The new <span class="type docutils literal">BuildingType</span> that this <span class="type docutils literal">BuildingType</span> will transform
+into upon destruction. By default the building will be created with maximum
+<span><tt class="docutils literal"><span class="pre">Strength</span></tt></span>. Engineers will always get a repair cursor over the building.
+Buildings that are created via <cite>Rubble.Destroyed</cite> will have the following
+properties forced upon them:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="na">Capturable</span><span class="o">=</span><span class="s">no</span>
+<span class="na">TogglePower</span><span class="o">=</span><span class="s">no</span>
+<span class="na">Unsellable</span><span class="o">=</span><span class="s">yes</span>
+<span class="na">CanBeOccupied</span><span class="o">=</span><span class="s">no</span>
+</pre></div>
+</div>
+<div class="last admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Do not create loops using <span><tt class="docutils literal"><span class="pre">Rubble.Destroyed</span></tt></span>. This can
+freeze the game. A building cannot be its own rubble, neither directly nor
+indirectly over one or more other <span class="type docutils literal">BuildingTypes</span>.</p>
+</div>
+</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►Rubble.Destroyed.Remove=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether the building should just disappear instead of being converted to
+rubble. Overrides <span><tt class="docutils literal"><span class="pre">Rubble.Destroyed</span></tt></span>. Defaults to <cite>no</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►Rubble.Destroyed.Owner=</span></tt><span class="type definition"> (enum default|civilian|special|neutral)</span></span></dt>
+<dd>The country the destroyed building will belong to. <cite>default</cite> is the
+current owner, <cite>civilian</cite> is the first country from the side called
+<cite>Civilian</cite>, <cite>special</cite> and <cite>neutral</cite> are the countries
+named <cite>Special</cite> and <cite>Neutral</cite> respectively. Defaults to
+<cite>default</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►Rubble.Destroyed.Strength=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>The health the rubble building is created with. Positive values up to
+<span><tt class="docutils literal"><span class="pre">Strength</span></tt></span> are used directly. Negative values down to <cite>-99</cite> are a
+percentage of full health, <cite>-1</cite> meaning 1% of health. All other values
+mean full health. Defaults to <span><tt class="docutils literal"><span class="pre">Strength</span></tt></span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►Rubble.Destroyed.Anim=</span></tt><span class="type definition"> (AnimationType)</span></span></dt>
+<dd>An animation played when a building converted to rubble or removed. Defaults
+to <cite>none</cite>.</dd>
+</dl>
+<p>There is a second set of tags to recover a building from rubble, which mirrors
+the first set:</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►Rubble.Intact=</span></tt><span class="type definition"> (BuildingType)</span></span></dt>
+<dd>The new <span class="type docutils literal">BuildingType</span> that this <span class="type docutils literal">BuildingType</span> will transform
+into when it is repaired. The repaired building will be created with 1%
+<span><tt class="docutils literal"><span class="pre">Strength</span></tt></span>, unless set otherwise.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►Rubble.Intact.Remove=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether the building should just disappear instead of being recovered when an
+Engineer enters. Overrides <span><tt class="docutils literal"><span class="pre">Rubble.Intact</span></tt></span>. Defaults to <cite>no</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►Rubble.Intact.Owner=</span></tt><span class="type definition"> (enum default|civilian|special|neutral)</span></span></dt>
+<dd>The country the recovered building will belong to. <cite>default</cite> is the
+current owner, <cite>civilian</cite> is the first country from the side called
+<cite>Civilian</cite>, <cite>special</cite> and <cite>neutral</cite> are the countries
+named <cite>Special</cite> and <cite>Neutral</cite> respectively. Defaults to
+<cite>default</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►Rubble.Intact.Strength=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dd>The health the recovered building is created with. Positive values up to
+<span><tt class="docutils literal"><span class="pre">Strength</span></tt></span> are used directly. Negative values down to <cite>-99</cite> are a
+percentage of full health, <cite>-1</cite> meaning 1% of health. All other values
+mean full health. Defaults to <span><tt class="docutils literal"><span class="pre">-1</span></tt></span>, 1% of <span><tt class="docutils literal"><span class="pre">Strength</span></tt></span>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►Rubble.Intact.Anim=</span></tt><span class="type definition"> (AnimationType)</span></span></dt>
+<dd>An animation played when a building is recovered or removed. Defaults to
+<cite>none</cite>.</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.1.</span></p>
+<p class="versionchanged">
+<span class="versionmodified">Changed in version 0.8.</span></p>
 </div>
 <div class="section" id="traversing-trenches">
 <h2>Traversing Trenches<a class="headerlink" href="#traversing-trenches" title="Permalink to this headline">¶</a></h2>
@@ -262,7 +312,7 @@ you do with, say, walls or Laser Fences.</p>
         <li class="right" >
           <a href="unitlost.html" title="Unit Lost EVA Report"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.7 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.8 documentation</a> &raquo;</li>
           <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

@@ -26,7 +26,7 @@ InfDeathAnim
   animation ID rather than an integer. Further more, the animation will be
   treated as the correct type (e.g. mutation or non-mutation) automatically,
   which means that you can now have any number of mutations that produce
-  player-owned InfantryTypes. See ... for how to control which player will gain control of
+  player-owned InfantryTypes. See MakeInfantryOwner for how to control which player will gain control of
   'mutated' infantry.
 
  Warheads; New InfDeaths (InfDeathAnim= any animation, auto-detect mutation).

@@ -9,6 +9,10 @@ BuildingType.
   Valid values are 0% (Force Shield disallowed) or higher. Defaults to
   100%.
 
+   Buildings with a ForceShield.Modifier value of 0.0
+    or less are not eligible to fire a Force Shield super weapon on.
+
  Force Shield; Modify the duration per building.
 
  0.6
+ 0.8

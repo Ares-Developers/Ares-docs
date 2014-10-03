@@ -5,7 +5,7 @@ This feature has been restored from Tiberian Sun. It is again possible
 to create a projectile that can run out of fuel and detonate in mid-air, if it
 has not reached its destination by then.
 
-The default range is about 390 cells. See ... on how to customize it.
+The default range is about 390 cells. See ProjectileRange on how to customize it.
 
 [Projectile]Ranged=boolean
   Whether this projectile can run out of fuel. Defaults to no.

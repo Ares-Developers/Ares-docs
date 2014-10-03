@@ -1,0 +1,12 @@
+ Cloak; Repair animation will not show
+
+
+Repair Wrench Revealing Cloaked Structures
+
+
+The wrench animation appearing when a building is being repaired could give away
+building positions to enemies as it was visible for everyone even if the
+structure was cloaked. This has been fixed and buildings will not show the
+repair animation while cloaked. Observers will still see the wrench, though.
+
+ 0.8

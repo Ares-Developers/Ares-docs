@@ -38,7 +38,7 @@ Tiberian Sun.
 
    If yes, units leave behind a random amount of tiberium when
     destroyed or killed by default. This can be customized. See Tiberium
-    Remains <tiberium-remains>.
+    Remains.
 
 
 How much how often

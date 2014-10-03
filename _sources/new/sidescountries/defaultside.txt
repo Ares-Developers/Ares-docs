@@ -83,7 +83,7 @@ Hunter Seeker Defaults
   The unit used as default Hunter Seeker for the Hunter Seeker super weapon.
   Replaces [General]►GDIHunterSeeker and [General]►NodHunterSeeker
   from Tiberian Sun. Set this to a VehicleType with Fly
-  locomotor as specified under ....
+  locomotor as specified under Hunter Seeker.
   Defaults to none.
 
  0.7

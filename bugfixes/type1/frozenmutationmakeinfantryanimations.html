@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Frozen Mutation (MakeInfantry) Animations &mdash; Ares 0.7 documentation</title>
+    <title>Frozen Mutation (MakeInfantry) Animations &mdash; Ares 0.8 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.7',
+        VERSION:     '0.8',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,10 +26,10 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.7 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.8 documentation" href="../../index.html" />
     <link rel="up" title="Type 1 Fixes (Original Bugs)" href="index.html" />
     <link rel="next" title="Disappearing Ivan Bombs" href="ivanbombsdisappearing.html" />
-    <link rel="prev" title="Firing Voices and Veterancy" href="firingvoicesandveterancy.html" /> 
+    <link rel="prev" title="Force Shield and AI Exploit" href="forceshieldexploit.html" /> 
   </head>
   <body>
     <div class="related">
@@ -42,9 +42,9 @@
           <a href="ivanbombsdisappearing.html" title="Disappearing Ivan Bombs"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="firingvoicesandveterancy.html" title="Firing Voices and Veterancy"
+          <a href="forceshieldexploit.html" title="Force Shield and AI Exploit"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+        <li><a href="../../index.html">Ares 0.8 documentation</a> &raquo;</li>
           <li><a href="../index.html" >Bug Fixes</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">Type 1 Fixes (Original Bugs)</a> &raquo;</li> 
       </ul>
@@ -52,8 +52,8 @@
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="firingvoicesandveterancy.html"
-                        title="previous chapter">Firing Voices and Veterancy</a></p>
+  <p class="topless"><a href="forceshieldexploit.html"
+                        title="previous chapter">Force Shield and AI Exploit</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="ivanbombsdisappearing.html"
                         title="next chapter">Disappearing Ivan Bombs</a></p>
@@ -88,7 +88,7 @@ the final frame until the obstacle is cleared.</p>
 <p>The original game would allocate memory for the new infantry on every frame but
 would fail to de-allocate that memory when the infantry could not be placed.
 The more time that passes with the animation in this state, the worse the memory
-leak gets resulting in the game eventually grinding to a halt. <span class="game docutils literal">Ares</span>
+leak gets &#8211; resulting in the game eventually grinding to a halt. <span class="game docutils literal">Ares</span>
 fixes this by simply deleting the animation if the new infantry unit cannot be
 spawned.</p>
 <p class="versionadded">
@@ -111,9 +111,9 @@ spawned.</p>
           <a href="ivanbombsdisappearing.html" title="Disappearing Ivan Bombs"
              >next</a> |</li>
         <li class="right" >
-          <a href="firingvoicesandveterancy.html" title="Firing Voices and Veterancy"
+          <a href="forceshieldexploit.html" title="Force Shield and AI Exploit"
              >previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+        <li><a href="../../index.html">Ares 0.8 documentation</a> &raquo;</li>
           <li><a href="../index.html" >Bug Fixes</a> &raquo;</li>
           <li><a href="index.html" >Type 1 Fixes (Original Bugs)</a> &raquo;</li> 
       </ul>

@@ -68,7 +68,7 @@ EVA
   side Nod, to Yuri for side ThirdSide, to
   Allied otherwise.
 
-  See ... on how to define values that can be used
+  See EVA Types on how to define values that can be used
   here.
 
  Sides; User-defined EVA voices.

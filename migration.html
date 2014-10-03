@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Migration Guide &mdash; Ares 0.7 documentation</title>
+    <title>Migration Guide &mdash; Ares 0.8 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.7',
+        VERSION:     '0.8',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.7 documentation" href="index.html" />
+    <link rel="top" title="Ares 0.8 documentation" href="index.html" />
     <link rel="next" title="Bug Fixes" href="bugfixes/index.html" />
     <link rel="prev" title="What’s New" href="whatsnew.html" /> 
   </head>
@@ -43,7 +43,7 @@
         <li class="right" >
           <a href="whatsnew.html" title="What’s New"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">Ares 0.7 documentation</a> &raquo;</li> 
+        <li><a href="index.html">Ares 0.8 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar">
@@ -57,6 +57,7 @@
 <li><a class="reference internal" href="#from-ares-0-4-and-below">From Ares 0.4 and below</a></li>
 <li><a class="reference internal" href="#from-ares-0-5-and-below">From Ares 0.5 and below</a></li>
 <li><a class="reference internal" href="#from-ares-0-6-and-below">From Ares 0.6 and below</a></li>
+<li><a class="reference internal" href="#from-ares-0-7-and-below">From Ares 0.7 and below</a></li>
 </ul>
 </li>
 </ul>
@@ -127,7 +128,7 @@ graphics surfaces were allocated. The tags <span><tt class="docutils literal"><s
 <div><p>The ini file reader has been updated for <span class="game docutils literal">Ares</span> 0.3. Values that were
 invalid previously might now be valid, and previously valid notations might
 have become invalid. If values cannot be parsed correctly, <span class="game docutils literal">Ares</span>
-puts a message to the debug log.</p>
+puts a message into the debug log.</p>
 <p>For example, it was possible to supply only one or two numbers when three
 comma separated numbers were expected. In that case, the value became
 inconsistent. This is no longer allowed and will result in a message in the
@@ -282,6 +283,22 @@ tags. (Continued work from earlier <span class="game docutils literal">Ares</spa
 EMP and Operator logics does not make the unit sparkle any more. This is not
 optional at the moment.</div></blockquote>
 </div>
+<div class="section" id="from-ares-0-7-and-below">
+<h2>From Ares 0.7 and below<a class="headerlink" href="#from-ares-0-7-and-below" title="Permalink to this headline">¶</a></h2>
+<p>Changed tags:</p>
+<blockquote>
+<div>No changes required.</div></blockquote>
+<p>Other changes:</p>
+<blockquote>
+<div><p>The Unit Delivery super weapon uses a new placing method. Compared to previous
+versions, unit and buildings are placed more random now. Delivered objects are
+put on guard or hunt mission.</p>
+<p>Force Shield no longer considers buildings with <span><tt class="docutils literal"><span class="pre">ForceShield.Modifier</span></tt></span>
+less than or equal to <cite>0.0</cite> eligible targets.</p>
+<p>Super weapon targeting mode <cite>Self</cite> now centers on the firing building
+instead of using the origin.</p>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -302,7 +319,7 @@ optional at the moment.</div></blockquote>
         <li class="right" >
           <a href="whatsnew.html" title="What’s New"
              >previous</a> |</li>
-        <li><a href="index.html">Ares 0.7 documentation</a> &raquo;</li> 
+        <li><a href="index.html">Ares 0.8 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Action=TogglePower &mdash; Ares 0.7 documentation</title>
+    <title>Enemy Wrench &mdash; Ares 0.8 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.7',
+        VERSION:     '0.8',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,10 +26,10 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.7 documentation" href="../index.html" />
-    <link rel="up" title="Restored Tiberian Sun Logic" href="index.html" />
-    <link rel="next" title="Amphibious Image Changes" href="amphibiousimagechanges.html" />
-    <link rel="prev" title="Action=SellUnit" href="actionsellunit.html" /> 
+    <link rel="top" title="Ares 0.8 documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="EVA Types" href="evatypes.html" />
+    <link rel="prev" title="Drop Pods" href="droppod.html" /> 
   </head>
   <body>
     <div class="related">
@@ -39,23 +39,23 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="amphibiousimagechanges.html" title="Amphibious Image Changes"
+          <a href="evatypes.html" title="EVA Types"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="actionsellunit.html" title="Action=SellUnit"
+          <a href="droppod.html" title="Drop Pods"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.7 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Restored Tiberian Sun Logic</a> &raquo;</li> 
+        <li><a href="../index.html">Ares 0.8 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="actionsellunit.html"
-                        title="previous chapter"><span><span class="type">Action=SellUnit</span></span></a></p>
+  <p class="topless"><a href="droppod.html"
+                        title="previous chapter">Drop Pods</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="amphibiousimagechanges.html"
-                        title="next chapter">Amphibious Image Changes</a></p>
+  <p class="topless"><a href="evatypes.html"
+                        title="next chapter">EVA Types</a></p>
 <div id="searchbox" style="display: none">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
@@ -77,15 +77,25 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="action-togglepower">
-<span id="index-0"></span><h1><span><span class="type">Action=TogglePower</span></span><a class="headerlink" href="#action-togglepower" title="Permalink to this headline">¶</a></h1>
-<p>In <span class="game docutils literal">Tiberian Sun</span> there was a button on the sidebar that allowed players
-to turn their own buildings on and off and in low power situations. In
-<span class="game docutils literal">Yuri&#8217;s Revenge</span>, a super weapon with <span><tt class="docutils literal"><span class="pre">Action=TogglePower</span></tt></span> achieves
-the same function. However, if such a super weapon were fired into an empty cell
-then an Internal Error would occur. <span><tt class="docutils literal"><span class="pre">Ares</span></tt></span> prevents the error occurring.</p>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.1.</span></p>
+  <div class="section" id="enemy-wrench">
+<h1>Enemy Wrench<a class="headerlink" href="#enemy-wrench" title="Permalink to this headline">¶</a></h1>
+<p>There&#8217;s a tag called <span><tt class="docutils literal"><span class="pre">[General]►EnemyHealth</span></tt></span> to hide a unit&#8217;s health bar
+from enemy players. <span class="game docutils literal">Ares</span> adds a new tag that does the same for the
+wrench animation appearing when a player click repairs a structure.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[General]►EnemyWrench=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd><p class="first">Whether players not allied with the owning player can see the repair wrench
+animation playing if the building is click repaired. Observers can always see
+the wrench animation. Defaults to <cite>yes</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The wrench animation will not show if a building is being attacked
+by a temporal weapon or an enemy building is cloaked.</p>
+</div>
+</dd>
+</dl>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.8.</span></p>
 </div>
 
 
@@ -101,13 +111,13 @@ then an Internal Error would occur. <span><tt class="docutils literal"><span cla
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="amphibiousimagechanges.html" title="Amphibious Image Changes"
+          <a href="evatypes.html" title="EVA Types"
              >next</a> |</li>
         <li class="right" >
-          <a href="actionsellunit.html" title="Action=SellUnit"
+          <a href="droppod.html" title="Drop Pods"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.7 documentation</a> &raquo;</li>
-          <li><a href="index.html" >Restored Tiberian Sun Logic</a> &raquo;</li> 
+        <li><a href="../index.html">Ares 0.8 documentation</a> &raquo;</li>
+          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">

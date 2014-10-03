@@ -5,8 +5,8 @@ DestroyAnim\ s Don't Remap
 
 
 The remappable parts of animations played via the use of the DestroyAnim
-flag (when a building is destroyed) used to remain red in color they would not
-get remapped to the owning player's house color. Now they will.
+flag (when a building is destroyed) used to remain red in color -- they would
+not get remapped to the owning player's house color. Now they will.
 
  The game files already include suitable animations for some buildings,
   however some of these (the Allied Barracks and Prism Tower) use the red

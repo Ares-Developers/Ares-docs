@@ -3,7 +3,7 @@ Pips
 
 In Yuri's Revenge, the values that were accepted for Pip and
 OccupyPip were hardcoded to a list of known names. While fixing the
-..., Ares makes
+Pip Distortion Bug, Ares makes
 this more flexible.
 
 Any tag that defines a pip accepts an alternative notation now. If the tag value

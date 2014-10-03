@@ -25,8 +25,7 @@ you don't specify a filename for an EVA Type, no sound will play.
     Cabal=ccab053
     GDI=cgdi053
 
-Now you are ready to use this new EVA Type. See EVA.Tag for Sides
-<sides-evatag>.
+Now you are ready to use this new EVA Type. See EVA.Tag for Sides.
 
  EVA Types; Create new EVA announcers.
 

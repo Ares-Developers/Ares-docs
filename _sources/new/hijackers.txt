@@ -52,7 +52,7 @@ mind-controlled unit is destroyed, the link is transferred to the hijacker, if
 it isn't immune to psionics.
 
 Vehicle Thieves cannot hijack friendly units or vehicles neutralized by the Kill
-Driver warheads. See ....
+Driver warheads. See KillDriver and CanDrive.
 
  Infantry; Expanded VehicleThief logic.
 

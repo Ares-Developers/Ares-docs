@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>MakeInfantryOwner &mdash; Ares 0.7 documentation</title>
+    <title>MakeInfantryOwner &mdash; Ares 0.8 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.7',
+        VERSION:     '0.8',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.7 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.8 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="New Powered Unit Logic" href="newpoweredunitlogic.html" />
     <link rel="prev" title="Lightning Rods" href="lightningrods.html" /> 
@@ -44,7 +44,7 @@
         <li class="right" >
           <a href="lightningrods.html" title="Lightning Rods"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.7 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.8 documentation</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -86,7 +86,7 @@ case the killing player would get ownership of the new <span class="type docutil
 <span class="game docutils literal">Ares</span> lets you choose which player will gain ownership, from one of
 several options.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Animation]►MakeInfantryOwner=</span></tt><span class="type definition"> (enumeration invoker|killer|victim|neutral|random)</span></span></dt>
+<dt><span><tt class="definition docutils literal"><span class="pre">[Animation]►MakeInfantryOwner=</span></tt><span class="type definition"> (enumeration invoker|killer|victim|civilian|special|neutral|random)</span></span></dt>
 <dd><p class="first">Specifies which house will own the resulting <span class="type docutils literal">InfantryType</span> that gets
 created after this animation has played. The animation&#8217;s re-mappable colors
 will be shown in that house&#8217;s color, if not noted otherwise. Defaults to
@@ -124,7 +124,8 @@ of the dying unit).</li>
 represent the house that is considered to be the owner of the trigger.</li>
 </ul>
 <p><cite>random</cite> will pick a random player from all players in the game,
-including neutral.</p>
+including the houses available as <cite>neutral</cite>, <cite>special</cite> and
+<cite>civilian</cite>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Like <span><tt class="docutils literal"><span class="pre">InfDeath=9</span></tt></span>, mutation animations will be rendered in the
@@ -155,7 +156,7 @@ otherwise.</p>
         <li class="right" >
           <a href="lightningrods.html" title="Lightning Rods"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.7 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.8 documentation</a> &raquo;</li>
           <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

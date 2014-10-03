@@ -1,0 +1,33 @@
+Scorch and Flamer
+
+
+Tiberian Sun had special support for napalm animations: two tags that
+spawned new fire animations defined by SmallFire and LargeFire.
+This has been reimplemented as it worked previously.
+
+There is one notable change in behavior compared to Tiberian Sun: If
+LargeFire or SmallFire are not set correctly, the game will not
+crash when a new animation of these types is about to be created.
+
+[Animation]Scorch=boolean
+  Whether a new [AudioVisual]►SmallFire animation should be attached to
+  the same object this animation is attached to when expiring. Does not spawn on
+  water, beach, ice or rock terrain. For a complete description of behavior and
+  requirements, refer to Scorch on ModEnc
+   Defaults to no.
+
+   Do not set Scorch=yes on [AudioVisual]►SmallFire,
+    because this would create a loop: if the animation expires, a new animation
+    of the same type is created and attached to the same object. It also causes
+    trees on fire to never burn down.
+
+[Animation]Flamer=boolean
+  Whether new [AudioVisual]►SmallFire and [AudioVisual]►LargeFire
+  animations should be randomly created close to the location of this animation
+  when expiring. For a complete description of behavior and requirements, refer
+  to Flamer on ModEnc . Defaults
+  to no.
+
+ Animations; Napalm tags Scorch= and Flamer= have been restored
+
+ 0.8

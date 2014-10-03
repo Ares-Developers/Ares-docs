@@ -6,8 +6,7 @@ Type=ChronoSphere
 The ChronoSphere type super weapon needs a ChronoWarp type
 super weapon. If you have more than one ChronoSphere super weapons, you
 can reuse the same ChronoWarp super weapon for all of them, or create
-dedicated super weapons if you want to. See SW.PostDependent
-<sw-postdependent>.
+dedicated super weapons if you want to. See SW.PostDependent.
 
 Default values for general tags:
 
@@ -87,7 +86,7 @@ will blow up in the source location (if the default
 Chronosphere.BlowUnplaceable=yes is used). Vehicle-type buildings will
 try to find a fitting place just like units would.
 
-See ... to prevent objects from being
+See Chronoshift to prevent objects from being
 chronoshifted.
 
  There are several known issues with chronoshifting buildings that
@@ -109,6 +108,6 @@ From the ChronoWarp type super weapon only the targeting and cursor
 properties are used, as well as Range to indicate the area of effect by
 drawing radial lines around the cursor. SW.Range is not used.
 
-For the actual chronoshifting tags, see ChronoSphere <chronosphere>.
+For the actual chronoshifting tags, see ChronoSphere.
 
  0.2

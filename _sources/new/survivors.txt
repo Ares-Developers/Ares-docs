@@ -16,7 +16,7 @@ the type of unit that that survivor will be.
 Units and Buildings
 
 
-[TechnoType]Survivor.Side#=InfantryType) (where # is the zero-based index of the side e.g. 0 for Allied, 1 for Soviet, 2 for Yuri
+[TechnoType]Survivor.Side#=InfantryType) (where # is the zero-based index of the side -- e.g. 0 for Allied, 1 for Soviet, 2 for Yuri
   The InfantryType that can emerge from this object as a survivor when
   the object was owned by the corresponding side. For example,
   Survivor.Side0=E1 would cause the spawned survivor (if any) to be a GI
@@ -60,7 +60,7 @@ Unit-specific
 [Unit]Survivor.ElitePassengerChance=integer between 0 and 100
   Determines the percent chance that each of the unit's passengers (if any) will
   survive. Rookie/Veteran/Elite refers to the veteran level of the transport
-  unit a unit with a higher veteran level could be made to have a greater (or
+  unit -- a unit with a higher veteran level could be made to have a greater (or
   lesser) chance of allowing its passengers to survive. Passengers will be
   spawned in the cells around the destroyed unit and, so, if these cells are not
   clear then the passengers will not be spawned.
@@ -70,7 +70,7 @@ Unit-specific
   will eject their passengers but jumpjet vehicles such as the Nighthawk will
   not). Note that, for airborne vehicles such as the Nighthawk, there is no way
   to say "passengers can survive on the ground, but aren't allowed to paradrop
-  from the air" if they can survive they can survive.
+  from the air" -- if they can survive they can survive.
 
 If either the pilots or any passengers are 'killed' because they were not
 spawned (i.e. because the ground was not clear or the random chance did not

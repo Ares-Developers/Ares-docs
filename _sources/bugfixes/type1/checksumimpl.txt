@@ -1,0 +1,11 @@
+
+Checksummer Implementation Error
+
+
+The code generating checksums to compare game state to detect desynchronisations
+had a bug and wrote into memory beyond class bounds. It is not clear whether
+this caused any trouble, as memory management is highly dynamic and depends on
+too many factors like OS version, other running programs, and game state. In any
+case, this was a coding error which has been fixed.
+
+ 0.8

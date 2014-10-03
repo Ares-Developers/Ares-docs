@@ -3,7 +3,7 @@ Sides & Countries
 
 In the original game the sides and countries were, for the most part,
 hard-coded. You could not add to, remove or reorder the 10 countries or 3 sides.
-Ares, however, makes these tasks possible - you can now have up to 16
+Ares, however, makes these tasks possible -- you can now have up to 16
 fully functional countries and sides, and you can customize these in numerous
 ways...
 

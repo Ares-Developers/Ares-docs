@@ -6,7 +6,7 @@ feature of Tiberian Dawn and Tiberian Sun. Ares brings
 this feature back and extends it to work with all unit types.
 
 Units killed by Tiberium Damage may convert into a Visceroid. See
-Visceroids <visceroids>
+Visceroids
 
 .. index: Tiberium; Damage units moving over tiberium.
 

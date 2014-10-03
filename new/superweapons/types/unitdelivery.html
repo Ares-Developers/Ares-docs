@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Type=UnitDelivery &mdash; Ares 0.7 documentation</title>
+    <title>Type=UnitDelivery &mdash; Ares 0.8 documentation</title>
     
     <link rel="stylesheet" href="../../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
-        VERSION:     '0.7',
+        VERSION:     '0.8',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.7 documentation" href="../../../index.html" />
+    <link rel="top" title="Ares 0.8 documentation" href="../../../index.html" />
     <link rel="up" title="Settings by Super Weapon Type" href="index.html" />
     <link rel="next" title="Type=Firestorm" href="firestorm.html" />
     <link rel="prev" title="Type=GenericWarhead" href="genericwarhead.html" /> 
@@ -44,7 +44,7 @@
         <li class="right" >
           <a href="genericwarhead.html" title="Type=GenericWarhead"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+        <li><a href="../../../index.html">Ares 0.8 documentation</a> &raquo;</li>
           <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
@@ -82,7 +82,7 @@
   <div class="section" id="type-unitdelivery">
 <h1><span><span class="type">Type=UnitDelivery</span></span><a class="headerlink" href="#type-unitdelivery" title="Permalink to this headline">¶</a></h1>
 <p>The Unit Delivery super weapon will create the specified unit(s) in the target
-cell. This uses the CellSpread model to place the units.</p>
+area.</p>
 <p>Default values for general tags:</p>
 <dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Deferment=</span></tt><span class="type definition"> (integer - frames)</span></span></dt>
@@ -100,23 +100,29 @@ aircraft and buildings.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Deliver.Buildups=</span></tt><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether or not buildings delivered by this super weapon should play their
 buildup animation prior to becoming available. Defaults to <cite>no</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Deliver.Owner=</span></tt><span class="type definition"> (enum invoker|neutral|special|civilian)</span></span></dt>
+<dd>The country the delivered units will belong to. <cite>invoker</cite> is the player
+who fired the super weapon, <cite>civilian</cite> is the first country of the side
+named <cite>Civilian</cite>, <cite>special</cite> is the country named
+<cite>Special</cite> and <cite>neutral</cite> is the country named <cite>Neutral</cite>.
+Defaults to <cite>invoker</cite>.</dd>
 </dl>
+<p>The delivery of the units happens all at once, after firing the super weapon and
+awaiting its deferment.</p>
+<p>The super weapon will try to find a location close to the target area for each
+object. This process depends on many factors and also involves randomness, thus
+the placement order is not fixed. Do not rely on a specific order.</p>
 <p>All objects are placed on the ground, including aircraft. Flying units that
-never land (e.g. the Rocketeer and Kirovs) will take off. If a cell is occupied,
-the super weapon will retry on the next cell and so on, until the object gets
-placed. Once the first unit is placed, this process starts again for the next
-item in the list. Infantry squads are grouped in a single cell. The search will
-skip an item if it has not been placed after testing 100 cells.</p>
+never land (e.g. the Rocketeer and Kirovs) will take off. Infantry squads are
+grouped in a single cell.</p>
+<p>Units owned by AI are set to go on a hunt mission, buildings and human owned
+units are put on a guard mission.</p>
 <p>You can mix in naval units and they will be placed where they can normally
 exist.</p>
-<p>If you have more than one building, the resulting placement might look
-odd.</p>
-<p>The actual delivery of the units happens all at once, after firing the super
-weapon and awaiting its deferment.</p>
 <p class="versionadded" id="index-0">
 <span class="versionmodified">New in version 0.1.</span></p>
 <p class="versionchanged">
-<span class="versionmodified">Changed in version 0.4.</span></p>
+<span class="versionmodified">Changed in version 0.8.</span></p>
 </div>
 
 
@@ -137,7 +143,7 @@ weapon and awaiting its deferment.</p>
         <li class="right" >
           <a href="genericwarhead.html" title="Type=GenericWarhead"
              >previous</a> |</li>
-        <li><a href="../../../index.html">Ares 0.7 documentation</a> &raquo;</li>
+        <li><a href="../../../index.html">Ares 0.8 documentation</a> &raquo;</li>
           <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
           <li><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 

@@ -3,7 +3,7 @@ Prerequisites
 
 The prerequisite system has been enhanced in several ways. New flags are
 described below, and an issue has been resolved with regard to upgrades as
-prerequisites (see ...).
+prerequisites (see Type 2 fixes).
 
 Require Theater
 
@@ -75,7 +75,7 @@ Require Stolen Technology
 
 [Unit]Prerequisite.StolenTechs=list of integers
   The list of stealable technology types that must be stolen before this object
-  can be built. See Stolen Technology <spybehavior-stolentech> for more
+  can be built. See Stolen Technology for more
   information.
 
  Prerequisites; New StolenTech requirements.

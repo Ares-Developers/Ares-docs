@@ -15,7 +15,7 @@ within the main game directory. Note that the crash dump file is very large and
 may only be readable by the Ares developers. Like except.txt,
 this file will include a timestamp in the filename.
 
-If you have turned on debug logging (see ... and Debug Logging <debug-logging>)
+If you have turned on debug logging (see Command Line Arguments and Debug Logging)
 then the game will produce a debug.log file in the aforementioned Debug
 folder. Like except.txt, this file will include a timestamp in the
 filename. The log file may contain useful information for helping diagnose
@@ -49,7 +49,7 @@ message.
 
 Some potential errors may now be triggered when loading rather than waiting for
 the error to crop up in game. Critical errors occur always, less critical errors
-occur only if you have used the ....
+occur only if you have used the -STRICT command line argument.
 
  Improved Internal Error handling and debug logs to assist with debugging mods/Ares.
 

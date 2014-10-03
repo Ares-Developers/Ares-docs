@@ -18,7 +18,7 @@ Pass Through
 
 
 Urban Combat buildings can now specify what percentage of attacks against them
-will 'pass through' to the occupants inside damaging them rather than the
+will 'pass through' to the occupants inside -- damaging them rather than the
 building itself.
 
 [BuildingType]UC.PassThrough=float - chance
@@ -65,6 +65,7 @@ would therefore definitely harm the occupants.
  Buildings; Weapons can be made to pass through urban combat buildings
   to the occupants inside (including fatal chance and damage modifier).
 
+ 0.1
 
 
 Squatters' Rights
@@ -89,6 +90,9 @@ to its original owner. Whilst a building is held by a player that is not the
 
  Buildings; Unoccupied player buildings can be garrisoned by enemy infantry.
 
+ 0.1
+
+
 
 
 Advanced Rubble
@@ -104,30 +108,6 @@ there like nothing ever happened.
  Buildings; Buildings can be converted into a different building on
   destruction (rubble) and back again on repair by an engineer.
 
-Advanced Rubble is implemented in a similar way to other upgrade systems in
-Ares:
-
-[BuildingType]Rubble.Destroyed=BuildingType
-  The new BuildingType that this BuildingType will transform
-  into upon destruction. Buildings that are created via `Rubble.Destroyed` will
-  have the following properties forced upon them:
-
-  ::
-
-    Capturable=no
-    TogglePower=no
-    Unsellable=yes
-    CanBeOccupied=no
-
-The building will be created with maximum Strength. Engineers will
-always get a repair cursor over the building.
-
-[BuildingType]Rubble.Intact=BuildingType
-  The new BuildingType that this BuildingType will transform
-  into when it is repaired. The repaired building will be created with 1%
-  Strength.
-
-
 Note that Engineers will not be 'used up' by this repair process - they keep
 existing outside of the trench. This is very much intended for trenches: an
 Engineer would not be repairing/rebuilding an entire building, just re-digging a
@@ -138,6 +118,79 @@ trench so his work would not be too exhausting.
   Custom foundations never match built-in foundations. A fatal error will be
   raised if you do not comply with this requirement and the game will exit.
 
+Advanced Rubble is implemented in a similar way to other upgrade systems in
+Ares. The first set is for converting a building to rubble:
+
+[BuildingType]Rubble.Destroyed=BuildingType
+  The new BuildingType that this BuildingType will transform
+  into upon destruction. By default the building will be created with maximum
+  Strength. Engineers will always get a repair cursor over the building.
+  Buildings that are created via `Rubble.Destroyed` will have the following
+  properties forced upon them:
+
+  ::
+
+    Capturable=no
+    TogglePower=no
+    Unsellable=yes
+    CanBeOccupied=no
+
+   Do not create loops using Rubble.Destroyed. This can
+    freeze the game. A building cannot be its own rubble, neither directly nor
+    indirectly over one or more other BuildingTypes.
+
+[BuildingType]Rubble.Destroyed.Remove=boolean
+  Whether the building should just disappear instead of being converted to
+  rubble. Overrides Rubble.Destroyed. Defaults to no.
+
+[BuildingType]Rubble.Destroyed.Owner=enum default|civilian|special|neutral
+  The country the destroyed building will belong to. default is the
+  current owner, civilian is the first country from the side called
+  Civilian, special and neutral are the countries
+  named Special and Neutral respectively. Defaults to
+  default.
+
+[BuildingType]Rubble.Destroyed.Strength=integer
+  The health the rubble building is created with. Positive values up to
+  Strength are used directly. Negative values down to -99 are a
+  percentage of full health, -1 meaning 1% of health. All other values
+  mean full health. Defaults to Strength.
+
+[BuildingType]Rubble.Destroyed.Anim=AnimationType
+  An animation played when a building converted to rubble or removed. Defaults
+  to none.
+
+There is a second set of tags to recover a building from rubble, which mirrors
+the first set:
+
+[BuildingType]Rubble.Intact=BuildingType
+  The new BuildingType that this BuildingType will transform
+  into when it is repaired. The repaired building will be created with 1%
+  Strength, unless set otherwise.
+
+[BuildingType]Rubble.Intact.Remove=boolean
+  Whether the building should just disappear instead of being recovered when an
+  Engineer enters. Overrides Rubble.Intact. Defaults to no.
+
+[BuildingType]Rubble.Intact.Owner=enum default|civilian|special|neutral
+  The country the recovered building will belong to. default is the
+  current owner, civilian is the first country from the side called
+  Civilian, special and neutral are the countries
+  named Special and Neutral respectively. Defaults to
+  default.
+
+[BuildingType]Rubble.Intact.Strength=integer
+  The health the recovered building is created with. Positive values up to
+  Strength are used directly. Negative values down to -99 are a
+  percentage of full health, -1 meaning 1% of health. All other values
+  mean full health. Defaults to -1, 1% of Strength.
+
+[BuildingType]Rubble.Intact.Anim=AnimationType
+  An animation played when a building is recovered or removed. Defaults to
+  none.
+
+ 0.1
+ 0.8
 
 
 Traversing Trenches

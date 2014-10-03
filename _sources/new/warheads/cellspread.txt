@@ -10,8 +10,8 @@ because it only supported a maximum range of 11 (which contained errors).
 
 Ares replaces this lookup table and makes it possible to use larger
 values for CellSpread. All area of effect weapon features Ares
-added (like ...,
-..., IronCurtain on Weapons <wh-ironcurtain>)
+added (like AttachEffects on Warheads,
+EMP, IronCurtain on Weapons)
 have been updated to support this as well.
 
  Consider: If you double the range, the number of affected cells is

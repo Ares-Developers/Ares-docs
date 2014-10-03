@@ -46,7 +46,7 @@ Other changes:
   The ini file reader has been updated for Ares 0.3. Values that were
   invalid previously might now be valid, and previously valid notations might
   have become invalid. If values cannot be parsed correctly, Ares
-  puts a message to the debug log.
+  puts a message into the debug log.
 
   For example, it was possible to supply only one or two numbers when three
   comma separated numbers were expected. In that case, the value became
@@ -144,7 +144,6 @@ Other changes:
   survivors for them. The original handling has been restored, and these houses
   will use [General]►Technician as crew.
 
-
 From Ares 0.5 and below
 
 
@@ -241,3 +240,22 @@ Other changes:
   Only unpowered units create sparkle particle systems. Deactivation because of
   EMP and Operator logics does not make the unit sparkle any more. This is not
   optional at the moment.
+
+From Ares 0.7 and below
+
+
+Changed tags:
+
+  No changes required.
+
+Other changes:
+
+  The Unit Delivery super weapon uses a new placing method. Compared to previous
+  versions, unit and buildings are placed more random now. Delivered objects are
+  put on guard or hunt mission.
+
+  Force Shield no longer considers buildings with ForceShield.Modifier
+  less than or equal to 0.0 eligible targets.
+
+  Super weapon targeting mode Self now centers on the firing building
+  instead of using the origin.

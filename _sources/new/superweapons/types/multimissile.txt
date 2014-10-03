@@ -53,7 +53,7 @@ that matched those criteria.
 
 Yuri's Revenge supported the nuke impact animation only for the warhead
 called NUKE, hardcoded to NUKEBALL. To change this animation in
-Ares, have a look at PreImpactAnim <preimpactanim>.
+Ares, have a look at PreImpactAnim.
 
  0.2
 

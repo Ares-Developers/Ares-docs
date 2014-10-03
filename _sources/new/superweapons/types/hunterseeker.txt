@@ -40,9 +40,9 @@ Hunter Seeker specific tags:
   a random target is chosen. Defaults to no.
 
 
-See ... for information on how to define a
+See Hunter Seeker for information on how to define a
 valid Hunter Seeker unit and how to prevent certain TechnoTypes to be
-targeted. See Sides & Countries <sides-hunterseeker> on how to define a
+targeted. See Sides & Countries on how to define a
 default Hunter Seeker unit for each side.
 
  Super Weapons; HunterSeeker recreated.

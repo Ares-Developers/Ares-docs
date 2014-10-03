@@ -2,7 +2,7 @@ Drop Pods
 
 
 These are the collected settings that apply to the Drop Pod locomotor in general
-and the ...
+and the Drop Pod super weapon
 specifically.
 
  Drop Pods; Locomotor

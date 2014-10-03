@@ -1,7 +1,7 @@
 Radiation Beams
 
 
-Before Ares, Radiation beams could not be customized they were always
+Before Ares, Radiation beams could not be customized -- they were always
 either green or blue depending on the type of weapon. Now, however, radiation
 beams can be customized using the following flags (which affect weapons with
 IsRadBeam=yes set and/or IsRadEruption=yes set) in the weapon's

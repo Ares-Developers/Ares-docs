@@ -121,7 +121,7 @@ bombcurs.shp
 
 The bombcurs.shp animation needs to have its last frame removed if you
 don't want to see the previously unused skull image. See
-IvanBomb.FlickerRate <custom-ivan-bombs>.
+IvanBomb.FlickerRate.
 
 ares.mix
 

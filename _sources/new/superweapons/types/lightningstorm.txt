@@ -5,7 +5,7 @@ Default values for general tags:
 
 [SuperWeapon]SW.Range=float,integer
   Area around the target location the Lightning Storm strikes. Note that a
-  single value denotes the diameter of a circle - this is not the radius.
+  single value denotes the diameter of a circle -- this is not the radius.
   Defaults to [General]►LightningCellSpread.
 [SuperWeapon]SW.Damage=integer
   The damage each lightning bolt delivers. Defaults to
@@ -95,6 +95,6 @@ Lightning Storm specific tags:
 Other changes:
 
 Lightning rods attract random lightning that is about to strike in close range.
-For more information see the ... section.
+For more information see the Lightning Rods section.
 
  0.2

@@ -1,0 +1,11 @@
+ Armory; Infantry will exit without getting stuck
+
+
+Infantry Getting Stuck in Armory
+
+
+Infantry did not exit Armory=yes buildings properly and could get stuck.
+This has been fixed and infantry now exits the building normally without jamming
+the queue of units to enter.
+
+ 0.8

@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Survivors &mdash; Ares 0.7 documentation</title>
+    <title>Survivors &mdash; Ares 0.8 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.7',
+        VERSION:     '0.8',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.7 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.8 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Team Retaliate" href="teamretaliate.html" />
     <link rel="prev" title="Spy Behavior" href="spybehavior.html" /> 
@@ -44,7 +44,7 @@
         <li class="right" >
           <a href="spybehavior.html" title="Spy Behavior"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.7 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.8 documentation</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -100,7 +100,7 @@ the type of unit that that survivor will be.</p>
 <div class="section" id="units-and-buildings">
 <h2>Units and Buildings<a class="headerlink" href="#units-and-buildings" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►Survivor.Side#=</span></tt><span class="type definition"> (InfantryType) (where # is the zero-based index of the side e.g. 0 for Allied, 1 for Soviet, 2 for Yuri)</span></span></dt>
+<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►Survivor.Side#=</span></tt><span class="type definition"> (InfantryType) (where # is the zero-based index of the side &#8211; e.g. 0 for Allied, 1 for Soviet, 2 for Yuri)</span></span></dt>
 <dd>The <span class="type docutils literal">InfantryType</span> that can emerge from this object as a survivor when
 the object was owned by the corresponding side. For example,
 <span><tt class="docutils literal"><span class="pre">Survivor.Side0=E1</span></tt></span> would cause the spawned survivor (if any) to be a GI
@@ -144,7 +144,7 @@ used. Default to <cite>-1</cite>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[Unit]►Survivor.ElitePassengerChance=</span></tt><span class="type definition"> (integer between 0 and 100)</span></span></dt>
 <dd><p class="first">Determines the percent chance that each of the unit&#8217;s passengers (if any) will
 survive. Rookie/Veteran/Elite refers to the veteran level of the transport
-unit a unit with a higher veteran level could be made to have a greater (or
+unit &#8211; a unit with a higher veteran level could be made to have a greater (or
 lesser) chance of allowing its passengers to survive. Passengers will be
 spawned in the cells around the destroyed unit and, so, if these cells are not
 clear then the passengers will not be spawned.</p>
@@ -153,7 +153,7 @@ the original game logic&#8221; (i.e. land-based vehicles such as the Battle Fort
 will eject their passengers but jumpjet vehicles such as the Nighthawk will
 not). Note that, for airborne vehicles such as the Nighthawk, there is no way
 to say &#8220;passengers can survive on the ground, but aren&#8217;t allowed to paradrop
-from the air&#8221; if they can survive they can survive.</p>
+from the air&#8221; &#8211; if they can survive they can survive.</p>
 </dd>
 </dl>
 <p>If either the pilots or any passengers are &#8216;killed&#8217; because they were not
@@ -205,7 +205,7 @@ be spawned regardless of this setting. Defaults to <cite>25</cite> if
         <li class="right" >
           <a href="spybehavior.html" title="Spy Behavior"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.7 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Ares 0.8 documentation</a> &raquo;</li>
           <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

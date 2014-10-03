@@ -1,0 +1,19 @@
+Berserk Reloading Time Modifier
+
+
+Units under the effect of Chaos Gas or other Psychedelic=yes warheads go
+berserk, which reduces their willingness to obey orders as well as their
+reloading time. This reloading time factor can be customized globally and for
+each TechnoType.
+
+[CombatDamage]BerserkROFMultiplier=float - multiplier
+  The multiplier applied to the reloading time when a unit is berserking.
+  Smaller means shorter reloading and faster firing. Defaults to 0.5.
+
+[TechnoType]Berserk.ROFMultiplier=float - multiplier
+  The multiplier applied when this unit is berserking. Smaller means faster
+  firing. Defaults to [CombatDamage]►BerserkROFMultiplier.
+
+ Berserk; Reloading time multiplier
+
+ 0.8

@@ -1,0 +1,24 @@
+Forest Fires
+
+
+Forest fires were a feature of Tiberian Sun. Trees were set on fire if
+hit by a Sparky=yes warhead. While burning, they could ignite trees neaby
+and thus over time spread like a wildfire.
+
+Ares's implementation of forest fires slightly differs from the one in
+Tiberian Sun. It is now required to also set the previously unused tag
+IsFlammable=yes on each tree that may be set on fire. This is the only
+noticeable change.
+
+See Sparky on ModEnc  for a more
+detailled description of the logic, and for the requirements to get it working.
+To prevent crashes when firing a Sparky=yes warhead, do not forget to set
+three valid animations as [AudioVisual]►OnFire and two valid animations as
+[AudioVisual]►TreeFire.
+
+ If trees are not burning down, make sure that the animation used as
+  [AudioVisual]►SmallFire has Scorch=no set.
+
+ Terrain; Forest Fires
+
+ 0.8

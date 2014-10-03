@@ -22,7 +22,7 @@ will persist for a duration determined by SW.ChargeToDrainRatio, after
 which it will automatically shut down and the superweapon will restart its
 charging process. Whilst the effect is active you can click the super weapon
 button again to manually deactivate it, thus allowing the recharge process to
-begin earlier and finish faster. See Charge/Drain <charge-drain-sw>.
+begin earlier and finish faster. See Charge/Drain.
 Refer to ModEnc  for
 more information about Charge/Drain logic.
 

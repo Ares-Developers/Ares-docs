@@ -2,138 +2,171 @@
 What's New
 
 
-This section contains non-conclusive lists of features and bugfixes that were
+This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of Ares. Internal changes, optimizations
-and updates are mentioned here only if they are notable. 
+and updates are mentioned here only if they are notable.
+
+ Ares 0.8
+
++ **Toggle Power** keyboard command, customizable cursors and optional
+  support for AI players
+
++ **EM Pulse** Super Weapon, with lots
+  of enhancements
+
++ **Super Weapon ranges** can be restricted around the firing structures
+  and/or around designator units
+
++ **Tech Academies** are structures that allow training units with initial
+  veterancy
+
++ **Forest Fires** restored, optional per tree type
+
++ **Advanced Rubble** expanded with customizable owner and inital health
+
++ **Animation tags** Scorch and Flamer have been restored
+
++ **Repair wrenches** can be hidden from enemies, and
+  no longer reveal cloaked buildings
+
++ **Unit Delivery** placement changed, units guard or hunt, and support
+  for giving units to neutral countries
+
 
  Ares 0.7
 
 + **Memory Management** issues were resolved, which results in fewer crashes and
   better support for Windows 8.
 
-+ **Hunter Seeker** ...,
-  ... and Side defaults
-  <sides-hunterseeker>
++ **Hunter Seeker** Super Weapon,
+  Unit Settings and Side defaults
 
-+ **Drop Pod** ... and
-  ...
++ **Drop Pod** Super Weapon and
+  customizable Settings
 
-+ **Several weapon additions** like ..., ... and
-  ..., and
-  ...
++ **Several weapon additions** like Splits and Airburst enhancements, Ranged and
+  ProjectileRange, and
+  BallisticScatter
 
-+ **Warheads** that ... when
++ **Warheads** that prevent units to scatter when
   hit
 
-+ **Civilian enemies** ...
++ **Civilian enemies** attacked in multiplayer and smarter defense against
+  civilian threats
 
-+ **Loading themes** for ... and
-  ...
++ **Loading themes** for campaigns and
+  multiplayer
 
-+ **Score screen** ...
++ **Score screen** Graphics and Themes for campaign and multiplayer
 
-+ **Aircraft customization** with ...
-  and ...
++ **Aircraft customization** with Smoke animations
+  and Airstrike-related voices
 
-+ **MakeInfantryOwner** ... to work with
++ **MakeInfantryOwner** expanded to work with
   generic infantry death animations
 
-+ **Teams** can ... in case a member is
++ **Teams** can retaliate in case a member is
   attacked
 
-+ **Passable structures** ...
++ **Passable structures** units can drive on
   without side effects like the workarounds have
 
-+ **Dimming deactivated units** ...
++ **Dimming deactivated units** by reason for deactivation
 
-+ **Damage sparks** ...
++ **Damage sparks** made customizable and enhanced to work with all types
 
 
  Ares 0.6
 
-+ **CellSpread** ...
++ **CellSpread** not limited to 11 any more, and buildings can define a
+  maximum hit count
 
-+ **Sight** ...
++ **Sight** values above 10 are supported
 
-+ **Tech structures** can be ...
++ **Tech structures** can be returned to the neutral house when a player
+  is defeated instead of being destroyed
 
-+ **Prerequisites** that ...
++ **Prerequisites** that require a factory build by a certain country
 
-+ **Veterancy from spawns** can be ...
++ **Veterancy from spawns** can be awarded to the spawner unit
 
-+ **Aircraft** that ...
++ **Aircraft** that does not spin when crashing
 
-+ **Spawners** now have ... and are ...
++ **Spawners** now have basic support for flying Aircraft Carriers and are allowed to cloak
 
-+ **KillDriver** only applied ...
++ **KillDriver** only applied below a certain percentage of health
 
-+ **Helicopter units** ... of
++ **Helicopter units** animate in air regardless of
   whether they are hovering or moving
 
-+ **Drain weapons** power drain amount ...
++ **Drain weapons** power drain amount made customizable
 
-+ **Force Shield** ...
++ **Force Shield** customizable per BuildingType
 
 
  Ares 0.5
 
-+ **Tiberium features** restored like ...,
-  ..., and ..., as well as ... and ..., with lots of new settings.
++ **Tiberium features** restored like heal,
+  damage, and explosive harvesters, as well as spilling on destruction and Tiberium chain reactions, with lots of new settings.
 
-+ **Storage logic** ...
++ **Storage logic** has been restored
 
-+ **Cloak enhancements** allow ..., ..., ..., ... and more.
++ **Cloak enhancements** allow units to cloak only if idle, deployed,
+  powered, or not at all, hover units to cloak, customizable cloak sounds, parasites to attack cloaked units and more.
 
-+ **Sensor Arrays** ...
++ **Sensor Arrays** work again, with additions
 
-+ **Type selection** can now ...
++ **Type selection** can now consider several unit types as one
 
-+ **AttachEffect** expanded with ...
++ **AttachEffect** expanded with settings for decloaking and entering
+  transports
 
-+ **Veterancy** ...
++ **Veterancy** insignia can be hidden for enemy players
 
-+ **Engineers and Technicians** can be ..., and ...
++ **Engineers and Technicians** can be defined for each side, and they can spawn as survivors
 
-+ **C4 veteran ability** has been restored back ...
++ **C4 veteran ability** has been restored back into working state
 
-+ **EVA message** ...
++ **EVA message** in case a unit is destroyed
 
 
  Ares 0.4
 
-+ **AttachEffect** feature allows to ... for a variety of new features and play styles
++ **AttachEffect** feature allows to change unit and building stats on the
+  battlefield for a variety of new features and play styles
 
-+ **Super weapon additions** with ..., and a new ...
++ **Super weapon additions** with cameos being grayed out, and a new EVA event for selecting targets
 
-+ **Aircraft** now ...
++ **Aircraft** now supports Crashable
 
-+ **Pips** ...
++ **Pips** support more than only the hardcoded values
 
-+ **Spy Effects** now support ..., and ...
++ **Spy Effects** now support PCX cameos and persistent radar reveal, and spies can no longer infiltrate allied buildings
   
-+ **Gate** ...
++ **Gate** sounds are now customizable
 
-+ **Veteran Buildings** ...
++ **Veteran Buildings** added to the country options
 
-+ **Text color** for ...
++ **Text color** for tool tips and message texts customizable
 
-+ **Chaos Gas** ...
++ **Chaos Gas** prevents the stop command from working now
 
-+ **Release Note** text can be ...
++ **Release Note** text can be shown on the ingame screen
 
-+ **Output all missing CSF labels** ...
++ **Output all missing CSF labels** using a new command line parameter
 
 
  Ares 0.3
 
-+ **Custom Missiles** like the V3 ...
++ **Custom Missiles** like the V3 can be added
 
-+ **Whiteboy bug** has been fixed and now ...
++ **Whiteboy bug** has been fixed and now more than 74 cameos are
+  supported
 
-+ **Cyclic Gattling** ...
++ **Cyclic Gattling** support to go back to first stage added
 
-+ **Unit Delivery** now ...
++ **Unit Delivery** now supports Deferment
 
-+ **Observer flags** ...
++ **Observer flags** customizable for each country
 
-+ **FPS counter** can be ...
++ **FPS counter** can be displayed on the ingame screen

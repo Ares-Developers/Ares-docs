@@ -18,7 +18,7 @@ which can be edited in FinalAlert 2 YR.
   [Preview]►Size=0,0,1,1 to the map file.
 
  This keyboard can be disabled in release versions of your mod. See
-  Disabling Keyboard Commands <disable-commands>.
+  Disabling Keyboard Commands.
 
  Keyboard Commands; Map snapshot command (saves a YRM map file of the current map).
 
@@ -31,7 +31,7 @@ Debug Logging
 
 
 A key can be assigned to toggle debug.log writing on and off. See
-....
+Internal Errors / Debugging.
 
  0.1
 
@@ -48,7 +48,7 @@ game. Note that debug.log file writing must be turned on otherwise the
 data will not be written to the file.
 
  This keyboard can be disabled in release versions of your mod. See
-  Disabling Keyboard Commands <disable-commands>.
+  Disabling Keyboard Commands.
 
  Keyboard Commands; Type data dumping command (dump type information to a log file, including AI trigger weights).
 
@@ -65,7 +65,7 @@ debug.log file writing must be turned on otherwise the data will not be
 written to the file.
 
  This keyboard can be disabled in release versions of your mod. See
-  Disabling Keyboard Commands <disable-commands>.
+  Disabling Keyboard Commands.
 
  Keyboard Commands; AI Base Plan data dumping command (see what the AI
   plans to build).
@@ -76,12 +76,12 @@ written to the file.
 AI Assume Control
 
 
-Please refer to section ... under the tag:
+Please refer to section Command Line Arguments under the tag:
 
 :-AI-CONTROL:
 
  This keyboard can be disabled in release versions of your mod. See
-  Disabling Keyboard Commands <disable-commands>.
+  Disabling Keyboard Commands.
 
  0.1
 
@@ -98,6 +98,15 @@ again hides the FPS Counter.
  Keyboard Commands; Display the current and the average frame rate on the screen.
 
  0.3
+
+
+Toggle Power
+
+
+The feature known from Tiberian Sun is now accessible from a keyboard
+command. See Toggle Power.
+
+ 0.8
 
 
 

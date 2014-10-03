@@ -46,7 +46,7 @@ close to the last cell are picked. The maximum number of retries for placing all
 units is 3 times the number of units to spawn. In case this limit is exceeded,
 the super weapon stops to place more units.
 
-See ... for information about the global defaults
+See Drop Pods for information about the global defaults
 and other related additions.
 
  Super Weapons; DropPod reinforcements.

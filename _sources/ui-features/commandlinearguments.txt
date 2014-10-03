@@ -10,7 +10,8 @@ Command Line Arguments
   
    Launch Base has its own option to just prevent the video playing for
     mods that do not include their own video.
-:-LOG: Turns debug.log file writing on initially. See ....
+:-LOG: Turns debug.log file writing on initially. See Internal
+  Errors/Debugging.
 :-LOG-CSF: Outputs all CSF labels that cannot be found in the language files
   into debug.log. Each label is written only once, and prefixed with
   [CSFLoader].

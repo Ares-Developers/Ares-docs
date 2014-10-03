@@ -66,8 +66,8 @@ what gets modified by EMP warheads.
 A unit does not get affected by EMP if Verses is equal to 0%,
 otherwise the target is endowed with the full effect.
 
-First we will look at positive EMP.Duration - the targets are going to be
-paralyzed.
+First we will look at positive EMP.Duration -- the targets are going to
+be paralyzed.
 
 
 + EMP.Cap is greater than zero.
@@ -107,8 +107,8 @@ paralyzed.
   + EMP counter is 20, EMP.Duration=10. EMP counter will remain at 20,
     because it was already higher.
 
-Next we will look at negative EMP.Duration - for example, a friendly unit
-trying to re-activate the already-paralyzed unit.
+Next we will look at negative EMP.Duration -- for example, a friendly
+unit trying to re-activate the already-paralyzed unit.
 
 + EMP.Cap=-1
   The target's EMP counter is reduced by the number of frames specified by

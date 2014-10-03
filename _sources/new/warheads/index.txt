@@ -12,3 +12,4 @@ Warheads
 	ripple
 	preimpactanim
 	infantry
+	berserk

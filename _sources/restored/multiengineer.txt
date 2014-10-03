@@ -25,10 +25,10 @@ Ares restores this feature.
    All structures originally owned by countries with
     MultiplayPassive=yes are considered tech structures. This
     definition  is likely to change in a later version.
-[General]EngineerDamageCursor.*=Cursor
+[General]EngineerDamageCursor.*=cursor definition
   Specifies the cursor to indicate an engineer will only damage the building
-  instead of capturing it. See Super weapon cursors <sw-cursors>.
-  Defaults to a previously unused detonator cursor.
+  instead of capturing it. See Mouse Cursors. Defaults to
+  a previously unused detonator cursor.
 
  Use sensible defaults. Generally, EngineerDamage should never
   be higher than EngineerCaptureLevel or there might be situations an

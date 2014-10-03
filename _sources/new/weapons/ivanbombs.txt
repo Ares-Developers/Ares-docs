@@ -6,7 +6,7 @@ Ivan Bombs
 As with many other features of Yuri's Revenge, the settings that control
 Crazy Ivan Bombs are global so you can't have multiple variations of them with
 their own controls. With Ares it is now possible to create new Ivan
-Bomb-esque weapons new types of sticky bomb with whatever settings you like.
+Bomb-esque weapons -- new types of sticky bomb with whatever settings you like.
 
 Ares now also supports shrapnel weapons, as long as they have a
 CellSpread of 0.5 or more.
