@@ -18,6 +18,13 @@ Past
 + Electro
 + Marshall
 
+Contributors
+============
+===============  =========================
+A Mystery Guest  New Powered Unit Logic
+[Gluk-v48]       Advanced Rubble Expansion
+===============  =========================
+
 Collaborators
 =============
 ========================  =============
@@ -57,7 +64,11 @@ today.
 Though we had many testers over the years, some have distinguished themselves
 through exceptional effort, high testing quality and commendable dedication:
 
++ MasterHaosis
++ mevitar
 + Professor_Tesla
++ Speeder
++ YR M0ddEr
 
 Community Members
 ~~~~~~~~~~~~~~~~~
