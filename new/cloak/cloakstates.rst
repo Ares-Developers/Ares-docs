@@ -9,7 +9,8 @@ moving using :tag:`CloakStop=yes`. This tag was not working in the following
 games. :game:`Ares` restores it.
 
 .. note:: \ :tag:`CloakStop=yes` is not supported for :tag:`BalloonHover=yes`
-  units.
+  units. It does not work without :tag:`Cloakable=yes`. :value:`CLOAK` ability
+  will not be affected by it.
 
 .. index: Cloak; CloakStop restored.
 
@@ -20,9 +21,9 @@ Cloak Only If Deployed
 ----------------------
 
 Infantry can be made cloakable only when deployed. When undeployed, the infantry
-will decloak again. This only applies to :tag:`Cloakable=yes` or the
-:value:`CLOAK` ability. Cloak Generators will cloak the infantry even if not
-deployed.
+will decloak again. This applies to all active cloaking abilities like
+:tag:`Cloakable=yes` or the :value:`CLOAK` ability. Only Cloak Generators will
+cloak the infantry even if not deployed.
 
 :tagdef:`[InfantryType]Cloakable.Deployed=boolean`
   Whether this infantry is only allowed to self-cloak when deployed. Requires
