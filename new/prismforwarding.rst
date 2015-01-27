@@ -148,9 +148,9 @@ minor bugs and also extend it to provide a full set of Prism networking options.
   addition to the firing beam, so the default value of :value:`-2` leaves the
   behaviour exactly the same as the original game.
 
-  Positive values, on the other hand, tell Ares that you want the thickness of
-  the beam to be dependent on the number of backward chains in the network, and
-  also have the support beam thickness increase in the same way . A
+  Positive values, on the other hand, tell :game:`Ares` that you want the
+  thickness of the beam to be dependent on the number of backward chains in the
+  network, and also have the support beam thickness increase in the same way. A
   :tag:`PrismForwarding.Intensity` value of 1 would cause the farthest beam to
   have no thickness increase, the next to have an increase of 1, the next to
   have an increase of 2, and so on. See the section on :tag:`LaserThickness` for
