@@ -16,7 +16,7 @@ Spy Plane specific tags:
   The number of spy planes to be sent out. Defaults to :value:`1`.
 :tagdef:`[SuperWeapon]SpyPlane.Mission=mission`
   The mission that the aircraft will be sent on (:value:`Guard`,
-  :value:`Attack`, :value:`Move`, etc). Defaults to :value:`SpyPlane_Approach`.
+  :value:`Attack`, :value:`Move`, etc). Defaults to :value:`SpyPlane Approach`.
 
 .. index:: Super Weapons; SpyPlane can now specify which AircraftType, how many,
   and what mission to perform.
