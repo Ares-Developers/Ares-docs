@@ -7,8 +7,11 @@ building and then flys into an enemy object, detonating on impact.
 
 Default values for general tags:
 
+:tagdef:`[SuperWeapon]SW.MaxCount=integer`
+  The maximum number of buildings launching a Hunter Seeker. Set to negative
+  values for unlimited buildings. Defaults to :value:`1`.
 :tagdef:`[SuperWeapon]SW.AITargeting=enum`
-  Defaults to :value:`NoTarget`.
+  Defaults to :value:`HunterSeeker`.
 :tagdef:`[SuperWeapon]SW.AffectsHouse=enum`
   Specifies the houses targeted. Defaults to :value:`enemies`.
 :tagdef:`[SuperWeapon]SW.AffectsTarget=enum`
@@ -40,6 +43,10 @@ Hunter Seeker specific tags:
   a random target is chosen. Defaults to :value:`no`.
 
 
+Launches up to :tag:`[SuperWeapon]SW.MaxCount` Hunter Seekers of the specified
+type from the firing player's buildings that are valid launch sites. Only one
+Hunter Seeker is launched per building.
+
 See :doc:`Hunter Seeker </new/hunterseeker>` for information on how to define a
 valid Hunter Seeker unit and how to prevent certain :type:`TechnoTypes` to be
 targeted. See :ref:`Sides & Countries <sides-hunterseeker>` on how to define a
@@ -48,3 +55,4 @@ default Hunter Seeker unit for each side.
 .. index:: Super Weapons; HunterSeeker recreated.
 
 .. versionadded:: 0.7
+.. versionchanged:: 0.9
