@@ -11,6 +11,8 @@ it, and allows others to take over the now-neutral vehicle.
   damaging the vehicle itself. The first passenger matching the vehicle's
   :tag:`Operator` is considered the driver. All other passengers will be
   ejected. Defaults to :value:`no`.
+:tagdef:`[Warhead]KillDriver.Owner=enumeration - civilian,special,neutral`
+  Specifies the house the units are assigned to. Defaults to :value:`special`.
 :tagdef:`[Warhead]KillDriver.KillBelowPercent=float`
   Specifies the percentage of health a unit can not exceed to have its driver
   killed by a :tag:`KillDriver=yes` warhead. A unit above this health level
@@ -35,3 +37,5 @@ See :doc:`/new/hijackers` for more options that relate to :tag:`CanDrive`.
 .. index:: Warheads; Warheads can be set to kill the driver of a vehicle, instead of damaging it.
 
 .. versionadded:: 0.2
+
+.. versionchanged:: 0.9
