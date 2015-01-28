@@ -19,6 +19,7 @@ new super weapons.
 	
 	buildinganims
 	general
+	availability
 	hardcoded
 	targeting
 	range
