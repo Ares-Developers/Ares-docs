@@ -8,10 +8,10 @@ map to temporarily decloak, even if it is under a Cloak Generator or not.
 Default values for general tags:
 
 :tagdef:`[SuperWeapon]SW.Range=float,integer`
-  The radius, in cells, that the decloak effect will be applied. Use negative
-  values to reveal all units on the map. When using full-map sonar you don't
-  have to select a target location, instead the super weapon will be fired when
-  you click its cameo icon. Defaults to :value:`10`.
+  The radius, in cells, that the decloak effect will be applied. Use :value:`-1`
+  to reveal all units on the map. When using full-map sonar you don't have to
+  select a target location; instead the super weapon will be fired when you
+  click its cameo icon. Defaults to :value:`10`.
 :tagdef:`[SuperWeapon]SW.AITargeting=enum`
   Defaults to :value:`Stealth`.
 :tagdef:`[SuperWeapon]SW.AffectsHouse=enum`
