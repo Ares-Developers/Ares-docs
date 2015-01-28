@@ -106,13 +106,10 @@ Require Factory Built By Country
 .. note:: AI ignores :tag:`FactoryOwners` and :tag:`FactoryOwners.Forbidden` on
   buildings, but not on units.
 
-.. note:: When undeploying, buildings will lose their initial owner and the
-  undeployed vehicle will be initially owned by the actual player. This might
-  change in the future.
-
 .. index:: Prerequisites; Require building built by certain country.
 
 .. versionadded:: 0.6
+.. versionchanged:: 0.9
 
 
 Overview
