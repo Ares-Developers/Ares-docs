@@ -17,9 +17,6 @@ A super weapon can fire at a location, if at least one building providing this
 super weapon satisfies both range requirements. If not, the :tag:`NoCursor` is
 shown.
 
-.. note:: The AI does not support range checks yet. This might change in the
-  future.
-
 :tagdef:`[SuperWeapon]SW.RangeMaximum=float - cell range`
   Distance in cells the target coordinates may be away from a player's building
   providing this super weapon. Values below :value:`0.0` mean type-specific
@@ -32,25 +29,24 @@ shown.
 
 .. index:: Super Weapons; Limit minimum and maximum firing range.
 
+.. versionadded:: 0.8
+
 
 Designators
 -----------
 
-A designator is a unit that does the reconnaissance and provides a targeting
-area around itself. A super weapon requiring a designator can only fire at a
-location if at least one designator is in range. If no designator is in range,
-the :tag:`NoCursor` is shown.
-
-.. note:: The AI does not support range checks yet. This might change in the
-  future.
+A designator is a unit or structure that does the reconnaissance and provides a
+targeting area around itself. A super weapon requiring a designator can only
+fire at a location if at least one designator is in range. If no designator is
+in range, the :tag:`NoCursor` is shown.
 
 :tagdef:`[SuperWeapon]SW.Designators=list of TechnoTypes`
-  List of units eligible for designating the target location. An empty list
-  requires no designator. Defaults to :value:`none`.
+  List of units and structures eligible for designating the target location. An
+  empty list requires no designator. Defaults to :value:`none`.
 
 :tagdef:`[SuperWeapon]SW.AnyDesignator=boolean`
-  Whether any unit is considered a valid designator for this super weapon.
-  Overrides :tag:`SW.Designators`. Defaults to :value:`no`.
+  Whether any unit or structure is considered a valid designator for this super
+  weapon. Overrides :tag:`SW.Designators`. Defaults to :value:`no`.
 
 The designator range can be customized for each :type:`TechnoType` individually.
 
