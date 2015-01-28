@@ -58,3 +58,38 @@ The designator range can be customized for each :type:`TechnoType` individually.
 .. index:: Super Weapons; Designators providing targets.
 
 .. versionadded:: 0.8
+
+
+Inhibitors
+----------
+
+In a sense, inhibitors are double negative designators: All enemy units and
+structures are checked instead of player owned ones, and they disallow firing a
+super weapon around them instead of being a requirement. In a positive sense,
+inhibitors protect a player from enemy super weapons.
+
+If at least one enemy inhibitor is in range, the :tag:`NoCursor` is shown to a
+player and the super weapon cannot fire.
+
+Buildings only inhibit firing a super weapon when they are online, that is when
+there is sufficient power for them to function or they are overpowered, and they
+suffice the :tag:`NeedsEngineer` requirement.
+
+:tagdef:`[SuperWeapon]SW.Inhibitors=list of TechnoTypes`
+  List of units and structures preventing this super weapon from firing close to
+  any of them. An empty list means no inhibitors. Defaults to :value:`none`.
+
+:tagdef:`[SuperWeapon]SW.AnyInhibitor=boolean`
+  Whether any unit or structure is considered a valid inhibitor for this super
+  weapon. Overrides :tag:`SW.Inhibitors`. Defaults to :value:`no`.
+
+The inhibitor range can be customized for each :type:`TechnoType` individually.
+
+:tagdef:`[TechnoType]InhibitorRange=integer - cells`
+  Range in cells around the unit or structure that becomes untargetable by super
+  weapons having this object set as inhibitor. Defaults to
+  :tag:`[TechnoType]Sight`.
+
+.. index:: Super Weapons; Inhibitors disallowing targeting.
+
+.. versionadded:: 0.9
