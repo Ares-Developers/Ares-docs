@@ -17,7 +17,7 @@ Targeting
   targeting mode might prevents it from being fired (like the Lightning Storm
   or Psychic Dominator, if another super weapon of this type is currently
   active). Defaults to :value:`yes`.
-:tagdef:`[SuperWeapon]SW.RequiresTarget=enum land|water|empty|infantry|units|buildings`
+:tagdef:`[SuperWeapon]SW.RequiresTarget=enum none|land|water|empty|infantry|units|buildings`
   Which items this super weapon can fire upon. Hovering above an allowed item
   will show the :tag:`Cursor`, otherwise the player gets the :tag:`NoCursor` and
   it is not possible to launch the super weapon. For an example see

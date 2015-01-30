@@ -16,11 +16,12 @@ General properties
   values by comma. :value:`team` equals :value:`owner,allies`, :value:`all`
   equals :value:`owner,allies,enemies`. Defaults to :value:`team` for the Force
   Shield, to :value:`all` otherwise.
-:tagdef:`[SuperWeapon]SW.AffectsTarget=enum land|water|empty|infantry|units|buildings`
+:tagdef:`[SuperWeapon]SW.AffectsTarget=enum none|land|water|empty|infantry|units|buildings`
   Which items are allowed to be affected by this super weapon. You can combine
   multiple values by comma. If you don't specify either land or water, both will
   be allowed. If you don't specify any of the other values, everything can be
-  affected. For example, :tag:`SW.AffectsTarget=land,buildings` affects all
+  affected. Thus, if you specify no restriction (:value:`none`), all targets are
+  valid. For example, :tag:`SW.AffectsTarget=land,buildings` affects all
   buildings that aren't water-bound, :tag:`SW.AffectsTarget=water` affects every
   water cell, occupied or empty.
 :tagdef:`[SuperWeapon]SW.ShowCameo=boolean`
