@@ -17,7 +17,7 @@ new super weapons.
 .. toctree::
 	:glob:
 	
-	buildinganims
+	buildings
 	general
 	availability
 	hardcoded
