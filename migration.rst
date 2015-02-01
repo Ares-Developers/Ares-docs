@@ -259,3 +259,40 @@ Other changes:
 
   Super weapon targeting mode :value:`Self` now centers on the firing building
   instead of using the origin.
+
+From Ares 0.8 and below
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Changed tags:
+
+  The following tags have been changed to use the actual value of their default
+  tags. (Continued work from earlier :game:`Ares` releases.)
+
+  :tag:`[BuildingType]SecretLab.PossibleBoons`
+    Defaults to the combination of the latest :tag:`[General]SecretInfantry`,
+    :tag:`[General]SecretUnits` and :tag:`[General]SecretBuildings`.
+
+Other changes:
+
+  The way projectiles deliver the new warhead effects has changed. Previously,
+  they were applied on the location the projectile was supposed to hit, not
+  where it actually detonated. Short distance misses still count as direct hit.
+  Abduction, KillDriver and Occupant Damage are only applied on direct hits.
+
+  AttachEffect only checked verses if it had an owner. Now verses are applied
+  even if owner-less. Previously affected victims might not get affected any
+  more.
+
+  The default :tag:`SW.AITargeting` for :tag:`Type=HunterSeeker` super weapons
+  has been changed from :value:`NoTarget` to :value:`HunterSeeker`. It now only
+  fires if the house has selected a favorite enemy.
+
+  The targeting type :value:`Stealth` now adheres to :tag:`SW.AIRequiresTarget`
+  and :tag:`SW.AIRequiresHouse` instead of :tag:`SW.RequiresTarget` and
+  :tag:`SW.RequiresHouse`. The targeting type :value:`Offensive` no longer
+  requires :tag:`SW.AffectedHouse` to include :value:`enemies`.
+
+  Prism Forwarding now properly uses negative intensity values for supporting
+  beams. A :tag:`PrismSupportModifier` related bug has been fixed.
+
+  Lasers were often drawn too big. This has been changed.
