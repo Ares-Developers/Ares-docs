@@ -42,6 +42,22 @@ player by giving a :value:`EVA_SilosNeeded` notice.
 .. note:: The game does not have this EVA message defined and has no audio files
   for it. You have to add them before you can use them.
 
+.. versionadded:: 0.5
+
+
+Text Message
+------------
+
+Complimentary to the EVA event it is possible to show a test message.
+
+:tagdef:`[General]Message.SilosNeeded=csf label`
+  Set this to a text that shall be printed whenever the Silos Needed warning
+  occurs. You cannot unset this later. If you want to disable this message in a
+  game mode or map, you will have to a label of an empty text. Defaults to
+  no message.
+
+.. versionadded:: 0.9
+
 
 :captiontag:`PipScale=Tiberium`
 -------------------------------
