@@ -6,6 +6,32 @@ This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of :game:`Ares`. Internal changes, optimizations
 and updates are mentioned here only if they are notable.
 
+.. rubric:: Ares 0.9
+
++ **Better AI support** for :doc:`super weapons and the new Ares features
+  </new/superweapons/targeting>`
+
++ **Super Weapons** support :doc:`Inhibitors </new/superweapons/range>`,
+  :doc:`multiple AuxBuildings, negative AuxBuildings and owner countries
+  </new/superweapons/availability>`, :doc:`full-map PsychicReveal
+  </new/superweapons/types/psychicreveal>`, and :doc:`multiple Hunter Seeker
+  launches </new/superweapons/types/hunterseeker>`
+
++ **Buildings and upgrades** allow :doc:`more than two super weapons
+  </new/superweapons/buildings>` and :doc:`Oil Derrick logic </new/producecash>`
+
++ **Graphical stuff** like more than 8 facings for :doc:`SHP based units
+  </new/facings>` and :doc:`weapon muzzle flashes
+  </new/projectiles/animations>`, as well as :doc:`animated rotating projectiles
+  </new/projectiles/animations>`
+
++ **EVA alerts and text messages** when :doc:`capturing or losing tech
+  structures </new/techstructures>` and if :doc:`silos needed
+  </new/tiberium/storage>`
+
++ **KillDriver** :doc:`owner house can be set </new/killingdrivers>`
+
+
 .. rubric:: Ares 0.8
 
 + **Toggle Power** :doc:`keyboard command, customizable cursors and optional
