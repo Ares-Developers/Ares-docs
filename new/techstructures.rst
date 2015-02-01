@@ -21,3 +21,29 @@ The country the buildings are given back to is their initial owner.
 .. index:: Tech Structures; Return to neutral when player defeated.
 
 .. versionadded:: 0.6
+
+
+Tech Structure Notifications
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:game:`Yuri's Revenge` has the :tag:`CaptureEvaEvent` setting that defines which
+EVA event will play if a building of a type with :tag:`NeedsEngineer=yes` is
+captured. :game:`Ares` makes the corresponding lost event customizable and adds
+optional text messages for each of them.
+
+:tagdef:`[BuildingType]LostEvaEvent=EVA event`
+  The EVA message played when a building of this type is captured from the
+  player. Requires :tag:`NeedsEngineer=yes`. Defaults to
+  :value:`EVA_TechBuildingLost`.
+
+:tagdef:`[BuildingType]Message.Capture=CSF label`
+  The text printed when a building of this type is captured by the player.
+  Requires :tag:`NeedsEngineer=yes`. Defaults to :value:`none`.
+
+:tagdef:`[BuildingType]Message.Lost=CSF label`
+  The text printed when a building of this type is captured by the enemy.
+  Requires :tag:`NeedsEngineer=yes`. Defaults to :value:`none`.
+
+.. index:: Tech Structures; EVA and text notifications when captured and lost.
+
+.. versionadded:: 0.9
