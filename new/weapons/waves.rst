@@ -28,7 +28,7 @@ below, left unit is using :tag:`Wave.IsLaser`, the right one is using
 .. versionadded:: 0.1
 
 The following flags are applicable to all Wave effects; the aforementioned
-:tag:`Wave.Is(Big)Laser=yes` as well as :tag:`Sonic=yes` and
+:tag:`Wave.Is(Big)Laser=yes` as well as :tag:`IsSonic=yes` and
 :tag:`IsMagBeam=yes`.
 
 
