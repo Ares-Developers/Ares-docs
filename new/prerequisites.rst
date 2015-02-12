@@ -52,20 +52,35 @@ Negative Prerequisites
 Multiple Alternative Prerequisites Lists
 ````````````````````````````````````````
 
-:tagdef:`[Unit]Prerequisite.Lists=integer`
-  Specifies how many extra Prerequisite lists are available (see below).
-  Defaults to :value:`0`.
+:game:`Ares` supports more than one prerequisite list. Each prerequisite list
+acts as an independent copy of the existing :tag:`Prerequisite` flag, and a
+minimum of one of the prerequisite lists must be satisfied for this type to
+become buildable.
 
-:tagdef:`[Unit]Prerequisite.List#=list of BuildingTypes (where # is the 1-based index of the prerequisite list, the maximum specified by Prerequisite.Lists)`
-  Each prerequisite list acts as an independent copy of the existing
-  :tag:`Prerequisite` flag. For example, if you set
-  :tag:`Prerequisite=GAPILE,GATECH` and :tag:`Prerequisite.List1=NAHAND,NATECH`
-  then the unit will be available to any player who owns both an Allied Barracks
-  and Battle Lab, or a Soviet Barracks and Battle Lab (a minimum of one of the
-  prerequisite lists must be satisfied). :tag:`Prerequisite.List0`, if
-  specified, overrides the existing :tag:`Prerequisite` flag.
+For example, if you set :tag:`Prerequisite=GAPILE,GATECH` and
+:tag:`Prerequisite.List1=NAHAND,NATECH` then the unit will be available to any
+player who owns both an Allied Barracks and Battle Lab, or a Soviet Barracks and
+Battle Lab.
 
-  .. index:: Prerequisites; Multiple separate prerequisite lists - a unit can
+.. note:: Either :tag:`Prerequisite` or :tag:`Prerequisite.List0` has to be
+  specified, because these are only *additional* lists and the original
+  prerequisites list is still used. If this is ignored and the list is left
+  empty, the object will become always buildable, because an empty list is
+  always satisfied.
+
+:tagdef:`[TechnoType]Prerequisite.Lists=integer`
+  Specifies how many extra Prerequisite lists complimentary to the one default
+  list are available. Defaults to :value:`0`.
+
+:tagdef:`[TechnoType]Prerequisite.List#=list of BuildingTypes (where # is the 1-based index of the prerequisite list, the maximum specified by Prerequisite.Lists)`
+  The :type:`BuildingTypes` required to satisfy this prerequisite list. Each
+  list is checked on its own, and if any list is satisfied, the Prerequisite
+  requirement is satisfied.
+  
+  .. note:: \ :tag:`Prerequisite.List0`, if specified, overrides the existing
+    \ :tag:`Prerequisite` flag.
+
+.. index:: Prerequisites; Multiple separate prerequisite lists - a unit can 
     require any one of several sets of buildings.
 
 .. versionadded:: 0.1
