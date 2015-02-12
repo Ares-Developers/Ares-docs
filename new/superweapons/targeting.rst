@@ -187,7 +187,12 @@ Defaults
 --------
 
 The following table lists the defaults for the AI targeting tags depending on
-the mode, as well as some general properties.
+:tag:`SW.AITargeting`, as well as some general properties that affect targeting.
+
+Note that the defaults used depend on the super weapon's :tag:`Type`, and the
+type always takes precedence. See the specific super weapon type documentation
+for the actual values. If no specific value is given, the value from this table
+is used.
 
 **Requires Enemy** means that this targeting mode will only select a target
 automatically if the house has settled for a favorite enemy player. This is
