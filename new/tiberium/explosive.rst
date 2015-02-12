@@ -2,7 +2,8 @@ Tiberium Explosive
 ``````````````````
 
 Tiberium Explosive is the feature that harvester units detonate violently on
-destruction. It is not to be confused with the similarily named Tiberium Explosion. TODO TODO
+destruction. It is not to be confused with the similarily named Tiberium
+Explosion.
 
 The damage to deliver depends on :tag:`Power` of the contained tiberium bails.
 This is like it was in :game:`Firestorm`. :game:`Tiberian Sun` also added the
