@@ -51,20 +51,35 @@ Negative Prerequisites
 Multiple Alternative Prerequisites Lists
 
 
-[Unit]Prerequisite.Lists=integer
-  Specifies how many extra Prerequisite lists are available (see below).
-  Defaults to 0.
+Ares supports more than one prerequisite list. Each prerequisite list
+acts as an independent copy of the existing Prerequisite flag, and a
+minimum of one of the prerequisite lists must be satisfied for this type to
+become buildable.
 
-[Unit]Prerequisite.List#=list of BuildingTypes (where # is the 1-based index of the prerequisite list, the maximum specified by Prerequisite.Lists)
-  Each prerequisite list acts as an independent copy of the existing
-  Prerequisite flag. For example, if you set
-  Prerequisite=GAPILE,GATECH and Prerequisite.List1=NAHAND,NATECH
-  then the unit will be available to any player who owns both an Allied Barracks
-  and Battle Lab, or a Soviet Barracks and Battle Lab (a minimum of one of the
-  prerequisite lists must be satisfied). Prerequisite.List0, if
-  specified, overrides the existing Prerequisite flag.
+For example, if you set Prerequisite=GAPILE,GATECH and
+Prerequisite.List1=NAHAND,NATECH then the unit will be available to any
+player who owns both an Allied Barracks and Battle Lab, or a Soviet Barracks and
+Battle Lab.
 
-   Prerequisites; Multiple separate prerequisite lists - a unit can
+ Either Prerequisite or Prerequisite.List0 has to be
+  specified, because these are only *additional* lists and the original
+  prerequisites list is still used. If this is ignored and the list is left
+  empty, the object will become always buildable, because an empty list is
+  always satisfied.
+
+[TechnoType]Prerequisite.Lists=integer
+  Specifies how many extra Prerequisite lists complimentary to the one default
+  list are available. Defaults to 0.
+
+[TechnoType]Prerequisite.List#=list of BuildingTypes (where # is the 1-based index of the prerequisite list, the maximum specified by Prerequisite.Lists)
+  The BuildingTypes required to satisfy this prerequisite list. Each
+  list is checked on its own, and if any list is satisfied, the Prerequisite
+  requirement is satisfied.
+  
+   \ Prerequisite.List0, if specified, overrides the existing
+    Prerequisite flag.
+
+ Prerequisites; Multiple separate prerequisite lists - a unit can 
     require any one of several sets of buildings.
 
  0.1
@@ -105,13 +120,10 @@ Require Factory Built By Country
  AI ignores FactoryOwners and FactoryOwners.Forbidden on
   buildings, but not on units.
 
- When undeploying, buildings will lose their initial owner and the
-  undeployed vehicle will be initially owned by the actual player. This might
-  change in the future.
-
  Prerequisites; Require building built by certain country.
 
  0.6
+ 0.9
 
 
 Overview

@@ -16,7 +16,7 @@ Spy Plane specific tags:
   The number of spy planes to be sent out. Defaults to 1.
 [SuperWeapon]SpyPlane.Mission=mission
   The mission that the aircraft will be sent on (Guard,
-  Attack, Move, etc). Defaults to SpyPlane_Approach.
+  Attack, Move, etc). Defaults to SpyPlane Approach.
 
  Super Weapons; SpyPlane can now specify which AircraftType, how many,
   and what mission to perform.

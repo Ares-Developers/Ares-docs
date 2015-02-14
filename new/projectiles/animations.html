@@ -1,0 +1,130 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Animations and Rotates=yes &mdash; Ares 0.9 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.9',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.9 documentation" href="../../index.html" />
+    <link rel="up" title="Projectiles" href="index.html" />
+    <link rel="next" title="BallisticScatter" href="ballisticscatter.html" />
+    <link rel="prev" title="Projectiles" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ballisticscatter.html" title="BallisticScatter"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Projectiles"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Projectiles</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Projectiles</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="ballisticscatter.html"
+                        title="next chapter"><span><span class="type">BallisticScatter</span></span></a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="animations-and-rotates-yes">
+<h1>Animations and <span><span class="type">Rotates=yes</span></span><a class="headerlink" href="#animations-and-rotates-yes" title="Permalink to this headline">¶</a></h1>
+<p>Projectiles with <span><tt class="docutils literal"><span class="pre">Rotates=yes</span></tt></span> used their image&#8217;s 32 frames to represent
+moving in differnent directions, one frame per facing. This means these
+projectiles did not support being animated. <span class="game docutils literal">Ares</span> adds support for this.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[Projectile]►AnimLength=</span></tt><span class="type definition"> (integer - frames)</span></span></dt>
+<dd><p class="first">The number of frames the animation for each facing has. Playback speed is one
+frame every <span><tt class="docutils literal"><span class="pre">AnimRate</span></tt></span> frames. The animation is not guaranteed to play
+from the first frame on. Defaults to <cite>1</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><span><tt class="docutils literal"><span class="pre">AnimRate</span></tt></span> cannot be <cite>0</cite>, or a division by zero will
+crash the game once a projectile of this type is fired.</p>
+</div>
+</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.9.</span></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ballisticscatter.html" title="BallisticScatter"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Projectiles"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" >Projectiles</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

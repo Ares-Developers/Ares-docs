@@ -16,6 +16,14 @@ Enable the campaign list in uimd.ini:
 [UISettings]CampaignList=boolean
   Enables the campaign list instead of the game's default menu. Defaults to
   no.
+[UISettings]CampaignListSize=integer
+  The number of campaigns shown in the Campaign list without scrolling. The
+  number of campaigns shown cannot be less than 3. The maximum number
+  depends on ShowSummary. Defaults to 7.
+[UISettings]ShowSummary=boolean
+  Whether the campaign list displays a campaign's Summary below the
+  difficulty selection. If shown, the maximum campaign list size is 14,
+  otherwise it is 18. Defaults to yes.
 [UISettings]ShowDebugCampaigns=boolean
   Also displays campaigns in the list that have `DebugOnly=yes` set. Defaults to
   no.
@@ -29,9 +37,11 @@ You can customize the campaigns in the list by editing battlemd.ini:
   BootCampSelect for the original in-game campaigns. The selection menu
   plays them when the mouse hovers over the respective campaign's image.
 [Battle]Summary=CSF label
-  Provide an optional summary about the story of the campaign. It will be shown
-  below the difficulty slider.
+  Provide an optional summary of the campaign's or mission's story. It will be
+  shown below the difficulty slider if not disabled using
+  [UISettings]►ShowSummary.
 
  Interface; Campaign list
 
  0.2
+ 0.9

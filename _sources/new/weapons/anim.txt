@@ -1,0 +1,18 @@
+Anim for Facings
+
+
+Anim supports either a single animation as muzzle flash when this weapon
+fires, or a set of 8 animations to select from depending on the facing the
+weapon was fired in.
+
+Now you can also define 16 or 32 animations, without any further change.
+Ares will pick this up automatically and use the largest power of 2
+equal to or larger than 8 to select the best animation from for each firing
+direction.
+
+Fewer than 8 defined animations will result in only the first animation being
+used.
+
+ Weapons; Muzzle flashes for more than 8 facings
+
+ 0.9

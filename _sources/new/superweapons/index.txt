@@ -17,8 +17,9 @@ new super weapons.
 
 	:glob:
 	
-	buildinganims
+	buildings
 	general
+	availability
 	hardcoded
 	targeting
 	range

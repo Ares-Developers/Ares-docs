@@ -28,7 +28,7 @@ Wave.IsBigLaser:
  0.1
 
 The following flags are applicable to all Wave effects; the aforementioned
-Wave.Is(Big)Laser=yes as well as Sonic=yes and
+Wave.Is(Big)Laser=yes as well as IsSonic=yes and
 IsMagBeam=yes.
 
 

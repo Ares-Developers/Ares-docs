@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Migration Guide &mdash; Ares 0.8 documentation</title>
+    <title>Migration Guide &mdash; Ares 0.9 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.8',
+        VERSION:     '0.9',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.8 documentation" href="index.html" />
+    <link rel="top" title="Ares 0.9 documentation" href="index.html" />
     <link rel="next" title="Bug Fixes" href="bugfixes/index.html" />
     <link rel="prev" title="What’s New" href="whatsnew.html" /> 
   </head>
@@ -43,7 +43,7 @@
         <li class="right" >
           <a href="whatsnew.html" title="What’s New"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">Ares 0.8 documentation</a> &raquo;</li> 
+        <li><a href="index.html">Ares 0.9 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar">
@@ -58,6 +58,7 @@
 <li><a class="reference internal" href="#from-ares-0-5-and-below">From Ares 0.5 and below</a></li>
 <li><a class="reference internal" href="#from-ares-0-6-and-below">From Ares 0.6 and below</a></li>
 <li><a class="reference internal" href="#from-ares-0-7-and-below">From Ares 0.7 and below</a></li>
+<li><a class="reference internal" href="#from-ares-0-8-and-below">From Ares 0.8 and below</a></li>
 </ul>
 </li>
 </ul>
@@ -299,6 +300,39 @@ less than or equal to <cite>0.0</cite> eligible targets.</p>
 instead of using the origin.</p>
 </div></blockquote>
 </div>
+<div class="section" id="from-ares-0-8-and-below">
+<h2>From Ares 0.8 and below<a class="headerlink" href="#from-ares-0-8-and-below" title="Permalink to this headline">¶</a></h2>
+<p>Changed tags:</p>
+<blockquote>
+<div><p>The following tags have been changed to use the actual value of their default
+tags. (Continued work from earlier <span class="game docutils literal">Ares</span> releases.)</p>
+<dl class="docutils">
+<dt><span><tt class="docutils literal"><span class="pre">[BuildingType]►SecretLab.PossibleBoons</span></tt></span></dt>
+<dd>Defaults to the combination of the latest <span><tt class="docutils literal"><span class="pre">[General]►SecretInfantry</span></tt></span>,
+<span><tt class="docutils literal"><span class="pre">[General]►SecretUnits</span></tt></span> and <span><tt class="docutils literal"><span class="pre">[General]►SecretBuildings</span></tt></span>.</dd>
+</dl>
+</div></blockquote>
+<p>Other changes:</p>
+<blockquote>
+<div><p>The way projectiles deliver the new warhead effects has changed. Previously,
+they were applied on the location the projectile was supposed to hit, not
+where it actually detonated. Short distance misses still count as direct hit.
+Abduction, KillDriver and Occupant Damage are only applied on direct hits.</p>
+<p>AttachEffect only checked verses if it had an owner. Now verses are applied
+even if owner-less. Previously affected victims might not get affected any
+more.</p>
+<p>The default <span><tt class="docutils literal"><span class="pre">SW.AITargeting</span></tt></span> for <span><tt class="docutils literal"><span class="pre">Type=HunterSeeker</span></tt></span> super weapons
+has been changed from <cite>NoTarget</cite> to <cite>HunterSeeker</cite>. It now only
+fires if the house has selected a favorite enemy.</p>
+<p>The targeting type <cite>Stealth</cite> now adheres to <span><tt class="docutils literal"><span class="pre">SW.AIRequiresTarget</span></tt></span>
+and <span><tt class="docutils literal"><span class="pre">SW.AIRequiresHouse</span></tt></span> instead of <span><tt class="docutils literal"><span class="pre">SW.RequiresTarget</span></tt></span> and
+<span><tt class="docutils literal"><span class="pre">SW.RequiresHouse</span></tt></span>. The targeting type <cite>Offensive</cite> no longer
+requires <span><tt class="docutils literal"><span class="pre">SW.AffectedHouse</span></tt></span> to include <cite>enemies</cite>.</p>
+<p>Prism Forwarding now properly uses negative intensity values for supporting
+beams. A <span><tt class="docutils literal"><span class="pre">PrismSupportModifier</span></tt></span> related bug has been fixed.</p>
+<p>Lasers were often drawn too big. This has been changed.</p>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -319,11 +353,11 @@ instead of using the origin.</p>
         <li class="right" >
           <a href="whatsnew.html" title="What’s New"
              >previous</a> |</li>
-        <li><a href="index.html">Ares 0.8 documentation</a> &raquo;</li> 
+        <li><a href="index.html">Ares 0.9 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2014, The Ares Contributors.
+        &copy; Copyright 2015, The Ares Contributors.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>

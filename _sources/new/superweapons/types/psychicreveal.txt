@@ -5,13 +5,16 @@ Default values for general tags:
 
 [SuperWeapon]SW.Range=float,integer
   Range revealed by this super weapon. Defaults to
-  [CombatDamage]►PsychicRevealRadius. The default value is capped at 10,
-  mimicking the original implementation using Cell Spread. To disable this
-  limitation, set SW.Range explicitly.
+  [CombatDamage]►PsychicRevealRadius. The default value is capped at
+  10, mimicking the original implementation using Cell Spread. To
+  disable this limitation, set SW.Range explicitly. Use -1 to
+  reveal the whole map. When using full-map reveal you do not have to select a
+  target location; instead the super weapon will be fired automatically when you
+  click its cameo icon.
 [SuperWeapon]SW.Sound=Sound
   Defaults to [AudioVisual]►PsychicRevealActivateSound.
 [SuperWeapon]SW.AITargeting=enum
   Defaults to ParaDrop.
 
-
  0.2
+ 0.9

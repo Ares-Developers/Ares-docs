@@ -9,7 +9,8 @@ moving using CloakStop=yes. This tag was not working in the following
 games. Ares restores it.
 
  \ CloakStop=yes is not supported for BalloonHover=yes
-  units.
+  units. It does not work without Cloakable=yes. CLOAK ability
+  will not be affected by it.
 
 .. index: Cloak; CloakStop restored.
 
@@ -20,9 +21,9 @@ Cloak Only If Deployed
 
 
 Infantry can be made cloakable only when deployed. When undeployed, the infantry
-will decloak again. This only applies to Cloakable=yes or the
-CLOAK ability. Cloak Generators will cloak the infantry even if not
-deployed.
+will decloak again. This applies to all active cloaking abilities like
+Cloakable=yes or the CLOAK ability. Only Cloak Generators will
+cloak the infantry even if not deployed.
 
 [InfantryType]Cloakable.Deployed=boolean
   Whether this infantry is only allowed to self-cloak when deployed. Requires

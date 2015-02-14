@@ -4,6 +4,7 @@ Projectiles
 
 	:glob:
 	
+	animations
 	ballisticscatter
 	ranged
 	splits

@@ -21,3 +21,29 @@ The country the buildings are given back to is their initial owner.
  Tech Structures; Return to neutral when player defeated.
 
  0.6
+
+
+Tech Structure Notifications
+
+
+Yuri's Revenge has the CaptureEvaEvent setting that defines which
+EVA event will play if a building of a type with NeedsEngineer=yes is
+captured. Ares makes the corresponding lost event customizable and adds
+optional text messages for each of them.
+
+[BuildingType]LostEvaEvent=EVA event
+  The EVA message played when a building of this type is captured from the
+  player. Requires NeedsEngineer=yes. Defaults to
+  EVA_TechBuildingLost.
+
+[BuildingType]Message.Capture=CSF label
+  The text printed when a building of this type is captured by the player.
+  Requires NeedsEngineer=yes. Defaults to none.
+
+[BuildingType]Message.Lost=CSF label
+  The text printed when a building of this type is captured by the enemy.
+  Requires NeedsEngineer=yes. Defaults to none.
+
+ Tech Structures; EVA and text notifications when captured and lost.
+
+ 0.9

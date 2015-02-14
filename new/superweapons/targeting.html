@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Targeting &mdash; Ares 0.8 documentation</title>
+    <title>Targeting &mdash; Ares 0.9 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.8',
+        VERSION:     '0.9',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.8 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.9 documentation" href="../../index.html" />
     <link rel="up" title="Super Weapons" href="index.html" />
     <link rel="next" title="Range Limits" href="range.html" />
     <link rel="prev" title="Hardcoded Values" href="hardcoded.html" /> 
@@ -44,13 +44,25 @@
         <li class="right" >
           <a href="hardcoded.html" title="Hardcoded Values"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.8 documentation</a> &raquo;</li>
+        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
           <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">Super Weapons</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Targeting</a><ul>
+<li><a class="reference internal" href="#general-settings">General Settings</a></li>
+<li><a class="reference internal" href="#manual-target-selection">Manual Target Selection</a></li>
+<li><a class="reference internal" href="#automatic-target-selection">Automatic Target Selection</a></li>
+<li><a class="reference internal" href="#mechanisms">Mechanisms</a></li>
+<li><a class="reference internal" href="#defaults">Defaults</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="hardcoded.html"
                         title="previous chapter">Hardcoded Values</a></p>
@@ -80,10 +92,10 @@
             
   <div class="section" id="targeting">
 <h1>Targeting<a class="headerlink" href="#targeting" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="general-settings">
+<span id="index-0"></span><h2>General Settings<a class="headerlink" href="#general-settings" title="Permalink to this headline">¶</a></h2>
+<p>These settings allow to enable AI targeting even for human players.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.FireIntoShroud=</span></tt><span class="type definition"> (boolean)</span></span></dt>
-<dd>Whether or not this super weapon is allowed to fire into an unexplored area of
-the map. Default is <cite>yes</cite>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AutoFire=</span></tt><span class="type definition"> (boolean)</span></span></dt>
 <dd>Sets whether this super weapon should be launched automatically even for human
 players. If this is set to <cite>yes</cite>, the AI targeting options are used to
@@ -97,7 +109,18 @@ this super weapon. You can use this on auto-firing super weapons where the
 targeting mode might prevents it from being fired (like the Lightning Storm
 or Psychic Dominator, if another super weapon of this type is currently
 active). Defaults to <cite>yes</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.RequiresTarget=</span></tt><span class="type definition"> (enum land|water|empty|infantry|units|buildings)</span></span></dt>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.2.</span></p>
+</div>
+<div class="section" id="manual-target-selection">
+<h2>Manual Target Selection<a class="headerlink" href="#manual-target-selection" title="Permalink to this headline">¶</a></h2>
+<p>These settings only apply to human players.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.FireIntoShroud=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether or not this super weapon is allowed to fire into an unexplored area of
+the map. Default is <cite>yes</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.RequiresTarget=</span></tt><span class="type definition"> (enum none|land|water|empty|infantry|units|buildings)</span></span></dt>
 <dd><p class="first">Which items this super weapon can fire upon. Hovering above an allowed item
 will show the <span><tt class="docutils literal"><span class="pre">Cursor</span></tt></span>, otherwise the player gets the <span><tt class="docutils literal"><span class="pre">NoCursor</span></tt></span> and
 it is not possible to launch the super weapon. For an example see
@@ -111,42 +134,274 @@ the super weapon to affect anything.</p>
 </dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.RequiresHouse=</span></tt><span class="type definition"> (enum none|owner|allies|team|enemies|all)</span></span></dt>
 <dd>Which house&#8217;s items this super weapon can fire upon.</dd>
+</dl>
+<p class="versionadded" id="index-1">
+<span class="versionmodified">New in version 0.2.</span></p>
+</div>
+<div class="section" id="automatic-target-selection">
+<h2>Automatic Target Selection<a class="headerlink" href="#automatic-target-selection" title="Permalink to this headline">¶</a></h2>
+<p>Define the way the AI selects eligible targets to fire the super weapon at.</p>
+<dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></tt><span class="type definition"> (enum SW Targeting Type)</span></span></dt>
 <dd>Select one of the following values to define how the AI will use this super
 weapon:</dd>
 </dl>
-<ul class="simple">
-<li><cite>None</cite>: The AI will not use this super weapon and it cannot auto-fire.</li>
-<li><cite>LightningStorm</cite>: Targets offensively, but waits until a currently
-striking Lightning Storm subsides. Supports map action 135.</li>
-<li><cite>Nuke</cite>: Targets offensively, or strikes the waypoint set by map
-triggers. Supports map action 135.</li>
-<li><cite>PsychicDominator</cite>: Targets the largest group of enemy units. Supports
-map action 135.</li>
-<li><cite>GeneticMutator</cite>: Targets the largest group of enemy infantry (in a 3x3
-area). Supports map action 135.</li>
-<li><cite>ParaDrop</cite>: Targets the least defended cell near the enemy base.
-Supports map action 135.</li>
-<li><cite>ForceShield</cite>: Targets the position an enemy super weapon is about to
-hit to protect against it. Supports map action 140.</li>
-<li><cite>NoTarget</cite>: This super weapon doesn&#8217;t need any valid coordinates to
-strike. You can use this for map-wide super weapons.</li>
-<li><cite>Offensive</cite>: Targets offensively, without any special handling like
-<cite>LightningStorm</cite> or <cite>Nuke</cite>.</li>
-<li><cite>Stealth</cite>: Targets stealth units or buildings only. Respects
-<cite>SW.RequiresTarget</cite> and <cite>SW.RequiresHouse</cite>.</li>
-<li><cite>Base</cite>: Targets the owning player&#8217;s base center.</li>
-<li><cite>Self</cite>: Targets buildings providing this very super weapon, belonging
-to the owning player only.</li>
+<ul>
+<li><p class="first"><cite>None</cite></p>
+<p>Does not fire. Effectively disables this super weapon for the AI.</p>
+</li>
+<li><p class="first"><cite>Nuke</cite></p>
+<p>Selects a valid target using the Ion Cannon rules or picks a target by
+preferred type. Ignores cloaked targets.</p>
+</li>
+<li><p class="first"><cite>LightningStorm</cite></p>
+<p>Selects a valid target using the Ion Cannon rules or picks a target by
+preferred type. Ignores cloaked targets. Cannot fire when a Lightning Storm is
+currently active.</p>
+</li>
+<li><p class="first"><cite>PsychicDominator</cite></p>
+<p>Selects the valid target that has the most enemy units in Cell Spread range 3
+nearby that can be permanently mind-controlled. Does not fire if a preferred
+target cell is set. Ignores cloaked targets.</p>
+</li>
+<li><p class="first"><cite>GeneticMutator</cite></p>
+<p>Selects the valid target that has the most enemy infantry units in Cell Spread
+range 1 nearby. Does not fire if a preferred target cell is set. Ignores
+cloaked targets.</p>
+</li>
+<li><p class="first"><cite>ForceShield</cite></p>
+<p>Fires at the position the last super weapon with <span><tt class="docutils literal"><span class="pre">AIDefendAgainst=yes</span></tt></span>
+was fired at. This honors the <span><tt class="docutils literal"><span class="pre">AISuperDefense</span></tt></span> tags, and not all super
+weapons might be defended against.</p>
+</li>
+<li><p class="first"><cite>ParaDrop</cite></p>
+<p>Searches for a free area of 5 by 5 cells close to the favorite enemy player&#8217;s
+base center. If the owner has not settled for a favorite enemy yet, tries to
+find a location around the owning player&#8217;s base center.</p>
+</li>
+<li><p class="first"><cite>Offensive</cite></p>
+<p>Selects a valid target using the Ion Cannon rules. Ignores cloaked targets.</p>
+</li>
+<li><p class="first"><cite>MultiMissile</cite></p>
+<p>Selects a valid target by looking at the summed <span><tt class="docutils literal"><span class="pre">ThreatPosed</span></tt></span> values of
+the area around them. For cloaked targets, a random value between 0 and 100 is
+used.</p>
+</li>
+<li><p class="first"><cite>HunterSeeker</cite></p>
+<p>Fires at no target, but only if the owning player settled for a favorite
+enemy. This is only useful with certain super weapons, or when a super weapon
+has a full map effect.</p>
+</li>
+<li><p class="first"><cite>NoTarget</cite></p>
+<p>Fires at no target. This is only useful with certain super weapons, or when a
+super weapon has a full map effect.</p>
+</li>
+<li><p class="first"><cite>Stealth</cite></p>
+<p>Selects a valid target using the Ion Cannon rules. Only considers cloaked
+targets.</p>
+</li>
+<li><p class="first"><cite>Self</cite></p>
+<p>Selects a building owned by the firing player which provides this super weapon
+and satisfies power requirements. The target is the center of the building.</p>
+</li>
+<li><p class="first"><cite>Base</cite></p>
+<p>Fires at what the game considers the firing player&#8217;s base center.</p>
+</li>
+<li><p class="first"><cite>EnemyBase</cite></p>
+<p>Fires at what the game considers the base center of the firing player&#8217;s
+favorite enemy.</p>
+</li>
 </ul>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AIRequiresTarget=</span></tt><span class="type definition"> (enum none|land|water|empty|infantry|units|buildings|all)</span></span></dt>
+<dd>Specifies which targets will be considered eligible by AI players or human
+owned automatically fired super weapons. The default value depends on the
+<span><tt class="docutils literal"><span class="pre">SW.AITargeting</span></tt></span> setting. See the table below.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AIRequiresHouse=</span></tt><span class="type definition"> (enum owner|allies|team|enemies|others|all)</span></span></dt>
+<dd>Specifies which houses will be considered eligible by AI players or human
+owned automatically fired super weapons. The default value depends on the
+<span><tt class="docutils literal"><span class="pre">SW.AITargeting</span></tt></span> setting. See the table below.</dd>
+</dl>
+<p class="versionadded">
+<span class="versionmodified">New in version 0.2.</span></p>
+<p class="versionchanged">
+<span class="versionmodified">Changed in version 0.9.</span></p>
+</div>
+<div class="section" id="mechanisms">
+<h2>Mechanisms<a class="headerlink" href="#mechanisms" title="Permalink to this headline">¶</a></h2>
+<p>There are several mechanisms to select a target, but three of them are notable,
+because they are recurring.</p>
+<p>The <strong>Ion Cannon targeting</strong> rules assigns each valid object a value, which is
+determined by the <span><tt class="docutils literal"><span class="pre">[General]►AIIonCannon...</span></tt></span> tags. A target is picked
+randomly from all objects with the highest score.</p>
+<p>The <strong>base center</strong> is determined by the game and updated whenever a player
+builds or loses buildings. The base center can be manually set and cleared using
+map actions 137 and 138 respectively.</p>
+<p>The <strong>preferred target by type</strong> is set by map action 35. The game looks at the
+first team on them map owned by the firing player and has the team leader
+acquire a target of the preferred type. A value of <cite>1</cite> means to use the
+special firing behavior, which usually is Ion Cannon targeting or base center
+selection.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The AI will only respect <span><tt class="docutils literal"><span class="pre">SW.AITargeting</span></tt></span> when finding a target,
-if not noted otherwise. For example, this means <cite>Nuke</cite> cannot be used
-to target allies only.</p>
+<p class="last">Currently, <span class="game docutils literal">Ares</span> does not support preferred types other than
+<cite>1</cite>. The super weapons might not check ranges, designators, and
+inhibitors, and fire regardless of any restriction.</p>
 </div>
-<p class="versionadded" id="index-0">
-<span class="versionmodified">New in version 0.2.</span></p>
+</div>
+<div class="section" id="defaults">
+<h2>Defaults<a class="headerlink" href="#defaults" title="Permalink to this headline">¶</a></h2>
+<p>The following table lists the defaults for the AI targeting tags depending on
+<span><tt class="docutils literal"><span class="pre">SW.AITargeting</span></tt></span>, as well as some general properties that affect targeting.</p>
+<p>Note that the defaults used depend on the super weapon&#8217;s <span><tt class="docutils literal"><span class="pre">Type</span></tt></span>, and the
+type always takes precedence. See the specific super weapon type documentation
+for the actual values. If no specific value is given, the value from this table
+is used.</p>
+<p><strong>Requires Enemy</strong> means that this targeting mode will only select a target
+automatically if the house has settled for a favorite enemy player. This is
+usually determined when a player is attacked. Without a favorite enemy, the
+super weapon will not fire.</p>
+<p>The <strong>Preference</strong> is overriding the actual targeting. Offensive targets are set
+using the map action 135. Defensive targets are set using map action 140. As
+long as these overrides are set, the super weapons will prefer these targets.
+Super weapons might also hold and stop firing as long as an override is set.
+They will resume once the override is cleared using the corresponding map
+action.</p>
+<p>Most targeting modes support the new <strong>extra</strong> features added by <span class="game docutils literal">Ares</span>.
+That is maximum and minimum ranges, designators and inhibitors. Note that if a
+preferred target type is set using map action 35, they are not checked.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="24%" />
+<col width="18%" />
+<col width="16%" />
+<col width="16%" />
+<col width="7%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><span><tt class="docutils literal"><span class="pre">SW.AITargeting</span></tt></span></th>
+<th class="head"><span><tt class="docutils literal"><span class="pre">SW.AIRequiresTarget</span></tt></span></th>
+<th class="head"><span><tt class="docutils literal"><span class="pre">SW.AIRequiresHouse</span></tt></span></th>
+<th class="head">Requires Enemy</th>
+<th class="head">Preference</th>
+<th class="head">Extras</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><cite>None</cite></td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr class="row-odd"><td><cite>Nuke</cite></td>
+<td><cite>infantry,units,buildings</cite></td>
+<td><cite>enemies</cite></td>
+<td>yes</td>
+<td>offensive</td>
+<td>yes</td>
+</tr>
+<tr class="row-even"><td><cite>LightningStorm</cite></td>
+<td><cite>infantry,units,buildings</cite></td>
+<td><cite>enemies</cite></td>
+<td>yes</td>
+<td>offensive</td>
+<td>yes</td>
+</tr>
+<tr class="row-odd"><td><cite>PsychicDominator</cite></td>
+<td><cite>infantry,units</cite></td>
+<td><cite>all</cite></td>
+<td>yes</td>
+<td>hold if offensive</td>
+<td>yes</td>
+</tr>
+<tr class="row-even"><td><cite>GeneticMutator</cite></td>
+<td><cite>infantry</cite></td>
+<td><cite>all</cite></td>
+<td>no</td>
+<td>hold if offensive</td>
+<td>yes</td>
+</tr>
+<tr class="row-odd"><td><cite>ForceShield</cite></td>
+<td>do not use</td>
+<td>do not use</td>
+<td>no</td>
+<td>defensive</td>
+<td>yes</td>
+</tr>
+<tr class="row-even"><td><cite>ParaDrop</cite></td>
+<td>do not use</td>
+<td>do not use</td>
+<td>no</td>
+<td>offensive, base center</td>
+<td>yes</td>
+</tr>
+<tr class="row-odd"><td><cite>Offensive</cite></td>
+<td><cite>infantry,units,buildings</cite></td>
+<td><cite>enemies</cite></td>
+<td>yes</td>
+<td>nothing</td>
+<td>yes</td>
+</tr>
+<tr class="row-even"><td><cite>MultiMissile</cite></td>
+<td><cite>buildings</cite></td>
+<td><cite>none</cite></td>
+<td>yes</td>
+<td>offensive</td>
+<td>yes</td>
+</tr>
+<tr class="row-odd"><td><cite>HunterSeeker</cite></td>
+<td>N/A</td>
+<td>N/A</td>
+<td>yes</td>
+<td>nothing</td>
+<td>no</td>
+</tr>
+<tr class="row-even"><td><cite>NoTarget</cite></td>
+<td>N/A</td>
+<td>N/A</td>
+<td>no</td>
+<td>nothing</td>
+<td>no</td>
+</tr>
+<tr class="row-odd"><td><cite>Stealth</cite></td>
+<td><cite>infantry,units,buildings</cite></td>
+<td><cite>enemies</cite></td>
+<td>no</td>
+<td>nothing</td>
+<td>yes</td>
+</tr>
+<tr class="row-even"><td><cite>Self</cite></td>
+<td><cite>none</cite>1)</td>
+<td>do not use</td>
+<td>no</td>
+<td>nothing</td>
+<td>yes</td>
+</tr>
+<tr class="row-odd"><td><cite>Base</cite></td>
+<td>do not use</td>
+<td>do not use</td>
+<td>no</td>
+<td>base center</td>
+<td>yes</td>
+</tr>
+<tr class="row-even"><td><cite>EnemyBase</cite></td>
+<td>do not use</td>
+<td>do not use</td>
+<td>yes</td>
+<td>base center</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<p>If you define the <span><tt class="docutils literal"><span class="pre">SW.AIRequiresTarget</span></tt></span> or <span><tt class="docutils literal"><span class="pre">SW.AIRequiresHouse</span></tt></span> when
+the table says <em>do not use</em>, you might render the super weapon unable to fire.</p>
+<p>1) <cite>Self</cite> always only checks buildings owned by the owning player. You
+can only use <cite>land</cite>, <cite>water</cite>, and <cite>none</cite> here. All other
+values are invalid.</p>
+</div>
 </div>
 
 
@@ -167,13 +422,13 @@ to target allies only.</p>
         <li class="right" >
           <a href="hardcoded.html" title="Hardcoded Values"
              >previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.8 documentation</a> &raquo;</li>
+        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
           <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li><a href="index.html" >Super Weapons</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2014, The Ares Contributors.
+        &copy; Copyright 2015, The Ares Contributors.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>

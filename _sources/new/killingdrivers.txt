@@ -11,6 +11,8 @@ it, and allows others to take over the now-neutral vehicle.
   damaging the vehicle itself. The first passenger matching the vehicle's
   Operator is considered the driver. All other passengers will be
   ejected. Defaults to no.
+[Warhead]KillDriver.Owner=enumeration - civilian,special,neutral
+  Specifies the house the units are assigned to. Defaults to special.
 [Warhead]KillDriver.KillBelowPercent=float
   Specifies the percentage of health a unit can not exceed to have its driver
   killed by a KillDriver=yes warhead. A unit above this health level
@@ -35,3 +37,5 @@ See ... for more options that relate to CanDrive.
  Warheads; Warheads can be set to kill the driver of a vehicle, instead of damaging it.
 
  0.2
+
+ 0.9

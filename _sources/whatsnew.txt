@@ -6,6 +6,24 @@ This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of Ares. Internal changes, optimizations
 and updates are mentioned here only if they are notable.
 
+ Ares 0.9
+
++ **Better AI support** for super weapons and the new Ares features
+
++ **Super Weapons** support Inhibitors,
+  multiple AuxBuildings, negative AuxBuildings and owner countries, full-map PsychicReveal, and multiple Hunter Seeker
+  launches
+
++ **Buildings and upgrades** allow more than two super weapons and Oil Derrick logic
+
++ **Graphical stuff** like more than 8 facings for SHP based units and weapon muzzle flashes, as well as animated rotating projectiles
+
++ **EVA alerts and text messages** when capturing or losing tech
+  structures and if silos needed
+
++ **KillDriver** owner house can be set
+
+
  Ares 0.8
 
 + **Toggle Power** keyboard command, customizable cursors and optional

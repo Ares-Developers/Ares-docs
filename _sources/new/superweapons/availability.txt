@@ -1,0 +1,75 @@
+Availability
+
+
+The availability of super weapons can be restricted by other factors than having
+a building providing the super weapon. The building almost behaves as if it does
+not have this super weapon. For example, if a super weapon is not accessible,
+EVA will not announce its detection once the building is placed.
+
+This does not affect the way DisableableFromShell works. Only the super
+weapon set as SuperWeapon is checked for this tag, and the building
+becomes unbuildable even if the super weapon is unavailable.
+
+
+Require a Country
+
+
+Access to super weapons can be restricted by the owning player's country. If the
+country is not one of the required houses or it is a forbidden house, the super
+weapon will not become available and the cameo will never appear.
+
+[SuperWeapon]SW.RequiredHouses=list of HouseTypes
+  Specifies the houses that have access to this super weapon. All other houses
+  are forbidden from using it, and it will not become available for them.
+  Defaults to all houses.
+[SuperWeapon]SW.ForbiddenHouses=list of HouseTypes
+  Specifies the houses that can never obtain this super weapon. All other houses
+  are not denied access to it, but they also have to satisfy the
+  SW.RequiredHouses settings for it to become available. Defaults to
+  none.
+
+ Super Weapons; Availability by country
+
+ 0.9
+
+
+Auxiliary Buildings (AuxBuilding)
+
+
+The AuxBuilding feature was used in Tiberian Sun to make the
+Chemical Missile super weapon work. The Missile Silo provided both the Multi
+Missile and the Chemical Missile, but the latter also required the player to own
+a Tiberium Waste Facility to become available. Ares expands this logic.
+
+Multiple auxiliary building types are supported, and access to super weapons can
+be removed again. This allows for two buildings to provide a single super weapon
+and also to replace normal super weapons with alternative versions.
+
+[SuperWeapon]SW.AuxBuildings=list of BuildingTypes
+  Specifies the auxiliary buildings without which this super weapon cannot
+  become available. The player has to own at least one building of any of these
+  types to get access to this super weapon. Defaults to none.
+
+   Use this instead of the original AuxBuilding tag if you want
+    to have multiple auxiliary buildings.
+
+[SuperWeapon]SW.NegBuildings=list of BuildingTypes
+  Specifies the negative auxiliary buildings whose presence will cause the super
+  weapon to become unavailable. This super weapon can become available only if
+  the player does not own any building of any of these types. Defaults to
+  none.
+
+The original AuxBuilding tag now works well together with super weapons
+provided by building upgrades. A super weapon on a building upgrade will only
+become available if its AuxBuilding requirement is satisfied.
+
+ Building upgrades do not constitute valid prerequisites for super
+  weapons and thus do not suffice AuxBuilding, SW.AuxBuildings or
+  SW.NegBuildings.
+
+ Super weapons using auxiliary building logics to restrict their
+  availability do not support building animations.
+
+ Super Weapons; AuxBuilding and negative AuxBuilding
+
+ 0.9

@@ -1,0 +1,17 @@
+ OpenTopped; OpenTopped Gunner vehicles support passengers with Temporal weapons
+
+
+OpenTopped Gunner\ s and Temporal weapons
+
+
+Gunner=yes vehicles use the passenger's temporal device to fire  if it is
+equipped with a Temporal=yes weapon. This can be done safely, and the
+device is replaced once the infantry exits the vehicle. If the Gunner=yes
+vehicle is also OpenTopped=yes, the infantry with the Temporal=yes
+weapon inside is still supposed to fire on its own, but because it doesn't have
+the temporal device any more, the game crashes.
+
+Ares prevents infantry that has its temporal device taken away by the
+Gunner logic from firing out of an OpenTopped vehicle.
+
+ 0.9

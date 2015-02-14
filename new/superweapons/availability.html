@@ -1,0 +1,191 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Availability &mdash; Ares 0.9 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.9',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.9 documentation" href="../../index.html" />
+    <link rel="up" title="Super Weapons" href="index.html" />
+    <link rel="next" title="Hardcoded Values" href="hardcoded.html" />
+    <link rel="prev" title="General properties" href="general.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="hardcoded.html" title="Hardcoded Values"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="general.html" title="General properties"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Super Weapons</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Availability</a><ul>
+<li><a class="reference internal" href="#require-a-country">Require a Country</a></li>
+<li><a class="reference internal" href="#auxiliary-buildings-auxbuilding">Auxiliary Buildings (<span><span class="type">AuxBuilding</span></span>)</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="general.html"
+                        title="previous chapter">General properties</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="hardcoded.html"
+                        title="next chapter">Hardcoded Values</a></p>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="availability">
+<h1>Availability<a class="headerlink" href="#availability" title="Permalink to this headline">¶</a></h1>
+<p>The availability of super weapons can be restricted by other factors than having
+a building providing the super weapon. The building almost behaves as if it does
+not have this super weapon. For example, if a super weapon is not accessible,
+EVA will not announce its detection once the building is placed.</p>
+<p>This does not affect the way <span><tt class="docutils literal"><span class="pre">DisableableFromShell</span></tt></span> works. Only the super
+weapon set as <span><tt class="docutils literal"><span class="pre">SuperWeapon</span></tt></span> is checked for this tag, and the building
+becomes unbuildable even if the super weapon is unavailable.</p>
+<div class="section" id="require-a-country">
+<h2>Require a Country<a class="headerlink" href="#require-a-country" title="Permalink to this headline">¶</a></h2>
+<p>Access to super weapons can be restricted by the owning player&#8217;s country. If the
+country is not one of the required houses or it is a forbidden house, the super
+weapon will not become available and the cameo will never appear.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.RequiredHouses=</span></tt><span class="type definition"> (list of HouseTypes)</span></span></dt>
+<dd>Specifies the houses that have access to this super weapon. All other houses
+are forbidden from using it, and it will not become available for them.
+Defaults to all houses.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.ForbiddenHouses=</span></tt><span class="type definition"> (list of HouseTypes)</span></span></dt>
+<dd>Specifies the houses that can never obtain this super weapon. All other houses
+are not denied access to it, but they also have to satisfy the
+<span><tt class="docutils literal"><span class="pre">SW.RequiredHouses</span></tt></span> settings for it to become available. Defaults to
+<cite>none</cite>.</dd>
+</dl>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.9.</span></p>
+</div>
+<div class="section" id="auxiliary-buildings-auxbuilding">
+<h2>Auxiliary Buildings (<span><span class="type">AuxBuilding</span></span>)<a class="headerlink" href="#auxiliary-buildings-auxbuilding" title="Permalink to this headline">¶</a></h2>
+<p>The <span><tt class="docutils literal"><span class="pre">AuxBuilding</span></tt></span> feature was used in <span class="game docutils literal">Tiberian Sun</span> to make the
+Chemical Missile super weapon work. The Missile Silo provided both the Multi
+Missile and the Chemical Missile, but the latter also required the player to own
+a Tiberium Waste Facility to become available. <span class="game docutils literal">Ares</span> expands this logic.</p>
+<p>Multiple auxiliary building types are supported, and access to super weapons can
+be removed again. This allows for two buildings to provide a single super weapon
+and also to replace normal super weapons with alternative versions.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AuxBuildings=</span></tt><span class="type definition"> (list of BuildingTypes)</span></span></dt>
+<dd><p class="first">Specifies the auxiliary buildings without which this super weapon cannot
+become available. The player has to own at least one building of any of these
+types to get access to this super weapon. Defaults to <cite>none</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Use this instead of the original <span><tt class="docutils literal"><span class="pre">AuxBuilding</span></tt></span> tag if you want
+to have multiple auxiliary buildings.</p>
+</div>
+</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.NegBuildings=</span></tt><span class="type definition"> (list of BuildingTypes)</span></span></dt>
+<dd>Specifies the negative auxiliary buildings whose presence will cause the super
+weapon to become unavailable. This super weapon can become available only if
+the player does not own any building of any of these types. Defaults to
+<cite>none</cite>.</dd>
+</dl>
+<p>The original <span><tt class="docutils literal"><span class="pre">AuxBuilding</span></tt></span> tag now works well together with super weapons
+provided by building upgrades. A super weapon on a building upgrade will only
+become available if its <span><tt class="docutils literal"><span class="pre">AuxBuilding</span></tt></span> requirement is satisfied.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Building upgrades do not constitute valid prerequisites for super
+weapons and thus do not suffice <span><tt class="docutils literal"><span class="pre">AuxBuilding</span></tt></span>, <span><tt class="docutils literal"><span class="pre">SW.AuxBuildings</span></tt></span> or
+<span><tt class="docutils literal"><span class="pre">SW.NegBuildings</span></tt></span>.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Super weapons using auxiliary building logics to restrict their
+availability do not support building animations.</p>
+</div>
+<p class="versionadded" id="index-1">
+<span class="versionmodified">New in version 0.9.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="hardcoded.html" title="Hardcoded Values"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="general.html" title="General properties"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
+          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li><a href="index.html" >Super Weapons</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, The Ares Contributors.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+ Veterancy; Occupiers with Trainable=no are no longer trained.
+
+
+Occupiers are always trained even if Trainable=no
+
+
+Units occupying civilian structures or Battle Bunkers unconditionally gain
+experience from kills even if Trainable=no is set. In the original game,
+GIs, Conscipts and Initiates are all Trainable=yes, and thus the problem
+does not arise. Ares fixes this.
+
+ 0.9

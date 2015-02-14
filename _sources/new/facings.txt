@@ -1,0 +1,14 @@
+Facings on Units
+
+
+Ares supports to have more than just 8 facings for VehicleTypes.
+Set in artmd.ini:
+
+[VehicleType]Facings=integer
+  The number of facings used for SHP based units. Supports powers of 2 equal to
+  or larger than 8. Values less than 8 result in only the
+  first frame being used. Defaults to 8.
+
+ Vehicles; More than 8 facings for SHP units
+
+ 0.9

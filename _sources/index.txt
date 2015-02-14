@@ -1,4 +1,54 @@
+.. Ares documentation master file, created by
+   sphinx-quickstart on Sun Oct 23 13:14:19 2011.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+
 Ares Documentation
 
 
 Table of Contents
+
+
+
+	:glob:
+	:hidden:
+	
+	intro
+	whatsnew
+	migration
+	bugfixes/index
+	restored/index
+	new/index
+	ui-features/index
+	*
+
+
+
+	intro
+	whatsnew
+	migration
+
+
+	:maxdepth: 2
+	
+	bugfixes/index
+
+
+	:maxdepth: 3
+	
+	restored/index
+	new/index
+	ui-features/index
+	
+	comparison
+	credits
+	glossary
+
+* Overview of Ares's Bugfixes and Features
+* ...
+
+ intro.rst
+
+
+

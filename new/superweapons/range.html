@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Range Limits &mdash; Ares 0.8 documentation</title>
+    <title>Range Limits &mdash; Ares 0.9 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.8',
+        VERSION:     '0.9',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.8 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.9 documentation" href="../../index.html" />
     <link rel="up" title="Super Weapons" href="index.html" />
     <link rel="next" title="Cursors" href="cursors.html" />
     <link rel="prev" title="Targeting" href="targeting.html" /> 
@@ -44,7 +44,7 @@
         <li class="right" >
           <a href="targeting.html" title="Targeting"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.8 documentation</a> &raquo;</li>
+        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
           <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li><a href="index.html" accesskey="U">Super Weapons</a> &raquo;</li> 
       </ul>
@@ -56,6 +56,7 @@
 <li><a class="reference internal" href="#">Range Limits</a><ul>
 <li><a class="reference internal" href="#range-around-launch-site">Range around Launch Site</a></li>
 <li><a class="reference internal" href="#designators">Designators</a></li>
+<li><a class="reference internal" href="#inhibitors">Inhibitors</a></li>
 </ul>
 </li>
 </ul>
@@ -101,11 +102,6 @@ which the super weapon cannot fire.</p>
 <p>A super weapon can fire at a location, if at least one building providing this
 super weapon satisfies both range requirements. If not, the <span><tt class="docutils literal"><span class="pre">NoCursor</span></tt></span> is
 shown.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The AI does not support range checks yet. This might change in the
-future.</p>
-</div>
 <dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.RangeMaximum=</span></tt><span class="type definition"> (float - cell range)</span></span></dt>
 <dd>Distance in cells the target coordinates may be away from a player&#8217;s building
@@ -116,25 +112,22 @@ default, which usually disables this range check. Defaults to <cite>-1.0</cite>.
 providing this super weapon. Values below <cite>0.0</cite> mean type-specific
 default, which usually disables this range check. Defaults to <cite>-1.0</cite>.</dd>
 </dl>
+<p class="versionadded" id="index-0">
+<span class="versionmodified">New in version 0.8.</span></p>
 </div>
 <div class="section" id="designators">
-<span id="index-0"></span><h2>Designators<a class="headerlink" href="#designators" title="Permalink to this headline">¶</a></h2>
-<p>A designator is a unit that does the reconnaissance and provides a targeting
-area around itself. A super weapon requiring a designator can only fire at a
-location if at least one designator is in range. If no designator is in range,
-the <span><tt class="docutils literal"><span class="pre">NoCursor</span></tt></span> is shown.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The AI does not support range checks yet. This might change in the
-future.</p>
-</div>
+<h2>Designators<a class="headerlink" href="#designators" title="Permalink to this headline">¶</a></h2>
+<p>A designator is a unit or structure that does the reconnaissance and provides a
+targeting area around itself. A super weapon requiring a designator can only
+fire at a location if at least one designator is in range. If no designator is
+in range, the <span><tt class="docutils literal"><span class="pre">NoCursor</span></tt></span> is shown.</p>
 <dl class="docutils">
 <dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Designators=</span></tt><span class="type definition"> (list of TechnoTypes)</span></span></dt>
-<dd>List of units eligible for designating the target location. An empty list
-requires no designator. Defaults to <cite>none</cite>.</dd>
+<dd>List of units and structures eligible for designating the target location. An
+empty list requires no designator. Defaults to <cite>none</cite>.</dd>
 <dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AnyDesignator=</span></tt><span class="type definition"> (boolean)</span></span></dt>
-<dd>Whether any unit is considered a valid designator for this super weapon.
-Overrides <span><tt class="docutils literal"><span class="pre">SW.Designators</span></tt></span>. Defaults to <cite>no</cite>.</dd>
+<dd>Whether any unit or structure is considered a valid designator for this super
+weapon. Overrides <span><tt class="docutils literal"><span class="pre">SW.Designators</span></tt></span>. Defaults to <cite>no</cite>.</dd>
 </dl>
 <p>The designator range can be customized for each <span class="type docutils literal">TechnoType</span> individually.</p>
 <dl class="docutils">
@@ -145,6 +138,35 @@ weapons requiring this object as designator. Defaults to
 </dl>
 <p class="versionadded" id="index-1">
 <span class="versionmodified">New in version 0.8.</span></p>
+</div>
+<div class="section" id="inhibitors">
+<h2>Inhibitors<a class="headerlink" href="#inhibitors" title="Permalink to this headline">¶</a></h2>
+<p>In a sense, inhibitors are double negative designators: All enemy units and
+structures are checked instead of player owned ones, and they disallow firing a
+super weapon around them instead of being a requirement. In a positive sense,
+inhibitors protect a player from enemy super weapons.</p>
+<p>If at least one enemy inhibitor is in range, the <span><tt class="docutils literal"><span class="pre">NoCursor</span></tt></span> is shown to a
+player and the super weapon cannot fire.</p>
+<p>Buildings only inhibit firing a super weapon when they are online, that is when
+there is sufficient power for them to function or they are overpowered, and they
+suffice the <span><tt class="docutils literal"><span class="pre">NeedsEngineer</span></tt></span> requirement.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Inhibitors=</span></tt><span class="type definition"> (list of TechnoTypes)</span></span></dt>
+<dd>List of units and structures preventing this super weapon from firing close to
+any of them. An empty list means no inhibitors. Defaults to <cite>none</cite>.</dd>
+<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AnyInhibitor=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether any unit or structure is considered a valid inhibitor for this super
+weapon. Overrides <span><tt class="docutils literal"><span class="pre">SW.Inhibitors</span></tt></span>. Defaults to <cite>no</cite>.</dd>
+</dl>
+<p>The inhibitor range can be customized for each <span class="type docutils literal">TechnoType</span> individually.</p>
+<dl class="docutils">
+<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►InhibitorRange=</span></tt><span class="type definition"> (integer - cells)</span></span></dt>
+<dd>Range in cells around the unit or structure that becomes untargetable by super
+weapons having this object set as inhibitor. Defaults to
+<span><tt class="docutils literal"><span class="pre">[TechnoType]►Sight</span></tt></span>.</dd>
+</dl>
+<p class="versionadded" id="index-2">
+<span class="versionmodified">New in version 0.9.</span></p>
 </div>
 </div>
 
@@ -166,13 +188,13 @@ weapons requiring this object as designator. Defaults to
         <li class="right" >
           <a href="targeting.html" title="Targeting"
              >previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.8 documentation</a> &raquo;</li>
+        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
           <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li><a href="index.html" >Super Weapons</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2014, The Ares Contributors.
+        &copy; Copyright 2015, The Ares Contributors.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>

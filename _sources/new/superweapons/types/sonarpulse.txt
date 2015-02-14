@@ -2,16 +2,16 @@ Type=SonarPulse
 
 
 The Sonar Pulse is a variation of the original Sonar Pulse known from
-Red Alert -- it will cause any cloaked units in range or on the entire
-map to temporarily decloak, even if it is under a Cloak Generator or not.
+Red Alert -- it will cause any cloaked object either in range or on the
+entire map to temporarily decloak, even if it is cloaked by a Cloak Generator.
 
 Default values for general tags:
 
 [SuperWeapon]SW.Range=float,integer
-  The radius, in cells, that the decloak effect will be applied. Use negative
-  values to reveal all units on the map. When using full-map sonar you don't
-  have to select a target location, instead the super weapon will be fired when
-  you click its cameo icon. Defaults to 10.
+  The radius, in cells, that the decloak effect will be applied. Use -1
+  to reveal all units on the map. When using full-map sonar you don't have to
+  select a target location; instead the super weapon will be fired when you
+  click its cameo icon. Defaults to 10.
 [SuperWeapon]SW.AITargeting=enum
   Defaults to Stealth.
 [SuperWeapon]SW.AffectsHouse=enum
@@ -20,7 +20,12 @@ Default values for general tags:
 [SuperWeapon]SW.AffectsTarget=enum
   Specifies which types the sonar affects. Defaults to water, all unit
   types situated on water cells.
-
+[SuperWeapon]SW.RequiresTarget=enum
+  Specifies where human players can fire the sonar at, which excludes land by
+  default. Defaults to water.
+[SuperWeapon]SW.AIRequiresTarget=enum
+  Specifies where AI players can fire the sonar at, which excludes land by
+  default. Defaults to water.
 
 Sonar Pulse specific tags:
 

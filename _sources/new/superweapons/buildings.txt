@@ -1,0 +1,36 @@
+Building Options
+
+
+Multiple Super Weapons on a Building
+
+
+[BuildingType]SuperWeapons= list of SuperWeaponTypes
+  Comma separated list of SuperWeaponTypes which are granted by this
+  building in addition to the ones defined as SuperWeapon and
+  SuperWeapon2. Defaults to none.
+
+  Each individual super weapon can be granted conditionally. The first available super weapon determines
+  the EVA event played when a building of this type is placed, and its charge
+  state is indicated by the building animations.
+
+   This feature primarily supports providing access to additional super
+    weapons. Note that SuperWeapon and SuperWeapon2 are still
+    considered special, and not all aspects of the logic have been expanded.
+
+ Super Weapons; Unlimited super weapons on buildings
+
+ 0.9
+
+
+Building Animations
+
+
+Buildings can display specific animations for when the attached super weapon is
+charging, is nearly charged (1 minute remaining in the normal game), is ready to
+be fired, and when it fires. However, in Yuri's Revenge, these
+animations only work properly for the original super weapons. In Ares,
+these will work for any super weapon. 
+
+ Super Weapons; Building animations played correctly for new super weapons.
+
+ 0.1

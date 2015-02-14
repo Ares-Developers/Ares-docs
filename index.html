@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Ares Documentation &mdash; Ares 0.8 documentation</title>
+    <title>Ares Documentation &mdash; Ares 0.9 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -17,7 +17,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.8',
+        VERSION:     '0.9',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.8 documentation" href="#" />
+    <link rel="top" title="Ares 0.9 documentation" href="#" />
     <link rel="next" title="Introduction" href="intro.html" /> 
   </head>
   <body>
@@ -39,7 +39,7 @@
         <li class="right" >
           <a href="intro.html" title="Introduction"
              accesskey="N">next</a> |</li>
-        <li><a href="#">Ares 0.8 documentation</a> &raquo;</li> 
+        <li><a href="#">Ares 0.9 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar">
@@ -141,6 +141,7 @@
 <li class="toctree-l2"><a class="reference internal" href="migration.html#from-ares-0-5-and-below">From Ares 0.5 and below</a></li>
 <li class="toctree-l2"><a class="reference internal" href="migration.html#from-ares-0-6-and-below">From Ares 0.6 and below</a></li>
 <li class="toctree-l2"><a class="reference internal" href="migration.html#from-ares-0-7-and-below">From Ares 0.7 and below</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migration.html#from-ares-0-8-and-below">From Ares 0.8 and below</a></li>
 </ul>
 </li>
 </ul>
@@ -229,6 +230,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="new/enemywrench.html">Enemy Wrench</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/evatypes.html">EVA Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/facings.html"><span><span class="type">Facings</span></span> on Units</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/factoriesandcloning.html">Factories and Cloning</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/factoriesandcloning.html#different-factories-for-units-kennels">Different factories for units (Kennels)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/factoriesandcloning.html#cloning-vats-for-vehicletypes">&#8220;Cloning Vats&#8221; for <span class="type docutils literal">VehicleTypes</span></a></li>
@@ -279,6 +281,7 @@
 <li class="toctree-l3"><a class="reference internal" href="new/prismforwarding.html#special-note-regarding-prism-forwarding">Special Note Regarding Prism Forwarding</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="new/producecash.html">Oil Derricks (<span><span class="type">ProduceCash</span></span>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/radarjammers.html">Radar Jammers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/reverseengineerlogic.html">Reverse Engineer logic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/scorchflamer.html"><span><span class="type">Scorch</span></span> and <span><span class="type">Flamer</span></span></a></li>
@@ -307,6 +310,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="new/teamretaliate.html">Team Retaliate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/techstructures.html">Tech Structures Return to Neutral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/techstructures.html#tech-structure-notifications">Tech Structure Notifications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/togglepower.html">Toggle Power</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/togglepower.html#keyboard-command">Keyboard Command</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/togglepower.html#cursors">Cursors</a></li>
@@ -339,6 +343,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="new/projectiles/index.html">Projectiles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new/projectiles/animations.html">Animations and <span><span class="type">Rotates=yes</span></span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/projectiles/ballisticscatter.html"><span><span class="type">BallisticScatter</span></span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/projectiles/ranged.html"><span><span class="type">Ranged</span></span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/projectiles/splits.html"><span><span class="type">Splits</span></span> and <span><span class="type">Airburst</span></span></a></li>
@@ -346,6 +351,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="new/weapons/index.html">Weapons</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/weapons/weapontypes.html"><span><span class="type">[WeaponTypes]</span></span> Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/weapons/anim.html"><span><span class="type">Anim</span></span> for Facings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/weapons/damage.html">Ordinary Damage for <span><span class="type">IsSonic</span></span> and <span><span class="type">UseFireParticles</span></span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/weapons/ivanbombs.html">Ivan Bombs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/weapons/radiation.html">Radiation Beams</a></li>
@@ -368,8 +374,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="new/superweapons/index.html">Super Weapons</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="new/superweapons/buildinganims.html">Building Animations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/superweapons/buildings.html">Building Options</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/superweapons/general.html">General properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/superweapons/availability.html">Availability</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/superweapons/hardcoded.html">Hardcoded Values</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/superweapons/targeting.html">Targeting</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/superweapons/range.html">Range Limits</a></li>
@@ -634,11 +641,11 @@ changes/additions rely on. This MIX file presently includes:</p>
         <li class="right" >
           <a href="intro.html" title="Introduction"
              >next</a> |</li>
-        <li><a href="#">Ares 0.8 documentation</a> &raquo;</li> 
+        <li><a href="#">Ares 0.9 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2014, The Ares Contributors.
+        &copy; Copyright 2015, The Ares Contributors.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
   </body>

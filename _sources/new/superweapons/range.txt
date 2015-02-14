@@ -17,9 +17,6 @@ A super weapon can fire at a location, if at least one building providing this
 super weapon satisfies both range requirements. If not, the NoCursor is
 shown.
 
- The AI does not support range checks yet. This might change in the
-  future.
-
 [SuperWeapon]SW.RangeMaximum=float - cell range
   Distance in cells the target coordinates may be away from a player's building
   providing this super weapon. Values below 0.0 mean type-specific
@@ -32,25 +29,24 @@ shown.
 
  Super Weapons; Limit minimum and maximum firing range.
 
+ 0.8
+
 
 Designators
 
 
-A designator is a unit that does the reconnaissance and provides a targeting
-area around itself. A super weapon requiring a designator can only fire at a
-location if at least one designator is in range. If no designator is in range,
-the NoCursor is shown.
-
- The AI does not support range checks yet. This might change in the
-  future.
+A designator is a unit or structure that does the reconnaissance and provides a
+targeting area around itself. A super weapon requiring a designator can only
+fire at a location if at least one designator is in range. If no designator is
+in range, the NoCursor is shown.
 
 [SuperWeapon]SW.Designators=list of TechnoTypes
-  List of units eligible for designating the target location. An empty list
-  requires no designator. Defaults to none.
+  List of units and structures eligible for designating the target location. An
+  empty list requires no designator. Defaults to none.
 
 [SuperWeapon]SW.AnyDesignator=boolean
-  Whether any unit is considered a valid designator for this super weapon.
-  Overrides SW.Designators. Defaults to no.
+  Whether any unit or structure is considered a valid designator for this super
+  weapon. Overrides SW.Designators. Defaults to no.
 
 The designator range can be customized for each TechnoType individually.
 
@@ -62,3 +58,38 @@ The designator range can be customized for each TechnoType individually.
  Super Weapons; Designators providing targets.
 
  0.8
+
+
+Inhibitors
+
+
+In a sense, inhibitors are double negative designators: All enemy units and
+structures are checked instead of player owned ones, and they disallow firing a
+super weapon around them instead of being a requirement. In a positive sense,
+inhibitors protect a player from enemy super weapons.
+
+If at least one enemy inhibitor is in range, the NoCursor is shown to a
+player and the super weapon cannot fire.
+
+Buildings only inhibit firing a super weapon when they are online, that is when
+there is sufficient power for them to function or they are overpowered, and they
+suffice the NeedsEngineer requirement.
+
+[SuperWeapon]SW.Inhibitors=list of TechnoTypes
+  List of units and structures preventing this super weapon from firing close to
+  any of them. An empty list means no inhibitors. Defaults to none.
+
+[SuperWeapon]SW.AnyInhibitor=boolean
+  Whether any unit or structure is considered a valid inhibitor for this super
+  weapon. Overrides SW.Inhibitors. Defaults to no.
+
+The inhibitor range can be customized for each TechnoType individually.
+
+[TechnoType]InhibitorRange=integer - cells
+  Range in cells around the unit or structure that becomes untargetable by super
+  weapons having this object set as inhibitor. Defaults to
+  [TechnoType]►Sight.
+
+ Super Weapons; Inhibitors disallowing targeting.
+
+ 0.9

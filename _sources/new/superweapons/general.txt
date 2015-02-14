@@ -16,11 +16,12 @@ General properties
   values by comma. team equals owner,allies, all
   equals owner,allies,enemies. Defaults to team for the Force
   Shield, to all otherwise.
-[SuperWeapon]SW.AffectsTarget=enum land|water|empty|infantry|units|buildings
+[SuperWeapon]SW.AffectsTarget=enum none|land|water|empty|infantry|units|buildings
   Which items are allowed to be affected by this super weapon. You can combine
   multiple values by comma. If you don't specify either land or water, both will
   be allowed. If you don't specify any of the other values, everything can be
-  affected. For example, SW.AffectsTarget=land,buildings affects all
+  affected. Thus, if you specify no restriction (none), all targets are
+  valid. For example, SW.AffectsTarget=land,buildings affects all
   buildings that aren't water-bound, SW.AffectsTarget=water affects every
   water cell, occupied or empty.
 [SuperWeapon]SW.ShowCameo=boolean
