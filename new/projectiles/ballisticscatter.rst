@@ -12,7 +12,7 @@ Both tags require :tag:`Inaccurate=yes` and :tag:`Arcing=yes`.
 :tagdef:`[Projectile]BallisticScatter.Min=float - cell range`
   The minimum range in cells a projectile can scatter. Defaults to
   :tag:`[CombatDamage]BallisticScatter` :value:`/ 2` if :tag:`FlakScatter=no` or
-  :tag:`Invisible=yes`, to :value:`0` otherwise.
+  :tag:`Inviso=yes`, to :value:`0` otherwise.
 
 :tagdef:`[Projectile]BallisticScatter.Max=float - cell range`
   The maximum range in cells a projectile can scatter. Defaults to
