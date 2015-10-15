@@ -78,8 +78,9 @@ Super Weapons
 
 :tagdef:`[BuildingType]SpyEffect.ResetSuperweapons=boolean`
   Whether or not spying this enemy building will cause all super weapons
-  attached to it (:tag:`SuperWeapon`, :tag:`SuperWeapon2` and all super weapons
-  on attached upgrades) to have their countdown timers restarted.
+  attached to it (:tag:`SuperWeapon`, :tag:`SuperWeapon2`, :tag:`SuperWeapons`
+  and all super weapons on attached upgrades) to have their countdown timers
+  restarted.
 
 
 .. _`spybehavior-stolentech`:
