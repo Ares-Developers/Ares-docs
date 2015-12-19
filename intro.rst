@@ -87,14 +87,6 @@ supported).
 	future.
 
 
-Known Minor Issues
-~~~~~~~~~~~~~~~~~~
-Solid Buildings vs. Invisible Projectiles
------------------------------------------
-The SolidHeight/Solid Buildings functionality does not work with
-invisible projectiles yet. (`Issue #888
-<http://bugs.renegadeprojects.com/view.php?id=888>`_)
-
 Required Changes For Mods Using Ares
 ====================================
 Unfortunately, :game:`Ares` will not simply "work" without changes to the

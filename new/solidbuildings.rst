@@ -2,29 +2,82 @@ Solid Buildings
 ~~~~~~~~~~~~~~~
 
 Buildings can now be made 'solid' to projectiles, meaning that projectiles will
-detonate when hitting a building rather than passing through it.
+detonate when hitting a building rather than passing through it. Units are aware
+of Solid Buildings, and they will try to find a better firing position when
+attacking a target and an obstacle is in the way.
 
-In :file:`rulesmd.ini`:
+The solid level makes it possible to distinguish between Solid Buildings a unit
+should consider indestructible and thus move to a better place to attack, and
+Solid Buildings that should be considered collateral damage. In the latter case
+the building is destroyed first before the target behind it can be damaged, like
+walls around a walled in structure.
+
+Only enemy buildings' solidity will be considered. Units will not try to fire
+through allied buildings to destroy them. Open gates are never considered solid.
+
+.. quickstart:: Setting the Apocalype Tank weapon's projectile to
+  \ :tag:`SolidLevel=1` will make the tank ignore all Solid Buildings with a
+  lower level in its path and just fire at its targets. The projectiles will hit
+  the buildings and destroy them, then the actual target.
+
+.. quickstart:: Setting a gate to :tag:`SolidHeight=-1` and :tag:`SolidLevel=0`
+  will make it a Solid Building still, but units will try to tear it down while
+  trying to shoot at a target behind it, just like walls. If the gate is closed,
+  it will take damage when units try to hit a target behind it, but when it is
+  open, the projectiles will pass. 
+
+.. index:: Buildings; Buildings can be made solid (like walls) to certain
+  projectiles.
+
+.. versionadded:: 0.1
+.. versionchanged:: 0.A
+
+
+The Attackers - Enabling Projectiles
+````````````````````````````````````
 
 :tagdef:`[Projectile]SubjectToBuildings=boolean`
   Whether or not this projectile can be blocked by solid buildings. Defaults to
   :value:`no`.
 
+:tagdef:`[Projectile]SolidLevel=integer`
+  The highest level of solidity this projectile will consider as easily
+  destructible when targeting. If a Solid Building with a solidity level of this
+  or lower is in the way to the actual target, the unit will fire anyhow, first
+  destroying all obstacles. If it is lower than the building's level, then the
+  unit cannot fire and has to reposition itself. Defaults to :value:`0`.
 
-In :file:`artmd.ini`:
+  .. note:: Certain drawing effects like lasers will be drawn as if they have
+    hit the actual target when in fact the Solid Building was hit and took the
+    damage. This graphical glitch might be resolved in the future.
 
-:tagdef:`[BuildingArt]SolidHeight=integer - cells`
+
+The Defenders - Solidity of Buildings
+`````````````````````````````````````
+
+:tagdef:`[BuildingType]SolidHeight=integer - cells`
   How tall the solid part of the building is considered to be, measured in cells
   (each cell has a height of 256 leptons), so buildings with a large amount of
   clear space near their top can allow projectiles to fly through that space.
   Negative values (e.g. :value:`-1`) tell the game to consider the building's
   full :tag:`Height` as solid. Default is :value:`0`, meaning the building is
   not at all solid (as per the normal game).
-  
+
   .. note:: The solid building logic does not lend itself well to
     non-rectangular buildings, such as the Paris Tower or Space Needle.
-  
-.. index:: Buildings; Buildings can be made solid (like walls) to certain
-  projectiles.
 
-.. versionadded:: 0.1
+:tagdef:`[BuildingType]SolidLevel=integer`
+  The solidity of this building. Defaults to :value:`1`.
+
+
+Global Settings
+```````````````
+
+There is a global setting that defines whether allied bullets generally can
+pass Solid Buildings. This mirrors :tag:`AlliedWallTransparency`.
+
+:tagdef:`[CombatDamage]AlliedSolidTransparency=bool`
+  Whether buildings of allied players are considered transparent for firing
+  through them even if solid. If :value:`yes`, owning players and their allies
+  can fire through a building without the bullet hitting it. Defaults to
+  :value:`no`.

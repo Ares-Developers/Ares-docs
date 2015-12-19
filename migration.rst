@@ -296,3 +296,16 @@ Other changes:
   beams. A :tag:`PrismSupportModifier` related bug has been fixed.
 
   Lasers were often drawn too big. This has been changed.
+
+From Ares 0.9 and below
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Changed tags:
+
+  No changes required.
+
+Other changes:
+
+  Solid Buildings have been reworked. The feature now works with invisible
+  projectiles. Also, units will now change positions instead of just firing
+  through a Solid Building.
