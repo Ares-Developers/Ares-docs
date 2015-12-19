@@ -1,0 +1,17 @@
+.. index:: Visual Effects; Visual Effects turning off on slower game speeds
+
+=======================================
+Visual Effects Switched Off Erratically
+=======================================
+
+When the frame rate drops, the game tries to increase it again by turning off
+certain visual effects like lasers, waves, and electro bolts, and some
+animations with :tag:`DetailLevel=2`. Lasers will fall back to draw a simpler
+variant using a bold line, animations disappear, and so on. When the frame rate
+increases again, the effects are turned back on.
+
+This did not happen if the game speed is set to a slower frame rate, because
+then it would always be detected as too low. :game:`Ares` fixes this, and the
+visual effects will render with high quality even in slower game speeds.
+
+.. versionadded:: 0.A
