@@ -9,6 +9,7 @@ the game.
 	
 	*
 	sidescountries/index
+	buildings/index
 	cloak/index
 	projectiles/index
 	weapons/index

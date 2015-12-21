@@ -1,0 +1,7 @@
+Buildings
+~~~~~~~~~
+
+.. toctree::
+	:glob:
+	
+	*

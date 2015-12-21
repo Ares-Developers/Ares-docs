@@ -81,7 +81,7 @@ minor bugs and also extend it to provide a full set of Prism networking options.
     a healing weapon.
     
   You can input your own values into the :download:`Prism Forwarding spreadsheet
-  <../extras/PrismForwarding.xls>` to see the effect this has on the damage
+  </extras/PrismForwarding.xls>` to see the effect this has on the damage
   dealt by your prism networks.
 
 :tagdef:`[BuildingType]PrismForwarding.MyHeight=integer - leptons`
