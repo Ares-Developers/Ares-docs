@@ -85,6 +85,25 @@ set.
   Defines the warhead the missile uses to deliver damage when launching from
   an elite unit. Defaults to :value:`none`.
 
+Instead of using the pair of damage and warhead settings to deliver damage, it
+is also possible to define a weapon that will fire when the missile explodes.
+The weapon is used to control projectile, warhead, damage and bright settings
+of a bullet that detonates immediately.
+
+Note that missiles will not fall back to :tag:`Missile.Weapon` for elite units
+in case :tag:`Missile.EliteWeapon` is not set. :tag:`Missile.EliteDamage` and
+:tag:`Missile.EliteWarhead` are used instead.
+
+:tagdef:`[AircraftType]Missile.Weapon=Weapon`
+  The weapon used to deliver damage. If not set, :tag:`Missile.Damage` and
+  :tag:`Missile.Warhead` are used to create the explosion. Defaults to
+  :value:`none`.
+
+:tagdef:`[AircraftType]Missile.EliteWeapon=Weapon`
+  The weapon used to deliver damage. If not set, :tag:`Missile.EliteDamage` and
+  :tag:`Missile.EliteWarhead` are used to create the explosion. Defaults to
+  :value:`none`.
+
 Aside from the missile settings you can customize the takeoff and trailer
 animations. These settings can be used for any missile, whether they are custom
 or not. :game:`Ares` also optimizes away the lookup of the animation types,
@@ -106,3 +125,4 @@ missile.
 .. index:: Missiles; Add new and customize the original missile types.
 
 .. versionadded:: 0.3
+.. versionchanged:: 0.A
