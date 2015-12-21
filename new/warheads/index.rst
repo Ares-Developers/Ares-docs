@@ -13,3 +13,4 @@ Warheads
 	preimpactanim
 	infantry
 	berserk
+	deathweapon
