@@ -309,3 +309,6 @@ Other changes:
   Solid Buildings have been reworked. The feature now works with invisible
   projectiles. Also, units will now change positions instead of just firing
   through a Solid Building.
+
+  The Firestorm Wall active and idle animations will now draw in the building's
+  palette, while they were drawn using the animation palette before.
