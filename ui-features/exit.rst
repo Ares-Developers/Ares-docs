@@ -1,0 +1,17 @@
+Exit Without Confirmation
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The game always asks the player for confirmation when clicking the Exit Game
+button in the main menu. So, players have to click twice before the game
+acutally closes. :game:`Ares` adds an option to change this extra step.
+
+In :file:`uimd.ini`:
+
+:tagdef:`[UISettings]QuickExit=boolean`
+  Whether the game shall exit immediately when clicking the Exit Game button.
+  Otherwise a message box is shown and the player can still abort closing the
+  game. Defaults to :value:`no`.
+
+.. index:: Menu; Single-click Exit without confirmation
+
+.. versionadded:: 0.A
