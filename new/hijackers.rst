@@ -41,6 +41,10 @@ to change whether a unit can be hijacked.
   \ :tag:`VehicleThief=yes` can be combined with :tag:`CanDrive=yes` without
   problems.
 
+Hijackers remember their health and their previous veterancy level. When the
+vehicle they stole are destroyed, they respawn with a random health up to half
+their previous health, and their old rank.
+
 Hijacking works well together with Mind Control now. If a mind-controlled unit
 is captured, the connection to the controller is broken and there will be no
 bogus links left behind. Likewise, mind-controlled hijackers will capture
