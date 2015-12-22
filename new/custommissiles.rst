@@ -6,6 +6,15 @@ types (:tag:`V3RocketType`, :tag:`DMislType`, :tag:`CMislType`). Missiles are
 :type:`AircraftTypes` which have special logic attached to behave like a
 projectile launched from another unit and carrying a warhead to its target.
 
+.. index:: Missiles; Add new and customize the original missile types.
+
+.. versionadded:: 0.3
+.. versionchanged:: 0.A
+
+
+Making Aircraft a Missile
+`````````````````````````
+
 Instead of defining the missile settings in the :tag:`[General]` section,
 :game:`Ares` allows you to put them directly on the :type:`AircraftType`. Apart
 from that, the missiles work the same way the original launcher/missile pairs
@@ -21,6 +30,10 @@ work. This allows you to create an arbitrary number of new missiles.
     \ :tag:`V3RocketType`, :tag:`DMislType` and :tag:`CMislType`, you also have
     to define the following tags. :game:`Ares` will not default to the original
     game tags for these types defined in the :tag:`[General]` section.
+
+
+Custom Missile Settings
+```````````````````````
 
 The following tags are used only if :tag:`[AircraftType]Missile.Custom=yes` is
 set.
@@ -60,14 +73,6 @@ set.
   Defines the cruising altitude in leptons at which height missile begins
   leveling off. Defaults to :value:`0`.
 
-:tagdef:`[AircraftType]Missile.Damage=integer`
-  Defines how much damage the missile does when launched from a rookie or
-  veteran unit. Defaults to :value:`0`.
-
-:tagdef:`[AircraftType]Missile.EliteDamage=integer`
-  Defines how much damage the missile does when launched from an elite unit.
-  Defaults to :value:`0`.
-
 :tagdef:`[AircraftType]Missile.BodyLength=integer`
   Defines how long the body of the missile is in leptons. This is used to draw
   the trailer. Defaults to :value:`0`.
@@ -77,6 +82,18 @@ set.
   Otherwise the missile maintains the defined altitude. Defaults to
   :value:`no`.
 
+
+Warheads and Damage
+```````````````````
+
+:tagdef:`[AircraftType]Missile.Damage=integer`
+  Defines how much damage the missile does when launched from a rookie or
+  veteran unit. Defaults to :value:`0`.
+
+:tagdef:`[AircraftType]Missile.EliteDamage=integer`
+  Defines how much damage the missile does when launched from an elite unit.
+  Defaults to :value:`0`.
+
 :tagdef:`[AircraftType]Missile.Warhead=Warhead`
   Defines the warhead the missile uses to deliver damage when launching from
   a rookie or veteran unit. Defaults to :value:`none`.
@@ -84,6 +101,10 @@ set.
 :tagdef:`[AircraftType]Missile.EliteWarhead=Warhead`
   Defines the warhead the missile uses to deliver damage when launching from
   an elite unit. Defaults to :value:`none`.
+
+
+Alternatively Using Weapons
+```````````````````````````
 
 Instead of using the pair of damage and warhead settings to deliver damage, it
 is also possible to define a weapon that will fire when the missile explodes.
@@ -109,6 +130,10 @@ in case :tag:`Missile.EliteWeapon` is not set. :tag:`Missile.EliteDamage` and
   :tag:`Missile.EliteWarhead` are used to create the explosion. Defaults to
   :value:`none`.
 
+
+Trailer and Take-Off Animations
+```````````````````````````````
+
 Aside from the missile settings you can customize the takeoff and trailer
 animations. These settings can be used for any missile, whether they are custom
 or not. :game:`Ares` also optimizes away the lookup of the animation types,
@@ -127,7 +152,3 @@ missile.
   Defines the number of frames to the creation of another trailer animation.
   Defaults to :value:`3`.
 
-.. index:: Missiles; Add new and customize the original missile types.
-
-.. versionadded:: 0.3
-.. versionchanged:: 0.A
