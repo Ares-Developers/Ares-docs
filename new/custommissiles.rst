@@ -94,6 +94,11 @@ Note that missiles will not fall back to :tag:`Missile.Weapon` for elite units
 in case :tag:`Missile.EliteWeapon` is not set. :tag:`Missile.EliteDamage` and
 :tag:`Missile.EliteWarhead` are used instead.
 
+.. note:: The weapons used for the tags below must be added to the
+  \ :type:`WeaponTypes` list or they might not be parsed correctly. See the
+  \ :file:`debug.log` if the missiles still use the damage and warhead for
+  dealing damage.
+
 :tagdef:`[AircraftType]Missile.Weapon=Weapon`
   The weapon used to deliver damage. If not set, :tag:`Missile.Damage` and
   :tag:`Missile.Warhead` are used to create the explosion. Defaults to
