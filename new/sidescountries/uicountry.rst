@@ -82,8 +82,8 @@ tag. For single player mission loading themes, please see :doc:`Campaign Load
 Screen </ui-features/campaignloadscreen>`.
 
 :tagdef:`[Country]LoadingTheme=theme id`
-  The theme playing for a player of this side while the multiplayer match is
-  loading. Defaults to :value:`LOADING`.
+  The theme playing for a player of this country while the multiplayer match is
+  loading. Defaults to :tag:`[Side]LoadingTheme`.
 
 .. versionadded:: 0.1
 .. versionchanged:: 0.7

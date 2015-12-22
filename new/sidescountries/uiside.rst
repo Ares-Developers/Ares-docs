@@ -1,5 +1,5 @@
-User Interface
-~~~~~~~~~~~~~~
+User Interface and Loading Theme
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sidebar
 -------
@@ -53,6 +53,16 @@ to be set.
 The palette used to draw the background of dialog boxes for this side. Defaults
 to :value:`DIALOG.PAL` for sides 1 and 2, to :value:`DIALOG.PAL` otherwise.
 Requires :tag:`DialogBackground.Image` to be set.
+
+.. versionadded:: 0.7
+
+
+Loading Theme
+-------------
+
+:tagdef:`[Side]LoadingTheme=theme id`
+  The theme playing for a player of this side while the multiplayer match is
+  loading. Defaults to :value:`LOADING`.
 
 .. versionadded:: 0.7
 
