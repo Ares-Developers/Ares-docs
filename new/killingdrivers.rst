@@ -21,6 +21,13 @@ it, and allows others to take over the now-neutral vehicle.
   Whether the driver of this vehicle cannot be killed, i.e. whether this vehicle
   is immune to :tag:`KillDriver`. :tag:`Organic=yes` and :tag:`Natural=yes`
   units are always immune to :tag:`KillDriver`. Defaults to :value:`no`.
+:tagdef:`[TechnoType]ProtectedDriver.MinHealth=double - percentage`
+  The minimum health below which the driver of this unit can be killed. If the
+  unit's health is above this, the driver cannot be killed. If
+  :tag:`KillDriver.KillBelowPercent` is also defined on the warhead, the
+  minimum of the two values is used, that is, this tag can make a unit more
+  resistant against driver killing weapons. Defaults to :value:`0.0` if
+  :tag:`ProtectedDriver=yes`, to :value:`1.0` otherwise.
 :tagdef:`[TechnoType]CanDrive=boolean`
   Whether this :type:`InfantryType` can act as the driver of vehicles whose
   driver has been killed, effectively reclaiming the vehicle. If the vehicle
