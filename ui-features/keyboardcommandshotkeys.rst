@@ -105,7 +105,7 @@ Toggle Power
 ````````````
 
 The feature known from :game:`Tiberian Sun` is now accessible from a keyboard
-command. See :doc:`Toggle Power </new/togglepower>`.
+command. See :doc:`Toggle Power </new/buildings/togglepower>`.
 
 .. versionadded:: 0.8
 

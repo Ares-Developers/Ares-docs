@@ -53,7 +53,7 @@ Iron Curtain and Force Shield specific tags:
   :value:`0` otherwise.
 
 The duration of the protection can be customized for each :type:`TechnoType`.
-See the :doc:`Force Shield Modifier </new/forceshield>` section for
+See the :doc:`Force Shield Modifier </new/buildings/forceshield>` section for
 :tag:`Type=ForceShield`, otherwise see the :ref:`Iron Curtain Effect on Warheads
 <wh-ironcurtain>` section.
 

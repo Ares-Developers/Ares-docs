@@ -18,7 +18,8 @@ and updates are mentioned here only if they are notable.
   launches </new/superweapons/types/hunterseeker>`
 
 + **Buildings and upgrades** allow :doc:`more than two super weapons
-  </new/superweapons/buildings>` and :doc:`Oil Derrick logic </new/producecash>`
+  </new/superweapons/buildings>` and :doc:`Oil Derrick logic
+  </new/buildings/producecash>`
 
 + **Graphical stuff** like more than 8 facings for :doc:`SHP based units
   </new/facings>` and :doc:`weapon muzzle flashes
@@ -26,7 +27,7 @@ and updates are mentioned here only if they are notable.
   </new/projectiles/animations>`
 
 + **EVA alerts and text messages** when :doc:`capturing or losing tech
-  structures </new/techstructures>` and if :doc:`silos needed
+  structures </new/buildings/techstructures>` and if :doc:`silos needed
   </new/tiberium/storage>`
 
 + **KillDriver** :doc:`owner house can be set </new/killingdrivers>`
@@ -35,7 +36,7 @@ and updates are mentioned here only if they are notable.
 .. rubric:: Ares 0.8
 
 + **Toggle Power** :doc:`keyboard command, customizable cursors and optional
-  support for AI players </new/togglepower>`
+  support for AI players </new/buildings/togglepower>`
 
 + **EM Pulse** :doc:`Super Weapon </new/superweapons/types/empulse>`, with lots
   of enhancements
@@ -44,7 +45,7 @@ and updates are mentioned here only if they are notable.
   and/or around designator units </new/superweapons/range>`
 
 + **Tech Academies** :doc:`are structures that allow training units with initial
-  veterancy </new/academy>`
+  veterancy </new/buildings/academy>`
 
 + **Forest Fires** :doc:`restored, optional per tree type </new/forestfires>`
 
@@ -53,8 +54,9 @@ and updates are mentioned here only if they are notable.
 
 + **Animation tags** :doc:`Scorch and Flamer have been restored </new/scorchflamer>`
 
-+ **Repair wrenches** can be :doc:`hidden from enemies <new/enemywrench>`, and
-  :doc:`no longer reveal cloaked buildings <bugfixes/type2/cloakwrench>`
++ **Repair wrenches** can be :doc:`hidden from enemies
+  <new/buildings/enemywrench>`, and :doc:`no longer reveal cloaked buildings
+  <bugfixes/type2/cloakwrench>`
 
 + **Unit Delivery** :doc:`placement changed, units guard or hunt, and support
   for giving units to neutral countries </new/superweapons/types/unitdelivery>`
@@ -98,8 +100,9 @@ and updates are mentioned here only if they are notable.
 + **Teams** can :doc:`retaliate </new/teamretaliate>` in case a member is
   attacked
 
-+ **Passable structures** :doc:`units can drive on </new/passablestructures>`
-  without side effects like the workarounds have
++ **Passable structures** :doc:`units can drive on
+  </new/buildings/passablestructures>` without side effects like the workarounds
+  have
 
 + **Dimming deactivated units** :doc:`by reason for deactivation </new/dimming>`
 
@@ -115,7 +118,7 @@ and updates are mentioned here only if they are notable.
 + **Sight** :doc:`values above 10 are supported </new/sight>`
 
 + **Tech structures** can be :doc:`returned to the neutral house when a player
-  is defeated instead of being destroyed </new/techstructures>`
+  is defeated instead of being destroyed </new/buildings/techstructures>`
 
 + **Prerequisites** that :doc:`require a factory build by a certain country
   </new/prerequisites>`
@@ -137,7 +140,8 @@ and updates are mentioned here only if they are notable.
 
 + **Drain weapons** power drain amount :doc:`made customizable </new/drain>`
 
-+ **Force Shield** :doc:`customizable per BuildingType </new/forceshield>`
++ **Force Shield** :doc:`customizable per BuildingType
+  </new/buildings/forceshield>`
 
 
 .. rubric:: Ares 0.5
@@ -191,10 +195,10 @@ and updates are mentioned here only if they are notable.
 + **Pips** :doc:`support more than only the hardcoded values </new/pips>`
 
 + **Spy Effects** now support :doc:`PCX cameos and persistent radar reveal
-  </new/spybehavior>`, and :doc:`spies can no longer infiltrate allied buildings
-  </bugfixes/type1/spyingalliedbuildings>`
+  </new/buildings/spybehavior>`, and :doc:`spies can no longer infiltrate allied
+  buildings </bugfixes/type1/spyingalliedbuildings>`
   
-+ **Gate** :doc:`sounds are now customizable </new/gates>`
++ **Gate** :doc:`sounds are now customizable </new/buildings/gates>`
 
 + **Veteran Buildings** :doc:`added to the country options
   </new/sidescountries/defaultcountry>`

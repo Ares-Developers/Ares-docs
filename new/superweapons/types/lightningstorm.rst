@@ -95,6 +95,7 @@ Lightning Storm specific tags:
 Other changes:
 
 Lightning rods attract random lightning that is about to strike in close range.
-For more information see the :doc:`Lightning Rods </new/lightningrods>` section.
+For more information see the :doc:`Lightning Rods
+</new/buildings/lightningrods>` section.
 
 .. versionadded:: 0.2
