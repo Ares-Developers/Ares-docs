@@ -8,10 +8,7 @@ various ways:
 + Primary effect: units will not respond to any commands. They will stop moving
   and will not attack anything.
 + Hovering units (such as the Robot Tank) will land.
-+ Units display the animation specified by
-  :tag:`[General]EMPulseSparkles=EMP_FX01`. Note that the :file:`emp_fx01.shp`
-  file that comes with :game:`Red Alert 2` is in the :game:`Tiberian Sun`
-  palette and needs to be converted.
++ Units display an optional sparkles animation
 + Voxel-based units are darkened (SHP-based units are not).
 + Buildings that can undeploy into vehicles (e.g. MCVs) still can, but the
   resulting vehicle will remain deactivated until the effect wears off.
@@ -237,3 +234,29 @@ and it accumulates an EMP duration of more than 100 frames.
 .. index:: EMP; EMP weapons can destroy units.
 
 .. versionadded:: 0.2
+
+
+Sparkles Animation 
+------------------
+
+When a unit or building is under the effect of EMP, it can display an optional
+animation.
+
+:tagdef:`[TechnoType]EMP.Sparkles=animation`
+  The animation played over an object of this type disabled by EMP as long as
+  the effect lasts. When the effect subsides, the animation will finish playing
+  and then disappear. Use :value:`none` to disable the animation. Defaults to
+  :tag:`[General]EMPulseSparkles`.
+
+This animation can be overridden by the warhead that initiates the EMP effect.
+
+:tagdef:`[Warhead]EMP.Sparkles=animation`
+  If set, overrides the default animation to be played on the unit or structure
+  under EMP. This only applies if the object does not already have an EMP
+  animation.
+
+.. note:: The file :file:`emp_fx01.shp` that comes with :game:`Yuri's Revenge`
+  and which is referenced by default by :tag:`[General]EMPulseSparkles` is
+  still in the :game:`Tiberian Sun` palette and needs to be converted.
+
+.. versionadded:: 0.A
