@@ -6,6 +6,34 @@ This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of :game:`Ares`. Internal changes, optimizations
 and updates are mentioned here only if they are notable.
 
+.. rubric:: Ares 0.A
+
++ **Audio improvements** like support for :doc:`multiple bag files
+  </new/misc/bagfiles>` and support for :doc:`loose wave files of arbitrary type
+  </new/misc/looseaudiofiles>`
+
++ **Solid Buildings** have been reworked to :doc:`support invisible projectiles
+  and solidity levels </new/buildings/solidbuildings>`
+
++ **Firestorm** has gotten :doc:`customizable animations and many more
+  improvements </restored/firestormwall>`
+
++ **Transports** can come from the factory with :doc:`prebuilt passengers
+  </new/initialpayload>`, can only accept :doc:`specific passengers
+  </new/passengers>`, or be :doc:`disallowed to eject their passengers manually
+  </new/manual>`
+
++ **Custom Missiles** :doc:`can use weapons instead of damage and warhead
+  </new/custommissiles>`
+
++ **Saboteurs** are sneaky :doc:`one-time building demolition troopers
+  </new/saboteur>`
+
++ **Units** can be made to :doc:`hold fire if not in area-guard mode
+  </new/canpassiveaquire>` or to :doc:`not try to crush enemies
+  </new/omnicrusher>`
+
+
 .. rubric:: Ares 0.9
 
 + **Better AI support** for :doc:`super weapons and the new Ares features
