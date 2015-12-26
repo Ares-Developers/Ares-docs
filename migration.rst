@@ -312,3 +312,6 @@ Other changes:
 
   The Firestorm Wall active and idle animations will now draw in the building's
   palette, while they were drawn using the animation palette before.
+
+  :file:`ares.csf` will always be read, no matter which language the game is run
+  in.
