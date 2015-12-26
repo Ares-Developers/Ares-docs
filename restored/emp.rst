@@ -1,13 +1,9 @@
-EMP
-~~~
+Electromagnetic Pulse (EMP)
+===========================
 
-Vehicles affected by EMP (Electromagnetic Pulse) are paralyzed in a similar
-manner to a Chrono Legionnaire erasing a unit. Unlike the Chrono Legionnaire
-however, EMP'd vehicles can still be attacked by other units.
-
-EMP paralysis affects units and buildings in various ways (given they are not
-immune to EMP, see below):
-
+EMP disables susceptible units and buildings along with their special functions
+and makes them vulnerable to attacks. EMP can affect units and buildings in
+various ways:
 
 + Primary effect: units will not respond to any commands. They will stop moving
   and will not attack anything.
@@ -18,7 +14,7 @@ immune to EMP, see below):
   palette and needs to be converted.
 + Voxel-based units are darkened (SHP-based units are not).
 + Buildings that can undeploy into vehicles (e.g. MCVs) still can, but the
-  resulting vehicle will remain EMP'd until the effect wears off.
+  resulting vehicle will remain deactivated until the effect wears off.
 + Aircraft will immediately crash.
 + Power plants cease to produce power.
 + Factories will stop working.
@@ -34,41 +30,47 @@ immune to EMP, see below):
   launched any aircraft then the aircraft will immediately crash.
 + Slave Miner slaves will stop working.
 + Units that are in their unloading state (such as ore harvesters depositing ore
-  or Siege Choppers transforming) will only become EMP'd once they have finished
-  unloading.
+  or Siege Choppers transforming) will only become deactivated once they have
+  finished unloading.
 + Harvesters that were in the middle of harvesting when hit by EMP will resume
   harvesting after EMP wears off.
 
+.. versionadded:: 0.1
 
-.. quickstart:: If you want a warhead to EMP a target for ten seconds, set
-    \ :tag:`EMP.Duration=150` on the warhead.
 
-.. note:: \ :game:`Tiberian Sun` used the weapon's :tag:`Damage` flag to
-  determine how long the EMP effect would last. :game:`Ares`, however, uses 2
-  new flags (:tag:`EMP.Duration` and :tag:`EMP.Cap`) to provide greater control.
-  The weapon's :tag:`Damage` will be delivered independently from EMP paralysis
-  (so a weapon can both damage and paralyze its target). :game:`Tiberian Sun`
-  also used the flag :tag:`EMEffect=yes`, which is not used in :tag:`Ares`.
+Defining EMP Weapons
+--------------------
+
+:game:`Tiberian Sun` used the weapon's :tag:`Damage` tag to determine how long
+the EMP effect should last. :game:`Ares`, however, uses two new tags to provide
+greater control. The weapon's :tag:`Damage` will be delivered independently from
+EMP, so a weapon can both damage and deactivate its target. :game:`Tiberian Sun`
+also used the tag :tag:`EMEffect=yes`, which is not used in :tag:`Ares`.
+
+The following two tags are used together to determine how long (in frames) the
+affected units will be affected by EMP for.
 
 :tagdef:`[Warhead]EMP.Duration=integer - frames`
   Defaults to :value:`0`.
 :tagdef:`[Warhead]EMP.Cap=integer - frames`
   Defaults to :value:`-1`.
 
-The above two flags are used together to determine how long (in frames) the
-affected units will be EMP'd for.
-
-The game keeps track of how much longer each unit will remain paralyzed. Each
+The game keeps track of how much longer each unit will remain deactivated. Each
 unit essentially has a hidden EMP counter that counts down frame by frame until
-it reaches zero, at which point the unit will be re-activated. This counter is
-what gets modified by EMP warheads.
+it reaches zero, at which point the unit will re-activate. This counter is what
+gets modified by EMP warheads.
 
 A unit does not get affected by EMP if :tag:`Verses` is equal to :value:`0%`,
 otherwise the target is endowed with the full effect.
 
-First we will look at positive :tag:`EMP.Duration` -- the targets are going to
-be paralyzed.
+.. quickstart:: If you want a warhead to EMP a target for ten seconds, set
+    \ :tag:`EMP.Duration=150` on the warhead.
 
+
+Damaging EMP
+~~~~~~~~~~~~
+
+With a positive :tag:`EMP.Duration` the targets are going to be deactivated.
 
 + :tag:`EMP.Cap` is greater than zero.
     Makes this EMP effect stackable, but capped. The target's EMP counter is
@@ -88,14 +90,14 @@ be paralyzed.
 + :tag:`EMP.Cap=0`
   Makes this EMP effect stackable, but uncapped. The target's EMP counter is
   incremented by :tag:`EMP.Duration`, without limit. This is :game:`Ares` legacy
-  behavior (before the :tag:`EMP.Cap` flag was added).
+  behavior (before the :tag:`EMP.Cap` tag was added).
 
   Example:
 
   + EMP counter is 25, :tag:`EMP.Duration=10`. Result: EMP counter will be set
     to 35. Because there is no cap, firing this warhead will always add 10.
 
-+ `EMP.Cap=-1`
++ :tag:`EMP.Cap=-1`
   The target's EMP counter is set to this absolute number of frames specified by
   :tag:`EMP.Duration`, unless the target's EMP counter is already greater than
   this.
@@ -107,8 +109,12 @@ be paralyzed.
   + EMP counter is 20, :tag:`EMP.Duration=10`. EMP counter will remain at 20,
     because it was already higher.
 
-Next we will look at negative :tag:`EMP.Duration` -- for example, a friendly
-unit trying to re-activate the already-paralyzed unit.
+
+Healing EMP
+~~~~~~~~~~~
+
+This can be used for re-activating deactivated allied units. With a negative
+:tag:`EMP.Duration`, the EMP counter is reduced by this number of frames.
 
 + :tag:`EMP.Cap=-1`
   The target's EMP counter is reduced by the number of frames specified by
@@ -135,7 +141,7 @@ unit trying to re-activate the already-paralyzed unit.
     counter will be set to 20. It is reduced to the value of the cap.
   + EMP counter is 7, `EMP.Duration=-10`. Result: EMP counter will be set to
     zero and the unit will re-activate. Even without the cap the unit would
-    reacivate.
+    reactivate.
 
 + :tag:`EMP.Cap=0`
   :tag:`EMP.Duration` does not matter because the EMP counter will be set to
@@ -143,51 +149,58 @@ unit trying to re-activate the already-paralyzed unit.
   case of the description above.
 
 
+EMP Immunity
+------------
+
+There are several ways to create units that are not affected by EMP weapons.
+
 :tagdef:`[TechnoType]ImmuneToEMP=boolean`
-  The above flag specifies whether or not the :type:`TechnoType` is immune to
-  the effects of EMP. The default immunity status is determined based on the
+  The above tag specifies whether or not the :type:`TechnoType` is immune to the
+  effects of EMP. The default immunity status is determined based on the
   following rules:
 
-    + :type:`BuildingTypes`: :tag:`ImmuneToEMP` defaults to :value:`no` for
-      :type:`BuildingTypes` that have :tag:`Powered=yes` and a negative
-      :tag:`Power=` value set. :tag:`ImmuneToEMP` defaults to :value:`no` for
-      :type:`BuildingTypes` that provide one or more of the following special
-      functions:
+  + :type:`BuildingTypes`: Defaults to :value:`no` if :tag:`Powered=yes` and
+    :tag:`Power` is negative. Defaults to :value:`no` if providing one or more
+    of the following special functions:
 
-        + Radar
-        + Super weapons
-        + Undeploy into a vehicle (e.g. Construction Yards)
-        + Powers vehicles (e.g. Robot Control Centre)
-        + Gap Generator
-        + Sensors
-        + Laser Fence Posts
+    + Radar
+    + Super weapons (:tag:`SuperWeapon` and :tag:`SuperWeapon2` only)
+    + Undeploy into a vehicle (e.g. Construction Yards)
+    + Powers vehicles (e.g. Robot Control Centre)
+    + Gap Generator
+    + Sensors
+    + Laser Fence Posts
 
-      :tag:`ImmuneToEMP` defaults to :value:`yes` for all other
-      :tag:`BuildingTypes`. For instance, power plants and pillboxes are immune
-      to EMP by default, as well as SpySat buildings and factories.
-    + :type:`InfantryTypes`: :tag:`ImmuneToEMP` defaults to :value:`yes` for
-      :type:`InfantryTypes` unless :tag:`Cyborg=yes` is set (in which case,
-      :tag:`ImmuneToEMP` defaults to :value:`no`).
-    + :type:`VehicleTypes` and :type:`AircraftTypes`: :tag:`ImmuneToEMP`
-      defaults to :value:`no` for :type:`VehicleTypes` and :type:`AircraftTypes`
-      unless :tag:`Organic=yes` is set (in which case, `ImmuneToEMP` defaults to
-      :value:`yes`).
+    Defaults to :value:`yes` otherwise.
+  + :type:`InfantryTypes`: Defaults to :value:`no` if :tag:`Cyborg=yes`, to
+    :value:`yes` otherwise.
+  + :type:`VehicleTypes` and :type:`AircraftTypes`: Defaults to :value:`yes` if
+    :tag:`Organic=yes`, to :value:`no` otherwise.
 
-  Manually setting :tag:`ImmuneToEMP` always overrides the default. EMP immunity
-  can also be granted via the new veteran/elite ability "EMPIMMUNE". Just set
-  :tag:`VeteranAbilities=EMPIMMUNE` or :tag:`EliteAbilities=EMPIMMUNE` on the
-  :type:`TechnoType`. EMP immunity also respects :tag:`TypeImmune` on the
-  :type:`TechnoType`, as well as :tag:`AffectsAllies` and :tag:`AffectsEnemies`
-  on the warhead.
+EMP immunity can also be granted using the new veteran/elite ability
+:value:`EMPIMMUNE`. Set :tag:`VeteranAbilities` or :tag:`EliteAbilities` on the
+:type:`TechnoType`.
+
+EMP immunity also respects :tag:`TypeImmune` on the :type:`TechnoType`, as well
+as :tag:`AffectsAllies` and :tag:`AffectsEnemies` on the warhead.
+
+
+Modifying the Effect Duration
+-----------------------------
+
+Instead of either affecting an object fully or not at all, :game:`Ares` allows
+to also reduce or increase the duration of EMP for each type. A high tech tank
+could thus stay deactivated longer than a normal tank, while a low tech jeep
+could reactivate sooner than the tank.
+
 :tagdef:`[TechnoType]EMP.Modifier=float - multiplier`
   If the EMP effect duration is positive it will be multiplied by this factor.
   You can create units that are more or less prone to the Electromagnetic Pulse.
-  :tag:`EMP.Modifier` defaults to :value:`100%`.
+  Defaults to :value:`100%`.
 
-.. quickstart:: If you want a unit to be immune to EMP, set
-  :tag:`ImmuneToEMP=yes` on the unit.
+
+Destructive EMP
+---------------
 
 See :doc:`/new/destroyunitsbyemp` to learn how to crash flying
 :type:`TechnoTypes` as if they were aircraft.
-
-.. versionadded:: 0.1
