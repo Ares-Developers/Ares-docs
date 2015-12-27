@@ -47,7 +47,7 @@ By default, :tag:`MultiplayPassive=yes` houses are not affected.
 
 :tagdef:`[House]Degrades=boolean`
   Whether buildings owned by this house degrade in low power situations.
-  Defaults to :value:`no` for :tag:`MultiplayPassive=yes`, to :value:`no`
+  Defaults to :value:`no` for :tag:`MultiplayPassive=yes`, to :value:`yes`
   otherwise.
 
 .. index:: Structures; Trivial Structure Damage in low power situations
