@@ -45,10 +45,14 @@ These global options can be customized per :type:`BuildingType`.
 Trivial Structure Damage can be enabled or disabled for each house indiviudally.
 By default, :tag:`MultiplayPassive=yes` houses are not affected.
 
-:tagdef:`[House]Degrades=boolean`
-  Whether buildings owned by this house degrade in low power situations.
+:tagdef:`[Country]Degrades=boolean`
+  Whether buildings owned by this country degrade in low power situations.
   Defaults to :value:`no` for :tag:`MultiplayPassive=yes`, to :value:`yes`
   otherwise.
+
+:tagdef:`[House]Degrades=boolean`
+  Whether buildings owned by this country degrade in low power situations. Only
+  supported in single player missions. Defaults to :tag:`[Country]Degrades`.
 
 .. index:: Structures; Trivial Structure Damage in low power situations
 
