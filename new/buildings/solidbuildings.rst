@@ -76,7 +76,7 @@ Global Settings
 There is a global setting that defines whether allied bullets generally can
 pass Solid Buildings. This mirrors :tag:`AlliedWallTransparency`.
 
-:tagdef:`[CombatDamage]AlliedSolidTransparency=bool`
+:tagdef:`[CombatDamage]AlliedSolidTransparency=boolean`
   Whether buildings of allied players are considered transparent for firing
   through them even if solid. If :value:`yes`, owning players and their allies
   can fire through a building without the bullet hitting it. Defaults to
