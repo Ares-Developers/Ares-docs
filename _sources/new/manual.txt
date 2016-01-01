@@ -1,0 +1,38 @@
+Manual Control
+
+
+No Manual Target Selection
+
+
+Like EMPulseCannon, this disallows players to manually select targets,
+but it neither prevents the object from picking its own targets automatically,
+nor to retaliate.
+
+[TechnoType]NoManualFire=boolean
+  Whether players may not select targets for this type of object manually. If
+  enabled, units will have to rely on auto-targeting and retaliation rules.
+  Defaults to no.
+
+ Behavior; Disallow manual target selection, Hide attack cursor
+
+ 0.A
+
+
+No Manual Passenger Unload
+
+
+This setting disallows players to manually eject the passengers. This is useful
+for vehicles that are no real transports, like Chrono Prisons.
+
+By default, passengers might still be ejected when the vehicle is destroyed. To
+change this, set the Passenger Survivor Chance
+accordingly.
+
+[VehicleType]NoManualUnload=boolean
+  Whether this vehicle is disallowed to eject its passengers. If enabled, the
+  owning player will not get deploy or no-deploy cursors. Defaults to
+  no.
+
+ Behavior; Disallow manual passenger unload, Hide unload cursor
+
+ 0.A

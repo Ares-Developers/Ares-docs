@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Type=MultiMissile &mdash; Ares 0.9 documentation</title>
+    <title>Type=MultiMissile &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../../../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../../../index.html" />
     <link rel="up" title="Settings by Super Weapon Type" href="index.html" />
     <link rel="next" title="Type=PsychicDominator" href="psychicdominator.html" />
     <link rel="prev" title="Type=LightningStorm" href="lightningstorm.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,13 +42,13 @@
         <li class="right" >
           <a href="lightningstorm.html" title="Type=LightningStorm"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="lightningstorm.html"
@@ -58,7 +56,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="psychicdominator.html"
                         title="next chapter"><span><span class="type">Type=PsychicDominator</span></span></a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../../search.html" method="get">
       <input type="text" name="q" />
@@ -77,60 +75,61 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="type-multimissile">
 <h1><span><span class="type">Type=MultiMissile</span></span><a class="headerlink" href="#type-multimissile" title="Permalink to this headline">¶</a></h1>
 <p>Default values for general tags:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Damage=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Damage=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>The damage the nuclear missile delivers. Negative values indicate to use the
 payload weapon&#8217;s damage. Defaults to <cite>-1</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Warhead=</span></tt><span class="type definition"> (Warhead)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Warhead=</span></code><span class="type definition"> (Warhead)</span></span></dt>
 <dd>The warhead used to deal the damage of the nuke. If this is empty, the payload
 weapon&#8217;s warhead will be used. Defaults to <cite>none</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.ActivationSound=</span></tt><span class="type definition"> (Sound)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.ActivationSound=</span></code><span class="type definition"> (Sound)</span></span></dt>
 <dd>The nuke warn siren played at the destination. Defaults to
-<span><tt class="docutils literal"><span class="pre">[AudioVisual]►DigSound</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></tt><span class="type definition"> (enum)</span></span></dt>
+<span><code class="docutils literal"><span class="pre">[AudioVisual]►DigSound</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></code><span class="type definition"> (enum)</span></span></dt>
 <dd>Defaults to <cite>Nuke</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Light.*=</span></tt><span class="type definition"> (integer)</span></span></dt>
-<dd>Default to <span><tt class="docutils literal"><span class="pre">Light.Ambient=200</span></tt></span>, <span><tt class="docutils literal"><span class="pre">Light.Red=175</span></tt></span>,
-<span><tt class="docutils literal"><span class="pre">Light.Green=150</span></tt></span>, and <span><tt class="docutils literal"><span class="pre">Light.Blue=125</span></tt></span> respectively.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Light.*=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd>Default to <span><code class="docutils literal"><span class="pre">Light.Ambient=200</span></code></span>, <span><code class="docutils literal"><span class="pre">Light.Red=175</span></code></span>,
+<span><code class="docutils literal"><span class="pre">Light.Green=150</span></code></span>, and <span><code class="docutils literal"><span class="pre">Light.Blue=125</span></code></span> respectively.</dd>
 </dl>
 <p>Nuclear missile specific tags:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Nuke.Payload=</span></tt><span class="type definition"> (Weapon)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Nuke.Payload=</span></code><span class="type definition"> (Weapon)</span></span></dt>
 <dd>The Weapon used to display the downward-pointing nuke and as default, if
-<span><tt class="docutils literal"><span class="pre">SW.Damage</span></tt></span> and <span><tt class="docutils literal"><span class="pre">SW.Warhead</span></tt></span> aren&#8217;t set. Defaults to
+<span><code class="docutils literal"><span class="pre">SW.Damage</span></code></span> and <span><code class="docutils literal"><span class="pre">SW.Warhead</span></code></span> aren&#8217;t set. Defaults to
 <cite>NukePayload</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Nuke.TakeOff=</span></tt><span class="type definition"> (Animation)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Nuke.TakeOff=</span></code><span class="type definition"> (Animation)</span></span></dt>
 <dd>The Animation played on the missile silo when the missile is launched.
-Defaults to <span><tt class="docutils literal"><span class="pre">[General]►NukeTakeOff</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Nuke.PsiWarning=</span></tt><span class="type definition"> (Animation)</span></span></dt>
+Defaults to <span><code class="docutils literal"><span class="pre">[General]►NukeTakeOff</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Nuke.PsiWarning=</span></code><span class="type definition"> (Animation)</span></span></dt>
 <dd>The Animation played at the nuke target, detectable by Psychic Sensors.
 Defaults to <cite>PSIWARN</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Nuke.SiloLaunch=</span></tt><span class="type definition"> (boolean)</span></span></dt>
-<dd>Whether this missile is launched from a building with <span><tt class="docutils literal"><span class="pre">NukeSilo=yes</span></tt></span>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Nuke.SiloLaunch=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether this missile is launched from a building with <span><code class="docutils literal"><span class="pre">NukeSilo=yes</span></code></span>
 providing this super weapon. Otherwise the weapon defined by
-<span><tt class="docutils literal"><span class="pre">Nuke.Payload</span></tt></span> is created off-screen, aiming for the target cell.
+<span><code class="docutils literal"><span class="pre">Nuke.Payload</span></code></span> is created off-screen, aiming for the target cell.
 Defaults to <cite>yes</cite>.</dd>
 </dl>
 <p>Other changes:</p>
-<p>Use <span><tt class="docutils literal"><span class="pre">WeaponType</span></tt></span> to control the properties of the upward flying animation
-(especially its <span><tt class="docutils literal"><span class="pre">Projectile</span></tt></span>). <span class="game docutils literal">Ares</span> respects the <span><tt class="docutils literal"><span class="pre">WeaponType</span></tt></span>
-for every nuke, it will not use the <span><tt class="docutils literal"><span class="pre">WeaponType</span></tt></span> of the first superweapon
-with <span><tt class="docutils literal"><span class="pre">Type=Nuke</span></tt></span> like <span class="game docutils literal">Yuri&#8217;s Revenge</span> did. Also mind to set
-<span><tt class="docutils literal"><span class="pre">NukeMaker=yes</span></tt></span> on the <span><tt class="docutils literal"><span class="pre">WeaponType</span></tt></span>, otherwise the nuke will not come
+<p>Use <span><code class="docutils literal"><span class="pre">WeaponType</span></code></span> to control the properties of the upward flying animation
+(especially its <span><code class="docutils literal"><span class="pre">Projectile</span></code></span>). <span class="game docutils literal">Ares</span> respects the <span><code class="docutils literal"><span class="pre">WeaponType</span></code></span>
+for every nuke, it will not use the <span><code class="docutils literal"><span class="pre">WeaponType</span></code></span> of the first superweapon
+with <span><code class="docutils literal"><span class="pre">Type=Nuke</span></code></span> like <span class="game docutils literal">Yuri&#8217;s Revenge</span> did. Also mind to set
+<span><code class="docutils literal"><span class="pre">NukeMaker=yes</span></code></span> on the <span><code class="docutils literal"><span class="pre">WeaponType</span></code></span>, otherwise the nuke will not come
 down again.</p>
-<p><span class="game docutils literal">Ares</span> supports multiple buildings with <span><tt class="docutils literal"><span class="pre">NukeSilo=yes</span></tt></span> providing this
+<p><span class="game docutils literal">Ares</span> supports multiple buildings with <span><code class="docutils literal"><span class="pre">NukeSilo=yes</span></code></span> providing this
 super weapon. <span class="game docutils literal">Yuri&#8217;s Revenge</span> only tried to find the first building type
 that matched those criteria.</p>
 <p><span class="game docutils literal">Yuri&#8217;s Revenge</span> supported the nuke impact animation only for the warhead
-called <span><tt class="docutils literal"><span class="pre">NUKE</span></tt></span>, hardcoded to <span><tt class="docutils literal"><span class="pre">NUKEBALL</span></tt></span>. To change this animation in
-<span class="game docutils literal">Ares</span>, have a look at <a class="reference internal" href="../../warheads/preimpactanim.html#preimpactanim"><em>PreImpactAnim</em></a>.</p>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.2.</span></p>
+called <span><code class="docutils literal"><span class="pre">NUKE</span></code></span>, hardcoded to <span><code class="docutils literal"><span class="pre">NUKEBALL</span></code></span>. To change this animation in
+<span class="game docutils literal">Ares</span>, have a look at <a class="reference internal" href="../../warheads/preimpactanim.html#preimpactanim"><span>PreImpactAnim</span></a>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
 </div>
 
 
@@ -139,7 +138,7 @@ called <span><tt class="docutils literal"><span class="pre">NUKE</span></tt></sp
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -151,15 +150,15 @@ called <span><tt class="docutils literal"><span class="pre">NUKE</span></tt></sp
         <li class="right" >
           <a href="lightningstorm.html" title="Type=LightningStorm"
              >previous</a> |</li>
-        <li><a href="../../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
-          <li><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

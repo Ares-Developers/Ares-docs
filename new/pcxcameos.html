@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>PCX Cameos &mdash; Ares 0.9 documentation</title>
+    <title>PCX Cameos &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Pips" href="pips.html" />
-    <link rel="prev" title="Passable Structures" href="passablestructures.html" /> 
+    <link rel="prev" title="Specific Passengers" href="passengers.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -42,21 +40,21 @@
           <a href="pips.html" title="Pips"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="passablestructures.html" title="Passable Structures"
+          <a href="passengers.html" title="Specific Passengers"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="passablestructures.html"
-                        title="previous chapter">Passable Structures</a></p>
+  <p class="topless"><a href="passengers.html"
+                        title="previous chapter">Specific Passengers</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="pips.html"
                         title="next chapter">Pips</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -75,23 +73,23 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="pcx-cameos">
 <h1>PCX Cameos<a class="headerlink" href="#pcx-cameos" title="Permalink to this headline">¶</a></h1>
 <p>Additionally, cameos can be loaded from PCX files instead of SHP.</p>
-<p>In <tt class="file docutils literal docutils literal"><span class="pre">artmd.ini</span></tt>:</p>
+<p>In <code class="file docutils literal"><span class="pre">artmd.ini</span></code>:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[UnitArt]►CameoPCX=</span></tt><span class="type definition"> (filename, *including* the .pcx extension)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[UnitArt]►CameoPCX=</span></code><span class="type definition"> (filename, *including* the .pcx extension)</span></span></dt>
 <dd>Specifies the filename containing the unit&#8217;s cameo, in the format
 &#8220;filename.pcx&#8221;.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[UnitArt]►AltCameoPCX=</span></tt><span class="type definition"> (filename, *including* the .pcx extension)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[UnitArt]►AltCameoPCX=</span></code><span class="type definition"> (filename, *including* the .pcx extension)</span></span></dt>
 <dd>Specifies the filename containing the unit&#8217;s alternate (promoted) cameo, in
 the format &#8220;filename.pcx&#8221;.</dd>
 </dl>
-<p id="index-0">In <tt class="file docutils literal docutils literal"><span class="pre">rulesmd.ini</span></tt>:</p>
+<p id="index-0">In <code class="file docutils literal"><span class="pre">rulesmd.ini</span></code>:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SidebarPCX=</span></tt><span class="type definition"> (filename, *including* the .pcx extension)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SidebarPCX=</span></code><span class="type definition"> (filename, *including* the .pcx extension)</span></span></dt>
 <dd>Specifies the filename containing the superweapon&#8217;s cameo, in the format
 &#8220;filename.pcx&#8221;.</dd>
 </dl>
@@ -100,8 +98,9 @@ the format &#8220;filename.pcx&#8221;.</dd>
 <p class="last">Like other PCX files used by the game, the PCX files used for this
 feature <em>must</em> have 256 colors and dimensions of 60x48 pixels.</p>
 </div>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.2.</span></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
 </div>
 
 
@@ -110,7 +109,7 @@ feature <em>must</em> have 256 colors and dimensions of 60x48 pixels.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -120,15 +119,15 @@ feature <em>must</em> have 256 colors and dimensions of 60x48 pixels.</p>
           <a href="pips.html" title="Pips"
              >next</a> |</li>
         <li class="right" >
-          <a href="passablestructures.html" title="Passable Structures"
+          <a href="passengers.html" title="Specific Passengers"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

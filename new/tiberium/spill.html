@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Tiberium Spill &mdash; Ares 0.9 documentation</title>
+    <title>Tiberium Spill &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../../index.html" />
     <link rel="up" title="Tiberium" href="index.html" />
     <link rel="next" title="Tiberium Heal" href="heal.html" />
     <link rel="prev" title="Storage and Silos" href="storage.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,12 +42,12 @@
         <li class="right" >
           <a href="storage.html" title="Storage and Silos"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Tiberium</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Tiberium</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="storage.html"
@@ -57,7 +55,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="heal.html"
                         title="next chapter">Tiberium Heal</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -76,7 +74,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="tiberium-spill">
 <h1>Tiberium Spill<a class="headerlink" href="#tiberium-spill" title="Permalink to this headline">¶</a></h1>
@@ -84,8 +82,8 @@
 destroyed. This behavior is applied by default in <span class="game docutils literal">Tiberian Sun</span>, and it
 is optional in <span class="game docutils literal">Ares</span>.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►TiberiumSpill=</span></tt><span class="type definition"> (boolean)</span></span></dt>
-<dd>Whether this techno with positive <span><tt class="docutils literal"><span class="pre">Storage</span></tt></span> will spill parts of its
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►TiberiumSpill=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether this techno with positive <span><code class="docutils literal"><span class="pre">Storage</span></code></span> will spill parts of its
 stored tiberium when destroyed. Defaults to <cite>no</cite>.</dd>
 </dl>
 <p>Buildings like Refineries and Silos will spill as many bails as they have
@@ -93,9 +91,10 @@ stored. The spilled tiberium type depends on the tiberium stored inside the
 building.</p>
 <p>Units like Harvesters and Slaves can spill up to 9 bails of the first resource
 from the <span class="type docutils literal">Tiberiums</span> list depending on fill state, but not more than the
-unit&#8217;s <span><tt class="docutils literal"><span class="pre">Storage</span></tt></span>.</p>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.5.</span></p>
+unit&#8217;s <span><code class="docutils literal"><span class="pre">Storage</span></code></span>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.5.</span></p>
+</div>
 </div>
 
 
@@ -104,7 +103,7 @@ unit&#8217;s <span><tt class="docutils literal"><span class="pre">Storage</span>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -116,14 +115,14 @@ unit&#8217;s <span><tt class="docutils literal"><span class="pre">Storage</span>
         <li class="right" >
           <a href="storage.html" title="Storage and Silos"
              >previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="index.html" >Tiberium</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Tiberium</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

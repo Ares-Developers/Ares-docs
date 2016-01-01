@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Type=ChronoSphere &mdash; Ares 0.9 documentation</title>
+    <title>Type=ChronoSphere &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../../../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../../../index.html" />
     <link rel="up" title="Settings by Super Weapon Type" href="index.html" />
     <link rel="next" title="Type=IronCurtain and Type=ForceShield" href="protect.html" />
     <link rel="prev" title="Type=PsychicDominator" href="psychicdominator.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,13 +42,13 @@
         <li class="right" >
           <a href="psychicdominator.html" title="Type=PsychicDominator"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../../index.html">Table Of Contents</a></h3>
   <ul>
@@ -64,7 +62,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="protect.html"
                         title="next chapter"><span><span class="type">Type=IronCurtain</span></span> and <span><span class="type">Type=ForceShield</span></span></a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../../search.html" method="get">
       <input type="text" name="q" />
@@ -83,74 +81,74 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="type-chronosphere">
 <span id="chronosphere"></span><h1><span><span class="type">Type=ChronoSphere</span></span><a class="headerlink" href="#type-chronosphere" title="Permalink to this headline">¶</a></h1>
 <p>The <cite>ChronoSphere</cite> type super weapon needs a <cite>ChronoWarp</cite> type
 super weapon. If you have more than one <cite>ChronoSphere</cite> super weapons, you
 can reuse the same <cite>ChronoWarp</cite> super weapon for all of them, or create
-dedicated super weapons if you want to. See <a class="reference internal" href="../hardcoded.html#sw-postdependent"><em>SW.PostDependent</em></a>.</p>
+dedicated super weapons if you want to. See <a class="reference internal" href="../hardcoded.html#sw-postdependent"><span>SW.PostDependent</span></a>.</p>
 <p>Default values for general tags:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Range=</span></tt><span class="type definition"> (float,integer)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Range=</span></code><span class="type definition"> (float,integer)</span></span></dt>
 <dd>Range affected by the chronoshift. Defaults to <cite>3,3</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Animation=</span></tt><span class="type definition"> (Animation)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Animation=</span></code><span class="type definition"> (Animation)</span></span></dt>
 <dd>The placement animation indicating the source location for the chronoshift.
-Defaults to <span><tt class="docutils literal"><span class="pre">[General]►ChronoPlacement</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AnimationHeight=</span></tt><span class="type definition"> (integer)</span></span></dt>
-<dd>The height the <span><tt class="docutils literal"><span class="pre">SW.Animation</span></tt></span> is played above the ground. Defaults to
+Defaults to <span><code class="docutils literal"><span class="pre">[General]►ChronoPlacement</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AnimationHeight=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd>The height the <span><code class="docutils literal"><span class="pre">SW.Animation</span></code></span> is played above the ground. Defaults to
 <cite>5</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></tt><span class="type definition"> (enum)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></code><span class="type definition"> (enum)</span></span></dt>
 <dd>Defaults to <cite>none</cite>. The AI cannot use this.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AffectsHouse=</span></tt><span class="type definition"> (enum)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AffectsHouse=</span></code><span class="type definition"> (enum)</span></span></dt>
 <dd>Specifies the houses affected by the chronoshift. Defaults to <cite>all</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AffectsTarget=</span></tt><span class="type definition"> (enum)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AffectsTarget=</span></code><span class="type definition"> (enum)</span></span></dt>
 <dd><p class="first">Specifies which types the chronoshift affects. Defaults to
 <cite>infantry,units</cite>.</p>
 <div class="last admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Please note that buildings with <span><tt class="docutils literal"><span class="pre">Chronoshift.IsVehicle=yes</span></tt></span> are
+<p class="last">Please note that buildings with <span><code class="docutils literal"><span class="pre">Chronoshift.IsVehicle=yes</span></code></span> are
 considered units and not buildings, if
-<span><tt class="docutils literal"><span class="pre">Chronosphere.ReconsiderBuildings=yes</span></tt></span> is set.</p>
+<span><code class="docutils literal"><span class="pre">Chronosphere.ReconsiderBuildings=yes</span></code></span> is set.</p>
 </div>
 </dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.PostDependent=</span></tt><span class="type definition"> (super weapon)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.PostDependent=</span></code><span class="type definition"> (super weapon)</span></span></dt>
 <dd>Specifies the super weapon used to select the target cell for the chronoshift
 by ID. Defaults to the first <cite>ChronoWarp</cite> type super weapon in the
 <span class="type docutils literal">SuperWeaponTypes</span> list.</dd>
 </dl>
 <p>Chronosphere specific tags:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.BlastSrc=</span></tt><span class="type definition"> (Animation)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.BlastSrc=</span></code><span class="type definition"> (Animation)</span></span></dt>
 <dd>The Animation played above the source when the chronoshift is started.
-Defaults to <span><tt class="docutils literal"><span class="pre">[General]►ChronoBlast</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.BlastDest=</span></tt><span class="type definition"> (Animation)</span></span></dt>
+Defaults to <span><code class="docutils literal"><span class="pre">[General]►ChronoBlast</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.BlastDest=</span></code><span class="type definition"> (Animation)</span></span></dt>
 <dd>The Animation played above the destination when the chronoshift is started.
-Defaults to <span><tt class="docutils literal"><span class="pre">[General]►ChronoBlastDest</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.ReconsiderBuildings=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+Defaults to <span><code class="docutils literal"><span class="pre">[General]►ChronoBlastDest</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.ReconsiderBuildings=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Defines whether the chronoshift will consider buildings with
-<span><tt class="docutils literal"><span class="pre">Chronoshift.IsVehicle=yes</span></tt></span> as vehicles instead. Otherwise
+<span><code class="docutils literal"><span class="pre">Chronoshift.IsVehicle=yes</span></code></span> as vehicles instead. Otherwise
 deployed-vehicle type buildings always count as buildings like with the
 original Chronosphere. Defaults to <cite>yes</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.KillOrganic=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.KillOrganic=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Defines whether the chronoshift will kill all organic units. Otherwise the
 units will not be killed by the chronoshift and teleport instead. Defaults to
 <cite>yes</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.KillTeleporters=</span></tt><span class="type definition"> (boolean)</span></span></dt>
-<dd>Defines whether the chronoshift will kill units with <span><tt class="docutils literal"><span class="pre">Teleporter=yes</span></tt></span>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.KillTeleporters=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Defines whether the chronoshift will kill units with <span><code class="docutils literal"><span class="pre">Teleporter=yes</span></code></span>
 set. Otherwise the units will be chronoshifted. Defaults to <cite>no</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.AffectsIronCurtain=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.AffectsIronCurtain=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Defines whether the chronoshift will affect iron curtained units. Otherwise
-the units will be ignored. Defaults to <span><tt class="docutils literal"><span class="pre">no</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.AffectsUnwarpable=</span></tt><span class="type definition"> (boolean)</span></span></dt>
-<dd>Defines whether the chronoshift will affect units with <span><tt class="docutils literal"><span class="pre">Warpable=no</span></tt></span> set.
-Otherwise the units will be ignored. Defaults to <span><tt class="docutils literal"><span class="pre">yes</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.AffectsUndeployable=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+the units will be ignored. Defaults to <span><code class="docutils literal"><span class="pre">no</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.AffectsUnwarpable=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Defines whether the chronoshift will affect units with <span><code class="docutils literal"><span class="pre">Warpable=no</span></code></span> set.
+Otherwise the units will be ignored. Defaults to <span><code class="docutils literal"><span class="pre">yes</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.AffectsUndeployable=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd><p class="first">Defines whether the chronoshift will affect buildings that can be undeployed
-into units again. Effectively, if a building has <span><tt class="docutils literal"><span class="pre">UndeploysInto=</span></tt></span> set and
-this value is <cite>yes</cite>, <span><tt class="docutils literal"><span class="pre">SW.AffectsTarget</span></tt></span> and
-<span><tt class="docutils literal"><span class="pre">Chronoshift.IsVehicle</span></tt></span> are bypassed and the building is chronoshifted
+into units again. Effectively, if a building has <span><code class="docutils literal"><span class="pre">UndeploysInto=</span></code></span> set and
+this value is <cite>yes</cite>, <span><code class="docutils literal"><span class="pre">SW.AffectsTarget</span></code></span> and
+<span><code class="docutils literal"><span class="pre">Chronoshift.IsVehicle</span></code></span> are bypassed and the building is chronoshifted
 with vehicle placement rules. Defaults to <cite>no</cite>.</p>
 <div class="last admonition note">
 <p class="first admonition-title">Note</p>
@@ -158,7 +156,7 @@ with vehicle placement rules. Defaults to <cite>no</cite>.</p>
 &#8220;vehicles that cannot deploy&#8221;.</p>
 </div>
 </dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.BlowUnplaceable=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.BlowUnplaceable=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Defines whether the chronoshift will destroy buildings that don&#8217;t fit in the
 target location, otherwise the buildings will stay at the source location.
 This function will not spare units that have been deployed into buildings.
@@ -168,7 +166,7 @@ Defaults to <cite>yes</cite>.</dd>
 <p>It is now possible to chronoshift buildings. Note that there is a difference to
 chronoporting units: If a building cannot be placed in the target location it
 will blow up in the source location (if the default
-<span><tt class="docutils literal"><span class="pre">Chronosphere.BlowUnplaceable=yes</span></tt></span> is used). Vehicle-type buildings will
+<span><code class="docutils literal"><span class="pre">Chronosphere.BlowUnplaceable=yes</span></code></span> is used). Vehicle-type buildings will
 try to find a fitting place just like units would.</p>
 <p>See <a class="reference internal" href="../../chronoshift.html"><em>Chronoshift</em></a> to prevent objects from being
 chronoshifted.</p>
@@ -178,21 +176,23 @@ chronoshifted.</p>
 haven&#8217;t been fixed yet. For example, buildup animations will restart and the
 turret facing is reset.</p>
 </div>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.2.</span></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
 </div>
 <div class="section" id="type-chronowarp">
 <h1><span><span class="type">Type=ChronoWarp</span></span><a class="headerlink" href="#type-chronowarp" title="Permalink to this headline">¶</a></h1>
-<p>The <span><tt class="docutils literal"><span class="pre">ChronoWarp</span></tt></span> type super weapon is fired at the target location of the
+<p>The <span><code class="docutils literal"><span class="pre">ChronoWarp</span></code></span> type super weapon is fired at the target location of the
 chronoshift and marks the position the units will be teleported to. If you have
 a <cite>ChronoSphere</cite> type super weapon you have to have one
 <cite>ChronoWarp</cite> type super weapon, too.</p>
 <p>From the <cite>ChronoWarp</cite> type super weapon only the targeting and cursor
 properties are used, as well as <cite>Range</cite> to indicate the area of effect by
-drawing radial lines around the cursor. <span><tt class="docutils literal"><span class="pre">SW.Range</span></tt></span> is not used.</p>
-<p>For the actual chronoshifting tags, see <a class="reference internal" href="#chronosphere"><em>ChronoSphere</em></a>.</p>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.2.</span></p>
+drawing radial lines around the cursor. <span><code class="docutils literal"><span class="pre">SW.Range</span></code></span> is not used.</p>
+<p>For the actual chronoshifting tags, see <a class="reference internal" href="#chronosphere"><span>ChronoSphere</span></a>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
 </div>
 
 
@@ -201,7 +201,7 @@ drawing radial lines around the cursor. <span><tt class="docutils literal"><span
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -213,15 +213,15 @@ drawing radial lines around the cursor. <span><tt class="docutils literal"><span
         <li class="right" >
           <a href="psychicdominator.html" title="Type=PsychicDominator"
              >previous</a> |</li>
-        <li><a href="../../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
-          <li><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

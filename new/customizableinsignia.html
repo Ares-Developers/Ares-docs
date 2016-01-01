@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Veterancy Insignia &mdash; Ares 0.9 documentation</title>
+    <title>Veterancy Insignia &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Customizable Parachute Animations" href="customizableparachuteanimations.html" />
     <link rel="prev" title="Custom Cameo Palettes" href="customcameopalettes.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,11 +42,11 @@
         <li class="right" >
           <a href="customcameopalettes.html" title="Custom Cameo Palettes"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
@@ -65,7 +63,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="customizableparachuteanimations.html"
                         title="next chapter">Customizable Parachute Animations</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -84,7 +82,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="veterancy-insignia">
 <h1>Veterancy Insignia<a class="headerlink" href="#veterancy-insignia" title="Permalink to this headline">¶</a></h1>
@@ -92,19 +90,20 @@
 <h2>Chevrons<a class="headerlink" href="#chevrons" title="Permalink to this headline">¶</a></h2>
 <p>Units can now have custom insignia (chevrons) to represent their veterancy
 level.</p>
-<p><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►Insignia.Rookie=</span></tt><span class="type definition"> (filename, excluding the .shp extension)</span></span></p>
-<p><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►Insignia.Veteran=</span></tt><span class="type definition"> (filename, excluding the .shp extension)</span></span></p>
+<p><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Insignia.Rookie=</span></code><span class="type definition"> (filename, excluding the .shp extension)</span></span></p>
+<p><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Insignia.Veteran=</span></code><span class="type definition"> (filename, excluding the .shp extension)</span></span></p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►Insignia.Elite=</span></tt><span class="type definition"> (filename, excluding the .shp extension)</span></span></dt>
-<dd>For example, <span><tt class="docutils literal"><span class="pre">Insignia.Rookie=SAMPLE</span></tt></span> would display <tt class="file docutils literal docutils literal"><span class="pre">sample.shp</span></tt> as
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Insignia.Elite=</span></code><span class="type definition"> (filename, excluding the .shp extension)</span></span></dt>
+<dd>For example, <span><code class="docutils literal"><span class="pre">Insignia.Rookie=SAMPLE</span></code></span> would display <code class="file docutils literal"><span class="pre">sample.shp</span></code> as
 the insignia while the object is rookie.</dd>
 </dl>
-<p>These SHPs - like the original <tt class="file docutils literal docutils literal"><span class="pre">pips.shp</span></tt> - are expected to be in the
+<p>These SHPs - like the original <code class="file docutils literal"><span class="pre">pips.shp</span></code> - are expected to be in the
 theater palette. If you specify an insignia, the first frame of its SHP will be
 drawn. Veteran and Elite objects without the insignia specified will still
-display the 15th/16th frames of <tt class="file docutils literal docutils literal"><span class="pre">pips.shp</span></tt> as usual.</p>
-<p class="versionadded" id="index-0">
-<span class="versionmodified">New in version 0.1.</span></p>
+display the 15th/16th frames of <code class="file docutils literal"><span class="pre">pips.shp</span></code> as usual.</p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
 </div>
 <div class="section" id="hiding-enemy-insignia">
 <h2>Hiding Enemy Insignia<a class="headerlink" href="#hiding-enemy-insignia" title="Permalink to this headline">¶</a></h2>
@@ -112,19 +111,20 @@ display the 15th/16th frames of <tt class="file docutils literal docutils litera
 distance they look all the same anyhow, you can also disable displaying insignia
 on enemy units by using the following tags.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[General]►EnemyInsignia=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[General]►EnemyInsignia=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether insignia will be shown for enemy players by default. Each unit type
 can override this value. Defaults to <cite>yes</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►Insignia.ShowEnemy=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Insignia.ShowEnemy=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether insignia for a unit of this type will be shown for enemy players.
-Defaults to <span><tt class="docutils literal"><span class="pre">[General]►EnemyInsignia</span></tt></span>.</dd>
+Defaults to <span><code class="docutils literal"><span class="pre">[General]►EnemyInsignia</span></code></span>.</dd>
 </dl>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Observers will always be able to see insignia of all players.</p>
 </div>
-<p class="versionadded" id="index-1">
-<span class="versionmodified">New in version 0.5.</span></p>
+<div class="versionadded" id="index-1">
+<p><span class="versionmodified">New in version 0.5.</span></p>
+</div>
 </div>
 </div>
 
@@ -134,7 +134,7 @@ Defaults to <span><tt class="docutils literal"><span class="pre">[General]►Ene
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -146,13 +146,13 @@ Defaults to <span><tt class="docutils literal"><span class="pre">[General]►Ene
         <li class="right" >
           <a href="customcameopalettes.html" title="Custom Cameo Palettes"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

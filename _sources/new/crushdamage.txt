@@ -1,0 +1,27 @@
+Crush Damage
+
+
+This feature known from Dune 2000 has been added to Yuri's
+Revenge. In the former, running over a Sardaukar trooper squishes the infantry
+while also slightly dealing damage to the tank. This way, crushing infantry
+comes at a customizable cost.
+
+[TechnoType]CrushDamage=integer - hitpoints
+
+[TechnoType]CrushDamage.Rookie=integer - hitpoints
+
+[TechnoType]CrushDamage.Veteran=integer - hitpoints
+
+[TechnoType]CrushDamage.Elite=integer - hitpoints
+  The damage dealt to the unit crushing this object. Defaults to 0.
+  
+   When the base tag is defined, it will always reset all previous
+    veterancy values, and then re-read the veterancy values from the same file.
+
+[TechnoType]CrushDamage.Warhead=Warhead
+  The warhead used to deal crush damage when this unit is crushed. Defaults to
+  [General]►C4Warhead.
+
+ Crush; Crush damage when running over infantry or vehicles
+
+ 0.A

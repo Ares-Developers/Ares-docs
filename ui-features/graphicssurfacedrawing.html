@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Graphics / Surface Drawing &mdash; Ares 0.9 documentation</title>
+    <title>Graphics / Surface Drawing &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="up" title="User Interface Features" href="index.html" />
     <link rel="next" title="Internal Errors / Debugging" href="internalerrorsdebugging.html" />
-    <link rel="prev" title="Customizable Dropdown Colors" href="customizabledropdowncolors.html" /> 
+    <link rel="prev" title="Exit Without Confirmation" href="exit.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -42,21 +40,21 @@
           <a href="internalerrorsdebugging.html" title="Internal Errors / Debugging"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="customizabledropdowncolors.html" title="Customizable Dropdown Colors"
+          <a href="exit.html" title="Exit Without Confirmation"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="customizabledropdowncolors.html"
-                        title="previous chapter">Customizable Dropdown Colors</a></p>
+  <p class="topless"><a href="exit.html"
+                        title="previous chapter">Exit Without Confirmation</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="internalerrorsdebugging.html"
                         title="next chapter">Internal Errors / Debugging</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -75,7 +73,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="graphics-surface-drawing">
 <h1>Graphics / Surface Drawing<a class="headerlink" href="#graphics-surface-drawing" title="Permalink to this headline">¶</a></h1>
@@ -83,13 +81,13 @@
 <p class="first admonition-title">Warning</p>
 <p class="last">This is for advanced users only!</p>
 </div>
-<p>In <tt class="file docutils literal docutils literal"><span class="pre">ares.ini</span></tt> you can add the following section:</p>
+<p>In <code class="file docutils literal"><span class="pre">ares.ini</span></code> you can add the following section:</p>
 <div class="highlight-ini"><div class="highlight"><pre><span class="k">[Graphics.Advanced]</span>
 <span class="na">DirectX.Force</span><span class="o">=</span> <span class="s">(hardware|emulation)</span>
 </pre></div>
 </div>
 <p>While <cite>hardware</cite> is the default, <cite>emulation</cite> has the same effect
-as the special <tt class="file docutils literal docutils literal"><span class="pre">ddraw.dll</span></tt> which made the games faster by not drawing
+as the special <code class="file docutils literal"><span class="pre">ddraw.dll</span></code> which made the games faster by not drawing
 the effects that aren&#8217;t supported by software emulation.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -101,11 +99,12 @@ the effects that aren&#8217;t supported by software emulation.</p>
 <p class="last"><span class="game docutils literal">Ares.ini</span> is not intended to be included or edited by mods,
 as this file may include various other settings in future that the end-user
 wishes to set themselves. Launch Base does not permit mods to include
-<tt class="file docutils literal docutils literal"><span class="pre">ares.ini</span></tt>, and also provides its own interface to allow the user to
+<code class="file docutils literal"><span class="pre">ares.ini</span></code>, and also provides its own interface to allow the user to
 modify the above graphical settings.</p>
 </div>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.1.</span></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
 </div>
 
 
@@ -114,7 +113,7 @@ modify the above graphical settings.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -124,15 +123,15 @@ modify the above graphical settings.</p>
           <a href="internalerrorsdebugging.html" title="Internal Errors / Debugging"
              >next</a> |</li>
         <li class="right" >
-          <a href="customizabledropdowncolors.html" title="Customizable Dropdown Colors"
+          <a href="exit.html" title="Exit Without Confirmation"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" >User Interface Features</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >User Interface Features</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

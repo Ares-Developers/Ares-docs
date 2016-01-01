@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Targeting &mdash; Ares 0.9 documentation</title>
+    <title>Targeting &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../../index.html" />
     <link rel="up" title="Super Weapons" href="index.html" />
     <link rel="next" title="Range Limits" href="range.html" />
     <link rel="prev" title="Hardcoded Values" href="hardcoded.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,12 +42,12 @@
         <li class="right" >
           <a href="hardcoded.html" title="Hardcoded Values"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Super Weapons</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Super Weapons</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../index.html">Table Of Contents</a></h3>
   <ul>
@@ -69,7 +67,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="range.html"
                         title="next chapter">Range Limits</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -88,7 +86,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="targeting">
 <h1>Targeting<a class="headerlink" href="#targeting" title="Permalink to this headline">¶</a></h1>
@@ -96,53 +94,55 @@
 <span id="index-0"></span><h2>General Settings<a class="headerlink" href="#general-settings" title="Permalink to this headline">¶</a></h2>
 <p>These settings allow to enable AI targeting even for human players.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AutoFire=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AutoFire=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Sets whether this super weapon should be launched automatically even for human
 players. If this is set to <cite>yes</cite>, the AI targeting options are used to
 infer the best target cell. Defaults to <cite>no</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.ManualFire=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.ManualFire=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Sets whether this super weapon can be manually fired by the owning player. If
 set to <cite>no</cite>, the player will not be able to get a selection cursor for
 this super weapon when clicking the cameo. This setting is ignored if
-<span><tt class="docutils literal"><span class="pre">SW.AutoFire=no</span></tt></span> is set, because the player would have no way to fire
+<span><code class="docutils literal"><span class="pre">SW.AutoFire=no</span></code></span> is set, because the player would have no way to fire
 this super weapon. You can use this on auto-firing super weapons where the
 targeting mode might prevents it from being fired (like the Lightning Storm
 or Psychic Dominator, if another super weapon of this type is currently
 active). Defaults to <cite>yes</cite>.</dd>
 </dl>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.2.</span></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
 </div>
 <div class="section" id="manual-target-selection">
 <h2>Manual Target Selection<a class="headerlink" href="#manual-target-selection" title="Permalink to this headline">¶</a></h2>
 <p>These settings only apply to human players.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.FireIntoShroud=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.FireIntoShroud=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether or not this super weapon is allowed to fire into an unexplored area of
 the map. Default is <cite>yes</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.RequiresTarget=</span></tt><span class="type definition"> (enum none|land|water|empty|infantry|units|buildings)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.RequiresTarget=</span></code><span class="type definition"> (enum none|land|water|empty|infantry|units|buildings)</span></span></dt>
 <dd><p class="first">Which items this super weapon can fire upon. Hovering above an allowed item
-will show the <span><tt class="docutils literal"><span class="pre">Cursor</span></tt></span>, otherwise the player gets the <span><tt class="docutils literal"><span class="pre">NoCursor</span></tt></span> and
+will show the <span><code class="docutils literal"><span class="pre">Cursor</span></code></span>, otherwise the player gets the <span><code class="docutils literal"><span class="pre">NoCursor</span></code></span> and
 it is not possible to launch the super weapon. For an example see
-<span><tt class="docutils literal"><span class="pre">SW.AffectsTarget=</span></tt></span>.</p>
+<span><code class="docutils literal"><span class="pre">SW.AffectsTarget=</span></code></span>.</p>
 <div class="last admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Please be aware of the problems that can arise if this and
-<span><tt class="docutils literal"><span class="pre">SW.AffectsTarget=</span></tt></span> are set to mutually exclusive values not allowing
+<span><code class="docutils literal"><span class="pre">SW.AffectsTarget=</span></code></span> are set to mutually exclusive values not allowing
 the super weapon to affect anything.</p>
 </div>
 </dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.RequiresHouse=</span></tt><span class="type definition"> (enum none|owner|allies|team|enemies|all)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.RequiresHouse=</span></code><span class="type definition"> (enum none|owner|allies|team|enemies|all)</span></span></dt>
 <dd>Which house&#8217;s items this super weapon can fire upon.</dd>
 </dl>
-<p class="versionadded" id="index-1">
-<span class="versionmodified">New in version 0.2.</span></p>
+<div class="versionadded" id="index-1">
+<p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
 </div>
 <div class="section" id="automatic-target-selection">
 <h2>Automatic Target Selection<a class="headerlink" href="#automatic-target-selection" title="Permalink to this headline">¶</a></h2>
 <p>Define the way the AI selects eligible targets to fire the super weapon at.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></tt><span class="type definition"> (enum SW Targeting Type)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></code><span class="type definition"> (enum SW Targeting Type)</span></span></dt>
 <dd>Select one of the following values to define how the AI will use this super
 weapon:</dd>
 </dl>
@@ -170,8 +170,8 @@ range 1 nearby. Does not fire if a preferred target cell is set. Ignores
 cloaked targets.</p>
 </li>
 <li><p class="first"><cite>ForceShield</cite></p>
-<p>Fires at the position the last super weapon with <span><tt class="docutils literal"><span class="pre">AIDefendAgainst=yes</span></tt></span>
-was fired at. This honors the <span><tt class="docutils literal"><span class="pre">AISuperDefense</span></tt></span> tags, and not all super
+<p>Fires at the position the last super weapon with <span><code class="docutils literal"><span class="pre">AIDefendAgainst=yes</span></code></span>
+was fired at. This honors the <span><code class="docutils literal"><span class="pre">AISuperDefense</span></code></span> tags, and not all super
 weapons might be defended against.</p>
 </li>
 <li><p class="first"><cite>ParaDrop</cite></p>
@@ -183,7 +183,7 @@ find a location around the owning player&#8217;s base center.</p>
 <p>Selects a valid target using the Ion Cannon rules. Ignores cloaked targets.</p>
 </li>
 <li><p class="first"><cite>MultiMissile</cite></p>
-<p>Selects a valid target by looking at the summed <span><tt class="docutils literal"><span class="pre">ThreatPosed</span></tt></span> values of
+<p>Selects a valid target by looking at the summed <span><code class="docutils literal"><span class="pre">ThreatPosed</span></code></span> values of
 the area around them. For cloaked targets, a random value between 0 and 100 is
 used.</p>
 </li>
@@ -213,26 +213,28 @@ favorite enemy.</p>
 </li>
 </ul>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AIRequiresTarget=</span></tt><span class="type definition"> (enum none|land|water|empty|infantry|units|buildings|all)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AIRequiresTarget=</span></code><span class="type definition"> (enum none|land|water|empty|infantry|units|buildings|all)</span></span></dt>
 <dd>Specifies which targets will be considered eligible by AI players or human
 owned automatically fired super weapons. The default value depends on the
-<span><tt class="docutils literal"><span class="pre">SW.AITargeting</span></tt></span> setting. See the table below.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AIRequiresHouse=</span></tt><span class="type definition"> (enum owner|allies|team|enemies|others|all)</span></span></dt>
+<span><code class="docutils literal"><span class="pre">SW.AITargeting</span></code></span> setting. See the table below.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AIRequiresHouse=</span></code><span class="type definition"> (enum owner|allies|team|enemies|others|all)</span></span></dt>
 <dd>Specifies which houses will be considered eligible by AI players or human
 owned automatically fired super weapons. The default value depends on the
-<span><tt class="docutils literal"><span class="pre">SW.AITargeting</span></tt></span> setting. See the table below.</dd>
+<span><code class="docutils literal"><span class="pre">SW.AITargeting</span></code></span> setting. See the table below.</dd>
 </dl>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.2.</span></p>
-<p class="versionchanged">
-<span class="versionmodified">Changed in version 0.9.</span></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 0.9.</span></p>
+</div>
 </div>
 <div class="section" id="mechanisms">
 <h2>Mechanisms<a class="headerlink" href="#mechanisms" title="Permalink to this headline">¶</a></h2>
 <p>There are several mechanisms to select a target, but three of them are notable,
 because they are recurring.</p>
 <p>The <strong>Ion Cannon targeting</strong> rules assigns each valid object a value, which is
-determined by the <span><tt class="docutils literal"><span class="pre">[General]►AIIonCannon...</span></tt></span> tags. A target is picked
+determined by the <span><code class="docutils literal"><span class="pre">[General]►AIIonCannon...</span></code></span> tags. A target is picked
 randomly from all objects with the highest score.</p>
 <p>The <strong>base center</strong> is determined by the game and updated whenever a player
 builds or loses buildings. The base center can be manually set and cleared using
@@ -252,8 +254,8 @@ inhibitors, and fire regardless of any restriction.</p>
 <div class="section" id="defaults">
 <h2>Defaults<a class="headerlink" href="#defaults" title="Permalink to this headline">¶</a></h2>
 <p>The following table lists the defaults for the AI targeting tags depending on
-<span><tt class="docutils literal"><span class="pre">SW.AITargeting</span></tt></span>, as well as some general properties that affect targeting.</p>
-<p>Note that the defaults used depend on the super weapon&#8217;s <span><tt class="docutils literal"><span class="pre">Type</span></tt></span>, and the
+<span><code class="docutils literal"><span class="pre">SW.AITargeting</span></code></span>, as well as some general properties that affect targeting.</p>
+<p>Note that the defaults used depend on the super weapon&#8217;s <span><code class="docutils literal"><span class="pre">Type</span></code></span>, and the
 type always takes precedence. See the specific super weapon type documentation
 for the actual values. If no specific value is given, the value from this table
 is used.</p>
@@ -280,9 +282,9 @@ preferred target type is set using map action 35, they are not checked.</p>
 <col width="7%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head"><span><tt class="docutils literal"><span class="pre">SW.AITargeting</span></tt></span></th>
-<th class="head"><span><tt class="docutils literal"><span class="pre">SW.AIRequiresTarget</span></tt></span></th>
-<th class="head"><span><tt class="docutils literal"><span class="pre">SW.AIRequiresHouse</span></tt></span></th>
+<tr class="row-odd"><th class="head"><span><code class="docutils literal"><span class="pre">SW.AITargeting</span></code></span></th>
+<th class="head"><span><code class="docutils literal"><span class="pre">SW.AIRequiresTarget</span></code></span></th>
+<th class="head"><span><code class="docutils literal"><span class="pre">SW.AIRequiresHouse</span></code></span></th>
 <th class="head">Requires Enemy</th>
 <th class="head">Preference</th>
 <th class="head">Extras</th>
@@ -396,7 +398,7 @@ preferred target type is set using map action 35, they are not checked.</p>
 </tr>
 </tbody>
 </table>
-<p>If you define the <span><tt class="docutils literal"><span class="pre">SW.AIRequiresTarget</span></tt></span> or <span><tt class="docutils literal"><span class="pre">SW.AIRequiresHouse</span></tt></span> when
+<p>If you define the <span><code class="docutils literal"><span class="pre">SW.AIRequiresTarget</span></code></span> or <span><code class="docutils literal"><span class="pre">SW.AIRequiresHouse</span></code></span> when
 the table says <em>do not use</em>, you might render the super weapon unable to fire.</p>
 <p>1) <cite>Self</cite> always only checks buildings owned by the owning player. You
 can only use <cite>land</cite>, <cite>water</cite>, and <cite>none</cite> here. All other
@@ -410,7 +412,7 @@ values are invalid.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -422,14 +424,14 @@ values are invalid.</p>
         <li class="right" >
           <a href="hardcoded.html" title="Hardcoded Values"
              >previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="index.html" >Super Weapons</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Super Weapons</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Restored Tiberian Sun Logic &mdash; Ares 0.9 documentation</title>
+    <title>Restored Tiberian Sun Logic &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,12 +24,12 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="next" title="Action=SellUnit" href="actionsellunit.html" />
     <link rel="prev" title="Inefficient Map Actions" href="../bugfixes/type3/mapactions.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -43,10 +41,10 @@
         <li class="right" >
           <a href="../bugfixes/type3/mapactions.html" title="Inefficient Map Actions"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="../bugfixes/type3/mapactions.html"
@@ -54,7 +52,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="actionsellunit.html"
                         title="next chapter"><span><span class="type">Action=SellUnit</span></span></a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -73,7 +71,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="restored-tiberian-sun-logic">
 <h1>Restored Tiberian Sun Logic<a class="headerlink" href="#restored-tiberian-sun-logic" title="Permalink to this headline">¶</a></h1>
@@ -90,8 +88,24 @@ features are implemented.</p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="actionsellunit.html"><span><span class="type">Action=SellUnit</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="amphibiousimagechanges.html">Amphibious Image Changes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="emp.html">EMP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="firestormwall.html">Firestorm Wall</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emp.html">Electromagnetic Pulse (EMP)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="emp.html#defining-emp-weapons">Defining EMP Weapons</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="emp.html#damaging-emp">Damaging EMP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="emp.html#healing-emp">Healing EMP</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="emp.html#emp-immunity">EMP Immunity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emp.html#modifying-the-effect-duration">Modifying the Effect Duration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emp.html#destructive-emp">Destructive EMP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="emp.html#sparkles-animation">Sparkles Animation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="firestormwall.html">Firestorm Wall</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="firestormwall.html#defining-a-wall">Defining a Wall</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firestormwall.html#global-settings">Global Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="firestormwall.html#firestorm-map-actions">Firestorm Map Actions</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="laserfences.html">Laser Fences</a></li>
 <li class="toctree-l1"><a class="reference internal" href="multiengineer.html">Multi Engineer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="multiengineercheckbox.html">Multi Engineer Checkbox</a></li>
@@ -107,7 +121,7 @@ features are implemented.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -119,12 +133,12 @@ features are implemented.</p>
         <li class="right" >
           <a href="../bugfixes/type3/mapactions.html" title="Inefficient Map Actions"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

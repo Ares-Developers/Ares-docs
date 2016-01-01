@@ -11,15 +11,15 @@ Random Map Generator enhancements:
 A new checkbox -- `Place Urban Areas` -- allows the user to add an assortment of
 streets and urban combat buildings at random spots throughout the generated map.
 The objects placed by this feature can be modified by adding the heading
-[URBAN]► in the rgdmd.ini file, and adding the following lists
-after Structure=, Vehicles= and Infantry= respectively:
+[Urban]► in the rmgmd.ini file, and adding the following lists
+after Structures=, Vehicles= and Infantry= respectively:
 
-[URBAN]Structures=list of BuildingTypes
+[Urban]Structures=list of BuildingTypes
   Defaults to CABUNK01,CABUNK02,CAARMY01,CAARMY02,CAARMY03,CAARMY04,
   CACHIG03,CANEWY01,CANEWY14,CANWY09,CANWY26,CANWY25,CATEXS07.
-[URBAN]Vehicles=list of VehicleTypes
+[Urban]Vehicles=list of VehicleTypes
   Defaults to TRUCKA,TRUCKB,COP,EUROC,SUVW,SUVB,FTRK,AMBU.
-[URBAN]Infantry=list of InfantryTypes
+[Urban]Infantry=list of InfantryTypes
   Defaults to CIV1,CIV2,CIV3,CIVA,CIVB,CIVC.
 
  Urban areas generated in the minimap preview do not always correspond

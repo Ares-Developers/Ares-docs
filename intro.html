@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Introduction &mdash; Ares 0.9 documentation</title>
+    <title>Introduction &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,8 +14,8 @@
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
-        VERSION:     '0.9',
+        URL_ROOT:    './',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,12 +24,12 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="index.html" />
     <link rel="next" title="What’s New" href="whatsnew.html" />
     <link rel="prev" title="Glossary" href="glossary.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -43,10 +41,10 @@
         <li class="right" >
           <a href="glossary.html" title="Glossary"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">Ares 0.9 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 0.A documentation</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -59,10 +57,6 @@
 </li>
 <li><a class="reference internal" href="#known-major-issues">Known Major Issues</a><ul>
 <li><a class="reference internal" href="#save-games">Save Games</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#known-minor-issues">Known Minor Issues</a><ul>
-<li><a class="reference internal" href="#solid-buildings-vs-invisible-projectiles">Solid Buildings vs. Invisible Projectiles</a></li>
 </ul>
 </li>
 </ul>
@@ -81,7 +75,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="whatsnew.html"
                         title="next chapter">What&#8217;s New</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -100,7 +94,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
@@ -115,7 +109,7 @@ functionality that <span class="game docutils literal">Ares</span> offers.</p>
 <span class="game docutils literal">Syringe</span>, a program developed by pd to &#8216;inject&#8217; DLL code into a running
 executable without modifying the executable itself. In this case, the
 <span class="game docutils literal">Ares</span> DLL is injected into the <span class="game docutils literal">Yuri&#8217;s Revenge</span> 1.001 main
-executable, <tt class="file docutils literal docutils literal"><span class="pre">gamemd.exe</span></tt>.</p>
+executable, <code class="file docutils literal"><span class="pre">gamemd.exe</span></code>.</p>
 <p><span class="game docutils literal">Syringe</span> can be run directly via a command line prompt, or automatically
 using <span class="game docutils literal">Launch Base</span>. See the respective documentations of those programs
 for further details.</p>
@@ -140,15 +134,15 @@ which happily let it happen. Unfortunately, this is exactly the way
 Security</span>, you have to make the following changes to Comodo&#8217;s settings
 (<a class="reference external" href="http://forums.renegadeprojects.com/showthread.php?tid=1714&amp;pid=17592#pid17592">courtesy of eva-251</a>):</p>
 <ol class="arabic simple">
-<li><tt class="file docutils literal docutils literal"><span class="pre">gamemd.exe</span></tt> and <tt class="file docutils literal docutils literal"><span class="pre">Syringe.exe</span></tt> need to be in the &#8220;Trusted Files&#8221;
+<li><code class="file docutils literal"><span class="pre">gamemd.exe</span></code> and <code class="file docutils literal"><span class="pre">Syringe.exe</span></code> need to be in the &#8220;Trusted Files&#8221;
 list.</li>
-<li>Under &#8220;Computer Security Policy&#8221; -&gt; &#8220;Defense+ Rules&#8221;, <tt class="file docutils literal docutils literal"><span class="pre">gamemd.exe</span></tt> and
-<tt class="file docutils literal docutils literal"><span class="pre">Syringe.exe</span></tt> need to be marked as &#8220;Installer or Updater&#8221;.</li>
+<li>Under &#8220;Computer Security Policy&#8221; -&gt; &#8220;Defense+ Rules&#8221;, <code class="file docutils literal"><span class="pre">gamemd.exe</span></code> and
+<code class="file docutils literal"><span class="pre">Syringe.exe</span></code> need to be marked as &#8220;Installer or Updater&#8221;.</li>
 <li>&#8220;Defense+ Settings&#8221; -&gt; &#8220;Execution Control Settings&#8221; -&gt; &#8220;Detect shellcode
 injections&#8221; should be checked.</li>
 <li>Under &#8220;Defense+ Settings&#8221; -&gt; &#8220;Execution Control Settings&#8221; -&gt; &#8220;Exclusions:&#8221;
-add <tt class="file docutils literal docutils literal"><span class="pre">Syringe.exe</span></tt>, <tt class="file docutils literal docutils literal"><span class="pre">Ares.dll</span></tt>, <tt class="file docutils literal docutils literal"><span class="pre">Ares.dll.inj</span></tt>,
-<tt class="file docutils literal docutils literal"><span class="pre">gamemd.exe</span></tt>.</li>
+add <code class="file docutils literal"><span class="pre">Syringe.exe</span></code>, <code class="file docutils literal"><span class="pre">Ares.dll</span></code>, <code class="file docutils literal"><span class="pre">Ares.dll.inj</span></code>,
+<code class="file docutils literal"><span class="pre">gamemd.exe</span></code>.</li>
 </ol>
 <p>This should allow <span class="game docutils literal">Syringe</span>/<span class="game docutils literal">Ares</span> to work properly.</p>
 <div class="admonition warning">
@@ -163,10 +157,10 @@ be infected within minutes.</p>
 <h3>ZoneAlarm<a class="headerlink" href="#zonealarm" title="Permalink to this headline">¶</a></h3>
 <p><span class="game docutils literal">ZoneAlarm</span> is known to prevent <span class="game docutils literal">Syringe</span>/<span class="game docutils literal">Ares</span> from
 starting. In case <span class="game docutils literal">Yuri&#8217;s Revenge</span> does not start (<span class="game docutils literal">Syringe</span>
-closes immediately), add <tt class="file docutils literal docutils literal"><span class="pre">gamemd.exe</span></tt> and <tt class="file docutils literal docutils literal"><span class="pre">Syringe.exe</span></tt> to the
+closes immediately), add <code class="file docutils literal"><span class="pre">gamemd.exe</span></code> and <code class="file docutils literal"><span class="pre">Syringe.exe</span></code> to the
 exceptions list.</p>
 <p>If this does not help, try to stop the service called <span class="game docutils literal">ZoneAlarm
-ForceField Service</span> (<tt class="file docutils literal docutils literal"><span class="pre">ISWSVC.exe</span></tt>). This is not recommended and you
+ForceField Service</span> (<code class="file docutils literal"><span class="pre">ISWSVC.exe</span></code>). This is not recommended and you
 should re-enable the service as quickly as possible. <a class="reference external" href="https://bugs.launchpad.net/ares/+bug/1090588/comments/3">Thanks to FS-21</a>.</p>
 </div>
 </div>
@@ -187,14 +181,6 @@ future.</p>
 </div>
 </div>
 </div>
-<div class="section" id="known-minor-issues">
-<h2>Known Minor Issues<a class="headerlink" href="#known-minor-issues" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="solid-buildings-vs-invisible-projectiles">
-<h3>Solid Buildings vs. Invisible Projectiles<a class="headerlink" href="#solid-buildings-vs-invisible-projectiles" title="Permalink to this headline">¶</a></h3>
-<p>The SolidHeight/Solid Buildings functionality does not work with
-invisible projectiles yet. (<a class="reference external" href="http://bugs.renegadeprojects.com/view.php?id=888">Issue #888</a>)</p>
-</div>
-</div>
 </div>
 <div class="section" id="required-changes-for-mods-using-ares">
 <h1>Required Changes For Mods Using Ares<a class="headerlink" href="#required-changes-for-mods-using-ares" title="Permalink to this headline">¶</a></h1>
@@ -213,22 +199,22 @@ Pack</span>.</p>
 <div class="section" id="artmd-ini">
 <h2>artmd.ini<a class="headerlink" href="#artmd-ini" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
-<dt><span><tt class="docutils literal"><span class="pre">[TELE]►SecondaryFireFLH=85,0,130</span></tt></span></dt>
+<dt><span><code class="docutils literal"><span class="pre">[TELE]►SecondaryFireFLH=85,0,130</span></code></span></dt>
 <dd>See <a class="reference internal" href="bugfixes/type2/radbeamsandwavesusingthewrongflh.html"><em>RadBeams And Waves Using The Wrong FLH</em></a>.</dd>
 </dl>
 </div>
 <div class="section" id="bombcurs-shp">
 <h2>bombcurs.shp<a class="headerlink" href="#bombcurs-shp" title="Permalink to this headline">¶</a></h2>
-<p>The <tt class="file docutils literal docutils literal"><span class="pre">bombcurs.shp</span></tt> animation needs to have its last frame removed if you
+<p>The <code class="file docutils literal"><span class="pre">bombcurs.shp</span></code> animation needs to have its last frame removed if you
 don&#8217;t want to see the previously unused skull image. See
-<a class="reference internal" href="new/weapons/ivanbombs.html#custom-ivan-bombs"><em>IvanBomb.FlickerRate</em></a>.</p>
+<a class="reference internal" href="new/weapons/ivanbombs.html#custom-ivan-bombs"><span>IvanBomb.FlickerRate</span></a>.</p>
 </div>
 <div class="section" id="ares-mix">
 <h2>ares.mix<a class="headerlink" href="#ares-mix" title="Permalink to this headline">¶</a></h2>
-<p>Mods should not include their own version of <tt class="file docutils literal docutils literal"><span class="pre">ares.mix</span></tt>. This new MIX file
+<p>Mods should not include their own version of <code class="file docutils literal"><span class="pre">ares.mix</span></code>. This new MIX file
 is bundled with <span class="game docutils literal">Ares</span> to provide any new/modified files that <span class="game docutils literal">Ares</span>
 changes/additions rely on. This MIX file presently includes:</p>
-<p><tt class="file docutils literal docutils literal"><span class="pre">ares.csf</span></tt> includes a few new strings:</p>
+<p><code class="file docutils literal"><span class="pre">ares.csf</span></code> includes a few new strings:</p>
 <ul class="simple">
 <li><cite>GUI:SelectCampaign=Select your Campaign</cite></li>
 <li><cite>GUI:PlayMission=Play</cite></li>
@@ -257,7 +243,7 @@ changes/additions rely on. This MIX file presently includes:</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -269,12 +255,12 @@ changes/additions rely on. This MIX file presently includes:</p>
         <li class="right" >
           <a href="glossary.html" title="Glossary"
              >previous</a> |</li>
-        <li><a href="index.html">Ares 0.9 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 0.A documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

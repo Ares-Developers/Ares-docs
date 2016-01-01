@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Multiple AI Factories Clone Units &mdash; Ares 0.9 documentation</title>
+    <title>Multiple AI Factories Clone Units &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../../index.html" />
     <link rel="up" title="Type 2 Fixes (Mod Logics)" href="index.html" />
     <link rel="next" title="Negatively Damaging Weapons with AnimList" href="negativelydamagingweaponswithanimlist.html" />
     <link rel="prev" title="Moving Alpha Lights" href="movingalphalights.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,12 +42,12 @@
         <li class="right" >
           <a href="movingalphalights.html" title="Moving Alpha Lights"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >Bug Fixes</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Type 2 Fixes (Mod Logics)</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Bug Fixes</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Type 2 Fixes (Mod Logics)</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../index.html">Table Of Contents</a></h3>
   <ul>
@@ -63,7 +61,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="negativelydamagingweaponswithanimlist.html"
                         title="next chapter">Negatively Damaging Weapons with AnimList</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -82,7 +80,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="multiple-ai-factories-clone-units">
 <span id="index-0"></span><h1>Multiple AI Factories Clone Units<a class="headerlink" href="#multiple-ai-factories-clone-units" title="Permalink to this headline">¶</a></h1>
@@ -92,24 +90,25 @@ unit from every additional factory. For example, if the AI were made to build a
 second War Factory then they would get a second copy of every vehicle they
 build. This behavior can be disabled in <span class="game docutils literal">Ares</span>, by the following flag:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[GlobalControls]►AllowParallelAIQueues=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[GlobalControls]►AllowParallelAIQueues=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Set this to no to disable AI factory cloning. Defaults to <cite>yes</cite>.</dd>
 </dl>
 </div>
 <div class="section" id="ai-ignores-buildlimit-when-creating-teams">
 <h1>AI ignores <span><span class="type">BuildLimit</span></span> when creating teams<a class="headerlink" href="#ai-ignores-buildlimit-when-creating-teams" title="Permalink to this headline">¶</a></h1>
-<p>In the original game the AI did not respect a unit&#8217;s <span><tt class="docutils literal"><span class="pre">BuildLimit</span></tt></span> tag when
+<p>In the original game the AI did not respect a unit&#8217;s <span><code class="docutils literal"><span class="pre">BuildLimit</span></code></span> tag when
 creating teams. <span class="game docutils literal">Ares</span> changes this to disallow the AI from creating a
 team if any unit&#8217;s build limit would have to be violated. This new tag gives you
 a way to restore the original behavior.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[GlobalControls]►AllowBypassBuildLimit=</span></tt><span class="type definition"> (list of boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[GlobalControls]►AllowBypassBuildLimit=</span></code><span class="type definition"> (list of boolean)</span></span></dt>
 <dd>Allows AI to bypass build limits to create teams. This list is ordered by
 difficulty: easy, medium, hard. Use <cite>yes</cite> to let the AI bypass build
 limits. Defaults to <cite>no,no,no</cite>.</dd>
 </dl>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.1.</span></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
 </div>
 
 
@@ -118,7 +117,7 @@ limits. Defaults to <cite>no,no,no</cite>.</dd>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -130,14 +129,14 @@ limits. Defaults to <cite>no,no,no</cite>.</dd>
         <li class="right" >
           <a href="movingalphalights.html" title="Moving Alpha Lights"
              >previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >Bug Fixes</a> &raquo;</li>
-          <li><a href="index.html" >Type 2 Fixes (Mod Logics)</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Bug Fixes</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Type 2 Fixes (Mod Logics)</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

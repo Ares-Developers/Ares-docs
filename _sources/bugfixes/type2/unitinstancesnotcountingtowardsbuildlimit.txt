@@ -2,14 +2,22 @@
 
  BuildLimit; Hijackers inside vehicles now count towards that hijacker's BuildLimit.
 
+ BuildLimit; AirportBound aircraft did not respect BuildLimit.
+
 
 Unit Instances Not Counting Towards BuildLimit
 
 
 If you have a vehicle which deploys into a structure, both the deploying vehicle
-and the structure will now count towards the BuildLimit of that vehicle.
+and the structures will now count towards the BuildLimit of that vehicle
+and that structure.
 
 Hijackers inside stolen vehicles now count towards the Hijacker's
 BuildLimit.
 
+AirportBound aircraft did not respect BuildLimit and players could
+build as many of them as there were free docks. Now BuildLimit is also
+respected.
+
  0.1
+ 0.A

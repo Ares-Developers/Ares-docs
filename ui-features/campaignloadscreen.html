@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Campaign Load Screen &mdash; Ares 0.9 documentation</title>
+    <title>Campaign Load Screen &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="up" title="User Interface Features" href="index.html" />
     <link rel="next" title="Command Line Arguments" href="commandlinearguments.html" />
     <link rel="prev" title="Campaign List" href="campaignlist.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,11 +42,11 @@
         <li class="right" >
           <a href="campaignlist.html" title="Campaign List"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
@@ -65,7 +63,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="commandlinearguments.html"
                         title="next chapter">Command Line Arguments</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -84,7 +82,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="campaign-load-screen">
 <h1>Campaign Load Screen<a class="headerlink" href="#campaign-load-screen" title="Permalink to this headline">¶</a></h1>
@@ -93,26 +91,28 @@
 <p><span class="game docutils literal">Yuri&#8217;s Revenge</span> always draws single player campaign load screen texts in
 red. <span class="game docutils literal">Ares</span> uses the correct values, inferred by the mission name prefix.
 You can override these defaults for each mission using this new
-<tt class="file docutils literal docutils literal"><span class="pre">missionmd.ini</span></tt> tag.</p>
+<code class="file docutils literal"><span class="pre">missionmd.ini</span></code> tag.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Mission]►LoadScreenText.Color=</span></tt><span class="type definition"> (Color scheme)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Mission]►LoadScreenText.Color=</span></code><span class="type definition"> (Color scheme)</span></span></dt>
 <dd>Text on the campaign loading screens for this mission will be drawn using this
-color from the <span><tt class="docutils literal"><span class="pre">[Colors]</span></tt></span> list. For example,
-<span><tt class="docutils literal"><span class="pre">LoadScreenText.Color=AlliedLoad</span></tt></span>.</dd>
+color from the <span><code class="docutils literal"><span class="pre">[Colors]</span></code></span> list. For example,
+<span><code class="docutils literal"><span class="pre">LoadScreenText.Color=AlliedLoad</span></code></span>.</dd>
 </dl>
-<p class="versionadded" id="index-0">
-<span class="versionmodified">New in version 0.2.</span></p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
 </div>
 <div class="section" id="music-theme">
 <h2>Music Theme<a class="headerlink" href="#music-theme" title="Permalink to this headline">¶</a></h2>
 <p>The loading theme for a single player mission is read from the map file itself.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Basic]►LoadingTheme=</span></tt><span class="type definition"> (theme id)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Basic]►LoadingTheme=</span></code><span class="type definition"> (theme id)</span></span></dt>
 <dd>The theme playing when loading this mission. Use <cite>none</cite> to disable the
 loading screen music. Defaults to <cite>LOADING</cite>.</dd>
 </dl>
-<p class="versionadded" id="index-1">
-<span class="versionmodified">New in version 0.7.</span></p>
+<div class="versionadded" id="index-1">
+<p><span class="versionmodified">New in version 0.7.</span></p>
+</div>
 </div>
 </div>
 
@@ -122,7 +122,7 @@ loading screen music. Defaults to <cite>LOADING</cite>.</dd>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -134,13 +134,13 @@ loading screen music. Defaults to <cite>LOADING</cite>.</dd>
         <li class="right" >
           <a href="campaignlist.html" title="Campaign List"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" >User Interface Features</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >User Interface Features</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

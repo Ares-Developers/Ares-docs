@@ -1,0 +1,19 @@
+Specific Passengers
+
+
+Additionally to the checks for Size and SizeLimit, it is possible
+to allow passengers to enter depending on their type. This feature is only
+supported on VehicleTypes and AircraftTypes.
+
+[TechnoType]Passengers.Allowed=list of TechnoTypes
+  The list of allowed passenger types. If this contains at least one type, all
+  other types are not allowed to enter this object. If you want to prevent all
+  units from entering, set this to either a dummy unit or a
+  BuildingType.
+
+[TechnoType]Passengers.Disallowed=list of TechnoTypes
+  The list of types that are not allowed to enter this object.
+
+ Passengers; Allow only specific passenger types
+
+ 0.A

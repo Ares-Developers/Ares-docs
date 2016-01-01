@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Operator &mdash; Ares 0.9 documentation</title>
+    <title>Operator &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,37 +24,37 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
-    <link rel="next" title="Passable Structures" href="passablestructures.html" />
-    <link rel="prev" title="New Powered Unit Logic" href="newpoweredunitlogic.html" /> 
+    <link rel="next" title="Specific Passengers" href="passengers.html" />
+    <link rel="prev" title="OmniCrusher Enhancements" href="omnicrusher.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="passablestructures.html" title="Passable Structures"
+          <a href="passengers.html" title="Specific Passengers"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="newpoweredunitlogic.html" title="New Powered Unit Logic"
+          <a href="omnicrusher.html" title="OmniCrusher Enhancements"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="newpoweredunitlogic.html"
-                        title="previous chapter">New Powered Unit Logic</a></p>
+  <p class="topless"><a href="omnicrusher.html"
+                        title="previous chapter"><span><span class="type">OmniCrusher</span></span> Enhancements</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="passablestructures.html"
-                        title="next chapter">Passable Structures</a></p>
-<div id="searchbox" style="display: none">
+  <p class="topless"><a href="passengers.html"
+                        title="next chapter">Specific Passengers</a></p>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -75,23 +73,23 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="operator">
 <h1>Operator<a class="headerlink" href="#operator" title="Permalink to this headline">¶</a></h1>
 <p>Any <span class="type docutils literal">TechnoType</span> can now require a specific <span class="type docutils literal">InfantryType</span> to be
 among its passengers before it will function.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►Operator=</span></tt><span class="type definition"> (string, either an InfantryType or &#8220;_ANY_&#8221;)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Operator=</span></code><span class="type definition"> (string, either an InfantryType or &#8220;_ANY_&#8221;)</span></span></dt>
 <dd>Specifies the <span class="type docutils literal">InfantryType</span> that must be among the <span class="type docutils literal">TechnoType</span>&#8216;s
 passengers before the <span class="type docutils literal">TechnoType</span> will function. If &#8220;<cite>_ANY_</cite>&#8221;
 (sans quotes) is specified then it doesn&#8217;t matter which <span class="type docutils literal">InfantryType</span>
 is inside as long as some <span class="type docutils literal">InfantryType</span> is. Use <cite>none</cite> to remove
 the requirement of having an operator. Defaults to <cite>none</cite>.</dd>
 </dl>
-<p>On the <span class="type docutils literal">TechnoType</span> you will need to set <span><tt class="docutils literal"><span class="pre">Passengers=1</span></tt></span> (or higher)
-and <span><tt class="docutils literal"><span class="pre">SizeLimit=1</span></tt></span> (or higher).</p>
-<p>For <span class="type docutils literal">BuildingTypes</span> you will also need to set <span><tt class="docutils literal"><span class="pre">InfantryAbsorb=yes</span></tt></span>.</p>
+<p>On the <span class="type docutils literal">TechnoType</span> you will need to set <span><code class="docutils literal"><span class="pre">Passengers=1</span></code></span> (or higher)
+and <span><code class="docutils literal"><span class="pre">SizeLimit=1</span></code></span> (or higher).</p>
+<p>For <span class="type docutils literal">BuildingTypes</span> you will also need to set <span><code class="docutils literal"><span class="pre">InfantryAbsorb=yes</span></code></span>.</p>
 <p>If the needed passenger is not inside then the <span class="type docutils literal">TechnoType</span> will power
 down in a similar fashion to the Robot Tank when the Robot Control Centre is
 offline &#8211; the unit will not be able to move or fire.</p>
@@ -114,9 +112,9 @@ be able to enter and the Harvester will not dock.</p>
 </li>
 <li><p class="first">Operator logic cannot be used on vehicles that deploy into buildings
 (e.g. MCVs) because the passenger deploy function takes precedence
-over <span><tt class="docutils literal"><span class="pre">DeploysInto=</span></tt></span>.</p>
+over <span><code class="docutils literal"><span class="pre">DeploysInto=</span></code></span>.</p>
 </li>
-<li><p class="first">Operator logic will render <span class="type docutils literal">VehicleTypes</span> with <span><tt class="docutils literal"><span class="pre">BalloonHover=yes</span></tt></span>
+<li><p class="first">Operator logic will render <span class="type docutils literal">VehicleTypes</span> with <span><code class="docutils literal"><span class="pre">BalloonHover=yes</span></code></span>
 unusable because they will power down in mid-air without landing, so it is
 impossible to get an Operator into them (even flying infantry like the
 Rocketeer cannot enter them).</p>
@@ -141,8 +139,9 @@ whereupon it will crash.</li>
 Operators and may not be subject to certain effects. You should prevent the
 AI from building anything that requires an Operator.</p>
 </div>
-<p class="versionadded" id="index-0">
-<span class="versionmodified">New in version 0.1.</span></p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
 </div>
 
 
@@ -151,25 +150,25 @@ AI from building anything that requires an Operator.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="passablestructures.html" title="Passable Structures"
+          <a href="passengers.html" title="Specific Passengers"
              >next</a> |</li>
         <li class="right" >
-          <a href="newpoweredunitlogic.html" title="New Powered Unit Logic"
+          <a href="omnicrusher.html" title="OmniCrusher Enhancements"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Type=LightningStorm &mdash; Ares 0.9 documentation</title>
+    <title>Type=LightningStorm &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../../../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../../../index.html" />
     <link rel="up" title="Settings by Super Weapon Type" href="index.html" />
     <link rel="next" title="Type=MultiMissile" href="multimissile.html" />
     <link rel="prev" title="Settings by Super Weapon Type" href="index.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,13 +42,13 @@
         <li class="right" >
           <a href="index.html" title="Settings by Super Weapon Type"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="index.html"
@@ -58,7 +56,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="multimissile.html"
                         title="next chapter"><span><span class="type">Type=MultiMissile</span></span></a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../../search.html" method="get">
       <input type="text" name="q" />
@@ -77,109 +75,110 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="type-lightningstorm">
 <h1><span><span class="type">Type=LightningStorm</span></span><a class="headerlink" href="#type-lightningstorm" title="Permalink to this headline">¶</a></h1>
 <p>Default values for general tags:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Range=</span></tt><span class="type definition"> (float,integer)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Range=</span></code><span class="type definition"> (float,integer)</span></span></dt>
 <dd>Area around the target location the Lightning Storm strikes. Note that a
 single value denotes the diameter of a circle &#8211; this is not the radius.
-Defaults to <span><tt class="docutils literal"><span class="pre">[General]►LightningCellSpread</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Damage=</span></tt><span class="type definition"> (integer)</span></span></dt>
+Defaults to <span><code class="docutils literal"><span class="pre">[General]►LightningCellSpread</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Damage=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>The damage each lightning bolt delivers. Defaults to
-<span><tt class="docutils literal"><span class="pre">[General]►LightningDamage</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Warhead=</span></tt><span class="type definition"> (Warhead)</span></span></dt>
+<span><code class="docutils literal"><span class="pre">[General]►LightningDamage</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Warhead=</span></code><span class="type definition"> (Warhead)</span></span></dt>
 <dd>The warhead used to deal the damage of each lightning bolt. Defaults to
-<span><tt class="docutils literal"><span class="pre">[General]►LightningWarhead</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Deferment=</span></tt><span class="type definition"> (integer frames)</span></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[General]►LightningDeferment</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.ActivationSound=</span></tt><span class="type definition"> (Sound)</span></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[AudioVisual]►StormSound</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></tt><span class="type definition"> (enum)</span></span></dt>
+<span><code class="docutils literal"><span class="pre">[General]►LightningWarhead</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Deferment=</span></code><span class="type definition"> (integer frames)</span></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►LightningDeferment</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.ActivationSound=</span></code><span class="type definition"> (Sound)</span></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[AudioVisual]►StormSound</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></code><span class="type definition"> (enum)</span></span></dt>
 <dd>Defaults to <cite>LightningStorm</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Light.*=</span></tt><span class="type definition"> (integer)</span></span></dt>
-<dd>Default to the scenario&#8217;s <span><tt class="docutils literal"><span class="pre">[Lighting]►Ion*</span></tt></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Light.*=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd>Default to the scenario&#8217;s <span><code class="docutils literal"><span class="pre">[Lighting]►Ion*</span></code></span>.</dd>
 </dl>
 <p>Lightning Storm specific tags:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.Duration=</span></tt><span class="type definition"> (integer - frames)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.Duration=</span></code><span class="type definition"> (integer - frames)</span></span></dt>
 <dd>The length the Lightning Storm endures. A value of <cite>-1</cite> means
-indefinite duration. Defaults to <span><tt class="docutils literal"><span class="pre">[General]►LightningStormDuration</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.RadarOutage=</span></tt><span class="type definition"> (integer - frames)</span></span></dt>
+indefinite duration. Defaults to <span><code class="docutils literal"><span class="pre">[General]►LightningStormDuration</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.RadarOutage=</span></code><span class="type definition"> (integer - frames)</span></span></dt>
 <dd>The number of frames radars are jammed for players defined by
-<span><tt class="docutils literal"><span class="pre">SW.AffectsHouse</span></tt></span>. Defaults to <span><tt class="docutils literal"><span class="pre">[General]►LightningStormDuration</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.RadarOutageAffects=</span></tt><span class="type definition"> (enum)</span></span></dt>
+<span><code class="docutils literal"><span class="pre">SW.AffectsHouse</span></code></span>. Defaults to <span><code class="docutils literal"><span class="pre">[General]►LightningStormDuration</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.RadarOutageAffects=</span></code><span class="type definition"> (enum)</span></span></dt>
 <dd>Specifies the houses affected by radar outage. Defaults to <cite>enemies</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.HitDelay=</span></tt><span class="type definition"> (integer - frames)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.HitDelay=</span></code><span class="type definition"> (integer - frames)</span></span></dt>
 <dd>The number of frames between two clouds being created over the target cell.
 Values of 0 or lower will disable direct hits. Clouds created by this
 mechanism are never subject to separation rules (see below). Defaults to
-<span><tt class="docutils literal"><span class="pre">[General]►LightningHitDelay</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.ScatterDelay=</span></tt><span class="type definition"> (integer - frames)</span></span></dt>
+<span><code class="docutils literal"><span class="pre">[General]►LightningHitDelay</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.ScatterDelay=</span></code><span class="type definition"> (integer - frames)</span></span></dt>
 <dd>The number of frames between clouds getting created over a random cell in the
 super weapon&#8217;s range. Values of 0 or lower will disable random hits. Only
 clouds created by this mechanism are subject to separation rules (see below).
-Defaults to <span><tt class="docutils literal"><span class="pre">[General]►LightningScatterDelay</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.ScatterCount=</span></tt><span class="type definition"> (integer)</span></span></dt>
-<dd>The number of new clouds created every <span><tt class="docutils literal"><span class="pre">Lightning.ScatterDelay</span></tt></span> frames.
+Defaults to <span><code class="docutils literal"><span class="pre">[General]►LightningScatterDelay</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.ScatterCount=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd>The number of new clouds created every <span><code class="docutils literal"><span class="pre">Lightning.ScatterDelay</span></code></span> frames.
 Values of 0 or lower will disable random hits. Defaults to <cite>1</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.Separation=</span></tt><span class="type definition"> (integer - distance)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.Separation=</span></code><span class="type definition"> (integer - distance)</span></span></dt>
 <dd>The least number of cells between two random clouds to better distribute
 damage. This is not the direct distance, but rather the sum of the differences
 of the x and y components. Values of 0 or lower will disable separation rules.
-Defaults to <span><tt class="docutils literal"><span class="pre">[General]►LightningSeparation</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.PrintText=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+Defaults to <span><code class="docutils literal"><span class="pre">[General]►LightningSeparation</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.PrintText=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Enables the warning text appearing shortly before the Lightning Storm strikes.
-Defaults to <span><tt class="docutils literal"><span class="pre">[General]►LightningPrintText</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.IgnoreLightningRod=</span></tt><span class="type definition"> (boolean)</span></span></dt>
-<dd>Disables the special handling for buildings with <span><tt class="docutils literal"><span class="pre">LightningRod=yes</span></tt></span> set.
+Defaults to <span><code class="docutils literal"><span class="pre">[General]►LightningPrintText</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.IgnoreLightningRod=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Disables the special handling for buildings with <span><code class="docutils literal"><span class="pre">LightningRod=yes</span></code></span> set.
 Defaults to <cite>no</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.DebrisMin=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.DebrisMin=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>The least number of debris created when lightning strikes empty cells or
 destroys a building or a unit. Defaults to <cite>2</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.DebrisMax=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.DebrisMax=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>The largest number of debris created when lightning strikes empty cells or
 destroys a building or a unit. Defaults to <cite>4</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.CloudHeight=</span></tt><span class="type definition"> (integer - leptons)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.CloudHeight=</span></code><span class="type definition"> (integer - leptons)</span></span></dt>
 <dd>The height above the ground the clouds get created in. Values less than 0 will
 center the cloud image on top of the first bolt anim from the list (for the
 original game this is about 1200). Defaults to <cite>-1</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.BoltExplosion=</span></tt><span class="type definition"> (Animation)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.BoltExplosion=</span></code><span class="type definition"> (Animation)</span></span></dt>
 <dd>Every lightning bolt will display this damage animation upon impact. Defaults
-to <span><tt class="docutils literal"><span class="pre">[General]►WeatherConBoltExplosion</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.Sounds=</span></tt><span class="type definition"> (list of Sounds)</span></span></dt>
+to <span><code class="docutils literal"><span class="pre">[General]►WeatherConBoltExplosion</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.Sounds=</span></code><span class="type definition"> (list of Sounds)</span></span></dt>
 <dd>A comma separated list of sounds played when lightning strikes. Defaults to
-<span><tt class="docutils literal"><span class="pre">[AudioVisual]►LightningSounds</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.Clouds=</span></tt><span class="type definition"> (list of Animation)</span></span></dt>
+<span><code class="docutils literal"><span class="pre">[AudioVisual]►LightningSounds</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.Clouds=</span></code><span class="type definition"> (list of Animation)</span></span></dt>
 <dd><p class="first">A comma separated list of cloud animations. Defaults to
-<span><tt class="docutils literal"><span class="pre">[General]►WeatherConClouds</span></tt></span>.</p>
+<span><code class="docutils literal"><span class="pre">[General]►WeatherConClouds</span></code></span>.</p>
 <div class="last admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">If this list is empty, the Lightning Storm super weapon will
 not function.</p>
 </div>
 </dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.Bolts=</span></tt><span class="type definition"> (list of Animation)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.Bolts=</span></code><span class="type definition"> (list of Animation)</span></span></dt>
 <dd><p class="first">A comma separated list of bolt animations. If this list is empty, the damage
 is caused even though no bolts are shown. Defaults to
-<span><tt class="docutils literal"><span class="pre">[General]►WeatherConBolts</span></tt></span>.</p>
+<span><code class="docutils literal"><span class="pre">[General]►WeatherConBolts</span></code></span>.</p>
 <div class="last admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Do not use <span><tt class="docutils literal"><span class="pre">Bouncer=yes</span></tt></span> animations with
-<span><tt class="docutils literal"><span class="pre">Lightning.Bolts</span></tt></span>. This leads to crashes if a building is hit.</p>
+<p class="last">Do not use <span><code class="docutils literal"><span class="pre">Bouncer=yes</span></code></span> animations with
+<span><code class="docutils literal"><span class="pre">Lightning.Bolts</span></code></span>. This leads to crashes if a building is hit.</p>
 </div>
 </dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.Debris=</span></tt><span class="type definition"> (list of Animation)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Lightning.Debris=</span></code><span class="type definition"> (list of Animation)</span></span></dt>
 <dd>A comma separated list of animations used as debris when lightning strikes.
-Defaults to <span><tt class="docutils literal"><span class="pre">[General]►MetallicDebris</span></tt></span>.</dd>
+Defaults to <span><code class="docutils literal"><span class="pre">[General]►MetallicDebris</span></code></span>.</dd>
 </dl>
 <p>Other changes:</p>
 <p>Lightning rods attract random lightning that is about to strike in close range.
-For more information see the <a class="reference internal" href="../../lightningrods.html"><em>Lightning Rods</em></a> section.</p>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.2.</span></p>
+For more information see the <a class="reference internal" href="../../buildings/lightningrods.html"><em>Lightning Rods</em></a> section.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
 </div>
 
 
@@ -188,7 +187,7 @@ For more information see the <a class="reference internal" href="../../lightning
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -200,15 +199,15 @@ For more information see the <a class="reference internal" href="../../lightning
         <li class="right" >
           <a href="index.html" title="Settings by Super Weapon Type"
              >previous</a> |</li>
-        <li><a href="../../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
-          <li><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

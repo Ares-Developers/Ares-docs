@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Campaign List &mdash; Ares 0.9 documentation</title>
+    <title>Campaign List &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="up" title="User Interface Features" href="index.html" />
     <link rel="next" title="Campaign Load Screen" href="campaignloadscreen.html" />
     <link rel="prev" title="Bitmap Screenshots" href="bitmapscreenshots.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,11 +42,11 @@
         <li class="right" >
           <a href="bitmapscreenshots.html" title="Bitmap Screenshots"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="bitmapscreenshots.html"
@@ -56,7 +54,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="campaignloadscreen.html"
                         title="next chapter">Campaign Load Screen</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -75,49 +73,51 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="campaign-list">
 <h1>Campaign List<a class="headerlink" href="#campaign-list" title="Permalink to this headline">¶</a></h1>
 <p>If you have more campaigns than the game&#8217;s default Campaign Selection menu
 supports you can switch to a campaign list as in <span class="game docutils literal">Tiberian Sun</span>.
 <span class="game docutils literal">Ares</span> supports an arbitrary number of campaigns. Every non-debug battle
-listed in <tt class="file docutils literal docutils literal"><span class="pre">battlemd.ini</span></tt> will show up in the list under the name defined
-by <span><tt class="docutils literal"><span class="pre">Description=</span></tt></span>.</p>
+listed in <code class="file docutils literal"><span class="pre">battlemd.ini</span></code> will show up in the list under the name defined
+by <span><code class="docutils literal"><span class="pre">Description=</span></code></span>.</p>
 <img alt="Campaign list showing both original campaigns with summary" class="align-center" src="../_images/ui_campaignlist.jpg" />
-<p>Enable the campaign list in <tt class="file docutils literal docutils literal"><span class="pre">uimd.ini</span></tt>:</p>
+<p>Enable the campaign list in <code class="file docutils literal"><span class="pre">uimd.ini</span></code>:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►CampaignList=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[UISettings]►CampaignList=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Enables the campaign list instead of the game&#8217;s default menu. Defaults to
 <cite>no</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►CampaignListSize=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[UISettings]►CampaignListSize=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>The number of campaigns shown in the Campaign list without scrolling. The
 number of campaigns shown cannot be less than <cite>3</cite>. The maximum number
-depends on <span><tt class="docutils literal"><span class="pre">ShowSummary</span></tt></span>. Defaults to <cite>7</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►ShowSummary=</span></tt><span class="type definition"> (boolean)</span></span></dt>
-<dd>Whether the campaign list displays a campaign&#8217;s <span><tt class="docutils literal"><span class="pre">Summary</span></tt></span> below the
+depends on <span><code class="docutils literal"><span class="pre">ShowSummary</span></code></span>. Defaults to <cite>7</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[UISettings]►ShowSummary=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether the campaign list displays a campaign&#8217;s <span><code class="docutils literal"><span class="pre">Summary</span></code></span> below the
 difficulty selection. If shown, the maximum campaign list size is <cite>14</cite>,
 otherwise it is <cite>18</cite>. Defaults to <cite>yes</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►ShowDebugCampaigns=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[UISettings]►ShowDebugCampaigns=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Also displays campaigns in the list that have <cite>DebugOnly=yes</cite> set. Defaults to
 <cite>no</cite>.</dd>
 </dl>
-<p>You can customize the campaigns in the list by editing <tt class="file docutils literal docutils literal"><span class="pre">battlemd.ini</span></tt>:</p>
+<p>You can customize the campaigns in the list by editing <code class="file docutils literal"><span class="pre">battlemd.ini</span></code>:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Battle]►HoverSound=</span></tt><span class="type definition"> (sound)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Battle]►HoverSound=</span></code><span class="type definition"> (sound)</span></span></dt>
 <dd>The sound to be played when the player selects a campaign. This defaults to
 <cite>AlliedCampaignSelect</cite>, <cite>SovietCampaignSelect</cite>, and
 <cite>BootCampSelect</cite> for the original in-game campaigns. The selection menu
 plays them when the mouse hovers over the respective campaign&#8217;s image.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Battle]►Summary=</span></tt><span class="type definition"> (CSF label)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Battle]►Summary=</span></code><span class="type definition"> (CSF label)</span></span></dt>
 <dd>Provide an optional summary of the campaign&#8217;s or mission&#8217;s story. It will be
 shown below the difficulty slider if not disabled using
-<span><tt class="docutils literal"><span class="pre">[UISettings]►ShowSummary</span></tt></span>.</dd>
+<span><code class="docutils literal"><span class="pre">[UISettings]►ShowSummary</span></code></span>.</dd>
 </dl>
-<p class="versionadded" id="index-0">
-<span class="versionmodified">New in version 0.2.</span></p>
-<p class="versionchanged">
-<span class="versionmodified">Changed in version 0.9.</span></p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 0.9.</span></p>
+</div>
 </div>
 
 
@@ -126,7 +126,7 @@ shown below the difficulty slider if not disabled using
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -138,13 +138,13 @@ shown below the difficulty slider if not disabled using
         <li class="right" >
           <a href="bitmapscreenshots.html" title="Bitmap Screenshots"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" >User Interface Features</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >User Interface Features</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

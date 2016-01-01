@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Iron Curtain Effect &mdash; Ares 0.9 documentation</title>
+    <title>Iron Curtain Effect &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../../index.html" />
     <link rel="up" title="Warheads" href="index.html" />
     <link rel="next" title="Permanent Mind-Control" href="mindcontrol.html" />
     <link rel="prev" title="CellSpread Enhancements" href="cellspread.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,12 +42,12 @@
         <li class="right" >
           <a href="cellspread.html" title="CellSpread Enhancements"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Warheads</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Warheads</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="cellspread.html"
@@ -57,7 +55,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="mindcontrol.html"
                         title="next chapter">Permanent Mind-Control</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -76,54 +74,55 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="iron-curtain-effect">
 <span id="wh-ironcurtain"></span><h1>Iron Curtain Effect<a class="headerlink" href="#iron-curtain-effect" title="Permalink to this headline">¶</a></h1>
 <p>The Iron Curtain effect can now be given to or removed from units and buildings
 using new <span class="game docutils literal">Ares</span> warhead settings.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Warhead]►IronCurtain.Duration=</span></tt><span class="type definition"> (integer - frames)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►IronCurtain.Duration=</span></code><span class="type definition"> (integer - frames)</span></span></dt>
 <dd>If positive, endows the target unit with the Iron Curtain effect for the
 specified number of frames. If negative, the Iron Curtain effect duration will
-be reduced by this number of frames. Use <span><tt class="docutils literal"><span class="pre">IronCurtain.Cap=</span></tt></span> below to have
+be reduced by this number of frames. Use <span><code class="docutils literal"><span class="pre">IronCurtain.Cap=</span></code></span> below to have
 the effect duration be cumulative rather than absolute.
-<span><tt class="docutils literal"><span class="pre">IronCurtain.Duration</span></tt></span> defaults to <cite>0</cite> (no Iron Curtain effect).</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Warhead]►IronCurtain.Cap=</span></tt><span class="type definition"> (integer)</span></span></dt>
-<dd>If this value is negative the <span><tt class="docutils literal"><span class="pre">IronCurtain.Duration</span></tt></span> is absolute and will
+<span><code class="docutils literal"><span class="pre">IronCurtain.Duration</span></code></span> defaults to <cite>0</cite> (no Iron Curtain effect).</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►IronCurtain.Cap=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd>If this value is negative the <span><code class="docutils literal"><span class="pre">IronCurtain.Duration</span></code></span> is absolute and will
 not stack up if a target is fired upon multiple times. If this value is
 <cite>0</cite> the effect duration can stack up indefinitely. Otherwise the Iron
 Curtain effect can not stack up to durations longer than this value &#8211; except
-for when a unit&#8217;s duration already is higher and <span><tt class="docutils literal"><span class="pre">IronCurtain.Duration</span></tt></span>
+for when a unit&#8217;s duration already is higher and <span><code class="docutils literal"><span class="pre">IronCurtain.Duration</span></code></span>
 isn&#8217;t negative (the duration will not be decreased, then).
-<span><tt class="docutils literal"><span class="pre">IronCurtain.Cap</span></tt></span> defaults to <cite>-1</cite> (non-stacking, absolute duration).</dd>
+<span><code class="docutils literal"><span class="pre">IronCurtain.Cap</span></code></span> defaults to <cite>-1</cite> (non-stacking, absolute duration).</dd>
 </dl>
 <p>To change the effect the Iron Curtain has on specific units:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►IronCurtain.Modifier=</span></tt><span class="type definition"> (float - multiplier)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►IronCurtain.Modifier=</span></code><span class="type definition"> (float - multiplier)</span></span></dt>
 <dd>If the Iron Curtain effect duration is positive it will be multiplied by this
 factor. Use <cite>0%</cite> to create a unit that can not be affected by the Iron
-Curtain. <span><tt class="docutils literal"><span class="pre">IronCurtain.Modifier</span></tt></span> defaults to <cite>100%</cite>.</dd>
+Curtain. <span><code class="docutils literal"><span class="pre">IronCurtain.Modifier</span></code></span> defaults to <cite>100%</cite>.</dd>
 </dl>
 <div class="quickstart admonition" id="quickstart-0">
 <p class="first admonition-title">Quickstart</p>
 <p class="last">To have a unit protect a target for ten seconds, set
-<span><tt class="docutils literal"><span class="pre">[Warhead]►IronCurtain.Duration=150</span></tt></span>. To allow the Iron Curtain duration
-to stack up to one minute, set <span><tt class="docutils literal"><span class="pre">[Warhead]►IronCurtain.Cap=900</span></tt></span>. To remove
+<span><code class="docutils literal"><span class="pre">[Warhead]►IronCurtain.Duration=150</span></code></span>. To allow the Iron Curtain duration
+to stack up to one minute, set <span><code class="docutils literal"><span class="pre">[Warhead]►IronCurtain.Cap=900</span></code></span>. To remove
 the Iron Curtain effect altogether, set
-<span><tt class="docutils literal"><span class="pre">[Warhead]►IronCurtain.Duration=-1</span></tt></span> and
-<span><tt class="docutils literal"><span class="pre">[Warhead]►IronCurtain.Cap=0</span></tt></span> (remove one frame but have the resulting
+<span><code class="docutils literal"><span class="pre">[Warhead]►IronCurtain.Duration=-1</span></code></span> and
+<span><code class="docutils literal"><span class="pre">[Warhead]►IronCurtain.Cap=0</span></code></span> (remove one frame but have the resulting
 number of frames not exceed 0).</p>
 </div>
 <p>If a weapon deals conventional damage and applies the Iron Curtain at the same
 time, the damage will be dealt first. <span class="type docutils literal">InfantryTypes</span> and
-<span><tt class="docutils literal"><span class="pre">Organic=yes</span></tt></span> units will always get killed instantaneously.</p>
-<p>This feature works with <span><tt class="docutils literal"><span class="pre">CellSpread</span></tt></span> to affect multiple targets.
-<span><tt class="docutils literal"><span class="pre">AffectsAllies</span></tt></span> and <span><tt class="docutils literal"><span class="pre">AffectsEnemies</span></tt></span> are respected. A unit does not
-get the Iron Curtain effect if <span><tt class="docutils literal"><span class="pre">Verses</span></tt></span> is equal to <cite>0%</cite>, otherwise
+<span><code class="docutils literal"><span class="pre">Organic=yes</span></code></span> units will always get killed instantaneously.</p>
+<p>This feature works with <span><code class="docutils literal"><span class="pre">CellSpread</span></code></span> to affect multiple targets.
+<span><code class="docutils literal"><span class="pre">AffectsAllies</span></code></span> and <span><code class="docutils literal"><span class="pre">AffectsEnemies</span></code></span> are respected. A unit does not
+get the Iron Curtain effect if <span><code class="docutils literal"><span class="pre">Verses</span></code></span> is equal to <cite>0%</cite>, otherwise
 the target is endowed with the full effect.</p>
-<p class="versionadded" id="index-0">
-<span class="versionmodified">New in version 0.1.</span></p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
 </div>
 
 
@@ -132,7 +131,7 @@ the target is endowed with the full effect.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -144,14 +143,14 @@ the target is endowed with the full effect.</p>
         <li class="right" >
           <a href="cellspread.html" title="CellSpread Enhancements"
              >previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="index.html" >Warheads</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Warheads</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

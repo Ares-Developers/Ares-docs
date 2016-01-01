@@ -1,0 +1,32 @@
+Saboteurs
+
+
+Dune 2000 had the Saboteur, an infantry unit that could enter enemy
+structures and destroy them immediately, sacrificing himself. This has been
+re-created in Ares.
+
+Only buildings owned by enemy players are sabotagable. If a building can be
+sabotaged, the player gets the enter cursor.
+
+ The temporary cloak feature has not been implemented.
+
+[InfantryType]Saboteur=boolean
+  Whether this infantry can blow up a sabotagable building. The building will be
+  destroyed as if C4 was placed, and the Saboteur is consumed in this process.
+  Requires Infiltrate=yes. Not supported together with vehicle hijacking,
+  CanDrive=yes, C4 (either C4=yes or granted through veterancy)
+  and Occupier=yes logics. Defaults to no.
+
+[BuildingType]ImmuneToSaboteurs=boolean
+  Whether this building cannot be sabotaged. If yes, saboteurs cannot
+  enter this structure. Defaults to yes for CanC4=no or
+  TechLevel=-1 CanBeOccupied=yes buildings, to no
+  otherwise.
+
+  .. note: By default, unbuildable occupiable structures cannot be sabotaged.
+    This prevents saboteurs from blowing up civilian structures when selected in
+    a group with occupiers. This default value might change in the future.
+
+ InfantryTypes; Saboteurs blowing up buildings
+
+ 0.A

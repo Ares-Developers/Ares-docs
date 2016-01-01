@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>User Interface &mdash; Ares 0.9 documentation</title>
+    <title>User Interface and Loading Theme &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../../index.html" />
     <link rel="up" title="Sides &amp; Countries" href="index.html" />
     <link rel="next" title="Score Screens and Themes" href="scorescreens.html" />
     <link rel="prev" title="Side Defaults" href="defaultside.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,19 +42,20 @@
         <li class="right" >
           <a href="defaultside.html" title="Side Defaults"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Sides &amp; Countries</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Sides &amp; Countries</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">User Interface</a><ul>
+<li><a class="reference internal" href="#">User Interface and Loading Theme</a><ul>
 <li><a class="reference internal" href="#sidebar">Sidebar</a></li>
 <li><a class="reference internal" href="#text-colors">Text Colors</a></li>
 <li><a class="reference internal" href="#dialogs">Dialogs</a></li>
+<li><a class="reference internal" href="#loading-theme">Loading Theme</a></li>
 <li><a class="reference internal" href="#eva">EVA</a></li>
 </ul>
 </li>
@@ -68,7 +67,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="scorescreens.html"
                         title="next chapter">Score Screens and Themes</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -87,62 +86,76 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
-  <div class="section" id="user-interface">
-<h1>User Interface<a class="headerlink" href="#user-interface" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="user-interface-and-loading-theme">
+<h1>User Interface and Loading Theme<a class="headerlink" href="#user-interface-and-loading-theme" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="sidebar">
 <h2>Sidebar<a class="headerlink" href="#sidebar" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►Sidebar.MixFileIndex=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Side]►Sidebar.MixFileIndex=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>The MIX file number to use for the sidebar (e.g. <cite>1</cite> for the Allied
 sidec01.mix, <cite>2</cite> for the Soviet sidec02.mix).</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►Sidebar.YuriFileNames=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Side]►Sidebar.YuriFileNames=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether or not to use the Yuri sidebar file names (sidec02md.mix and the
 Yuri-specific files within that MIX).</dd>
 </dl>
-<p class="versionadded" id="index-0">
-<span class="versionmodified">New in version 0.1.</span></p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
 </div>
 <div class="section" id="text-colors">
 <h2>Text Colors<a class="headerlink" href="#text-colors" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►ToolTipColor=</span></tt><span class="type definition"> (R,G,B)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Side]►ToolTipColor=</span></code><span class="type definition"> (R,G,B)</span></span></dt>
 <dd>Interface text and border color for tool tips, the credits counter, and other
 UI elements. Defaults to <cite>255,255,0</cite> for sides <cite>Nod</cite> and
 <cite>ThirdSide</cite>, otherwise to <cite>164,210,255</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►MessageTextColor=</span></tt><span class="type definition"> (Color scheme)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Side]►MessageTextColor=</span></code><span class="type definition"> (Color scheme)</span></span></dt>
 <dd>The color scheme used for printing ingame messages triggered by map action 11.
 Defaults to the 6th color scheme for side <cite>Nod</cite>, the 13th color scheme
 for side <cite>ThirdSide</cite>, to 11th color scheme otherwise. In the unmodified
 game, the colors are <cite>DarkRed</cite>, <cite>DarkSky</cite> and <cite>DarkBlue</cite>
 respectively.</dd>
 </dl>
-<p class="versionadded" id="index-1">
-<span class="versionmodified">New in version 0.4.</span></p>
+<div class="versionadded" id="index-1">
+<p><span class="versionmodified">New in version 0.4.</span></p>
+</div>
 </div>
 <div class="section" id="dialogs">
 <h2>Dialogs<a class="headerlink" href="#dialogs" title="Permalink to this headline">¶</a></h2>
 <p>The side specific dialog background is used when a Reconnection error occurs or
 while loading or saving a game.</p>
-<p><span><tt class="definition docutils literal"><span class="pre">[Side]►DialogBackground.Image=</span></tt><span class="type definition"> (filename, *including* the .shp extension)</span></span>
+<p><span><code class="definition docutils literal"><span class="pre">[Side]►DialogBackground.Image=</span></code><span class="type definition"> (filename, *including* the .shp extension)</span></span>
 The shp file used as background for dialog boxes for this side. Should be
 452x326; the image is aligned on the top left corner of the dialog. Defaults to
 <cite>PUDLGBGA.SHP</cite>, <cite>PUDLGBGS.SHP</cite>, and <cite>PUDLGBGY.SHP</cite> for
-sides 1, 2 and all others respectively. Requires <span><tt class="docutils literal"><span class="pre">DialogBackground.Palette</span></tt></span>
+sides 1, 2 and all others respectively. Requires <span><code class="docutils literal"><span class="pre">DialogBackground.Palette</span></code></span>
 to be set.</p>
-<p><span><tt class="definition docutils literal"><span class="pre">[Side]►DialogBackground.Palette=</span></tt><span class="type definition"> (filename, *including* the .pal extension)</span></span>
+<p><span><code class="definition docutils literal"><span class="pre">[Side]►DialogBackground.Palette=</span></code><span class="type definition"> (filename, *including* the .pal extension)</span></span>
 The palette used to draw the background of dialog boxes for this side. Defaults
 to <cite>DIALOG.PAL</cite> for sides 1 and 2, to <cite>DIALOG.PAL</cite> otherwise.
-Requires <span><tt class="docutils literal"><span class="pre">DialogBackground.Image</span></tt></span> to be set.</p>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.7.</span></p>
+Requires <span><code class="docutils literal"><span class="pre">DialogBackground.Image</span></code></span> to be set.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.7.</span></p>
+</div>
+</div>
+<div class="section" id="loading-theme">
+<h2>Loading Theme<a class="headerlink" href="#loading-theme" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[Side]►LoadingTheme=</span></code><span class="type definition"> (theme id)</span></span></dt>
+<dd>The theme playing for a player of this side while the multiplayer match is
+loading. Defaults to <cite>LOADING</cite>.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.7.</span></p>
+</div>
 </div>
 <div class="section" id="eva">
 <span id="sides-evatag"></span><h2>EVA<a class="headerlink" href="#eva" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Side]►EVA.Tag=</span></tt><span class="type definition"> (EVA Type)</span></span></dt>
-<dd><p class="first">Name of the EVA Type tag to load from <tt class="file docutils literal docutils literal"><span class="pre">evamd.ini</span></tt> for this side&#8217;s EVA
+<dt><span><code class="definition docutils literal"><span class="pre">[Side]►EVA.Tag=</span></code><span class="type definition"> (EVA Type)</span></span></dt>
+<dd><p class="first">Name of the EVA Type tag to load from <code class="file docutils literal"><span class="pre">evamd.ini</span></code> for this side&#8217;s EVA
 announcer. Use <cite>none</cite> to disable EVA. Defaults to <cite>Russian</cite> for
 side <cite>Nod</cite>, to <cite>Yuri</cite> for side <cite>ThirdSide</cite>, to
 <cite>Allied</cite> otherwise.</p>
@@ -150,8 +163,9 @@ side <cite>Nod</cite>, to <cite>Yuri</cite> for side <cite>ThirdSide</cite>, to
 here.</p>
 </dd>
 </dl>
-<p class="versionadded" id="index-2">
-<span class="versionmodified">New in version 0.4.</span></p>
+<div class="versionadded" id="index-2">
+<p><span class="versionmodified">New in version 0.4.</span></p>
+</div>
 </div>
 </div>
 
@@ -161,7 +175,7 @@ here.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -173,14 +187,14 @@ here.</p>
         <li class="right" >
           <a href="defaultside.html" title="Side Defaults"
              >previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="index.html" >Sides &amp; Countries</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Sides &amp; Countries</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

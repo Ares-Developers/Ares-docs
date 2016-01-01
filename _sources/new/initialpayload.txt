@@ -1,0 +1,38 @@
+Initial Payload (Troop Crawlers)
+
+
+In Generals the Chinese have the Troop Crawler, a vehicle that comes
+pre-filled with Red Guard infantry right from the factory. Ares adds
+this feature to Yuri's Revenge.
+
+Buildings must either have CanBeOccupied=yes or InfantryAbsorb=yes
+set. Other buildings are not supported to have initial payload. Buildings are
+only allowed to have InfantryType payload.
+
+Occupiable buildings will be filled with up to MaxNumberOccupants
+infantry, other buildings and units will be filled with up to Passengers
+units. It's the responsibility of the modder to check Size and
+SizeLimit.
+
+InfantryType\ s cannot have initial payload.
+
+[TechnoType]InitialPayload.Types=list of TechnoTypes
+  The types of the initial payload this object is created with. Types can be
+  mentioned more than once, or the corresponding InitialPayload.Nums can
+  be used to repeat a type.
+
+  BuildingType\ s and AircraftType\ s are not valid. Buildings
+  are only allowed to have InfantryType payload. Types themselves having
+  initial payload are not supported, because this could create infinite loops.
+
+[TechnoType]InitialPayload.Nums=list of integers
+  The optional numbers of times each type from InitialPayload.Types will
+  be added.
+
+  If this list contains fewer items than the InitialPayload.Types list,
+  the last number is used as count for all following types. If this tag is not
+  set, all counts are assumed to be 1.
+
+ Passengers; Pre-fill units with passengers like a Troop Crawler
+
+ 0.A

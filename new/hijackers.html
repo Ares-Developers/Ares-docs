@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Hijackers &mdash; Ares 0.9 documentation</title>
+    <title>Hijackers &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Hunter Seeker" href="hunterseeker.html" />
     <link rel="prev" title="Hard-coded Unit Properties" href="hardcodedunitproperties.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,11 +42,11 @@
         <li class="right" >
           <a href="hardcodedunitproperties.html" title="Hard-coded Unit Properties"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="hardcodedunitproperties.html"
@@ -56,7 +54,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="hunterseeker.html"
                         title="next chapter">Hunter Seeker</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -75,52 +73,55 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="hijackers">
 <h1>Hijackers<a class="headerlink" href="#hijackers" title="Permalink to this headline">¶</a></h1>
 <p>Vehicle thieves can steal enemy units, effectively hijacking them on the battle
-field. If you enable hijacking by setting <span><tt class="docutils literal"><span class="pre">VehicleThief=yes</span></tt></span> on an
+field. If you enable hijacking by setting <span><code class="docutils literal"><span class="pre">VehicleThief=yes</span></code></span> on an
 <span class="type docutils literal">InfantryType</span>, you can customize it in various ways:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[InfantryType]►VehicleThief.EnterSound=</span></tt><span class="type definition"> (Sound name)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[InfantryType]►VehicleThief.EnterSound=</span></code><span class="type definition"> (Sound name)</span></span></dt>
 <dd>Specifies the sound played when a hijacker captures an enemy vehicle. This
-also works for infantry with <span><tt class="docutils literal"><span class="pre">CanDrive=yes</span></tt></span> when reclaiming neutralized
+also works for infantry with <span><code class="docutils literal"><span class="pre">CanDrive=yes</span></code></span> when reclaiming neutralized
 units. Defaults to <cite>none</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[InfantryType]►VehicleThief.LeaveSound=</span></tt><span class="type definition"> (Sound name)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[InfantryType]►VehicleThief.LeaveSound=</span></code><span class="type definition"> (Sound name)</span></span></dt>
 <dd>Specifies the sound played when a hijacker leaves a vehicle when it is
 destroyed. Defaults to <cite>none</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[InfantryType]►VehicleThief.BreakMindControl=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[InfantryType]►VehicleThief.BreakMindControl=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether the vehicle thief can hijack units that are mind-controlled. The link
 between the controller and the unit will be broken when the hijacker enters.
 Otherwise the hijacker cannot steal the unit. Defaults to <cite>yes</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[InfantryType]►VehicleThief.OneTime=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[InfantryType]►VehicleThief.OneTime=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether the vehicle thief will be consumed in the procees of capturing a unit.
 Otherwise the hijacker will emerge when the captured unit is destroyed. In
 every case the hijacker will be reimbursed when the unit is grinded. Defaults
-to <span><tt class="docutils literal"><span class="pre">no</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[InfantryType]►VehicleThief.KillPilots=</span></tt><span class="type definition"> (integer)</span></span></dt>
+to <span><code class="docutils literal"><span class="pre">no</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[InfantryType]►VehicleThief.KillPilots=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>The number of pilots the vehicle thief kills when entering a unit. These
 pilots will have no chance to escape the unit when it is destroyed. Use
 <cite>-1</cite> to kill all pilots. In <span class="game docutils literal">Tiberian Sun</span> the hijacker will
 prevent any crew from escaping a destroyed vehicle. Defaults to <cite>0</cite>.</dd>
 </dl>
 <p>In <span class="game docutils literal">Tiberian Sun</span> the vehicle thief was not allowed to hijack units that
-had <span><tt class="docutils literal"><span class="pre">NonVehicle=yes</span></tt></span> set. <span class="game docutils literal">Ares</span> does not use <span><tt class="docutils literal"><span class="pre">NonVehicle</span></tt></span>,
+had <span><code class="docutils literal"><span class="pre">NonVehicle=yes</span></code></span> set. <span class="game docutils literal">Ares</span> does not use <span><code class="docutils literal"><span class="pre">NonVehicle</span></code></span>,
 because it affects many other features as well, which might be undesirable.
-Instead, you will have to use the new dedicated flag <span><tt class="docutils literal"><span class="pre">VehicleThief.Allowed</span></tt></span>
+Instead, you will have to use the new dedicated flag <span><code class="docutils literal"><span class="pre">VehicleThief.Allowed</span></code></span>
 to change whether a unit can be hijacked.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►VehicleThief.Allowed=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►VehicleThief.Allowed=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether this <span class="type docutils literal">VehicleType</span> or <span class="type docutils literal">AircraftType</span> can be hijacked by
 vehicle thieves. Defaults to <cite>yes</cite>.</dd>
 </dl>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Vehicle Thieves cannot drive neutralized vehicles by default, but
-<span><tt class="docutils literal"><span class="pre">VehicleThief=yes</span></tt></span> can be combined with <span><tt class="docutils literal"><span class="pre">CanDrive=yes</span></tt></span> without
+<span><code class="docutils literal"><span class="pre">VehicleThief=yes</span></code></span> can be combined with <span><code class="docutils literal"><span class="pre">CanDrive=yes</span></code></span> without
 problems.</p>
 </div>
+<p>Hijackers remember their health and their previous veterancy level. When the
+vehicle they stole are destroyed, they respawn with a random health up to half
+their previous health, and their old rank.</p>
 <p>Hijacking works well together with Mind Control now. If a mind-controlled unit
 is captured, the connection to the controller is broken and there will be no
 bogus links left behind. Likewise, mind-controlled hijackers will capture
@@ -132,8 +133,9 @@ mind-controlled unit is destroyed, the link is transferred to the hijacker, if
 it isn&#8217;t immune to psionics.</p>
 <p>Vehicle Thieves cannot hijack friendly units or vehicles neutralized by the Kill
 Driver warheads. See <a class="reference internal" href="killingdrivers.html"><em>KillDriver and CanDrive</em></a>.</p>
-<p class="versionadded" id="index-0">
-<span class="versionmodified">New in version 0.2.</span></p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
 </div>
 
 
@@ -142,7 +144,7 @@ Driver warheads. See <a class="reference internal" href="killingdrivers.html"><e
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -154,13 +156,13 @@ Driver warheads. See <a class="reference internal" href="killingdrivers.html"><e
         <li class="right" >
           <a href="hardcodedunitproperties.html" title="Hard-coded Unit Properties"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

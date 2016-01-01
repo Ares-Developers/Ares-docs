@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Sensor Arrays &mdash; Ares 0.9 documentation</title>
+    <title>Sensor Arrays &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../../index.html" />
     <link rel="up" title="Cloak, Stealth and Sensor Arrays" href="index.html" />
     <link rel="next" title="Projectiles" href="../projectiles/index.html" />
     <link rel="prev" title="Cloak Depending On State" href="cloakstates.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,12 +42,12 @@
         <li class="right" >
           <a href="cloakstates.html" title="Cloak Depending On State"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Cloak, Stealth and Sensor Arrays</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Cloak, Stealth and Sensor Arrays</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../index.html">Table Of Contents</a></h3>
   <ul>
@@ -66,7 +64,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="../projectiles/index.html"
                         title="next chapter">Projectiles</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -85,7 +83,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="sensor-arrays">
 <h1>Sensor Arrays<a class="headerlink" href="#sensor-arrays" title="Permalink to this headline">¶</a></h1>
@@ -93,11 +91,12 @@
 as well as subterranean unit movements. The feature was introduced along with
 Cloak Generators in <span class="game docutils literal">Tiberian Sun</span>, but didn&#8217;t work correctly in
 <span class="game docutils literal">Red Alert 2</span>.</p>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.5.</span></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.5.</span></p>
+</div>
 <div class="section" id="changes">
 <h2>Changes<a class="headerlink" href="#changes" title="Permalink to this headline">¶</a></h2>
-<p><span><tt class="docutils literal"><span class="pre">SensorArray=yes</span></tt></span> uses <span><tt class="docutils literal"><span class="pre">SensorsSight=</span></tt></span> as range to detect stealth and
+<p><span><code class="docutils literal"><span class="pre">SensorArray=yes</span></code></span> uses <span><code class="docutils literal"><span class="pre">SensorsSight=</span></code></span> as range to detect stealth and
 subterranean units, while <span class="game docutils literal">Tiberian Sun</span> reused the Cloak Generator range.
 This is also used to draw the radial indicator.</p>
 <p>The bug that the sensor stayed active even after the Sensor Array was destroyed
@@ -110,7 +109,7 @@ now.</p>
 Sensor Array detects cloaked units or units moving underground respectively.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">You have to add these EVA voices to <tt class="file docutils literal docutils literal"><span class="pre">evamd.ini</span></tt> before you can
+<p class="last">You have to add these EVA voices to <code class="file docutils literal"><span class="pre">evamd.ini</span></code> before you can
 use them. The game does not contain audio files for the three original EVA
 voices.</p>
 </div>
@@ -118,13 +117,14 @@ voices.</p>
 <div class="section" id="suppress-sensor-array-warnings">
 <h2>Suppress Sensor Array Warnings<a class="headerlink" href="#suppress-sensor-array-warnings" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►SensorArray.Warn=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►SensorArray.Warn=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether EVA warnings and radar events should be generated if this type is
 detected. This does not hide the unit or building from the Sensor Array, and
 the object will still become visible. Defaults to <cite>yes</cite>.</dd>
 </dl>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.5.</span></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.5.</span></p>
+</div>
 </div>
 </div>
 
@@ -134,7 +134,7 @@ the object will still become visible. Defaults to <cite>yes</cite>.</dd>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -146,14 +146,14 @@ the object will still become visible. Defaults to <cite>yes</cite>.</dd>
         <li class="right" >
           <a href="cloakstates.html" title="Cloak Depending On State"
              >previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="index.html" >Cloak, Stealth and Sensor Arrays</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Cloak, Stealth and Sensor Arrays</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

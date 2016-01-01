@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Super Weapons &mdash; Ares 0.9 documentation</title>
+    <title>Super Weapons &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="../index.html" />
     <link rel="next" title="Building Options" href="buildings.html" />
-    <link rel="prev" title="Berserk Reloading Time Modifier" href="../warheads/berserk.html" /> 
+    <link rel="prev" title="Suppress Death Weapons" href="../warheads/deathweapon.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -42,21 +40,21 @@
           <a href="buildings.html" title="Building Options"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="../warheads/berserk.html" title="Berserk Reloading Time Modifier"
+          <a href="../warheads/deathweapon.html" title="Suppress Death Weapons"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="../warheads/berserk.html"
-                        title="previous chapter">Berserk Reloading Time Modifier</a></p>
+  <p class="topless"><a href="../warheads/deathweapon.html"
+                        title="previous chapter">Suppress Death Weapons</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="buildings.html"
                         title="next chapter">Building Options</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -75,7 +73,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="super-weapons">
 <h1>Super Weapons<a class="headerlink" href="#super-weapons" title="Permalink to this headline">¶</a></h1>
@@ -86,11 +84,11 @@ several new ways to customize existing super weapons as well as several wholly
 new super weapons.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">You cannot change a super weapon&#8217;s <span><tt class="docutils literal"><span class="pre">Type=</span></tt></span> or <span><tt class="docutils literal"><span class="pre">Action=</span></tt></span>
+<p class="last">You cannot change a super weapon&#8217;s <span><code class="docutils literal"><span class="pre">Type=</span></code></span> or <span><code class="docutils literal"><span class="pre">Action=</span></code></span>
 values in any of the game mode specific INI files (like
-<tt class="file docutils literal docutils literal"><span class="pre">mpfreeforallmd.ini</span></tt>) or map files. To achive the same effect, add a
-new super weapon to <tt class="file docutils literal docutils literal"><span class="pre">rulesmd.ini</span></tt> with the different <span><tt class="docutils literal"><span class="pre">Type=</span></tt></span> or
-<span><tt class="docutils literal"><span class="pre">Action=</span></tt></span> and change <span><tt class="docutils literal"><span class="pre">SuperWeapon=</span></tt></span> for the respective owner
+<code class="file docutils literal"><span class="pre">mpfreeforallmd.ini</span></code>) or map files. To achive the same effect, add a
+new super weapon to <code class="file docutils literal"><span class="pre">rulesmd.ini</span></code> with the different <span><code class="docutils literal"><span class="pre">Type=</span></code></span> or
+<span><code class="docutils literal"><span class="pre">Action=</span></code></span> and change <span><code class="docutils literal"><span class="pre">SuperWeapon=</span></code></span> for the respective owner
 buildings to use the new super weapon in the INI file instead.</p>
 </div>
 <div class="toctree-wrapper compound">
@@ -159,7 +157,7 @@ buildings to use the new super weapon in the INI file instead.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -169,15 +167,15 @@ buildings to use the new super weapon in the INI file instead.</p>
           <a href="buildings.html" title="Building Options"
              >next</a> |</li>
         <li class="right" >
-          <a href="../warheads/berserk.html" title="Berserk Reloading Time Modifier"
+          <a href="../warheads/deathweapon.html" title="Suppress Death Weapons"
              >previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

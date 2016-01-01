@@ -11,6 +11,7 @@ don't directly provide any new functionality.
 	stringtableenhancements
 	listlengths
 	mixloadingorder
+	bagfiles
 	looseaudiofiles
 	mousesha
 	avoidableinternalerrors

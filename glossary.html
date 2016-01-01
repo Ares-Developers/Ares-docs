@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Glossary &mdash; Ares 0.9 documentation</title>
+    <title>Glossary &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,8 +14,8 @@
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
-        VERSION:     '0.9',
+        URL_ROOT:    './',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,11 +24,11 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="index.html" />
     <link rel="prev" title="Credits" href="credits.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -39,15 +37,15 @@
         <li class="right" >
           <a href="credits.html" title="Credits"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">Ares 0.9 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 0.A documentation</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="credits.html"
                         title="previous chapter">Credits</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -66,7 +64,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="glossary">
 <h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
@@ -86,21 +84,21 @@
 <dt id="term-str"><span id="term-string"></span><span id="term-strings"></span>str<br />string<br />strings</dt>
 <dd>Normal text.</dd>
 <dt id="term-stringlist"><span id="term-listofstrings"></span>stringlist<br />listofstrings</dt>
-<dd>Character-separated list of <a class="reference internal" href="#term-strings"><em class="xref std std-term">strings</em></a>.</dd>
+<dd>Character-separated list of <a class="reference internal" href="#term-strings"><span class="xref std std-term">strings</span></a>.</dd>
 <dt id="term-intlist"><span id="term-listofints"></span>intlist<br />listofints</dt>
-<dd>Character-separated list of <a class="reference internal" href="#term-integers"><em class="xref std std-term">integers</em></a>.</dd>
+<dd>Character-separated list of <a class="reference internal" href="#term-integers"><span class="xref std std-term">integers</span></a>.</dd>
 <dt id="term-rgb">rgb</dt>
-<dd>Red, Green, and Blue is the most common way colors are represented. Each <a class="reference internal" href="#term-byte"><em class="xref std std-term">byte</em></a> represents the amount of each color respectively, with 0 as the minimum and 255 as the maximum.
+<dd>Red, Green, and Blue is the most common way colors are represented. Each <a class="reference internal" href="#term-byte"><span class="xref std std-term">byte</span></a> represents the amount of each color respectively, with 0 as the minimum and 255 as the maximum.
 This color model is used with RadColor, for instance.</dd>
 <dt id="term-hsb">hsb</dt>
-<dd>Hue, Saturation, and Brightness is used much less frequently than <a class="reference internal" href="#term-rgb"><em class="xref std std-term">RGB</em></a>. Similarly, each <a class="reference internal" href="#term-byte"><em class="xref std std-term">byte</em></a> represents the amount of each factor. However, it is important to note that the Tiberian Sun and Red Alert 2 engines use a unique HSB color model that is not the same as the one used by most PC programs, like MS Paint.</dd>
+<dd>Hue, Saturation, and Brightness is used much less frequently than <a class="reference internal" href="#term-rgb"><span class="xref std std-term">RGB</span></a>. Similarly, each <a class="reference internal" href="#term-byte"><span class="xref std std-term">byte</span></a> represents the amount of each factor. However, it is important to note that the Tiberian Sun and Red Alert 2 engines use a unique HSB color model that is not the same as the one used by most PC programs, like MS Paint.</dd>
 <dt id="term-color"><span id="term-colors"></span>color<br />colors</dt>
-<dd>Color definition values, either in <a class="reference internal" href="#term-rgb"><em class="xref std std-term">R,G,B</em></a> or <a class="reference internal" href="#term-hsb"><em class="xref std std-term">H,S,B</em></a> notation.
-This unique color model is used with flags in the <tt class="docutils literal"><span class="pre">[Colors]</span></tt> section.</dd>
+<dd>Color definition values, either in <a class="reference internal" href="#term-rgb"><span class="xref std std-term">R,G,B</span></a> or <a class="reference internal" href="#term-hsb"><span class="xref std std-term">H,S,B</span></a> notation.
+This unique color model is used with flags in the <code class="docutils literal"><span class="pre">[Colors]</span></code> section.</dd>
 <dt id="term-clsid"><span id="term-clsids"></span><span id="term-locomotor"></span><span id="term-locomotors"></span>clsid<br />clsids<br />locomotor<br />locomotors</dt>
 <dd>Either a locomotor, or an AI general identifier.</dd>
 <dt id="term-percent"><span id="term-percents"></span><span id="term-percentage"></span><span id="term-percentages"></span><span id="term-"></span>percent<br />percents<br />percentage<br />percentages<br />%</dt>
-<dd>Either a direct percentage (e.g. &#8220;50%&#8221;), or a <a class="reference internal" href="#term-float"><em class="xref std std-term">floating point value</em></a> (e.g. &#8220;0.5&#8221;).</dd>
+<dd>Either a direct percentage (e.g. &#8220;50%&#8221;), or a <a class="reference internal" href="#term-float"><span class="xref std std-term">floating point value</span></a> (e.g. &#8220;0.5&#8221;).</dd>
 <dt id="term-special">special</dt>
 <dd>If given as a value type, this value doesn&#8217;t conform to any typical format.
 Please check the context of the documentation to see how the value must be formatted.</dd>
@@ -113,7 +111,7 @@ Please check the context of the documentation to see how the value must be forma
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -122,12 +120,12 @@ Please check the context of the documentation to see how the value must be forma
         <li class="right" >
           <a href="credits.html" title="Credits"
              >previous</a> |</li>
-        <li><a href="index.html">Ares 0.9 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 0.A documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

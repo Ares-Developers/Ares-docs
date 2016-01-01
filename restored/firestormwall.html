@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Firestorm Wall &mdash; Ares 0.9 documentation</title>
+    <title>Firestorm Wall &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="up" title="Restored Tiberian Sun Logic" href="index.html" />
     <link rel="next" title="Laser Fences" href="laserfences.html" />
-    <link rel="prev" title="EMP" href="emp.html" /> 
+    <link rel="prev" title="Electromagnetic Pulse (EMP)" href="emp.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -42,21 +40,31 @@
           <a href="laserfences.html" title="Laser Fences"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="emp.html" title="EMP"
+          <a href="emp.html" title="Electromagnetic Pulse (EMP)"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Restored Tiberian Sun Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Restored Tiberian Sun Logic</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Firestorm Wall</a><ul>
+<li><a class="reference internal" href="#defining-a-wall">Defining a Wall</a></li>
+<li><a class="reference internal" href="#global-settings">Global Settings</a></li>
+<li><a class="reference internal" href="#firestorm-map-actions">Firestorm Map Actions</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="emp.html"
-                        title="previous chapter">EMP</a></p>
+                        title="previous chapter">Electromagnetic Pulse (EMP)</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="laserfences.html"
                         title="next chapter">Laser Fences</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -75,16 +83,91 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="firestorm-wall">
 <h1>Firestorm Wall<a class="headerlink" href="#firestorm-wall" title="Permalink to this headline">¶</a></h1>
-<p>The Firestorm Wall and super weapon can now be implemented in <span class="game docutils literal">Yuri&#8217;s
-Revenge.</span>
-See the <a class="reference internal" href="../new/superweapons/types/firestorm.html#firestorm"><em>New Super Weapon Types: Firestorm section</em></a> for
-details.</p>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.1.</span></p>
+<p>The Firestorm Wall and the corresponding super weapon can now be implemented in
+<span class="game docutils literal">Yuri&#8217;s Revenge</span>.</p>
+<p>When the Firestorm Defense is activated, all structures owned by the firing
+player that have <span><code class="docutils literal"><span class="pre">Firestorm.Wall=yes</span></code></span> set will emit an energy field,
+blocking all hostile projectiles (except those with <span><code class="docutils literal"><span class="pre">SubjectToFirestorm=no</span></code></span>
+set) from passing through. The energy field also destroys any friend or foe
+unlucky (or stupid) enough to come into direct contact with active cells.</p>
+<p><span><code class="docutils literal"><span class="pre">IgnoresFirestorm</span></code></span> is respected and if <cite>yes</cite>, neither units nor
+bullets are destroyed when passing an active Firestorm Wall. If an object is
+destroyed, crew or passengers will not be ejected.</p>
+<p>See the <a class="reference internal" href="../new/superweapons/types/firestorm.html"><em>Firestorm super weapon</em></a> for
+more details.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 0.A.</span></p>
+</div>
+<div class="section" id="defining-a-wall">
+<h2>Defining a Wall<a class="headerlink" href="#defining-a-wall" title="Permalink to this headline">¶</a></h2>
+<p><span class="type docutils literal">BuildingTypes</span> with <span><code class="docutils literal"><span class="pre">Firestorm.Wall=yes</span></code></span> set will act as a section
+of the Firestorm Wall and auto-connect to other nearby pieces (check the
+original building&#8217;s SHP from <span class="game docutils literal">Tiberian Sun</span> to see how the art is
+controlled).</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►Firestorm.Wall=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether this building is part of the Firestorm Defense System. Defaults to
+<cite>no</cite>.</dd>
+</dl>
+</div>
+<div class="section" id="global-settings">
+<h2>Global Settings<a class="headerlink" href="#global-settings" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[CombatDamage]►FirestormWarhead=</span></code><span class="type definition"> (Warhead)</span></span></dt>
+<dd>The warhead used by active Firestorm Walls to destroy objects. Cannot be
+<cite>none</cite>. Defaults to <span><code class="docutils literal"><span class="pre">[General]►C4Warhead</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[General]►DamageToFirestormDamageCoefficient=</span></code><span class="type definition"> (double - multiplier)</span></span></dt>
+<dd><p class="first">The multiplier for the damage dealt to active Firestorm Walls to convert
+hitpoints to frames to subtract from the Firestorm Defense Super Weapon&#8217;s
+change time. Higher values reduce remaining active time faster. Defaults to
+<cite>0.0</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><span class="game docutils literal">Tiberian Sun</span> defaulted to <cite>0.1</cite>, but <span class="game docutils literal">Ares</span>
+did not have this feature and just nullified all damage. This is what a
+value of <cite>0.0</cite> still does.</p>
+</div>
+</dd>
+</dl>
+<p>There are four global tags that define the animations played when a Firestorm
+Wall is active, or idle, or immolating something.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[AudioVisual]►FirestormActiveAnim=</span></code><span class="type definition"> (AnimationType)</span></span></dt>
+<dd>The optional animation played randomly on Firestorm Wall sections when active.
+This is drawn in the building&#8217;s palette. Defaults to <cite>GAFSDF_A</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[AudioVisual]►FirestormIdleAnim=</span></code><span class="type definition"> (AnimationType)</span></span></dt>
+<dd>The optional animation played randomly on Firestorm Wall sections when active.
+This is drawn in the building&#8217;s palette. Defaults to <cite>FSIDLE</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[AudioVisual]►FirestormGroundAnim=</span></code><span class="type definition"> (AnimationType)</span></span></dt>
+<dd>The animation to display when an active Firestorm Wall destroys an object on
+or close to the ground. This is drawn in the animation palette. Defaults to
+<cite>FSGRND</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[AudioVisual]►FirestormAirAnim=</span></code><span class="type definition"> (AnimationType)</span></span></dt>
+<dd>The animation to display when an active Firestorm Wall destroys an object in
+the air. This is drawn in the animation palette. Defaults to <cite>FSAIR</cite>.</dd>
+</dl>
+</div>
+<div class="section" id="firestorm-map-actions">
+<h2>Firestorm Map Actions<a class="headerlink" href="#firestorm-map-actions" title="Permalink to this headline">¶</a></h2>
+<p><span class="game docutils literal">Ares</span> restores the two map actions related to the Firestorm Defense from
+<span class="game docutils literal">Tiberian Sun</span>. Map actions 92 and 93 activate and deactivate the
+Firestorm Walls unconditionally, and while it is active from these map actions,
+it will not drain the charge and thus stay active indefinitely.</p>
+<p>If a building providing the Firestorm super weapon owned by the house is
+destroyed, loses power or goes offline due to other game logics, the Firestorm
+Defense is turned off like usual.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These map actions are only supported for non-human controlled houses.</p>
+</div>
+<span class="target" id="index-0"></span></div>
 </div>
 
 
@@ -93,7 +176,7 @@ details.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -103,15 +186,15 @@ details.</p>
           <a href="laserfences.html" title="Laser Fences"
              >next</a> |</li>
         <li class="right" >
-          <a href="emp.html" title="EMP"
+          <a href="emp.html" title="Electromagnetic Pulse (EMP)"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" >Restored Tiberian Sun Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >Restored Tiberian Sun Logic</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

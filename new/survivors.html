@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Survivors &mdash; Ares 0.9 documentation</title>
+    <title>Survivors &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Team Retaliate" href="teamretaliate.html" />
-    <link rel="prev" title="Spy Behavior" href="spybehavior.html" /> 
+    <link rel="prev" title="Spawners" href="spawners.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -42,13 +40,13 @@
           <a href="teamretaliate.html" title="Team Retaliate"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="spybehavior.html" title="Spy Behavior"
+          <a href="spawners.html" title="Spawners"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
@@ -61,12 +59,12 @@
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="spybehavior.html"
-                        title="previous chapter">Spy Behavior</a></p>
+  <p class="topless"><a href="spawners.html"
+                        title="previous chapter">Spawners</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="teamretaliate.html"
                         title="next chapter">Team Retaliate</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -85,7 +83,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="survivors">
 <h1>Survivors<a class="headerlink" href="#survivors" title="Permalink to this headline">¶</a></h1>
@@ -100,23 +98,23 @@ the type of unit that that survivor will be.</p>
 <div class="section" id="units-and-buildings">
 <h2>Units and Buildings<a class="headerlink" href="#units-and-buildings" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►Survivor.Side#=</span></tt><span class="type definition"> (InfantryType) (where # is the zero-based index of the side &#8211; e.g. 0 for Allied, 1 for Soviet, 2 for Yuri)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Survivor.Side#=</span></code><span class="type definition"> (InfantryType) (where # is the zero-based index of the side &#8211; e.g. 0 for Allied, 1 for Soviet, 2 for Yuri)</span></span></dt>
 <dd>The <span class="type docutils literal">InfantryType</span> that can emerge from this object as a survivor when
 the object was owned by the corresponding side. For example,
-<span><tt class="docutils literal"><span class="pre">Survivor.Side0=E1</span></tt></span> would cause the spawned survivor (if any) to be a GI
+<span><code class="docutils literal"><span class="pre">Survivor.Side0=E1</span></code></span> would cause the spawned survivor (if any) to be a GI
 when the destroyed unit was owned by an Allied player. Defaults to the owning
-side&#8217;s <span><tt class="docutils literal"><span class="pre">Crew</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►Crew.TechnicianChance=</span></tt><span class="type definition"> (integer - percent between 0 and 100)</span></span></dt>
-<dd><p class="first">The chance the owning side&#8217;s <span><tt class="docutils literal"><span class="pre">Technician</span></tt></span> is spawned instead of an
+side&#8217;s <span><code class="docutils literal"><span class="pre">Crew</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Crew.TechnicianChance=</span></code><span class="type definition"> (integer - percent between 0 and 100)</span></span></dt>
+<dd><p class="first">The chance the owning side&#8217;s <span><code class="docutils literal"><span class="pre">Technician</span></code></span> is spawned instead of an
 ordinary crew member. Defaults to <cite>15</cite> for <span class="type docutils literal">BuildingTypes</span> with
-<span><tt class="docutils literal"><span class="pre">Primary=</span></tt></span> set, to <cite>0</cite> otherwise.</p>
+<span><code class="docutils literal"><span class="pre">Primary=</span></code></span> set, to <cite>0</cite> otherwise.</p>
 <div class="last admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last"><span class="game docutils literal">Yuri&#8217;s Revenge</span> also ejects <span><tt class="docutils literal"><span class="pre">Technician</span></tt></span> from units
-with <span><tt class="docutils literal"><span class="pre">Primary=</span></tt></span> set. Previous versions of <span class="game docutils literal">Ares</span> did not, so the
+<p class="last"><span class="game docutils literal">Yuri&#8217;s Revenge</span> also ejects <span><code class="docutils literal"><span class="pre">Technician</span></code></span> from units
+with <span><code class="docutils literal"><span class="pre">Primary=</span></code></span> set. Previous versions of <span class="game docutils literal">Ares</span> did not, so the
 default value has been changed so there is no difference to previous
-versions. If you want to eject <span><tt class="docutils literal"><span class="pre">Technician</span></tt></span> from units, you have to
-manually set <span><tt class="docutils literal"><span class="pre">Crew.TechnicianChance</span></tt></span>.</p>
+versions. If you want to eject <span><code class="docutils literal"><span class="pre">Technician</span></code></span> from units, you have to
+manually set <span><code class="docutils literal"><span class="pre">Crew.TechnicianChance</span></code></span>.</p>
 </div>
 </dd>
 </dl>
@@ -124,24 +122,24 @@ manually set <span><tt class="docutils literal"><span class="pre">Crew.Technicia
 <div class="section" id="unit-specific">
 <h2>Unit-specific<a class="headerlink" href="#unit-specific" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Unit]►Survivor.Pilots=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Unit]►Survivor.Pilots=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>The number of pilots that will attempt to be spawned when this unit is
 destroyed (provided that the ground beneath the destroyed unit is clear).
-Defaults to <cite>1</cite> if the unit has <span><tt class="docutils literal"><span class="pre">Crewed=yes</span></tt></span> set, to <cite>0</cite>
+Defaults to <cite>1</cite> if the unit has <span><code class="docutils literal"><span class="pre">Crewed=yes</span></code></span> set, to <cite>0</cite>
 otherwise.</dd>
 </dl>
-<p><span><tt class="definition docutils literal"><span class="pre">[Unit]►Survivor.RookiePilotChance=</span></tt><span class="type definition"> (integer between 0 and 100)</span></span></p>
-<p><span><tt class="definition docutils literal"><span class="pre">[Unit]►Survivor.VeteranPilotChance=</span></tt><span class="type definition"> (integer between 0 and 100)</span></span></p>
+<p><span><code class="definition docutils literal"><span class="pre">[Unit]►Survivor.RookiePilotChance=</span></code><span class="type definition"> (integer between 0 and 100)</span></span></p>
+<p><span><code class="definition docutils literal"><span class="pre">[Unit]►Survivor.VeteranPilotChance=</span></code><span class="type definition"> (integer between 0 and 100)</span></span></p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Unit]►Survivor.ElitePilotChance=</span></tt><span class="type definition"> (integer between 0 and 100)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Unit]►Survivor.ElitePilotChance=</span></code><span class="type definition"> (integer between 0 and 100)</span></span></dt>
 <dd>The percent chance that each individual pilot will be spawned when this unit
-is destroyed. If this value is negative, <span><tt class="docutils literal"><span class="pre">[General]►CrewEscape</span></tt></span> will be
+is destroyed. If this value is negative, <span><code class="docutils literal"><span class="pre">[General]►CrewEscape</span></code></span> will be
 used. Default to <cite>-1</cite>.</dd>
 </dl>
-<p><span><tt class="definition docutils literal"><span class="pre">[Unit]►Survivor.RookiePassengerChance=</span></tt><span class="type definition"> (integer between 0 and 100)</span></span></p>
-<p><span><tt class="definition docutils literal"><span class="pre">[Unit]►Survivor.VeteranPassengerChance=</span></tt><span class="type definition"> (integer between 0 and 100)</span></span></p>
+<p><span><code class="definition docutils literal"><span class="pre">[Unit]►Survivor.RookiePassengerChance=</span></code><span class="type definition"> (integer between 0 and 100)</span></span></p>
+<p><span><code class="definition docutils literal"><span class="pre">[Unit]►Survivor.VeteranPassengerChance=</span></code><span class="type definition"> (integer between 0 and 100)</span></span></p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Unit]►Survivor.ElitePassengerChance=</span></tt><span class="type definition"> (integer between 0 and 100)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Unit]►Survivor.ElitePassengerChance=</span></code><span class="type definition"> (integer between 0 and 100)</span></span></dt>
 <dd><p class="first">Determines the percent chance that each of the unit&#8217;s passengers (if any) will
 survive. Rookie/Veteran/Elite refers to the veteran level of the transport
 unit &#8211; a unit with a higher veteran level could be made to have a greater (or
@@ -159,31 +157,33 @@ from the air&#8221; &#8211; if they can survive they can survive.</p>
 <p>If either the pilots or any passengers are &#8216;killed&#8217; because they were not
 spawned (i.e. because the ground was not clear or the random chance did not
 luck in) then they count as having been killed by the unit that killed the
-transport. If <span><tt class="docutils literal"><span class="pre">Survivor.PilotChance=0</span></tt></span> then the pilots will not count as
+transport. If <span><code class="docutils literal"><span class="pre">Survivor.PilotChance=0</span></code></span> then the pilots will not count as
 having been killed (however, passengers will always count as having been killed,
-even if <span><tt class="docutils literal"><span class="pre">Survivor.PassengerChance=0</span></tt></span>).</p>
+even if <span><code class="docutils literal"><span class="pre">Survivor.PassengerChance=0</span></code></span>).</p>
 <p>Spawned pilots will be spawned with 50% of their maximum health and the same
 amount of experience as the destroyed unit had. Passengers will emerge with both
 their health and their experience unchanged.</p>
-<p class="versionadded" id="index-0">
-<span class="versionmodified">New in version 0.1.</span></p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
 </div>
 <div class="section" id="building-specific">
 <h2>Building-specific<a class="headerlink" href="#building-specific" title="Permalink to this headline">¶</a></h2>
-<p>Buildings can spawn the owning side&#8217;s <span><tt class="docutils literal"><span class="pre">Engineers</span></tt></span> in addition to
-<span><tt class="docutils literal"><span class="pre">Crew</span></tt></span> and <span><tt class="docutils literal"><span class="pre">Technician</span></tt></span>. The number of crew members is determined by
-the refund price of the building divided by the side&#8217;s <span><tt class="docutils literal"><span class="pre">SurvivorDivisor</span></tt></span>.
+<p>Buildings can spawn the owning side&#8217;s <span><code class="docutils literal"><span class="pre">Engineers</span></code></span> in addition to
+<span><code class="docutils literal"><span class="pre">Crew</span></code></span> and <span><code class="docutils literal"><span class="pre">Technician</span></code></span>. The number of crew members is determined by
+the refund price of the building divided by the side&#8217;s <span><code class="docutils literal"><span class="pre">SurvivorDivisor</span></code></span>.
 If the building has been captured, the divisor is double, and thus the number of
 survivors is halved. At least one survivor is spawned, but no more than five.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►Crew.EngineerChance=</span></tt><span class="type definition"> (integer - percent between 0 and 100)</span></span></dt>
-<dd>The chance the owning side&#8217;s <span><tt class="docutils literal"><span class="pre">Engineer</span></tt></span> is spawned instead of an ordinary
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►Crew.EngineerChance=</span></code><span class="type definition"> (integer - percent between 0 and 100)</span></span></dt>
+<dd>The chance the owning side&#8217;s <span><code class="docutils literal"><span class="pre">Engineer</span></code></span> is spawned instead of an ordinary
 crew member. If the building has been captured, engineers are not allowed to
 be spawned regardless of this setting. Defaults to <cite>25</cite> if
-<span><tt class="docutils literal"><span class="pre">Factory=BuildingType</span></tt></span>, to <cite>0</cite> otherwise.</dd>
+<span><code class="docutils literal"><span class="pre">Factory=BuildingType</span></code></span>, to <cite>0</cite> otherwise.</dd>
 </dl>
-<span class="target" id="index-1"></span><p class="versionadded" id="index-2">
-<span class="versionmodified">New in version 0.5.</span></p>
+<span class="target" id="index-1"></span><div class="versionadded" id="index-2">
+<p><span class="versionmodified">New in version 0.5.</span></p>
+</div>
 </div>
 </div>
 
@@ -193,7 +193,7 @@ be spawned regardless of this setting. Defaults to <cite>25</cite> if
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -203,15 +203,15 @@ be spawned regardless of this setting. Defaults to <cite>25</cite> if
           <a href="teamretaliate.html" title="Team Retaliate"
              >next</a> |</li>
         <li class="right" >
-          <a href="spybehavior.html" title="Spy Behavior"
+          <a href="spawners.html" title="Spawners"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

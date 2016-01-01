@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Migration Guide &mdash; Ares 0.9 documentation</title>
+    <title>Migration Guide &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,8 +14,8 @@
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
-        VERSION:     '0.9',
+        URL_ROOT:    './',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,12 +24,12 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="index.html" />
     <link rel="next" title="Bug Fixes" href="bugfixes/index.html" />
     <link rel="prev" title="What’s New" href="whatsnew.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -43,10 +41,10 @@
         <li class="right" >
           <a href="whatsnew.html" title="What’s New"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">Ares 0.9 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 0.A documentation</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -59,6 +57,7 @@
 <li><a class="reference internal" href="#from-ares-0-6-and-below">From Ares 0.6 and below</a></li>
 <li><a class="reference internal" href="#from-ares-0-7-and-below">From Ares 0.7 and below</a></li>
 <li><a class="reference internal" href="#from-ares-0-8-and-below">From Ares 0.8 and below</a></li>
+<li><a class="reference internal" href="#from-ares-0-9-and-below">From Ares 0.9 and below</a></li>
 </ul>
 </li>
 </ul>
@@ -69,7 +68,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="bugfixes/index.html"
                         title="next chapter">Bug Fixes</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -88,7 +87,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="migration-guide">
 <h1>Migration Guide<a class="headerlink" href="#migration-guide" title="Permalink to this headline">¶</a></h1>
@@ -99,25 +98,25 @@ account for the following changes.</p>
 <p>Changed tags:</p>
 <blockquote>
 <div><dl class="docutils">
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►SW.Deliver</span></tt></span> &#8211;&gt; <span><tt class="docutils literal"><span class="pre">[SuperWeapon]►Deliver.Types</span></tt></span>.</dt>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►SW.Deliver</span></code></span> &#8211;&gt; <span><code class="docutils literal"><span class="pre">[SuperWeapon]►Deliver.Types</span></code></span>.</dt>
 <dd>Replace the old tag name by the new tag name.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►SW.DeliverBuildups</span></tt></span> &#8211;&gt; <span><tt class="docutils literal"><span class="pre">[SuperWeapon]►Deliver.Buildups</span></tt></span>.</dt>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►SW.DeliverBuildups</span></code></span> &#8211;&gt; <span><code class="docutils literal"><span class="pre">[SuperWeapon]►Deliver.Buildups</span></code></span>.</dt>
 <dd>Replace the old tag name by the new tag name.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►SonarPulse.Range</span></tt></span> &#8211;&gt; <span><tt class="docutils literal"><span class="pre">[SuperWeapon]►SW.Range</span></tt></span>.</dt>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►SonarPulse.Range</span></code></span> &#8211;&gt; <span><code class="docutils literal"><span class="pre">[SuperWeapon]►SW.Range</span></code></span>.</dt>
 <dd>Replace the old tag name by the new tag name.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►GenericWarhead.Warhead</span></tt></span> &#8211;&gt; <span><tt class="docutils literal"><span class="pre">[SuperWeapon]►SW.Warhead</span></tt></span>.</dt>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►GenericWarhead.Warhead</span></code></span> &#8211;&gt; <span><code class="docutils literal"><span class="pre">[SuperWeapon]►SW.Warhead</span></code></span>.</dt>
 <dd>Replace the old tag name by the new tag name.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►GenericWarhead.Damage</span></tt></span> &#8211;&gt; <span><tt class="docutils literal"><span class="pre">[SuperWeapon]►SW.Damage</span></tt></span>.</dt>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►GenericWarhead.Damage</span></code></span> &#8211;&gt; <span><code class="docutils literal"><span class="pre">[SuperWeapon]►SW.Damage</span></code></span>.</dt>
 <dd>Replace the old tag name by the new tag name.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►Nuke.Sound</span></tt></span> &#8211;&gt; <span><tt class="docutils literal"><span class="pre">[SuperWeapon]►SW.ActivationSound</span></tt></span>.</dt>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►Nuke.Sound</span></code></span> &#8211;&gt; <span><code class="docutils literal"><span class="pre">[SuperWeapon]►SW.ActivationSound</span></code></span>.</dt>
 <dd>Replace the old tag name by the new tag name.</dd>
 </dl>
 </div></blockquote>
 <p>Other changes:</p>
 <blockquote>
-<div><span class="game docutils literal">Ares</span> 0.1 supported options in <tt class="file docutils literal docutils literal"><span class="pre">ares.ini</span></tt> to configure how
-graphics surfaces were allocated. The tags <span><tt class="docutils literal"><span class="pre">Surface.*.Memory</span></tt></span> and
-<span><tt class="docutils literal"><span class="pre">Surface.*.Force3D</span></tt></span> are obsolete now and have no effect any more.</div></blockquote>
+<div><span class="game docutils literal">Ares</span> 0.1 supported options in <code class="file docutils literal"><span class="pre">ares.ini</span></code> to configure how
+graphics surfaces were allocated. The tags <span><code class="docutils literal"><span class="pre">Surface.*.Memory</span></code></span> and
+<span><code class="docutils literal"><span class="pre">Surface.*.Force3D</span></code></span> are obsolete now and have no effect any more.</div></blockquote>
 </div>
 <div class="section" id="from-ares-0-2-and-below">
 <h2>From Ares 0.2 and below<a class="headerlink" href="#from-ares-0-2-and-below" title="Permalink to this headline">¶</a></h2>
@@ -141,35 +140,35 @@ debug log.</p>
 <p>Changed tags:</p>
 <blockquote>
 <div><p>The following tags have been changed to use the actual value of their default
-tags, not the value the default tags have in <tt class="file docutils literal docutils literal"><span class="pre">rulesmd.ini</span></tt>. If a default
+tags, not the value the default tags have in <code class="file docutils literal"><span class="pre">rulesmd.ini</span></code>. If a default
 is changed in a game mode or map file, this updated value will be used. In
 other words: It now uses the last value, while previously the first would have
 been used.</p>
 <p>If you do not change a default tag in game modes or maps, no action is needed.
-If you want to use the value the default tag has in <tt class="file docutils literal docutils literal"><span class="pre">rulesmd.ini</span></tt>, you
+If you want to use the value the default tag has in <code class="file docutils literal"><span class="pre">rulesmd.ini</span></code>, you
 have to copy the default value to the respective tag.</p>
 <dl class="docutils">
-<dt><span><tt class="docutils literal"><span class="pre">[Weapon]►IvanBomb.AttachSound</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[AudioVisual]►BombAttachSound</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[Weapon]►IvanBomb.TickingSound</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[AudioVisual]►BombTickingSound</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.Sounds</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[AudioVisual]►LightningSounds</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.Clouds</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[General]►WeatherConClouds</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.Bolts</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[General]►WeatherConBolts</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.Debris</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[General]►MetallicDebris</span></tt></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[Weapon]►IvanBomb.AttachSound</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[AudioVisual]►BombAttachSound</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[Weapon]►IvanBomb.TickingSound</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[AudioVisual]►BombTickingSound</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.Sounds</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[AudioVisual]►LightningSounds</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.Clouds</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►WeatherConClouds</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.Bolts</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►WeatherConBolts</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.Debris</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►MetallicDebris</span></code></span>.</dd>
 </dl>
 </div></blockquote>
 <p>Other changes:</p>
 <blockquote>
-<div><p>Animations that have an owner now also respect <span><tt class="docutils literal"><span class="pre">AffectsAllies</span></tt></span>.
-Previously only <span><tt class="docutils literal"><span class="pre">AffectsEnemies</span></tt></span> was supported.</p>
-<p>The original tag <span><tt class="docutils literal"><span class="pre">Crashable</span></tt></span> does now also apply to
+<div><p>Animations that have an owner now also respect <span><code class="docutils literal"><span class="pre">AffectsAllies</span></code></span>.
+Previously only <span><code class="docutils literal"><span class="pre">AffectsEnemies</span></code></span> was supported.</p>
+<p>The original tag <span><code class="docutils literal"><span class="pre">Crashable</span></code></span> does now also apply to
 <span class="type docutils literal">AircraftTypes</span>. Previously it had no function.</p>
-<p>The original tags <span><tt class="docutils literal"><span class="pre">Pip</span></tt></span> and <span><tt class="docutils literal"><span class="pre">OccupyPip</span></tt></span> have been changed to also
+<p>The original tags <span><code class="docutils literal"><span class="pre">Pip</span></code></span> and <span><code class="docutils literal"><span class="pre">OccupyPip</span></code></span> have been changed to also
 support integers. Previously, integers were invalid and defaulted to
 <cite>green</cite>.</p>
 </div></blockquote>
@@ -181,35 +180,35 @@ support integers. Previously, integers were invalid and defaulted to
 <div><p>The following tags have been changed to use the actual value of their default
 tags. (Continued work from the <span class="game docutils literal">Ares</span> 0.4 release.)</p>
 <dl class="docutils">
-<dt><span><tt class="docutils literal"><span class="pre">[Side]►DefaultDisguise</span></tt></span></dt>
+<dt><span><code class="docutils literal"><span class="pre">[Side]►DefaultDisguise</span></code></span></dt>
 <dd>Defaults to the original tag for a side.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[Side]►Crew</span></tt></span></dt>
+<dt><span><code class="docutils literal"><span class="pre">[Side]►Crew</span></code></span></dt>
 <dd>Defaults to the original tag for a side.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[Side]►SurvivorDivisor</span></tt></span></dt>
+<dt><span><code class="docutils literal"><span class="pre">[Side]►SurvivorDivisor</span></code></span></dt>
 <dd>Defaults to the original tag for a side.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[Side]►AI.BaseDefenses</span></tt></span></dt>
+<dt><span><code class="docutils literal"><span class="pre">[Side]►AI.BaseDefenses</span></code></span></dt>
 <dd>Defaults to the original tag for a side.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[Side]►AI.BaseDefenseCounts</span></tt></span></dt>
+<dt><span><code class="docutils literal"><span class="pre">[Side]►AI.BaseDefenseCounts</span></code></span></dt>
 <dd>Defaults to the original tag for a side.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[Weapon]►IvanBomb.Warhead</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[CombatDamage]►IvanWarhead</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[Weapon]►IvanBomb.Damage</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[CombatDamage]►IvanDamage</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[Weapon]►IvanBomb.Delay</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[CombatDamage]►IvanTimedDelay</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[Weapon]►IvanBomb.FlickerRate</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[CombatDamage]►IvanIconFlickerRate</span></tt></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[Weapon]►IvanBomb.Warhead</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[CombatDamage]►IvanWarhead</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[Weapon]►IvanBomb.Damage</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[CombatDamage]►IvanDamage</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[Weapon]►IvanBomb.Delay</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[CombatDamage]►IvanTimedDelay</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[Weapon]►IvanBomb.FlickerRate</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[CombatDamage]►IvanIconFlickerRate</span></code></span>.</dd>
 </dl>
 </div></blockquote>
 <p>Other changes:</p>
 <blockquote>
-<div><p>Values in <span><tt class="docutils literal"><span class="pre">[Side]►Crew</span></tt></span> and <span><tt class="docutils literal"><span class="pre">[Side]►DefaultDisguise</span></tt></span> will not be added
+<div><p>Values in <span><code class="docutils literal"><span class="pre">[Side]►Crew</span></code></span> and <span><code class="docutils literal"><span class="pre">[Side]►DefaultDisguise</span></code></span> will not be added
 to the list of <span class="type docutils literal">InfantryTypes</span> automatically any more. Make sure these
 values are listed under the <span class="type docutils literal">InfantryTypes</span> list.</p>
 <p>Previously, destroyed units did not eject survivors if they were owned by
 <cite>Neutral</cite> or <cite>Special</cite>, because <span class="game docutils literal">Ares</span> did not support
 survivors for them. The original handling has been restored, and these houses
-will use <span><tt class="docutils literal"><span class="pre">[General]►Technician</span></tt></span> as crew.</p>
+will use <span><code class="docutils literal"><span class="pre">[General]►Technician</span></code></span> as crew.</p>
 </div></blockquote>
 </div>
 <div class="section" id="from-ares-0-5-and-below">
@@ -219,57 +218,57 @@ will use <span><tt class="docutils literal"><span class="pre">[General]►Techni
 <div><p>The following tags have been changed to use the actual value of their default
 tags. (Continued work from earlier <span class="game docutils literal">Ares</span> releases.)</p>
 <dl class="docutils">
-<dt><span><tt class="docutils literal"><span class="pre">[Side]►ParaDrop.Num</span></tt></span></dt>
+<dt><span><code class="docutils literal"><span class="pre">[Side]►ParaDrop.Num</span></code></span></dt>
 <dd>Defaults to the original tag for a side.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[Side]►ParaDrop.Types</span></tt></span></dt>
+<dt><span><code class="docutils literal"><span class="pre">[Side]►ParaDrop.Types</span></code></span></dt>
 <dd>Defaults to the original tag for a side.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[Side]►Parachute.Anim</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[General]►Parachute</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[Country]►ParaDrop.Num</span></tt></span></dt>
-<dd>Defaults to the side&#8217;s <span><tt class="docutils literal"><span class="pre">ParaDrop.Num</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[Country]►ParaDrop.Types</span></tt></span></dt>
-<dd>Defaults to the side&#8217;s <span><tt class="docutils literal"><span class="pre">ParaDrop.Types</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[Country]►AI.PowerPlants</span></tt></span></dt>
+<dt><span><code class="docutils literal"><span class="pre">[Side]►Parachute.Anim</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►Parachute</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[Country]►ParaDrop.Num</span></code></span></dt>
+<dd>Defaults to the side&#8217;s <span><code class="docutils literal"><span class="pre">ParaDrop.Num</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[Country]►ParaDrop.Types</span></code></span></dt>
+<dd>Defaults to the side&#8217;s <span><code class="docutils literal"><span class="pre">ParaDrop.Types</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[Country]►AI.PowerPlants</span></code></span></dt>
 <dd>If empty or not set, the side&#8217;s default power plants are used.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[Weapon]►Wave.Color</span></tt></span></dt>
+<dt><span><code class="docutils literal"><span class="pre">[Weapon]►Wave.Color</span></code></span></dt>
 <dd>Default depends on wave type.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►SW.Damage</span></tt></span></dt>
-<dd>Defaults depends on <span><tt class="docutils literal"><span class="pre">Type</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►SW.Range</span></tt></span></dt>
-<dd>Defaults depends on <span><tt class="docutils literal"><span class="pre">Type</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►SW.Deferment</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[General]►LightningDeferment</span></tt></span> for
-<span><tt class="docutils literal"><span class="pre">Type=LightningStorm</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►SW.Animation</span></tt></span></dt>
-<dd>Defaults depends on <span><tt class="docutils literal"><span class="pre">Type</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►SW.Sound</span></tt></span></dt>
-<dd>Defaults depends on <span><tt class="docutils literal"><span class="pre">Type</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►SW.ActivationSound</span></tt></span></dt>
-<dd>Defaults depends on <span><tt class="docutils literal"><span class="pre">Type</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.Duration</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[General]►LightningStormDuration</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.RadarOutage</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[General]►LightningStormDuration</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.HitDelay</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[General]►LightningHitDelay</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.ScatterDelay</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[General]►LightningScatterDelay</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.Separation</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[General]►LightningSeparation</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.PrintText</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[General]►LightningPrintText</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.BoltExplosion</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[General]►WeatherConBoltExplosion</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►Nuke.TakeOff</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[General]►NukeTakeOff</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►Dominator.FireAtPercentage</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[General]►DominatorFireAtPercentage</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.BlastSrc</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[General]►ChronoBlast</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.BlastDest</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[General]►ChronoBlastDest</span></tt></span>.</dd>
-<dt><span><tt class="docutils literal"><span class="pre">[SuperWeapon]►Mutate.Explosion</span></tt></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[General]►MutateExplosion</span></tt></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►SW.Damage</span></code></span></dt>
+<dd>Defaults depends on <span><code class="docutils literal"><span class="pre">Type</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►SW.Range</span></code></span></dt>
+<dd>Defaults depends on <span><code class="docutils literal"><span class="pre">Type</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►SW.Deferment</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►LightningDeferment</span></code></span> for
+<span><code class="docutils literal"><span class="pre">Type=LightningStorm</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►SW.Animation</span></code></span></dt>
+<dd>Defaults depends on <span><code class="docutils literal"><span class="pre">Type</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►SW.Sound</span></code></span></dt>
+<dd>Defaults depends on <span><code class="docutils literal"><span class="pre">Type</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►SW.ActivationSound</span></code></span></dt>
+<dd>Defaults depends on <span><code class="docutils literal"><span class="pre">Type</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.Duration</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►LightningStormDuration</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.RadarOutage</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►LightningStormDuration</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.HitDelay</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►LightningHitDelay</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.ScatterDelay</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►LightningScatterDelay</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.Separation</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►LightningSeparation</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.PrintText</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►LightningPrintText</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.BoltExplosion</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►WeatherConBoltExplosion</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►Nuke.TakeOff</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►NukeTakeOff</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►Dominator.FireAtPercentage</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►DominatorFireAtPercentage</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.BlastSrc</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►ChronoBlast</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►Chronosphere.BlastDest</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►ChronoBlastDest</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►Mutate.Explosion</span></code></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►MutateExplosion</span></code></span>.</dd>
 </dl>
 </div></blockquote>
 </div>
@@ -294,7 +293,7 @@ optional at the moment.</div></blockquote>
 <div><p>The Unit Delivery super weapon uses a new placing method. Compared to previous
 versions, unit and buildings are placed more random now. Delivered objects are
 put on guard or hunt mission.</p>
-<p>Force Shield no longer considers buildings with <span><tt class="docutils literal"><span class="pre">ForceShield.Modifier</span></tt></span>
+<p>Force Shield no longer considers buildings with <span><code class="docutils literal"><span class="pre">ForceShield.Modifier</span></code></span>
 less than or equal to <cite>0.0</cite> eligible targets.</p>
 <p>Super weapon targeting mode <cite>Self</cite> now centers on the firing building
 instead of using the origin.</p>
@@ -307,9 +306,9 @@ instead of using the origin.</p>
 <div><p>The following tags have been changed to use the actual value of their default
 tags. (Continued work from earlier <span class="game docutils literal">Ares</span> releases.)</p>
 <dl class="docutils">
-<dt><span><tt class="docutils literal"><span class="pre">[BuildingType]►SecretLab.PossibleBoons</span></tt></span></dt>
-<dd>Defaults to the combination of the latest <span><tt class="docutils literal"><span class="pre">[General]►SecretInfantry</span></tt></span>,
-<span><tt class="docutils literal"><span class="pre">[General]►SecretUnits</span></tt></span> and <span><tt class="docutils literal"><span class="pre">[General]►SecretBuildings</span></tt></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[BuildingType]►SecretLab.PossibleBoons</span></code></span></dt>
+<dd>Defaults to the combination of the latest <span><code class="docutils literal"><span class="pre">[General]►SecretInfantry</span></code></span>,
+<span><code class="docutils literal"><span class="pre">[General]►SecretUnits</span></code></span> and <span><code class="docutils literal"><span class="pre">[General]►SecretBuildings</span></code></span>.</dd>
 </dl>
 </div></blockquote>
 <p>Other changes:</p>
@@ -321,16 +320,32 @@ Abduction, KillDriver and Occupant Damage are only applied on direct hits.</p>
 <p>AttachEffect only checked verses if it had an owner. Now verses are applied
 even if owner-less. Previously affected victims might not get affected any
 more.</p>
-<p>The default <span><tt class="docutils literal"><span class="pre">SW.AITargeting</span></tt></span> for <span><tt class="docutils literal"><span class="pre">Type=HunterSeeker</span></tt></span> super weapons
+<p>The default <span><code class="docutils literal"><span class="pre">SW.AITargeting</span></code></span> for <span><code class="docutils literal"><span class="pre">Type=HunterSeeker</span></code></span> super weapons
 has been changed from <cite>NoTarget</cite> to <cite>HunterSeeker</cite>. It now only
 fires if the house has selected a favorite enemy.</p>
-<p>The targeting type <cite>Stealth</cite> now adheres to <span><tt class="docutils literal"><span class="pre">SW.AIRequiresTarget</span></tt></span>
-and <span><tt class="docutils literal"><span class="pre">SW.AIRequiresHouse</span></tt></span> instead of <span><tt class="docutils literal"><span class="pre">SW.RequiresTarget</span></tt></span> and
-<span><tt class="docutils literal"><span class="pre">SW.RequiresHouse</span></tt></span>. The targeting type <cite>Offensive</cite> no longer
-requires <span><tt class="docutils literal"><span class="pre">SW.AffectedHouse</span></tt></span> to include <cite>enemies</cite>.</p>
+<p>The targeting type <cite>Stealth</cite> now adheres to <span><code class="docutils literal"><span class="pre">SW.AIRequiresTarget</span></code></span>
+and <span><code class="docutils literal"><span class="pre">SW.AIRequiresHouse</span></code></span> instead of <span><code class="docutils literal"><span class="pre">SW.RequiresTarget</span></code></span> and
+<span><code class="docutils literal"><span class="pre">SW.RequiresHouse</span></code></span>. The targeting type <cite>Offensive</cite> no longer
+requires <span><code class="docutils literal"><span class="pre">SW.AffectedHouse</span></code></span> to include <cite>enemies</cite>.</p>
 <p>Prism Forwarding now properly uses negative intensity values for supporting
-beams. A <span><tt class="docutils literal"><span class="pre">PrismSupportModifier</span></tt></span> related bug has been fixed.</p>
+beams. A <span><code class="docutils literal"><span class="pre">PrismSupportModifier</span></code></span> related bug has been fixed.</p>
 <p>Lasers were often drawn too big. This has been changed.</p>
+</div></blockquote>
+</div>
+<div class="section" id="from-ares-0-9-and-below">
+<h2>From Ares 0.9 and below<a class="headerlink" href="#from-ares-0-9-and-below" title="Permalink to this headline">¶</a></h2>
+<p>Changed tags:</p>
+<blockquote>
+<div>No changes required.</div></blockquote>
+<p>Other changes:</p>
+<blockquote>
+<div><p>Solid Buildings have been reworked. The feature now works with invisible
+projectiles. Also, units will now change positions instead of just firing
+through a Solid Building.</p>
+<p>The Firestorm Wall active and idle animations will now draw in the building&#8217;s
+palette, while they were drawn using the animation palette before.</p>
+<p><code class="file docutils literal"><span class="pre">ares.csf</span></code> will always be read, no matter which language the game is run
+in.</p>
 </div></blockquote>
 </div>
 </div>
@@ -341,7 +356,7 @@ beams. A <span><tt class="docutils literal"><span class="pre">PrismSupportModifi
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -353,12 +368,12 @@ beams. A <span><tt class="docutils literal"><span class="pre">PrismSupportModifi
         <li class="right" >
           <a href="whatsnew.html" title="What’s New"
              >previous</a> |</li>
-        <li><a href="index.html">Ares 0.9 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 0.A documentation</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

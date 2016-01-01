@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Animation/Sound &mdash; Ares 0.9 documentation</title>
+    <title>Animation/Sound &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../../index.html" />
     <link rel="up" title="Super Weapons" href="index.html" />
     <link rel="next" title="EVA Events" href="evaevents.html" />
     <link rel="prev" title="Cost" href="cost.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,12 +42,12 @@
         <li class="right" >
           <a href="cost.html" title="Cost"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Super Weapons</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Super Weapons</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="cost.html"
@@ -57,7 +55,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="evaevents.html"
                         title="next chapter">EVA Events</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -76,26 +74,27 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="animation-sound">
 <h1>Animation/Sound<a class="headerlink" href="#animation-sound" title="Permalink to this headline">¶</a></h1>
-<p>The default values depend on the super weapon&#8217;s actual <span><tt class="docutils literal"><span class="pre">Type</span></tt></span>.</p>
+<p>The default values depend on the super weapon&#8217;s actual <span><code class="docutils literal"><span class="pre">Type</span></code></span>.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Animation=</span></tt><span class="type definition"> (animation)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Animation=</span></code><span class="type definition"> (animation)</span></span></dt>
 <dd>The animation to display at the super weapon&#8217;s target cell.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AnimationHeight=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AnimationHeight=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>How high above the target cell to display the animation.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AnimationVisibility=</span></tt><span class="type definition"> (enumeration none|owner|allies|team|enemies|all)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AnimationVisibility=</span></code><span class="type definition"> (enumeration none|owner|allies|team|enemies|all)</span></span></dt>
 <dd>Defines who will see this animation.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Sound=</span></tt><span class="type definition"> (sound)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Sound=</span></code><span class="type definition"> (sound)</span></span></dt>
 <dd>The sound to play at the super weapon&#8217;s target cell.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.ActivationSound=</span></tt><span class="type definition"> (sound)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.ActivationSound=</span></code><span class="type definition"> (sound)</span></span></dt>
 <dd>The sound to play when a Nuke is fired or a deferrable super weapon like the
 Lightning Storm is activated.</dd>
 </dl>
-<span class="target" id="index-0"></span><p class="versionadded" id="index-1">
-<span class="versionmodified">New in version 0.1.</span></p>
+<span class="target" id="index-0"></span><div class="versionadded" id="index-1">
+<p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
 </div>
 
 
@@ -104,7 +103,7 @@ Lightning Storm is activated.</dd>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -116,14 +115,14 @@ Lightning Storm is activated.</dd>
         <li class="right" >
           <a href="cost.html" title="Cost"
              >previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="index.html" >Super Weapons</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Super Weapons</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

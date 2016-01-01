@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Factories and Cloning &mdash; Ares 0.A documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.A',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.A documentation" href="../../index.html" />
+    <link rel="up" title="Buildings" href="index.html" />
+    <link rel="next" title="Force Shield" href="forceshield.html" />
+    <link rel="prev" title="Enemy Wrench" href="enemywrench.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="forceshield.html" title="Force Shield"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="enemywrench.html" title="Enemy Wrench"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Buildings</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Factories and Cloning</a><ul>
+<li><a class="reference internal" href="#different-factories-for-units-kennels">Different factories for units (Kennels)</a></li>
+<li><a class="reference internal" href="#cloning-vats-for-vehicletypes">&#8220;Cloning Vats&#8221; for <span class="type docutils literal">VehicleTypes</span></a></li>
+<li><a class="reference internal" href="#cloning-options">Cloning options</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="enemywrench.html"
+                        title="previous chapter">Enemy Wrench</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="forceshield.html"
+                        title="next chapter">Force Shield</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="factories-and-cloning">
+<h1>Factories and Cloning<a class="headerlink" href="#factories-and-cloning" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="different-factories-for-units-kennels">
+<h2>Different factories for units (Kennels)<a class="headerlink" href="#different-factories-for-units-kennels" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[InfantryOrVehicle]►BuiltAt=</span></code><span class="type definition"> (list of BuildingTypes)</span></span></dt>
+<dd>Units will be kicked out of the first not-busy building the house owns that is
+mentioned in this list. If no <span class="type docutils literal">BuildingType</span> is set, all factories that
+can produce this unit will be checked. Defaults to <cite>none</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►Factory.ExplicitOnly=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd><p class="first">Set this to <cite>yes</cite> to only allow this factory to produce units that
+explicitly mention this <span class="type docutils literal">BuildingType</span> in their <span><code class="docutils literal"><span class="pre">BuiltAt</span></code></span> list.
+Units with empty <span><code class="docutils literal"><span class="pre">BuiltAt</span></code></span> lists will not be built here. The effect is
+the same as stating <span><code class="docutils literal"><span class="pre">BuiltAt</span></code></span> lists on every unit, omitting all factories
+that have this tag set. Defaults to <cite>no</cite>.</p>
+<div class="quickstart last admonition" id="quickstart-0">
+<p class="first admonition-title">Quickstart</p>
+<p class="last">To recreate the dog from <span class="game docutils literal">Red Alert</span> that is trained in
+a kennel, set <span><code class="docutils literal"><span class="pre">[KENN]►Factory=InfantryType</span></code></span>,
+<span><code class="docutils literal"><span class="pre">[KENN]►Factory.ExplicitOnly=yes</span></code></span>, <span><code class="docutils literal"><span class="pre">[DOG]►BuiltAt=KENN</span></code></span> and update
+the <span><code class="docutils literal"><span class="pre">[DOG]►Prerequisite</span></code></span> to contain <span><code class="docutils literal"><span class="pre">[KENN]</span></code></span>.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="cloning-vats-for-vehicletypes">
+<h2>&#8220;Cloning Vats&#8221; for <span class="type docutils literal">VehicleTypes</span><a class="headerlink" href="#cloning-vats-for-vehicletypes" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►CloningFacility=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Defines whether this building will clone all <span class="type docutils literal">VehicleTypes</span> with the
+same <span><code class="docutils literal"><span class="pre">Naval</span></code></span> setting as itself that are <span><code class="docutils literal"><span class="pre">Cloneable=yes</span></code></span> and
+<span><code class="docutils literal"><span class="pre">ClonedAt=none</span></code></span>. This is the <span class="type docutils literal">VehicleType</span> version of the Cloning
+Vats. Defaults to <cite>no</cite>.</dd>
+</dl>
+</div>
+<div class="section" id="cloning-options">
+<h2>Cloning options<a class="headerlink" href="#cloning-options" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[InfantryOrVehicle]►Cloneable=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether or not this infantry or unit can be cloned by <span><code class="docutils literal"><span class="pre">Cloning=yes</span></code></span>,
+<span><code class="docutils literal"><span class="pre">CloningFacility=yes</span></code></span> or their respective <span><code class="docutils literal"><span class="pre">ClonedAt</span></code></span> buildings.
+Defaults to <cite>yes</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[InfantryOrVehicle]►ClonedAt=</span></code><span class="type definition"> (list of BuildingTypes)</span></span></dt>
+<dd><p class="first">Each building of the types mentioned in the list owned by the same house will
+kick out an extra clone of this object for free. If a building is blocked, the
+player will get no refunds. Defaults to <cite>none</cite>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Cloning will ignore buildings with <span><code class="docutils literal"><span class="pre">Factory=</span></code></span> set. Note that
+<span><code class="docutils literal"><span class="pre">Factory</span></code></span> is not what causes the units to walk or drive out properly,
+<span><code class="docutils literal"><span class="pre">WeaponsFactory=yes</span></code></span>, <span><code class="docutils literal"><span class="pre">GDIBarracks=yes</span></code></span>, <span><code class="docutils literal"><span class="pre">NODBarracks=yes</span></code></span>
+and <span><code class="docutils literal"><span class="pre">YuriBarracks=yes</span></code></span> are.</p>
+</div>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If <span><code class="docutils literal"><span class="pre">ClonedAt</span></code></span> is specified, neither <span><code class="docutils literal"><span class="pre">Cloning=yes</span></code></span> nor
+<span><code class="docutils literal"><span class="pre">CloningFacility=yes</span></code></span> will clone the object.</p>
+</div>
+</dd>
+</dl>
+<span class="target" id="index-0"></span><div class="versionadded" id="index-1">
+<p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="forceshield.html" title="Force Shield"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="enemywrench.html" title="Enemy Wrench"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Buildings</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Ivan Bombs &mdash; Ares 0.9 documentation</title>
+    <title>Ivan Bombs &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../../index.html" />
     <link rel="up" title="Weapons" href="index.html" />
     <link rel="next" title="Radiation Beams" href="radiation.html" />
     <link rel="prev" title="Ordinary Damage for IsSonic and UseFireParticles" href="damage.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,12 +42,12 @@
         <li class="right" >
           <a href="damage.html" title="Ordinary Damage for IsSonic and UseFireParticles"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Weapons</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Weapons</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="damage.html"
@@ -57,7 +55,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="radiation.html"
                         title="next chapter">Radiation Beams</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -76,7 +74,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="ivan-bombs">
 <span id="custom-ivan-bombs"></span><h1>Ivan Bombs<a class="headerlink" href="#ivan-bombs" title="Permalink to this headline">¶</a></h1>
@@ -85,56 +83,56 @@ Crazy Ivan Bombs are global so you can&#8217;t have multiple variations of them 
 their own controls. With <span class="game docutils literal">Ares</span> it is now possible to create new Ivan
 Bomb-esque weapons &#8211; new types of sticky bomb with whatever settings you like.</p>
 <p><span class="game docutils literal">Ares</span> now also supports shrapnel weapons, as long as they have a
-<span><tt class="docutils literal"><span class="pre">CellSpread</span></tt></span> of <cite>0.5</cite> or more.</p>
-<p>When <span><tt class="docutils literal"><span class="pre">IvanBomb=yes</span></tt></span> is set on the weapon&#8217;s warhead, the weapon can specify
+<span><code class="docutils literal"><span class="pre">CellSpread</span></code></span> of <cite>0.5</cite> or more.</p>
+<p>When <span><code class="docutils literal"><span class="pre">IvanBomb=yes</span></code></span> is set on the weapon&#8217;s warhead, the weapon can specify
 the following flags in order to customize that bomb:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Warhead=</span></tt><span class="type definition"> (WarheadType)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Warhead=</span></code><span class="type definition"> (WarheadType)</span></span></dt>
 <dd>The warhead that will be used when the bomb detonates. Defaults to
-<span><tt class="docutils literal"><span class="pre">[CombatDamage]►IvanWarhead</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Damage=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<span><code class="docutils literal"><span class="pre">[CombatDamage]►IvanWarhead</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Damage=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>The damage that will be dealt when the bomb detonates. Defaults to
-<span><tt class="docutils literal"><span class="pre">[CombatDamage]►IvanDamage</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Detachable=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<span><code class="docutils literal"><span class="pre">[CombatDamage]►IvanDamage</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Detachable=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether or not Engineers can remove this bomb from units it has been attached
 to. Defaults to <cite>yes</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.DestroysBridges=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.DestroysBridges=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd><p class="first">Whether or not this bomb can be used on Bridge Repair Huts in order to destroy
 the corresponding Bridge. Defaults to <cite>yes</cite>.</p>
 <div class="last admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Bombs can always be attached to Bridge Huts, but the resulting
 explosion will not destroy the bridge unless
-<span><tt class="docutils literal"><span class="pre">IvanBomb.DestroysBridges=yes</span></tt></span> is set.</p>
+<span><code class="docutils literal"><span class="pre">IvanBomb.DestroysBridges=yes</span></code></span> is set.</p>
 </div>
 </dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.CanDetonateTimeBomb=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.CanDetonateTimeBomb=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether or not players can manually detonate bombs attached by this weapon.
-Defaults to <span><tt class="docutils literal"><span class="pre">[CombatDamage]►CanDetonateTimeBomb</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Delay=</span></tt><span class="type definition"> (integer)</span></span></dt>
+Defaults to <span><code class="docutils literal"><span class="pre">[CombatDamage]►CanDetonateTimeBomb</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Delay=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>The number of frames that will elapse before the bomb detonates automatically.
-Defaults to <span><tt class="docutils literal"><span class="pre">[CombatDamage]►IvanTimedDelay</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.AttachSound=</span></tt><span class="type definition"> (sound name)</span></span></dt>
+Defaults to <span><code class="docutils literal"><span class="pre">[CombatDamage]►IvanTimedDelay</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.AttachSound=</span></code><span class="type definition"> (sound name)</span></span></dt>
 <dd>The sound that will be played when the bomb is attached to a target. Defaults
-to <span><tt class="docutils literal"><span class="pre">[AudioVisual]►BombAttachSound</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.TickingSound=</span></tt><span class="type definition"> (sound name)</span></span></dt>
+to <span><code class="docutils literal"><span class="pre">[AudioVisual]►BombAttachSound</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.TickingSound=</span></code><span class="type definition"> (sound name)</span></span></dt>
 <dd>The sound that will be played whilst the bomb is attached to a unit. In order
-for this sound to loop correctly, the sound must have <span><tt class="docutils literal"><span class="pre">Control=loop</span></tt></span> set
-in its INI section in <tt class="file docutils literal docutils literal"><span class="pre">soundmd.ini</span></tt>. Defaults to
-<span><tt class="docutils literal"><span class="pre">[AudioVisual]►BombTickingSound</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Image=</span></tt><span class="type definition"> (filename, *excluding*the .shp extension)</span></span></dt>
+for this sound to loop correctly, the sound must have <span><code class="docutils literal"><span class="pre">Control=loop</span></code></span> set
+in its INI section in <code class="file docutils literal"><span class="pre">soundmd.ini</span></code>. Defaults to
+<span><code class="docutils literal"><span class="pre">[AudioVisual]►BombTickingSound</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Image=</span></code><span class="type definition"> (filename, *excluding*the .shp extension)</span></span></dt>
 <dd>The SHP file for the image to display over a unit that has a bomb attached to
 them, in the format &#8220;filename&#8221;(the &#8221;.shp&#8221; extension is automatically added by
 the engine). If the image cannot be loaded then the game will fall back to the
-default <tt class="file docutils literal docutils literal"><span class="pre">bombcurs.shp</span></tt>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.FlickerRate=</span></tt><span class="type definition"> (integer)</span></span></dt>
+default <code class="file docutils literal"><span class="pre">bombcurs.shp</span></code>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.FlickerRate=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd><p class="first">The rate at which the bomb SHP will flip back and forth between two frames to
 give the impression of a flickering fuse. Must be higher than <cite>0</cite>.
-Defaults to <span><tt class="docutils literal"><span class="pre">[CombatDamage]►IvanIconFlickerRate</span></tt></span>.</p>
+Defaults to <span><code class="docutils literal"><span class="pre">[CombatDamage]►IvanIconFlickerRate</span></code></span>.</p>
 <p class="last">The animation is slowed down to play over the entire lifetime of the bomb
-(<span><tt class="docutils literal"><span class="pre">IvanBomb.Delay</span></tt></span>). The flicker rate is the number of frames between
+(<span><code class="docutils literal"><span class="pre">IvanBomb.Delay</span></code></span>). The flicker rate is the number of frames between
 alternating between the current frame and the following frame.
-<span><tt class="docutils literal"><span class="pre">IvanBomb.FlickerRate=5</span></tt></span> means the current frame is shown 5 frames, then
+<span><code class="docutils literal"><span class="pre">IvanBomb.FlickerRate=5</span></code></span> means the current frame is shown 5 frames, then
 the next one for 5 frames, then the current one again for 5 frames, ....</p>
 </dd>
 </dl>
@@ -142,13 +140,15 @@ the next one for 5 frames, then the current one again for 5 frames, ....</p>
 which was originally planned to be used for so called &#8220;death bombs&#8221; which were
 cut from the game before <span class="game docutils literal">Red Alert 2</span> was released. This hard-coding has
 been changed so that the whole SHP is now considered for the fuse, however this
-means that you&#8217;ll now see that extra frame from <tt class="file docutils literal docutils literal"><span class="pre">bombcurs.shp</span></tt>, unless you
+means that you&#8217;ll now see that extra frame from <code class="file docutils literal"><span class="pre">bombcurs.shp</span></code>, unless you
 replace that SHP file.</p>
 <img alt="Image of bombcurs.shp" class="align-center" src="../../_images/bombcurs.png" />
-<p class="versionadded" id="index-0">
-<span class="versionmodified">New in version 0.1.</span></p>
-<p class="versionchanged">
-<span class="versionmodified">Changed in version 0.5.</span></p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 0.5.</span></p>
+</div>
 </div>
 
 
@@ -157,7 +157,7 @@ replace that SHP file.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -169,14 +169,14 @@ replace that SHP file.</p>
         <li class="right" >
           <a href="damage.html" title="Ordinary Damage for IsSonic and UseFireParticles"
              >previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="index.html" >Weapons</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Weapons</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Type=GeneticConverter &mdash; Ares 0.9 documentation</title>
+    <title>Type=GeneticConverter &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../../../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../../../index.html" />
     <link rel="up" title="Settings by Super Weapon Type" href="index.html" />
     <link rel="next" title="Type=ParaDrop and Type=AmerParaDrop" href="paradrop.html" />
     <link rel="prev" title="Type=IronCurtain and Type=ForceShield" href="protect.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,13 +42,13 @@
         <li class="right" >
           <a href="protect.html" title="Type=IronCurtain and Type=ForceShield"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="protect.html"
@@ -58,7 +56,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="paradrop.html"
                         title="next chapter"><span><span class="type">Type=ParaDrop</span></span> and <span><span class="type">Type=AmerParaDrop</span></span></a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../../search.html" method="get">
       <input type="text" name="q" />
@@ -77,59 +75,60 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="type-geneticconverter">
 <h1><span><span class="type">Type=GeneticConverter</span></span><a class="headerlink" href="#type-geneticconverter" title="Permalink to this headline">¶</a></h1>
 <p>Default values for general tags:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Range=</span></tt><span class="type definition"> (float,integer)</span></span></dt>
-<dd>The area the Genetic Mutator affects. Ignored if <span><tt class="docutils literal"><span class="pre">Mutate.Explosion=yes</span></tt></span>.
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Range=</span></code><span class="type definition"> (float,integer)</span></span></dt>
+<dd>The area the Genetic Mutator affects. Ignored if <span><code class="docutils literal"><span class="pre">Mutate.Explosion=yes</span></code></span>.
 Defaults to <cite>3,3</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Damage=</span></tt><span class="type definition"> (integer)</span></span></dt>
-<dd>The damage the Genetic Mutator delivers if <span><tt class="docutils literal"><span class="pre">Mutate.Explosion=yes</span></tt></span>.
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Damage=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd>The damage the Genetic Mutator delivers if <span><code class="docutils literal"><span class="pre">Mutate.Explosion=yes</span></code></span>.
 Defaults to <cite>10000</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Warhead=</span></tt><span class="type definition"> (Warhead)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Warhead=</span></code><span class="type definition"> (Warhead)</span></span></dt>
 <dd>The warhead used to deal the damage. Defaults to
-<span><tt class="docutils literal"><span class="pre">[SpecialWeapons]►MutateExplosionWarhead</span></tt></span> if <span><tt class="docutils literal"><span class="pre">Mutate.Explosion=yes</span></tt></span>,
-to <span><tt class="docutils literal"><span class="pre">[SpecialWeapons]►MutateWarhead</span></tt></span> otherwise.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Animation=</span></tt><span class="type definition"> (Animation)</span></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[General]►IonBlast</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AnimationHeight=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<span><code class="docutils literal"><span class="pre">[SpecialWeapons]►MutateExplosionWarhead</span></code></span> if <span><code class="docutils literal"><span class="pre">Mutate.Explosion=yes</span></code></span>,
+to <span><code class="docutils literal"><span class="pre">[SpecialWeapons]►MutateWarhead</span></code></span> otherwise.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Animation=</span></code><span class="type definition"> (Animation)</span></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►IonBlast</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AnimationHeight=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>Defaults to <cite>5</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Sound=</span></tt><span class="type definition"> (Sound)</span></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[AudioVisual]►GeneticMutatorActivateSound</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></tt><span class="type definition"> (enum)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Sound=</span></code><span class="type definition"> (Sound)</span></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[AudioVisual]►GeneticMutatorActivateSound</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></code><span class="type definition"> (enum)</span></span></dt>
 <dd>Defaults to <cite>GeneticMutator</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AffectsHouse=</span></tt><span class="type definition"> (enum)</span></span></dt>
-<dd>Specifies the houses affected by the mutation, if <span><tt class="docutils literal"><span class="pre">Mutate.Explosion=no</span></tt></span>.
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AffectsHouse=</span></code><span class="type definition"> (enum)</span></span></dt>
+<dd>Specifies the houses affected by the mutation, if <span><code class="docutils literal"><span class="pre">Mutate.Explosion=no</span></code></span>.
 Defaults to <cite>all</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AffectsTarget=</span></tt><span class="type definition"> (enum)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AffectsTarget=</span></code><span class="type definition"> (enum)</span></span></dt>
 <dd>Specifies whether the mutation effect should be limited to <cite>land</cite> or
 <cite>water</cite> targets. You cannot define any unit type here and they will be
-ignored. Ignored if <span><tt class="docutils literal"><span class="pre">Mutate.Explosion=yes</span></tt></span>. Defaults to <cite>all</cite>.</dd>
+ignored. Ignored if <span><code class="docutils literal"><span class="pre">Mutate.Explosion=yes</span></code></span>. Defaults to <cite>all</cite>.</dd>
 </dl>
 <p>Genetic Mutator specific tags:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Mutate.Explosion=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Mutate.Explosion=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Switches between two modes. If <cite>yes</cite>, the Genetic Mutator will cause an
-explosion using <span><tt class="docutils literal"><span class="pre">SW.Warhad</span></tt></span> and <span><tt class="docutils literal"><span class="pre">SW.Damage</span></tt></span> without respecting any
+explosion using <span><code class="docutils literal"><span class="pre">SW.Warhad</span></code></span> and <span><code class="docutils literal"><span class="pre">SW.Damage</span></code></span> without respecting any
 other Genetic Mutator specific tags. Otherwise all infantry units in range are
-damaged using <span><tt class="docutils literal"><span class="pre">SW.Warhead</span></tt></span> and <span><tt class="docutils literal"><span class="pre">SW.Damage</span></tt></span>, verses and immunities
-are respected. Defaults to <span><tt class="docutils literal"><span class="pre">[General]►MutateExplosion</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Mutate.IgnoreCyborg=</span></tt><span class="type definition"> (boolean)</span></span></dt>
-<dd>Whether the Genetic Mutator will not affect infantry with <span><tt class="docutils literal"><span class="pre">Cyborg=yes</span></tt></span>
-set. Ignored if <span><tt class="docutils literal"><span class="pre">Mutate.Explosion=yes</span></tt></span>. Defaults to <cite>no</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Mutate.IgnoreNotHuman=</span></tt><span class="type definition"> (boolean)</span></span></dt>
-<dd>Whether the Genetic Mutator will not affect infantry with <span><tt class="docutils literal"><span class="pre">NotHuman=yes</span></tt></span>
-set. Ignored if <span><tt class="docutils literal"><span class="pre">Mutate.Explosion=yes</span></tt></span>. Defaults to <cite>no</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Mutate.KillNatural=</span></tt><span class="type definition"> (boolean)</span></span></dt>
-<dd>Whether the Genetic Mutator will just kill infantry with <span><tt class="docutils literal"><span class="pre">Natural=yes</span></tt></span>
-set opposed to affecting it using <span><tt class="docutils literal"><span class="pre">SW.Warhead</span></tt></span>. Ignored if
-<span><tt class="docutils literal"><span class="pre">Mutate.Explosion=yes</span></tt></span>. Defaults to <cite>yes</cite>.</dd>
+damaged using <span><code class="docutils literal"><span class="pre">SW.Warhead</span></code></span> and <span><code class="docutils literal"><span class="pre">SW.Damage</span></code></span>, verses and immunities
+are respected. Defaults to <span><code class="docutils literal"><span class="pre">[General]►MutateExplosion</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Mutate.IgnoreCyborg=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether the Genetic Mutator will not affect infantry with <span><code class="docutils literal"><span class="pre">Cyborg=yes</span></code></span>
+set. Ignored if <span><code class="docutils literal"><span class="pre">Mutate.Explosion=yes</span></code></span>. Defaults to <cite>no</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Mutate.IgnoreNotHuman=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether the Genetic Mutator will not affect infantry with <span><code class="docutils literal"><span class="pre">NotHuman=yes</span></code></span>
+set. Ignored if <span><code class="docutils literal"><span class="pre">Mutate.Explosion=yes</span></code></span>. Defaults to <cite>no</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Mutate.KillNatural=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether the Genetic Mutator will just kill infantry with <span><code class="docutils literal"><span class="pre">Natural=yes</span></code></span>
+set opposed to affecting it using <span><code class="docutils literal"><span class="pre">SW.Warhead</span></code></span>. Ignored if
+<span><code class="docutils literal"><span class="pre">Mutate.Explosion=yes</span></code></span>. Defaults to <cite>yes</cite>.</dd>
 </dl>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.2.</span></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
 </div>
 
 
@@ -138,7 +137,7 @@ set opposed to affecting it using <span><tt class="docutils literal"><span class
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -150,15 +149,15 @@ set opposed to affecting it using <span><tt class="docutils literal"><span class
         <li class="right" >
           <a href="protect.html" title="Type=IronCurtain and Type=ForceShield"
              >previous</a> |</li>
-        <li><a href="../../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
-          <li><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

@@ -1,0 +1,18 @@
+Disk Laser Animations
+
+
+Even though pre-release screen shots showed this, DiskLaser=yes weapons
+do not display animations from their warheads AnimList. Ares
+automatically respects the Bright setting on the weapon and adds a way to
+enable animations.
+
+This global tag has to be enabled manually so the game's default is not changed,
+because the Disk Laser weapons in Yuri's Revenge have animations set.
+
+[AudioVisual]DiskLaserAnimEnabled=boolean
+  Whether Disk Lasers should display an animation from their warhead's
+  AnimList. Defaults to no.
+
+ Weapons; Disk Lasers support animations and Bright=
+
+ 0.A

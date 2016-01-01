@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Tech Structures Return to Neutral &mdash; Ares 0.A documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.A',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.A documentation" href="../../index.html" />
+    <link rel="up" title="Buildings" href="index.html" />
+    <link rel="next" title="Toggle Power" href="togglepower.html" />
+    <link rel="prev" title="Spy Behavior" href="spybehavior.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="togglepower.html" title="Toggle Power"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="spybehavior.html" title="Spy Behavior"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Buildings</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Tech Structures Return to Neutral</a></li>
+<li><a class="reference internal" href="#tech-structure-notifications">Tech Structure Notifications</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="spybehavior.html"
+                        title="previous chapter">Spy Behavior</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="togglepower.html"
+                        title="next chapter">Toggle Power</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tech-structures-return-to-neutral">
+<h1>Tech Structures Return to Neutral<a class="headerlink" href="#tech-structures-return-to-neutral" title="Permalink to this headline">¶</a></h1>
+<p>In multiplayer games the neutral tech structures and occupiable structures a
+player captured can be made to be returned to the neutral house in case the
+owning player is defeated or gives up, instead of destroying them.</p>
+<p>Only buildings that initially belonged to a <span><code class="docutils literal"><span class="pre">MultiplayPassive=yes</span></code></span> house
+are eligible to be returned. In single player mode these settings are ignored.</p>
+<p>The country the buildings are given back to is their initial owner.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[General]►ReturnStructures=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether structures will by default return to the civilian side when a player
+is defeated or giving up. Defaults to <cite>no</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►Returnable=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether this building type will return to the civilian side when the owning
+player is defeated or giving up. Defaults to <span><code class="docutils literal"><span class="pre">[General]►ReturnStructures</span></code></span>.</dd>
+</dl>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.6.</span></p>
+</div>
+</div>
+<div class="section" id="tech-structure-notifications">
+<h1>Tech Structure Notifications<a class="headerlink" href="#tech-structure-notifications" title="Permalink to this headline">¶</a></h1>
+<p><span class="game docutils literal">Yuri&#8217;s Revenge</span> has the <span><code class="docutils literal"><span class="pre">CaptureEvaEvent</span></code></span> setting that defines which
+EVA event will play if a building of a type with <span><code class="docutils literal"><span class="pre">NeedsEngineer=yes</span></code></span> is
+captured. <span class="game docutils literal">Ares</span> makes the corresponding lost event customizable and adds
+optional text messages for each of them.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►LostEvaEvent=</span></code><span class="type definition"> (EVA event)</span></span></dt>
+<dd>The EVA message played when a building of this type is captured from the
+player. Requires <span><code class="docutils literal"><span class="pre">NeedsEngineer=yes</span></code></span>. Defaults to
+<cite>EVA_TechBuildingLost</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►Message.Capture=</span></code><span class="type definition"> (CSF label)</span></span></dt>
+<dd>The text printed when a building of this type is captured by the player.
+Requires <span><code class="docutils literal"><span class="pre">NeedsEngineer=yes</span></code></span>. Defaults to <cite>none</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►Message.Lost=</span></code><span class="type definition"> (CSF label)</span></span></dt>
+<dd>The text printed when a building of this type is captured by the enemy.
+Requires <span><code class="docutils literal"><span class="pre">NeedsEngineer=yes</span></code></span>. Defaults to <cite>none</cite>.</dd>
+</dl>
+<div class="versionadded" id="index-1">
+<p><span class="versionmodified">New in version 0.9.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="togglepower.html" title="Toggle Power"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="spybehavior.html" title="Spy Behavior"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Buildings</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

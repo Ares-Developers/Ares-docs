@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Type Selection Groups &mdash; Ares 0.9 documentation</title>
+    <title>Type Selection Groups &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Unit Lost EVA Report" href="unitlost.html" />
-    <link rel="prev" title="Toggle Power" href="togglepower.html" /> 
+    <link rel="prev" title="Team Retaliate" href="teamretaliate.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -42,21 +40,21 @@
           <a href="unitlost.html" title="Unit Lost EVA Report"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="togglepower.html" title="Toggle Power"
+          <a href="teamretaliate.html" title="Team Retaliate"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="togglepower.html"
-                        title="previous chapter">Toggle Power</a></p>
+  <p class="topless"><a href="teamretaliate.html"
+                        title="previous chapter">Team Retaliate</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="unitlost.html"
                         title="next chapter">Unit Lost EVA Report</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -75,7 +73,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="type-selection-groups">
 <h1>Type Selection Groups<a class="headerlink" href="#type-selection-groups" title="Permalink to this headline">¶</a></h1>
@@ -89,33 +87,34 @@ limited to infantry (it actually supports mixed types), has no side effects when
 types are modified in maps and it doesn&#8217;t crash.</p>
 <div class="quickstart admonition" id="quickstart-0">
 <p class="first admonition-title">Quickstart</p>
-<p class="last">To group all dogs as one type of unit, set <span><tt class="docutils literal"><span class="pre">GroupAs=DOG</span></tt></span> on
-all of them. For engineers, use <span><tt class="docutils literal"><span class="pre">GroupAs=ENGINEER</span></tt></span>.</p>
+<p class="last">To group all dogs as one type of unit, set <span><code class="docutils literal"><span class="pre">GroupAs=DOG</span></code></span> on
+all of them. For engineers, use <span><code class="docutils literal"><span class="pre">GroupAs=ENGINEER</span></code></span>.</p>
 </div>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►GroupAs=</span></tt><span class="type definition"> (string)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►GroupAs=</span></code><span class="type definition"> (string)</span></span></dt>
 <dd><p class="first">The group name this unit is considered as. Name length can be up to 30
 characters. Defaults to the type&#8217;s ID.</p>
 <div class="last admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Check that you don&#8217;t accidentally use an existing ID of a probably
 unrelated type as group name. This would include this type in this selection
-group, if it doesn&#8217;t have <span><tt class="docutils literal"><span class="pre">GroupAs</span></tt></span> set to some other value itself.</p>
+group, if it doesn&#8217;t have <span><code class="docutils literal"><span class="pre">GroupAs</span></code></span> set to some other value itself.</p>
 </div>
 </dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[General]►TypeSelectUseDeploy=</span></tt><span class="type definition"> (boolean)</span></span></dt>
-<dd><p class="first">Whether the types in <span><tt class="docutils literal"><span class="pre">DeploysInto</span></tt></span> and <span><tt class="docutils literal"><span class="pre">UndeploysInto</span></tt></span> should be
+<dt><span><code class="definition docutils literal"><span class="pre">[General]►TypeSelectUseDeploy=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd><p class="first">Whether the types in <span><code class="docutils literal"><span class="pre">DeploysInto</span></code></span> and <span><code class="docutils literal"><span class="pre">UndeploysInto</span></code></span> should be
 included for selection automatically. Defaults to <cite>yes</cite>.</p>
 <div class="last admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">If you set this to <cite>no</cite>, Slave Miners, Tick Tanks and the
 like will differentiate between their deployed and undeployed forms. You
-will have to manually set <span><tt class="docutils literal"><span class="pre">GroupAs</span></tt></span> on the groups you want to keep.</p>
+will have to manually set <span><code class="docutils literal"><span class="pre">GroupAs</span></code></span> on the groups you want to keep.</p>
 </div>
 </dd>
 </dl>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.5.</span></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.5.</span></p>
+</div>
 </div>
 
 
@@ -124,7 +123,7 @@ will have to manually set <span><tt class="docutils literal"><span class="pre">G
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -134,15 +133,15 @@ will have to manually set <span><tt class="docutils literal"><span class="pre">G
           <a href="unitlost.html" title="Unit Lost EVA Report"
              >next</a> |</li>
         <li class="right" >
-          <a href="togglepower.html" title="Toggle Power"
+          <a href="teamretaliate.html" title="Team Retaliate"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

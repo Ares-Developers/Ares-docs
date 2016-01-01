@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Type=EMPulse &mdash; Ares 0.9 documentation</title>
+    <title>Type=EMPulse &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../../../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../../../index.html" />
     <link rel="up" title="Settings by Super Weapon Type" href="index.html" />
     <link rel="next" title="Tiberium" href="../../tiberium/index.html" />
     <link rel="prev" title="Type=DropPod" href="droppod.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,13 +42,13 @@
         <li class="right" >
           <a href="droppod.html" title="Type=DropPod"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="droppod.html"
@@ -58,7 +56,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="../../tiberium/index.html"
                         title="next chapter">Tiberium</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../../search.html" method="get">
       <input type="text" name="q" />
@@ -77,7 +75,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="type-empulse">
 <h1><span><span class="type">Type=EMPulse</span></span><a class="headerlink" href="#type-empulse" title="Permalink to this headline">¶</a></h1>
@@ -92,63 +90,64 @@ not respect ranges, which is a fundamental feature of this super weapon type.</p
 </div>
 <p>Default values for general tags:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.RangeMinimum=</span></tt><span class="type definition"> (float - cell range)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.RangeMinimum=</span></code><span class="type definition"> (float - cell range)</span></span></dt>
 <dd>The minimum range below which a cannon is not eligible to fire. Set to
 negative values to use each cannon&#8217;s primary weapon&#8217;s minimum range. Defaults
 to <cite>0.0</cite>, which disables the check.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.RangeMaximum=</span></tt><span class="type definition"> (float - cell range)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.RangeMaximum=</span></code><span class="type definition"> (float - cell range)</span></span></dt>
 <dd>The maximum range above which a cannon is not eligible to fire. Set to
 negative values to use the each cannon&#8217;s primary weapon&#8217;s range. Defaults to
 <cite>-1.0</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.MaxCount=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.MaxCount=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>The maximum number of cannons firing. Set to negative values for unlimited
 cannons. Defaults to <cite>1</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></tt><span class="type definition"> (enum)</span></span></dt>
-<dd>AI does not respect ranges. For <span><tt class="docutils literal"><span class="pre">EMPulse.TargetSelf=yes</span></tt></span> super weapons,
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></code><span class="type definition"> (enum)</span></span></dt>
+<dd>AI does not respect ranges. For <span><code class="docutils literal"><span class="pre">EMPulse.TargetSelf=yes</span></code></span> super weapons,
 use <cite>NoTarget</cite> to enable AI players to use it. Defaults to
 <cite>None</cite>.</dd>
 </dl>
 <p>EMPulse specific tags:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►EMPulse.Cannons=</span></tt><span class="type definition"> (list of BuildingType)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►EMPulse.Cannons=</span></code><span class="type definition"> (list of BuildingType)</span></span></dt>
 <dd>The building types considered to check the range and to fire. If the list is
-empty, all buildings with <span><tt class="docutils literal"><span class="pre">EMPulseCannon=yes</span></tt></span> are considered. All
+empty, all buildings with <span><code class="docutils literal"><span class="pre">EMPulseCannon=yes</span></code></span> are considered. All
 buildings are required to have a primary weapon. Defaults to <cite>none</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►EMPulse.TargetSelf=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►EMPulse.TargetSelf=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether each cannon to fire should fire its primary weapon at itself. The
 cannon does not actually fire; the weapon just detonates once on the cannon
 building immediately, similar to a death weapon. To actually damage itself,
-the building needs to have <span><tt class="docutils literal"><span class="pre">DamageSelf=yes</span></tt></span> set. Defaults to <cite>no</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►EMPulse.Linked=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+the building needs to have <span><code class="docutils literal"><span class="pre">DamageSelf=yes</span></code></span> set. Defaults to <cite>no</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►EMPulse.Linked=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether only one cannon needs to satisfy the range checks to the target. All
 other cannons will then be considered regardless of range. Only makes sense if
-<span><tt class="docutils literal"><span class="pre">SW.MaxCount</span></tt></span> has a value other than <cite>1</cite>. The difference to just
+<span><code class="docutils literal"><span class="pre">SW.MaxCount</span></code></span> has a value other than <cite>1</cite>. The difference to just
 making the cannon itself a designator is that the cannon can be made to not
 provide fire clearance on their own. Defaults to <cite>no</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►EMPulse.PulseBall=</span></tt><span class="type definition"> (Animation)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►EMPulse.PulseBall=</span></code><span class="type definition"> (Animation)</span></span></dt>
 <dd>The optional animation played at the FLH at the beginning of the delay before
 the cannon fires. Use <cite>none</cite> to disable the pulse ball. This does not
 disable the delay. Defaults to <cite>PULSBALL</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►EMPulse.PulseDelay=</span></tt><span class="type definition"> (integer - frames)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►EMPulse.PulseDelay=</span></code><span class="type definition"> (integer - frames)</span></span></dt>
 <dd>The delay before firing, but after the cannon rotated towards the target and
-started the <span><tt class="docutils literal"><span class="pre">EMPulse.PulseBall</span></tt></span> animation. Defaults to <cite>32</cite>.</dd>
+started the <span><code class="docutils literal"><span class="pre">EMPulse.PulseBall</span></code></span> animation. Defaults to <cite>32</cite>.</dd>
 </dl>
 <p>There are three firing modes opposed to the one known from <span class="game docutils literal">Tiberian Sun</span>.
-Buildings with <span><tt class="docutils literal"><span class="pre">EMPulseCannon=yes</span></tt></span> rotate their turret and then create a
+Buildings with <span><code class="docutils literal"><span class="pre">EMPulseCannon=yes</span></code></span> rotate their turret and then create a
 single bullet using the primary weapon that is thrown at the target. The
 building does not actually fire and several weapon effects are not respected.</p>
-<p>If <span><tt class="docutils literal"><span class="pre">EMPulse.TargetSelf=yes</span></tt></span>, a single bullet is immediately detonated at
+<p>If <span><code class="docutils literal"><span class="pre">EMPulse.TargetSelf=yes</span></code></span>, a single bullet is immediately detonated at
 each firing cannon&#8217;s location. Again, the building does not actually fire.</p>
-<p>If a building with <span><tt class="docutils literal"><span class="pre">EMPulseCannon=no</span></tt></span> is put into <span><tt class="docutils literal"><span class="pre">EMPulse.Cannons</span></tt></span>,
+<p>If a building with <span><code class="docutils literal"><span class="pre">EMPulseCannon=no</span></code></span> is put into <span><code class="docutils literal"><span class="pre">EMPulse.Cannons</span></code></span>,
 the building will fire its primary weapon normally, but without charging and
 without any further range checks.</p>
 <p>Other changes:</p>
 <p>The pulse ball animation that was previously hardcoded to <cite>PULSBALL</cite> has
-now been made customizable and optional. If an <span><tt class="docutils literal"><span class="pre">EMPulseCannon=yes</span></tt></span> building
-had a primary weapon without any valid <span><tt class="docutils literal"><span class="pre">Report</span></tt></span> set, the game would crash.
+now been made customizable and optional. If an <span><code class="docutils literal"><span class="pre">EMPulseCannon=yes</span></code></span> building
+had a primary weapon without any valid <span><code class="docutils literal"><span class="pre">Report</span></code></span> set, the game would crash.
 This does not happen any more.</p>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.8.</span></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.8.</span></p>
+</div>
 </div>
 
 
@@ -157,7 +156,7 @@ This does not happen any more.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -169,15 +168,15 @@ This does not happen any more.</p>
         <li class="right" >
           <a href="droppod.html" title="Type=DropPod"
              >previous</a> |</li>
-        <li><a href="../../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
-          <li><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

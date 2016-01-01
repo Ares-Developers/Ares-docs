@@ -4,14 +4,14 @@
 BuildingTypes and InfantryTypes Do Not Reload Ammo Properly
 
 
-See ModEnc://Ammo  for exact details
-of this problem. Put simply, ammo/reloading logic did not work properly on
-BuildingTypes or InfantryTypes and was essentially useless on
-those object types. Ares fixes this logic such that these object types
-will now reload their ammo properly. Note that AircraftTypes are
+See Ammo on ModEnc  for exact
+details of this problem. Put simply, ammo/reloading logic did not work properly
+on BuildingTypes or InfantryTypes and was essentially useless
+on those object types. Ares fixes this logic such that these object
+types will now reload their ammo properly. Note that AircraftTypes are
 hard-coded to require docking to reload.
 
- \ Hospital=yes and Armory=yes buildings still not reload
-  ammo.
+ \ Hospital=yes and Armory=yes buildings still do not
+  reload ammo.
 
  0.1

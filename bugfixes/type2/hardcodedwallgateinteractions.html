@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Hardcoded Wall/Gate Interactions &mdash; Ares 0.9 documentation</title>
+    <title>Hardcoded Wall/Gate Interactions &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../../index.html" />
     <link rel="up" title="Type 2 Fixes (Mod Logics)" href="index.html" />
     <link rel="next" title="Hijackers are reimbursed when a unit is grinded" href="hijackersarereimbursedwhenaunitisgrinded.html" />
     <link rel="prev" title="Factory Load Sharing" href="factoryloadsharing.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,12 +42,12 @@
         <li class="right" >
           <a href="factoryloadsharing.html" title="Factory Load Sharing"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >Bug Fixes</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Type 2 Fixes (Mod Logics)</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Bug Fixes</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Type 2 Fixes (Mod Logics)</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="factoryloadsharing.html"
@@ -57,7 +55,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="hijackersarereimbursedwhenaunitisgrinded.html"
                         title="next chapter">Hijackers are reimbursed when a unit is grinded</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -76,23 +74,24 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="hardcoded-wall-gate-interactions">
 <span id="index-0"></span><h1>Hardcoded Wall/Gate Interactions<a class="headerlink" href="#hardcoded-wall-gate-interactions" title="Permalink to this headline">¶</a></h1>
 <p>In <span class="game docutils literal">Tiberian Sun</span> you could place buildable gates on top of existing
 walls. This logic still exists in <span class="game docutils literal">Yuri&#8217;s Revenge</span>. However, the logic was
-hardcoded to only work with <span><tt class="docutils literal"><span class="pre">[GAWALL]</span></tt></span> and <span><tt class="docutils literal"><span class="pre">[NAWALL]</span></tt></span>, so it wouldn&#8217;t
-work with Yuri&#8217;s wall (<span><tt class="docutils literal"><span class="pre">[YAWALL]</span></tt></span>) or, indeed, any other walls you might
+hardcoded to only work with <span><code class="docutils literal"><span class="pre">[GAWALL]</span></code></span> and <span><code class="docutils literal"><span class="pre">[NAWALL]</span></code></span>, so it wouldn&#8217;t
+work with Yuri&#8217;s wall (<span><code class="docutils literal"><span class="pre">[YAWALL]</span></code></span>) or, indeed, any other walls you might
 add to the game. <span class="game docutils literal">Ares</span> changes this so that all overlays with
-<span><tt class="docutils literal"><span class="pre">Wall=yes</span></tt></span> set can have gates &#8220;slammed&#8221; onto them.</p>
+<span><code class="docutils literal"><span class="pre">Wall=yes</span></code></span> set can have gates &#8220;slammed&#8221; onto them.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The automatic joining of walls to the gates still only works for
-<span><tt class="docutils literal"><span class="pre">GAWALL</span></tt></span> and <span><tt class="docutils literal"><span class="pre">NAWALL</span></tt></span> however this will be fixed in future.</p>
+<span><code class="docutils literal"><span class="pre">GAWALL</span></code></span> and <span><code class="docutils literal"><span class="pre">NAWALL</span></code></span> however this will be fixed in future.</p>
 </div>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.1.</span></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
 </div>
 
 
@@ -101,7 +100,7 @@ add to the game. <span class="game docutils literal">Ares</span> changes this so
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -113,14 +112,14 @@ add to the game. <span class="game docutils literal">Ares</span> changes this so
         <li class="right" >
           <a href="factoryloadsharing.html" title="Factory Load Sharing"
              >previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >Bug Fixes</a> &raquo;</li>
-          <li><a href="index.html" >Type 2 Fixes (Mod Logics)</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Bug Fixes</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Type 2 Fixes (Mod Logics)</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

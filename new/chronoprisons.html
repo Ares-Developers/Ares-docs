@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Chrono Prisons / Abductors &mdash; Ares 0.9 documentation</title>
+    <title>Chrono Prisons / Abductors &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Chronoshift" href="chronoshift.html" />
     <link rel="prev" title="Carryalls" href="carryalls.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,11 +42,11 @@
         <li class="right" >
           <a href="carryalls.html" title="Carryalls"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="carryalls.html"
@@ -56,7 +54,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="chronoshift.html"
                         title="next chapter">Chronoshift</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -75,7 +73,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="chrono-prisons-abductors">
 <h1>Chrono Prisons / Abductors<a class="headerlink" href="#chrono-prisons-abductors" title="Permalink to this headline">¶</a></h1>
@@ -91,7 +89,7 @@ units.</p>
 and <a class="reference external" href="http://bugs.renegadeprojects.com/view.php?id=1208">#1208</a>, <a class="reference external" href="http://cnc.wikia.com/wiki/Chrono_Prison">original
 concept art on the Command &amp; Conquer Wiki</a>)</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►Abductor=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►Abductor=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd><p class="first">If set to yes, weapons with this flag will absorb the target into the
 attacker&#8217;s passenger hold. Should the attacking unit be destroyed, its
 passengers will emerge. Slaves&#8217; and spawned units&#8217; owner will be changed to
@@ -100,36 +98,36 @@ abducted, conventional damage is dealt. Defaults to <cite>no</cite>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Please make sure you have a passenger hold when using this. Also
-remember that <span><tt class="docutils literal"><span class="pre">SizeLimit</span></tt></span> defaults to 0, so if you don&#8217;t set it,
-abduction of most units will be denied. As usual, <span><tt class="docutils literal"><span class="pre">PipScale</span></tt></span> is
+remember that <span><code class="docutils literal"><span class="pre">SizeLimit</span></code></span> defaults to 0, so if you don&#8217;t set it,
+abduction of most units will be denied. As usual, <span><code class="docutils literal"><span class="pre">PipScale</span></code></span> is
 required for all transports.</p>
 </div>
 <div class="last admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Due to the way <span><tt class="docutils literal"><span class="pre">Passengers</span></tt></span> for buildings was tacked on, it is
+<p class="last">Due to the way <span><code class="docutils literal"><span class="pre">Passengers</span></code></span> for buildings was tacked on, it is
 possible buildings with abducting weapons will not work properly. (Using
-<span><tt class="docutils literal"><span class="pre">InfantryAbsorb</span></tt></span>/<span><tt class="docutils literal"><span class="pre">UnitAbsorb</span></tt></span> increases your chances.) These
+<span><code class="docutils literal"><span class="pre">InfantryAbsorb</span></code></span>/<span><code class="docutils literal"><span class="pre">UnitAbsorb</span></code></span> increases your chances.) These
 malfunctions are considered out of the scope of the request and will not be
 considered bugs. The same goes for <span class="type docutils literal">InfantryTypes</span>. Malfunctions on
 <span class="type docutils literal">VehicleTypes</span> and <span class="type docutils literal">AircraftTypes</span>, on the other hand, should
 be reported immediately.</p>
 </div>
 </dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►Abductor.Anim=</span></tt><span class="type definition"> (animation)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►Abductor.Anim=</span></code><span class="type definition"> (animation)</span></span></dt>
 <dd>This animation will be spawned at the location a unit is abducted from.
 Defaults to <cite>none</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►Abductor.ChangeOwner=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►Abductor.ChangeOwner=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Sets whether the abducted unit shall change its owner to the abductor&#8217;s house.
-Units which are <span><tt class="docutils literal"><span class="pre">ImmuneToPsionics=yes</span></tt></span> will not change owner. Defaults to
+Units which are <span><code class="docutils literal"><span class="pre">ImmuneToPsionics=yes</span></code></span> will not change owner. Defaults to
 <cite>no</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Weapon]►Abductor.AbductBelowPercent=</span></tt><span class="type definition"> (float)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►Abductor.AbductBelowPercent=</span></code><span class="type definition"> (float)</span></span></dt>
 <dd>Specifies the percentage of health a unit has to go below to be abducted.
 Units with more health than this percentage will not be abducted. Defaults to
 <cite>100%</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►ImmuneToAbduction=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►ImmuneToAbduction=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Specifies whether the unit cannot be abducted. Only the conventional damage is
 dealt. Defaults to <cite>no</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►PassengerTurret=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►PassengerTurret=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd><p class="first">If set to yes, this unit&#8217;s turret will switch to the turret with the index
 equivalent to the number of passengers it holds. Defaults to <cite>no</cite>.</p>
 <blockquote>
@@ -142,14 +140,15 @@ equivalent to the number of passengers it holds. Defaults to <cite>no</cite>.</p
 <div class="last admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">In order to use this, you have to use YR&#8217;s multi-turret logic, that
-is, you have to specify <span><tt class="docutils literal"><span class="pre">Turret=yes</span></tt></span>, an appropriate
-<span><tt class="docutils literal"><span class="pre">TurretCount</span></tt></span>, and you have to use the <span><tt class="docutils literal"><span class="pre">WeaponX</span></tt></span> flags to specify
+is, you have to specify <span><code class="docutils literal"><span class="pre">Turret=yes</span></code></span>, an appropriate
+<span><code class="docutils literal"><span class="pre">TurretCount</span></code></span>, and you have to use the <span><code class="docutils literal"><span class="pre">WeaponX</span></code></span> flags to specify
 weapons.</p>
 </div>
 </dd>
 </dl>
-<span class="target" id="index-0"></span><p class="versionadded" id="index-1">
-<span class="versionmodified">New in version 0.2.</span></p>
+<span class="target" id="index-0"></span><div class="versionadded" id="index-1">
+<p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
 </div>
 
 
@@ -158,7 +157,7 @@ weapons.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -170,13 +169,13 @@ weapons.</p>
         <li class="right" >
           <a href="carryalls.html" title="Carryalls"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

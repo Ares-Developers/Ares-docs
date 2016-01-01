@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Random Map Generator &mdash; Ares 0.9 documentation</title>
+    <title>Random Map Generator &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="up" title="User Interface Features" href="index.html" />
     <link rel="next" title="Release Note" href="releasenote.html" />
     <link rel="prev" title="New Game Resolutions" href="newgameresolutions.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,11 +42,11 @@
         <li class="right" >
           <a href="newgameresolutions.html" title="New Game Resolutions"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="newgameresolutions.html"
@@ -56,7 +54,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="releasenote.html"
                         title="next chapter">Release Note</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -75,7 +73,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="random-map-generator">
 <h1>Random Map Generator<a class="headerlink" href="#random-map-generator" title="Permalink to this headline">¶</a></h1>
@@ -86,15 +84,15 @@ Archipelago terrain and the Desert tileset.</p>
 <p>A new checkbox &#8211; <cite>Place Urban Areas</cite> &#8211; allows the user to add an assortment of
 streets and urban combat buildings at random spots throughout the generated map.
 The objects placed by this feature can be modified by adding the heading
-<span><tt class="docutils literal"><span class="pre">[URBAN]</span></tt></span> in the <tt class="file docutils literal docutils literal"><span class="pre">rgdmd.ini</span></tt> file, and adding the following lists
-after <span><tt class="docutils literal"><span class="pre">Structure=</span></tt></span>, <span><tt class="docutils literal"><span class="pre">Vehicles=</span></tt></span> and <span><tt class="docutils literal"><span class="pre">Infantry=</span></tt></span> respectively:</p>
+<span><code class="docutils literal"><span class="pre">[Urban]</span></code></span> in the <code class="file docutils literal"><span class="pre">rmgmd.ini</span></code> file, and adding the following lists
+after <span><code class="docutils literal"><span class="pre">Structures=</span></code></span>, <span><code class="docutils literal"><span class="pre">Vehicles=</span></code></span> and <span><code class="docutils literal"><span class="pre">Infantry=</span></code></span> respectively:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[URBAN]►Structures=</span></tt><span class="type definition"> (list of BuildingTypes)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Urban]►Structures=</span></code><span class="type definition"> (list of BuildingTypes)</span></span></dt>
 <dd>Defaults to <cite>CABUNK01,CABUNK02,CAARMY01,CAARMY02,CAARMY03,CAARMY04,
 CACHIG03,CANEWY01,CANEWY14,CANWY09,CANWY26,CANWY25,CATEXS07</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[URBAN]►Vehicles=</span></tt><span class="type definition"> (list of VehicleTypes)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Urban]►Vehicles=</span></code><span class="type definition"> (list of VehicleTypes)</span></span></dt>
 <dd>Defaults to <cite>TRUCKA,TRUCKB,COP,EUROC,SUVW,SUVB,FTRK,AMBU</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[URBAN]►Infantry=</span></tt><span class="type definition"> (list of InfantryTypes)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Urban]►Infantry=</span></code><span class="type definition"> (list of InfantryTypes)</span></span></dt>
 <dd>Defaults to <cite>CIV1,CIV2,CIV3,CIVA,CIVB,CIVC</cite>.</dd>
 </dl>
 <div class="admonition note">
@@ -104,8 +102,9 @@ to content generated ingame, especially in Desert maps &#8211; this is still bei
 investigated. In addition, there are reports of this feature not working at
 all with certain settings. (Known issue: <a class="reference external" href="http://bugs.renegadeprojects.com/view.php?id=794">#794</a>)</p>
 </div>
-<span class="target" id="index-0"></span><span class="target" id="index-1"></span><span class="target" id="index-2"></span><p class="versionadded" id="index-3">
-<span class="versionmodified">New in version 0.1.</span></p>
+<span class="target" id="index-0"></span><span class="target" id="index-1"></span><span class="target" id="index-2"></span><div class="versionadded" id="index-3">
+<p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
 </div>
 
 
@@ -114,7 +113,7 @@ all with certain settings. (Known issue: <a class="reference external" href="htt
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -126,13 +125,13 @@ all with certain settings. (Known issue: <a class="reference external" href="htt
         <li class="right" >
           <a href="newgameresolutions.html" title="New Game Resolutions"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" >User Interface Features</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >User Interface Features</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

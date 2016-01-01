@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Killing Drivers &mdash; Ares 0.9 documentation</title>
+    <title>Killing Drivers &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,37 +24,37 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
-    <link rel="next" title="Lightning Rods" href="lightningrods.html" />
-    <link rel="prev" title="InfantryElectrocuted" href="infantryelectrocuted.html" /> 
+    <link rel="next" title="MakeInfantryOwner" href="makeinfantryowner.html" />
+    <link rel="prev" title="Initial Payload (Troop Crawlers)" href="initialpayload.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="lightningrods.html" title="Lightning Rods"
+          <a href="makeinfantryowner.html" title="MakeInfantryOwner"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="infantryelectrocuted.html" title="InfantryElectrocuted"
+          <a href="initialpayload.html" title="Initial Payload (Troop Crawlers)"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="infantryelectrocuted.html"
-                        title="previous chapter"><span><span class="type">InfantryElectrocuted</span></span></a></p>
+  <p class="topless"><a href="initialpayload.html"
+                        title="previous chapter">Initial Payload (Troop Crawlers)</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="lightningrods.html"
-                        title="next chapter">Lightning Rods</a></p>
-<div id="searchbox" style="display: none">
+  <p class="topless"><a href="makeinfantryowner.html"
+                        title="next chapter"><span><span class="type">MakeInfantryOwner</span></span></a></p>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -75,7 +73,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="killing-drivers">
 <h1>Killing Drivers<a class="headerlink" href="#killing-drivers" title="Permalink to this headline">¶</a></h1>
@@ -83,39 +81,48 @@
 specific warheads to kill the driver of a vehicle instead of damaging
 it, and allows others to take over the now-neutral vehicle.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Warhead]►KillDriver=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►KillDriver=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Specifies whether this warhead kills the driver of the vehicle, instead of
 damaging the vehicle itself. The first passenger matching the vehicle&#8217;s
-<span><tt class="docutils literal"><span class="pre">Operator</span></tt></span> is considered the driver. All other passengers will be
+<span><code class="docutils literal"><span class="pre">Operator</span></code></span> is considered the driver. All other passengers will be
 ejected. Defaults to <cite>no</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Warhead]►KillDriver.Owner=</span></tt><span class="type definition"> (enumeration - civilian,special,neutral)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►KillDriver.Owner=</span></code><span class="type definition"> (enumeration - civilian,special,neutral)</span></span></dt>
 <dd>Specifies the house the units are assigned to. Defaults to <cite>special</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Warhead]►KillDriver.KillBelowPercent=</span></tt><span class="type definition"> (float)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►KillDriver.KillBelowPercent=</span></code><span class="type definition"> (float)</span></span></dt>
 <dd>Specifies the percentage of health a unit can not exceed to have its driver
-killed by a <span><tt class="docutils literal"><span class="pre">KillDriver=yes</span></tt></span> warhead. A unit above this health level
+killed by a <span><code class="docutils literal"><span class="pre">KillDriver=yes</span></code></span> warhead. A unit above this health level
 is only damaged and the driver is not killed. Defaults to <cite>100%</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►ProtectedDriver=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►ProtectedDriver=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether the driver of this vehicle cannot be killed, i.e. whether this vehicle
-is immune to <span><tt class="docutils literal"><span class="pre">KillDriver</span></tt></span>. <span><tt class="docutils literal"><span class="pre">Organic=yes</span></tt></span> and <span><tt class="docutils literal"><span class="pre">Natural=yes</span></tt></span>
-units are always immune to <span><tt class="docutils literal"><span class="pre">KillDriver</span></tt></span>. Defaults to <cite>no</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►CanDrive=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+is immune to <span><code class="docutils literal"><span class="pre">KillDriver</span></code></span>. <span><code class="docutils literal"><span class="pre">Organic=yes</span></code></span> and <span><code class="docutils literal"><span class="pre">Natural=yes</span></code></span>
+units are always immune to <span><code class="docutils literal"><span class="pre">KillDriver</span></code></span>. Defaults to <cite>no</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►ProtectedDriver.MinHealth=</span></code><span class="type definition"> (double - percentage)</span></span></dt>
+<dd>The minimum health below which the driver of this unit can be killed. If the
+unit&#8217;s health is above this, the driver cannot be killed. If
+<span><code class="docutils literal"><span class="pre">KillDriver.KillBelowPercent</span></code></span> is also defined on the warhead, the
+minimum of the two values is used, that is, this tag can make a unit more
+resistant against driver killing weapons. Defaults to <cite>0.0</cite> if
+<span><code class="docutils literal"><span class="pre">ProtectedDriver=yes</span></code></span>, to <cite>1.0</cite> otherwise.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►CanDrive=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether this <span class="type docutils literal">InfantryType</span> can act as the driver of vehicles whose
 driver has been killed, effectively reclaiming the vehicle. If the vehicle
-requires an <span><tt class="docutils literal"><span class="pre">Operator</span></tt></span> the infantry driver turns the unit and enters as
+requires an <span><code class="docutils literal"><span class="pre">Operator</span></code></span> the infantry driver turns the unit and enters as
 passenger that can be ejected later, otherwise the driver is swallowed,
 becoming the permanent driver of the vehicle. Defaults to <cite>no</cite>.</dd>
 </dl>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Vehicle Thieves cannot drive neutralized vehicles by default, but
-<span><tt class="docutils literal"><span class="pre">VehicleThief=yes</span></tt></span> can be combined with <span><tt class="docutils literal"><span class="pre">CanDrive=yes</span></tt></span> without
+<span><code class="docutils literal"><span class="pre">VehicleThief=yes</span></code></span> can be combined with <span><code class="docutils literal"><span class="pre">CanDrive=yes</span></code></span> without
 problems.</p>
 </div>
-<p>See <a class="reference internal" href="hijackers.html"><em>Hijackers</em></a> for more options that relate to <span><tt class="docutils literal"><span class="pre">CanDrive</span></tt></span>.</p>
-<p class="versionadded" id="index-0">
-<span class="versionmodified">New in version 0.2.</span></p>
-<p class="versionchanged">
-<span class="versionmodified">Changed in version 0.9.</span></p>
+<p>See <a class="reference internal" href="hijackers.html"><em>Hijackers</em></a> for more options that relate to <span><code class="docutils literal"><span class="pre">CanDrive</span></code></span>.</p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 0.9.</span></p>
+</div>
 </div>
 
 
@@ -124,25 +131,25 @@ problems.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="lightningrods.html" title="Lightning Rods"
+          <a href="makeinfantryowner.html" title="MakeInfantryOwner"
              >next</a> |</li>
         <li class="right" >
-          <a href="infantryelectrocuted.html" title="InfantryElectrocuted"
+          <a href="initialpayload.html" title="Initial Payload (Troop Crawlers)"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

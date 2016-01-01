@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Academies &mdash; Ares 0.A documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.A',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.A documentation" href="../../index.html" />
+    <link rel="up" title="Buildings" href="index.html" />
+    <link rel="next" title="Assaulter" href="assaulter.html" />
+    <link rel="prev" title="Buildings" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="assaulter.html" title="Assaulter"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Buildings"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Buildings</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Buildings</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="assaulter.html"
+                        title="next chapter">Assaulter</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="academies">
+<h1>Academies<a class="headerlink" href="#academies" title="Permalink to this headline">¶</a></h1>
+<p>Academies are buildings that grant their owners the right to train specified
+units and structures with a certain promotion level. If a player owns more than
+one academy buildings, the highest bonus is awarded. The effect does not stack.</p>
+<p>Only <span><code class="docutils literal"><span class="pre">Trainable=yes</span></code></span> units or structures can get a veterancy bonus. If an
+object has been promoted to a higher level by other means already (like from
+<span><code class="docutils literal"><span class="pre">VeteranInfantry</span></code></span>, or by infiltrating an enemy War Factory), the veterancy
+level is not reduced.</p>
+<p>A value of <cite>1.0</cite> means veteran, a value of <cite>2.0</cite> means elite. You
+can use decimal values to grant only partial levels, so the next promotion will
+come earlier.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►Academy.InfantryVeterancy=</span></code><span class="type definition"> (double - veterancy levels)</span></span></dt>
+<dd>The veterancy bonus to grant to any <span class="type docutils literal">InfantryType</span> or any
+<span><code class="docutils literal"><span class="pre">Organic=yes</span></code></span> <span class="type docutils literal">VehicleType</span> if a player owns one of these
+buildings. Defaults to <cite>0.0</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►Academy.AircraftVeterancy=</span></code><span class="type definition"> (double - veterancy levels)</span></span></dt>
+<dd>The veterancy bonus to grant to any <span class="type docutils literal">AircraftType</span> or any
+<span><code class="docutils literal"><span class="pre">ConsideredAircraft=yes</span></code></span> <span class="type docutils literal">VehicleType</span> if a player owns one of
+these buildings. Defaults to <cite>0.0</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►Academy.VehicleVeterancy=</span></code><span class="type definition"> (double - veterancy levels)</span></span></dt>
+<dd>The veterancy bonus to grant to any <span class="type docutils literal">VehicleType</span> with <span><code class="docutils literal"><span class="pre">Organic=no</span></code></span>
+and <span><code class="docutils literal"><span class="pre">ConsideredAircraft=no</span></code></span> if a player owns one of these buildings.
+Defaults to <cite>0.0</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►Academy.BuildingVeterancy=</span></code><span class="type definition"> (double - veterancy levels)</span></span></dt>
+<dd>The veterancy bonus to grant to any <span class="type docutils literal">BuildingType</span> if a player owns one
+of these buildings. Defaults to <cite>0.0</cite>.</dd>
+</dl>
+<p>Each academy can be made to promote only specific types or to not promote all
+but the specified types. By default, academies promote all types.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►Academy.Types=</span></code><span class="type definition"> (list of TechnoTypes)</span></span></dt>
+<dd>The only types that are affected by this academy to get the defined bonuses.
+If the list is empty, all types are affected. Defaults to <cite>none</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►Academy.Ignore=</span></code><span class="type definition"> (list of TechnoTypes)</span></span></dt>
+<dd>The types that will never be affected by this academy. Defaults to
+<cite>none</cite>.</dd>
+</dl>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.8.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="assaulter.html" title="Assaulter"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Buildings"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Buildings</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

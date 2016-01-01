@@ -296,3 +296,22 @@ Other changes:
   beams. A PrismSupportModifier related bug has been fixed.
 
   Lasers were often drawn too big. This has been changed.
+
+From Ares 0.9 and below
+
+
+Changed tags:
+
+  No changes required.
+
+Other changes:
+
+  Solid Buildings have been reworked. The feature now works with invisible
+  projectiles. Also, units will now change positions instead of just firing
+  through a Solid Building.
+
+  The Firestorm Wall active and idle animations will now draw in the building's
+  palette, while they were drawn using the animation palette before.
+
+  ares.csf will always be read, no matter which language the game is run
+  in.

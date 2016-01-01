@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Storage and Silos &mdash; Ares 0.9 documentation</title>
+    <title>Storage and Silos &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../../index.html" />
     <link rel="up" title="Tiberium" href="index.html" />
     <link rel="next" title="Tiberium Spill" href="spill.html" />
     <link rel="prev" title="Tiberium" href="index.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,12 +42,12 @@
         <li class="right" >
           <a href="index.html" title="Tiberium"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Tiberium</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Tiberium</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../index.html">Table Of Contents</a></h3>
   <ul>
@@ -68,7 +66,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="spill.html"
                         title="next chapter">Tiberium Spill</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -87,7 +85,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="storage-and-silos">
 <h1>Storage and Silos<a class="headerlink" href="#storage-and-silos" title="Permalink to this headline">¶</a></h1>
@@ -105,15 +103,16 @@ money would be placed on the map, which would create tiberium out of nothing.</p
 supported. Slave Miners cannot provide storage space, because it is lost
 whenever the building undeploys.</p>
 </div>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.5.</span></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.5.</span></p>
+</div>
 <div class="section" id="enabling-storage">
 <h2>Enabling Storage<a class="headerlink" href="#enabling-storage" title="Permalink to this headline">¶</a></h2>
-<p><span><tt class="docutils literal"><span class="pre">Storage</span></tt></span> works as it did in <span class="game docutils literal">Tiberian Sun</span>. For reasons of backwards
+<p><span><code class="docutils literal"><span class="pre">Storage</span></code></span> works as it did in <span class="game docutils literal">Tiberian Sun</span>. For reasons of backwards
 compatibility you have to use one new tag on a building where tiberium is
 dumped:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[BuildingType]►Refinery.UseStorage=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►Refinery.UseStorage=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether the refinery building will store the Tiberium instead of converting it
 to money directly. Tiberium that is converted directly does not require
 storage space. Defaults to <cite>no</cite>.</dd>
@@ -128,35 +127,38 @@ player by giving a <cite>EVA_SilosNeeded</cite> notice.</p>
 <p class="last">The game does not have this EVA message defined and has no audio files
 for it. You have to add them before you can use them.</p>
 </div>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.5.</span></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.5.</span></p>
+</div>
 </div>
 <div class="section" id="text-message">
 <h2>Text Message<a class="headerlink" href="#text-message" title="Permalink to this headline">¶</a></h2>
 <p>Complimentary to the EVA event it is possible to show a test message.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[General]►Message.SilosNeeded=</span></tt><span class="type definition"> (csf label)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[General]►Message.SilosNeeded=</span></code><span class="type definition"> (csf label)</span></span></dt>
 <dd>Set this to a text that shall be printed whenever the Silos Needed warning
 occurs. You cannot unset this later. If you want to disable this message in a
 game mode or map, you will have to a label of an empty text. Defaults to
 no message.</dd>
 </dl>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.9.</span></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.9.</span></p>
+</div>
 </div>
 <div class="section" id="pipscale-tiberium">
 <h2><span><span class="type">PipScale=Tiberium</span></span><a class="headerlink" href="#pipscale-tiberium" title="Permalink to this headline">¶</a></h2>
-<p><cite>Tiberium</cite> is again supported as a valid <span><tt class="docutils literal"><span class="pre">PipScale</span></tt></span> value. For
-buildings with positive <span><tt class="docutils literal"><span class="pre">Storage</span></tt></span>, the pips will show the currently used
+<p><cite>Tiberium</cite> is again supported as a valid <span><code class="docutils literal"><span class="pre">PipScale</span></code></span> value. For
+buildings with positive <span><code class="docutils literal"><span class="pre">Storage</span></code></span>, the pips will show the currently used
 storage space compared to the overall space of that building. Ore will show as
 yellow pips, gems as blue ones.</p>
-<p>To enable <span><tt class="docutils literal"><span class="pre">PipScale=Tiberium</span></tt></span> on buildings with <span><tt class="docutils literal"><span class="pre">Refinery=yes</span></tt></span> or
-<span><tt class="docutils literal"><span class="pre">ResourceDestination=yes</span></tt></span>, you also have to enable
-<span><tt class="docutils literal"><span class="pre">Refinery.UseStorage=yes</span></tt></span>. This requirement was added because otherwise the
+<p>To enable <span><code class="docutils literal"><span class="pre">PipScale=Tiberium</span></code></span> on buildings with <span><code class="docutils literal"><span class="pre">Refinery=yes</span></code></span> or
+<span><code class="docutils literal"><span class="pre">ResourceDestination=yes</span></code></span>, you also have to enable
+<span><code class="docutils literal"><span class="pre">Refinery.UseStorage=yes</span></code></span>. This requirement was added because otherwise the
 original game would show the tiberium scale for the unmodded refineries, which
-have <span><tt class="docutils literal"><span class="pre">PipScale=Tiberium</span></tt></span> and valid <span><tt class="docutils literal"><span class="pre">Storage</span></tt></span> defined.</p>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.5.</span></p>
+have <span><code class="docutils literal"><span class="pre">PipScale=Tiberium</span></code></span> and valid <span><code class="docutils literal"><span class="pre">Storage</span></code></span> defined.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.5.</span></p>
+</div>
 </div>
 </div>
 
@@ -166,7 +168,7 @@ have <span><tt class="docutils literal"><span class="pre">PipScale=Tiberium</spa
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -178,14 +180,14 @@ have <span><tt class="docutils literal"><span class="pre">PipScale=Tiberium</spa
         <li class="right" >
           <a href="index.html" title="Tiberium"
              >previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="index.html" >Tiberium</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Tiberium</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Unit Lost EVA Report &mdash; Ares 0.9 documentation</title>
+    <title>Unit Lost EVA Report &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,37 +24,37 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
-    <link rel="next" title="Urban Combat - Trenches" href="urbancombattrenches.html" />
+    <link rel="next" title="Sides &amp; Countries" href="sidescountries/index.html" />
     <link rel="prev" title="Type Selection Groups" href="typeselect.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="urbancombattrenches.html" title="Urban Combat - Trenches"
+          <a href="sidescountries/index.html" title="Sides &amp; Countries"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="typeselect.html" title="Type Selection Groups"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="typeselect.html"
                         title="previous chapter">Type Selection Groups</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="urbancombattrenches.html"
-                        title="next chapter">Urban Combat - Trenches</a></p>
-<div id="searchbox" style="display: none">
+  <p class="topless"><a href="sidescountries/index.html"
+                        title="next chapter">Sides &amp; Countries</a></p>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -75,7 +73,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="unit-lost-eva-report">
 <h1>Unit Lost EVA Report<a class="headerlink" href="#unit-lost-eva-report" title="Permalink to this headline">¶</a></h1>
@@ -83,16 +81,17 @@
 report can now be customized or turned off.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The EVA message is not played for units if <span><tt class="docutils literal"><span class="pre">DontScore=yes</span></tt></span>,
-<span><tt class="docutils literal"><span class="pre">Insignificant=yes</span></tt></span> or <span><tt class="docutils literal"><span class="pre">Spawned=yes</span></tt></span>.</p>
+<p class="last">The EVA message is not played for units if <span><code class="docutils literal"><span class="pre">DontScore=yes</span></code></span>,
+<span><code class="docutils literal"><span class="pre">Insignificant=yes</span></code></span> or <span><code class="docutils literal"><span class="pre">Spawned=yes</span></code></span>.</p>
 </div>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Unit]►EVA.Lost=</span></tt><span class="type definition"> (evamd entry)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Unit]►EVA.Lost=</span></code><span class="type definition"> (evamd entry)</span></span></dt>
 <dd>The message played when a unit of this type is destroyed. Use <cite>none</cite> to
 disable the report. Defaults to <cite>EVA_UnitLost</cite>.</dd>
 </dl>
-<p class="versionadded" id="index-0">
-<span class="versionmodified">New in version 0.5.</span></p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.5.</span></p>
+</div>
 </div>
 
 
@@ -101,25 +100,25 @@ disable the report. Defaults to <cite>EVA_UnitLost</cite>.</dd>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="urbancombattrenches.html" title="Urban Combat - Trenches"
+          <a href="sidescountries/index.html" title="Sides &amp; Countries"
              >next</a> |</li>
         <li class="right" >
           <a href="typeselect.html" title="Type Selection Groups"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

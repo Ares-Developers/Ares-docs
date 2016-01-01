@@ -6,6 +6,25 @@ This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of Ares. Internal changes, optimizations
 and updates are mentioned here only if they are notable.
 
+ Ares 0.A
+
++ **Audio improvements** like support for multiple bag files and support for loose wave files of arbitrary type
+
++ **Solid Buildings** have been reworked to support invisible projectiles
+  and solidity levels
+
++ **Firestorm** has gotten customizable animations and many more
+  improvements
+
++ **Transports** can come from the factory with prebuilt passengers, can only accept specific passengers, or be disallowed to eject their passengers manually
+
++ **Custom Missiles** can use weapons instead of damage and warhead
+
++ **Saboteurs** are sneaky one-time building demolition troopers
+
++ **Units** can be made to hold fire if not in area-guard mode or to not try to crush enemies
+
+
  Ares 0.9
 
 + **Better AI support** for super weapons and the new Ares features
@@ -44,8 +63,7 @@ and updates are mentioned here only if they are notable.
 
 + **Animation tags** Scorch and Flamer have been restored
 
-+ **Repair wrenches** can be hidden from enemies, and
-  no longer reveal cloaked buildings
++ **Repair wrenches** can be hidden from enemies, and no longer reveal cloaked buildings
 
 + **Unit Delivery** placement changed, units guard or hunt, and support
   for giving units to neutral countries
@@ -86,8 +104,8 @@ and updates are mentioned here only if they are notable.
 + **Teams** can retaliate in case a member is
   attacked
 
-+ **Passable structures** units can drive on
-  without side effects like the workarounds have
++ **Passable structures** units can drive on without side effects like the workarounds
+  have
 
 + **Dimming deactivated units** by reason for deactivation
 
@@ -159,7 +177,8 @@ and updates are mentioned here only if they are notable.
 
 + **Pips** support more than only the hardcoded values
 
-+ **Spy Effects** now support PCX cameos and persistent radar reveal, and spies can no longer infiltrate allied buildings
++ **Spy Effects** now support PCX cameos and persistent radar reveal, and spies can no longer infiltrate allied
+  buildings
   
 + **Gate** sounds are now customizable
 

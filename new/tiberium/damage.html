@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Tiberium Damage &mdash; Ares 0.9 documentation</title>
+    <title>Tiberium Damage &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../../index.html" />
     <link rel="up" title="Tiberium" href="index.html" />
     <link rel="next" title="Tiberium Explosive" href="explosive.html" />
     <link rel="prev" title="Tiberium Heal" href="heal.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,12 +42,12 @@
         <li class="right" >
           <a href="heal.html" title="Tiberium Heal"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Tiberium</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Tiberium</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../index.html">Table Of Contents</a></h3>
   <ul>
@@ -68,7 +66,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="explosive.html"
                         title="next chapter">Tiberium Explosive</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -87,7 +85,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="tiberium-damage">
 <h1>Tiberium Damage<a class="headerlink" href="#tiberium-damage" title="Permalink to this headline">¶</a></h1>
@@ -95,16 +93,17 @@
 feature of <span class="game docutils literal">Tiberian Dawn</span> and <span class="game docutils literal">Tiberian Sun</span>. <span class="game docutils literal">Ares</span> brings
 this feature back and extends it to work with all unit types.</p>
 <p>Units killed by Tiberium Damage may convert into a Visceroid. See
-<a class="reference internal" href="#visceroids"><em>Visceroids</em></a></p>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.5.</span></p>
+<a class="reference internal" href="#visceroids"><span>Visceroids</span></a></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.5.</span></p>
+</div>
 <div class="section" id="enabling-tiberium-damage">
 <h2>Enabling Tiberium Damage<a class="headerlink" href="#enabling-tiberium-damage" title="Permalink to this headline">¶</a></h2>
 <p><span class="game docutils literal">Ares</span> requires a new tag to be set to enable the Damage feature, and it
 does no longer damage units that are positioned above
-<span><tt class="docutils literal"><span class="pre">[General]►HoverHeight</span></tt></span>.</p>
+<span><code class="docutils literal"><span class="pre">[General]►HoverHeight</span></code></span>.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[General]►TiberiumDamageEnabled=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[General]►TiberiumDamageEnabled=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether tiberium damages units that are not tiberium proof. Required for the
 following tags to work. Defaults to <cite>no</cite>.</dd>
 </dl>
@@ -112,11 +111,11 @@ following tags to work. Defaults to <cite>no</cite>.</dd>
 <div class="section" id="who-gets-damaged">
 <h2>Who gets damaged<a class="headerlink" href="#who-gets-damaged" title="Permalink to this headline">¶</a></h2>
 <p>All units that are not tiberium proof (neither through the tag
-<span><tt class="docutils literal"><span class="pre">TiberiumProof</span></tt></span> nor through the <cite>TIBERIUM_PROOF</cite> veteran ability)
+<span><code class="docutils literal"><span class="pre">TiberiumProof</span></code></span> nor through the <cite>TIBERIUM_PROOF</cite> veteran ability)
 whill be damaged when entering a cell containing tiberium. It does not matter
 how long they stay in a cell.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►TiberiumProof=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►TiberiumProof=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether this unit is immune to tiberium damage. Defaults to <cite>no</cite> for
 <span class="type docutils literal">InfantryTypes</span>, to <cite>yes</cite> otherwise.</dd>
 </dl>
@@ -126,13 +125,13 @@ how long they stay in a cell.</p>
 <p>The damage and the warhead used to deliver it can be customized for each of the
 <span class="type docutils literal">Tiberiums</span>.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Tiberium]►Damage=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Tiberium]►Damage=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>The damage a unit that is not tiberium proof receives from entering a cell
 containing this type of Tiberium. Defaults to <cite>Power / 10</cite>, but at
 least <cite>1</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Tiberium]►Warhead=</span></tt><span class="type definition"> (warhead)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Tiberium]►Warhead=</span></code><span class="type definition"> (warhead)</span></span></dt>
 <dd><p class="first">The warhead that deals the Tiberium Damage. Defaults to
-<span><tt class="docutils literal"><span class="pre">[CombatDamage]►C4Warhead</span></tt></span>.</p>
+<span><code class="docutils literal"><span class="pre">[CombatDamage]►C4Warhead</span></code></span>.</p>
 <div class="last admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This is not used for the Tiberium Explosive feature.</p>
@@ -144,31 +143,32 @@ least <cite>1</cite>.</dd>
 <div class="section" id="visceroids">
 <span id="id1"></span><h1>Visceroids<a class="headerlink" href="#visceroids" title="Permalink to this headline">¶</a></h1>
 <p>Visceroids have been recreated partially.</p>
-<p>They will move around the map, and when two units with <span><tt class="docutils literal"><span class="pre">SmallVisceroid=yes</span></tt></span>
-(not <span><tt class="docutils literal"><span class="pre">[General]►SmallVisceroid</span></tt></span>) meet, they will merge into a unit of type
-<span><tt class="docutils literal"><span class="pre">[General]►LargeVisceroid</span></tt></span>.</p>
+<p>They will move around the map, and when two units with <span><code class="docutils literal"><span class="pre">SmallVisceroid=yes</span></code></span>
+(not <span><code class="docutils literal"><span class="pre">[General]►SmallVisceroid</span></code></span>) meet, they will merge into a unit of type
+<span><code class="docutils literal"><span class="pre">[General]►LargeVisceroid</span></code></span>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Visceroids will not yet retreat to a patch of tiberium to regenerate
 health when badly damaged.</p>
 </div>
 <p>When units die because of Tiberium Damage, there is a chance they will spawn a
-unit of type <span><tt class="docutils literal"><span class="pre">[General]►SmallVisceroid</span></tt></span> (if defined). This logic requires
-<span><tt class="docutils literal"><span class="pre">[Basic]►TiberiumDeathToVisceroid=yes</span></tt></span> in a map to work. The Visceroid is
+unit of type <span><code class="docutils literal"><span class="pre">[General]►SmallVisceroid</span></code></span> (if defined). This logic requires
+<span><code class="docutils literal"><span class="pre">[Basic]►TiberiumDeathToVisceroid=yes</span></code></span> in a map to work. The Visceroid is
 owned by the country <cite>Neutral</cite>.</p>
 <p><span class="game docutils literal">Ares</span> adds a global tag that can be customized for each type. The global
 tag existed since <span class="game docutils literal">Tiberian Sun</span> but did not do anything.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[General]►TiberiumTransmogrify=</span></tt><span class="type definition"> (integer - percent)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[General]►TiberiumTransmogrify=</span></code><span class="type definition"> (integer - percent)</span></span></dt>
 <dd>Chance of which a unit dying of tiberium damage transforms into a
-<span><tt class="docutils literal"><span class="pre">[General]►SmallVisceroid</span></tt></span>. Defaults to <cite>0</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►TiberiumTransmogrify=</span></tt><span class="type definition"> (integer - percent)</span></span></dt>
+<span><code class="docutils literal"><span class="pre">[General]►SmallVisceroid</span></code></span>. Defaults to <cite>0</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►TiberiumTransmogrify=</span></code><span class="type definition"> (integer - percent)</span></span></dt>
 <dd>Chance of which a unit of this type dying of tiberium damage transforms into a
-<span><tt class="docutils literal"><span class="pre">[General]►SmallVisceroid</span></tt></span>. Defaults to
-<span><tt class="docutils literal"><span class="pre">[General]►TiberiumTransmogrify</span></tt></span>.</dd>
+<span><code class="docutils literal"><span class="pre">[General]►SmallVisceroid</span></code></span>. Defaults to
+<span><code class="docutils literal"><span class="pre">[General]►TiberiumTransmogrify</span></code></span>.</dd>
 </dl>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.5.</span></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.5.</span></p>
+</div>
 </div>
 
 
@@ -177,7 +177,7 @@ tag existed since <span class="game docutils literal">Tiberian Sun</span> but di
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -189,14 +189,14 @@ tag existed since <span class="game docutils literal">Tiberian Sun</span> but di
         <li class="right" >
           <a href="heal.html" title="Tiberium Heal"
              >previous</a> |</li>
-        <li><a href="../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="index.html" >Tiberium</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Tiberium</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

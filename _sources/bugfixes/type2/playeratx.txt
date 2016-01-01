@@ -1,0 +1,16 @@
+ Maps; Player @ X support for map events
+
+
+Player @ X Support for Multiplayer Map Events
+
+
+Map events have been expanded to support Player @ X numeric constants
+4475 to 4482 for the multiplayer participants 1 to 8. If a
+constant does not resolve to a valid player (that is, the player slot is not
+empty and the player has not been defeated yet), the game will not crash any
+more like before. Instead, the event will just not fire.
+
+ \ ScriptTypes, TeamTypes, and TriggerTypes
+  still do not support ownership using Player @ X logic.
+
+ 0.A

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Customizable Campaign Buttons &mdash; Ares 0.9 documentation</title>
+    <title>Customizable Campaign Buttons &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="up" title="User Interface Features" href="index.html" />
     <link rel="next" title="Customizable Dropdown Colors" href="customizabledropdowncolors.html" />
     <link rel="prev" title="Command Line Arguments" href="commandlinearguments.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,11 +42,11 @@
         <li class="right" >
           <a href="commandlinearguments.html" title="Command Line Arguments"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="commandlinearguments.html"
@@ -56,7 +54,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="customizabledropdowncolors.html"
                         title="next chapter">Customizable Dropdown Colors</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -75,56 +73,57 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="customizable-campaign-buttons">
 <h1>Customizable Campaign Buttons<a class="headerlink" href="#customizable-campaign-buttons" title="Permalink to this headline">¶</a></h1>
 <p>With <span class="game docutils literal">Ares</span> you can have up to four campaign buttons on <span class="game docutils literal">Yuri&#8217;s
 Revenge</span>&#8216;s campaign selection menu and customize all of them in
-<tt class="file docutils literal docutils literal"><span class="pre">uimd.ini</span></tt>.</p>
+<code class="file docutils literal"><span class="pre">uimd.ini</span></code>.</p>
 <img alt="Campaign menu showing four campaign buttons" class="align-center" src="../_images/ui_campaignbuttons.jpg" />
-<p id="index-0">You can customize all campaign buttons using these <tt class="file docutils literal docutils literal"><span class="pre">uimd.ini</span></tt> tags by
-replacing <span><tt class="docutils literal"><span class="pre">X</span></tt></span> by the numbers from <span><tt class="docutils literal"><span class="pre">1</span></tt></span> to <span><tt class="docutils literal"><span class="pre">4</span></tt></span>:</p>
+<p id="index-0">You can customize all campaign buttons using these <code class="file docutils literal"><span class="pre">uimd.ini</span></code> tags by
+replacing <span><code class="docutils literal"><span class="pre">X</span></code></span> by the numbers from <span><code class="docutils literal"><span class="pre">1</span></code></span> to <span><code class="docutils literal"><span class="pre">4</span></code></span>:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►CampaignX=</span></tt><span class="type definition"> (battle)</span></span></dt>
-<dd>The mission from <tt class="file docutils literal docutils literal"><span class="pre">battle.ini</span></tt> started by clicking the image button. To
-hide a button set <span><tt class="docutils literal"><span class="pre">CampaignX=no</span></tt></span>. Defaults to <cite>ALL1</cite>,
+<dt><span><code class="definition docutils literal"><span class="pre">[UISettings]►CampaignX=</span></code><span class="type definition"> (battle)</span></span></dt>
+<dd>The mission from <code class="file docutils literal"><span class="pre">battle.ini</span></code> started by clicking the image button. To
+hide a button set <span><code class="docutils literal"><span class="pre">CampaignX=no</span></code></span>. Defaults to <cite>ALL1</cite>,
 <cite>SOV1</cite>, <cite>TUT1</cite> or <cite>no</cite> respectively.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►CampaignX.Image=</span></tt><span class="type definition"> (filename, *including* the .shp extension)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[UISettings]►CampaignX.Image=</span></code><span class="type definition"> (filename, *including* the .shp extension)</span></span></dt>
 <dd>The 260x136 image shown on the campaign selection menu. Have a look at
-<tt class="file docutils literal docutils literal"><span class="pre">fsalg.shp</span></tt> to see an example. Defaults to <cite>fsalg.shp</cite> or
+<code class="file docutils literal"><span class="pre">fsalg.shp</span></code> to see an example. Defaults to <cite>fsalg.shp</cite> or
 <cite>fsslg.shp</cite> respectively.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►CampaignX.Palette=</span></tt><span class="type definition"> (filename, *including* the .pal extension)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[UISettings]►CampaignX.Palette=</span></code><span class="type definition"> (filename, *including* the .pal extension)</span></span></dt>
 <dd>The palette used to render the image. Defaults to <cite>fsalg.pal</cite>,
 <cite>fsslg.pal</cite> or <cite>fsbclg.pal</cite> respectively.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►CampaignX.Subline=</span></tt><span class="type definition"> (CSF label)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[UISettings]►CampaignX.Subline=</span></code><span class="type definition"> (CSF label)</span></span></dt>
 <dd>The subline displayed beneath the campaign image. To override the default
 value set this to a label containing no text. Defaults to
 <cite>STT:AlliedCampaignIcon</cite>, <cite>STT:SovietCampaignIcon</cite> or
 <cite>STT:CampaignAnimTutorial</cite> respectively.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►CampaignX.Tooltip=</span></tt><span class="type definition"> (CSF label)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[UISettings]►CampaignX.Tooltip=</span></code><span class="type definition"> (CSF label)</span></span></dt>
 <dd>The text displayed as tooltip when the player hovers over the image. To
 override the default value set this to a label containing no text. Defaults to
-<span><tt class="docutils literal"><span class="pre">CampaignX.Subline</span></tt></span>.</dd>
+<span><code class="docutils literal"><span class="pre">CampaignX.Subline</span></code></span>.</dd>
 </dl>
 <p><span class="game docutils literal">Ares</span> defaults to the original game&#8217;s values so you don&#8217;t have to change
 anything. To display a third button just add the above tags for
-<span><tt class="docutils literal"><span class="pre">Campaign3</span></tt></span>.</p>
+<span><code class="docutils literal"><span class="pre">Campaign3</span></code></span>.</p>
 <p>Three buttons are arranged in a triangle formation: one centered in the upper
 row, two in the lower one. If you want to have an upside-down triangle, skip
-<span><tt class="docutils literal"><span class="pre">Campaign3</span></tt></span> and use <span><tt class="docutils literal"><span class="pre">Campaign4</span></tt></span> instead. Four campaigns are always
+<span><code class="docutils literal"><span class="pre">Campaign3</span></code></span> and use <span><code class="docutils literal"><span class="pre">Campaign4</span></code></span> instead. Four campaigns are always
 ordered left to right, top to bottom.</p>
 <p>To control the sound that is played when the player hovers over the image see
-<span><tt class="docutils literal"><span class="pre">HoverSound=</span></tt></span> on <a class="reference internal" href="campaignlist.html"><em>Campaign List</em></a>.</p>
+<span><code class="docutils literal"><span class="pre">HoverSound=</span></code></span> on <a class="reference internal" href="campaignlist.html"><em>Campaign List</em></a>.</p>
 <div class="quickstart admonition" id="quickstart-0">
 <p class="first admonition-title">Quickstart</p>
 <p class="last">If you want to have a third campaign button to start the
-tutorial mission, set <span><tt class="docutils literal"><span class="pre">[UISettings]►Campaign3.Image=fsbclg.shp</span></tt></span>. You will
+tutorial mission, set <span><code class="docutils literal"><span class="pre">[UISettings]►Campaign3.Image=fsbclg.shp</span></code></span>. You will
 have to rework that image, as there is no <span class="game docutils literal">Yuri&#8217;s Revenge</span> style version
 of it.</p>
 </div>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.2.</span></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
 </div>
 
 
@@ -133,7 +132,7 @@ of it.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -145,13 +144,13 @@ of it.</p>
         <li class="right" >
           <a href="commandlinearguments.html" title="Command Line Arguments"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" >User Interface Features</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >User Interface Features</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

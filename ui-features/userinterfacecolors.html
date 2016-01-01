@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>User Interface Colors &mdash; Ares 0.9 documentation</title>
+    <title>User Interface Colors &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="up" title="User Interface Features" href="index.html" />
     <link rel="next" title="Comparison with other YR Hacks and Patches" href="../comparison.html" />
     <link rel="prev" title="Release Note" href="releasenote.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,11 +42,11 @@
         <li class="right" >
           <a href="releasenote.html" title="Release Note"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="releasenote.html"
@@ -56,7 +54,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="../comparison.html"
                         title="next chapter">Comparison with other YR Hacks and Patches</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -75,67 +73,68 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="user-interface-colors">
 <h1>User Interface Colors<a class="headerlink" href="#user-interface-colors" title="Permalink to this headline">¶</a></h1>
 <p>To complement the graphical user interface elements <span class="game docutils literal">Yuri&#8217;s Revenge</span>
 relies on a set of hardcoded colors. Customize the colors used to draw texts and
 borders with these <span class="game docutils literal">Ares</span> tags.</p>
-<p>All these <tt class="file docutils literal docutils literal"><span class="pre">uimd.ini</span></tt> tags are RGB colors, that is three comma separated
+<p>All these <code class="file docutils literal"><span class="pre">uimd.ini</span></code> tags are RGB colors, that is three comma separated
 values from 0 to 255.</p>
 <p>Please note the special combobox (dropdown list) state for dropdown lists in
 Observer mode, that is it has its Observer entry selected.
 <span class="game docutils literal">Yuri&#8217;s Revenge</span> uses grey colors and special graphical elements to denote
 this state. Changing the global values will not change the Observer colors,
-you&#8217;ll have to define the specific <span><tt class="docutils literal"><span class="pre">Color.Observer.*</span></tt></span> tags.</p>
+you&#8217;ll have to define the specific <span><code class="docutils literal"><span class="pre">Color.Observer.*</span></code></span> tags.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►Color.Border1=</span></tt><span class="type definition"> (R,G,B)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[UISettings]►Color.Border1=</span></code><span class="type definition"> (R,G,B)</span></span></dt>
 <dd>The first color control borders are drawn in. Defaults to
 <cite>167,190,197</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►Color.Border2=</span></tt><span class="type definition"> (R,G,B)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[UISettings]►Color.Border2=</span></code><span class="type definition"> (R,G,B)</span></span></dt>
 <dd>The second color control borders are drawn in. Defaults to
 <cite>104,122,128</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►Color.Text=</span></tt><span class="type definition"> (R,G,B)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[UISettings]►Color.Text=</span></code><span class="type definition"> (R,G,B)</span></span></dt>
 <dd>The default color all texts are drawn in. This does not affect Observer
-dropdown lists, see <span><tt class="docutils literal"><span class="pre">Color.Observer.Text</span></tt></span>. Defaults to <cite>255,255,0</cite>
+dropdown lists, see <span><code class="docutils literal"><span class="pre">Color.Observer.Text</span></code></span>. Defaults to <cite>255,255,0</cite>
 (yellow).</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►Color.X.Text=</span></tt><span class="type definition"> (R,G,B)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[UISettings]►Color.X.Text=</span></code><span class="type definition"> (R,G,B)</span></span></dt>
 <dd>The text color for certain types of controls. <cite>X</cite> can be one of
-<span><tt class="docutils literal"><span class="pre">Button</span></tt></span>, <span><tt class="docutils literal"><span class="pre">Label</span></tt></span> (descriptions), <span><tt class="docutils literal"><span class="pre">List</span></tt></span>, <span><tt class="docutils literal"><span class="pre">Checkbox</span></tt></span>,
-<span><tt class="docutils literal"><span class="pre">Combobox</span></tt></span> (dropdown lists), <span><tt class="docutils literal"><span class="pre">Observer</span></tt></span> (dropdown lists in with
-Observer selected), <span><tt class="docutils literal"><span class="pre">Groupbox</span></tt></span> (frames), <span><tt class="docutils literal"><span class="pre">Slider</span></tt></span>, or <span><tt class="docutils literal"><span class="pre">Edit</span></tt></span>
+<span><code class="docutils literal"><span class="pre">Button</span></code></span>, <span><code class="docutils literal"><span class="pre">Label</span></code></span> (descriptions), <span><code class="docutils literal"><span class="pre">List</span></code></span>, <span><code class="docutils literal"><span class="pre">Checkbox</span></code></span>,
+<span><code class="docutils literal"><span class="pre">Combobox</span></code></span> (dropdown lists), <span><code class="docutils literal"><span class="pre">Observer</span></code></span> (dropdown lists in with
+Observer selected), <span><code class="docutils literal"><span class="pre">Groupbox</span></code></span> (frames), <span><code class="docutils literal"><span class="pre">Slider</span></code></span>, or <span><code class="docutils literal"><span class="pre">Edit</span></code></span>
 (text boxes). Defaults to <cite>238,238,238</cite> (light grey) for
-<span><tt class="docutils literal"><span class="pre">Observer</span></tt></span>, to <span><tt class="docutils literal"><span class="pre">[UISettings]►Color.Text</span></tt></span> otherwise.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►Color.Selection=</span></tt><span class="type definition"> (R,G,B)</span></span></dt>
+<span><code class="docutils literal"><span class="pre">Observer</span></code></span>, to <span><code class="docutils literal"><span class="pre">[UISettings]►Color.Text</span></code></span> otherwise.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[UISettings]►Color.Selection=</span></code><span class="type definition"> (R,G,B)</span></span></dt>
 <dd>The default background color for selected items. This does not affect Observer
-dropdown lists, see <span><tt class="docutils literal"><span class="pre">Color.Observer.Selection</span></tt></span>. Defaults to
+dropdown lists, see <span><code class="docutils literal"><span class="pre">Color.Observer.Selection</span></code></span>. Defaults to
 <cite>255,0,0</cite> (red).</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►Color.X.Selection=</span></tt><span class="type definition"> (R,G,B)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[UISettings]►Color.X.Selection=</span></code><span class="type definition"> (R,G,B)</span></span></dt>
 <dd>The background color for selected items of certain types of controls.
-<cite>X</cite> can be one of <span><tt class="docutils literal"><span class="pre">List</span></tt></span>, <span><tt class="docutils literal"><span class="pre">Combobox</span></tt></span> (dropdown lists) or
-<span><tt class="docutils literal"><span class="pre">Observer</span></tt></span> (dropdown lists in with Observer selected). Defaults to
-<cite>98,98,98</cite> (dark grey) for <span><tt class="docutils literal"><span class="pre">Observer</span></tt></span>, to
-<span><tt class="docutils literal"><span class="pre">[UISettings]►Color.Selection</span></tt></span> otherwise.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►Color.Disabled=</span></tt><span class="type definition"> (R,G,B)</span></span></dt>
+<cite>X</cite> can be one of <span><code class="docutils literal"><span class="pre">List</span></code></span>, <span><code class="docutils literal"><span class="pre">Combobox</span></code></span> (dropdown lists) or
+<span><code class="docutils literal"><span class="pre">Observer</span></code></span> (dropdown lists in with Observer selected). Defaults to
+<cite>98,98,98</cite> (dark grey) for <span><code class="docutils literal"><span class="pre">Observer</span></code></span>, to
+<span><code class="docutils literal"><span class="pre">[UISettings]►Color.Selection</span></code></span> otherwise.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[UISettings]►Color.Disabled=</span></code><span class="type definition"> (R,G,B)</span></span></dt>
 <dd>The default color texts of disabled controls are drawn in. This does not
 affect the color of disabled buttons and Observer dropdown lists, see below.
 Defaults to <cite>159,0,0</cite> (dark red).</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[UISettings]►Color.X.Disabled=</span></tt><span class="type definition"> (R,G,B)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[UISettings]►Color.X.Disabled=</span></code><span class="type definition"> (R,G,B)</span></span></dt>
 <dd>The text color of disabled controls of certain types. <cite>X</cite> can be one of
-<span><tt class="docutils literal"><span class="pre">Button</span></tt></span>, <span><tt class="docutils literal"><span class="pre">Label</span></tt></span> (descriptions), <span><tt class="docutils literal"><span class="pre">List</span></tt></span>, <span><tt class="docutils literal"><span class="pre">Checkbox</span></tt></span>,
-<span><tt class="docutils literal"><span class="pre">Combobox</span></tt></span> (dropdown lists), <span><tt class="docutils literal"><span class="pre">Observer</span></tt></span> (dropdown lists in with
-Observer selected), or <span><tt class="docutils literal"><span class="pre">Slider</span></tt></span>. Defaults to <cite>167,0,0</cite> (dark red)
-for <span><tt class="docutils literal"><span class="pre">Button</span></tt></span>, to <cite>143,143,143</cite> (grey) for <span><tt class="docutils literal"><span class="pre">Observer</span></tt></span>, to
-<span><tt class="docutils literal"><span class="pre">[UISettings]►Color.Disabled</span></tt></span> otherwise.</dd>
+<span><code class="docutils literal"><span class="pre">Button</span></code></span>, <span><code class="docutils literal"><span class="pre">Label</span></code></span> (descriptions), <span><code class="docutils literal"><span class="pre">List</span></code></span>, <span><code class="docutils literal"><span class="pre">Checkbox</span></code></span>,
+<span><code class="docutils literal"><span class="pre">Combobox</span></code></span> (dropdown lists), <span><code class="docutils literal"><span class="pre">Observer</span></code></span> (dropdown lists in with
+Observer selected), or <span><code class="docutils literal"><span class="pre">Slider</span></code></span>. Defaults to <cite>167,0,0</cite> (dark red)
+for <span><code class="docutils literal"><span class="pre">Button</span></code></span>, to <cite>143,143,143</cite> (grey) for <span><code class="docutils literal"><span class="pre">Observer</span></code></span>, to
+<span><code class="docutils literal"><span class="pre">[UISettings]►Color.Disabled</span></code></span> otherwise.</dd>
 </dl>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">This feature does not support recoloring the dialog prompting for the
 <span class="game docutils literal">Yuri&#8217;s Revenge</span> disk when starting the game.</p>
 </div>
-<p class="versionadded" id="index-0">
-<span class="versionmodified">New in version 0.2.</span></p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
 </div>
 
 
@@ -144,7 +143,7 @@ for <span><tt class="docutils literal"><span class="pre">Button</span></tt></spa
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -156,13 +155,13 @@ for <span><tt class="docutils literal"><span class="pre">Button</span></tt></spa
         <li class="right" >
           <a href="releasenote.html" title="Release Note"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" >User Interface Features</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >User Interface Features</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

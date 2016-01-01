@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Prism Forwarding &mdash; Ares 0.A documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.A',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.A documentation" href="../../index.html" />
+    <link rel="up" title="Buildings" href="index.html" />
+    <link rel="next" title="Oil Derricks (ProduceCash)" href="producecash.html" />
+    <link rel="prev" title="Passable Structures" href="passablestructures.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="producecash.html" title="Oil Derricks (ProduceCash)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="passablestructures.html" title="Passable Structures"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Buildings</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Prism Forwarding</a><ul>
+<li><a class="reference internal" href="#customizing-the-support-beam">Customizing The Support Beam</a></li>
+<li><a class="reference internal" href="#support-beam-flh">Support Beam FLH</a></li>
+<li><a class="reference internal" href="#prism-tower-limitations">Prism Tower Limitations</a></li>
+<li><a class="reference internal" href="#special-note-regarding-prism-forwarding">Special Note Regarding Prism Forwarding</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="passablestructures.html"
+                        title="previous chapter">Passable Structures</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="producecash.html"
+                        title="next chapter">Oil Derricks (<span><span class="type">ProduceCash</span></span>)</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="prism-forwarding">
+<h1>Prism Forwarding<a class="headerlink" href="#prism-forwarding" title="Permalink to this headline">¶</a></h1>
+<p>In this pre-release screenshot for <span class="game docutils literal">Red Alert 2</span>, Prism Towers are seen to
+feed their energy from one tower to another along a whole chain of towers. This,
+of course, is not possible in the released game (which suggests that this
+screenshot has been doctored).</p>
+<img alt="Red Alert 2 pre-release screenshot" class="align-center" src="../../_images/prism1.jpg" />
+<p><span class="game docutils literal">Ares</span> completely replaces the old Prism Tower code to fix a couple of
+minor bugs and also extend it to provide a full set of Prism networking options.</p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
+<div class="quickstart admonition" id="quickstart-0">
+<p class="first admonition-title">Quickstart</p>
+<p class="last">If all you want to do is keep existing Prism Towers but extend
+them to multiple chains like in the pre-release screenshot above, simply set
+<span><code class="docutils literal"><span class="pre">[ATESLA]►PrismForwarding.MaxChainLength=3</span></code></span> or the number of
+backward-links you would like (<cite>-1</cite> for infinite).</p>
+</div>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►PrismForwarding=</span></code><span class="type definition"> (enumeration - yes|no|forward|attack)</span></span></dt>
+<dd><p class="first">Specifies whether or not this building is a Prism Tower.</p>
+<blockquote>
+<div><ul class="simple">
+<li><span><code class="docutils literal"><span class="pre">PrismForwarding=forward</span></code></span> means that this building can support other
+towers but cannot attack as a Prism Tower.</li>
+<li><span><code class="docutils literal"><span class="pre">PrismForwarding=attack</span></code></span> means that this building can attack as a
+Prism Tower but cannot support other towers.</li>
+<li><span><code class="docutils literal"><span class="pre">PrismForwarding=yes</span></code></span> means that this building is a fully fledged
+Prism Tower - it can support other towers or attack.</li>
+<li><span><code class="docutils literal"><span class="pre">PrismForwarding=no</span></code></span> means that this building is not a Prism Tower
+and will not be included in any prism networks.</li>
+</ul>
+</div></blockquote>
+<p class="last">Defaults to <cite>yes</cite> for the building specified by
+<span><code class="docutils literal"><span class="pre">[General]►PrismType</span></code></span>, defaults to <cite>no</cite> for all other buildings.</p>
+</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►PrismForwarding.Targets=</span></code><span class="type definition"> (list of BuildingTypes)</span></span></dt>
+<dd>The list of <span class="type docutils literal">BuildingTypes</span> that this tower can support. Defaults to
+just the building type itself, although don&#8217;t forget to mention the building
+itself if you decide to include this flag.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►PrismForwarding.MaxFeeds=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd>The maximum number of slave (support) towers that can feed directly into this
+one (i.e. adjacent towers). <cite>-1</cite> means no limit. Defaults to
+<span><code class="docutils literal"><span class="pre">[General]►PrismSupportMax</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►PrismForwarding.MaxChainLength=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd><p class="first">The maximum number of backward links that can precede this tower. <cite>-1</cite>
+means no limit. Default is <cite>1</cite>.</p>
+<p class="last">In order to achieve what is shown in the pre-release screenshot above, you
+would need to set this to at least 3.</p>
+</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►PrismForwarding.MaxNetworkSize=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd>If this is the firing tower then <span><code class="docutils literal"><span class="pre">PrismForwarding.MaxNetworkSize</span></code></span> is the
+total number of towers allowed in the prism network, not including the firing
+tower itself. Only the firing tower dictates the maximum network size,
+regardless of what other tower types may be included in the network.
+<cite>-1</cite> means no limit. Defaults to <span><code class="docutils literal"><span class="pre">[General]►PrismSupportMax</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►PrismForwarding.SupportModifier=</span></code><span class="type definition"> (float - multiplier)</span></span></dt>
+<dd>This works in the same way as the old <span><code class="docutils literal"><span class="pre">PrismSupportModifier</span></code></span> - it is the
+amount of multiplier that this tower will contribute to the firing beam. The
+multiplier accumulates in a linear fashion (i.e. if there are 2 support
+towers, each with <span><code class="docutils literal"><span class="pre">PrismForwarding.SupportModifier=150%</span></code></span>, then the total
+multiplier to damage will be <cite>150% + 150% + 100% = 400%</cite>. Defaults to
+<span><code class="docutils literal"><span class="pre">[General]►PrismSupportModifier</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►PrismForwarding.DamageAdd=</span></code><span class="type definition"> (integer - damage bonus)</span></span></dt>
+<dd><p class="first">A flat damage bonus added to the firing beam before the
+<span><code class="docutils literal"><span class="pre">PrismForwarding.SupportModifier</span></code></span> multiplier is applied. This can be used
+instead of the multiplier, or it can be used in conjunction with the
+multiplier to progressively dial up or down the final damage as more towers
+are included in the network. Defaults to <cite>0</cite>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You will need to limit the number of towers in the network if
+dialing down the damage bonus, otherwise the firing beam may end up becoming
+a healing weapon.</p>
+</div>
+<p class="last">You can input your own values into the <a class="reference download internal" href="../../_downloads/PrismForwarding.xls"><code class="xref download docutils literal"><span class="pre">Prism</span> <span class="pre">Forwarding</span> <span class="pre">spreadsheet</span></code></a> to see the effect this has on the damage
+dealt by your prism networks.</p>
+</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►PrismForwarding.MyHeight=</span></code><span class="type definition"> (integer - leptons)</span></span></dt>
+<dd>The height (in leptons) at which this tower&#8217;s &#8220;prism receiver&#8221; is considered
+to be, so that support towers know where to aim their support beams. Defaults
+to <span><code class="docutils literal"><span class="pre">[General]►PrismSupportHeight</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►PrismForwarding.ToAllies=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd><p class="first">Whether or not this Prism Tower is allowed to support allied towers. Defaults
+to <cite>no</cite>.</p>
+<p class="last">Note that, in long-chain prism networks, this tower must be allied with the
+firing tower as well as the target tower.</p>
+</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►PrismForwarding.BreakSupport=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether or not this Prism Tower can abort supporting another tower at the last
+moment, in order to become a master (firing) tower instead. If a tower does
+break support, it does not need to restart charging. Defaults to <cite>no</cite>.</dd>
+</dl>
+<p><span><code class="definition docutils literal"><span class="pre">[BuildingType]►PrismForwarding.ChargeDelay=</span></code><span class="type definition"> (integer - frames)</span></span></p>
+<blockquote>
+<div><div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This is for advanced users only!</p>
+</div>
+<p>This option was only really added for testing purposes and doesn&#8217;t really
+enhance the look of the support beam so it is recommended that you ignore this
+option. In the original game, the master (firing) tower enlists just one slave
+(support) tower per frame. Each slave tower enlisted begins charging at that
+time and the master tower restarts charging. This gives the effect of having
+the slave tower beams arrive in quick succession, rather than all at once.
+This effect is barely noticeable in-game except at slow speeds or if the
+network has a large number of towers.</p>
+<p>In <span class="game docutils literal">Ares</span>, this has been changed so that all adjacent slave towers are
+enlisted on the same frame. That said, a charge delay has been introduced so
+that the towers do not all appear to start charging immediately. For each
+backward-chain in the network, the farthest-forward towers begin charging just
+that little bit later, to give the effect of the beam travelling along the
+chain. The amount that each tower will delay starting it&#8217;s charge for can be
+specified by <span><code class="docutils literal"><span class="pre">PrismForwarding.ChargeDelay</span></code></span>. This delay accumulates for
+each chain in the prism forwarding network.</p>
+<p>So, for example, if <span><code class="docutils literal"><span class="pre">PrismForwarding.ChargeDelay=2</span></code></span> and you have a prism
+chain of 3 towers then the farthest tower (tower 3) will begin charging
+immediately, the middle tower (tower 2) will begin charging after 2 frames and
+the firing tower (tower 1) will begin charging after a further 2 frames. All
+towers will be in their charging state on the 4th frame. At firing time, the
+beams will filter down from the farthest tower to the firing tower. Due to the
+new way in which the actual power of the beam is transferred across the prism
+forwarding network, the minimum charge delay is 1, so you cannot have the
+beams all appear simultaneously. However, at normal game speeds, a charge
+delay of 1 frame is barely noticeable, unless there is a particularly long
+chain in the network.</p>
+<p>Default charge delay is <cite>1</cite>. Increase this to have the support beams
+spread across the network more slowly (not recommended, as large values tend
+to lower the quality of the effect).</p>
+</div></blockquote>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►PrismForwarding.Intensity=</span></code><span class="type definition"> (integer - laser thickness)</span></span></dt>
+<dd><p class="first">This allows you to control how thick the laser beam grows as the size of the
+prism network increases. By default, a firing Prism Tower that is supported by
+1 or more other towers would have a <span><code class="docutils literal"><span class="pre">LaserThickness</span></code></span> of 5 - that&#8217;s 2
+higher than the default <span><code class="docutils literal"><span class="pre">LaserThickness</span></code></span> of the firing weapon (3). The
+<span><code class="docutils literal"><span class="pre">PrismForwarding.Intensity</span></code></span> flag treats negative values as an absolute
+addition to the firing beam, so the default value of <cite>-2</cite> leaves the
+behaviour exactly the same as the original game.</p>
+<p class="last">Positive values, on the other hand, tell <span class="game docutils literal">Ares</span> that you want the
+thickness of the beam to be dependent on the number of backward chains in the
+network, and also have the support beam thickness increase in the same way. A
+<span><code class="docutils literal"><span class="pre">PrismForwarding.Intensity</span></code></span> value of 1 would cause the farthest beam to
+have no thickness increase, the next to have an increase of 1, the next to
+have an increase of 2, and so on. See the section on <span><code class="docutils literal"><span class="pre">LaserThickness</span></code></span> for
+more information regarding the way lasers are drawn.</p>
+</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►Overpowerable=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>In the original game, a firing Prism Tower always fires its Primary weapon
+(whose damage is multiplied based on the number of supporting towers). The
+<span><code class="docutils literal"><span class="pre">Overpowerable</span></code></span> flag was ignored. <span class="game docutils literal">Ares</span> allows firing Prism Towers
+to make use of the overpower logic - you can now have a supported and
+overpowered Prism Tower at the same time! Note that overpowering a support
+tower will not have any effect.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►PrismForwarding.SupportWeapon=</span></code><span class="type definition"> (weapon)</span></span></dt>
+<dd><p class="first">In the original game, the <span><code class="docutils literal"><span class="pre">[PrismSupport]</span></code></span> weapon was never referenced
+directly, and the <span><code class="docutils literal"><span class="pre">Secondary</span></code></span> weapon of the Prism Tower was only ever
+referenced to get the <span><code class="docutils literal"><span class="pre">Range</span></code></span> that towers could support over.</p>
+<p>In <span class="game docutils literal">Ares</span>, the <span><code class="docutils literal"><span class="pre">Secondary</span></code></span> weapon of the Prism Tower is not
+referenced at all. Instead, we use <span><code class="docutils literal"><span class="pre">PrismForwarding.SupportWeapon</span></code></span> to
+explicitly reference a weapon object from which to get additional settings for
+the support beam.</p>
+<p class="last">It isn&#8217;t necessary to specify a support weapon - default values will be used
+if you don&#8217;t specify one.</p>
+</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►PrismForwarding.EliteSupportWeapon=</span></code><span class="type definition"> (weapon)</span></span></dt>
+<dd>If the tower becomes elite then the support beam will get its properties from
+this weapon. Defaults to <span><code class="docutils literal"><span class="pre">PrismForwarding.SupportWeapon</span></code></span>.</dd>
+</dl>
+<div class="section" id="customizing-the-support-beam">
+<h2>Customizing The Support Beam<a class="headerlink" href="#customizing-the-support-beam" title="Permalink to this headline">¶</a></h2>
+<p>The <span><code class="docutils literal"><span class="pre">PrismForwarding.SupportWeapon</span></code></span> is not a weapon in the traditional
+sense and does not actually get fired. Only specific properties of the weapon
+are used by the Prism Forwarding system, and these are all described below. Note
+that the default values mentioned are <strong>only</strong> used in the event that you have
+not specified a support weapon. If you have specified a support weapon, then the
+default values are the same as for any other weapon.</p>
+<p>It is not recommended to use the existing <span><code class="docutils literal"><span class="pre">[PrismSupport]</span></code></span> weapon as a
+base. If you want to customize the default values then you should use the
+provided example at the end of the following flag list instead.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[PrismForwarding.SupportWeapon]►Range=</span></code><span class="type definition"> (integer - cells)</span></span></dt>
+<dd>Specifies the maximum range over which the Prism Tower can support another.
+This does not affect the final firing range. <cite>-2</cite> means infinite range.
+If no support weapon is specified then the default support range is the
+tower&#8217;s <span><code class="docutils literal"><span class="pre">Primary</span></code></span> weapon range plus 1 cell (the extra cell ensures that
+placing a support tower within the attack radius circle of a firing tower
+guarantees that the support tower is within support range). This is different
+to the original game.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[PrismForwarding.SupportWeapon]►MinimumRange=</span></code><span class="type definition"> (integer - cells)</span></span></dt>
+<dd>Specifies the minimum range at which the Prism Tower can support another. This
+Prism Tower will not be able to support towers that are closer than
+<span><code class="docutils literal"><span class="pre">MinimumRange</span></code></span>. If no support weapon is specified then there is no
+minimum support range by default.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[PrismForwarding.SupportWeapon]►ROF=</span></code><span class="type definition"> (integer - frames)</span></span></dt>
+<dd>After a support tower has fired a support beam, it will be unable to fire at a
+target or support another Prism Tower for this many frames. If no support
+weapon is specified then the default duration is
+<span><code class="docutils literal"><span class="pre">[General]►PrismSupportDelay</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[PrismForwarding.SupportWeapon]►Report=</span></code><span class="type definition"> (sound)</span></span></dt>
+<dd>The sound to play when a Prism Tower fires a support beam. In the original
+game, the support beams did not cause a firing sound to be played. Note that
+lots of Prism Towers firing support beams at once may result in an annoying
+repetition or loud volume, so you may want to limit the number of instances of
+the sound and/or use a quieter or more subtle sound. If no support weapon is
+specified then there is no firing sound for the support beam by default.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[PrismForwarding.SupportWeapon]►IsLaser=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Specifies whether or not a laser beam should be drawn when supporting another
+tower. The other laser controls (<span><code class="docutils literal"><span class="pre">LaserDuration</span></code></span>, <span><code class="docutils literal"><span class="pre">IsHouseColor</span></code></span>,
+<span><code class="docutils literal"><span class="pre">LaserInnerColor</span></code></span>, <span><code class="docutils literal"><span class="pre">LaserOuterColor</span></code></span>, <span><code class="docutils literal"><span class="pre">LaserOuterSpread</span></code></span> and
+<span><code class="docutils literal"><span class="pre">LaserThickness</span></code></span>) are also respected. If no support weapon is specified
+then the traditional support laser will be drawn (<span><code class="docutils literal"><span class="pre">IsLaser=yes</span></code></span>,
+<span><code class="docutils literal"><span class="pre">LaserDuration=[General]PrismSupportDuration</span></code></span>, <span><code class="docutils literal"><span class="pre">IsHouseColor=yes</span></code></span>,
+<span><code class="docutils literal"><span class="pre">LaserThickness=3</span></code></span>).</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[PrismForwarding.SupportWeapon]►IsElectricBolt=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Specifies whether or not an electric bolt should be drawn when supporting
+another tower. The other electric bolt controls (<span><code class="docutils literal"><span class="pre">IsAlternateColor</span></code></span>,
+<span><code class="docutils literal"><span class="pre">Bolt.Color1</span></code></span>, <span><code class="docutils literal"><span class="pre">Bolt.Color2</span></code></span> and <span><code class="docutils literal"><span class="pre">Bolt.Color3</span></code></span>) are also
+respected. If no support weapon is specified then no electric bolt will be
+drawn.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[PrismForwarding.SupportWeapon]►IsRadBeam=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Specifies whether or not a rad beam should be drawn when supporting another
+tower. The other rad beam controls (<span><code class="docutils literal"><span class="pre">Beam.Duration</span></code></span>,
+<span><code class="docutils literal"><span class="pre">Beam.IsHouseColor</span></code></span>, <span><code class="docutils literal"><span class="pre">Beam.Color</span></code></span> and <span><code class="docutils literal"><span class="pre">Beam.Amplitude</span></code></span>) are
+also respected. If no support weapon is specified then no rad beam will be
+drawn.</dd>
+</dl>
+<p>No other properties of the support weapon are referenced at present,
+however this could be changed in the future.</p>
+<p>Example support weapon:</p>
+<div class="highlight-ini"><div class="highlight"><pre><span class="k">[NewPrismSupportBeam]</span>
+<span class="na">Range</span><span class="o">=</span><span class="s">9 ;or 8 if you prefer the original</span>
+<span class="na">ROF</span><span class="o">=</span><span class="s">45</span>
+<span class="na">IsLaser</span><span class="o">=</span><span class="s">yes</span>
+<span class="na">IsHouseColor</span><span class="o">=</span><span class="s">yes</span>
+<span class="na">LaserDuration</span><span class="o">=</span><span class="s">15</span>
+<span class="na">LaserThickness</span><span class="o">=</span><span class="s">3</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="support-beam-flh">
+<h2>Support Beam FLH<a class="headerlink" href="#support-beam-flh" title="Permalink to this headline">¶</a></h2>
+<p>The firing origin of the support beam can be set by using the FLH controls on
+the buliding&#8217;s art entry - <span><code class="docutils literal"><span class="pre">AlternateFLH0</span></code></span> specifies the rookie support
+beam origin, <span><code class="docutils literal"><span class="pre">AlternateFLH1</span></code></span> specifies the elite support beam origin. If
+either of these are set to <cite>0,0,0</cite> (the default FLH value) then they will
+fall back to using <span><code class="docutils literal"><span class="pre">PrimaryFireFLH</span></code></span> or <span><code class="docutils literal"><span class="pre">ElitePrimaryFireFLH</span></code></span>, as
+appropriate.</p>
+</div>
+<div class="section" id="prism-tower-limitations">
+<h2>Prism Tower Limitations<a class="headerlink" href="#prism-tower-limitations" title="Permalink to this headline">¶</a></h2>
+<p>Prism Towers should not be allowed to undeploy - undeploying a Prism Tower
+during a charge sequence can cause an Internal Error.</p>
+</div>
+<div class="section" id="special-note-regarding-prism-forwarding">
+<h2>Special Note Regarding Prism Forwarding<a class="headerlink" href="#special-note-regarding-prism-forwarding" title="Permalink to this headline">¶</a></h2>
+<p>A common error that was reported during testing was a tendency for Prism Towers
+to not auto-target and engage enemy units. The solution for this was to be sure
+that warhead and/or damage was defined. If this happens to you, be sure to check
+that your PF modification defines warhead values or damage values.
+(<a class="reference external" href="https://bugs.launchpad.net/ares/+bug/896095">Bug #896095</a>)</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="producecash.html" title="Oil Derricks (ProduceCash)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="passablestructures.html" title="Passable Structures"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Buildings</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Mouse Cursors &mdash; Ares 0.9 documentation</title>
+    <title>Mouse Cursors &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Custom Animation and Projectile Palettes" href="customanimationandprojectilepalettes.html" />
-    <link rel="prev" title="Crashing" href="crashableaircraft.html" /> 
+    <link rel="prev" title="Crush Damage" href="crushdamage.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -42,21 +40,21 @@
           <a href="customanimationandprojectilepalettes.html" title="Custom Animation and Projectile Palettes"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="crashableaircraft.html" title="Crashing"
+          <a href="crushdamage.html" title="Crush Damage"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="crashableaircraft.html"
-                        title="previous chapter">Crashing</a></p>
+  <p class="topless"><a href="crushdamage.html"
+                        title="previous chapter">Crush Damage</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="customanimationandprojectilepalettes.html"
                         title="next chapter">Custom Animation and Projectile Palettes</a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -75,42 +73,42 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="mouse-cursors">
 <h1>Mouse Cursors<a class="headerlink" href="#mouse-cursors" title="Permalink to this headline">¶</a></h1>
 <p>For several features <span class="game docutils literal">Ares</span> allows to customize mouse cursors. Mouse
 cursors can be defined in two ways: As a set of six separate tags, or using a
 single tag and comma separated values.</p>
-<p>In the following list, <span><tt class="docutils literal"><span class="pre">[Section]►BaseTag</span></tt></span> represents the cursor&#8217;s base
+<p>In the following list, <span><code class="docutils literal"><span class="pre">[Section]►BaseTag</span></code></span> represents the cursor&#8217;s base
 name. Replace this with the actual name. The default values depend on the base.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Section]►BaseTag.Frame=</span></tt><span class="type definition"> (integer)</span></span></dt>
-<dd>Starting frame of the cursor from <tt class="file docutils literal docutils literal"><span class="pre">mouse.sha</span></tt>. The first frame is
+<dt><span><code class="definition docutils literal"><span class="pre">[Section]►BaseTag.Frame=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd>Starting frame of the cursor from <code class="file docutils literal"><span class="pre">mouse.sha</span></code>. The first frame is
 <cite>0</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Section]►BaseTag.Count=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Section]►BaseTag.Count=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>Number of frames in the animated cursor.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Section]►BaseTag.Interval=</span></tt><span class="type definition"> (integer)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Section]►BaseTag.Interval=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>The rate to animate the cursor. Default is <cite>5</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Section]►BaseTag.MiniFrame=</span></tt><span class="type definition"> (integer)</span></span></dt>
-<dd>Same as <span><tt class="docutils literal"><span class="pre">BaseTag.Frame</span></tt></span>, except this is for the mouse cursor when
+<dt><span><code class="definition docutils literal"><span class="pre">[Section]►BaseTag.MiniFrame=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd>Same as <span><code class="docutils literal"><span class="pre">BaseTag.Frame</span></code></span>, except this is for the mouse cursor when
 positioned on the minimap. Set this to <cite>-1</cite> to disable the minimap
 cursor and to only allow players to click on the battlefield.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Section]►BaseTag.MiniCount=</span></tt><span class="type definition"> (integer)</span></span></dt>
-<dd>Same as <span><tt class="docutils literal"><span class="pre">BaseTag.Count</span></tt></span>, except this is for the mouse cursor when
+<dt><span><code class="definition docutils literal"><span class="pre">[Section]►BaseTag.MiniCount=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd>Same as <span><code class="docutils literal"><span class="pre">BaseTag.Count</span></code></span>, except this is for the mouse cursor when
 positioned on the minimap.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Section]►BaseTag.HotSpot=</span></tt><span class="type definition"> (HotSpotX,HotSpotY)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Section]►BaseTag.HotSpot=</span></code><span class="type definition"> (HotSpotX,HotSpotY)</span></span></dt>
 <dd>Specifies the coordinates on the cursor that are considered to be the &#8216;tip&#8217; &#8211;
 that is, the point from which the click event will handled. HotSpotX should
 be one of <cite>Left</cite>, <cite>Center</cite> or <cite>Right</cite>. HotSpotY should
 be one of <cite>Top</cite>, <cite>Middle</cite> or <cite>Bottom</cite>. For example,
-<span><tt class="docutils literal"><span class="pre">BaseTag.HotSpot=Left,Top</span></tt></span> will treat the top-left corner of the cursor
+<span><code class="docutils literal"><span class="pre">BaseTag.HotSpot=Left,Top</span></code></span> will treat the top-left corner of the cursor
 as the tip. Default is <cite>Center,Middle</cite>.</dd>
 </dl>
 <p>All these tags can be defined by putting them into a single line, using the same
 values as described above:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Section]►BaseTag=</span></tt><span class="type definition"> (cursor definition)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Section]►BaseTag=</span></code><span class="type definition"> (cursor definition)</span></span></dt>
 <dd><p class="first">Enter the values from above in the given order, separated by commas:
 <cite>Frame,Count,Interval,MiniFrame,MiniCount,HotSpotX,HotSpotY</cite>.</p>
 <div class="last admonition note">
@@ -124,10 +122,12 @@ values, replace <cite>0</cite> by either <cite>Left</cite> or <cite>Top</cite>,
 </div>
 </dd>
 </dl>
-<p class="versionadded" id="index-0">
-<span class="versionmodified">New in version 0.1.</span></p>
-<p class="versionchanged">
-<span class="versionmodified">Changed in version 0.8.</span></p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 0.8.</span></p>
+</div>
 </div>
 
 
@@ -136,7 +136,7 @@ values, replace <cite>0</cite> by either <cite>Left</cite> or <cite>Top</cite>,
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -146,15 +146,15 @@ values, replace <cite>0</cite> by either <cite>Left</cite> or <cite>Top</cite>,
           <a href="customanimationandprojectilepalettes.html" title="Custom Animation and Projectile Palettes"
              >next</a> |</li>
         <li class="right" >
-          <a href="crashableaircraft.html" title="Crashing"
+          <a href="crushdamage.html" title="Crush Damage"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

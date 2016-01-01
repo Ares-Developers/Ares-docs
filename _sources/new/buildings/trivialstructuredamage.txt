@@ -1,0 +1,59 @@
+Trivial Structure Damage
+
+
+When a house is suffering low power, buildings can be made to degrade just like
+in the earlier games like Tiberian Dawn and Red Alert. The
+buildings lose health while they are unpowered, defined by an amount and an
+interval, down to a minimum health. The damage is always dealt by
+[General]►C4Warhead.
+
+In the earlier games, only buildings consuming power degraded one hitpoint per
+interval until reaching yellow health.
+
+[General]Degrade.Enabled=boolean
+  Whether structures are damaged in intervals defined by DamageDelay when
+  a player has low power. Defaults to no.
+
+[General]Degrade.Percentage=double - percentage
+  The health above which this building will continue to degrade during low power
+  situations. Buildings with health equal to or below this will not degrade
+  further. Defaults to [AudioVisual]►ConditionYellow.
+
+[General]Degrade.AmountNormal=int - hitpoints
+  The damage caused to buildings with Power equal to or greater than
+  0 in low power situations. Defaults to 0.
+
+[General]Degrade.AmountConsumer=int - hitpoints
+  The damage caused to buildings with Power less than 0 in low
+  power situations. Defaults to 1.
+
+These global options can be customized per BuildingType.
+
+[BuildingType]Degrade.Percentage=double - percentage
+  The percentage of health this building will degrade to in low power
+  situations. A value of 1.0 will not degrade this building, a value of
+  0.0 will make it degrade till complete destruction. Defaults to
+  [General]►Degrade.Percentage.
+
+[BuildingType]Degrade.Amount=int - hitpoints
+  The amount of damage this building will receive each interval of
+  DamageDelay in low power situations. A value of 0 will not
+  degrade this building. Defaults to [General]►Degrade.AmountNormal if
+  Power is greater than or equal to 0, otherwise to
+  [General]►Degrade.AmountConsumer.
+
+Trivial Structure Damage can be enabled or disabled for each house indiviudally.
+By default, MultiplayPassive=yes houses are not affected.
+
+[Country]Degrades=boolean
+  Whether buildings owned by this country degrade in low power situations.
+  Defaults to no for MultiplayPassive=yes, to yes
+  otherwise.
+
+[House]Degrades=boolean
+  Whether buildings owned by this country degrade in low power situations. Only
+  supported in single player missions. Defaults to [Country]►Degrades.
+
+ Structures; Trivial Structure Damage in low power situations
+
+ 0.A

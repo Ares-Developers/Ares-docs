@@ -1,30 +1,19 @@
-.. _firestorm:
-
 Type=Firestorm
 
 
-This superweapon is a recreation of the Tiberian Sun Firestorm
-superweapon.
+This super weapon is a recreation of the Tiberian Sun Firestorm Defense
+System. For more details, see Firestorm Wall.
 
-When activated, all structures owned by the firing player that have
-Firestorm.Wall=yes set will emit an energy field, blocking all hostile
-projectiles (except those with SubjectToFirestorm=no set) from passing
-through. The energy field also destroys any friend or foe unlucky (or stupid)
-enough to come into direct contact with active cells.
-
-BuildingTypes with Firestorm.Wall=yes set will act as a section
-of the Firestorm Wall and auto-connect to other nearby pieces (check the
-original building's SHP from Tiberian Sun to see how the art is
-controlled).
-
-This super weapon uses the old Charge/Drain logic: once activated, the effect
+This super weapon uses the Charge/Drain logic: once activated, the effect
 will persist for a duration determined by SW.ChargeToDrainRatio, after
 which it will automatically shut down and the superweapon will restart its
-charging process. Whilst the effect is active you can click the super weapon
-button again to manually deactivate it, thus allowing the recharge process to
-begin earlier and finish faster. See Charge/Drain.
-Refer to ModEnc  for
-more information about Charge/Drain logic.
+charging process.
+
+Whilst the effect is active, players can click the super weapon button again to
+manually deactivate it, thus allowing the recharge process to begin earlier and
+finish faster. See Charge/Drain, or refer to ModEnc
+ for more information
+about Charge/Drain logic.
 
 In Tiberian Sun, the Charge/Drain feature was disableable through an
 INI flag ([SuperWeapon]►UseChargeDrain=no) however: Ares forces
@@ -32,16 +21,10 @@ this logic to be used regardless of the value of that flag. Ares also
 forces this super weapon to ignore its assigned Action, if any, as this
 is required to make it activate from a single click of the sidebar icon.
 
-The AI will not use this super weapon.
-
- The animations used by this logic are temporarily hard-coded to
-  FSIDLE, FSGRND and FSAIR, as was used in
-  Tiberian Sun.
-
- The AI has a lot of problems with targets behind an active Firestorm
-  Wall, although this should not be a major problem due to the relatively small
-  amount of game time that the Wall is active for.
+ The AI will not use this super weapon. In missions, it is possible to
+  control the Firestorm using the map actions 92 and 93.
 
  Super Weapons; Firestorm Wall
 
  0.1
+ 0.A

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Type=PsychicDominator &mdash; Ares 0.9 documentation</title>
+    <title>Type=PsychicDominator &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,13 +24,13 @@
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../../../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../../../index.html" />
     <link rel="up" title="Settings by Super Weapon Type" href="index.html" />
     <link rel="next" title="Type=ChronoSphere" href="chronosphere.html" />
     <link rel="prev" title="Type=MultiMissile" href="multimissile.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -44,13 +42,13 @@
         <li class="right" >
           <a href="multimissile.html" title="Type=MultiMissile"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="multimissile.html"
@@ -58,7 +56,7 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="chronosphere.html"
                         title="next chapter"><span><span class="type">Type=ChronoSphere</span></span></a></p>
-<div id="searchbox" style="display: none">
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../../search.html" method="get">
       <input type="text" name="q" />
@@ -77,83 +75,84 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="type-psychicdominator">
 <h1><span><span class="type">Type=PsychicDominator</span></span><a class="headerlink" href="#type-psychicdominator" title="Permalink to this headline">¶</a></h1>
 <p>Default values for general tags:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Range=</span></tt><span class="type definition"> (float,integer)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Range=</span></code><span class="type definition"> (float,integer)</span></span></dt>
 <dd>Area around the target location the Psychic Dominator captures. This does not
-affect the damage. Defaults to <span><tt class="docutils literal"><span class="pre">[General]►DominatorCaptureRange</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Damage=</span></tt><span class="type definition"> (integer)</span></span></dt>
+affect the damage. Defaults to <span><code class="docutils literal"><span class="pre">[General]►DominatorCaptureRange</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Damage=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>The damage the Psychic Dominator delivers right before capturing. No damage is
 dealt if this value is 0 or negative. Defaults to
-<span><tt class="docutils literal"><span class="pre">[General]►DominatorDamage</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Warhead=</span></tt><span class="type definition"> (Warhead)</span></span></dt>
+<span><code class="docutils literal"><span class="pre">[General]►DominatorDamage</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Warhead=</span></code><span class="type definition"> (Warhead)</span></span></dt>
 <dd>The warhead used to deal the damage. Defaults to
-<span><tt class="docutils literal"><span class="pre">[General]►DominatorWarhead</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Deferment=</span></tt><span class="type definition"> (integer - frames)</span></span></dt>
+<span><code class="docutils literal"><span class="pre">[General]►DominatorWarhead</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Deferment=</span></code><span class="type definition"> (integer - frames)</span></span></dt>
 <dd>Defaults to <cite>0</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.ActivationSound=</span></tt><span class="type definition"> (Sound)</span></span></dt>
-<dd>Defaults to <span><tt class="docutils literal"><span class="pre">[AudioVisual]►PsychicDominatorActivateSound</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></tt><span class="type definition"> (enum)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.ActivationSound=</span></code><span class="type definition"> (Sound)</span></span></dt>
+<dd>Defaults to <span><code class="docutils literal"><span class="pre">[AudioVisual]►PsychicDominatorActivateSound</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></code><span class="type definition"> (enum)</span></span></dt>
 <dd>Defaults to <cite>PsychicDominator</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AffectsHouse=</span></tt><span class="type definition"> (enum)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AffectsHouse=</span></code><span class="type definition"> (enum)</span></span></dt>
 <dd>Specifies the houses affected by the capture. Defaults to <cite>all</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AffectsTarget=</span></tt><span class="type definition"> (enum)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AffectsTarget=</span></code><span class="type definition"> (enum)</span></span></dt>
 <dd>Specifies which types the capture affects. Defaults to
 <cite>infantry,units</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Light.*=</span></tt><span class="type definition"> (integer)</span></span></dt>
-<dd>Default to the scenario&#8217;s <span><tt class="docutils literal"><span class="pre">[Lighting]►Dominator*</span></tt></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Light.*=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd>Default to the scenario&#8217;s <span><code class="docutils literal"><span class="pre">[Lighting]►Dominator*</span></code></span>.</dd>
 </dl>
 <p>Psychic Dominator specific tags:</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.FirstAnim=</span></tt><span class="type definition"> (Animation)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.FirstAnim=</span></code><span class="type definition"> (Animation)</span></span></dt>
 <dd>The Animation hovering above the target for some time before the Psychic
-Dominator strikes. Defaults to <span><tt class="docutils literal"><span class="pre">[General]►DominatorFirstAnim</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.FirstAnimHeight=</span></tt><span class="type definition"> (integer - leptons)</span></span></dt>
-<dd>The height the <span><tt class="docutils literal"><span class="pre">Dominator.FirstAnim</span></tt></span> is played above the ground. Defaults
+Dominator strikes. Defaults to <span><code class="docutils literal"><span class="pre">[General]►DominatorFirstAnim</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.FirstAnimHeight=</span></code><span class="type definition"> (integer - leptons)</span></span></dt>
+<dd>The height the <span><code class="docutils literal"><span class="pre">Dominator.FirstAnim</span></code></span> is played above the ground. Defaults
 to <cite>750</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.SecondAnim=</span></tt><span class="type definition"> (Animation)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.SecondAnim=</span></code><span class="type definition"> (Animation)</span></span></dt>
 <dd>The Animation hovering above the target when the Psychic Dominator strikes.
-Defaults to <span><tt class="docutils literal"><span class="pre">[General]►DominatorSecondAnim</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.SecondAnimHeight=</span></tt><span class="type definition"> (integer - leptons)</span></span></dt>
-<dd>The height the <span><tt class="docutils literal"><span class="pre">Dominator.SecondAnim</span></tt></span> is played above the ground.
+Defaults to <span><code class="docutils literal"><span class="pre">[General]►DominatorSecondAnim</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.SecondAnimHeight=</span></code><span class="type definition"> (integer - leptons)</span></span></dt>
+<dd>The height the <span><code class="docutils literal"><span class="pre">Dominator.SecondAnim</span></code></span> is played above the ground.
 Defaults to <cite>0</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.FireAtPercentage=</span></tt><span class="type definition"> (integer)</span></span></dt>
-<dd>After this percentage of the <span><tt class="docutils literal"><span class="pre">Dominator.FirstAnim</span></tt></span>&#8216;s frames have been
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.FireAtPercentage=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd>After this percentage of the <span><code class="docutils literal"><span class="pre">Dominator.FirstAnim</span></code></span>&#8216;s frames have been
 played, the Dominator is fired. This is the actual percentage, <cite>20</cite> is
 20%. Don&#8217;t use decimal numbers. Defaults to
-<span><tt class="docutils literal"><span class="pre">[General]►DominatorFireAtPercentage</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.ControlAnim=</span></tt><span class="type definition"> (Animation)</span></span></dt>
+<span><code class="docutils literal"><span class="pre">[General]►DominatorFireAtPercentage</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.ControlAnim=</span></code><span class="type definition"> (Animation)</span></span></dt>
 <dd>The Animation displayed above units being mind-controlled by the Dominator
-permanently. Defaults to <span><tt class="docutils literal"><span class="pre">[CombatDamage]►PermaControlledAnimationType</span></tt></span>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.Capture=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+permanently. Defaults to <span><code class="docutils literal"><span class="pre">[CombatDamage]►PermaControlledAnimationType</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.Capture=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Defines whether this Psychic Dominator captures units in its range. Otherwise
 only the damage is dealt. Defaults to <cite>yes</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.Ripple=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.Ripple=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Defines whether this Psychic Dominator creates a ripple effect when the
 Psychic Dominator strikes. Defaults to <cite>yes</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.CaptureMindControlled=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.CaptureMindControlled=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Defines whether this Psychic Dominator can capture units that are
 mind-controlled already. Otherwise already mind-controlled units are ignored.
 Defaults to <cite>yes</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.CapturePermaMindControlled=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.CapturePermaMindControlled=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Defines whether this Psychic Dominator can capture units that are permanently
 mind-controlled already. Otherwise already permanently mind-controlled units
 are ignored. Defaults to <cite>yes</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.CaptureImmuneToPsionics=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.CaptureImmuneToPsionics=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Defines whether this Psychic Dominator can capture units that usually aren&#8217;t
 mind-controllable. Setting this to <cite>yes</cite> ignores the
-<span><tt class="docutils literal"><span class="pre">ImmuneToPsionics</span></tt></span> tag on its victims. Defaults to <cite>no</cite>.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.PermanentCapture=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<span><code class="docutils literal"><span class="pre">ImmuneToPsionics</span></code></span> tag on its victims. Defaults to <cite>no</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Dominator.PermanentCapture=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Defines whether the victims are permanently mind-controlled. Setting this to
 <cite>no</cite> allows other mind-controllers to re-capture the victim, otherwise
 it will be uncapturable. Defaults to <cite>yes</cite>.</dd>
 </dl>
-<p class="versionadded">
-<span class="versionmodified">New in version 0.2.</span></p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
 </div>
 
 
@@ -162,7 +161,7 @@ it will be uncapturable. Defaults to <cite>yes</cite>.</dd>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -174,15 +173,15 @@ it will be uncapturable. Defaults to <cite>yes</cite>.</dd>
         <li class="right" >
           <a href="multimissile.html" title="Type=MultiMissile"
              >previous</a> |</li>
-        <li><a href="../../../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
-          <li><a href="../index.html" >Super Weapons</a> &raquo;</li>
-          <li><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

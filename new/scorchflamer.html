@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Scorch and Flamer &mdash; Ares 0.9 documentation</title>
+    <title>Scorch and Flamer &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,37 +24,37 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
-    <link rel="next" title="Secret Labs" href="secretlabs.html" />
-    <link rel="prev" title="Reverse Engineer logic" href="reverseengineerlogic.html" /> 
+    <link rel="next" title="Sight" href="sight.html" />
+    <link rel="prev" title="Saboteurs" href="saboteur.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="secretlabs.html" title="Secret Labs"
+          <a href="sight.html" title="Sight"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="reverseengineerlogic.html" title="Reverse Engineer logic"
+          <a href="saboteur.html" title="Saboteurs"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="reverseengineerlogic.html"
-                        title="previous chapter">Reverse Engineer logic</a></p>
+  <p class="topless"><a href="saboteur.html"
+                        title="previous chapter">Saboteurs</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="secretlabs.html"
-                        title="next chapter">Secret Labs</a></p>
-<div id="searchbox" style="display: none">
+  <p class="topless"><a href="sight.html"
+                        title="next chapter">Sight</a></p>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -75,39 +73,40 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="scorch-and-flamer">
 <h1><span><span class="type">Scorch</span></span> and <span><span class="type">Flamer</span></span><a class="headerlink" href="#scorch-and-flamer" title="Permalink to this headline">¶</a></h1>
 <p><span class="game docutils literal">Tiberian Sun</span> had special support for napalm animations: two tags that
-spawned new fire animations defined by <span><tt class="docutils literal"><span class="pre">SmallFire</span></tt></span> and <span><tt class="docutils literal"><span class="pre">LargeFire</span></tt></span>.
+spawned new fire animations defined by <span><code class="docutils literal"><span class="pre">SmallFire</span></code></span> and <span><code class="docutils literal"><span class="pre">LargeFire</span></code></span>.
 This has been reimplemented as it worked previously.</p>
 <p>There is one notable change in behavior compared to <span class="game docutils literal">Tiberian Sun</span>: If
-<span><tt class="docutils literal"><span class="pre">LargeFire</span></tt></span> or <span><tt class="docutils literal"><span class="pre">SmallFire</span></tt></span> are not set correctly, the game will not
+<span><code class="docutils literal"><span class="pre">LargeFire</span></code></span> or <span><code class="docutils literal"><span class="pre">SmallFire</span></code></span> are not set correctly, the game will not
 crash when a new animation of these types is about to be created.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[Animation]►Scorch=</span></tt><span class="type definition"> (boolean)</span></span></dt>
-<dd><p class="first">Whether a new <span><tt class="docutils literal"><span class="pre">[AudioVisual]►SmallFire</span></tt></span> animation should be attached to
+<dt><span><code class="definition docutils literal"><span class="pre">[Animation]►Scorch=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd><p class="first">Whether a new <span><code class="docutils literal"><span class="pre">[AudioVisual]►SmallFire</span></code></span> animation should be attached to
 the same object this animation is attached to when expiring. Does not spawn on
 water, beach, ice or rock terrain. For a complete description of behavior and
 requirements, refer to <a class="reference external" href="http://modenc.renegadeprojects.com/Scorch">Scorch on ModEnc</a> Defaults to <cite>no</cite>.</p>
 <div class="last admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Do not set <span><tt class="docutils literal"><span class="pre">Scorch=yes</span></tt></span> on <span><tt class="docutils literal"><span class="pre">[AudioVisual]►SmallFire</span></tt></span>,
+<p class="last">Do not set <span><code class="docutils literal"><span class="pre">Scorch=yes</span></code></span> on <span><code class="docutils literal"><span class="pre">[AudioVisual]►SmallFire</span></code></span>,
 because this would create a loop: if the animation expires, a new animation
 of the same type is created and attached to the same object. It also causes
 trees on fire to never burn down.</p>
 </div>
 </dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[Animation]►Flamer=</span></tt><span class="type definition"> (boolean)</span></span></dt>
-<dd>Whether new <span><tt class="docutils literal"><span class="pre">[AudioVisual]►SmallFire</span></tt></span> and <span><tt class="docutils literal"><span class="pre">[AudioVisual]►LargeFire</span></tt></span>
+<dt><span><code class="definition docutils literal"><span class="pre">[Animation]►Flamer=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether new <span><code class="docutils literal"><span class="pre">[AudioVisual]►SmallFire</span></code></span> and <span><code class="docutils literal"><span class="pre">[AudioVisual]►LargeFire</span></code></span>
 animations should be randomly created close to the location of this animation
 when expiring. For a complete description of behavior and requirements, refer
 to <a class="reference external" href="http://modenc.renegadeprojects.com/Flamer">Flamer on ModEnc</a>. Defaults
 to <cite>no</cite>.</dd>
 </dl>
-<p class="versionadded" id="index-0">
-<span class="versionmodified">New in version 0.8.</span></p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.8.</span></p>
+</div>
 </div>
 
 
@@ -116,25 +115,25 @@ to <cite>no</cite>.</dd>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="secretlabs.html" title="Secret Labs"
+          <a href="sight.html" title="Sight"
              >next</a> |</li>
         <li class="right" >
-          <a href="reverseengineerlogic.html" title="Reverse Engineer logic"
+          <a href="saboteur.html" title="Saboteurs"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

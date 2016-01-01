@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Damage Particle Systems &mdash; Ares 0.9 documentation</title>
+    <title>Damage Particle Systems &mdash; Ares 0.A documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.9',
+        VERSION:     '0.A',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -26,29 +24,29 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.9 documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
-    <link rel="next" title="Destroy Units by EMP" href="destroyunitsbyemp.html" />
+    <link rel="next" title="Dimming Deactivated Units" href="dimming.html" />
     <link rel="prev" title="Custom Missiles" href="custommissiles.html" /> 
   </head>
-  <body>
-    <div class="related">
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="destroyunitsbyemp.html" title="Destroy Units by EMP"
+          <a href="dimming.html" title="Dimming Deactivated Units"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="custommissiles.html" title="Custom Missiles"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../index.html">Table Of Contents</a></h3>
   <ul>
@@ -63,9 +61,9 @@
   <p class="topless"><a href="custommissiles.html"
                         title="previous chapter">Custom Missiles</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="destroyunitsbyemp.html"
-                        title="next chapter">Destroy Units by EMP</a></p>
-<div id="searchbox" style="display: none">
+  <p class="topless"><a href="dimming.html"
+                        title="next chapter">Dimming Deactivated Units</a></p>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
@@ -84,7 +82,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="damage-particle-systems">
 <h1>Damage Particle Systems<a class="headerlink" href="#damage-particle-systems" title="Permalink to this headline">¶</a></h1>
@@ -95,25 +93,26 @@ description of this feature.</p>
 <div class="section" id="damage-sparks">
 <h2>Damage Sparks<a class="headerlink" href="#damage-sparks" title="Permalink to this headline">¶</a></h2>
 <p>There was a hardcoded setting in the games since <span class="game docutils literal">Tiberian Sun</span> that
-enabled <span class="type docutils literal">InfantryTypes</span> with <span><tt class="docutils literal"><span class="pre">Cyborg=yes</span></tt></span> to repeatedly spawn damage
+enabled <span class="type docutils literal">InfantryTypes</span> with <span><code class="docutils literal"><span class="pre">Cyborg=yes</span></code></span> to repeatedly spawn damage
 spark particle systems when damaged into yellow or red healh. The setting was
 cleared whenever the infantry&#8217;s section was not present in the map or scenario
-file. <span class="game docutils literal">Ares</span> unties this feature from <span><tt class="docutils literal"><span class="pre">Cyborg</span></tt></span> and <span class="type docutils literal">InfantryTypes</span> by
+file. <span class="game docutils literal">Ares</span> unties this feature from <span><code class="docutils literal"><span class="pre">Cyborg</span></code></span> and <span class="type docutils literal">InfantryTypes</span> by
 making this a proper tag.</p>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►DamageSparks=</span></tt><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►DamageSparks=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Defines whether an object of this type should spawn spark particle systems
-defined by <span><tt class="docutils literal"><span class="pre">DamageParticleSystems</span></tt></span>. Defaults to <span><tt class="docutils literal"><span class="pre">Cyborg</span></tt></span> for
+defined by <span><code class="docutils literal"><span class="pre">DamageParticleSystems</span></code></span>. Defaults to <span><code class="docutils literal"><span class="pre">Cyborg</span></code></span> for
 <span class="type docutils literal">InfantryTypes</span>, to <cite>no</cite> otherwise.</dd>
 </dl>
-<p class="versionadded" id="index-0">
-<span class="versionmodified">New in version 0.7.</span></p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.7.</span></p>
+</div>
 </div>
 <div class="section" id="smoke-and-spark-damageparticlesystems">
 <h2>Smoke and Spark <span><span class="type">DamageParticleSystems</span></span><a class="headerlink" href="#smoke-and-spark-damageparticlesystems" title="Permalink to this headline">¶</a></h2>
 <p><span class="game docutils literal">Ares</span> adds two new tags that allow arbitrary damage particle systems
-where previously only one with either <span><tt class="docutils literal"><span class="pre">BehavesLike=Smoke</span></tt></span> or
-<span><tt class="docutils literal"><span class="pre">BehavesLike=Spark</span></tt></span> were possible.</p>
+where previously only one with either <span><code class="docutils literal"><span class="pre">BehavesLike=Smoke</span></code></span> or
+<span><code class="docutils literal"><span class="pre">BehavesLike=Spark</span></code></span> were possible.</p>
 <p>The new tag does not enforce the restrictions the original tag had. Without
 opting in by using the new ones, damage particle systems are spawned as always.</p>
 <div class="admonition warning">
@@ -123,21 +122,22 @@ supported as of Ares 0.7, because the others need special handling that is not
 yet in place.</p>
 </div>
 <dl class="docutils">
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►DamageSmokeParticleSystems=</span></tt><span class="type definition"> (list of ParticleSystems)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►DamageSmokeParticleSystems=</span></code><span class="type definition"> (list of ParticleSystems)</span></span></dt>
 <dd>Defines a list of <span class="type docutils literal">ParticleSystems</span> to randomly spawn from when an
 object is damaged into yellow or red health. You have to use this if you want
-to use <span class="type docutils literal">ParticleSystems</span> with <span><tt class="docutils literal"><span class="pre">BehavesLike</span></tt></span> set to other values
-than <cite>Smoke</cite>. Defaults to all <span><tt class="docutils literal"><span class="pre">DamageParticleSystems</span></tt></span> with
-<span><tt class="docutils literal"><span class="pre">BehavesLike=Smoke</span></tt></span> set.</dd>
-<dt><span><tt class="definition docutils literal"><span class="pre">[TechnoType]►DamageSparksParticleSystems=</span></tt><span class="type definition"> (list of ParticleSystems)</span></span></dt>
+to use <span class="type docutils literal">ParticleSystems</span> with <span><code class="docutils literal"><span class="pre">BehavesLike</span></code></span> set to other values
+than <cite>Smoke</cite>. Defaults to all <span><code class="docutils literal"><span class="pre">DamageParticleSystems</span></code></span> with
+<span><code class="docutils literal"><span class="pre">BehavesLike=Smoke</span></code></span> set.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►DamageSparksParticleSystems=</span></code><span class="type definition"> (list of ParticleSystems)</span></span></dt>
 <dd>Defines a list of <span class="type docutils literal">ParticleSystems</span> to randomly spawn from when an
 object is in yellow or red health. You have to use this if you want
-to use <span class="type docutils literal">ParticleSystems</span> with <span><tt class="docutils literal"><span class="pre">BehavesLike</span></tt></span> set to other values
-than <cite>Spark</cite>. Defaults to all <span><tt class="docutils literal"><span class="pre">DamageParticleSystems</span></tt></span> with
-<span><tt class="docutils literal"><span class="pre">BehavesLike=Spark</span></tt></span> set.</dd>
+to use <span class="type docutils literal">ParticleSystems</span> with <span><code class="docutils literal"><span class="pre">BehavesLike</span></code></span> set to other values
+than <cite>Spark</cite>. Defaults to all <span><code class="docutils literal"><span class="pre">DamageParticleSystems</span></code></span> with
+<span><code class="docutils literal"><span class="pre">BehavesLike=Spark</span></code></span> set.</dd>
 </dl>
-<p class="versionadded" id="index-1">
-<span class="versionmodified">New in version 0.7.</span></p>
+<div class="versionadded" id="index-1">
+<p><span class="versionmodified">New in version 0.7.</span></p>
+</div>
 </div>
 </div>
 
@@ -147,25 +147,25 @@ than <cite>Spark</cite>. Defaults to all <span><tt class="docutils literal"><spa
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="destroyunitsbyemp.html" title="Destroy Units by EMP"
+          <a href="dimming.html" title="Dimming Deactivated Units"
              >next</a> |</li>
         <li class="right" >
           <a href="custommissiles.html" title="Custom Missiles"
              >previous</a> |</li>
-        <li><a href="../index.html">Ares 0.9 documentation</a> &raquo;</li>
-          <li><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, The Ares Contributors.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>
