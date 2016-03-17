@@ -125,19 +125,21 @@ Stolen Technology
   :value:`-1` to disable this requirement. Defaults to :value:`-1`.
 
 In :game:`Yuri's Revenge`, there were only three types of stealable technology
-available and these were hard-coded to specific buildings.
+available and these were hard-coded to the first three buildings in the
+:tag:`[AI]BuildTech` list (game defaults given in parens):
 
-+ Spying :tag:`[GATECH]` satisfies :tag:`RequiresStolenAlliedTech=yes`
-+ Spying :tag:`[NATECH]` satisfies :tag:`RequiresStolenSovietTech=yes`
-+ Spying :tag:`[YATECH]` satisfies :tag:`RequiresStolenThirdTech=yes`
++ Spying the first (:tag:`GATECH`) satisfies :tag:`RequiresStolenAlliedTech=yes`
++ Spying the second (:tag:`NATECH`) satisfies :tag:`RequiresStolenSovietTech=yes`
++ Spying the third (:tag:`YATECH`) satisfies :tag:`RequiresStolenThirdTech=yes`
 
 In :game:`Ares`, spying a building with :tag:`SpyEffect.StolenTechIndex=2` (for
 example) satisfies the stolen tech requirements for units that require stolen
 tech 2.
 
-.. note:: If you set :tag:`SpyEffect.Custom=yes` on  :tag:`[GATECH]`,
-  \ :tag:`[NATECH]` or :tag:`[YATECH]` then those buildings will no longer
-  satisfy the old :tag:`RequiresStolen*Tech` flags.
+.. note:: If you set :tag:`SpyEffect.Custom=yes` on buildings in the
+  \ :tag:`BuildTech` list (like :tag:`GATECH`, :tag:`NATECH` or :tag:`YATECH`),
+  then those buildings will no longer satisfy the old :tag:`RequiresStolen*Tech`
+  flags.
 
 .. index:: Spy behaviour; New effect: Stolen tech index (multiple new stolen techs).
 
