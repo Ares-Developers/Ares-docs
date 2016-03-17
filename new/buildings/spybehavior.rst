@@ -147,7 +147,7 @@ tech 2.
 
 
 
-Factories
+Veterancy
 `````````
 
 :tagdef:`[BuildingType]SpyEffect.UnitVeterancy=boolean`
@@ -161,17 +161,36 @@ Factories
     factory (i.e. War Factory or Naval Yard) will only make land vehicles start
     veteran - Naval vehicles cannot be made to start veteran through spy
     infiltration logic.
+
+
+
+Intelligence
+````````````
+
 :tagdef:`[BuildingType]SpyEffect.RevealProduction=boolean`
-  **NEW EFFECT** Whether or not spying this enemy factory will allow you to see
-  what the enemy is presently building from that factory. Once the building has
-  been spied, select the building and the cameo of the unit that is being
-  produced will be displayed over the building.
+  **NEW EFFECT** Whether or not spying this enemy building will allow you to see
+  what the enemy is presently building from that factory, or the power output,
+  or the owning player's money. Once the building has been spied, select the
+  building and the information of the unit that is being produced will be
+  displayed over the building.
+  
+  * :tag:`Power` greater than :value:`0` buildings will reveal the power level
+    (formatted using :value:`TXT_POWER_DRAIN2`)
+  * :tag:`Storage` greater than :value:`0` buildings will see the player's
+    credits (formatted using :value:`TXT_MONEY_FORMAT_1`)
+  * :tag:`Factory` buildings will reveal the cameo of the current production
+
+  .. note:: Observers have been enabled to always have access to this
+    information.
 
 .. image:: /images/production_spying.png
   :alt: Screenshot of a current production being revealed
   :align: center
 
-.. index:: Spy behaviour; New effect: Reveal production cameo (shows you what the enemy are currently building).
+.. index:: Spy behaviour; New effect: Reveal production, money or power
+
+.. versionchanged:: 0.B
+
 
 
 Reverse Engineering
