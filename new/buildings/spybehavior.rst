@@ -177,7 +177,8 @@ Intelligence
   building and the information of the unit that is being produced will be
   displayed over the building.
 
-  * :tag:`Fake=yes` buildings will show the text :value:`TXT_FAKE`
+  * :tag:`Fake=yes` buildings will show the text :value:`TXT_FAKE` and reveal
+    their true name in tooltips (see :doc:`EnemyUIName </new/enemyuiname>`)
   * :tag:`Power` greater than :value:`0` buildings will reveal the power level
     (formatted using :value:`TXT_POWER_DRAIN2`)
   * :tag:`Storage` greater than :value:`0` buildings will see the player's

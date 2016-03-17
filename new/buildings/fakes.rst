@@ -13,6 +13,9 @@ enabled.
 :tagdef:`[BuildingType]Fake=boolean`
   Whether this building is considered a fake. Defaults to :value:`no`.
 
+See :doc:`EnemyUIName </new/enemyuiname>` to find out how to hide the real name
+of the building from enemy players.
+
 .. index:: Fakes; Decoy buildings
 
 .. versionadded:: 0.B
