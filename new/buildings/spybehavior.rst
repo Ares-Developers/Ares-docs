@@ -82,6 +82,28 @@ Super Weapons
   and all super weapons on attached upgrades) to have their countdown timers
   restarted.
 
+.. index:: Spy behaviour; Reset all super weapons provided by a building
+
+
+The following tags can be used to grant super weapons like the Sonar Pulse in
+:game:`Red Alert` when a spy infiltrates a Sub Pen.
+
+:tagdef:`[BuildingType]SpyEffect.SuperWeapon=SuperWeaponType`
+  **NEW EFFECT** Grants this super weapon when infiltrating an enemy building of
+  this type.
+
+  .. note:: Not all super weapon types might be supported.
+
+:tagdef:`[BuildingType]SpyEffect.SuperWeaponPermanent=boolean`
+  Whether the granted super weapon will become available permanently. If
+  :value:`yes`, it will become available uncharged, and it won't be lost once
+  fired. Otherwise, the super weapon will become available pre-charged but
+  disappear again after being fired once. Defaults to :value:`no`.
+
+.. versionadded:: 0.B
+
+.. index:: Spy behaviour; Grant one-time or permanent super weapon
+
 
 .. _`spybehavior-stolentech`:
 
