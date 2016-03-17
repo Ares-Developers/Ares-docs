@@ -105,6 +105,7 @@ The following tags can be used to grant super weapons like the Sonar Pulse in
 .. index:: Spy behaviour; Grant one-time or permanent super weapon
 
 
+
 .. _`spybehavior-stolentech`:
 
 Stolen Technology
@@ -164,6 +165,8 @@ Veterancy
 
 
 
+.. _`spybehavior-revealproduction`:
+
 Intelligence
 ````````````
 
@@ -173,7 +176,8 @@ Intelligence
   or the owning player's money. Once the building has been spied, select the
   building and the information of the unit that is being produced will be
   displayed over the building.
-  
+
+  * :tag:`Fake=yes` buildings will show the text :value:`TXT_FAKE`
   * :tag:`Power` greater than :value:`0` buildings will reveal the power level
     (formatted using :value:`TXT_POWER_DRAIN2`)
   * :tag:`Storage` greater than :value:`0` buildings will see the player's
