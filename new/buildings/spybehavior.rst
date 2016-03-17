@@ -110,17 +110,19 @@ The following tags can be used to grant super weapons like the Sonar Pulse in
 Stolen Technology
 `````````````````
 
-:tagdef:`[BuildingType]SpyEffect.StolenTechIndex=integer`
-  The stealable technology type that is stolen upon spying this enemy building.
+:tagdef:`[BuildingType]SpyEffect.StolenTechIndex= list of integers`
+  The stealable technology types that is stolen upon spying this enemy building.
   Only values from 0 to 31 (inclusive) are supported. Use :value:`-1` to
   disable the effect. Defaults to :value:`-1`.
+
+  .. note:: Note that despite its singular name this tag takes a list of
+    integers and it is thus possible to steal several technology types when
+    infiltrating a single building.
+
 :tagdef:`[TechnoType]Prerequisite.StolenTechs=list of integers`
   The list of stealable technology types that must be stolen before this object
   can be built. Only values from 0 to 31 (inclusive) are supported. Use
   :value:`-1` to disable this requirement. Defaults to :value:`-1`.
-
-.. index:: Spy behaviour; New effect: Stolen tech index (multiple new stolen techs).
-
 
 In :game:`Yuri's Revenge`, there were only three types of stealable technology
 available and these were hard-coded to specific buildings.
@@ -136,6 +138,10 @@ tech 2.
 .. note:: If you set :tag:`SpyEffect.Custom=yes` on  :tag:`[GATECH]`,
   \ :tag:`[NATECH]` or :tag:`[YATECH]` then those buildings will no longer
   satisfy the old :tag:`RequiresStolen*Tech` flags.
+
+.. index:: Spy behaviour; New effect: Stolen tech index (multiple new stolen techs).
+
+.. versionchanged:: 0.B
 
 
 
