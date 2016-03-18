@@ -181,3 +181,32 @@ used *instead* of those specified on the original PrerequisiteGroup flags
 .. index:: Prerequisites; New Prerequisite Groups.
 
 .. versionadded:: 0.1
+
+
+Alternate Prerequisites with Non-Buildings
+``````````````````````````````````````````
+
+To support the Slave Miner as prerequisite, :game:`Yuri's Revenge` added the
+option to satisfy the :value:`PROC` requirement by either owning the deployed
+building or alternatively the undeployed Slave Miner vehicle. This was done only
+for the refinery group by adding :tag:`[General]PrerequisiteProcAlternate=`,
+which accepted one :type:`VehicleType`.
+
+:game:`Ares` adds alternate prerequisites support for all Generic Prerequisite
+Groups and expands this feature to support multiple items of arbitrary
+:type:`TechnoTypes`.
+
+:tagdef:`[General]PrerequisiteXAlternate=list of TechnoTypes`
+  A list of types that alternatively satisfy this requirement if player does not
+  own a building from the :tag:`[General]PrerequisiteX=` list.
+
+  Replace :tag:`X` with a key from :tag:`[GenericPrerequisites]`, first
+  character upper case, all others lower case. For instance, :value:`NAVALYARD`
+  from above would become :value:`Navalyard`.
+
+  .. note:: Using :type:`BuildingTypes` is not supported and adding them here
+    might give unexpected results. For example, upgrades will not work.
+
+.. index:: Prerequisites; Generalized Alternate Prerequisite Groups
+
+.. versionadded:: 0.B
