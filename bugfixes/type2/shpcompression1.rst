@@ -1,0 +1,17 @@
+.. index:: Drawing; Shape compression 1 draws vertical lines
+
+========================================================
+Shape Compression 1 Draws Vertical Lines on Large Images
+========================================================
+
+In-game :game:`Yuri's Revenge` originally only fully supported compressed shape
+images up to a width of 256 pixels. The game used a buffer of fixed size with
+additional data while drawing, and larger images read past the end of that
+buffer. The vertical lines were a consequence of random data being applied to
+each line drawn, selectively making the pixels at the same x coordinates
+transparent.
+
+This has been fixed. :game:`Ares` uses a large enough buffer to draw compressed
+shape images.
+
+.. versionadded:: 0.A
