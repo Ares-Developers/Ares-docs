@@ -37,3 +37,23 @@ accordingly.
 .. index:: Behavior; Disallow manual passenger unload, Hide unload cursor
 
 .. versionadded:: 0.A
+
+
+No Manual Enter Transport
+`````````````````````````
+
+This cosmetic setting allows to hide the fact that a unit is a transport by
+removing the enter and no-enter cursors.
+
+This does not prevent units from entering by other means, like scripts, though.
+Also, the AI will not respect this setting. Use the :doc:`Specific Passengers
+</new/passengers>` feature to prevent this.
+
+:tagdef:`[TechnoType]NoManualEnter=boolean`
+  Whether units will not get an enter or no-enter cursor when on this object. If
+  :value:`yes`, the select cursor is used, as if this unit is not a transport.
+  Defaults to :value:`no`.
+
+.. index:: Behavior; Disallow units to get an enter cursor over a transport
+
+.. versionadded:: 0.B
