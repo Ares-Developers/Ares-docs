@@ -57,3 +57,21 @@ Also, the AI will not respect this setting. Use the :doc:`Specific Passengers
 .. index:: Behavior; Disallow units to get an enter cursor over a transport
 
 .. versionadded:: 0.B
+
+
+No Guard Area on Self
+`````````````````````
+
+Medics usually get a guard area cursor on themselves to players can set the to
+guard mode by clicking. This prevents infantry with negative damage weapons to
+have deploy ability. :game:`Ares` adds a tag to turn this feature off.
+
+:tagdef:`[InfantryType]NoSelfGuardArea=boolean`
+  Whether infantry units with negative damage weapons get the guard area cursor
+  on themselves. If :value:`no`, the guard area cursor will not take precedence,
+  allowing other cursors like the deploy cursor to be shown. Defaults to
+  :value:`no`.
+
+.. index:: Behavior; Disable Medics' Guard Area cursor on self
+
+.. versionadded:: 0.B
