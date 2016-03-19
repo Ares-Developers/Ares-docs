@@ -7,6 +7,7 @@ Weapons
 	weapontypes
 	anim
 	damage
+	ammo
 	ivanbombs
 	radiation
 	electricbolts
