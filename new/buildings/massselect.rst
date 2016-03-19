@@ -1,0 +1,23 @@
+Mass-Selection
+~~~~~~~~~~~~~~
+
+In :game:`Tiberian Sun` units like the Tick Tank and the Artillery could deploy
+into 1x1 buildings. These buildings were considered vehicles when dragging a
+selection rectangle, so many of them could be undeployed quickly.
+
+This feature is still available in :game:`Yuri's Revenge` and cannot be turned
+off for buildings that might be undeployable but should not be considered
+vehicles.
+
+In :game:`Ares` this feature can be disabled for 1x1 structures or enabled for
+buildings with larger foundations that should be considered vehicles:
+
+:tagdef:`[BuildingType]MassSelectable=boolean`
+  Whether buildings of this type are considered units when mass-selecting. If
+  :value:`no`, buildings will not be included in the selection, even if they
+  undeploy into a unit and are actually to be considered vehicles. Defaults to
+  :value:`yes` for 1x1 buildings with :tag:`UndeploysInto=` set.
+
+.. index:: Buildings; Include buildings in or exclude them from drag-selection
+
+.. versionadded:: 0.B
