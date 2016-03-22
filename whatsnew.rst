@@ -6,6 +6,29 @@ This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of :game:`Ares`. Internal changes, optimizations
 and updates are mentioned here only if they are notable.
 
+.. rubric:: Ares 0.B
+
++ **Generic Prerequisites** now also :doc:`accept vehicles as prerequisites
+  </new/prerequisites>`
+
++ **Warheads** can now optionally :doc:`always or never damage air units
+  </new/warheads/damageair>`
+
++ **Ammo changes** allow for weapons that :doc:`use custom amounts of ammunition
+  (or no ammo at all) </new/weapons/ammo>`, units :doc:`reloading more than one
+  round of ammunition </new/reload>`, and :doc:`aircraft with individual reload
+  rate </new/aircraftreload>`.
+
++ **Self Heal** :doc:`made customizable </new/selfheal>`
+
++ **Spys** can steal plans for :doc:`one-time or permanent super weapons
+  </new/buildings/spybehavior>`, and they can be deceived by :doc:`deploying
+  fake buildings </new/buildings/fakes>`
+
++ **Disallow** players from getting the :doc:`enter or no-enter cursor on
+  transports or the area guard cursor on medics</new/manual>`
+
+
 .. rubric:: Ares 0.A
 
 + **Audio improvements** like support for :doc:`multiple bag files

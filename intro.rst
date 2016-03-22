@@ -140,3 +140,4 @@ changes/additions rely on. This MIX file presently includes:
 + `TXT_SCRNCAP_DESC=Take a snapshot of the game screen. (Saved as
   'SCRN.date-time.BMP' file in Red Alert 2 run directory.)`
 + `TXT_RELEASE=Launch`
++ `TXT_FAKE=Fake`
