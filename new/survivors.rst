@@ -51,7 +51,7 @@ Unit-specific
 :tagdef:`[Unit]Survivor.ElitePilotChance=integer between 0 and 100`
   The percent chance that each individual pilot will be spawned when this unit
   is destroyed. If this value is negative, :tag:`[General]CrewEscape` will be
-  used. Default to :value:`-1`.
+  used. Defaults to :value:`-1`.
 
 :tagdef:`[Unit]Survivor.RookiePassengerChance=integer between 0 and 100`
 

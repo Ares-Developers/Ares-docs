@@ -47,8 +47,8 @@ negative amounts. the format is hardcoded to the amount with a plus or minus
 sign prepended.
 
 .. warning:: This feature might be expanded or changed in the future. Do not
-  take the apparance of these texts for granted. Colors, positions, and movement
-  speed might change.
+  take the appearance of these texts for granted. Colors, positions, and
+  movement speed might change.
 
 .. index:: Tech Structures; Oil Derrick can show the produced cash amount
 
