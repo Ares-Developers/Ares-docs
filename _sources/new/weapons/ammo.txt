@@ -1,0 +1,26 @@
+Ammo
+
+
+Weapons no longer have to use up one round of ammunition when firing. It is now
+possible to create weapons that require more rounds as well as weapons that do
+not use up a single round of ammunition.
+
+This way, a unit with a powerful primary weapon could fire only a few shots at
+buildings for example, while still having a weaker secondary to fend off tanks
+and infantry.
+
+Firing a weapon that uses up no ammunition does not reset the reload timer.
+
+[Weapon]Ammo=integer
+  The rounds of ammunition needed to fire this weapon. If fewer than the
+  required rounds are present, the unit will not fire and wait for the ammo to
+  reload. Defaults to 1.
+
+   This feature does not support AircraftTypes.
+  
+   Units that do ManualReload=yes will still target enemies
+    and wait for reloading, which never happens.
+
+ Weapons; Weapon taking more than one round of ammo, or none at all
+
+ 0.B

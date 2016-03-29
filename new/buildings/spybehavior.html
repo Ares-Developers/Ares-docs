@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Spy Behavior &mdash; Ares 0.A documentation</title>
+    <title>Spy Behavior &mdash; Ares 0.B documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.A',
+        VERSION:     '0.B',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.A documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.B documentation" href="../../index.html" />
     <link rel="up" title="Buildings" href="index.html" />
     <link rel="next" title="Tech Structures Return to Neutral" href="techstructures.html" />
     <link rel="prev" title="Solid Buildings" href="solidbuildings.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="solidbuildings.html" title="Solid Buildings"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.B documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Buildings</a> &raquo;</li> 
       </ul>
@@ -57,7 +57,8 @@
 <li><a class="reference internal" href="#money">Money</a></li>
 <li><a class="reference internal" href="#super-weapons">Super Weapons</a></li>
 <li><a class="reference internal" href="#stolen-technology">Stolen Technology</a></li>
-<li><a class="reference internal" href="#factories">Factories</a></li>
+<li><a class="reference internal" href="#veterancy">Veterancy</a></li>
+<li><a class="reference internal" href="#intelligence">Intelligence</a></li>
 <li><a class="reference internal" href="#reverse-engineering">Reverse Engineering</a></li>
 </ul>
 </li>
@@ -162,38 +163,70 @@ attached to it (<span><code class="docutils literal"><span class="pre">SuperWeap
 and all super weapons on attached upgrades) to have their countdown timers
 restarted.</dd>
 </dl>
+<p id="index-4">The following tags can be used to grant super weapons like the Sonar Pulse in
+<span class="game docutils literal">Red Alert</span> when a spy infiltrates a Sub Pen.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►SpyEffect.SuperWeapon=</span></code><span class="type definition"> (SuperWeaponType)</span></span></dt>
+<dd><p class="first"><strong>NEW EFFECT</strong> Grants this super weapon when infiltrating an enemy building of
+this type.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Not all super weapon types might be supported.</p>
+</div>
+</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►SpyEffect.SuperWeaponPermanent=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether the granted super weapon will become available permanently. If
+<cite>yes</cite>, it will become available uncharged, and it won&#8217;t be lost once
+fired. Otherwise, the super weapon will become available pre-charged but
+disappear again after being fired once. Defaults to <cite>no</cite>.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.B.</span></p>
+</div>
 </div>
 <div class="section" id="stolen-technology">
-<span id="spybehavior-stolentech"></span><h2>Stolen Technology<a class="headerlink" href="#stolen-technology" title="Permalink to this headline">¶</a></h2>
+<span id="spybehavior-stolentech"></span><span id="index-5"></span><h2>Stolen Technology<a class="headerlink" href="#stolen-technology" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
-<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►SpyEffect.StolenTechIndex=</span></code><span class="type definition"> (integer)</span></span></dt>
-<dd>The stealable technology type that is stolen upon spying this enemy building.
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►SpyEffect.StolenTechIndex=</span></code><span class="type definition"> (list of integers)</span></span></dt>
+<dd><p class="first">The stealable technology types that is stolen upon spying this enemy building.
 Only values from 0 to 31 (inclusive) are supported. Use <cite>-1</cite> to
-disable the effect. Defaults to <cite>-1</cite>.</dd>
+disable the effect. Defaults to <cite>-1</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Note that despite its singular name this tag takes a list of
+integers and it is thus possible to steal several technology types when
+infiltrating a single building.</p>
+</div>
+</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Prerequisite.StolenTechs=</span></code><span class="type definition"> (list of integers)</span></span></dt>
 <dd>The list of stealable technology types that must be stolen before this object
 can be built. Only values from 0 to 31 (inclusive) are supported. Use
 <cite>-1</cite> to disable this requirement. Defaults to <cite>-1</cite>.</dd>
 </dl>
-<p id="index-4">In <span class="game docutils literal">Yuri&#8217;s Revenge</span>, there were only three types of stealable technology
-available and these were hard-coded to specific buildings.</p>
+<p>In <span class="game docutils literal">Yuri&#8217;s Revenge</span>, there were only three types of stealable technology
+available and these were hard-coded to the first three buildings in the
+<span><code class="docutils literal"><span class="pre">[AI]►BuildTech</span></code></span> list (game defaults given in parens):</p>
 <ul class="simple">
-<li>Spying <span><code class="docutils literal"><span class="pre">[GATECH]</span></code></span> satisfies <span><code class="docutils literal"><span class="pre">RequiresStolenAlliedTech=yes</span></code></span></li>
-<li>Spying <span><code class="docutils literal"><span class="pre">[NATECH]</span></code></span> satisfies <span><code class="docutils literal"><span class="pre">RequiresStolenSovietTech=yes</span></code></span></li>
-<li>Spying <span><code class="docutils literal"><span class="pre">[YATECH]</span></code></span> satisfies <span><code class="docutils literal"><span class="pre">RequiresStolenThirdTech=yes</span></code></span></li>
+<li>Spying the first (<span><code class="docutils literal"><span class="pre">GATECH</span></code></span>) satisfies <span><code class="docutils literal"><span class="pre">RequiresStolenAlliedTech=yes</span></code></span></li>
+<li>Spying the second (<span><code class="docutils literal"><span class="pre">NATECH</span></code></span>) satisfies <span><code class="docutils literal"><span class="pre">RequiresStolenSovietTech=yes</span></code></span></li>
+<li>Spying the third (<span><code class="docutils literal"><span class="pre">YATECH</span></code></span>) satisfies <span><code class="docutils literal"><span class="pre">RequiresStolenThirdTech=yes</span></code></span></li>
 </ul>
 <p>In <span class="game docutils literal">Ares</span>, spying a building with <span><code class="docutils literal"><span class="pre">SpyEffect.StolenTechIndex=2</span></code></span> (for
 example) satisfies the stolen tech requirements for units that require stolen
 tech 2.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If you set <span><code class="docutils literal"><span class="pre">SpyEffect.Custom=yes</span></code></span> on  <span><code class="docutils literal"><span class="pre">[GATECH]</span></code></span>,
-<span><code class="docutils literal"><span class="pre">[NATECH]</span></code></span> or <span><code class="docutils literal"><span class="pre">[YATECH]</span></code></span> then those buildings will no longer
-satisfy the old <span><code class="docutils literal"><span class="pre">RequiresStolen*Tech</span></code></span> flags.</p>
+<p class="last">If you set <span><code class="docutils literal"><span class="pre">SpyEffect.Custom=yes</span></code></span> on buildings in the
+<span><code class="docutils literal"><span class="pre">BuildTech</span></code></span> list (like <span><code class="docutils literal"><span class="pre">GATECH</span></code></span>, <span><code class="docutils literal"><span class="pre">NATECH</span></code></span> or <span><code class="docutils literal"><span class="pre">YATECH</span></code></span>),
+then those buildings will no longer satisfy the old <span><code class="docutils literal"><span class="pre">RequiresStolen*Tech</span></code></span>
+flags.</p>
+</div>
+<div class="versionchanged" id="index-6">
+<p><span class="versionmodified">Changed in version 0.B.</span></p>
 </div>
 </div>
-<div class="section" id="factories">
-<h2>Factories<a class="headerlink" href="#factories" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="veterancy">
+<h2>Veterancy<a class="headerlink" href="#veterancy" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►SpyEffect.UnitVeterancy=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd><p class="first">Whether or not spying this enemy factory will make all future units you build
@@ -209,16 +242,40 @@ veteran - Naval vehicles cannot be made to start veteran through spy
 infiltration logic.</p>
 </div>
 </dd>
+</dl>
+</div>
+<div class="section" id="intelligence">
+<span id="spybehavior-revealproduction"></span><h2>Intelligence<a class="headerlink" href="#intelligence" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►SpyEffect.RevealProduction=</span></code><span class="type definition"> (boolean)</span></span></dt>
-<dd><strong>NEW EFFECT</strong> Whether or not spying this enemy factory will allow you to see
-what the enemy is presently building from that factory. Once the building has
-been spied, select the building and the cameo of the unit that is being
-produced will be displayed over the building.</dd>
+<dd><p class="first"><strong>NEW EFFECT</strong> Whether or not spying this enemy building will allow you to see
+what the enemy is presently building from that factory, or the power output,
+or the owning player&#8217;s money. Once the building has been spied, select the
+building and the information of the unit that is being produced will be
+displayed over the building.</p>
+<ul class="simple">
+<li><span><code class="docutils literal"><span class="pre">Fake=yes</span></code></span> buildings will show the text <cite>TXT_FAKE</cite> and reveal
+their true name in tooltips (see <a class="reference internal" href="../enemyuiname.html"><em>EnemyUIName</em></a>)</li>
+<li><span><code class="docutils literal"><span class="pre">Power</span></code></span> greater than <cite>0</cite> buildings will reveal the power level
+(formatted using <cite>TXT_POWER_DRAIN2</cite>)</li>
+<li><span><code class="docutils literal"><span class="pre">Storage</span></code></span> greater than <cite>0</cite> buildings will see the player&#8217;s
+credits (formatted using <cite>TXT_MONEY_FORMAT_1</cite>)</li>
+<li><span><code class="docutils literal"><span class="pre">Factory</span></code></span> buildings will reveal the cameo of the current production</li>
+</ul>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Observers have been enabled to always have access to this
+information.</p>
+</div>
+</dd>
 </dl>
 <img alt="Screenshot of a current production being revealed" class="align-center" src="../../_images/production_spying.png" />
+<div class="versionchanged" id="index-7">
+<p><span class="versionmodified">Changed in version 0.B.</span></p>
+</div>
 </div>
 <div class="section" id="reverse-engineering">
-<span id="index-5"></span><h2>Reverse Engineering<a class="headerlink" href="#reverse-engineering" title="Permalink to this headline">¶</a></h2>
+<h2>Reverse Engineering<a class="headerlink" href="#reverse-engineering" title="Permalink to this headline">¶</a></h2>
 <p>For a spy effect to reset a player&#8217;s build options gained by reverse
 engineering, see <a class="reference internal" href="../reverseengineerlogic.html"><em>Reverse Engineer logic</em></a>.</p>
 </div>
@@ -242,7 +299,7 @@ engineering, see <a class="reference internal" href="../reverseengineerlogic.htm
         <li class="right" >
           <a href="solidbuildings.html" title="Solid Buildings"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.B documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Buildings</a> &raquo;</li> 
       </ul>

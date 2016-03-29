@@ -1,0 +1,21 @@
+Fakes
+
+
+Fakes are buildings known from Red Alert which look like their original
+counterparts but are weaker and serve no function. There mere purpose is to
+hide the location of the real buildings.
+
+Fakes show the string defined by TXT_FAKE when selected by the owning
+player and its allies, and also by enemies if they infiltrated the building and
+it has the Reveal Production Spy Effect
+enabled.
+
+[BuildingType]Fake=boolean
+  Whether this building is considered a fake. Defaults to no.
+
+See EnemyUIName to find out how to hide the real name
+of the building from enemy players.
+
+ Fakes; Decoy buildings
+
+ 0.B

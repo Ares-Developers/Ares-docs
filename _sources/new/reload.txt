@@ -1,0 +1,22 @@
+ReloadAmount and EmptyReloadAmount
+
+
+The game has options for Reload and EmptyReload to define how long
+it takes to reload one round of ammunition, depending on whether the unit still
+has ammo left. Ares adds two new tags to define how many rounds of
+ammunition are restored.
+
+This logic is not supported on AircraftTypes.
+
+[TechnoType]ReloadAmount=integer
+  The number of rounds restored after each reload interval. Negative values are
+  supported. Defaults to 1.
+
+[TechnoType]EmptyReloadAmount=integer
+  The number of rounds restored after reload interval when there is no ammo
+  left. If 0 or negative, the unit will not reload. This does not
+  require EmptyReload to be set. Defaults to ReloadAmount.
+
+ Ammo; Customizable reload and empty reload amounts
+
+ 0.B

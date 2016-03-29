@@ -315,3 +315,14 @@ Other changes:
 
   ares.csf will always be read, no matter which language the game is run
   in.
+
+From Ares 0.A and below
+
+
+Changed tags:
+
+  No changes required.
+
+Other changes:
+
+  None.

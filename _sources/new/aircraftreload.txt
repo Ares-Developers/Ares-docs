@@ -1,0 +1,20 @@
+Aircraft-Specific ReloadRate
+
+
+Aircraft only have a global tag for defining how long it takes to reload their
+ammunition, which is difficult to balance for different types of aircraft firing
+few powerful missiles and aircraft firing lots of weak machine gun rounds. In
+Ares, each type can have its own ReloadRate.
+
+[AircraftType]ReloadRate=double - minutes
+  The interval between restoring one round of ammunition when docked to a
+  UnitReload=yes building. Defaults to [General]►ReloadRate.
+
+For this feature to work the reloading has also been changed to reload each
+aircraft individually. This fixes the issue that reload times seemed to vary for
+aircraft and the aircraft that landed first was reloaded substantially faster as
+it required one less interval of ReloadRate.
+
+ Aircraft; Custom ReloadRate per AircraftType
+
+ 0.B

@@ -45,7 +45,7 @@ Files that are language neutral will always load, no matter what language the
 main string table ra2md.csf is.
 
 If your string table editor does not support setting the language manually, use
-a hex edior to set the four bytes starting at offset 0x14 directly.
+a hex editor to set the four bytes starting at offset 0x14 directly.
 
  String Tables; Language-neutral string tables
 

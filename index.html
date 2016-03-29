@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Ares Documentation &mdash; Ares 0.A documentation</title>
+    <title>Ares Documentation &mdash; Ares 0.B documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.A',
+        VERSION:     '0.B',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.A documentation" href="#" />
+    <link rel="top" title="Ares 0.B documentation" href="#" />
     <link rel="next" title="Introduction" href="intro.html" /> 
   </head>
   <body role="document">
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="intro.html" title="Introduction"
              accesskey="N">next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">Ares 0.A documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="#">Ares 0.B documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -133,6 +133,7 @@
 <li class="toctree-l2"><a class="reference internal" href="migration.html#from-ares-0-7-and-below">From Ares 0.7 and below</a></li>
 <li class="toctree-l2"><a class="reference internal" href="migration.html#from-ares-0-8-and-below">From Ares 0.8 and below</a></li>
 <li class="toctree-l2"><a class="reference internal" href="migration.html#from-ares-0-9-and-below">From Ares 0.9 and below</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migration.html#from-ares-0-a-and-below">From Ares 0.A and below</a></li>
 </ul>
 </li>
 </ul>
@@ -179,6 +180,7 @@
 <li class="toctree-l3"><a class="reference internal" href="new/additionalarmortypesandverses.html#immunities">Immunities</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="new/aircraftreload.html">Aircraft-Specific <span><span class="type">ReloadRate</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/aircraftsmoke.html">Aircraft Smoke</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/airrate.html">AirRate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/airstrike.html">Airstrike Voices</a></li>
@@ -238,6 +240,7 @@
 <li class="toctree-l3"><a class="reference internal" href="new/droppod.html#miscellaneous">Miscellaneous</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="new/enemyuiname.html"><span><span class="type">EnemyUIName</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/evatypes.html">EVA Types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/facings.html"><span><span class="type">Facings</span></span> on Units</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/forestfires.html">Forest Fires</a></li>
@@ -263,6 +266,8 @@
 <li class="toctree-l2"><a class="reference internal" href="new/manual.html">Manual Control</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/manual.html#no-manual-target-selection">No Manual Target Selection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/manual.html#no-manual-passenger-unload">No Manual Passenger Unload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/manual.html#no-manual-enter-transport">No Manual Enter Transport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/manual.html#no-guard-area-on-self">No Guard Area on Self</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="new/newpoweredunitlogic.html">New Powered Unit Logic</a></li>
@@ -279,12 +284,15 @@
 <li class="toctree-l3"><a class="reference internal" href="new/prerequisites.html#require-factory-built-by-country">Require Factory Built By Country</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/prerequisites.html#overview">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/prerequisites.html#generic-prerequisite-groups">Generic Prerequisite Groups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/prerequisites.html#alternate-prerequisites-with-non-buildings">Alternate Prerequisites with Non-Buildings</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="new/radarjammers.html">Radar Jammers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/reload.html"><span><span class="type">ReloadAmount</span></span> and <span><span class="type">EmptyReloadAmount</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/reverseengineerlogic.html">Reverse Engineer logic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/saboteur.html">Saboteurs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/scorchflamer.html"><span><span class="type">Scorch</span></span> and <span><span class="type">Flamer</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/selfheal.html">Self Heal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/sight.html">Sight</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/spawners.html">Spawners</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/spawners.html#flying-aircraft-carriers">Flying Aircraft Carriers</a></li>
@@ -310,9 +318,11 @@
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/custombuildingfoundations.html">Custom Building Foundations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/enemywrench.html">Enemy Wrench</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/factoriesandcloning.html">Factories and Cloning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/buildings/fakes.html">Fakes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/forceshield.html">Force Shield</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/gates.html">Gates</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/lightningrods.html">Lightning Rods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/buildings/massselect.html">Mass-Selection</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/passablestructures.html">Passable Structures</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/prismforwarding.html">Prism Forwarding</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/producecash.html">Oil Derricks (<span><span class="type">ProduceCash</span></span>)</a></li>
@@ -346,6 +356,7 @@
 <li class="toctree-l3"><a class="reference internal" href="new/weapons/weapontypes.html"><span><span class="type">[WeaponTypes]</span></span> Section</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/weapons/anim.html"><span><span class="type">Anim</span></span> for Facings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/weapons/damage.html">Ordinary Damage for <span><span class="type">IsSonic</span></span> and <span><span class="type">UseFireParticles</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/weapons/ammo.html"><span><span class="type">Ammo</span></span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/weapons/ivanbombs.html">Ivan Bombs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/weapons/radiation.html">Radiation Beams</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/weapons/electricbolts.html">Electric Bolt Coloring</a></li>
@@ -357,6 +368,7 @@
 <li class="toctree-l2"><a class="reference internal" href="new/warheads/index.html">Warheads</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/warheads/general.html">General Settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/warheads/cellspread.html"><span><span class="type">CellSpread</span></span> Enhancements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/warheads/damageair.html">Damage Airborne Units</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/warheads/ironcurtain.html">Iron Curtain Effect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/warheads/mindcontrol.html">Permanent Mind-Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/warheads/temporal.html">Customizable <span><span class="type">WarpAway</span></span></a></li>
@@ -609,6 +621,7 @@ changes/additions rely on. This MIX file presently includes:</p>
 <li><cite>TXT_SCRNCAP_DESC=Take a snapshot of the game screen. (Saved as
 &#8216;SCRN.date-time.BMP&#8217; file in Red Alert 2 run directory.)</cite></li>
 <li><cite>TXT_RELEASE=Launch</cite></li>
+<li><cite>TXT_FAKE=Fake</cite></li>
 </ul>
 </div>
 </div>
@@ -629,7 +642,7 @@ changes/additions rely on. This MIX file presently includes:</p>
         <li class="right" >
           <a href="intro.html" title="Introduction"
              >next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">Ares 0.A documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="#">Ares 0.B documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

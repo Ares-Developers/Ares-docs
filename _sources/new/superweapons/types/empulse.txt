@@ -68,8 +68,10 @@ If EMPulse.TargetSelf=yes, a single bullet is immediately detonated at
 each firing cannon's location. Again, the building does not actually fire.
 
 If a building with EMPulseCannon=no is put into EMPulse.Cannons,
-the building will fire its primary weapon normally, but without charging and
-without any further range checks.
+the building will fire its primary weapon at the target directly, but without
+charging or turret rotation, and without any further range checks. Thus, turrets
+are not supported, and buildings are not guaranteed to fire at all if they
+didn't rotate in the right direction before the super weapon is fired.
 
 Other changes:
 

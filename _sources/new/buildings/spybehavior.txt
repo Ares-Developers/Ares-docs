@@ -82,42 +82,73 @@ Super Weapons
   and all super weapons on attached upgrades) to have their countdown timers
   restarted.
 
+ Spy behaviour; Reset all super weapons provided by a building
+
+
+The following tags can be used to grant super weapons like the Sonar Pulse in
+Red Alert when a spy infiltrates a Sub Pen.
+
+[BuildingType]SpyEffect.SuperWeapon=SuperWeaponType
+  **NEW EFFECT** Grants this super weapon when infiltrating an enemy building of
+  this type.
+
+   Not all super weapon types might be supported.
+
+[BuildingType]SpyEffect.SuperWeaponPermanent=boolean
+  Whether the granted super weapon will become available permanently. If
+  yes, it will become available uncharged, and it won't be lost once
+  fired. Otherwise, the super weapon will become available pre-charged but
+  disappear again after being fired once. Defaults to no.
+
+ 0.B
+
+ Spy behaviour; Grant one-time or permanent super weapon
+
+
 
 
 
 Stolen Technology
 
 
-[BuildingType]SpyEffect.StolenTechIndex=integer
-  The stealable technology type that is stolen upon spying this enemy building.
+[BuildingType]SpyEffect.StolenTechIndex= list of integers
+  The stealable technology types that is stolen upon spying this enemy building.
   Only values from 0 to 31 (inclusive) are supported. Use -1 to
   disable the effect. Defaults to -1.
+
+   Note that despite its singular name this tag takes a list of
+    integers and it is thus possible to steal several technology types when
+    infiltrating a single building.
+
 [TechnoType]Prerequisite.StolenTechs=list of integers
   The list of stealable technology types that must be stolen before this object
   can be built. Only values from 0 to 31 (inclusive) are supported. Use
   -1 to disable this requirement. Defaults to -1.
 
- Spy behaviour; New effect: Stolen tech index (multiple new stolen techs).
-
-
 In Yuri's Revenge, there were only three types of stealable technology
-available and these were hard-coded to specific buildings.
+available and these were hard-coded to the first three buildings in the
+[AI]►BuildTech list (game defaults given in parens):
 
-+ Spying [GATECH]► satisfies RequiresStolenAlliedTech=yes
-+ Spying [NATECH]► satisfies RequiresStolenSovietTech=yes
-+ Spying [YATECH]► satisfies RequiresStolenThirdTech=yes
++ Spying the first (GATECH) satisfies RequiresStolenAlliedTech=yes
++ Spying the second (NATECH) satisfies RequiresStolenSovietTech=yes
++ Spying the third (YATECH) satisfies RequiresStolenThirdTech=yes
 
 In Ares, spying a building with SpyEffect.StolenTechIndex=2 (for
 example) satisfies the stolen tech requirements for units that require stolen
 tech 2.
 
- If you set SpyEffect.Custom=yes on  [GATECH]►,
-  [NATECH]► or [YATECH]► then those buildings will no longer
-  satisfy the old RequiresStolen*Tech flags.
+ If you set SpyEffect.Custom=yes on buildings in the
+  BuildTech list (like GATECH, NATECH or YATECH),
+  then those buildings will no longer satisfy the old RequiresStolen*Tech
+  flags.
+
+ Spy behaviour; New effect: Stolen tech index (multiple new stolen techs).
+
+ 0.B
 
 
 
-Factories
+Veterancy
 
 
 [BuildingType]SpyEffect.UnitVeterancy=boolean
@@ -131,17 +162,40 @@ Factories
     factory (i.e. War Factory or Naval Yard) will only make land vehicles start
     veteran - Naval vehicles cannot be made to start veteran through spy
     infiltration logic.
+
+
+
+
+
+Intelligence
+
+
 [BuildingType]SpyEffect.RevealProduction=boolean
-  **NEW EFFECT** Whether or not spying this enemy factory will allow you to see
-  what the enemy is presently building from that factory. Once the building has
-  been spied, select the building and the cameo of the unit that is being
-  produced will be displayed over the building.
+  **NEW EFFECT** Whether or not spying this enemy building will allow you to see
+  what the enemy is presently building from that factory, or the power output,
+  or the owning player's money. Once the building has been spied, select the
+  building and the information of the unit that is being produced will be
+  displayed over the building.
+
+  * Fake=yes buildings will show the text TXT_FAKE and reveal
+    their true name in tooltips (see EnemyUIName)
+  * Power greater than 0 buildings will reveal the power level
+    (formatted using TXT_POWER_DRAIN2)
+  * Storage greater than 0 buildings will see the player's
+    credits (formatted using TXT_MONEY_FORMAT_1)
+  * Factory buildings will reveal the cameo of the current production
+
+   Observers have been enabled to always have access to this
+    information.
 
  /images/production_spying.png
   :alt: Screenshot of a current production being revealed
   :align: center
 
- Spy behaviour; New effect: Reveal production cameo (shows you what the enemy are currently building).
+ Spy behaviour; New effect: Reveal production, money or power
+
+ 0.B
+
 
 
 Reverse Engineering

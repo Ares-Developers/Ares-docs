@@ -6,6 +6,7 @@ Warheads
 	
 	general
 	cellspread
+	damageair
 	ironcurtain
 	mindcontrol
 	temporal

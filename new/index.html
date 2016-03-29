@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>New &amp; Enhanced In-Game Logic &mdash; Ares 0.A documentation</title>
+    <title>New &amp; Enhanced In-Game Logic &mdash; Ares 0.B documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.A',
+        VERSION:     '0.B',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.B documentation" href="../index.html" />
     <link rel="next" title="Additional ArmorTypes and Verses" href="additionalarmortypesandverses.html" />
     <link rel="prev" title="Vehicle Thief" href="../restored/vehicle-thief.html" /> 
   </head>
@@ -41,7 +41,7 @@
         <li class="right" >
           <a href="../restored/vehicle-thief.html" title="Vehicle Thief"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.B documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -84,6 +84,7 @@ the game.</p>
 <li class="toctree-l2"><a class="reference internal" href="additionalarmortypesandverses.html#immunities">Immunities</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="aircraftreload.html">Aircraft-Specific <span><span class="type">ReloadRate</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="aircraftsmoke.html">Aircraft Smoke</a></li>
 <li class="toctree-l1"><a class="reference internal" href="airrate.html">AirRate</a></li>
 <li class="toctree-l1"><a class="reference internal" href="airstrike.html">Airstrike Voices</a></li>
@@ -143,6 +144,7 @@ the game.</p>
 <li class="toctree-l2"><a class="reference internal" href="droppod.html#miscellaneous">Miscellaneous</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="enemyuiname.html"><span><span class="type">EnemyUIName</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="evatypes.html">EVA Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="facings.html"><span><span class="type">Facings</span></span> on Units</a></li>
 <li class="toctree-l1"><a class="reference internal" href="forestfires.html">Forest Fires</a></li>
@@ -168,6 +170,8 @@ the game.</p>
 <li class="toctree-l1"><a class="reference internal" href="manual.html">Manual Control</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="manual.html#no-manual-target-selection">No Manual Target Selection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manual.html#no-manual-passenger-unload">No Manual Passenger Unload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual.html#no-manual-enter-transport">No Manual Enter Transport</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manual.html#no-guard-area-on-self">No Guard Area on Self</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="newpoweredunitlogic.html">New Powered Unit Logic</a></li>
@@ -184,12 +188,15 @@ the game.</p>
 <li class="toctree-l2"><a class="reference internal" href="prerequisites.html#require-factory-built-by-country">Require Factory Built By Country</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prerequisites.html#overview">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prerequisites.html#generic-prerequisite-groups">Generic Prerequisite Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prerequisites.html#alternate-prerequisites-with-non-buildings">Alternate Prerequisites with Non-Buildings</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="radarjammers.html">Radar Jammers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reload.html"><span><span class="type">ReloadAmount</span></span> and <span><span class="type">EmptyReloadAmount</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="reverseengineerlogic.html">Reverse Engineer logic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="saboteur.html">Saboteurs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scorchflamer.html"><span><span class="type">Scorch</span></span> and <span><span class="type">Flamer</span></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="selfheal.html">Self Heal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sight.html">Sight</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spawners.html">Spawners</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="spawners.html#flying-aircraft-carriers">Flying Aircraft Carriers</a></li>
@@ -258,9 +265,11 @@ the game.</p>
 <li class="toctree-l3"><a class="reference internal" href="buildings/factoriesandcloning.html#cloning-options">Cloning options</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="buildings/fakes.html">Fakes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buildings/forceshield.html">Force Shield</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buildings/gates.html">Gates</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buildings/lightningrods.html">Lightning Rods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildings/massselect.html">Mass-Selection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buildings/passablestructures.html">Passable Structures</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buildings/prismforwarding.html">Prism Forwarding</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="buildings/prismforwarding.html#customizing-the-support-beam">Customizing The Support Beam</a></li>
@@ -269,7 +278,11 @@ the game.</p>
 <li class="toctree-l3"><a class="reference internal" href="buildings/prismforwarding.html#special-note-regarding-prism-forwarding">Special Note Regarding Prism Forwarding</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="buildings/producecash.html">Oil Derricks (<span><span class="type">ProduceCash</span></span>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildings/producecash.html">Oil Derricks (<span><span class="type">ProduceCash</span></span>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="buildings/producecash.html#general-changes">General Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buildings/producecash.html#display-cash-produced">Display Cash Produced</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="buildings/secretlabs.html">Secret Labs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buildings/solidbuildings.html">Solid Buildings</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="buildings/solidbuildings.html#the-attackers-enabling-projectiles">The Attackers - Enabling Projectiles</a></li>
@@ -283,7 +296,8 @@ the game.</p>
 <li class="toctree-l3"><a class="reference internal" href="buildings/spybehavior.html#money">Money</a></li>
 <li class="toctree-l3"><a class="reference internal" href="buildings/spybehavior.html#super-weapons">Super Weapons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="buildings/spybehavior.html#stolen-technology">Stolen Technology</a></li>
-<li class="toctree-l3"><a class="reference internal" href="buildings/spybehavior.html#factories">Factories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buildings/spybehavior.html#veterancy">Veterancy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buildings/spybehavior.html#intelligence">Intelligence</a></li>
 <li class="toctree-l3"><a class="reference internal" href="buildings/spybehavior.html#reverse-engineering">Reverse Engineering</a></li>
 </ul>
 </li>
@@ -346,6 +360,7 @@ the game.</p>
 <li class="toctree-l2"><a class="reference internal" href="weapons/weapontypes.html"><span><span class="type">[WeaponTypes]</span></span> Section</a></li>
 <li class="toctree-l2"><a class="reference internal" href="weapons/anim.html"><span><span class="type">Anim</span></span> for Facings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="weapons/damage.html">Ordinary Damage for <span><span class="type">IsSonic</span></span> and <span><span class="type">UseFireParticles</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="weapons/ammo.html"><span><span class="type">Ammo</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="weapons/ivanbombs.html">Ivan Bombs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="weapons/radiation.html">Radiation Beams</a></li>
 <li class="toctree-l2"><a class="reference internal" href="weapons/electricbolts.html">Electric Bolt Coloring</a></li>
@@ -372,6 +387,7 @@ the game.</p>
 <li class="toctree-l3"><a class="reference internal" href="warheads/cellspread.html#cellspread-hit-limit"><span><span class="type">CellSpread</span></span> Hit Limit</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="warheads/damageair.html">Damage Airborne Units</a></li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/ironcurtain.html">Iron Curtain Effect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/mindcontrol.html">Permanent Mind-Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/temporal.html">Customizable <span><span class="type">WarpAway</span></span></a></li>
@@ -518,7 +534,7 @@ the game.</p>
         <li class="right" >
           <a href="../restored/vehicle-thief.html" title="Vehicle Thief"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.B documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

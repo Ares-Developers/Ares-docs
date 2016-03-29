@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Self Heal &mdash; Ares 0.B documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.B',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.B documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Sight" href="sight.html" />
+    <link rel="prev" title="Scorch and Flamer" href="scorchflamer.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sight.html" title="Sight"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="scorchflamer.html" title="Scorch and Flamer"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.B documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="scorchflamer.html"
+                        title="previous chapter"><span><span class="type">Scorch</span></span> and <span><span class="type">Flamer</span></span></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sight.html"
+                        title="next chapter">Sight</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="self-heal">
+<h1>Self Heal<a class="headerlink" href="#self-heal" title="Permalink to this headline">¶</a></h1>
+<p>A unit&#8217;s ability to self heal was hardcoded in <span class="game docutils literal">Yuri&#8217;s Revenge</span> and aside
+from enabling it through veterancy and setting the interval after which the unit
+would regain a fixed amount of health.</p>
+<p><span class="game docutils literal">Ares</span> makes self healing much more customizable, which can be used to
+recreate the Mammoth Tank from <span class="game docutils literal">Tiberian Dawn</span>, which only recovered half
+of its health.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►SelfHealing.Rate=</span></code><span class="type definition"> (double - minutes)</span></span></dt>
+<dd>The minutes between applying the self heal. Defaults to
+<span><code class="docutils literal"><span class="pre">[General]►RepairRate</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►SelfHealing.Max=</span></code><span class="type definition"> (double - percentage)</span></span></dt>
+<dd>The health level this object is restored to by self healing. The health will
+be capped at this percentage of the object&#8217;s <span><code class="docutils literal"><span class="pre">Strength</span></code></span>. If defined,
+overrides the veterancy specific tags below. Defaults to <cite>100%</cite>.</dd>
+</dl>
+<p><span><code class="definition docutils literal"><span class="pre">[TechnoType]►SelfHealing.RookieMax=</span></code><span class="type definition"> (double - percentage)</span></span></p>
+<p><span><code class="definition docutils literal"><span class="pre">[TechnoType]►SelfHealing.VeteranMax=</span></code><span class="type definition"> (double - percentage)</span></span></p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►SelfHealing.EliteMax=</span></code><span class="type definition"> (double - percentage)</span></span></dt>
+<dd>The health level this object is restored to by self healing, depending on its
+veterancy level. These settings are fully independent of each other. Defaults
+to <span><code class="docutils literal"><span class="pre">SelfHealing.Max</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►SelfHealing.Amount=</span></code><span class="type definition"> (integer - hitpoints)</span></span></dt>
+<dd>The amount of hitpoints restored when self healing. Cannot be less than
+<cite>0</cite>. If defined, overrides the veterancy specific tags below. Defaults
+to <cite>1</cite>.</dd>
+</dl>
+<p><span><code class="definition docutils literal"><span class="pre">[TechnoType]►SelfHealing.RookieAmount=</span></code><span class="type definition"> (integer - hitpoints)</span></span></p>
+<p><span><code class="definition docutils literal"><span class="pre">[TechnoType]►SelfHealing.VeteranAmount=</span></code><span class="type definition"> (integer - hitpoints)</span></span></p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►SelfHealing.EliteAmount=</span></code><span class="type definition"> (integer - hitpoints)</span></span></dt>
+<dd>The amount of hitpoints restored when self healing, depending on its
+veterancy level. These settings are fully independent of each other. Cannot be
+less than <cite>0</cite>. Defaults to <span><code class="docutils literal"><span class="pre">SelfHealing.Amount</span></code></span>.</dd>
+</dl>
+<span class="target" id="index-0"></span><div class="versionadded" id="index-1">
+<p><span class="versionmodified">New in version 0.B.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sight.html" title="Sight"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="scorchflamer.html" title="Scorch and Flamer"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.B documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

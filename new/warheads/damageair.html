@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Damage Airborne Units &mdash; Ares 0.B documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.B',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.B documentation" href="../../index.html" />
+    <link rel="up" title="Warheads" href="index.html" />
+    <link rel="next" title="Iron Curtain Effect" href="ironcurtain.html" />
+    <link rel="prev" title="CellSpread Enhancements" href="cellspread.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ironcurtain.html" title="Iron Curtain Effect"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cellspread.html" title="CellSpread Enhancements"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.B documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Warheads</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="cellspread.html"
+                        title="previous chapter"><span><span class="type">CellSpread</span></span> Enhancements</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="ironcurtain.html"
+                        title="next chapter">Iron Curtain Effect</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="damage-airborne-units">
+<h1>Damage Airborne Units<a class="headerlink" href="#damage-airborne-units" title="Permalink to this headline">¶</a></h1>
+<p>Warheads detonation on the ground cause explosions that never affect units in
+the air, no matter how large the <span><code class="docutils literal"><span class="pre">CellSpead</span></code></span> range is. If a warhead
+detonated just a few leptons above the ground however, airborne units would be
+affected if they were in range. This can now be changed.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►DamageAirThreshold=</span></code><span class="type definition"> (integer - leptons)</span></span></dt>
+<dd><p class="first">If the warhead detonates <em>more</em> than this many leptons above the ground, units
+in the air will be affected. Otherwise, units in the air are not damaged.
+Defaults to <cite>0</cite>.</p>
+<div class="quickstart last admonition" id="quickstart-0">
+<p class="first admonition-title">Quickstart</p>
+<p class="last">Use <cite>-1</cite> to damage even air units when the warhead
+detonates on the ground, or a high positive value like <cite>9999</cite> to
+disable damaging air units despite the warhead detonating in air.</p>
+</div>
+</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[General]►DamageAirConsiderBridges=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd><p class="first">Whether a warhead detonating above a bridge will consider the bridge&#8217;s height
+for finding out whether units in air are to be damaged. Defaults to
+<cite>no</cite>.</p>
+<p class="last">If <cite>no</cite>, a warhead detonating on a bridge will be considered to be four
+levels (416 leptons) high in the air, if <cite>yes</cite>, it will be 0 leptons
+above the ground and thus by default not trigger damaging units in the air.</p>
+</dd>
+</dl>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.B.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ironcurtain.html" title="Iron Curtain Effect"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cellspread.html" title="CellSpread Enhancements"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.B documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Warheads</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

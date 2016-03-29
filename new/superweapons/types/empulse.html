@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Type=EMPulse &mdash; Ares 0.A documentation</title>
+    <title>Type=EMPulse &mdash; Ares 0.B documentation</title>
     
     <link rel="stylesheet" href="../../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
-        VERSION:     '0.A',
+        VERSION:     '0.B',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.A documentation" href="../../../index.html" />
+    <link rel="top" title="Ares 0.B documentation" href="../../../index.html" />
     <link rel="up" title="Settings by Super Weapon Type" href="index.html" />
     <link rel="next" title="Tiberium" href="../../tiberium/index.html" />
     <link rel="prev" title="Type=DropPod" href="droppod.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="droppod.html" title="Type=DropPod"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.A documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.B documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
           <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
@@ -138,8 +138,10 @@ building does not actually fire and several weapon effects are not respected.</p
 <p>If <span><code class="docutils literal"><span class="pre">EMPulse.TargetSelf=yes</span></code></span>, a single bullet is immediately detonated at
 each firing cannon&#8217;s location. Again, the building does not actually fire.</p>
 <p>If a building with <span><code class="docutils literal"><span class="pre">EMPulseCannon=no</span></code></span> is put into <span><code class="docutils literal"><span class="pre">EMPulse.Cannons</span></code></span>,
-the building will fire its primary weapon normally, but without charging and
-without any further range checks.</p>
+the building will fire its primary weapon at the target directly, but without
+charging or turret rotation, and without any further range checks. Thus, turrets
+are not supported, and buildings are not guaranteed to fire at all if they
+didn&#8217;t rotate in the right direction before the super weapon is fired.</p>
 <p>Other changes:</p>
 <p>The pulse ball animation that was previously hardcoded to <cite>PULSBALL</cite> has
 now been made customizable and optional. If an <span><code class="docutils literal"><span class="pre">EMPulseCannon=yes</span></code></span> building
@@ -168,7 +170,7 @@ This does not happen any more.</p>
         <li class="right" >
           <a href="droppod.html" title="Type=DropPod"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.A documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.B documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
           <li class="nav-item nav-item-3"><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 

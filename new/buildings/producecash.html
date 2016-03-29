@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Oil Derricks (ProduceCash) &mdash; Ares 0.A documentation</title>
+    <title>Oil Derricks (ProduceCash) &mdash; Ares 0.B documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.A',
+        VERSION:     '0.B',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.A documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.B documentation" href="../../index.html" />
     <link rel="up" title="Buildings" href="index.html" />
     <link rel="next" title="Secret Labs" href="secretlabs.html" />
     <link rel="prev" title="Prism Forwarding" href="prismforwarding.html" /> 
@@ -42,13 +42,22 @@
         <li class="right" >
           <a href="prismforwarding.html" title="Prism Forwarding"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.B documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Buildings</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Oil Derricks (<span><span class="type">ProduceCash</span></span>)</a><ul>
+<li><a class="reference internal" href="#general-changes">General Changes</a></li>
+<li><a class="reference internal" href="#display-cash-produced">Display Cash Produced</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="prismforwarding.html"
                         title="previous chapter">Prism Forwarding</a></p>
@@ -78,6 +87,8 @@
             
   <div class="section" id="oil-derricks-producecash">
 <h1>Oil Derricks (<span><span class="type">ProduceCash</span></span>)<a class="headerlink" href="#oil-derricks-producecash" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="general-changes">
+<h2>General Changes<a class="headerlink" href="#general-changes" title="Permalink to this headline">¶</a></h2>
 <p>Building upgrades now support <span><code class="docutils literal"><span class="pre">ProduceCashDelay</span></code></span>, <span><code class="docutils literal"><span class="pre">ProduceCashAmount</span></code></span>
 and <span><code class="docutils literal"><span class="pre">ProduceCashStartup</span></code></span> like normal buildings. Each upgrade manages its
 own timer, so they will grant the amount independently of the main building or
@@ -85,9 +96,44 @@ other upgrades.</p>
 <p><span><code class="docutils literal"><span class="pre">ProduceCashStartup</span></code></span> has been expanded to support negative values. The
 amount is withdrawn from the capturing player&#8217;s account. If less than the
 specified amount is available, then the building can still be captured or
-placed.</p>
+placed. Also, <span><code class="docutils literal"><span class="pre">ProduceCashStartup</span></code></span> is no longer granted if a building is
+captured by a <span><code class="docutils literal"><span class="pre">MultiplayPassive=yes</span></code></span> house.</p>
+<p>Unlike in the original game, <span><code class="docutils literal"><span class="pre">ProduceCashStartup</span></code></span> does not have to be
+non-null for <span><code class="docutils literal"><span class="pre">ProduceCashdelay</span></code></span> and <span><code class="docutils literal"><span class="pre">ProduceCashAmount</span></code></span> to work.</p>
 <div class="versionadded" id="index-0">
 <p><span class="versionmodified">New in version 0.9.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 0.B.</span></p>
+</div>
+</div>
+<div class="section" id="display-cash-produced">
+<h2>Display Cash Produced<a class="headerlink" href="#display-cash-produced" title="Permalink to this headline">¶</a></h2>
+<p>Buildings producing cash can display the amount they generated as a text
+appearing over the building. The text will appear above the building and then
+move up slightly.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►ProduceCashDisplay=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether the building will show the credits it produced. Not respected on
+upgrades. The setting from the main building type will be used instead.
+Defaults to <cite>no</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[AudioVisual]►DisplayCreditsDelay=</span></code><span class="type definition"> (double - minutes)</span></span></dt>
+<dd>The interval between two texts appearing to display how many credits a
+building produced. Until then, the amounts are collected to be displayed after
+the interval passed. Defaults to <cite>0.02</cite>.</dd>
+</dl>
+<p>At the moment the colors are hardcoded to green for positive amounts and red for
+negative amounts. the format is hardcoded to the amount with a plus or minus
+sign prepended.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This feature might be expanded or changed in the future. Do not
+take the appearance of these texts for granted. Colors, positions, and
+movement speed might change.</p>
+</div>
+<div class="versionadded" id="index-1">
+<p><span class="versionmodified">New in version 0.B.</span></p>
+</div>
 </div>
 </div>
 
@@ -109,7 +155,7 @@ placed.</p>
         <li class="right" >
           <a href="prismforwarding.html" title="Prism Forwarding"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.A documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.B documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Buildings</a> &raquo;</li> 
       </ul>

@@ -36,3 +36,40 @@ accordingly.
  Behavior; Disallow manual passenger unload, Hide unload cursor
 
  0.A
+
+
+No Manual Enter Transport
+
+
+This cosmetic setting allows to hide the fact that a unit is a transport by
+removing the enter and no-enter cursors.
+
+This does not prevent units from entering by other means, like scripts, though.
+Also, the AI will not respect this setting. Use the Specific Passengers feature to prevent this.
+
+[TechnoType]NoManualEnter=boolean
+  Whether units will not get an enter or no-enter cursor when on this object. If
+  yes, the select cursor is used, as if this unit is not a transport.
+  Defaults to no.
+
+ Behavior; Disallow units to get an enter cursor over a transport
+
+ 0.B
+
+
+No Guard Area on Self
+
+
+Medics usually get a guard area cursor on themselves to players can set the to
+guard mode by clicking. This prevents infantry with negative damage weapons to
+have deploy ability. Ares adds a tag to turn this feature off.
+
+[InfantryType]NoSelfGuardArea=boolean
+  Whether infantry units with negative damage weapons get the guard area cursor
+  on themselves. If no, the guard area cursor will not take precedence,
+  allowing other cursors like the deploy cursor to be shown. Defaults to
+  no.
+
+ Behavior; Disable Medics' Guard Area cursor on self
+
+ 0.B

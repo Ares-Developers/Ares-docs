@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Prerequisites &mdash; Ares 0.A documentation</title>
+    <title>Prerequisites &mdash; Ares 0.B documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.A',
+        VERSION:     '0.B',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.A documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.B documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Radar Jammers" href="radarjammers.html" />
     <link rel="prev" title="Pips" href="pips.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="pips.html" title="Pips"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.B documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -58,6 +58,7 @@
 <li><a class="reference internal" href="#require-factory-built-by-country">Require Factory Built By Country</a></li>
 <li><a class="reference internal" href="#overview">Overview</a></li>
 <li><a class="reference internal" href="#generic-prerequisite-groups">Generic Prerequisite Groups</a></li>
+<li><a class="reference internal" href="#alternate-prerequisites-with-non-buildings">Alternate Prerequisites with Non-Buildings</a></li>
 </ul>
 </li>
 </ul>
@@ -263,6 +264,34 @@ used <em>instead</em> of those specified on the original PrerequisiteGroup flags
 <p><span class="versionmodified">New in version 0.1.</span></p>
 </div>
 </div>
+<div class="section" id="alternate-prerequisites-with-non-buildings">
+<h2>Alternate Prerequisites with Non-Buildings<a class="headerlink" href="#alternate-prerequisites-with-non-buildings" title="Permalink to this headline">¶</a></h2>
+<p>To support the Slave Miner as prerequisite, <span class="game docutils literal">Yuri&#8217;s Revenge</span> added the
+option to satisfy the <cite>PROC</cite> requirement by either owning the deployed
+building or alternatively the undeployed Slave Miner vehicle. This was done only
+for the refinery group by adding <span><code class="docutils literal"><span class="pre">[General]►PrerequisiteProcAlternate=</span></code></span>,
+which accepted one <span class="type docutils literal">VehicleType</span>.</p>
+<p><span class="game docutils literal">Ares</span> adds alternate prerequisites support for all Generic Prerequisite
+Groups and expands this feature to support multiple items of arbitrary
+<span class="type docutils literal">TechnoTypes</span>.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[General]►PrerequisiteXAlternate=</span></code><span class="type definition"> (list of TechnoTypes)</span></span></dt>
+<dd><p class="first">A list of types that alternatively satisfy this requirement if player does not
+own a building from the <span><code class="docutils literal"><span class="pre">[General]►PrerequisiteX=</span></code></span> list.</p>
+<p>Replace <span><code class="docutils literal"><span class="pre">X</span></code></span> with a key from <span><code class="docutils literal"><span class="pre">[GenericPrerequisites]</span></code></span>, first
+character upper case, all others lower case. For instance, <cite>NAVALYARD</cite>
+from above would become <cite>Navalyard</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Using <span class="type docutils literal">BuildingTypes</span> is not supported and adding them here
+might give unexpected results. For example, upgrades will not work.</p>
+</div>
+</dd>
+</dl>
+<div class="versionadded" id="index-6">
+<p><span class="versionmodified">New in version 0.B.</span></p>
+</div>
+</div>
 </div>
 
 
@@ -283,7 +312,7 @@ used <em>instead</em> of those specified on the original PrerequisiteGroup flags
         <li class="right" >
           <a href="pips.html" title="Pips"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.A documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.B documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

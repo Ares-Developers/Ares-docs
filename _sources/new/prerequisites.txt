@@ -180,3 +180,32 @@ used *instead* of those specified on the original PrerequisiteGroup flags
  Prerequisites; New Prerequisite Groups.
 
  0.1
+
+
+Alternate Prerequisites with Non-Buildings
+
+
+To support the Slave Miner as prerequisite, Yuri's Revenge added the
+option to satisfy the PROC requirement by either owning the deployed
+building or alternatively the undeployed Slave Miner vehicle. This was done only
+for the refinery group by adding [General]►PrerequisiteProcAlternate=,
+which accepted one VehicleType.
+
+Ares adds alternate prerequisites support for all Generic Prerequisite
+Groups and expands this feature to support multiple items of arbitrary
+TechnoTypes.
+
+[General]PrerequisiteXAlternate=list of TechnoTypes
+  A list of types that alternatively satisfy this requirement if player does not
+  own a building from the [General]►PrerequisiteX= list.
+
+  Replace X with a key from [GenericPrerequisites]►, first
+  character upper case, all others lower case. For instance, NAVALYARD
+  from above would become Navalyard.
+
+   Using BuildingTypes is not supported and adding them here
+    might give unexpected results. For example, upgrades will not work.
+
+ Prerequisites; Generalized Alternate Prerequisite Groups
+
+ 0.B

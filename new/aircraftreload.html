@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Aircraft-Specific ReloadRate &mdash; Ares 0.B documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.B',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.B documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Aircraft Smoke" href="aircraftsmoke.html" />
+    <link rel="prev" title="Additional ArmorTypes and Verses" href="additionalarmortypesandverses.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="aircraftsmoke.html" title="Aircraft Smoke"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="additionalarmortypesandverses.html" title="Additional ArmorTypes and Verses"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.B documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="additionalarmortypesandverses.html"
+                        title="previous chapter">Additional <span class="type docutils literal">ArmorTypes</span> and <span><span class="type">Verses</span></span></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="aircraftsmoke.html"
+                        title="next chapter">Aircraft Smoke</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="aircraft-specific-reloadrate">
+<h1>Aircraft-Specific <span><span class="type">ReloadRate</span></span><a class="headerlink" href="#aircraft-specific-reloadrate" title="Permalink to this headline">¶</a></h1>
+<p>Aircraft only have a global tag for defining how long it takes to reload their
+ammunition, which is difficult to balance for different types of aircraft firing
+few powerful missiles and aircraft firing lots of weak machine gun rounds. In
+<span class="game docutils literal">Ares</span>, each type can have its own <span><code class="docutils literal"><span class="pre">ReloadRate</span></code></span>.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[AircraftType]►ReloadRate=</span></code><span class="type definition"> (double - minutes)</span></span></dt>
+<dd>The interval between restoring one round of ammunition when docked to a
+<span><code class="docutils literal"><span class="pre">UnitReload=yes</span></code></span> building. Defaults to <span><code class="docutils literal"><span class="pre">[General]►ReloadRate</span></code></span>.</dd>
+</dl>
+<p>For this feature to work the reloading has also been changed to reload each
+aircraft individually. This fixes the issue that reload times seemed to vary for
+aircraft and the aircraft that landed first was reloaded substantially faster as
+it required one less interval of <span><code class="docutils literal"><span class="pre">ReloadRate</span></code></span>.</p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.B.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="aircraftsmoke.html" title="Aircraft Smoke"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="additionalarmortypesandverses.html" title="Additional ArmorTypes and Verses"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.B documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>
