@@ -8,7 +8,6 @@ Developers
 Current
 ~~~~~~~
 + AlexB
-+ Graion Dilach
 
 Past
 ~~~~
@@ -17,6 +16,7 @@ Past
 + Renegade
 + Electro
 + Marshall
++ Graion Dilach
 
 Contributors
 ============
@@ -33,6 +33,7 @@ Documentation Maintainer  Steel Mirage
 User Support Agent        Graion Dilach
 Project Ambassador        Graion Dilach
 Promo Material Creator    Speeder
+French Translation        Kik0u
 ========================  =============
 
 Special Thanks
