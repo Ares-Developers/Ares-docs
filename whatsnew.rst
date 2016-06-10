@@ -21,7 +21,7 @@ and updates are mentioned here only if they are notable.
 
 + **Self Heal** :doc:`made customizable </new/selfheal>`
 
-+ **Spys** can steal plans for :doc:`one-time or permanent super weapons
++ **Spies** can steal plans for :doc:`one-time or permanent super weapons
   </new/buildings/spybehavior>`, and they can be deceived by :doc:`deploying
   fake buildings </new/buildings/fakes>`
 
