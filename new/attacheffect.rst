@@ -26,7 +26,7 @@ superweapons. AttachEffect tags can be applied to both the Big Four (all
   .. note:: The animation always loops until the effect subsides.
     \ :tag:`LoopCount` is ignored.
 
-:tagdef:`[Section]AttachEffect.Duration=integer`
+:tagdef:`[Section]AttachEffect.Duration=integer - frames`
   The duration of the effect in frames. Use :value:`-1` for infinite duration.
   Defaults to :value:`0`.
 
@@ -60,10 +60,15 @@ superweapons. AttachEffect tags can be applied to both the Big Four (all
 
 The following tags are valid on TechnoTypes only:
 
-:tagdef:`[TechnoType]AttachEffect.Delay=integer`
+:tagdef:`[TechnoType]AttachEffect.Delay=integer - frames`
   Defines how many frames after the previous effect subsides the AttachEffect is
   recreated on the unit itself. Negative values do not renew the effect.
   Defaults to :value:`0` (immediately).
+
+:tagdef:`[TechnoType]AttachEffect.InitialDelay=integer - frames`
+  Defines the delay before creating the AttachEffect for the very first time.
+  Subsequent delays are defined by :tag:`AttachEffect.Delay`. Use :value:`0` to
+  create effect immediately. Defaults to :value:`0`.
 
 The following tags are valid on Warheads only:
 
@@ -82,3 +87,4 @@ The following tags are valid on Warheads only:
 
 .. versionadded:: 0.4
 .. versionchanged:: 0.5
+.. versionchanged:: 0.C
