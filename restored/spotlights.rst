@@ -10,16 +10,21 @@ straight ahead.
 Spotlights would cause an Internal Error whenever they were created. The error
 no longer occurs so spotlights can now be used.
 
+If an object with a spotlight cloaked, the spotlight was removed and would not
+reappear once the object uncloaked. This doesn't happen any more. The spotlight
+will be invisible while the object is cloaked, deactivated, or being warped out,
+though.
+
 :tagdef:`[TechnoType]HasSpotlight=boolean`
   If set to :value:`yes`, creates a spotlight from the unit or structure.
   Defaults to :value:`no`.
 :tagdef:`[TechnoType]Spotlight.StartHeight=integer - leptons`
   Specifies the number of leptons above the ground at which the spotlight will
-  be generated. Defaults to :value:`250`.
+  be generated. Defaults to :value:`430`.
 :tagdef:`[TechnoType]Spotlight.Distance=integer - leptons`
   The number of leptons ahead of the unit where the spotlight will reach the
   ground. Defaults to :value:`1024`.
-:tagdef:`[TechnoType]Spotlight.AttachedTo=enumeration - one of body|turret|barrel`
+:tagdef:`[TechnoType]Spotlight.AttachedTo=enumeration - one of body|turret`
   The part of the unit that the spotlight will align to in regards to facing. If
   set to :value:`body` then the spotlight will be pointed in the direction the
   unit's body is facing, if set to :value:`turret` then the spotlight will be
@@ -40,3 +45,4 @@ no longer occurs so spotlights can now be used.
   be ignored. Defaults to :value:`no`.
 
 .. versionadded:: 0.1
+.. versionchanged:: 0.C
