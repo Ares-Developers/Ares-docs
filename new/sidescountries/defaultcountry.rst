@@ -6,6 +6,10 @@ AI and Base-Building
 
 :tagdef:`[Country]AI.PowerPlants=list of BuildingTypes`
   A list of buildings that the AI will treat as this country's power plants.
+  Defaults to :tag:`[General]GDIPowerPlant` for the first side, to
+  :tag:`[General]ThirdPowerPlant` for the third side, and to
+  :tag:`[General]NodRegularPower` and :tag:`[General]NodAdvancedPower` for the
+  second side and all other sides.
 
 .. versionadded:: 0.1
 
