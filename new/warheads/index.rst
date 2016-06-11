@@ -15,3 +15,4 @@ Warheads
 	infantry
 	berserk
 	deathweapon
+	unitlost

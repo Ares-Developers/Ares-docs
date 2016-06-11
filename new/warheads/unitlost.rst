@@ -1,0 +1,15 @@
+Suppress Unit Lost Message
+``````````````````````````
+
+When a unit is killed, EVA notifies the owning player about this. To kill units
+silently or to create mutation weapons where killing the unit is actually not to
+be considered killing, this message can be suppressed for a warhead.
+
+:tagdef:`[Warhead]UnitLost.Suppress=boolean`
+  Whether units killed by this warhead should not play the Unit Lost EVA
+  message. Damaging  units without killing them using this warhead will not
+  silence the message. Defaults to :value:`no`.
+
+.. index:: Warheads; Suppress Unit Lost message
+
+.. versionadded:: 0.C
