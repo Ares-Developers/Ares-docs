@@ -8,3 +8,4 @@ Projectiles
 	ballisticscatter
 	ranged
 	splits
+	attachedsystem
