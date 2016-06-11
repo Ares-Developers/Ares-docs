@@ -7,9 +7,9 @@ The Firestorm Wall and the corresponding super weapon can now be implemented in
 
 When the Firestorm Defense is activated, all structures owned by the firing
 player that have :tag:`Firestorm.Wall=yes` set will emit an energy field,
-blocking all hostile projectiles (except those with :tag:`SubjectToFirestorm=no`
-set) from passing through. The energy field also destroys any friend or foe
-unlucky (or stupid) enough to come into direct contact with active cells.
+blocking all hostile projectiles from passing through. The energy field also
+destroys any friend or foe unlucky (or stupid) enough to come into direct
+contact with active cells.
 
 :tag:`IgnoresFirestorm` is respected and if :value:`yes`, neither units nor
 bullets are destroyed when passing an active Firestorm Wall. If an object is
@@ -19,7 +19,7 @@ See the :doc:`Firestorm super weapon </new/superweapons/types/firestorm>` for
 more details.
 
 .. versionadded:: 0.1
-.. versionchanged:: 0.A
+.. versionchanged:: 0.C
 
 
 Defining a Wall
