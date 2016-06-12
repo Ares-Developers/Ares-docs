@@ -1,0 +1,29 @@
+Particle Spawning
+~~~~~~~~~~~~~~~~~
+
+Animations can spawn particles using :tag:`SpawnsParticle`, but no matter how
+many are spawned, they would always spawn at the exact same location as the
+animation. These new tags allow to customize the distance from the center the
+particles will be spawned at.
+
+This feature divides the circle around animation's base coords into
+:tag:`NumParticles` sections. Each section will get exactly one spawned
+particle. The height above ground will be the same as the animation's height
+above the base cell.
+
+:tagdef:`[AnimType]SpawnsParticle.RangeMinimum=double - cells`
+  The distance from the center where particles start spawning at. Defaults to
+  :value:`0.0`.
+  
+  .. note:: If negative, the resulting random distance could come out as
+    negative. If this happens, the absolute value is used. This allows to double
+    the chance to spawn particles closer to the center.
+
+:tagdef:`[AnimType]SpawnsParticle.RangeMaximum=double - cells`
+  The distance from the center where particles will not spawn beyond. Has to be
+  equal to or larger than :tag:`SpawnsParticle.RangeMinimum`. Defaults to
+  :value:`0.0`.
+
+.. index:: Animations; Spawn Particles at a distance
+
+.. versionadded:: 0.C
