@@ -6,6 +6,27 @@ This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of :game:`Ares`. Internal changes, optimizations
 and updates are mentioned here only if they are notable.
 
+.. rubric:: Ares 0.C
+
++ **Bounty** is :doc:`money awarded for killing enemies </new/bounty>`
+
++ **Particles** :doc:`spark and railgun have been optimized heavily; gas can
+  damage more than one cell; gas, smoke, and fire support custom palettes
+  </new/particles>` and :doc:`animations can spawn particles farther away
+  </new/spawnsparticle>`
+
++ **Particle Systems** can now be :doc:`attached to projectiles
+  </new/projectiles/attachedsystem>`
+
++ **Factory Plant** :doc:`cost bonus effect can be modified for each unit or
+  structure </new/factoryplant>`
+
++ **Promotion** :doc:`sounds, EVA messages, and flashing </new/promotion>` can
+  be customized
+
++ **Weapon switching** when a unit is :doc:`out of ammo </new/noammoweapon>`
+
+
 .. rubric:: Ares 0.B
 
 + **Generic Prerequisites** now also :doc:`accept vehicles as prerequisites
