@@ -12,15 +12,15 @@ no longer occurs so spotlights can now be used.
 
 If an object with a spotlight cloaked, the spotlight was removed and would not
 reappear once the object uncloaked. This doesn't happen any more. The spotlight
-will be invisible while the object is cloaked, deactivated, or being warped out,
-though.
+will be invisible while the object is cloaked, deactivated, being warped out, or
+burrowed, though.
 
 :tagdef:`[TechnoType]HasSpotlight=boolean`
   If set to :value:`yes`, creates a spotlight from the unit or structure.
   Defaults to :value:`no`.
 :tagdef:`[TechnoType]Spotlight.StartHeight=integer - leptons`
   Specifies the number of leptons above the ground at which the spotlight will
-  be generated. Defaults to :value:`430`.
+  be generated. Has to be :value:`0` or greaater. Defaults to :value:`430`.
 :tagdef:`[TechnoType]Spotlight.Distance=integer - leptons`
   The number of leptons ahead of the unit where the spotlight will reach the
   ground. Defaults to :value:`1024`.
