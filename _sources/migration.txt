@@ -326,3 +326,26 @@ Changed tags:
 Other changes:
 
   None.
+
+From Ares 0.B and below
+
+
+Changed tags:
+
+  [TechnoType]►Spotlight.StartHeight
+    Default has been changed to 430. Defaulted to 200 before.
+
+  [TechnoType]►Spotlight.AttachedTo
+    The value barrel is no longer supported. Use turret
+    instead.
+
+  [Country]►AI.PowerPlants
+    Default for the second side and all sides after side 3 now includes
+    [General]►NodAdvancedPower again.
+
+  [Projectile]►SubjectToFirewall
+    The tag has been removed. Use [Projectile]►IgnoresFirestorm instead.
+
+Other changes:
+
+  None.

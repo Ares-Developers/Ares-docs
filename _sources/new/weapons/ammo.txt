@@ -21,6 +21,9 @@ Firing a weapon that uses up no ammunition does not reset the reload timer.
    Units that do ManualReload=yes will still target enemies
     and wait for reloading, which never happens.
 
+To make units and structures automatically switch to another weapon when out of
+ammo, see NoAmmoWeapon.
+
  Weapons; Weapon taking more than one round of ammo, or none at all
 
  0.B

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Country Defaults &mdash; Ares 0.B documentation</title>
+    <title>Country Defaults &mdash; Ares 0.C documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.B',
+        VERSION:     '0.C',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.B documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.C documentation" href="../../index.html" />
     <link rel="up" title="Sides &amp; Countries" href="index.html" />
     <link rel="next" title="User Interface" href="uicountry.html" />
     <link rel="prev" title="Score Screens and Themes" href="scorescreens.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="scorescreens.html" title="Score Screens and Themes"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.B documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.C documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Sides &amp; Countries</a> &raquo;</li> 
       </ul>
@@ -92,7 +92,11 @@
 <h2>AI and Base-Building<a class="headerlink" href="#ai-and-base-building" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[Country]►AI.PowerPlants=</span></code><span class="type definition"> (list of BuildingTypes)</span></span></dt>
-<dd>A list of buildings that the AI will treat as this country&#8217;s power plants.</dd>
+<dd>A list of buildings that the AI will treat as this country&#8217;s power plants.
+Defaults to <span><code class="docutils literal"><span class="pre">[General]►GDIPowerPlant</span></code></span> for the first side, to
+<span><code class="docutils literal"><span class="pre">[General]►ThirdPowerPlant</span></code></span> for the third side, and to
+<span><code class="docutils literal"><span class="pre">[General]►NodRegularPower</span></code></span> and <span><code class="docutils literal"><span class="pre">[General]►NodAdvancedPower</span></code></span> for the
+second side and all other sides.</dd>
 </dl>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 0.1.</span></p>
@@ -159,7 +163,7 @@ available, veteran cameos are displayed in the sidebar.</dd>
         <li class="right" >
           <a href="scorescreens.html" title="Score Screens and Themes"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.B documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.C documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Sides &amp; Countries</a> &raquo;</li> 
       </ul>

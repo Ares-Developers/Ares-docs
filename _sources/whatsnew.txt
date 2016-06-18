@@ -6,6 +6,24 @@ This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of Ares. Internal changes, optimizations
 and updates are mentioned here only if they are notable.
 
+ Ares 0.C
+
++ **Bounty** is money awarded for killing enemies
+
++ **Particles** spark and railgun have been optimized heavily; gas can
+  damage more than one cell; gas, smoke, and fire support custom palettes and animations can spawn particles farther away
+
++ **Particle Systems** can now be attached to projectiles
+
++ **Factory Plant** cost bonus effect can be modified for each unit or
+  structure
+
++ **Promotion** sounds, EVA messages, and flashing can
+  be customized
+
++ **Weapon switching** when a unit is out of ammo
+
+
  Ares 0.B
 
 + **Generic Prerequisites** now also accept vehicles as prerequisites
@@ -19,7 +37,7 @@ and updates are mentioned here only if they are notable.
 
 + **Self Heal** made customizable
 
-+ **Spys** can steal plans for one-time or permanent super weapons, and they can be deceived by deploying
++ **Spies** can steal plans for one-time or permanent super weapons, and they can be deceived by deploying
   fake buildings
 
 + **Disallow** players from getting the enter or no-enter cursor on

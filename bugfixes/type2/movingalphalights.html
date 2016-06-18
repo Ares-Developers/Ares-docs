@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Moving Alpha Lights &mdash; Ares 0.B documentation</title>
+    <title>Moving Alpha Lights &mdash; Ares 0.C documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.B',
+        VERSION:     '0.C',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.B documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.C documentation" href="../../index.html" />
     <link rel="up" title="Type 2 Fixes (Mod Logics)" href="index.html" />
     <link rel="next" title="Multiple AI Factories Clone Units" href="multipleaifactoriescloneunits.html" />
     <link rel="prev" title="Mirage Logic with Turrets/Barrels" href="miragelogicwithturretsbarrels.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="miragelogicwithturretsbarrels.html" title="Mirage Logic with Turrets/Barrels"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.B documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.C documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Bug Fixes</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Type 2 Fixes (Mod Logics)</a> &raquo;</li> 
       </ul>
@@ -85,10 +85,12 @@ Vehicles and Buildings) to have a lighting effect displayed on them.
 <span><code class="docutils literal"><span class="pre">[ObjectType]►AlphaImage=ALPHATST</span></code></span> instructs the game to display
 <code class="file docutils literal"><span class="pre">ALPHATST.shp</span></code> on the object as a lighting effect. The SHP must be saved
 without any compression (just like <code class="file docutils literal"><span class="pre">mouse.sha</span></code>).</p>
-<p><span class="game docutils literal">Ares</span> adds two improvements to this feature:</p>
+<p><span class="game docutils literal">Ares</span> adds the following improvements to this feature:</p>
 <ul class="simple">
 <li>The lighting effect will follow the object around as it moves, rather than
 staying where the object was created.</li>
+<li>The effect will be inactive when a unit is cloaked, disguised as a terrain
+object or moving below the surface.</li>
 <li>If the SHP has multiple frames then it is interpreted as a multi-facing image,
 and the largest N frames in the image are used as facing-specific versions (in
 this case, N is the largest power of 2 that is less than or equal to the
@@ -130,7 +132,7 @@ supported since <span class="game docutils literal">Ares</span> 0.5.</p>
         <li class="right" >
           <a href="miragelogicwithturretsbarrels.html" title="Mirage Logic with Turrets/Barrels"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.B documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.C documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Bug Fixes</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Type 2 Fixes (Mod Logics)</a> &raquo;</li> 
       </ul>

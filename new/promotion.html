@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Promotion settings &mdash; Ares 0.C documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.C',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.C documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Radar Jammers" href="radarjammers.html" />
+    <link rel="prev" title="Prerequisites" href="prerequisites.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="radarjammers.html" title="Radar Jammers"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="prerequisites.html" title="Prerequisites"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.C documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Promotion settings</a><ul>
+<li><a class="reference internal" href="#global-veteranflashtimer">Global <span><span class="type">VeteranFlashTimer</span></span></a></li>
+<li><a class="reference internal" href="#sounds-eva-and-flashing">Sounds, EVA and Flashing</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="prerequisites.html"
+                        title="previous chapter">Prerequisites</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="radarjammers.html"
+                        title="next chapter">Radar Jammers</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="promotion-settings">
+<h1>Promotion settings<a class="headerlink" href="#promotion-settings" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="global-veteranflashtimer">
+<h2>Global <span><span class="type">VeteranFlashTimer</span></span><a class="headerlink" href="#global-veteranflashtimer" title="Permalink to this headline">¶</a></h2>
+<p><span class="game docutils literal">Yuri&#8217;s Revenge</span> allowed units to flash only when they were promoted to
+elite veterancy. <span class="game docutils literal">Ares</span> adds a new global tag that works like
+<span><code class="docutils literal"><span class="pre">EliteFlashTimer</span></code></span>.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[AudioVisual]►VeteranFlashTimer=</span></code><span class="type definition"> (integer - frames)</span></span></dt>
+<dd>The number of frames a newly veteran unit or structure will flash for.
+Defaults to <cite>0</cite>.</dd>
+</dl>
+</div>
+<div class="section" id="sounds-eva-and-flashing">
+<span id="index-0"></span><h2>Sounds, EVA and Flashing<a class="headerlink" href="#sounds-eva-and-flashing" title="Permalink to this headline">¶</a></h2>
+<p>The following tags can be used to customize the sounds played and the flashing
+when the unit or structure is promoted.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Promote.VeteranSound=</span></code><span class="type definition"> (sound)</span></span></dt>
+<dd>The sound played when a unit of this type is promoted to veteran. Defaults to
+<span><code class="docutils literal"><span class="pre">[AudioVisual]►UpgradeVeteranSound</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Promote.EliteSound=</span></code><span class="type definition"> (sound)</span></span></dt>
+<dd>The sound played when a unit of this type is promoted to elite. Defaults to
+<span><code class="docutils literal"><span class="pre">[AudioVisual]►UpgradeEliteSound</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Promote.VeteranFlash=</span></code><span class="type definition"> (integer - frames)</span></span></dt>
+<dd>The number of frames a unit or structure of this type flashes when promoted to
+veteran. Defaults to <span><code class="docutils literal"><span class="pre">[AudioVisual]►VeteranFlashTimer</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Promote.EliteFlash=</span></code><span class="type definition"> (integer - frames)</span></span></dt>
+<dd>The number of frames a unit or structure of this type flashes when promoted to
+elite. Defaults to <span><code class="docutils literal"><span class="pre">[AudioVisual]►EliteFlashTimer</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►EVA.VeteranPromoted=</span></code><span class="type definition"> (EVA message)</span></span></dt>
+<dd>The message played when a unit or structure of this type is promoted to
+veteran level. Defaults to <cite>EVA_UnitPromoted</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►EVA.ElitePromoted=</span></code><span class="type definition"> (EVA message)</span></span></dt>
+<dd>The message played when a unit or structure of this type is promoted to
+elite level. Defaults to <cite>EVA_UnitPromoted</cite>.</dd>
+</dl>
+<div class="versionadded" id="index-1">
+<p><span class="versionmodified">New in version 0.C.</span></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="radarjammers.html" title="Radar Jammers"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="prerequisites.html" title="Prerequisites"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.C documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

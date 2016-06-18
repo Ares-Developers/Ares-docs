@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Particles &mdash; Ares 0.C documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.C',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.C documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Specific Passengers" href="passengers.html" />
+    <link rel="prev" title="Operator" href="operator.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="passengers.html" title="Specific Passengers"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="operator.html" title="Operator"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.C documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Particles</a><ul>
+<li><a class="reference internal" href="#optimizations">Optimizations</a></li>
+<li><a class="reference internal" href="#damage-range-for-gas-particles">Damage Range for Gas Particles</a></li>
+<li><a class="reference internal" href="#custom-palettes-for-shape-particles">Custom Palettes for Shape Particles</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="operator.html"
+                        title="previous chapter">Operator</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="passengers.html"
+                        title="next chapter">Specific Passengers</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="particles">
+<h1>Particles<a class="headerlink" href="#particles" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="optimizations">
+<h2>Optimizations<a class="headerlink" href="#optimizations" title="Permalink to this headline">¶</a></h2>
+<p>Particle handling has been greatly optimized in <span class="game docutils literal">Ares</span>. Pixel particles &#8211;
+that is types having <span><code class="docutils literal"><span class="pre">BehavesLike=</span></code></span> set to either <cite>Spark</cite> or
+<cite>Railgun</cite> &#8211; were known to cause lag even with relatively few particles
+involved. That is, even sparse railgun beams created a noticable slowdown.</p>
+<p>In <span class="game docutils literal">Ares</span> the optimization is activated automatically if all of the
+following are true. If any one is false, the optimization will not be applied
+and the particles will be handled like in earlier versions. That is, mixing and
+matching is still possible.</p>
+<ol class="arabic simple">
+<li><span><code class="docutils literal"><span class="pre">[ParticleSystem]►BehavesLike=</span></code></span> is either <cite>Spark</cite> or
+<cite>Railgun</cite></li>
+<li>The <span class="type docutils literal">ParticleType</span> set as <span><code class="docutils literal"><span class="pre">[ParticleSystemType]►HoldsWhat=</span></code></span> has the
+exact same setting</li>
+<li>The <span class="type docutils literal">ParticleType</span> does not use alpha images or line trailers</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Note that mixing <cite>Spark</cite> and <cite>Railgun</cite> will prevent the
+optimization from being applied.</p>
+</div>
+<p>The game&#8217;s existing particles have been optimized also, and even if the
+optimization is not applied, particles will be handled more efficiently.</p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.C.</span></p>
+</div>
+</div>
+<div class="section" id="damage-range-for-gas-particles">
+<h2>Damage Range for Gas Particles<a class="headerlink" href="#damage-range-for-gas-particles" title="Permalink to this headline">¶</a></h2>
+<p>Gas particles could only damage objects residing on the same cell as itself, no
+matter how big the particle&#8217;s image was. <span class="game docutils literal">Ares</span> allows to customize this.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[ParticleType]►DamageRange=</span></code><span class="type definition"> (double - cells)</span></span></dt>
+<dd>The particle damage is applied to all objects in this range around the gas
+particle. If less or equal to <cite>0.0</cite>, all objects in the cell the gas
+particle is on are affected. Each object is affected at most once. Defaults to
+<cite>0.0</cite>.</dd>
+</dl>
+<div class="versionadded" id="index-1">
+<p><span class="versionmodified">New in version 0.C.</span></p>
+</div>
+</div>
+<div class="section" id="custom-palettes-for-shape-particles">
+<h2>Custom Palettes for Shape Particles<a class="headerlink" href="#custom-palettes-for-shape-particles" title="Permalink to this headline">¶</a></h2>
+<p>Particles drawing shape images &#8211; that is types having <span><code class="docutils literal"><span class="pre">BehavesLike=</span></code></span> set
+to <cite>Gas</cite>, <cite>Smoke</cite>, or <cite>Fire</cite> &#8211; now support to be drawn
+using a custom palette.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[ParticleType]►Palette=</span></code><span class="type definition"> (filename with .pal extension)</span></span></dt>
+<dd>The palette used to draw an image particle of this type. Defaults to
+<cite>ANIM.PAL</cite>.</dd>
+</dl>
+<div class="versionadded" id="index-2">
+<p><span class="versionmodified">New in version 0.C.</span></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="passengers.html" title="Specific Passengers"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="operator.html" title="Operator"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.C documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

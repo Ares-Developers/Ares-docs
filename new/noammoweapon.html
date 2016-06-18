@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>NoAmmoWeapon &mdash; Ares 0.C documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.C',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.C documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="OmniCrusher Enhancements" href="omnicrusher.html" />
+    <link rel="prev" title="New Powered Unit Logic" href="newpoweredunitlogic.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="omnicrusher.html" title="OmniCrusher Enhancements"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="newpoweredunitlogic.html" title="New Powered Unit Logic"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.C documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="newpoweredunitlogic.html"
+                        title="previous chapter">New Powered Unit Logic</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="omnicrusher.html"
+                        title="next chapter"><span><span class="type">OmniCrusher</span></span> Enhancements</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="noammoweapon">
+<h1><span><span class="type">NoAmmoWeapon</span></span><a class="headerlink" href="#noammoweapon" title="Permalink to this headline">¶</a></h1>
+<p>Units and structures usually always use the same weapon against the same target.
+If the weapon is not charged because ammo is depleted, the unit will wait for it
+to reload. It will not try the next available weapon that might not even need
+ammunition.</p>
+<p>This feature works like <span><code class="docutils literal"><span class="pre">OpenTransportWeapon</span></code></span> (which forces another weapon
+on the condition that a unit is in an open-topped transport). It can be used to
+make the unit or structure switch to a less powerful weapon automatically and
+use it until ammo has been reloaded, or to disable firing any weapon when set to
+a weapon that requires ammo.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►NoAmmoWeapon=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd><p class="first">The weapon index to switch to when there is no ammo left. This will override
+the normal weapon selection and only allow this weapon to be selected. Valid
+values <cite>0</cite> for the primary weapon and <cite>1</cite> for the secondary. Use
+<cite>-1</cite> to not switch weapons. Defaults to <cite>-1</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This tag cannot override the <span><code class="docutils literal"><span class="pre">DeployFireWeapon</span></code></span> enabled by
+<span><code class="docutils literal"><span class="pre">DeployFire=yes</span></code></span> on <span class="type docutils literal">VehicleTypes</span> and <span><code class="docutils literal"><span class="pre">InfantryTypes</span></code></span>.</p>
+</div>
+</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►NoAmmoAmount=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd>If the current ammo is equal to or below this value, the <span><code class="docutils literal"><span class="pre">NoAmmoWeapon</span></code></span>
+will be used. Defaults to <cite>0</cite>.</dd>
+</dl>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.C.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="omnicrusher.html" title="OmniCrusher Enhancements"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="newpoweredunitlogic.html" title="New Powered Unit Logic"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.C documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

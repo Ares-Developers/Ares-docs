@@ -1,0 +1,14 @@
+AttachedSystem Trailers
+
+
+In addition to using animation trailers, Ares allows to attach particle
+systems to projectiles to emit smoke particles on their way to the target. This
+works like the same tag on VoxelAnimTypes.
+
+[Projectile]AttachedSystem=ParticleSystemType
+  The type of the particle system to attach to this projectile. Only particle
+  systems  with BehavesLike=smoke are supported.
+
+ Projectiles; Attach ParticleSystems
+
+ 0.C

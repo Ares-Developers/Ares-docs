@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Spotlights &mdash; Ares 0.B documentation</title>
+    <title>Spotlights &mdash; Ares 0.C documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.B',
+        VERSION:     '0.C',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.B documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.C documentation" href="../index.html" />
     <link rel="up" title="Restored Tiberian Sun Logic" href="index.html" />
     <link rel="next" title="Vehicle Thief" href="vehicle-thief.html" />
     <link rel="prev" title="Multi Engineer Checkbox" href="multiengineercheckbox.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="multiengineercheckbox.html" title="Multi Engineer Checkbox"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.B documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.C documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Restored Tiberian Sun Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -77,44 +77,52 @@
             
   <div class="section" id="spotlights">
 <h1>Spotlights<a class="headerlink" href="#spotlights" title="Permalink to this headline">¶</a></h1>
+<p>Spotlights are now available to all of the Big Four types, not just
+<span class="type docutils literal">BuildingTypes</span>. When attached to a <span class="type docutils literal">BuildingType</span>, the spotlight
+still behaves like it used to, just circling around, but when it is attached to
+a different unit type, such as a <span class="type docutils literal">VehicleType</span>, it is fixed to shine
+straight ahead.</p>
 <p>Spotlights would cause an Internal Error whenever they were created. The error
 no longer occurs so spotlights can now be used.</p>
+<p>If an object with a spotlight cloaked, the spotlight was removed and would not
+reappear once the object uncloaked. This doesn&#8217;t happen any more. The spotlight
+will be invisible while the object is cloaked, deactivated, being warped out, or
+burrowed, though.</p>
 <dl class="docutils">
-<dt><span><code class="definition docutils literal"><span class="pre">[Unit]►HasSpotlight=</span></code><span class="type definition"> (boolean)</span></span></dt>
-<dd>If set to <cite>yes</cite>, creates a spotlight from the unit (note that this is
-now available to all of the Big Four types, not just <span class="type docutils literal">BuildingTypes</span>).
-When attached to a <span class="type docutils literal">BuildingType</span>, the spotlight still behaves like it
-used to, just circling around, but when it is attached to a different unit
-type, such as a <span class="type docutils literal">VehicleType</span>, it is fixed to shine straight ahead.
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►HasSpotlight=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>If set to <cite>yes</cite>, creates a spotlight from the unit or structure.
 Defaults to <cite>no</cite>.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[Unit]►Spotlight.StartHeight=</span></code><span class="type definition"> (integer - leptons)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Spotlight.StartHeight=</span></code><span class="type definition"> (integer - leptons)</span></span></dt>
 <dd>Specifies the number of leptons above the ground at which the spotlight will
-be generated. Defaults to <cite>250</cite>.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[Unit]►Spotlight.Distance=</span></code><span class="type definition"> (integer - leptons)</span></span></dt>
+be generated. Has to be <cite>0</cite> or greaater. Defaults to <cite>430</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Spotlight.Distance=</span></code><span class="type definition"> (integer - leptons)</span></span></dt>
 <dd>The number of leptons ahead of the unit where the spotlight will reach the
 ground. Defaults to <cite>1024</cite>.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[Unit]►Spotlight.AttachedTo=</span></code><span class="type definition"> (enumeration - one of body|turret|barrel)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Spotlight.AttachedTo=</span></code><span class="type definition"> (enumeration - one of body|turret)</span></span></dt>
 <dd>The part of the unit that the spotlight will align to in regards to facing. If
 set to <cite>body</cite> then the spotlight will be pointed in the direction the
 unit&#8217;s body is facing, if set to <cite>turret</cite> then the spotlight will be
 pointed in the direction the unit&#8217;s turret is facing. Does not work on
 <span class="type docutils literal">BuildingTypes</span>. Defaults to <cite>body</cite>.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[Unit]►Spotlight.DisableRed=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Spotlight.DisableRed=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>If set to <cite>yes</cite> then the spotlight will not emit any red light.
 Defaults to <cite>no</cite>.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[Unit]►Spotlight.DisableGreen=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Spotlight.DisableGreen=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>If set to <cite>yes</cite> then the spotlight will not emit any green light.
 Defaults to <cite>no</cite>.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[Unit]►Spotlight.DisableBlue=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Spotlight.DisableBlue=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>If set to <cite>yes</cite> then the spotlight will not emit any blue light.
 Defaults to <cite>no</cite>.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[Unit]►Spotlight.DisableColor=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Spotlight.DisableColor=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>If set to <cite>yes</cite> then the spotlight will paint the ground darker,
 instead of brighter, and the disable red/green/blue flags mentioned above will
 be ignored. Defaults to <cite>no</cite>.</dd>
 </dl>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 0.C.</span></p>
 </div>
 </div>
 
@@ -136,7 +144,7 @@ be ignored. Defaults to <cite>no</cite>.</dd>
         <li class="right" >
           <a href="multiengineercheckbox.html" title="Multi Engineer Checkbox"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.B documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.C documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >Restored Tiberian Sun Logic</a> &raquo;</li> 
       </ul>
     </div>

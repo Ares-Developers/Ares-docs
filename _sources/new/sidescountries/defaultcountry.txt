@@ -6,6 +6,10 @@ AI and Base-Building
 
 [Country]AI.PowerPlants=list of BuildingTypes
   A list of buildings that the AI will treat as this country's power plants.
+  Defaults to [General]►GDIPowerPlant for the first side, to
+  [General]►ThirdPowerPlant for the third side, and to
+  [General]►NodRegularPower and [General]►NodAdvancedPower for the
+  second side and all other sides.
 
  0.1
 

@@ -26,7 +26,7 @@ TechnoTypes) and Warheads, unless stated otherwise.
    The animation always loops until the effect subsides.
     LoopCount is ignored.
 
-[Section]AttachEffect.Duration=integer
+[Section]AttachEffect.Duration=integer - frames
   The duration of the effect in frames. Use -1 for infinite duration.
   Defaults to 0.
 
@@ -60,10 +60,15 @@ TechnoTypes) and Warheads, unless stated otherwise.
 
 The following tags are valid on TechnoTypes only:
 
-[TechnoType]AttachEffect.Delay=integer
+[TechnoType]AttachEffect.Delay=integer - frames
   Defines how many frames after the previous effect subsides the AttachEffect is
   recreated on the unit itself. Negative values do not renew the effect.
   Defaults to 0 (immediately).
+
+[TechnoType]AttachEffect.InitialDelay=integer - frames
+  Defines the delay before creating the AttachEffect for the very first time.
+  Subsequent delays are defined by AttachEffect.Delay. Use 0 to
+  create effect immediately. Defaults to 0.
 
 The following tags are valid on Warheads only:
 
@@ -82,3 +87,4 @@ The following tags are valid on Warheads only:
 
  0.4
  0.5
+ 0.C

@@ -13,10 +13,12 @@ Vehicles and Buildings) to have a lighting effect displayed on them.
 ALPHATST.shp on the object as a lighting effect. The SHP must be saved
 without any compression (just like mouse.sha).
 
-Ares adds two improvements to this feature:
+Ares adds the following improvements to this feature:
 
 + The lighting effect will follow the object around as it moves, rather than
   staying where the object was created.
++ The effect will be inactive when a unit is cloaked, disguised as a terrain
+  object or moving below the surface.
 + If the SHP has multiple frames then it is interpreted as a multi-facing image,
   and the largest N frames in the image are used as facing-specific versions (in
   this case, N is the largest power of 2 that is less than or equal to the

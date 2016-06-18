@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Migration Guide &mdash; Ares 0.B documentation</title>
+    <title>Migration Guide &mdash; Ares 0.C documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.B',
+        VERSION:     '0.C',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.B documentation" href="index.html" />
+    <link rel="top" title="Ares 0.C documentation" href="index.html" />
     <link rel="next" title="Bug Fixes" href="bugfixes/index.html" />
     <link rel="prev" title="What’s New" href="whatsnew.html" /> 
   </head>
@@ -41,7 +41,7 @@
         <li class="right" >
           <a href="whatsnew.html" title="What’s New"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Ares 0.B documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 0.C documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -59,6 +59,7 @@
 <li><a class="reference internal" href="#from-ares-0-8-and-below">From Ares 0.8 and below</a></li>
 <li><a class="reference internal" href="#from-ares-0-9-and-below">From Ares 0.9 and below</a></li>
 <li><a class="reference internal" href="#from-ares-0-a-and-below">From Ares 0.A and below</a></li>
+<li><a class="reference internal" href="#from-ares-0-b-and-below">From Ares 0.B and below</a></li>
 </ul>
 </li>
 </ul>
@@ -358,6 +359,27 @@ in.</p>
 <blockquote>
 <div>None.</div></blockquote>
 </div>
+<div class="section" id="from-ares-0-b-and-below">
+<h2>From Ares 0.B and below<a class="headerlink" href="#from-ares-0-b-and-below" title="Permalink to this headline">¶</a></h2>
+<p>Changed tags:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><span><code class="docutils literal"><span class="pre">[TechnoType]►Spotlight.StartHeight</span></code></span></dt>
+<dd>Default has been changed to <cite>430</cite>. Defaulted to <cite>200</cite> before.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[TechnoType]►Spotlight.AttachedTo</span></code></span></dt>
+<dd>The value <cite>barrel</cite> is no longer supported. Use <cite>turret</cite>
+instead.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[Country]►AI.PowerPlants</span></code></span></dt>
+<dd>Default for the second side and all sides after side 3 now includes
+<span><code class="docutils literal"><span class="pre">[General]►NodAdvancedPower</span></code></span> again.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[Projectile]►SubjectToFirewall</span></code></span></dt>
+<dd>The tag has been removed. Use <span><code class="docutils literal"><span class="pre">[Projectile]►IgnoresFirestorm</span></code></span> instead.</dd>
+</dl>
+</div></blockquote>
+<p>Other changes:</p>
+<blockquote>
+<div>None.</div></blockquote>
+</div>
 </div>
 
 
@@ -378,7 +400,7 @@ in.</p>
         <li class="right" >
           <a href="whatsnew.html" title="What’s New"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Ares 0.B documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 0.C documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

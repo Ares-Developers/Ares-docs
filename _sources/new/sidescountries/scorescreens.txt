@@ -22,10 +22,10 @@ piece, an animation, and a palette file for all three.
 
 [Side]CampaignScore.Animation=filename, *including* the .shp extension
   An image played as a loop after the introductory transition until the dialog
-  is closed. The exact looping point is not known. Uses the palette defined as
-  CampaignScore.Palette. Defaults to ASCRAMD.SHP,
-  SSCRAMD.SHP or SYCRAMD.SHP for sides 1, 2 and all others
-  respectively.
+  is closed. The first 29 frames are played once, the remaining frames are then
+  looped. Uses the palette defined as CampaignScore.Palette. Defaults to
+  ASCRAMD.SHP, SSCRAMD.SHP or SYCRAMD.SHP for sides
+  1, 2 and all others respectively.
 
 [Side]CampaignScore.Palette=filename, *including* the .pal extension
   The palette to draw all animations on the campaign score screen. Defaults to
