@@ -47,10 +47,6 @@ destroyed by bounty hunters.
   The amount rewarded as bounty if an object with this veterancy is destroyed.
   Can be negative to penalize the player. Defaults to :tag:`Bounty.Value`.
 
-:tagdef:`[TechnoType]Bounty.Value=integer - credits`
-  The amount rewarded as bounty. Can be negative to penalize the player. If set,
-  resets the veterancy level specific values. Defaults to :value:`0`.
-
 .. index:: TechnoTypes; Bounty awarded for killings
 
 .. versionadded:: 0.C
