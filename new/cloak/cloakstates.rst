@@ -4,9 +4,9 @@ Cloak Depending On State
 Cloak Only If Standing Still (:captiontag:`CloakStop`)
 ------------------------------------------------------
 
-In :game:`Tiberian Sun` units could be made to cloak only when they stopped
-moving using :tag:`CloakStop=yes`. This tag was not working in the following
-games. :game:`Ares` restores it.
+In :game:`Tiberian Sun` units were supposed to be made to cloak only when they
+stopped moving using :tag:`CloakStop=yes`. This tag was never actually working
+though. :game:`Ares` implements it.
 
 .. note:: \ :tag:`CloakStop=yes` is not supported for :tag:`BalloonHover=yes`
   units. It does not work without :tag:`Cloakable=yes`. :value:`CLOAK` ability
