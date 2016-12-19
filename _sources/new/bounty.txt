@@ -47,10 +47,6 @@ destroyed by bounty hunters.
   The amount rewarded as bounty if an object with this veterancy is destroyed.
   Can be negative to penalize the player. Defaults to Bounty.Value.
 
-[TechnoType]Bounty.Value=integer - credits
-  The amount rewarded as bounty. Can be negative to penalize the player. If set,
-  resets the veterancy level specific values. Defaults to 0.
-
  TechnoTypes; Bounty awarded for killings
 
  0.C

@@ -4,9 +4,9 @@ Cloak Depending On State
 Cloak Only If Standing Still (CloakStop)
 
 
-In Tiberian Sun units could be made to cloak only when they stopped
-moving using CloakStop=yes. This tag was not working in the following
-games. Ares restores it.
+In Tiberian Sun units were supposed to be made to cloak only when they
+stopped moving using CloakStop=yes. This tag was never actually working
+though. Ares implements it.
 
  \ CloakStop=yes is not supported for BalloonHover=yes
   units. It does not work without Cloakable=yes. CLOAK ability
