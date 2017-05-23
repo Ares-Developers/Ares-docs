@@ -20,9 +20,9 @@ These settings allow to enable AI targeting even for human players.
   this super weapon when clicking the cameo. This setting is ignored if
   :tag:`SW.AutoFire=no` is set, because the player would have no way to fire
   this super weapon. You can use this on auto-firing super weapons where the
-  targeting mode might prevents it from being fired (like the Lightning Storm
-  or Psychic Dominator, if another super weapon of this type is currently
-  active). Defaults to :value:`yes`.
+  targeting mode might prevent it from being fired (like the Lightning Storm or
+  Psychic Dominator, if another super weapon of this type is currently active).
+  Defaults to :value:`yes`.
 
 .. versionadded:: 0.2
 
