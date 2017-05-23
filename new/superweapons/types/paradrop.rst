@@ -5,6 +5,8 @@ Default values for general tags:
 
 :tagdef:`[SuperWeapon]SW.AITargeting=enum`
   Defaults to :value:`ParaDrop`.
+:tagdef:`[SuperWeapon]Cursor=mouse cursor`
+  Defaults to :value:`ParaDrop`.
 
 
 The original flags that control the units provided by the generic paradrop super

@@ -17,6 +17,8 @@ Default values for general tags:
 :tagdef:`[SuperWeapon]Light.*=integer`
   Default to :tag:`Light.Ambient=200`, :tag:`Light.Red=175`,
   :tag:`Light.Green=150`, and :tag:`Light.Blue=125` respectively.
+:tagdef:`[SuperWeapon]Cursor=mouse cursor`
+  Defaults to :value:`Nuke`.
 
 
 Nuclear missile specific tags:

@@ -28,6 +28,8 @@ Default values for general tags:
   Specifies whether the mutation effect should be limited to :value:`land` or
   :value:`water` targets. You cannot define any unit type here and they will be
   ignored. Ignored if :tag:`Mutate.Explosion=yes`. Defaults to :value:`all`.
+:tagdef:`[SuperWeapon]Cursor=mouse cursor`
+  Defaults to :value:`GeneticMutator`.
 
 
 Genetic Mutator specific tags:

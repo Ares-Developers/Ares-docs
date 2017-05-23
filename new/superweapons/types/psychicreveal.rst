@@ -15,6 +15,8 @@ Default values for general tags:
   Defaults to :tag:`[AudioVisual]PsychicRevealActivateSound`.
 :tagdef:`[SuperWeapon]SW.AITargeting=enum`
   Defaults to :value:`ParaDrop`.
+:tagdef:`[SuperWeapon]Cursor=mouse cursor`
+  Defaults to :value:`PsychicReveal`.
 
 .. versionadded:: 0.2
 .. versionchanged:: 0.9

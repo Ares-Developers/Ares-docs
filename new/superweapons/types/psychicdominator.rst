@@ -26,6 +26,8 @@ Default values for general tags:
   :value:`infantry,units`.
 :tagdef:`[SuperWeapon]Light.*=integer`
   Default to the scenario's :tag:`[Lighting]Dominator*`.
+:tagdef:`[SuperWeapon]Cursor=mouse cursor`
+  Defaults to :value:`PsychicDominator`.
 
 
 Psychic Dominator specific tags:

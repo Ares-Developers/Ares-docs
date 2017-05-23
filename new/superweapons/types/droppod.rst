@@ -21,6 +21,8 @@ Default values for general tags:
   Defaults to :value:`EVA_DropPodReady`.
 :tagdef:`[SuperWeapon]EVA.Activated=EVA event`
   Defaults to :value:`EVA_DropPodActivated`.
+:tagdef:`[SuperWeapon]Cursor=mouse cursor`
+  Defaults to :value:`ParaDrop`.
 
 
 Drop Pod specific tags:

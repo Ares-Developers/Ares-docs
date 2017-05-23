@@ -30,6 +30,12 @@ Default values for general tags:
   use :value:`NoTarget` to enable AI players to use it. Defaults to
   :value:`None`.
 
+:tagdef:`[SuperWeapon]Cursor=mouse cursor`
+  Used when the target is in range of a cannon. Defaults to :value:`Attack`.
+
+:tagdef:`[SuperWeapon]NoCursor=mouse cursor`
+  Used when there is no cannon in range. Defaults to :value:`AttackOutOfRange`.
+
 EMPulse specific tags:
 
 :tagdef:`[SuperWeapon]EMPulse.Cannons=list of BuildingType`

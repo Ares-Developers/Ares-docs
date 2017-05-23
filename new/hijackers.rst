@@ -58,6 +58,9 @@ it isn't immune to psionics.
 Vehicle Thieves cannot hijack friendly units or vehicles neutralized by the Kill
 Driver warheads. See :doc:`KillDriver and CanDrive </new/killingdrivers>`.
 
+See :doc:`Mouse Cursors </new/cursors>` on how to customize the cursor to
+indicate a vehicle can be hijacked by defining :value:`TakeVehicle`.
+
 .. index:: Infantry; Expanded VehicleThief logic.
 
 .. versionadded:: 0.2

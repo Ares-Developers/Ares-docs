@@ -6,7 +6,8 @@ structures and destroy them immediately, sacrificing himself. This has been
 re-created in :game:`Ares`.
 
 Only buildings owned by enemy players are sabotagable. If a building can be
-sabotaged, the player gets the enter cursor.
+sabotaged, the player gets the cursor named :value:`Sabotage`, which is a new
+customizable :doc:`Mouse Cursor </new/cursors>`.
 
 .. note:: The temporary cloak feature has not been implemented.
 

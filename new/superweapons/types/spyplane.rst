@@ -5,6 +5,8 @@ Default values for general tags:
 
 :tagdef:`[SuperWeapon]SW.AITargeting=enum`
   Defaults to :value:`ParaDrop`.
+:tagdef:`[SuperWeapon]Cursor=mouse cursor`
+  Defaults to :value:`SpyPlane`.
 
 
 Spy Plane specific tags:

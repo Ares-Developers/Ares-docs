@@ -7,6 +7,9 @@ them around the map and place them anywhere. The carryall logic was not used in
 :game:`Red Alert 2` and was not updated for naval units and other new features.
 :game:`Ares` updates the logic and adds new options.
 
+If a unit can be picked up, the cursor named :value:`Tote` is shown. See how to
+customize this :doc:`Mouse Cursor </new/cursors>`.
+
 :tagdef:`[AircraftType]Carryall.SizeLimit=integer`
   The maximum :tag:`Size=` that this carryall can lift. Use :value:`-1` to allow
   any size. Defaults to :value:`-1`.

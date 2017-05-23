@@ -349,3 +349,30 @@ Changed tags:
 Other changes:
 
   None.
+
+From Ares 0.C and below
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Changed tags:
+
+  :tag:`[General]EngineerDamageCursor`
+    The tag has been removed. Customize the :value:`EngineerDamage` cursor
+    instead.
+
+  :tag:`[General]TogglePowerCursor`
+    The tag has been removed. Customize the :value:`TogglePower` cursor
+    instead.
+
+  :tag:`[General]TogglePowerNoCursor`
+    The tag has been removed. Customize the :value:`NoTogglePower` cursor
+    instead.
+
+  :tag:`[SuperWeapon]Cursor`
+    The tag has been changed to only support mouse cursor names.
+
+  :tag:`[SuperWeapon]NoCursor`
+    The tag has been changed to only support mouse cursor names.
+
+Other changes:
+
+  None.

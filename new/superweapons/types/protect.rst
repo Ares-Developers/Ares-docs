@@ -33,6 +33,11 @@ Default values for general tags:
 :tagdef:`[SuperWeapon]SW.RequiresHouse=enum`
   Defaults to :value:`team` for :value:`ForceShield`, to :value:`none`
   otherwise.
+:tagdef:`[SuperWeapon]Cursor=mouse cursor`
+    Defaults to :value:`ForceShield` for :value:`ForceShield`, to
+    :value:`IronCurtain` otherwise.
+:tagdef:`[SuperWeapon]NoCursor=mouse cursor`
+    Defaults to :value:`NoForceShield` for :value:`ForceShield`.
 
 
 Iron Curtain and Force Shield specific tags:

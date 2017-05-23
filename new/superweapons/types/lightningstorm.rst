@@ -21,6 +21,8 @@ Default values for general tags:
   Defaults to :value:`LightningStorm`.
 :tagdef:`[SuperWeapon]Light.*=integer`
   Default to the scenario's :tag:`[Lighting]Ion*`.
+:tagdef:`[SuperWeapon]Cursor=mouse cursor`
+  Defaults to :value:`LightningStorm`.
 
 
 Lightning Storm specific tags:
