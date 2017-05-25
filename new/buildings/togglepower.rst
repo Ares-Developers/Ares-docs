@@ -30,7 +30,7 @@ Cursors
 -------
 
 The two mouse cursors this feature uses can be customized with the following
-:doc:`Mouse Cursor </new/cursors>` definitions:
+:doc:`Mouse Cursor </new/mousecursors>` definitions:
 
 :value:`TogglePower`: Shown if the building's power status can be toggled. Only
 buildings owned by the player can toggle the power, if :tag:`TogglePower=yes`

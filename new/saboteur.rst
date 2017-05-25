@@ -7,7 +7,7 @@ re-created in :game:`Ares`.
 
 Only buildings owned by enemy players are sabotagable. If a building can be
 sabotaged, the player gets the cursor named :value:`Sabotage`, which is a new
-customizable :doc:`Mouse Cursor </new/cursors>`.
+customizable :doc:`Mouse Cursor </new/mousecursors>`.
 
 .. note:: The temporary cloak feature has not been implemented.
 

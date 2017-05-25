@@ -2,8 +2,8 @@ Cursors
 ```````
 
 :game:`Ares` allows you to specify custom mouse cursors for the super weapon,
-using the following flags. See :doc:`Mouse Cursors </new/cursors>` on how to
-define them.
+using the following flags. See :doc:`Mouse Cursors </new/mousecursors>` on how
+to define them.
 
 :tagdef:`[SuperWeapon]Cursor=mouse cursor`
   Cursor to use when it is ok to fire the super weapon at the given location.

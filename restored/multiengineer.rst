@@ -34,7 +34,7 @@ See :doc:`/restored/multiengineercheckbox` to enable the user to turn the Multi
 Engineer option on and off from the game menu. If the checkbox is not enabled,
 the game will enforce the settings defined in :file:`rulesmd.ini`.
 
-See :doc:`Mouse Cursors </new/cursors>` on how to customize the cursor to
+See :doc:`Mouse Cursors </new/mousecursors>` on how to customize the cursor to
 indicate an engineer will only damage the building instead of capturing it by
 defining :value:`EngineerDamage`.
 

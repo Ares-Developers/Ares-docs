@@ -8,7 +8,7 @@ them around the map and place them anywhere. The carryall logic was not used in
 :game:`Ares` updates the logic and adds new options.
 
 If a unit can be picked up, the cursor named :value:`Tote` is shown. See how to
-customize this :doc:`Mouse Cursor </new/cursors>`.
+customize this :doc:`Mouse Cursor </new/mousecursors>`.
 
 :tagdef:`[AircraftType]Carryall.SizeLimit=integer`
   The maximum :tag:`Size=` that this carryall can lift. Use :value:`-1` to allow
