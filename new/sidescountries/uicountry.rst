@@ -23,9 +23,13 @@ Display and Selection Chance
   calculated by dividing this country's :tag:`RandomSelectionWeight` value by
   the sum of all :tag:`Multiplay=yes` countries' :tag:`RandomSelectionWeight`
   values. Defaults to :value:`1`.
+:tagdef:`[Country]AIRandomSelectionWeight=integer`
+  The random selection weight used for AI players. This can be used to make it
+  more or less likely for AI players to pick this country randomly. Defaults to
+  :tag:`RandomSelectionWeight`.
 
 .. versionadded:: 0.1
-.. versionchanged:: 0.2
+.. versionchanged:: 0.D
 
 
 Flags and Observer Graphics
