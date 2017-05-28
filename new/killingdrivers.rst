@@ -11,12 +11,18 @@ it, and allows others to take over the now-neutral vehicle.
   damaging the vehicle itself. The first passenger matching the vehicle's
   :tag:`Operator` is considered the driver. All other passengers will be
   ejected. Defaults to :value:`no`.
+
+  This logic respects :tag:`AffectsAllies` and :tag:`AffectsEnemies`.
 :tagdef:`[Warhead]KillDriver.Owner=enumeration - civilian,special,neutral`
   Specifies the house the units are assigned to. Defaults to :value:`special`.
 :tagdef:`[Warhead]KillDriver.KillBelowPercent=float`
   Specifies the percentage of health a unit can not exceed to have its driver
   killed by a :tag:`KillDriver=yes` warhead. A unit above this health level
   is only damaged and the driver is not killed. Defaults to :value:`100%`.
+
+
+The following settings can make a unit immune to the Kill Driver logic:
+
 :tagdef:`[TechnoType]ProtectedDriver=boolean`
   Whether the driver of this vehicle cannot be killed, i.e. whether this vehicle
   is immune to :tag:`KillDriver`. :tag:`Organic=yes` and :tag:`Natural=yes`
@@ -28,12 +34,22 @@ it, and allows others to take over the now-neutral vehicle.
   minimum of the two values is used, that is, this tag can make a unit more
   resistant against driver killing weapons. Defaults to :value:`0.0` if
   :tag:`ProtectedDriver=yes`, to :value:`1.0` otherwise.
+
+
+Drivers are infantry units that can capture neutral vehicles, like ones that had
+their driver killed.
+
 :tagdef:`[TechnoType]CanDrive=boolean`
   Whether this :type:`InfantryType` can act as the driver of vehicles whose
   driver has been killed, effectively reclaiming the vehicle. If the vehicle
   requires an :tag:`Operator` the infantry driver turns the unit and enters as
   passenger that can be ejected later, otherwise the driver is swallowed,
   becoming the permanent driver of the vehicle. Defaults to :value:`no`.
+
+:tagdef:`[Country]CanBeDriven=boolean`
+  Whether units owned by this country can be captured by :tag:`CanDrive=yes`
+  infantry. This can be used to place units owned by neutral countries on the
+  map without them being capturable. Defaults to :tag:`MultiplayPassive`.
 
 .. note:: Vehicle Thieves cannot drive neutralized vehicles by default, but
   \ :tag:`VehicleThief=yes` can be combined with :tag:`CanDrive=yes` without
@@ -43,6 +59,8 @@ See :doc:`/new/hijackers` for more options that relate to :tag:`CanDrive`.
 
 .. index:: Warheads; Warheads can be set to kill the driver of a vehicle, instead of damaging it.
 
+.. index:: Infantry; Capture units that had their drivers killed.
+
 .. versionadded:: 0.2
 
-.. versionchanged:: 0.9
+.. versionchanged:: 0.D
