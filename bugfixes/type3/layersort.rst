@@ -1,0 +1,16 @@
+===================
+Inefficient Sorting
+===================
+
+The game function responsible for reordering all objects on the map for drawing
+was implemented inefficiently. It was bubbling up a single item per frame by
+comparing two values and swapping them if needed, then looking at the next pair,
+iterating all objects. During this process, for each comparison it recalculated
+the values it just used over and over again. The function was not reusing the
+values of the last comparison it just made, even though one of them would always
+be needed in the next comparison.
+
+:game:`Ares` replaces the function with a more complex algorithm that should run
+faster while also giving higher quality results.
+
+.. versionadded:: 0.D
