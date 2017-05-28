@@ -65,13 +65,14 @@ Paradrop Defaults
   (Allied), :tag:`[General]SovParaDropNum` for Nod (Soviet), and
   :tag:`[General]YuriParaDropNum` for ThirdSide (Yuri).
 :tagdef:`[Side]ParaDrop.Aircraft=AircraftType`
-  The aircraft type that will be used to deliver paradrops. Defaults to
-  :value:`PDPLANE`.
+  The aircraft type that will be used to deliver paradrops from super weapons or
+  by teams created by map actions. Defaults to :value:`PDPLANE`.
 :tagdef:`[Side]Parachute.Anim=Animation`
   This side's default parachute used if not overridden by the country or a
   :type:`TechnoType`. Defaults to :value:`PARACH`.
 
 .. versionadded:: 0.2
+.. versionchanged:: 0.D
 
 
 Hunter Seeker Defaults

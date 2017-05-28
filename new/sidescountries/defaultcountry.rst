@@ -30,14 +30,16 @@ Paradrop Defaults
   that will be paradropped. Defaults to the corresponding side's
   :tag:`ParaDrop.Num=`.
 :tagdef:`[Country]ParaDrop.Aircraft=AircraftType`
-  The aircraft type that will be used to deliver paradrops. Defaults to the
-  corresponding side's :tag:`ParaDrop.Aircraft=`.
+  The aircraft type that will be used to deliver paradrops from super weapons or
+  by teams created by map actions. Defaults to the corresponding side's
+  :tag:`ParaDrop.Aircraft=`.
 :tagdef:`[Country]Parachute.Anim=Animation`
   This country's default parachute used if not overridden by a
   :type:`TechnoType`. Defaults to the corresponding side's
   :tag:`Parachute.Anim=`.
 
 .. versionadded:: 0.2
+.. versionchanged:: 0.D
 
 
 Others
