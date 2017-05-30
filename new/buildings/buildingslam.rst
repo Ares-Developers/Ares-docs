@@ -1,4 +1,4 @@
-Buidling Slam
+Building Slam
 ~~~~~~~~~~~~~
 
 When a building is placed, the building slam sound is played to the owner. This
