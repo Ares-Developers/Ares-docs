@@ -54,3 +54,4 @@ section.
 	
 	defaultcountry
 	uicountry
+	startinmultiplayer
