@@ -36,6 +36,13 @@ concept art on the Command & Conquer Wiki
     \ :type:`VehicleTypes` and :type:`AircraftTypes`, on the other hand, should
     be reported immediately.
 
+:tagdef:`[Weapon]Abductor.Temporal=boolean`
+  Instead of abducting target units immediately, will abduct them only after
+  they have been temporally erased. When the target unit would be warped away,
+  it will be placed inside the abductor unit as passenger. If abduction fails,
+  the target is erased normally. Requires :tag:`Temporal=yes` to be set on
+  :tag:`Warhead`. Defaults to :value:`no`.
+
 :tagdef:`[Weapon]Abductor.Anim=animation`
   This animation will be spawned at the location a unit is abducted from.
   Defaults to :value:`none`.
