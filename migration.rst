@@ -252,7 +252,7 @@ Other changes:
 
   The Unit Delivery super weapon uses a new placing method. Compared to previous
   versions, unit and buildings are placed more random now. Delivered objects are
-  put on guard or hunt mission.
+  put on guard, area guard or hunt mission.
 
   Force Shield no longer considers buildings with :tag:`ForceShield.Modifier`
   less than or equal to :value:`0.0` eligible targets.
@@ -373,7 +373,15 @@ Changed tags:
   :tag:`[SuperWeapon]NoCursor`
     The tag has been changed to only support mouse cursor names.
 
+  :tag:`[SuperWeapon]Deliver.Buildups`
+    The tag has been removed. Buildups are now always on.
+
 Other changes:
 
   Some :type:`ArmorType` parsing issues have been resolved to improve defaulting
   to other types, and to not reset data unexpectedly.
+
+  The Unit Delivery super weapon has been reworked. It now allows to place units
+  on ore, and delivered objects are put on guard, area guard or hunt mission.
+  The option to skip the buildup animations has been deprectated, because it
+  never worked correctly.

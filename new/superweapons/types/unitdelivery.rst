@@ -19,9 +19,6 @@ Unit Delivery specific tags:
 :tagdef:`[SuperWeapon]Deliver.Types=list of TechnoTypes`
   The list of units that will be delivered. This works for infantry, vehicles,
   aircraft and buildings.
-:tagdef:`[SuperWeapon]Deliver.Buildups=boolean`
-  Whether or not buildings delivered by this super weapon should play their
-  buildup animation prior to becoming available. Defaults to :value:`no`.
 :tagdef:`[SuperWeapon]Deliver.Owner=enum invoker|neutral|special|civilian`
   The country the delivered units will belong to. :value:`invoker` is the player
   who fired the super weapon, :value:`civilian` is the first country of the side
@@ -41,8 +38,8 @@ All objects are placed on the ground, including aircraft. Flying units that
 never land (e.g. the Rocketeer and Kirovs) will take off. Infantry squads are
 grouped in a single cell.
 
-Units owned by AI are set to go on a hunt mission, buildings and human owned
-units are put on a guard mission.
+Units owned by AI are set to go on a hunt mission, buildings are put on a guard
+and human owned units are put on a guard area mission.
 
 You can mix in naval units and they will be placed where they can normally
 exist.
