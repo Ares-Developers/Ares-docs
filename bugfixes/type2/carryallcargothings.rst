@@ -1,0 +1,14 @@
+.. index:: Carryalls; Facing issues fixed
+
+====================
+Carryall Cargo Fixes
+====================
+
+Carryalls messed with cargo units in a way that would change their rotation
+speed. This was because the Carryall's current facing along with its :tag:`ROT`
+value was forced upon the cargo to give the impression that it is actually
+mounted below the aircraft. When dropping off the cargo, the original values
+were not restored. :game:`Ares` now does this. Also, the facing in which the
+cargo is dropped off has been changed to be the same as the Carryall facing.
+
+.. versionadded:: 0.D
