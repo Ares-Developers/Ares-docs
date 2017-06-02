@@ -104,6 +104,12 @@ In future these changes will be provided as extensions to the standard files
 that are included with the :game:`YR Unofficial 1.002 Mini-Patch Developer's
 Pack`.
 
+rulesmd.ini
+~~~~~~~~~~~
+Add :value:`APOCEXP` to the end of the :type:`Animations` list. Because
+:game:`Ares` doesn't automatically add types into the list when parsing tags,
+the game no longer knows about this Apocalypse Tank weapon animation.
+
 artmd.ini
 ~~~~~~~~~
 :tag:`[TELE]SecondaryFireFLH=85,0,130`
