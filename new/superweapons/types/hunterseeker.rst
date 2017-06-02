@@ -47,6 +47,10 @@ Launches up to :tag:`[SuperWeapon]SW.MaxCount` Hunter Seekers of the specified
 type from the firing player's buildings that are valid launch sites. Only one
 Hunter Seeker is launched per building.
 
+Hunter Seekers might pick other targets while in flight. They will not target
+objects under the effect of the Iron Curtain or objects currently being warped
+out of time.
+
 See :doc:`Hunter Seeker </new/hunterseeker>` for information on how to define a
 valid Hunter Seeker unit and how to prevent certain :type:`TechnoTypes` to be
 targeted. See :ref:`Sides & Countries <sides-hunterseeker>` on how to define a
@@ -55,4 +59,4 @@ default Hunter Seeker unit for each side.
 .. index:: Super Weapons; HunterSeeker recreated.
 
 .. versionadded:: 0.7
-.. versionchanged:: 0.9
+.. versionchanged:: 0.D

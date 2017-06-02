@@ -385,3 +385,6 @@ Other changes:
   on ore, and delivered objects are put on guard, area guard or hunt mission.
   The option to skip the buildup animations has been deprectated, because it
   never worked correctly.
+
+  Hunter Seekers no longer target objects under the effect of the Iron Curtain
+  or objects being temporally attacked.
