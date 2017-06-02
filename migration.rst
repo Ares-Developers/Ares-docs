@@ -375,4 +375,5 @@ Changed tags:
 
 Other changes:
 
-  None.
+  Some :type:`ArmorType` parsing issues have been resolved to improve defaulting
+  to other types, and to not reset data unexpectedly.
