@@ -7,15 +7,16 @@ Optimizations
 Particle handling has been greatly optimized in :game:`Ares`. Pixel particles --
 that is types having :tag:`BehavesLike=` set to either :value:`Spark` or
 :value:`Railgun` -- were known to cause lag even with relatively few particles
-involved. That is, even sparse railgun beams created a noticable slowdown.
+involved. That is, even sparse railgun beams created a noticable slowdown. Also,
+:value:`Smoke` particles are created frequently throughout a game.
 
 In :game:`Ares` the optimization is activated automatically if all of the
 following are true. If any one is false, the optimization will not be applied
 and the particles will be handled like in earlier versions. That is, mixing and
 matching is still possible.
 
-1. :tag:`[ParticleSystem]BehavesLike=` is either :value:`Spark` or
-   :value:`Railgun`
+1. :tag:`[ParticleSystem]BehavesLike=` is either :value:`Spark`,
+   :value:`Railgun`, or :value:`Smoke`
 2. The :type:`ParticleType` set as :tag:`[ParticleSystemType]HoldsWhat=` has the
    exact same setting
 3. The :type:`ParticleType` does not use alpha images or line trailers
@@ -29,6 +30,7 @@ optimization is not applied, particles will be handled more efficiently.
 .. index:: Particles; Optimizations for Pixel Particles
 
 .. versionadded:: 0.C
+.. versionchanged:: 0.D
 
 
 Damage Range for Gas Particles
