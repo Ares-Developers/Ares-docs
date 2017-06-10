@@ -12,8 +12,9 @@ Mechanics as known from :game:`The Aftermath` as well as Ambulances known from
 protect a specific unit, as well as overriding heal by pressing the Force Move
 keys, which allows units to enter damaged transporters.
 
-.. note:: Aircraft docked on a helipad or airport cannot be repaired. This
-  mimics the original behavior.
+.. note:: Aircraft docked on a helipad or airport cannot be repaired by
+  vehicles. This mimics the original behavior. This limitation has not been
+  recreated for infanry. This might be changed in the future.
 
 .. index:: Warheads; Mechanics and Ambulances
 
