@@ -6,6 +6,31 @@ This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of :game:`Ares`. Internal changes, optimizations
 and updates are mentioned here only if they are notable.
 
+.. rubric:: Ares 0.D
+
++ **Mouse Cursors** have been :doc:`reworked completely </new/mousecursors>` and
+  now can be customized for :doc:`units and structures </new/cursors>` as well
+  as for :doc:`weapons </new/weapons/cursors>`
+
++ **Warheads** have been expanded to support :doc:`mechanics and ambulances
+  </new/warheads/mechanical>`, and Temporal weapons can consider :doc:`health
+  </new/warheads/temporal>` and :doc:`work together with Abductor logic
+  </new/chronoprisons>`
+
++ **Ivan Bombs** added support for the :doc:`death bombs
+  </new/weapons/ivanbombs>` cut from the original game
+
++ **Buildings** can have :doc:`custom buildup and separate sell times
+  </new/buildings/builduptime>` and AI players can :doc:`build more than one of
+  each type </new/buildings/buildcount>`
+
++ **Units** can have custom :doc:`fall rates </new/fallrate>` and :doc:`dig
+  animations and sounds </new/dig>`
+
++ **Countries** can have :doc:`custom starting units and start with a deployed
+  Construction Yard </new/sidescountries/startinmultiplayer>`
+
+
 .. rubric:: Ares 0.C
 
 + **Bounty** is :doc:`money awarded for killing enemies </new/bounty>`
