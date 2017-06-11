@@ -26,6 +26,8 @@ Default values for general tags:
   infantry,units.
 [SuperWeapon]Light.*=integer
   Default to the scenario's [Lighting]►Dominator*.
+[SuperWeapon]Cursor=mouse cursor
+  Defaults to PsychicDominator.
 
 
 Psychic Dominator specific tags:

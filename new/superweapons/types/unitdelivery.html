@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Type=UnitDelivery &mdash; Ares 0.C documentation</title>
+    <title>Type=UnitDelivery &mdash; Ares 0.D documentation</title>
     
     <link rel="stylesheet" href="../../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
-        VERSION:     '0.C',
+        VERSION:     '0.D',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.C documentation" href="../../../index.html" />
+    <link rel="top" title="Ares 0.D documentation" href="../../../index.html" />
     <link rel="up" title="Settings by Super Weapon Type" href="index.html" />
     <link rel="next" title="Type=Firestorm" href="firestorm.html" />
     <link rel="prev" title="Type=GenericWarhead" href="genericwarhead.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="genericwarhead.html" title="Type=GenericWarhead"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.C documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.D documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
           <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
@@ -95,9 +95,6 @@ area.</p>
 <dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Deliver.Types=</span></code><span class="type definition"> (list of TechnoTypes)</span></span></dt>
 <dd>The list of units that will be delivered. This works for infantry, vehicles,
 aircraft and buildings.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Deliver.Buildups=</span></code><span class="type definition"> (boolean)</span></span></dt>
-<dd>Whether or not buildings delivered by this super weapon should play their
-buildup animation prior to becoming available. Defaults to <cite>no</cite>.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Deliver.Owner=</span></code><span class="type definition"> (enum invoker|neutral|special|civilian)</span></span></dt>
 <dd>The country the delivered units will belong to. <cite>invoker</cite> is the player
 who fired the super weapon, <cite>civilian</cite> is the first country of the side
@@ -113,8 +110,8 @@ the placement order is not fixed. Do not rely on a specific order.</p>
 <p>All objects are placed on the ground, including aircraft. Flying units that
 never land (e.g. the Rocketeer and Kirovs) will take off. Infantry squads are
 grouped in a single cell.</p>
-<p>Units owned by AI are set to go on a hunt mission, buildings and human owned
-units are put on a guard mission.</p>
+<p>Units owned by AI are set to go on a hunt mission, buildings are put on a guard
+and human owned units are put on a guard area mission.</p>
 <p>You can mix in naval units and they will be placed where they can normally
 exist.</p>
 <div class="versionadded" id="index-0">
@@ -143,14 +140,14 @@ exist.</p>
         <li class="right" >
           <a href="genericwarhead.html" title="Type=GenericWarhead"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.C documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.D documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
           <li class="nav-item nav-item-3"><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2016, The Ares Contributors.
+        &copy; Copyright 2017, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

@@ -1,0 +1,13 @@
+ Subterranean; Units accidentally leaving map fixed
+
+
+Subterranean Units Could Accidentally Leave The Map
+
+
+The Tunnel Locomotor which handles subterranean units contained a bug that
+caused units to move out of the map. If triggered, the unit would turn around to
+face the top-left corner, burrow into the ground, and then travel underground
+into the same direction. Eventually, the unit would be destroyed. This bug is
+fixed.
+
+ 0.D

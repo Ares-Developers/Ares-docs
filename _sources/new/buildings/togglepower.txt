@@ -30,17 +30,13 @@ Cursors
 
 
 The two mouse cursors this feature uses can be customized with the following
-Mouse Cursor tags:
+Mouse Cursor definitions:
 
-[General]TogglePowerCursor=cursor definition
-  Shown if the building's power status can be toggled. Only buildings owned by
-  the player can toggle the power, if TogglePower=yes and either
-  Power is less than 0 or Powered=yes.
+TogglePower: Shown if the building's power status can be toggled. Only
+buildings owned by the player can toggle the power, if TogglePower=yes
+and either Power is less than 0 or Powered=yes.
 
-[General]TogglePowerNoCursor=cursor definition
-  Shown if the building's power cannot be toggled.
-
- The mini cursor on the radar map is not supported.
+NoTogglePower: Shown if the building's power cannot be toggled.
 
  Toggle Power; Customizable cursors
 

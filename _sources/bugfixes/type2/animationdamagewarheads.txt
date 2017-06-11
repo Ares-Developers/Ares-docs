@@ -9,7 +9,7 @@ warhead specified. In fact, animations were hard-coded to deal damage using the
 warhead specified by [CombatDamage]►FlameDamage2, unless the animation ID
 was [INVISO]►, in which case the warhead used
 [CombatDamage]►C4Warhead. With  Ares, the
-[Animation]►Warhead` flag will be adhered to, with the aforementioned
+[Animation]►Warhead flag will be adhered to, with the aforementioned
 warheads used as the default if [Animation]►Warhead is not specified.
 
  0.1

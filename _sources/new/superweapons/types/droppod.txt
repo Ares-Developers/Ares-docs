@@ -21,6 +21,8 @@ Default values for general tags:
   Defaults to EVA_DropPodReady.
 [SuperWeapon]EVA.Activated=EVA event
   Defaults to EVA_DropPodActivated.
+[SuperWeapon]Cursor=mouse cursor
+  Defaults to ParaDrop.
 
 
 Drop Pod specific tags:

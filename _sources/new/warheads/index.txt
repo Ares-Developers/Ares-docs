@@ -8,6 +8,7 @@ Warheads
 	cellspread
 	damageair
 	ironcurtain
+	mechanical
 	mindcontrol
 	temporal
 	ripple

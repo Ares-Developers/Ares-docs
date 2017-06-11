@@ -6,6 +6,7 @@ Weapons
 	
 	weapontypes
 	anim
+	cursors
 	damage
 	ammo
 	ivanbombs

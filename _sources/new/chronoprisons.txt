@@ -36,6 +36,13 @@ concept art on the Command & Conquer Wiki
     VehicleTypes and AircraftTypes, on the other hand, should
     be reported immediately.
 
+[Weapon]Abductor.Temporal=boolean
+  Instead of abducting target units immediately, will abduct them only after
+  they have been temporally erased. When the target unit would be warped away,
+  it will be placed inside the abductor unit as passenger. If abduction fails,
+  the target is erased normally. Requires Temporal=yes to be set on
+  Warhead. Defaults to no.
+
 [Weapon]Abductor.Anim=animation
   This animation will be spawned at the location a unit is abducted from.
   Defaults to none.

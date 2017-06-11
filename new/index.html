@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>New &amp; Enhanced In-Game Logic &mdash; Ares 0.C documentation</title>
+    <title>New &amp; Enhanced In-Game Logic &mdash; Ares 0.D documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.C',
+        VERSION:     '0.D',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.C documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.D documentation" href="../index.html" />
     <link rel="next" title="Additional ArmorTypes and Verses" href="additionalarmortypesandverses.html" />
     <link rel="prev" title="Vehicle Thief" href="../restored/vehicle-thief.html" /> 
   </head>
@@ -41,7 +41,7 @@
         <li class="right" >
           <a href="../restored/vehicle-thief.html" title="Vehicle Thief"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.C documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -107,7 +107,13 @@ the game.</p>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="crates.html">Crate Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="crushdamage.html">Crush Damage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cursors.html">Mouse Cursors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cursors.html">Cursors on Units and Structures</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cursors.html#movement">Movement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cursors.html#deploy">Deploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cursors.html#enter">Enter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cursors.html#spy-infiltration">Spy Infiltration</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="customanimationandprojectilepalettes.html">Custom Animation and Projectile Palettes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="customcameopalettes.html">Custom Cameo Palettes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="customizableinsignia.html">Veterancy Insignia</a><ul>
@@ -136,6 +142,7 @@ the game.</p>
 <li class="toctree-l2"><a class="reference internal" href="damageparticlesystems.html#smoke-and-spark-damageparticlesystems">Smoke and Spark <span><span class="type">DamageParticleSystems</span></span></a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="dig.html">Dig Animation and Sound</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dimming.html">Dimming Deactivated Units</a></li>
 <li class="toctree-l1"><a class="reference internal" href="disklaser.html">Disk Laser Animations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="doggie.html">Tiberian Fiends</a></li>
@@ -150,6 +157,7 @@ the game.</p>
 <li class="toctree-l1"><a class="reference internal" href="evatypes.html">EVA Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="facings.html"><span><span class="type">Facings</span></span> on Units</a></li>
 <li class="toctree-l1"><a class="reference internal" href="factoryplant.html">Factory Plant Effect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fallrate.html">Fall Rate</a></li>
 <li class="toctree-l1"><a class="reference internal" href="forestfires.html">Forest Fires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gattlingcycle.html">Gattling Enhancements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hardcodedunitproperties.html">Hard-coded Unit Properties</a><ul>
@@ -175,6 +183,12 @@ the game.</p>
 <li class="toctree-l2"><a class="reference internal" href="manual.html#no-manual-passenger-unload">No Manual Passenger Unload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manual.html#no-manual-enter-transport">No Manual Enter Transport</a></li>
 <li class="toctree-l2"><a class="reference internal" href="manual.html#no-guard-area-on-self">No Guard Area on Self</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mousecursors.html">Mouse Cursors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mousecursors.html#defining-cursors">Defining Cursors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mousecursors.html#default-cursors">Default Cursors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mousecursors.html#migrating-from-previous-versions">Migrating from Previous Versions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="newpoweredunitlogic.html">New Powered Unit Logic</a></li>
@@ -225,6 +239,7 @@ the game.</p>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="teamretaliate.html">Team Retaliate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="turretrot.html">Turret <span><span class="type">ROT</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="typeselect.html">Type Selection Groups</a></li>
 <li class="toctree-l1"><a class="reference internal" href="unitlost.html">Unit Lost EVA Report</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sidescountries/index.html">Sides &amp; Countries</a><ul>
@@ -266,6 +281,12 @@ the game.</p>
 <li class="toctree-l4"><a class="reference internal" href="sidescountries/uicountry.html#taunts">Taunts</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="sidescountries/startinmultiplayer.html">Start in Multiplayer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/startinmultiplayer.html#starting-units">Starting Units</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/startinmultiplayer.html#fixed-global-unit-cost">Fixed Global Unit Cost</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sidescountries/startinmultiplayer.html#pre-deployed-mcv">Pre-Deployed MCV</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -273,7 +294,9 @@ the game.</p>
 <li class="toctree-l1"><a class="reference internal" href="buildings/index.html">Buildings</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="buildings/academy.html">Academies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buildings/assaulter.html">Assaulter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="buildings/buidlingslam.html">Buidling Slam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildings/buildcount.html">Build More Buildings of a Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildings/buildingslam.html">Building Slam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildings/builduptime.html">Buildup and Sell Time</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buildings/custombuildingfoundations.html">Custom Building Foundations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buildings/enemywrench.html">Enemy Wrench</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buildings/factoriesandcloning.html">Factories and Cloning</a><ul>
@@ -300,6 +323,7 @@ the game.</p>
 <li class="toctree-l3"><a class="reference internal" href="buildings/producecash.html#display-cash-produced">Display Cash Produced</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="buildings/repair.html">Repair and Insufficient Funds</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buildings/secretlabs.html">Secret Labs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buildings/solidbuildings.html">Solid Buildings</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="buildings/solidbuildings.html#the-attackers-enabling-projectiles">The Attackers - Enabling Projectiles</a></li>
@@ -377,6 +401,7 @@ the game.</p>
 <li class="toctree-l1"><a class="reference internal" href="weapons/index.html">Weapons</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="weapons/weapontypes.html"><span><span class="type">[WeaponTypes]</span></span> Section</a></li>
 <li class="toctree-l2"><a class="reference internal" href="weapons/anim.html"><span><span class="type">Anim</span></span> for Facings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="weapons/cursors.html">Cursors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="weapons/damage.html">Ordinary Damage for <span><span class="type">IsSonic</span></span> and <span><span class="type">UseFireParticles</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="weapons/ammo.html"><span><span class="type">Ammo</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="weapons/ivanbombs.html">Ivan Bombs</a></li>
@@ -406,9 +431,18 @@ the game.</p>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/damageair.html">Damage Airborne Units</a></li>
-<li class="toctree-l2"><a class="reference internal" href="warheads/ironcurtain.html">Iron Curtain Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="warheads/ironcurtain.html">Iron Curtain</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="warheads/ironcurtain.html#iron-curtain-effect">Iron Curtain Effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="warheads/ironcurtain.html#iron-curtain-flash">Iron Curtain Flash</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="warheads/mechanical.html">Mechanical and Organic Warheads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/mindcontrol.html">Permanent Mind-Control</a></li>
-<li class="toctree-l2"><a class="reference internal" href="warheads/temporal.html">Customizable <span><span class="type">WarpAway</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="warheads/temporal.html"><span><span class="type">Temporal</span></span></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="warheads/temporal.html#customizable-warpaway">Customizable <span><span class="type">WarpAway</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="warheads/temporal.html#consider-health">Consider Health</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/ripple.html">Ion Cannon Ripple Effect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/preimpactanim.html"><span><span class="type">PreImpactAnim</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/infantry.html">Infantry-related Settings</a><ul>
@@ -553,11 +587,11 @@ the game.</p>
         <li class="right" >
           <a href="../restored/vehicle-thief.html" title="Vehicle Thief"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.C documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2016, The Ares Contributors.
+        &copy; Copyright 2017, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

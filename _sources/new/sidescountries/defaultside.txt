@@ -65,13 +65,14 @@ Paradrop Defaults
   (Allied), [General]►SovParaDropNum for Nod (Soviet), and
   [General]►YuriParaDropNum for ThirdSide (Yuri).
 [Side]ParaDrop.Aircraft=AircraftType
-  The aircraft type that will be used to deliver paradrops. Defaults to
-  PDPLANE.
+  The aircraft type that will be used to deliver paradrops from super weapons or
+  by teams created by map actions. Defaults to PDPLANE.
 [Side]Parachute.Anim=Animation
   This side's default parachute used if not overridden by the country or a
   TechnoType. Defaults to PARACH.
 
  0.2
+ 0.D
 
 
 Hunter Seeker Defaults

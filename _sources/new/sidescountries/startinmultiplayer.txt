@@ -1,0 +1,48 @@
+Start in Multiplayer
+
+
+Starting Units
+
+
+[Country]StartInMultiplayer.Types=list of InfantryTypes and/or VehicleTypes
+  The custom list of potential units to start with in multiplayer games. If not
+  set, the game selects the types by using AllowedToStartInMultiplayer.
+  Only InfantryTypes and VehicleTypes are supported. Use
+  <none> to disable starting units for this country.
+
+    It is now supported to have no starting infantry. The game will no
+    longer crash.
+
+ 0.D
+
+
+Fixed Global Unit Cost
+
+
+By default, the game will determine the average cost of a unit by summing up and
+averaging all costs of units that could be used as starting units (only
+considering countries that are in the current match). The Unit Count setting is
+multiplied by this.
+
+[General]StartInMultiplayerUnitCost=integer - credits
+  The fixed amount of credits for one average unit. If not set, the game will
+  use the method described above. In this case, Ares will now output the
+  inferred average unit cost into the log file.
+
+ 0.D
+
+
+Pre-Deployed MCV
+
+
+This allows for countries to not have an MCV at the beginning of the match, as
+well as for game modes where the base locations are fixed. Also, the initial
+Construction Yard could be made different from the ones obtainable later in the
+game.
+
+[Country]StartInMultiplayer.WithConst=boolean
+  Whether this country shall start with the first buildable building from
+  BuildConst instead of a unit from BaseUnit when starting a
+  multiplayer match. Defaults to no.
+
+ 0.D

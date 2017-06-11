@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Introduction &mdash; Ares 0.C documentation</title>
+    <title>Introduction &mdash; Ares 0.D documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.C',
+        VERSION:     '0.D',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.C documentation" href="index.html" />
+    <link rel="top" title="Ares 0.D documentation" href="index.html" />
     <link rel="next" title="What’s New" href="whatsnew.html" />
     <link rel="prev" title="Glossary" href="glossary.html" /> 
   </head>
@@ -41,7 +41,7 @@
         <li class="right" >
           <a href="glossary.html" title="Glossary"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Ares 0.C documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 0.D documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -62,6 +62,7 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#required-changes-for-mods-using-ares">Required Changes For Mods Using Ares</a><ul>
+<li><a class="reference internal" href="#rulesmd-ini">rulesmd.ini</a></li>
 <li><a class="reference internal" href="#artmd-ini">artmd.ini</a></li>
 <li><a class="reference internal" href="#bombcurs-shp">bombcurs.shp</a></li>
 <li><a class="reference internal" href="#ares-mix">ares.mix</a></li>
@@ -196,6 +197,12 @@ your mod does not receive any unexpected changes from simply being run whilst
 <p>In future these changes will be provided as extensions to the standard files
 that are included with the <span class="game docutils literal">YR Unofficial 1.002 Mini-Patch Developer&#8217;s
 Pack</span>.</p>
+<div class="section" id="rulesmd-ini">
+<h2>rulesmd.ini<a class="headerlink" href="#rulesmd-ini" title="Permalink to this headline">¶</a></h2>
+<p>Add <cite>APOCEXP</cite> to the end of the <span class="type docutils literal">Animations</span> list. Because
+<span class="game docutils literal">Ares</span> doesn&#8217;t automatically add types into the list when parsing tags,
+the game no longer knows about this Apocalypse Tank weapon animation.</p>
+</div>
 <div class="section" id="artmd-ini">
 <h2>artmd.ini<a class="headerlink" href="#artmd-ini" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
@@ -256,11 +263,11 @@ changes/additions rely on. This MIX file presently includes:</p>
         <li class="right" >
           <a href="glossary.html" title="Glossary"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Ares 0.C documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 0.D documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2016, The Ares Contributors.
+        &copy; Copyright 2017, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

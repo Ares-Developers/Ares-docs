@@ -1,0 +1,11 @@
+
+Distance Calculation Causes Overflow
+
+
+Some distance calculations, for example used to find a viable docking building
+like a refinery, an airport, or a Service Depot, could overflow, which would
+lead to far away structures be preferred even to structures right next to the
+searching unit. This has been fixed in a way that all distances are maxed at the
+largest value, so all very far away buildings are now considered equally bad.
+
+ 0.D

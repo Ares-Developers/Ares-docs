@@ -1,0 +1,26 @@
+Fall Rate
+
+
+When a unit is dropped onto the battlefield from a plane, with or without
+parachute, these settings define how fast it will accelerate and how fast it
+will fall at most.
+
+[TechnoType]FallRate.Parachute=integer
+  The acceleration towards the ground applied each frame a parachuted unit is
+  falling. Defaults to 1.
+
+[TechnoType]FallRate.NoParachute=integer
+  The acceleration towards the ground applied each frame a unit without
+  parachute is falling. Defaults to 1.
+
+[TechnoType]FallRate.ParachuteMax=integer
+  The maximum speed a parachuted unit is falling with. Value has to be negative.
+  Defaults to [General]►ParachuteMaxFallRate.
+
+[TechnoType]FallRate.NoParachuteMax=integer
+  The maximum speed a unit without parachute is falling with. Value has to be
+  negative. Defaults to [General]►NoParachuteMaxFallRate.
+
+ Units; Customizable fall rates
+
+ 0.D

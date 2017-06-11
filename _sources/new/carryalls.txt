@@ -7,6 +7,9 @@ them around the map and place them anywhere. The carryall logic was not used in
 Red Alert 2 and was not updated for naval units and other new features.
 Ares updates the logic and adds new options.
 
+If a unit can be picked up, the cursor named Tote is shown. See how to
+customize this Mouse Cursor.
+
 [AircraftType]Carryall.SizeLimit=integer
   The maximum Size= that this carryall can lift. Use -1 to allow
   any size. Defaults to -1.

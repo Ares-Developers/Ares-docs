@@ -17,6 +17,8 @@ Default values for general tags:
 [SuperWeapon]Light.*=integer
   Default to Light.Ambient=200, Light.Red=175,
   Light.Green=150, and Light.Blue=125 respectively.
+[SuperWeapon]Cursor=mouse cursor
+  Defaults to Nuke.
 
 
 Nuclear missile specific tags:

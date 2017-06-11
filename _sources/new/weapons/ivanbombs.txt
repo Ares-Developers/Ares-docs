@@ -8,6 +8,12 @@ Crazy Ivan Bombs are global so you can't have multiple variations of them with
 their own controls. With Ares it is now possible to create new Ivan
 Bomb-esque weapons -- new types of sticky bomb with whatever settings you like.
 
+Ares adds the Death Bombs feature, which was originally planned to be in
+but were cut from the game before Red Alert 2 was released. Death Bombs
+can rig victims with bombs that will not detonate automatically, but remain
+active either until the unit dies to go off then, or the owner manually
+detonates it, if allowed.
+
 Ares now also supports shrapnel weapons, as long as they have a
 CellSpread of 0.5 or more.
 
@@ -20,6 +26,12 @@ the following flags in order to customize that bomb:
 [Weapon]IvanBomb.Damage=integer
   The damage that will be dealt when the bomb detonates. Defaults to
   [CombatDamage]►IvanDamage.
+[Weapon]IvanBomb.DeathBomb=boolean
+  Whether this bomb will be a death bomb instead of a timed bomb when planted on
+  enemy objects. Defaults to no.
+[Weapon]IvanBomb.DeathBombOnAllies=boolean
+  Whether this bomb will be a death bomb instead of a timed bomb when planted on
+  allied objects. Defaults to no.
 [Weapon]IvanBomb.Detachable=boolean
   Whether or not Engineers can remove this bomb from units it has been attached
   to. Defaults to yes.
@@ -31,8 +43,14 @@ the following flags in order to customize that bomb:
     explosion will not destroy the bridge unless
     IvanBomb.DestroysBridges=yes is set.
 [Weapon]IvanBomb.CanDetonateTimeBomb=boolean
-  Whether or not players can manually detonate bombs attached by this weapon.
-  Defaults to [CombatDamage]►CanDetonateTimeBomb.
+  Whether or not players can manually detonate time bombs attached by this
+  weapon. Defaults to [CombatDamage]►CanDetonateTimeBomb.
+[Weapon]IvanBomb.CanDetonateDeathBomb=boolean
+  Whether or not players can manually detonate death bombs attached by this
+  weapon. Defaults to [CombatDamage]►CanDetonateDeathBomb.
+[Weapon]IvanBomb.DetonateOnSell=boolean
+  Whether attached bombs shall explode if the victim is sold. Otherwise, the
+  bomb will will just be disarmed. Defaults to yes.
 [Weapon]IvanBomb.Delay=integer
   The number of frames that will elapse before the bomb detonates automatically.
   Defaults to [CombatDamage]►IvanTimedDelay.
@@ -61,8 +79,7 @@ the following flags in order to customize that bomb:
   the next one for 5 frames, then the current one again for 5 frames, ....
 
 Originally this logic was hard-coded to ignore the last frame of the bomb SHP,
-which was originally planned to be used for so called "death bombs" which were
-cut from the game before Red Alert 2 was released. This hard-coding has
+which was originally planned to be used for Death Bombs. This hard-coding has
 been changed so that the whole SHP is now considered for the fuse, however this
 means that you'll now see that extra frame from bombcurs.shp, unless you
 replace that SHP file.
@@ -75,3 +92,4 @@ replace that SHP file.
 
  0.1
  0.5
+ 0.D

@@ -1,0 +1,21 @@
+Mechanical and Organic Warheads
+
+
+Yuri's Revenge was hardcoded to only allow infantry to heal other
+infantry and repair vehicles to only repair other vehicles. Ares removes
+this hardcoding and now InfantryTypes and VehicleTypes can heal
+or repair all TechnoTypes depending on verses. This allows to create
+Mechanics as known from The Aftermath as well as Ambulances known from
+Generals.
+
+Ares supports the Guard Area action, which makes units follow and
+protect a specific unit, as well as overriding heal by pressing the Force Move
+keys, which allows units to enter damaged transporters.
+
+ Aircraft docked on a helipad or airport cannot be repaired by
+  vehicles. This mimics the original behavior. This limitation has not been
+  recreated for infanry. This might be changed in the future.
+
+ Warheads; Mechanics and Ambulances
+
+ 0.D

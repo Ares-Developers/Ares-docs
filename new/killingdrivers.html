@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Killing Drivers &mdash; Ares 0.C documentation</title>
+    <title>Killing Drivers &mdash; Ares 0.D documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.C',
+        VERSION:     '0.D',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.C documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.D documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="MakeInfantryOwner" href="makeinfantryowner.html" />
     <link rel="prev" title="Initial Payload (Troop Crawlers)" href="initialpayload.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="initialpayload.html" title="Initial Payload (Troop Crawlers)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.C documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -82,16 +82,21 @@ specific warheads to kill the driver of a vehicle instead of damaging
 it, and allows others to take over the now-neutral vehicle.</p>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►KillDriver=</span></code><span class="type definition"> (boolean)</span></span></dt>
-<dd>Specifies whether this warhead kills the driver of the vehicle, instead of
+<dd><p class="first">Specifies whether this warhead kills the driver of the vehicle, instead of
 damaging the vehicle itself. The first passenger matching the vehicle&#8217;s
 <span><code class="docutils literal"><span class="pre">Operator</span></code></span> is considered the driver. All other passengers will be
-ejected. Defaults to <cite>no</cite>.</dd>
+ejected. Defaults to <cite>no</cite>.</p>
+<p class="last">This logic respects <span><code class="docutils literal"><span class="pre">AffectsAllies</span></code></span> and <span><code class="docutils literal"><span class="pre">AffectsEnemies</span></code></span>.</p>
+</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►KillDriver.Owner=</span></code><span class="type definition"> (enumeration - civilian,special,neutral)</span></span></dt>
 <dd>Specifies the house the units are assigned to. Defaults to <cite>special</cite>.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►KillDriver.KillBelowPercent=</span></code><span class="type definition"> (float)</span></span></dt>
 <dd>Specifies the percentage of health a unit can not exceed to have its driver
 killed by a <span><code class="docutils literal"><span class="pre">KillDriver=yes</span></code></span> warhead. A unit above this health level
 is only damaged and the driver is not killed. Defaults to <cite>100%</cite>.</dd>
+</dl>
+<p>The following settings can make a unit immune to the Kill Driver logic:</p>
+<dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►ProtectedDriver=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether the driver of this vehicle cannot be killed, i.e. whether this vehicle
 is immune to <span><code class="docutils literal"><span class="pre">KillDriver</span></code></span>. <span><code class="docutils literal"><span class="pre">Organic=yes</span></code></span> and <span><code class="docutils literal"><span class="pre">Natural=yes</span></code></span>
@@ -103,12 +108,20 @@ unit&#8217;s health is above this, the driver cannot be killed. If
 minimum of the two values is used, that is, this tag can make a unit more
 resistant against driver killing weapons. Defaults to <cite>0.0</cite> if
 <span><code class="docutils literal"><span class="pre">ProtectedDriver=yes</span></code></span>, to <cite>1.0</cite> otherwise.</dd>
+</dl>
+<p>Drivers are infantry units that can capture neutral vehicles, like ones that had
+their driver killed.</p>
+<dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►CanDrive=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether this <span class="type docutils literal">InfantryType</span> can act as the driver of vehicles whose
 driver has been killed, effectively reclaiming the vehicle. If the vehicle
 requires an <span><code class="docutils literal"><span class="pre">Operator</span></code></span> the infantry driver turns the unit and enters as
 passenger that can be ejected later, otherwise the driver is swallowed,
 becoming the permanent driver of the vehicle. Defaults to <cite>no</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Country]►CanBeDriven=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether units owned by this country can be captured by <span><code class="docutils literal"><span class="pre">CanDrive=yes</span></code></span>
+infantry. This can be used to place units owned by neutral countries on the
+map without them being capturable. Defaults to <span><code class="docutils literal"><span class="pre">MultiplayPassive</span></code></span>.</dd>
 </dl>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -117,11 +130,11 @@ becoming the permanent driver of the vehicle. Defaults to <cite>no</cite>.</dd>
 problems.</p>
 </div>
 <p>See <a class="reference internal" href="hijackers.html"><em>Hijackers</em></a> for more options that relate to <span><code class="docutils literal"><span class="pre">CanDrive</span></code></span>.</p>
-<div class="versionadded" id="index-0">
+<span class="target" id="index-0"></span><div class="versionadded" id="index-1">
 <p><span class="versionmodified">New in version 0.2.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">Changed in version 0.9.</span></p>
+<p><span class="versionmodified">Changed in version 0.D.</span></p>
 </div>
 </div>
 
@@ -143,12 +156,12 @@ problems.</p>
         <li class="right" >
           <a href="initialpayload.html" title="Initial Payload (Troop Crawlers)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.C documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2016, The Ares Contributors.
+        &copy; Copyright 2017, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

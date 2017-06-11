@@ -5,6 +5,8 @@ Default values for general tags:
 
 [SuperWeapon]SW.AITargeting=enum
   Defaults to ParaDrop.
+[SuperWeapon]Cursor=mouse cursor
+  Defaults to ParaDrop.
 
 
 The original flags that control the units provided by the generic paradrop super

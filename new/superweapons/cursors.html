@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Cursors &mdash; Ares 0.C documentation</title>
+    <title>Cursors &mdash; Ares 0.D documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.C',
+        VERSION:     '0.D',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.C documentation" href="../../index.html" />
+    <link rel="top" title="Ares 0.D documentation" href="../../index.html" />
     <link rel="up" title="Super Weapons" href="index.html" />
     <link rel="next" title="Charge/Drain Super Weapons" href="chargedrain.html" />
     <link rel="prev" title="Range Limits" href="range.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="range.html" title="Range Limits"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.C documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.D documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Super Weapons</a> &raquo;</li> 
       </ul>
@@ -79,20 +79,23 @@
   <div class="section" id="cursors">
 <h1>Cursors<a class="headerlink" href="#cursors" title="Permalink to this headline">¶</a></h1>
 <p><span class="game docutils literal">Ares</span> allows you to specify custom mouse cursors for the super weapon,
-using the following flags. See <a class="reference internal" href="../cursors.html"><em>Mouse Cursors</em></a> on how to
-define them.</p>
+using the following flags. See <a class="reference internal" href="../mousecursors.html"><em>Mouse Cursors</em></a> on how
+to define them.</p>
 <dl class="docutils">
-<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Cursor=</span></code><span class="type definition"> (cursor definition)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Cursor=</span></code><span class="type definition"> (mouse cursor)</span></span></dt>
 <dd>Cursor to use when it is ok to fire the super weapon at the given location.
-Defaults to the Attack cursor, if not stated otherwise.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►NoCursor=</span></code><span class="type definition"> (cursor definition)</span></span></dt>
+Defaults to <cite>Attack</cite>, if not stated otherwise.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►NoCursor=</span></code><span class="type definition"> (mouse cursor)</span></span></dt>
 <dd>Cursor to use when the super weapon is not allowed to fire at the given
 location. This may be because the selected target is not of the required type
 or its owner is not allowed, or the target is out of range, or there is no
-designator nearby. Defaults to the Pointer cursor, if not stated otherwise.</dd>
+designator nearby. Defaults to <cite>Disallowed</cite>, if not stated otherwise.</dd>
 </dl>
 <div class="versionadded" id="index-0">
 <p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 0.D.</span></p>
 </div>
 </div>
 
@@ -114,13 +117,13 @@ designator nearby. Defaults to the Pointer cursor, if not stated otherwise.</dd>
         <li class="right" >
           <a href="range.html" title="Range Limits"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.C documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.D documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Super Weapons</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2016, The Ares Contributors.
+        &copy; Copyright 2017, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

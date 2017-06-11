@@ -11,12 +11,18 @@ it, and allows others to take over the now-neutral vehicle.
   damaging the vehicle itself. The first passenger matching the vehicle's
   Operator is considered the driver. All other passengers will be
   ejected. Defaults to no.
+
+  This logic respects AffectsAllies and AffectsEnemies.
 [Warhead]KillDriver.Owner=enumeration - civilian,special,neutral
   Specifies the house the units are assigned to. Defaults to special.
 [Warhead]KillDriver.KillBelowPercent=float
   Specifies the percentage of health a unit can not exceed to have its driver
   killed by a KillDriver=yes warhead. A unit above this health level
   is only damaged and the driver is not killed. Defaults to 100%.
+
+
+The following settings can make a unit immune to the Kill Driver logic:
+
 [TechnoType]ProtectedDriver=boolean
   Whether the driver of this vehicle cannot be killed, i.e. whether this vehicle
   is immune to KillDriver. Organic=yes and Natural=yes
@@ -28,12 +34,22 @@ it, and allows others to take over the now-neutral vehicle.
   minimum of the two values is used, that is, this tag can make a unit more
   resistant against driver killing weapons. Defaults to 0.0 if
   ProtectedDriver=yes, to 1.0 otherwise.
+
+
+Drivers are infantry units that can capture neutral vehicles, like ones that had
+their driver killed.
+
 [TechnoType]CanDrive=boolean
   Whether this InfantryType can act as the driver of vehicles whose
   driver has been killed, effectively reclaiming the vehicle. If the vehicle
   requires an Operator the infantry driver turns the unit and enters as
   passenger that can be ejected later, otherwise the driver is swallowed,
   becoming the permanent driver of the vehicle. Defaults to no.
+
+[Country]CanBeDriven=boolean
+  Whether units owned by this country can be captured by CanDrive=yes
+  infantry. This can be used to place units owned by neutral countries on the
+  map without them being capturable. Defaults to MultiplayPassive.
 
  Vehicle Thieves cannot drive neutralized vehicles by default, but
   VehicleThief=yes can be combined with CanDrive=yes without
@@ -43,6 +59,8 @@ See ... for more options that relate to CanDrive.
 
  Warheads; Warheads can be set to kill the driver of a vehicle, instead of damaging it.
 
+ Infantry; Capture units that had their drivers killed.
+
  0.2
 
- 0.9
+ 0.D

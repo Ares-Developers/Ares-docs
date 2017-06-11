@@ -1,0 +1,43 @@
+Cursors
+
+
+It is now possible in Ares to customize the weapon cursors to give
+certain special weapons dedictated attack cursors.
+
+With these cursors, it's also possible to mimic the behavior of the
+SabotageCursor and MigAttackCursor special cases. If both are set
+to the same cursor, they behave like the two mentioned tags, which also work
+independent of range, like the C4 special ability cursor. Also, this is useful
+for suicide units like the Terrorist or the Demolition Truck, which are almost
+always out of range.
+
+ /images/cursor_weapon.png
+  :alt: Custom weapon cursors for the Demolition Truck
+  :align: center
+
+The following two tags accept cursor names as defined under
+Mouse Cursors.
+
+[Weapon]Cursor.Attack=mouse cursor
+  The cursor to use as the attack cursor for this weapon. This cursor is used if
+  only one unit is selected and its target is in range. Defaults to
+  Attack.
+
+[Weapon]Cursor.AttackOutOfRange=mouse cursor
+  The cursor used if an object can attack a target, but it is out if weapon's
+  range and the unit needs to move first to attack it. Defaults to
+  AttackOutOfRange.
+
+   If two or more units are selected, this cursor is not used. Note
+    that deployed units will get their No Move cursor instead, as they would
+    have to, but cannot move.
+
+There's no cursor to show in case a unit cannot attack a target (for instance
+it might not be mind-controllable, etc.), because the game does not have a
+concept of this. Instead the next type of cursor is checked, and sometimes the
+inability to attack gets converted to a different action like move, no move, or
+select (or something entirely different like enter for Engineer infantry).
+
+ Weapons; Custom cursors
+
+ 0.D

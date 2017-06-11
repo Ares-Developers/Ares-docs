@@ -252,7 +252,7 @@ Other changes:
 
   The Unit Delivery super weapon uses a new placing method. Compared to previous
   versions, unit and buildings are placed more random now. Delivered objects are
-  put on guard or hunt mission.
+  put on guard, area guard or hunt mission.
 
   Force Shield no longer considers buildings with ForceShield.Modifier
   less than or equal to 0.0 eligible targets.
@@ -349,3 +349,42 @@ Changed tags:
 Other changes:
 
   None.
+
+From Ares 0.C and below
+
+
+Changed tags:
+
+  [General]►EngineerDamageCursor
+    The tag has been removed. Customize the EngineerDamage cursor
+    instead.
+
+  [General]►TogglePowerCursor
+    The tag has been removed. Customize the TogglePower cursor
+    instead.
+
+  [General]►TogglePowerNoCursor
+    The tag has been removed. Customize the NoTogglePower cursor
+    instead.
+
+  [SuperWeapon]►Cursor
+    The tag has been changed to only support mouse cursor names.
+
+  [SuperWeapon]►NoCursor
+    The tag has been changed to only support mouse cursor names.
+
+  [SuperWeapon]►Deliver.Buildups
+    The tag has been removed. Buildups are now always on.
+
+Other changes:
+
+  Some ArmorType parsing issues have been resolved to improve defaulting
+  to other types, and to not reset data unexpectedly.
+
+  The Unit Delivery super weapon has been reworked. It now allows to place units
+  on ore, and delivered objects are put on guard, area guard or hunt mission.
+  The option to skip the buildup animations has been deprectated, because it
+  never worked correctly.
+
+  Hunter Seekers no longer target objects under the effect of the Iron Curtain
+  or objects being temporally attacked.

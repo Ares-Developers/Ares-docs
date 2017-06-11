@@ -33,6 +33,11 @@ Default values for general tags:
 [SuperWeapon]SW.RequiresHouse=enum
   Defaults to team for ForceShield, to none
   otherwise.
+[SuperWeapon]Cursor=mouse cursor
+    Defaults to ForceShield for ForceShield, to
+    IronCurtain otherwise.
+[SuperWeapon]NoCursor=mouse cursor
+    Defaults to NoForceShield for ForceShield.
 
 
 Iron Curtain and Force Shield specific tags:

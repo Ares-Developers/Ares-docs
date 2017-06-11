@@ -1,0 +1,26 @@
+Dig Animation and Sound
+
+
+The global settings Dig and DigSound have been deglobalized and
+split into separate tags for units with Tunnel locomotors for digging into
+the surface and emerging from the ground again.
+
+[TechnoType]DigIn=animation
+  The optional animation used when this unit digs into the ground. Defaults to
+  [AudioVisual]►Dig.
+
+[TechnoType]DigOut=animation
+  The optional animation used when this unit digs out of the ground. Defaults to
+  [AudioVisual]►Dig.
+
+[TechnoType]DigInSound=sound entry
+  The optional sound played when this unit digs into the ground. Defaults to
+  [AudioVisual]►DigSound.
+
+[TechnoType]DigOutSound=sound entry
+  The optional sound played when this unit digs out of the ground. Defaults to
+  [AudioVisual]►DigSound.
+
+ Units; Customizable dig animations and sounds
+
+ 0.D

@@ -6,7 +6,8 @@ structures and destroy them immediately, sacrificing himself. This has been
 re-created in Ares.
 
 Only buildings owned by enemy players are sabotagable. If a building can be
-sabotaged, the player gets the enter cursor.
+sabotaged, the player gets the cursor named Sabotage, which is a new
+customizable Mouse Cursor.
 
  The temporary cloak feature has not been implemented.
 

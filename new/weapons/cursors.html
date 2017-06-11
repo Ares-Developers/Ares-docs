@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cursors &mdash; Ares 0.D documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.D',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.D documentation" href="../../index.html" />
+    <link rel="up" title="Weapons" href="index.html" />
+    <link rel="next" title="Ordinary Damage for IsSonic and UseFireParticles" href="damage.html" />
+    <link rel="prev" title="Anim for Facings" href="anim.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="damage.html" title="Ordinary Damage for IsSonic and UseFireParticles"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="anim.html" title="Anim for Facings"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.D documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Weapons</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="anim.html"
+                        title="previous chapter"><span><span class="type">Anim</span></span> for Facings</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="damage.html"
+                        title="next chapter">Ordinary Damage for <span><span class="type">IsSonic</span></span> and <span><span class="type">UseFireParticles</span></span></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="cursors">
+<h1>Cursors<a class="headerlink" href="#cursors" title="Permalink to this headline">¶</a></h1>
+<p>It is now possible in <span class="game docutils literal">Ares</span> to customize the weapon cursors to give
+certain special weapons dedictated attack cursors.</p>
+<p>With these cursors, it&#8217;s also possible to mimic the behavior of the
+<span><code class="docutils literal"><span class="pre">SabotageCursor</span></code></span> and <span><code class="docutils literal"><span class="pre">MigAttackCursor</span></code></span> special cases. If both are set
+to the same cursor, they behave like the two mentioned tags, which also work
+independent of range, like the C4 special ability cursor. Also, this is useful
+for suicide units like the Terrorist or the Demolition Truck, which are almost
+always out of range.</p>
+<img alt="Custom weapon cursors for the Demolition Truck" class="align-center" src="../../_images/cursor_weapon.png" />
+<p>The following two tags accept cursor names as defined under
+<a class="reference internal" href="../mousecursors.html"><em>Mouse Cursors</em></a>.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►Cursor.Attack=</span></code><span class="type definition"> (mouse cursor)</span></span></dt>
+<dd>The cursor to use as the attack cursor for this weapon. This cursor is used if
+only one unit is selected and its target is in range. Defaults to
+<cite>Attack</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►Cursor.AttackOutOfRange=</span></code><span class="type definition"> (mouse cursor)</span></span></dt>
+<dd><p class="first">The cursor used if an object can attack a target, but it is out if weapon&#8217;s
+range and the unit needs to move first to attack it. Defaults to
+<cite>AttackOutOfRange</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If two or more units are selected, this cursor is not used. Note
+that deployed units will get their No Move cursor instead, as they would
+have to, but cannot move.</p>
+</div>
+</dd>
+</dl>
+<p>There&#8217;s no cursor to show in case a unit cannot attack a target (for instance
+it might not be mind-controllable, etc.), because the game does not have a
+concept of this. Instead the next type of cursor is checked, and sometimes the
+inability to attack gets converted to a different action like move, no move, or
+select (or something entirely different like enter for Engineer infantry).</p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.D.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="damage.html" title="Ordinary Damage for IsSonic and UseFireParticles"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="anim.html" title="Anim for Facings"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.D documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Weapons</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2017, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

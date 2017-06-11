@@ -1,3 +1,6 @@
+Iron Curtain
+
+
 .. _wh-ironcurtain:
 
 Iron Curtain Effect
@@ -50,3 +53,24 @@ the target is endowed with the full effect.
   specified number of frames (stackable or absolute).
 
  0.1
+
+
+Iron Curtain Flash
+
+
+With these two tags the combat lights created when protected objects are hit can
+be turned off.
+
+[AudioVisual]IronCurtainFlash=boolean
+  Whether units and structures will by default emit a black or blue flash when
+  hit while under the effect of an Iron Curtain or Force Shield respectively.
+  Defaults to yes.
+
+[Warhead]IronCurtain.Flash=boolean
+  Whether units and structures will emit a black or blue flash when hit with
+  this warhead while under the effect of an Iron Curtain or Force Shield
+  respectively. Defaults to [AudioVisual]►IronCurtainFlash.
+
+ Warheads; Disable the combat light flash on Iron Curtained objects
+
+ 0.D

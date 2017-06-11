@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Chrono Prisons / Abductors &mdash; Ares 0.C documentation</title>
+    <title>Chrono Prisons / Abductors &mdash; Ares 0.D documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.C',
+        VERSION:     '0.D',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.C documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.D documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Chronoshift" href="chronoshift.html" />
     <link rel="prev" title="Carryalls" href="carryalls.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="carryalls.html" title="Carryalls"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.C documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -113,6 +113,12 @@ considered bugs. The same goes for <span class="type docutils literal">InfantryT
 be reported immediately.</p>
 </div>
 </dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►Abductor.Temporal=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Instead of abducting target units immediately, will abduct them only after
+they have been temporally erased. When the target unit would be warped away,
+it will be placed inside the abductor unit as passenger. If abduction fails,
+the target is erased normally. Requires <span><code class="docutils literal"><span class="pre">Temporal=yes</span></code></span> to be set on
+<span><code class="docutils literal"><span class="pre">Warhead</span></code></span>. Defaults to <cite>no</cite>.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►Abductor.Anim=</span></code><span class="type definition"> (animation)</span></span></dt>
 <dd>This animation will be spawned at the location a unit is abducted from.
 Defaults to <cite>none</cite>.</dd>
@@ -169,12 +175,12 @@ weapons.</p>
         <li class="right" >
           <a href="carryalls.html" title="Carryalls"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.C documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2016, The Ares Contributors.
+        &copy; Copyright 2017, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

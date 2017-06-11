@@ -1,55 +1,92 @@
-Mouse Cursors
+Cursors on Units and Structures
 
 
-For several features Ares allows to customize mouse cursors. Mouse
-cursors can be defined in two ways: As a set of six separate tags, or using a
-single tag and comma separated values.
+Cursors can be customized for each unit or structure to give them a unique
+appearance or to express the kind of special functionality better than the
+generic cursors can.
 
-In the following list, [Section]►BaseTag represents the cursor's base
-name. Replace this with the actual name. The default values depend on the base.
+All of these settings take a named cursor defined under
+Mouse Cursors. Also see how to use custom
+weapon cursors.
 
-[Section]BaseTag.Frame=integer
-  Starting frame of the cursor from mouse.sha. The first frame is
-  0.
 
-[Section]BaseTag.Count=integer
-  Number of frames in the animated cursor.
+Movement
 
-[Section]BaseTag.Interval=integer
-  The rate to animate the cursor. Default is 5.
 
-[Section]BaseTag.MiniFrame=integer
-  Same as BaseTag.Frame, except this is for the mouse cursor when
-  positioned on the minimap. Set this to -1 to disable the minimap
-  cursor and to only allow players to click on the battlefield.
+These cursors are used for a variety of functions: setting the rally point for
+factories, undeploying structures, and giving units move orders, but they might
+also be used as fallback for other funtions that can't be used, for instance
+when a target can't be attacked or an object cannot be entered.
 
-[Section]BaseTag.MiniCount=integer
-  Same as BaseTag.Count, except this is for the mouse cursor when
-  positioned on the minimap.
+[TechnoType]Cursor.Move=mouse cursor
+  The cursor to use for representing the move action. Defaults to Move.
 
-[Section]BaseTag.HotSpot=HotSpotX,HotSpotY
-  Specifies the coordinates on the cursor that are considered to be the 'tip' --
-  that is, the point from which the click event will handled. HotSpotX should
-  be one of Left, Center or Right. HotSpotY should
-  be one of Top, Middle or Bottom. For example,
-  BaseTag.HotSpot=Left,Top will treat the top-left corner of the cursor
-  as the tip. Default is Center,Middle.
+[TechnoType]Cursor.NoMove=mouse cursor
+  The cursor to use for representing the no-move action. Defaults to
+  NoMove.
 
-All these tags can be defined by putting them into a single line, using the same
-values as described above:
 
-[Section]BaseTag=cursor definition
-  Enter the values from above in the given order, separated by commas:
-  Frame,Count,Interval,MiniFrame,MiniCount,HotSpotX,HotSpotY.
+Deploy
 
-   You cannot directly use the same definitions as used with other
-    patches for Yuri's Revenge, because Ares uses descriptive
-    names instead of numbers for the HotSpotX,HotSpotY parts. To convert the
-    values, replace 0 by either Left or Top,
-    12345 by either Center or Middle, and
-    54321 by either Right or Bottom.
 
- Mouse Cursors; Defining a Cursor
+Deploy cursors are used for a variety of different functions like for deploying
+buildings, ejecting passengers and occupants, emptying bunkers, deploying GIs or
+Desolators, as well as for ordering area attacks like on the Yuri Clone.
 
- 0.1
- 0.8
+ /images/cursor_deploy.png
+  :alt: Customized deploy cursor for Desolator deploy
+  :align: center
+
+[TechnoType]Cursor.Deploy=mouse cursor
+  The cursor used for deploying actions. Defaults to Deploy.
+
+[TechnoType]Cursor.NoDeploy=mouse cursor
+  The cursor used to indicate a building cannot be deployed, passenger cannot
+  be ejected, or an automatically undeploying infantry is currently deployed.
+  Defaults to NoDeploy.
+
+
+Enter
+
+
+Unlike the other cursors, the enter cursor of the object the mouse is hovering
+over is used. The enter cursor represents several different actions. For
+instance, this is used for entering Tank Bunkers (Bunker=yes), Bio
+Reactors (InfantryAbsorb=yes and/or UnitAbsorb=yes), Grinders
+(Grinding=yes), Service Depots or aircraft docks (UnitRepair=yes),
+or entering transports.
+
+Note that certain actions cannot be customized using the following cursors.
+Despite the cursor is the enter cursor, entering occupiable structures is
+actually a capture action. Spy enter can be customized with the setting below.
+Also, the enter action for saboteurs and hijackers are represented with
+specialized cursors.
+
+ /images/cursor_enter.png
+  :alt: Customized enter cursor on Bio Reactors
+  :align: center
+
+[TechnoType]Cursor.Enter=mouse cursor
+  The enter cursor other objects get when hovering the mouse over an object of
+  this type. Defaults to Enter.
+
+[TechnoType]Cursor.NoEnter=mouse cursor
+  The cursor other objects get when hovering the mouse over an object of this
+  type while entering is not possible. This is used on full transports. Defaults
+  to NoEnter.
+
+
+Spy Infiltration
+
+
+The spy cursor can be customized for each building type, so Agent=yes
+infantry can get a cursor that might be tailored to the spy effect of that
+building type when infiltrating.
+
+ /images/cursor_spy.png
+  :alt: Custom spy cursor on Radar
+  :align: center
+
+[BuildingType]Cursor.Spy=mouse cursor
+  The cursor to show for a spy infiltrating a building of this type. Defaults to
+  Enter.

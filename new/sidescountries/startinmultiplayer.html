@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Start in Multiplayer &mdash; Ares 0.D documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.D',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.D documentation" href="../../index.html" />
+    <link rel="up" title="Sides &amp; Countries" href="index.html" />
+    <link rel="next" title="Buildings" href="../buildings/index.html" />
+    <link rel="prev" title="User Interface" href="uicountry.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../buildings/index.html" title="Buildings"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="uicountry.html" title="User Interface"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.D documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Sides &amp; Countries</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Start in Multiplayer</a><ul>
+<li><a class="reference internal" href="#starting-units">Starting Units</a></li>
+<li><a class="reference internal" href="#fixed-global-unit-cost">Fixed Global Unit Cost</a></li>
+<li><a class="reference internal" href="#pre-deployed-mcv">Pre-Deployed MCV</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="uicountry.html"
+                        title="previous chapter">User Interface</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../buildings/index.html"
+                        title="next chapter">Buildings</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="start-in-multiplayer">
+<h1>Start in Multiplayer<a class="headerlink" href="#start-in-multiplayer" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="starting-units">
+<h2>Starting Units<a class="headerlink" href="#starting-units" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[Country]►StartInMultiplayer.Types=</span></code><span class="type definition"> (list of InfantryTypes and/or VehicleTypes)</span></span></dt>
+<dd><p class="first">The custom list of potential units to start with in multiplayer games. If not
+set, the game selects the types by using <span><code class="docutils literal"><span class="pre">AllowedToStartInMultiplayer</span></code></span>.
+Only <span class="type docutils literal">InfantryTypes</span> and <span class="type docutils literal">VehicleTypes</span> are supported. Use
+<cite>&lt;none&gt;</cite> to disable starting units for this country.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">It is now supported to have no starting infantry. The game will no
+longer crash.</p>
+</div>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.D.</span></p>
+</div>
+</div>
+<div class="section" id="fixed-global-unit-cost">
+<h2>Fixed Global Unit Cost<a class="headerlink" href="#fixed-global-unit-cost" title="Permalink to this headline">¶</a></h2>
+<p>By default, the game will determine the average cost of a unit by summing up and
+averaging all costs of units that could be used as starting units (only
+considering countries that are in the current match). The Unit Count setting is
+multiplied by this.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[General]►StartInMultiplayerUnitCost=</span></code><span class="type definition"> (integer - credits)</span></span></dt>
+<dd>The fixed amount of credits for one average unit. If not set, the game will
+use the method described above. In this case, <span class="game docutils literal">Ares</span> will now output the
+inferred average unit cost into the log file.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.D.</span></p>
+</div>
+</div>
+<div class="section" id="pre-deployed-mcv">
+<h2>Pre-Deployed MCV<a class="headerlink" href="#pre-deployed-mcv" title="Permalink to this headline">¶</a></h2>
+<p>This allows for countries to not have an MCV at the beginning of the match, as
+well as for game modes where the base locations are fixed. Also, the initial
+Construction Yard could be made different from the ones obtainable later in the
+game.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[Country]►StartInMultiplayer.WithConst=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether this country shall start with the first buildable building from
+<span><code class="docutils literal"><span class="pre">BuildConst</span></code></span> instead of a unit from <span><code class="docutils literal"><span class="pre">BaseUnit</span></code></span> when starting a
+multiplayer match. Defaults to <cite>no</cite>.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.D.</span></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../buildings/index.html" title="Buildings"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="uicountry.html" title="User Interface"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.D documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Sides &amp; Countries</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2017, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

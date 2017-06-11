@@ -21,6 +21,8 @@ Default values for general tags:
   Defaults to LightningStorm.
 [SuperWeapon]Light.*=integer
   Default to the scenario's [Lighting]►Ion*.
+[SuperWeapon]Cursor=mouse cursor
+  Defaults to LightningStorm.
 
 
 Lightning Storm specific tags:

@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Mouse Cursors &mdash; Ares 0.D documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.D',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.D documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="New Powered Unit Logic" href="newpoweredunitlogic.html" />
+    <link rel="prev" title="Manual Control" href="manual.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="newpoweredunitlogic.html" title="New Powered Unit Logic"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="manual.html" title="Manual Control"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Mouse Cursors</a><ul>
+<li><a class="reference internal" href="#defining-cursors">Defining Cursors</a></li>
+<li><a class="reference internal" href="#default-cursors">Default Cursors</a></li>
+<li><a class="reference internal" href="#migrating-from-previous-versions">Migrating from Previous Versions</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="manual.html"
+                        title="previous chapter">Manual Control</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="newpoweredunitlogic.html"
+                        title="next chapter">New Powered Unit Logic</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="mouse-cursors">
+<h1>Mouse Cursors<a class="headerlink" href="#mouse-cursors" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="defining-cursors">
+<h2>Defining Cursors<a class="headerlink" href="#defining-cursors" title="Permalink to this headline">¶</a></h2>
+<p>New cursors can be added and default cursors can be changed using the new
+<span><code class="docutils literal"><span class="pre">[MouseCursors]</span></code></span> section, which centralizes cursor definitions in one
+place. Each cursor has a name, which can then be used as valid value for tags
+asking for a mouse cursor. Cursors are defined in a single line with
+comma-separated values as follows:</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[MouseCursors]►Name=</span></code><span class="type definition"> (cursor definition)</span></span></dt>
+<dd><p class="first"><span><code class="docutils literal"><span class="pre">Name</span></code></span> can be up to 31 characters long. Enter the values in the given
+order, separated by commas:
+<cite>Frame,Count,Interval,MiniFrame,MiniCount,HotSpotX,HotSpotY</cite>. If fewer
+items are defined, the remaining values are defaulted.</p>
+<p><cite>Frame</cite> is the starting frame of the cursor from <code class="file docutils literal"><span class="pre">mouse.sha</span></code>. The
+first frame is <cite>0</cite>. Defaults to <cite>0</cite>.</p>
+<p><cite>Count</cite> is the number of frames in the animated cursor. Defaults to
+<cite>1</cite>.</p>
+<p><cite>Interval</cite> is the rate to animate the cursor. Defaults to <cite>0</cite>.</p>
+<p><cite>MiniFrame</cite> is like <cite>Frame</cite>, except this is for the mouse cursor
+when positioned on the minimap. Set this to <cite>-1</cite> to disable the minimap
+cursor and to only allow players to click on the battlefield. Defaults to
+<cite>-1</cite>.</p>
+<p><cite>MiniCount</cite> is like <cite>Count</cite>, except this is for the mouse cursor
+when positioned on the minimap. Defaults to <cite>-1</cite>.</p>
+<p><cite>HotSpot</cite> specifies the point from which the click event will handled.
+<cite>HotSpotX</cite> should be one of <cite>Left</cite>, <cite>Center</cite> or
+<cite>Right</cite>. <cite>HotSpotY</cite> should be one of <cite>Top</cite>,
+<cite>Middle</cite> or <cite>Bottom</cite>. For example, <cite>Left,Top</cite> will treat
+the top-left corner of the cursor as the tip. Default is
+<cite>Left,Top</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You cannot directly use the same definitions as used with other
+patches for <span class="game docutils literal">Yuri&#8217;s Revenge</span>, because <span class="game docutils literal">Ares</span> uses descriptive
+names instead of numbers for the HotSpotX,HotSpotY parts. To convert the
+values, replace <cite>0</cite> by either <cite>Left</cite> or <cite>Top</cite>,
+<cite>12345</cite> by either <cite>Center</cite> or <cite>Middle</cite>, and
+<cite>54321</cite> by either <cite>Right</cite> or <cite>Bottom</cite>.</p>
+</div>
+</dd>
+</dl>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.D.</span></p>
+</div>
+</div>
+<div class="section" id="default-cursors">
+<h2>Default Cursors<a class="headerlink" href="#default-cursors" title="Permalink to this headline">¶</a></h2>
+<p>The original game&#8217;s cursors are defined implicitly, that is, they exist and are
+available even without them being explicitly defined. See the <a class="reference download internal" href="../_downloads/MouseCursors.txt"><code class="xref download docutils literal"><span class="pre">list</span> <span class="pre">of</span>
+<span class="pre">default</span> <span class="pre">cursors</span></code></a>.</p>
+<p><span class="game docutils literal">Ares</span> adds several new named cursors by default, which are used for
+special purposes like newly added features, or to distinguish different unit
+actions. These cursors can be overridden to give these functions a separate
+cursor without also changing the original cursors.</p>
+<ul class="simple">
+<li><cite>TogglePower</cite>: used for the Toggle Power feature when toggling power
+is possible on a building. Defaults to <cite>Power</cite>.</li>
+<li><cite>NoTogglePower</cite>: used for the Toggle Power feature when toggling power
+is not allowed. Defaults to <cite>Disallowed</cite>.</li>
+<li><cite>EngineerDamage</cite>: the cursor when an Engineer will not capture a
+building due to MultiEngineer being enabled. Defaults to <cite>Detonate</cite>.</li>
+<li><cite>InfantryHeal</cite>: the repair cursor on allied infantry. Defaults to
+<cite>355,1,0,-1,-1,Center,Middle</cite>.</li>
+<li><cite>UnitRepair</cite>: the repair cursor on allied units. Defaults to
+<cite>Repair</cite>.</li>
+<li><cite>Tote</cite>: used for picking up Carryall cargo. Defaults to the blue move
+cursor.</li>
+<li><cite>TakeVehicle</cite>: used for VehicleThief and CanDrive on capturable
+vehicles. Defaults to the <cite>Enter</cite>.</li>
+<li><cite>Sabotage</cite>: used for Saboteur infantry on valid target buildings.
+Defaults to the <cite>Enter</cite>.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The default cursors might change. <span class="game docutils literal">Ares</span> might add more special
+cursors to differentiate actions in a later version, change the defaults of
+the new cursors, or enable animations on default cursors.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Changing the cursor called <cite>Default</cite> is not supported.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.D.</span></p>
+</div>
+</div>
+<div class="section" id="migrating-from-previous-versions">
+<h2>Migrating from Previous Versions<a class="headerlink" href="#migrating-from-previous-versions" title="Permalink to this headline">¶</a></h2>
+<p>Ares versions prior to 0.D supported seven tags to define a mouse cursor: one
+base tag and six additional tags to define each of the parts of a cursor
+definition separately.</p>
+<p>To migrate to the new <span><code class="docutils literal"><span class="pre">[MouseCursors]</span></code></span> section, first merge the separate
+tags like <span><code class="docutils literal"><span class="pre">Cursor.Frame=355</span></code></span>, <span><code class="docutils literal"><span class="pre">Cursor.Count=1</span></code></span>, ... into a one-line
+definition like <span><code class="docutils literal"><span class="pre">Cursor=355,1,...</span></code></span>.</p>
+<p>If you have such a one line cursor definition, copy it into the new
+<span><code class="docutils literal"><span class="pre">[MouseCursors]</span></code></span> section and give it a new, unique name like <span><code class="docutils literal"><span class="pre">Medic</span></code></span>.
+Use this unique name instead of the original <span><code class="docutils literal"><span class="pre">Cursor=355,1,...</span></code></span>  line, that
+is, make it <span><code class="docutils literal"><span class="pre">Cursor=Medic</span></code></span>.</p>
+<p>If you are using the same cursor definitions in several places, there is no need
+to give each a new name. You can reuse existing cursors.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="newpoweredunitlogic.html" title="New Powered Unit Logic"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="manual.html" title="Manual Control"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2017, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

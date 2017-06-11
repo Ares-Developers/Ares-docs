@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Particles &mdash; Ares 0.C documentation</title>
+    <title>Particles &mdash; Ares 0.D documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.C',
+        VERSION:     '0.D',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.C documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.D documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Specific Passengers" href="passengers.html" />
     <link rel="prev" title="Operator" href="operator.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="operator.html" title="Operator"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.C documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -92,14 +92,15 @@
 <p>Particle handling has been greatly optimized in <span class="game docutils literal">Ares</span>. Pixel particles &#8211;
 that is types having <span><code class="docutils literal"><span class="pre">BehavesLike=</span></code></span> set to either <cite>Spark</cite> or
 <cite>Railgun</cite> &#8211; were known to cause lag even with relatively few particles
-involved. That is, even sparse railgun beams created a noticable slowdown.</p>
+involved. That is, even sparse railgun beams created a noticable slowdown. Also,
+<cite>Smoke</cite> particles are created frequently throughout a game.</p>
 <p>In <span class="game docutils literal">Ares</span> the optimization is activated automatically if all of the
 following are true. If any one is false, the optimization will not be applied
 and the particles will be handled like in earlier versions. That is, mixing and
 matching is still possible.</p>
 <ol class="arabic simple">
-<li><span><code class="docutils literal"><span class="pre">[ParticleSystem]►BehavesLike=</span></code></span> is either <cite>Spark</cite> or
-<cite>Railgun</cite></li>
+<li><span><code class="docutils literal"><span class="pre">[ParticleSystem]►BehavesLike=</span></code></span> is either <cite>Spark</cite>,
+<cite>Railgun</cite>, or <cite>Smoke</cite></li>
 <li>The <span class="type docutils literal">ParticleType</span> set as <span><code class="docutils literal"><span class="pre">[ParticleSystemType]►HoldsWhat=</span></code></span> has the
 exact same setting</li>
 <li>The <span class="type docutils literal">ParticleType</span> does not use alpha images or line trailers</li>
@@ -113,6 +114,9 @@ optimization from being applied.</p>
 optimization is not applied, particles will be handled more efficiently.</p>
 <div class="versionadded" id="index-0">
 <p><span class="versionmodified">New in version 0.C.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 0.D.</span></p>
 </div>
 </div>
 <div class="section" id="damage-range-for-gas-particles">
@@ -164,12 +168,12 @@ using a custom palette.</p>
         <li class="right" >
           <a href="operator.html" title="Operator"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.C documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2016, The Ares Contributors.
+        &copy; Copyright 2017, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

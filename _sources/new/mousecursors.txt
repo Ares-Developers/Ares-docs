@@ -1,0 +1,109 @@
+Mouse Cursors
+
+
+Defining Cursors
+
+
+New cursors can be added and default cursors can be changed using the new
+[MouseCursors]► section, which centralizes cursor definitions in one
+place. Each cursor has a name, which can then be used as valid value for tags
+asking for a mouse cursor. Cursors are defined in a single line with
+comma-separated values as follows:
+
+[MouseCursors]Name=cursor definition
+  Name can be up to 31 characters long. Enter the values in the given
+  order, separated by commas:
+  Frame,Count,Interval,MiniFrame,MiniCount,HotSpotX,HotSpotY. If fewer
+  items are defined, the remaining values are defaulted.
+
+  Frame is the starting frame of the cursor from mouse.sha. The
+  first frame is 0. Defaults to 0.
+
+  Count is the number of frames in the animated cursor. Defaults to
+  1.
+
+  Interval is the rate to animate the cursor. Defaults to 0.
+
+  MiniFrame is like Frame, except this is for the mouse cursor
+  when positioned on the minimap. Set this to -1 to disable the minimap
+  cursor and to only allow players to click on the battlefield. Defaults to
+  -1.
+
+  MiniCount is like Count, except this is for the mouse cursor
+  when positioned on the minimap. Defaults to -1.
+
+  HotSpot specifies the point from which the click event will handled.
+  HotSpotX should be one of Left, Center or
+  Right. HotSpotY should be one of Top,
+  Middle or Bottom. For example, Left,Top will treat
+  the top-left corner of the cursor as the tip. Default is
+  Left,Top.
+
+   You cannot directly use the same definitions as used with other
+    patches for Yuri's Revenge, because Ares uses descriptive
+    names instead of numbers for the HotSpotX,HotSpotY parts. To convert the
+    values, replace 0 by either Left or Top,
+    12345 by either Center or Middle, and
+    54321 by either Right or Bottom.
+
+ Mouse Cursors; Defining a Cursor
+
+ 0.D
+
+
+Default Cursors
+
+
+The original game's cursors are defined implicitly, that is, they exist and are
+available even without them being explicitly defined. See the list of
+default cursors </extras/MouseCursors.txt>.
+
+Ares adds several new named cursors by default, which are used for
+special purposes like newly added features, or to distinguish different unit
+actions. These cursors can be overridden to give these functions a separate
+cursor without also changing the original cursors.
+
++ TogglePower: used for the Toggle Power feature when toggling power
+  is possible on a building. Defaults to Power.
++ NoTogglePower: used for the Toggle Power feature when toggling power
+  is not allowed. Defaults to Disallowed.
++ EngineerDamage: the cursor when an Engineer will not capture a
+  building due to MultiEngineer being enabled. Defaults to Detonate.
++ InfantryHeal: the repair cursor on allied infantry. Defaults to
+  355,1,0,-1,-1,Center,Middle.
++ UnitRepair: the repair cursor on allied units. Defaults to
+  Repair.
++ Tote: used for picking up Carryall cargo. Defaults to the blue move
+  cursor.
++ TakeVehicle: used for VehicleThief and CanDrive on capturable
+  vehicles. Defaults to the Enter.
++ Sabotage: used for Saboteur infantry on valid target buildings.
+  Defaults to the Enter.
+
+ The default cursors might change. Ares might add more special
+  cursors to differentiate actions in a later version, change the defaults of
+  the new cursors, or enable animations on default cursors.
+
+ Changing the cursor called Default is not supported.
+
+ 0.D
+
+
+Migrating from Previous Versions
+
+
+Ares versions prior to 0.D supported seven tags to define a mouse cursor: one
+base tag and six additional tags to define each of the parts of a cursor
+definition separately.
+
+To migrate to the new [MouseCursors]► section, first merge the separate
+tags like Cursor.Frame=355, Cursor.Count=1, ... into a one-line
+definition like Cursor=355,1,....
+
+If you have such a one line cursor definition, copy it into the new
+[MouseCursors]► section and give it a new, unique name like Medic.
+Use this unique name instead of the original Cursor=355,1,...  line, that
+is, make it Cursor=Medic.
+
+If you are using the same cursor definitions in several places, there is no need
+to give each a new name. You can reuse existing cursors.

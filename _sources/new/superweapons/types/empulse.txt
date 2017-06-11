@@ -30,6 +30,12 @@ Default values for general tags:
   use NoTarget to enable AI players to use it. Defaults to
   None.
 
+[SuperWeapon]Cursor=mouse cursor
+  Used when the target is in range of a cannon. Defaults to Attack.
+
+[SuperWeapon]NoCursor=mouse cursor
+  Used when there is no cannon in range. Defaults to AttackOutOfRange.
+
 EMPulse specific tags:
 
 [SuperWeapon]EMPulse.Cannons=list of BuildingType

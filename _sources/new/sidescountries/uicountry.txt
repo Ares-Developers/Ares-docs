@@ -23,9 +23,13 @@ Display and Selection Chance
   calculated by dividing this country's RandomSelectionWeight value by
   the sum of all Multiplay=yes countries' RandomSelectionWeight
   values. Defaults to 1.
+[Country]AIRandomSelectionWeight=integer
+  The random selection weight used for AI players. This can be used to make it
+  more or less likely for AI players to pick this country randomly. Defaults to
+  RandomSelectionWeight.
 
  0.1
- 0.2
+ 0.D
 
 
 Flags and Observer Graphics

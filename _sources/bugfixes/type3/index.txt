@@ -18,3 +18,4 @@ on modern computers.
 	fastcpucrash
 	ddrawdll
 	mapactions
+	layersort

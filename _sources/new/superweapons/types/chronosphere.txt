@@ -33,6 +33,8 @@ Default values for general tags:
   Specifies the super weapon used to select the target cell for the chronoshift
   by ID. Defaults to the first ChronoWarp type super weapon in the
   SuperWeaponTypes list.
+[SuperWeapon]Cursor=mouse cursor
+  Defaults to Chronosphere.
 
 
 Chronosphere specific tags:
@@ -109,5 +111,12 @@ properties are used, as well as Range to indicate the area of effect by
 drawing radial lines around the cursor. SW.Range is not used.
 
 For the actual chronoshifting tags, see ChronoSphere.
+
+Default values for general tags:
+
+[SuperWeapon]SW.AITargeting=enum
+  Defaults to none. The AI cannot use this.
+[SuperWeapon]Cursor=mouse cursor
+  Defaults to Chronosphere.
 
  0.2

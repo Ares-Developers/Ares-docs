@@ -30,14 +30,16 @@ Paradrop Defaults
   that will be paradropped. Defaults to the corresponding side's
   ParaDrop.Num=.
 [Country]ParaDrop.Aircraft=AircraftType
-  The aircraft type that will be used to deliver paradrops. Defaults to the
-  corresponding side's ParaDrop.Aircraft=.
+  The aircraft type that will be used to deliver paradrops from super weapons or
+  by teams created by map actions. Defaults to the corresponding side's
+  ParaDrop.Aircraft=.
 [Country]Parachute.Anim=Animation
   This country's default parachute used if not overridden by a
   TechnoType. Defaults to the corresponding side's
   Parachute.Anim=.
 
  0.2
+ 0.D
 
 
 Others

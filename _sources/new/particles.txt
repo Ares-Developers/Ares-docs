@@ -7,15 +7,16 @@ Optimizations
 Particle handling has been greatly optimized in Ares. Pixel particles --
 that is types having BehavesLike= set to either Spark or
 Railgun -- were known to cause lag even with relatively few particles
-involved. That is, even sparse railgun beams created a noticable slowdown.
+involved. That is, even sparse railgun beams created a noticable slowdown. Also,
+Smoke particles are created frequently throughout a game.
 
 In Ares the optimization is activated automatically if all of the
 following are true. If any one is false, the optimization will not be applied
 and the particles will be handled like in earlier versions. That is, mixing and
 matching is still possible.
 
-1. [ParticleSystem]►BehavesLike= is either Spark or
-   Railgun
+1. [ParticleSystem]►BehavesLike= is either Spark,
+   Railgun, or Smoke
 2. The ParticleType set as [ParticleSystemType]►HoldsWhat= has the
    exact same setting
 3. The ParticleType does not use alpha images or line trailers
@@ -29,6 +30,7 @@ optimization is not applied, particles will be handled more efficiently.
  Particles; Optimizations for Pixel Particles
 
  0.C
+ 0.D
 
 
 Damage Range for Gas Particles

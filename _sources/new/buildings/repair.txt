@@ -1,0 +1,18 @@
+Repair and Insufficient Funds
+
+
+This global tag can be used to change how the repair mode works. By default, all
+repairing is stopped once a player no longer has enough credits to afford it.
+After gaining some credits, the buildings have to be ordered to repair again.
+With this tag, repairing will pause, but not stop.
+
+[General]RepairStopOnInsufficientFunds=boolean
+  Whether repairing will automatically be stopped when the owning player has
+  insufficient funds. If no, repairing mode will not be turned off. The
+  wrench will still be visible, even though the building is no longer actively
+  repaired. Repairing will resume when the player gains more funds. This only
+  affects human players. Defaults to yes.
+
+ Buildings; Pause repair on insufficient funds
+
+ 0.D

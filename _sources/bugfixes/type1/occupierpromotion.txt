@@ -1,0 +1,14 @@
+
+Occupiers Are Promoted Only After Exiting Building
+
+
+Infantry could gain experience killing enemies while occupying a structure, but
+unlike units in OpenTopped vehicles (and with Ares with
+Gunner vehicles also), occupiers are not promoted immediately. They had
+to exit the building first, and only after doing this would they use the elite
+weapon when occupying a structure again.
+
+With Ares, the promotion now happens immediately and without exiting,
+but it is silent, that is, no sound will play.
+
+ 0.D

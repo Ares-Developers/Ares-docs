@@ -1,0 +1,33 @@
+Build More Buildings of a Type
+
+
+In the original game, AI base planning would allow for a structure to not be
+built, or built exactly one time. There are special cases for power plants,
+which fill up the base plan so the house always has enough power, defenses,
+which are picked depending on the enemy army's strength, and refineries, which
+have special settings to support multiple instances.
+
+In Ares it is not only possible to define the number of instances to
+build by difficulty, but also to randomize this number to some extent. The AI
+will build a random number of instances from build count to build count plus
+extra count.
+
+Additional buildings are not build one after another, but instead mix randomly
+with the structures in the build list planned to be built later. For example,
+the AI will not always build four barracks before building a war factory, though
+by chance it could do that at times.
+
+[BuildingType]AIBuildCounts=list of integers
+  The number of buildings the AI will build of this type depending on the
+  difficulty. Order is hard to easy. Each value must be equal to or greater than
+  1. Defaults to 1,1,1.
+
+[BuildingType]AIExtraCounts=list of integers
+  The maximum number of extra buildings the AI can build of this type depending
+  on the difficulty. Order is hard to easy. A random number of buildings will be
+  build in addition to the ones from the normal build count. Each value must be
+  equal to or greater than 0. Defaults to 0,0,0.
+
+ Buildings; AI build more than one building of a type
+
+ 0.D

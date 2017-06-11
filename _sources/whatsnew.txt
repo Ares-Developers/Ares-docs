@@ -6,6 +6,26 @@ This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of Ares. Internal changes, optimizations
 and updates are mentioned here only if they are notable.
 
+ Ares 0.D
+
++ **Mouse Cursors** have been reworked completely and
+  now can be customized for units and structures as well
+  as for weapons
+
++ **Warheads** have been expanded to support mechanics and ambulances, and Temporal weapons can consider health and work together with Abductor logic
+
++ **Ivan Bombs** added support for the death bombs cut from the original game
+
++ **Buildings** can have custom buildup and separate sell times and AI players can build more than one of
+  each type
+
++ **Units** can have custom fall rates and dig
+  animations and sounds
+
++ **Countries** can have custom starting units and start with a deployed
+  Construction Yard
+
+
  Ares 0.C
 
 + **Bounty** is money awarded for killing enemies
