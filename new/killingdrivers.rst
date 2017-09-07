@@ -6,6 +6,16 @@ Requested as a `"Jarmen Kell" functionality
 specific warheads to kill the driver of a vehicle instead of damaging
 it, and allows others to take over the now-neutral vehicle.
 
+.. index:: Warheads; Warheads can be set to kill the driver of a vehicle, instead of damaging it.
+
+.. versionadded:: 0.2
+
+.. versionchanged:: 0.E
+
+
+Warhead Settings
+----------------
+
 This logic supports :tag:`CellSpread` and respects all immunities as any other
 conventional warhead like :tag:`ImmuneToPoison` as well as their veteran
 abilities, :tag:`AffectsAllies`, and :tag:`AffectsEnemies`.
@@ -28,6 +38,9 @@ abilities, :tag:`AffectsAllies`, and :tag:`AffectsEnemies`.
 
 .. _killingdrivers-immunity:
 
+Protected Drivers
+-----------------
+
 The following settings can make a unit immune to the Kill Driver logic:
 
 :tagdef:`[TechnoType]ProtectedDriver=boolean`
@@ -47,6 +60,10 @@ under :tag:`VeteranAbilities` or :tag:`EliteAbilities`. If specified, the unit's
 driver becomes protected unconditionally against :tag:`KillDriver` (which means
 that :tag:`ProtectedDriver.MinHealth` is no longer checked), but not against
 damage or other special warhead effects.
+
+
+Reclaim Vehicles
+----------------
 
 Drivers are infantry units that can capture neutral vehicles, like ones that had
 their driver killed.
@@ -69,10 +86,5 @@ their driver killed.
 
 See :doc:`/new/hijackers` for more options that relate to :tag:`CanDrive`.
 
-.. index:: Warheads; Warheads can be set to kill the driver of a vehicle, instead of damaging it.
-
 .. index:: Infantry; Capture units that had their drivers killed.
 
-.. versionadded:: 0.2
-
-.. versionchanged:: 0.E
