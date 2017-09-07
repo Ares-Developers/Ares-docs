@@ -6,19 +6,24 @@ Requested as a `"Jarmen Kell" functionality
 specific warheads to kill the driver of a vehicle instead of damaging
 it, and allows others to take over the now-neutral vehicle.
 
+This logic supports :tag:`CellSpread` and respects all immunities as any other
+conventional warhead like :tag:`ImmuneToPoison` as well as their veteran
+abilities, :tag:`AffectsAllies`, and :tag:`AffectsEnemies`.
+
 :tagdef:`[Warhead]KillDriver=boolean`
   Specifies whether this warhead kills the driver of the vehicle, instead of
   damaging the vehicle itself. The first passenger matching the vehicle's
   :tag:`Operator` is considered the driver. All other passengers will be
   ejected. Defaults to :value:`no`.
-
-  This logic respects :tag:`AffectsAllies` and :tag:`AffectsEnemies`.
 :tagdef:`[Warhead]KillDriver.Owner=enumeration - civilian,special,neutral`
   Specifies the house the units are assigned to. Defaults to :value:`special`.
 :tagdef:`[Warhead]KillDriver.KillBelowPercent=float`
   Specifies the percentage of health a unit can not exceed to have its driver
   killed by a :tag:`KillDriver=yes` warhead. A unit above this health level
   is only damaged and the driver is not killed. Defaults to :value:`100%`.
+:tagdef:`[Warhead]KillDriver.Chance=float - percentage`
+  Specifies the chance that a unit hit by a :tag:`KillDriver=yes` warhead will
+  have its driver killed. Defaults to :value:`100%`.
 
 
 The following settings can make a unit immune to the Kill Driver logic:
@@ -63,4 +68,4 @@ See :doc:`/new/hijackers` for more options that relate to :tag:`CanDrive`.
 
 .. versionadded:: 0.2
 
-.. versionchanged:: 0.D
+.. versionchanged:: 0.E
