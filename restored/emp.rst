@@ -146,6 +146,8 @@ This can be used for re-activating deactivated allied units. With a negative
   case of the description above.
 
 
+.. _empulse-immunity:
+
 EMP Immunity
 ------------
 

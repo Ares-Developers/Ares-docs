@@ -26,6 +26,8 @@ abilities, :tag:`AffectsAllies`, and :tag:`AffectsEnemies`.
   have its driver killed. Defaults to :value:`100%`.
 
 
+.. _killingdrivers-immunity:
+
 The following settings can make a unit immune to the Kill Driver logic:
 
 :tagdef:`[TechnoType]ProtectedDriver=boolean`
@@ -40,6 +42,11 @@ The following settings can make a unit immune to the Kill Driver logic:
   resistant against driver killing weapons. Defaults to :value:`0.0` if
   :tag:`ProtectedDriver=yes`, to :value:`1.0` otherwise.
 
+Driver protection can also be granted by specifying :value:`PROTECTED_DRIVER`
+under :tag:`VeteranAbilities` or :tag:`EliteAbilities`. If specified, the unit's
+driver becomes protected unconditionally against :tag:`KillDriver` (which means
+that :tag:`ProtectedDriver.MinHealth` is no longer checked), but not against
+damage or other special warhead effects.
 
 Drivers are infantry units that can capture neutral vehicles, like ones that had
 their driver killed.
