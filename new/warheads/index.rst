@@ -8,6 +8,9 @@ Warheads
 	cellspread
 	damageair
 	ironcurtain
+	sonar
+	flash
+	disableweapons
 	mechanical
 	mindcontrol
 	temporal
