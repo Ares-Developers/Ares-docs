@@ -58,6 +58,10 @@ superweapons. AttachEffect tags can be applied to both the Big Four (all
   Whether the AttachEffect will be removed when the affected unit is removed
   from the map (entering a building or another unit). Defaults to :value:`no`.
 
+:tagdef:`[Section]AttachEffect.PenetratesIronCurtain=boolean`
+  Whether the AttachEffect can attach to a unit or structure under the influence
+  of an Iron Curtain or Force Shield. Defaults to :value:`no`.
+
 The following tags are valid on TechnoTypes only:
 
 :tagdef:`[TechnoType]AttachEffect.Delay=integer - frames`
@@ -86,5 +90,4 @@ The following tags are valid on Warheads only:
 .. index:: Weapons; AttachEffect
 
 .. versionadded:: 0.4
-.. versionchanged:: 0.5
-.. versionchanged:: 0.C
+.. versionchanged:: 0.E
