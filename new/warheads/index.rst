@@ -6,6 +6,7 @@ Warheads
 	
 	general
 	cellspread
+	relativedamage
 	damageair
 	ironcurtain
 	sonar
