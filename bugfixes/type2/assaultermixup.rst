@@ -1,0 +1,12 @@
+==============================
+:captiontag:`Assaulter` Mix Up
+==============================
+
+The game accidentally switched assaulter infantry and victim infantry when an
+:tag:`Assaulter` infantry raided a building. This messed with several logics as
+well as with the internal bookkeeping counters, registering the wrong unit as
+destroyed. A consequence was that the assaulter could be registered as lost
+multiple times instead of the occupants inside the building, which could fail
+missions because critial units were apparently lost. This bug has been fixed.
+
+.. versionadded:: 0.E

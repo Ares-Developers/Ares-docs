@@ -19,3 +19,4 @@ on modern computers.
 	ddrawdll
 	mapactions
 	layersort
+	skipinvalidation

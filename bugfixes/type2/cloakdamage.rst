@@ -1,0 +1,10 @@
+===============================================
+Cloaked Objects no Longer Uncloak if Unaffected
+===============================================
+
+Cloaked objects being hit by warheads that dealt no damage to them or even
+healed them uncloaked briefly. It was unintuitive for friendly warheads to
+reveal units and structures to the enemy. :game:`Ares` changed this behavior so
+healing weapons and weapons dealing no damage will no longer uncloak objects.
+
+.. versionadded:: 0.E
