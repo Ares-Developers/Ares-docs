@@ -10,6 +10,7 @@ Warheads
 	ironcurtain
 	sonar
 	flash
+	nukeflash
 	disableweapons
 	mechanical
 	mindcontrol
