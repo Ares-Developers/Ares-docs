@@ -48,3 +48,29 @@ when the unit or structure is promoted.
 .. index:: TechnoTypes; Promotion customizations
 
 .. versionadded:: 0.C
+
+
+Promote all Passengers
+----------------------
+
+The following setting can be used on :tag:`OpenTopped=yes` transports with
+Initial Payload, which are used to imitate multiple weapons but logically only
+count as one unit. This works best with :tag:`Experience.PromotePassengers=no`
+and optionally :tag:`Experience.FromPassengers=yes`.
+
+This does not forward "experience" as the ratio of a destroyed object's cost and
+the own cost. Instead, this forwards the "rank" like veteran and elite. A
+Guardian GI inside a Battle Fortress will always mirror the transport's rank,
+despite being much cheaper than the vehicle and thus usually promoted earlier. 
+
+:tagdef:`[TechnoType]Promote.IncludePassengers=boolean`
+  Whether all :tag:`Trainable=yes` passengers will be set to the same rank if
+  the rank of this transport unit changes. Defaults to :value:`no`.
+
+  .. note:: The passengers' veterancy is discarded when the vehicle is promoted.
+    This should not be used on manually controllable transports, because they
+    could degrade elite passengers to veterans, for example.
+
+.. index:: OpenTopped; Promote passengers as if they are part of the transport
+
+.. versionadded:: 0.E
