@@ -388,3 +388,16 @@ Other changes:
 
   Hunter Seekers no longer target objects under the effect of the Iron Curtain
   or objects being temporally attacked.
+
+From Ares 0.D and below
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Changed tags:
+
+  :tag:`[SuperWeapon]Nuke.Payload`
+    No longer automatically adds the weapon to the list. Ensure that the weapon
+    is known to the game by adding it to the :tag:`[WeaponTypes]` list.
+
+Other changes:
+
+  None.
