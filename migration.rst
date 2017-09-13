@@ -400,4 +400,7 @@ Changed tags:
 
 Other changes:
 
-  None.
+  :tag:`KillDriver` has been changed to be applied like regular damage. It now
+  respects immunities and supports :tag:`CellSpread`. Thus, the effect might
+  not be applied in all cases where it was applied before, and might be applied
+  in cases were it previously was not.

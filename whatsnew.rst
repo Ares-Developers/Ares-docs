@@ -6,6 +6,28 @@ This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of :game:`Ares`. Internal changes, optimizations
 and updates are mentioned here only if they are notable.
 
+.. rubric:: Ares 0.E
+
++ **Tunnel Networks** allow to :doc:`move units between entrance buildings
+  </new/buildings/tunnels>`
+
++ **IFV units** support :doc:`more than 18 weapons, turrets, and modes
+  </new/gunner>`
+
++ **Warheads** can apply new effects like :doc:`sonar </new/warheads/sonar>`,
+  :doc:`weapon disabling </new/warheads/disableweapons>`, :doc:`flashing
+  </new/warheads/flash>`, and :doc:`Nuke flash </new/warheads/nukeflash>`, and
+  deal :doc:`relative damage like the MAD Tank </new/warheads/relativedamage>`
+
++ **Veterancy Abilities** support :doc:`immunity to radiation, poison, psionics,
+  temporals, abductors, psychedelics, and psychic weapons
+  </new/veteranabilities>`
+
++ **Chronoshifting** can be :doc:`disallowed to destroy units at the destination
+  </new/chronoshift>`
+
++ **Movies List** can be :doc:`defined with new unlockable movies </new/movies>`
+
 .. rubric:: Ares 0.D
 
 + **Mouse Cursors** have been :doc:`reworked completely </new/mousecursors>` and
