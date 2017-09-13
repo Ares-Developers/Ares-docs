@@ -18,10 +18,12 @@ Units and Buildings
 
 [TechnoType]Survivor.Side#=InfantryType) (where # is the zero-based index of the side -- e.g. 0 for Allied, 1 for Soviet, 2 for Yuri
   The InfantryType that can emerge from this object as a survivor when
-  the object was owned by the corresponding side. For example,
-  Survivor.Side0=E1 would cause the spawned survivor (if any) to be a GI
-  when the destroyed unit was owned by an Allied player. Defaults to the owning
-  side's Crew.
+  the object was owned by the corresponding side. Use to <none> to
+  reset to default. Defaults to the owning side's Crew. 
+
+   For example, Survivor.Side0=E1 would cause the spawned
+    survivor (if any) to be a GI when the destroyed unit was owned by an Allied
+    player at the time of destruction.
 
 [TechnoType]Crew.TechnicianChance=integer - percent between 0 and 100
   The chance the owning side's Technician is spawned instead of an

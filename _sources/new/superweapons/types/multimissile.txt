@@ -27,6 +27,9 @@ Nuclear missile specific tags:
   The Weapon used to display the downward-pointing nuke and as default, if
   SW.Damage and SW.Warhead aren't set. Defaults to
   NukePayload.
+
+   The weapon used as Nuke.Payload has to be put into the
+    WeaponTypes section. The Weedguy hack will not work.
 [SuperWeapon]Nuke.TakeOff=Animation
   The Animation played on the missile silo when the missile is launched.
   Defaults to [General]►NukeTakeOff.

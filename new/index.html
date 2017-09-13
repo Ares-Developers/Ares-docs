@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>New &amp; Enhanced In-Game Logic &mdash; Ares 0.D documentation</title>
+    <title>New &amp; Enhanced In-Game Logic &mdash; Ares 0.E documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.D',
+        VERSION:     '0.E',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.D documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.E documentation" href="../index.html" />
     <link rel="next" title="Additional ArmorTypes and Verses" href="additionalarmortypesandverses.html" />
     <link rel="prev" title="Vehicle Thief" href="../restored/vehicle-thief.html" /> 
   </head>
@@ -41,7 +41,7 @@
         <li class="right" >
           <a href="../restored/vehicle-thief.html" title="Vehicle Thief"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -160,11 +160,16 @@ the game.</p>
 <li class="toctree-l1"><a class="reference internal" href="fallrate.html">Fall Rate</a></li>
 <li class="toctree-l1"><a class="reference internal" href="forestfires.html">Forest Fires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gattlingcycle.html">Gattling Enhancements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gunner.html"><span><span class="type">Gunner</span></span> IFVs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gunner.html#multiple-ifvs">Multiple IFVs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gunner.html#more-turrets-and-weapons">More Turrets and Weapons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gunner.html#defining-ifv-modes">Defining IFV Modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gunner.html#voiceifvrepair"><span><span class="type">VoiceIFVRepair</span></span></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="hardcodedunitproperties.html">Hard-coded Unit Properties</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="hardcodedunitproperties.html#iscow"><span><span class="type">IsCow</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="hardcodedunitproperties.html#isdesolator"><span><span class="type">IsDesolator</span></span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="hardcodedunitproperties.html#multiple-ifvs-gunner">Multiple IFVs / <span><span class="type">Gunner</span></span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="hardcodedunitproperties.html#voiceifvrepair"><span><span class="type">VoiceIFVRepair</span></span></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="hijackers.html">Hijackers</a></li>
@@ -176,7 +181,12 @@ the game.</p>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="infantryelectrocuted.html"><span><span class="type">InfantryElectrocuted</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="initialpayload.html">Initial Payload (Troop Crawlers)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="killingdrivers.html">Killing Drivers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="killingdrivers.html">Killing Drivers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="killingdrivers.html#warhead-settings">Warhead Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="killingdrivers.html#protected-drivers">Protected Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="killingdrivers.html#reclaim-vehicles">Reclaim Vehicles</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="makeinfantryowner.html"><span><span class="type">MakeInfantryOwner</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="manual.html">Manual Control</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="manual.html#no-manual-target-selection">No Manual Target Selection</a></li>
@@ -191,6 +201,7 @@ the game.</p>
 <li class="toctree-l2"><a class="reference internal" href="mousecursors.html#migrating-from-previous-versions">Migrating from Previous Versions</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="movies.html">Movies List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="newpoweredunitlogic.html">New Powered Unit Logic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="noammoweapon.html"><span><span class="type">NoAmmoWeapon</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="omnicrusher.html"><span><span class="type">OmniCrusher</span></span> Enhancements</a></li>
@@ -218,6 +229,7 @@ the game.</p>
 <li class="toctree-l1"><a class="reference internal" href="promotion.html">Promotion settings</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="promotion.html#global-veteranflashtimer">Global <span><span class="type">VeteranFlashTimer</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="promotion.html#sounds-eva-and-flashing">Sounds, EVA and Flashing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="promotion.html#promote-all-passengers">Promote all Passengers</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="radarjammers.html">Radar Jammers</a></li>
@@ -242,6 +254,7 @@ the game.</p>
 <li class="toctree-l1"><a class="reference internal" href="turretrot.html">Turret <span><span class="type">ROT</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="typeselect.html">Type Selection Groups</a></li>
 <li class="toctree-l1"><a class="reference internal" href="unitlost.html">Unit Lost EVA Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="veteranabilities.html">Veteran and Elite Abilities</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sidescountries/index.html">Sides &amp; Countries</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="sidescountries/index.html#sides">Sides</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="sidescountries/defaultside.html">Side Defaults</a><ul>
@@ -340,6 +353,7 @@ the game.</p>
 <li class="toctree-l3"><a class="reference internal" href="buildings/spybehavior.html#veterancy">Veterancy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="buildings/spybehavior.html#intelligence">Intelligence</a></li>
 <li class="toctree-l3"><a class="reference internal" href="buildings/spybehavior.html#reverse-engineering">Reverse Engineering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="buildings/spybehavior.html#sabotage">Sabotage</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="buildings/techstructures.html">Tech Structures Return to Neutral</a></li>
@@ -352,6 +366,7 @@ the game.</p>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="buildings/trivialstructuredamage.html">Trivial Structure Damage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildings/tunnels.html">Tunnel Networks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buildings/urbancombattrenches.html">Urban Combat - Trenches</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="buildings/urbancombattrenches.html#pass-through">Pass Through</a></li>
 <li class="toctree-l3"><a class="reference internal" href="buildings/urbancombattrenches.html#squatters-rights">Squatters&#8217; Rights</a></li>
@@ -430,12 +445,17 @@ the game.</p>
 <li class="toctree-l3"><a class="reference internal" href="warheads/cellspread.html#cellspread-hit-limit"><span><span class="type">CellSpread</span></span> Hit Limit</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="warheads/relativedamage.html">MAD Tank Style Relative Damage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/damageair.html">Damage Airborne Units</a></li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/ironcurtain.html">Iron Curtain</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="warheads/ironcurtain.html#iron-curtain-effect">Iron Curtain Effect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="warheads/ironcurtain.html#iron-curtain-flash">Iron Curtain Flash</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="warheads/sonar.html">Sonar / Decloak</a></li>
+<li class="toctree-l2"><a class="reference internal" href="warheads/flash.html">Flashing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="warheads/nukeflash.html">Nuke Flash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="warheads/disableweapons.html">Disable Weapons</a></li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/mechanical.html">Mechanical and Organic Warheads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/mindcontrol.html">Permanent Mind-Control</a></li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/temporal.html"><span><span class="type">Temporal</span></span></a><ul>
@@ -587,7 +607,7 @@ the game.</p>
         <li class="right" >
           <a href="../restored/vehicle-thief.html" title="Vehicle Thief"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

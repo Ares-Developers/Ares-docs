@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Survivors &mdash; Ares 0.D documentation</title>
+    <title>Survivors &mdash; Ares 0.E documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.D',
+        VERSION:     '0.E',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.D documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.E documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Team Retaliate" href="teamretaliate.html" />
     <link rel="prev" title="Particle Spawning" href="spawnsparticle.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="spawnsparticle.html" title="Particle Spawning"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -99,11 +99,16 @@ the type of unit that that survivor will be.</p>
 <h2>Units and Buildings<a class="headerlink" href="#units-and-buildings" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Survivor.Side#=</span></code><span class="type definition"> (InfantryType) (where # is the zero-based index of the side &#8211; e.g. 0 for Allied, 1 for Soviet, 2 for Yuri)</span></span></dt>
-<dd>The <span class="type docutils literal">InfantryType</span> that can emerge from this object as a survivor when
-the object was owned by the corresponding side. For example,
-<span><code class="docutils literal"><span class="pre">Survivor.Side0=E1</span></code></span> would cause the spawned survivor (if any) to be a GI
-when the destroyed unit was owned by an Allied player. Defaults to the owning
-side&#8217;s <span><code class="docutils literal"><span class="pre">Crew</span></code></span>.</dd>
+<dd><p class="first">The <span class="type docutils literal">InfantryType</span> that can emerge from this object as a survivor when
+the object was owned by the corresponding side. Use to <cite>&lt;none&gt;</cite> to
+reset to default. Defaults to the owning side&#8217;s <span><code class="docutils literal"><span class="pre">Crew</span></code></span>.</p>
+<div class="quickstart last admonition" id="quickstart-0">
+<p class="first admonition-title">Quickstart</p>
+<p class="last">For example, <span><code class="docutils literal"><span class="pre">Survivor.Side0=E1</span></code></span> would cause the spawned
+survivor (if any) to be a GI when the destroyed unit was owned by an Allied
+player at the time of destruction.</p>
+</div>
+</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Crew.TechnicianChance=</span></code><span class="type definition"> (integer - percent between 0 and 100)</span></span></dt>
 <dd><p class="first">The chance the owning side&#8217;s <span><code class="docutils literal"><span class="pre">Technician</span></code></span> is spawned instead of an
 ordinary crew member. Defaults to <cite>15</cite> for <span class="type docutils literal">BuildingTypes</span> with
@@ -205,7 +210,7 @@ be spawned regardless of this setting. Defaults to <cite>25</cite> if
         <li class="right" >
           <a href="spawnsparticle.html" title="Particle Spawning"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

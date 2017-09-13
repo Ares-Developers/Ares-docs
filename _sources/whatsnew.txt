@@ -6,6 +6,23 @@ This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of Ares. Internal changes, optimizations
 and updates are mentioned here only if they are notable.
 
+ Ares 0.E
+
++ **Tunnel Networks** allow to move units between entrance buildings
+
++ **IFV units** support more than 18 weapons, turrets, and modes
+
++ **Warheads** can apply new effects like sonar,
+  weapon disabling, flashing, and Nuke flash, and
+  deal relative damage like the MAD Tank
+
++ **Veterancy Abilities** support immunity to radiation, poison, psionics,
+  temporals, abductors, psychedelics, and psychic weapons
+
++ **Chronoshifting** can be disallowed to destroy units at the destination
+
++ **Movies List** can be defined with new unlockable movies
+
  Ares 0.D
 
 + **Mouse Cursors** have been reworked completely and

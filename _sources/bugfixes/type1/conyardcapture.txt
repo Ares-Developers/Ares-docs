@@ -1,0 +1,8 @@
+
+Construction Yard Capture Crash
+
+
+When a Construction Yard was captured from a player while building a structure
+from the combat tab, the game could crash. This has been fixed.
+
+ 0.E

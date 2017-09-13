@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Chronoshift &mdash; Ares 0.D documentation</title>
+    <title>Chronoshift &mdash; Ares 0.E documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.D',
+        VERSION:     '0.E',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.D documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.E documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Civilian Enemies" href="civilianenemies.html" />
     <link rel="prev" title="Chrono Prisons / Abductors" href="chronoprisons.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="chronoprisons.html" title="Chrono Prisons / Abductors"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -89,8 +89,24 @@ chronoshifted by the Chronosphere super weapon if it affects units and
 building will not be considered a building any more and thus will be ignored
 by a Chronosphere that doesn&#8217;t affect units. Defaults to <cite>no</cite>.</dd>
 </dl>
+<p>Units can be made immune to chronoshift-crushing:</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Chronoshift.Crushable=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>If set to <cite>no</cite>, this unit can no longer be crushed by chronoshifting
+units onto it. Instead, the chronoshifting unit will be destroyed. Does not
+apply to <span class="type docutils literal">BuildingType</span>s. Defaults to <cite>yes</cite>.</dd>
+</dl>
+<p>Globally disallow chronoshifting infantry to crush non-infantry:</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[General]►ChronoInfantryCrush=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>If set to <cite>no</cite>, infantry will die when being chronoshifted onto tanks
+instead of destroying the tanks. Defaults to <cite>yes</cite>.</dd>
+</dl>
 <div class="versionadded" id="index-0">
 <p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 0.E.</span></p>
 </div>
 </div>
 
@@ -112,7 +128,7 @@ by a Chronosphere that doesn&#8217;t affect units. Defaults to <cite>no</cite>.<
         <li class="right" >
           <a href="chronoprisons.html" title="Chrono Prisons / Abductors"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

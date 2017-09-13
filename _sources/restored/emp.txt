@@ -146,6 +146,8 @@ EMP.Duration, the EMP counter is reduced by this number of frames.
   case of the description above.
 
 
+.. _empulse-immunity:
+
 EMP Immunity
 
 

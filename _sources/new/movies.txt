@@ -1,0 +1,44 @@
+Movies List
+
+
+With Ares the in-game movies list can be customized and new unlockable
+movies can be added. Each movie is now unlocked individually instead of using
+only two campaign progression trackers for Allies and Soviets. The unlocked
+state is saved in a new section called [UnlockedMovies]► in
+ra2md.ini.
+
+In the new file moviemd.ini, add all movie filenames without the
+.BIK extension to the [Movies]► list. All movies will appear on
+the in-game menu in the same order as in this list. Only if the list is empty
+does the game default to the original behavior using the hardcoded movie lists
+and the two progression trackers.
+
+Each movie item can be customized using these settings:
+
+[MovieFilename]Description=CSF label
+  The name this movie will appear under in the list. Defining this tag is
+  required.
+
+[MovieFilename]Unlockable=boolean
+  Whether this movie has to be unlocked first before appearing in the list. If
+  no, the movie will always appear in the list, like the intro movie.
+  Defaults to yes.
+
+Example:
+  ::
+
+    ; Assume INTRO.BIK and BRIEF01.BIK exist
+    [Movies]
+    0=INTRO
+    1=BRIEF01
+    
+    [INTRO]
+    Description=Name:IntroMovie
+    Unlockable=no
+    
+    [BRIEF01]
+    Description=Name:MissionName01
+
+ Movies; Add new movies to the game
+
+ 0.E

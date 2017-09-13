@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Movies List &mdash; Ares 0.E documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.E',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.E documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="New Powered Unit Logic" href="newpoweredunitlogic.html" />
+    <link rel="prev" title="Mouse Cursors" href="mousecursors.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="newpoweredunitlogic.html" title="New Powered Unit Logic"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mousecursors.html" title="Mouse Cursors"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="mousecursors.html"
+                        title="previous chapter">Mouse Cursors</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="newpoweredunitlogic.html"
+                        title="next chapter">New Powered Unit Logic</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="movies-list">
+<h1>Movies List<a class="headerlink" href="#movies-list" title="Permalink to this headline">¶</a></h1>
+<p>With <span class="game docutils literal">Ares</span> the in-game movies list can be customized and new unlockable
+movies can be added. Each movie is now unlocked individually instead of using
+only two campaign progression trackers for Allies and Soviets. The unlocked
+state is saved in a new section called <span><code class="docutils literal"><span class="pre">[UnlockedMovies]</span></code></span> in
+<code class="file docutils literal"><span class="pre">ra2md.ini</span></code>.</p>
+<p>In the new file <code class="file docutils literal"><span class="pre">moviemd.ini</span></code>, add all movie filenames without the
+<code class="file docutils literal"><span class="pre">.BIK</span></code> extension to the <span><code class="docutils literal"><span class="pre">[Movies]</span></code></span> list. All movies will appear on
+the in-game menu in the same order as in this list. Only if the list is empty
+does the game default to the original behavior using the hardcoded movie lists
+and the two progression trackers.</p>
+<p>Each movie item can be customized using these settings:</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[MovieFilename]►Description=</span></code><span class="type definition"> (CSF label)</span></span></dt>
+<dd>The name this movie will appear under in the list. Defining this tag is
+required.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[MovieFilename]►Unlockable=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether this movie has to be unlocked first before appearing in the list. If
+<cite>no</cite>, the movie will always appear in the list, like the intro movie.
+Defaults to <cite>yes</cite>.</dd>
+<dt>Example:</dt>
+<dd><div class="first last highlight-ini"><div class="highlight"><pre><span class="c1">; Assume INTRO.BIK and BRIEF01.BIK exist</span>
+<span class="k">[Movies]</span>
+<span class="na">0</span><span class="o">=</span><span class="s">INTRO</span>
+<span class="na">1</span><span class="o">=</span><span class="s">BRIEF01</span>
+
+<span class="k">[INTRO]</span>
+<span class="na">Description</span><span class="o">=</span><span class="s">Name:IntroMovie</span>
+<span class="na">Unlockable</span><span class="o">=</span><span class="s">no</span>
+
+<span class="k">[BRIEF01]</span>
+<span class="na">Description</span><span class="o">=</span><span class="s">Name:MissionName01</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.E.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="newpoweredunitlogic.html" title="New Powered Unit Logic"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="mousecursors.html" title="Mouse Cursors"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2017, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

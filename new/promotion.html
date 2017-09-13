@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Promotion settings &mdash; Ares 0.D documentation</title>
+    <title>Promotion settings &mdash; Ares 0.E documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.D',
+        VERSION:     '0.E',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.D documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.E documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Radar Jammers" href="radarjammers.html" />
     <link rel="prev" title="Prerequisites" href="prerequisites.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="prerequisites.html" title="Prerequisites"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -53,6 +53,7 @@
 <li><a class="reference internal" href="#">Promotion settings</a><ul>
 <li><a class="reference internal" href="#global-veteranflashtimer">Global <span><span class="type">VeteranFlashTimer</span></span></a></li>
 <li><a class="reference internal" href="#sounds-eva-and-flashing">Sounds, EVA and Flashing</a></li>
+<li><a class="reference internal" href="#promote-all-passengers">Promote all Passengers</a></li>
 </ul>
 </li>
 </ul>
@@ -125,6 +126,32 @@ elite level. Defaults to <cite>EVA_UnitPromoted</cite>.</dd>
 <p><span class="versionmodified">New in version 0.C.</span></p>
 </div>
 </div>
+<div class="section" id="promote-all-passengers">
+<h2>Promote all Passengers<a class="headerlink" href="#promote-all-passengers" title="Permalink to this headline">¶</a></h2>
+<p>The following setting can be used on <span><code class="docutils literal"><span class="pre">OpenTopped=yes</span></code></span> transports with
+Initial Payload, which are used to imitate multiple weapons but logically only
+count as one unit. This works best with <span><code class="docutils literal"><span class="pre">Experience.PromotePassengers=no</span></code></span>
+and optionally <span><code class="docutils literal"><span class="pre">Experience.FromPassengers=yes</span></code></span>.</p>
+<p>This does not forward &#8220;experience&#8221; as the ratio of a destroyed object&#8217;s cost and
+the own cost. Instead, this forwards the &#8220;rank&#8221; like veteran and elite. A
+Guardian GI inside a Battle Fortress will always mirror the transport&#8217;s rank,
+despite being much cheaper than the vehicle and thus usually promoted earlier.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Promote.IncludePassengers=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd><p class="first">Whether all <span><code class="docutils literal"><span class="pre">Trainable=yes</span></code></span> passengers will be set to the same rank if
+the rank of this transport unit changes. Defaults to <cite>no</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The passengers&#8217; veterancy is discarded when the vehicle is promoted.
+This should not be used on manually controllable transports, because they
+could degrade elite passengers to veterans, for example.</p>
+</div>
+</dd>
+</dl>
+<div class="versionadded" id="index-2">
+<p><span class="versionmodified">New in version 0.E.</span></p>
+</div>
+</div>
 </div>
 
 
@@ -145,7 +172,7 @@ elite level. Defaults to <cite>EVA_UnitPromoted</cite>.</dd>
         <li class="right" >
           <a href="prerequisites.html" title="Prerequisites"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

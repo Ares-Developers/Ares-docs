@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Veteran and Elite Abilities &mdash; Ares 0.E documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.E',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.E documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Sides &amp; Countries" href="sidescountries/index.html" />
+    <link rel="prev" title="Unit Lost EVA Report" href="unitlost.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sidescountries/index.html" title="Sides &amp; Countries"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="unitlost.html" title="Unit Lost EVA Report"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="unitlost.html"
+                        title="previous chapter">Unit Lost EVA Report</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sidescountries/index.html"
+                        title="next chapter">Sides &amp; Countries</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="veteran-and-elite-abilities">
+<h1>Veteran and Elite Abilities<a class="headerlink" href="#veteran-and-elite-abilities" title="Permalink to this headline">¶</a></h1>
+<p>This is a list of all new veteran and elite abilities <span class="game docutils literal">Ares</span> supports.</p>
+<ul class="simple">
+<li><cite>EMPIMMUNE</cite>
+See <a class="reference internal" href="../restored/emp.html#empulse-immunity"><span>Electromagnetic Pulse Immunity</span></a>.</li>
+<li><cite>RADIMMUNE</cite>
+Makes the unit immune to radiation like <span><code class="docutils literal"><span class="pre">ImmuneToRadiation</span></code></span>. This affects
+direct hits from <span><code class="docutils literal"><span class="pre">Radiation=yes</span></code></span> warheads as well as from radiation sites
+spread by warheads with <span><code class="docutils literal"><span class="pre">RadLevel</span></code></span> greater than <cite>0</cite>.</li>
+<li><cite>PROTECTED_DRIVER</cite>
+See <a class="reference internal" href="killingdrivers.html#killingdrivers-immunity"><span>Killing Drivers and Protected Drivers</span></a>.</li>
+<li><cite>UNWARPABLE</cite>
+Makes units immune to <span><code class="docutils literal"><span class="pre">Temporal=yes</span></code></span> weapons like <span><code class="docutils literal"><span class="pre">Warpable=no</span></code></span>.</li>
+<li><cite>POISONIMMUNE</cite>
+Makes units immune to <span><code class="docutils literal"><span class="pre">Poison=yes</span></code></span> weapons like
+<span><code class="docutils literal"><span class="pre">ImmuneToPoison=yes</span></code></span>.</li>
+<li><cite>PSIONICWEAPONIMMUNE</cite>
+Makes units immune to <span><code class="docutils literal"><span class="pre">PsychicDamage=yes</span></code></span> weapons like
+<span><code class="docutils literal"><span class="pre">ImmuneToPsionicWeapons=yes</span></code></span>.</li>
+<li><cite>PSIONICSIMMUNE</cite>
+Makes units immune to <span><code class="docutils literal"><span class="pre">Psychedelic=yes</span></code></span> and <span><code class="docutils literal"><span class="pre">MindControl=yes</span></code></span>
+weapons like <span><code class="docutils literal"><span class="pre">ImmuneToPsionics=yes</span></code></span>. The Psychic Dominator can still
+override this effect just like the unconditional <span><code class="docutils literal"><span class="pre">ImmuneToPsionics=yes</span></code></span>.</li>
+</ul>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.E.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sidescountries/index.html" title="Sides &amp; Countries"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="unitlost.html" title="Unit Lost EVA Report"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2017, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Ares Documentation &mdash; Ares 0.D documentation</title>
+    <title>Ares Documentation &mdash; Ares 0.E documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.D',
+        VERSION:     '0.E',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.D documentation" href="#" />
+    <link rel="top" title="Ares 0.E documentation" href="#" />
     <link rel="next" title="Introduction" href="intro.html" /> 
   </head>
   <body role="document">
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="intro.html" title="Introduction"
              accesskey="N">next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">Ares 0.D documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="#">Ares 0.E documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -138,6 +138,7 @@
 <li class="toctree-l2"><a class="reference internal" href="migration.html#from-ares-0-a-and-below">From Ares 0.A and below</a></li>
 <li class="toctree-l2"><a class="reference internal" href="migration.html#from-ares-0-b-and-below">From Ares 0.B and below</a></li>
 <li class="toctree-l2"><a class="reference internal" href="migration.html#from-ares-0-c-and-below">From Ares 0.C and below</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migration.html#from-ares-0-d-and-below">From Ares 0.D and below</a></li>
 </ul>
 </li>
 </ul>
@@ -260,11 +261,16 @@
 <li class="toctree-l2"><a class="reference internal" href="new/fallrate.html">Fall Rate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/forestfires.html">Forest Fires</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/gattlingcycle.html">Gattling Enhancements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/gunner.html"><span><span class="type">Gunner</span></span> IFVs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new/gunner.html#multiple-ifvs">Multiple IFVs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/gunner.html#more-turrets-and-weapons">More Turrets and Weapons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/gunner.html#defining-ifv-modes">Defining IFV Modes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/gunner.html#voiceifvrepair"><span><span class="type">VoiceIFVRepair</span></span></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="new/hardcodedunitproperties.html">Hard-coded Unit Properties</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/hardcodedunitproperties.html#iscow"><span><span class="type">IsCow</span></span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/hardcodedunitproperties.html#isdesolator"><span><span class="type">IsDesolator</span></span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="new/hardcodedunitproperties.html#multiple-ifvs-gunner">Multiple IFVs / <span><span class="type">Gunner</span></span></a></li>
-<li class="toctree-l3"><a class="reference internal" href="new/hardcodedunitproperties.html#voiceifvrepair"><span><span class="type">VoiceIFVRepair</span></span></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="new/hijackers.html">Hijackers</a></li>
@@ -276,7 +282,12 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="new/infantryelectrocuted.html"><span><span class="type">InfantryElectrocuted</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/initialpayload.html">Initial Payload (Troop Crawlers)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="new/killingdrivers.html">Killing Drivers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/killingdrivers.html">Killing Drivers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new/killingdrivers.html#warhead-settings">Warhead Settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/killingdrivers.html#protected-drivers">Protected Drivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/killingdrivers.html#reclaim-vehicles">Reclaim Vehicles</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="new/makeinfantryowner.html"><span><span class="type">MakeInfantryOwner</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/manual.html">Manual Control</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/manual.html#no-manual-target-selection">No Manual Target Selection</a></li>
@@ -291,6 +302,7 @@
 <li class="toctree-l3"><a class="reference internal" href="new/mousecursors.html#migrating-from-previous-versions">Migrating from Previous Versions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="new/movies.html">Movies List</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/newpoweredunitlogic.html">New Powered Unit Logic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/noammoweapon.html"><span><span class="type">NoAmmoWeapon</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/omnicrusher.html"><span><span class="type">OmniCrusher</span></span> Enhancements</a></li>
@@ -318,6 +330,7 @@
 <li class="toctree-l2"><a class="reference internal" href="new/promotion.html">Promotion settings</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/promotion.html#global-veteranflashtimer">Global <span><span class="type">VeteranFlashTimer</span></span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/promotion.html#sounds-eva-and-flashing">Sounds, EVA and Flashing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/promotion.html#promote-all-passengers">Promote all Passengers</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="new/radarjammers.html">Radar Jammers</a></li>
@@ -342,6 +355,7 @@
 <li class="toctree-l2"><a class="reference internal" href="new/turretrot.html">Turret <span><span class="type">ROT</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/typeselect.html">Type Selection Groups</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/unitlost.html">Unit Lost EVA Report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/veteranabilities.html">Veteran and Elite Abilities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/sidescountries/index.html">Sides &amp; Countries</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/sidescountries/index.html#sides">Sides</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/sidescountries/index.html#countries">Countries</a></li>
@@ -372,6 +386,7 @@
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/techstructures.html#tech-structure-notifications">Tech Structure Notifications</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/togglepower.html">Toggle Power</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/trivialstructuredamage.html">Trivial Structure Damage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/buildings/tunnels.html">Tunnel Networks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/urbancombattrenches.html">Urban Combat - Trenches</a></li>
 </ul>
 </li>
@@ -409,8 +424,13 @@
 <li class="toctree-l2"><a class="reference internal" href="new/warheads/index.html">Warheads</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/warheads/general.html">General Settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/warheads/cellspread.html"><span><span class="type">CellSpread</span></span> Enhancements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/warheads/relativedamage.html">MAD Tank Style Relative Damage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/warheads/damageair.html">Damage Airborne Units</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/warheads/ironcurtain.html">Iron Curtain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/warheads/sonar.html">Sonar / Decloak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/warheads/flash.html">Flashing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/warheads/nukeflash.html">Nuke Flash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/warheads/disableweapons.html">Disable Weapons</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/warheads/mechanical.html">Mechanical and Organic Warheads</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/warheads/mindcontrol.html">Permanent Mind-Control</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/warheads/temporal.html"><span><span class="type">Temporal</span></span></a></li>
@@ -691,7 +711,7 @@ changes/additions rely on. This MIX file presently includes:</p>
         <li class="right" >
           <a href="intro.html" title="Introduction"
              >next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">Ares 0.D documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="#">Ares 0.E documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

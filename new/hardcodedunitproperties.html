@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Hard-coded Unit Properties &mdash; Ares 0.D documentation</title>
+    <title>Hard-coded Unit Properties &mdash; Ares 0.E documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.D',
+        VERSION:     '0.E',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,10 +24,10 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.D documentation" href="../index.html" />
+    <link rel="top" title="Ares 0.E documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Hijackers" href="hijackers.html" />
-    <link rel="prev" title="Gattling Enhancements" href="gattlingcycle.html" /> 
+    <link rel="prev" title="Gunner IFVs" href="gunner.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -40,9 +40,9 @@
           <a href="hijackers.html" title="Hijackers"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="gattlingcycle.html" title="Gattling Enhancements"
+          <a href="gunner.html" title="Gunner IFVs"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -53,15 +53,13 @@
 <li><a class="reference internal" href="#">Hard-coded Unit Properties</a><ul>
 <li><a class="reference internal" href="#iscow"><span><span class="type">IsCow</span></span></a></li>
 <li><a class="reference internal" href="#isdesolator"><span><span class="type">IsDesolator</span></span></a></li>
-<li><a class="reference internal" href="#multiple-ifvs-gunner">Multiple IFVs / <span><span class="type">Gunner</span></span></a></li>
-<li><a class="reference internal" href="#voiceifvrepair"><span><span class="type">VoiceIFVRepair</span></span></a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="gattlingcycle.html"
-                        title="previous chapter">Gattling Enhancements</a></p>
+  <p class="topless"><a href="gunner.html"
+                        title="previous chapter"><span><span class="type">Gunner</span></span> IFVs</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="hijackers.html"
                         title="next chapter">Hijackers</a></p>
@@ -89,10 +87,10 @@
   <div class="section" id="hard-coded-unit-properties">
 <h1>Hard-coded Unit Properties<a class="headerlink" href="#hard-coded-unit-properties" title="Permalink to this headline">¶</a></h1>
 <p>The game is hard-coded to do certain things with certain unit IDs. Namely the
-<span><code class="docutils literal"><span class="pre">[COW]</span></code></span>, <span><code class="docutils literal"><span class="pre">[DESO]</span></code></span> and <span><code class="docutils literal"><span class="pre">[FV]</span></code></span>. These units can now have said
-special properties switched off, and other units can be given these properties
-if you want. Hard-coded properties of Cows and Desolators can be toggled on/off
-for any infantry.</p>
+<span><code class="docutils literal"><span class="pre">[COW]</span></code></span> and <span><code class="docutils literal"><span class="pre">[DESO]</span></code></span>. These units can now have said special properties
+switched off, and other units can be given these properties if you want.
+Hard-coded properties of Cows and Desolators can be toggled on/off for any
+infantry.</p>
 <div class="section" id="iscow">
 <h2><span><span class="type">IsCow</span></span><a class="headerlink" href="#iscow" title="Permalink to this headline">¶</a></h2>
 <p>The <span><code class="docutils literal"><span class="pre">[COW]</span></code></span> was hard-coded to play its idle animation more frequently than
@@ -122,30 +120,6 @@ now set <span><code class="docutils literal"><span class="pre">IsDesolator=yes</
 <p><span class="versionmodified">New in version 0.1.</span></p>
 </div>
 </div>
-<div class="section" id="multiple-ifvs-gunner">
-<h2>Multiple IFVs / <span><span class="type">Gunner</span></span><a class="headerlink" href="#multiple-ifvs-gunner" title="Permalink to this headline">¶</a></h2>
-<p>The <span><code class="docutils literal"><span class="pre">[FV]</span></code></span> was the only unit to be checked for the special turret and
-weapon flags, such as <span><code class="docutils literal"><span class="pre">SniperTurretIndex</span></code></span>. With <span class="game docutils literal">Ares</span>, all
-<span class="type docutils literal">VehicleTypes</span> with <span><code class="docutils literal"><span class="pre">Gunner=yes</span></code></span> set will read those flags. This
-means that you can now have multiple types of IFV.</p>
-<div class="versionadded" id="index-2">
-<p><span class="versionmodified">New in version 0.1.</span></p>
-</div>
-</div>
-<div class="section" id="voiceifvrepair">
-<h2><span><span class="type">VoiceIFVRepair</span></span><a class="headerlink" href="#voiceifvrepair" title="Permalink to this headline">¶</a></h2>
-<p>In <span class="game docutils literal">Ares</span> you can specify the <span><code class="docutils literal"><span class="pre">VoiceIFVRepair</span></code></span> tag on any IFV unit.</p>
-<dl class="docutils">
-<dt><span><code class="definition docutils literal"><span class="pre">[VehicleType]►VoiceIFVRepair=</span></code><span class="type definition"> (soundmd entry)</span></span></dt>
-<dd>Specifies the response this IFV gives when ordered to repair something. If
-this value is not set, <span><code class="docutils literal"><span class="pre">[VehicleType]►VoiceAttack</span></code></span> is used. Defaults to
-<span><code class="docutils literal"><span class="pre">[AudioVisual]►VoiceIFVRepair</span></code></span> for <span><code class="docutils literal"><span class="pre">[FV]</span></code></span>, otherwise to
-<cite>none</cite>.</dd>
-</dl>
-<div class="versionadded" id="index-3">
-<p><span class="versionmodified">New in version 0.2.</span></p>
-</div>
-</div>
 </div>
 
 
@@ -164,9 +138,9 @@ this value is not set, <span><code class="docutils literal"><span class="pre">[V
           <a href="hijackers.html" title="Hijackers"
              >next</a> |</li>
         <li class="right" >
-          <a href="gattlingcycle.html" title="Gattling Enhancements"
+          <a href="gunner.html" title="Gunner IFVs"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.D documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

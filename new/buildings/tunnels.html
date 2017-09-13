@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Tunnel Networks &mdash; Ares 0.E documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.E',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.E documentation" href="../../index.html" />
+    <link rel="up" title="Buildings" href="index.html" />
+    <link rel="next" title="Urban Combat - Trenches" href="urbancombattrenches.html" />
+    <link rel="prev" title="Trivial Structure Damage" href="trivialstructuredamage.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="urbancombattrenches.html" title="Urban Combat - Trenches"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="trivialstructuredamage.html" title="Trivial Structure Damage"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Buildings</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="trivialstructuredamage.html"
+                        title="previous chapter">Trivial Structure Damage</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="urbancombattrenches.html"
+                        title="next chapter">Urban Combat - Trenches</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tunnel-networks">
+<h1>Tunnel Networks<a class="headerlink" href="#tunnel-networks" title="Permalink to this headline">¶</a></h1>
+<p>This is the tunnel systems known from <span class="game docutils literal">Generals</span>. Tunnels are buildings
+that allow to quickly move units from one place to another. There can be many
+entrance buildings, but they all share the same queue of occupants. Units do not
+actually move between tunnels; after they entered an entrance they can be
+ejected from another entrance immediately.</p>
+<p>The occupants will be kept alive until the last entrance of the same type owned
+by the same player is destroyed. The killer of the last entrance will be awarded
+the kills of the occupants also. If the last entrance is sold, units will try to
+evacuate.</p>
+<p>Different tunnel types are declared as list under the <span><code class="docutils literal"><span class="pre">[TunnelTypes]</span></code></span>
+section, and they have the following options:</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TunnelType]►Passengers=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd>The maximum number of occupants this tunnel system can have. This does not
+consider size. Each unit takes up one slot of space. Defaults to <cite>0</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TunnelType]►MaxSize=</span></code><span class="type definition"> (double)</span></span></dt>
+<dd>The maximum <span><code class="docutils literal"><span class="pre">Size=</span></code></span> units can have to be allowed into this tunnel.
+Defaults to <cite>0.0</cite>.</dd>
+</dl>
+<div class="quickstart admonition" id="quickstart-0">
+<p class="first admonition-title">Quickstart</p>
+<p class="last">If you don&#8217;t get the enter cursor on the tunnel entrances, check
+that you correctly set <span><code class="docutils literal"><span class="pre">Passengers=</span></code></span> and <span><code class="docutils literal"><span class="pre">MaxSize</span></code></span> on the
+<span class="type docutils literal">TunnelType</span>.</p>
+</div>
+<p>Then, a <span class="type docutils literal">BuildingType</span> can be turned into a tunnel entrance by setting the
+following tag. Multiple <span class="type docutils literal">BuildingType</span>s can share the same tunnel type.
+Tunnel entrances play <span><code class="docutils literal"><span class="pre">EnterTransportSound</span></code></span> and <span><code class="docutils literal"><span class="pre">LeaveTransportSound</span></code></span>
+whenever a unit enters or leaves the building. The entrance building
+will show pips representing the contents of the tunnel system.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►Tunnel=</span></code><span class="type definition"> (TunnelType)</span></span></dt>
+<dd><p class="first">The type of tunnel system this building is an entrance to.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Tunnel buildings are not allowed to have weapons, turrets and can&#8217;t
+be capturable or mind-controllable.</p>
+</div>
+<div class="last admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Hover units have the same problems with tunnel entrance buildings
+as they have entering <span><code class="docutils literal"><span class="pre">UnitAbsorb=yes</span></code></span> buildings.</p>
+</div>
+</dd>
+<dt>Example:</dt>
+<dd><div class="first last highlight-ini"><div class="highlight"><pre><span class="c1">; Tunnel declarations</span>
+<span class="k">[TunnelTypes]</span>
+<span class="na">0</span><span class="o">=</span><span class="s">GLATunnel</span>
+<span class="na">1</span><span class="o">=</span><span class="s">CivilianTunnel</span>
+<span class="na">2</span><span class="o">=</span><span class="s">LoveTunnel</span>
+
+<span class="c1">; Tunnel definition</span>
+<span class="k">[GLATunnel]</span>
+<span class="na">Passengers</span><span class="o">=</span><span class="s">8</span>
+<span class="na">MaxSize</span><span class="o">=</span><span class="s">4.0</span>
+
+<span class="c1">; Civilian Tunnel Entrance Building</span>
+<span class="k">[CATNNL]</span>
+<span class="na">Tunnel</span><span class="o">=</span><span class="s">CivilianTunnel</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.E.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="urbancombattrenches.html" title="Urban Combat - Trenches"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="trivialstructuredamage.html" title="Trivial Structure Damage"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Buildings</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2017, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

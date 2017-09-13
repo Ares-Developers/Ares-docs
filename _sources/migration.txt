@@ -388,3 +388,19 @@ Other changes:
 
   Hunter Seekers no longer target objects under the effect of the Iron Curtain
   or objects being temporally attacked.
+
+From Ares 0.D and below
+
+
+Changed tags:
+
+  [SuperWeapon]►Nuke.Payload
+    No longer automatically adds the weapon to the list. Ensure that the weapon
+    is known to the game by adding it to the [WeaponTypes]► list.
+
+Other changes:
+
+  KillDriver has been changed to be applied like regular damage. It now
+  respects immunities and supports CellSpread. Thus, the effect might
+  not be applied in all cases where it was applied before, and might be applied
+  in cases were it previously was not.

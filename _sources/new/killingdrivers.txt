@@ -6,19 +6,39 @@ Requested as a "Jarmen Kell" functionality
 specific warheads to kill the driver of a vehicle instead of damaging
 it, and allows others to take over the now-neutral vehicle.
 
+ Warheads; Warheads can be set to kill the driver of a vehicle, instead of damaging it.
+
+ 0.2
+
+ 0.E
+
+
+Warhead Settings
+
+
+This logic supports CellSpread and respects all immunities as any other
+conventional warhead like ImmuneToPoison as well as their veteran
+abilities, AffectsAllies, and AffectsEnemies.
+
 [Warhead]KillDriver=boolean
   Specifies whether this warhead kills the driver of the vehicle, instead of
   damaging the vehicle itself. The first passenger matching the vehicle's
   Operator is considered the driver. All other passengers will be
   ejected. Defaults to no.
-
-  This logic respects AffectsAllies and AffectsEnemies.
 [Warhead]KillDriver.Owner=enumeration - civilian,special,neutral
   Specifies the house the units are assigned to. Defaults to special.
 [Warhead]KillDriver.KillBelowPercent=float
   Specifies the percentage of health a unit can not exceed to have its driver
   killed by a KillDriver=yes warhead. A unit above this health level
   is only damaged and the driver is not killed. Defaults to 100%.
+[Warhead]KillDriver.Chance=float - percentage
+  Specifies the chance that a unit hit by a KillDriver=yes warhead will
+  have its driver killed. Defaults to 100%.
+
+
+.. _killingdrivers-immunity:
+
+Protected Drivers
 
 
 The following settings can make a unit immune to the Kill Driver logic:
@@ -34,6 +54,15 @@ The following settings can make a unit immune to the Kill Driver logic:
   minimum of the two values is used, that is, this tag can make a unit more
   resistant against driver killing weapons. Defaults to 0.0 if
   ProtectedDriver=yes, to 1.0 otherwise.
+
+Driver protection can also be granted by specifying PROTECTED_DRIVER
+under VeteranAbilities or EliteAbilities. If specified, the unit's
+driver becomes protected unconditionally against KillDriver (which means
+that ProtectedDriver.MinHealth is no longer checked), but not against
+damage or other special warhead effects.
+
+
+Reclaim Vehicles
 
 
 Drivers are infantry units that can capture neutral vehicles, like ones that had
@@ -57,10 +86,5 @@ their driver killed.
 
 See ... for more options that relate to CanDrive.
 
- Warheads; Warheads can be set to kill the driver of a vehicle, instead of damaging it.
-
  Infantry; Capture units that had their drivers killed.
 
- 0.2
-
- 0.D

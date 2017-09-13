@@ -20,6 +20,7 @@ All of the following flags default to no or 0.
  Spy behaviour; Multiple effects can be achieved on a single building.
 
 
+
 Radar
 
 
@@ -38,6 +39,7 @@ Radar
   SpyEffect.RevealRadar=yes and a Radar=yes building.
 
 .. index Spy behaviour; New effect: Reveal radar (shows you what the enemy can see).
+
 
 
 Power
@@ -71,6 +73,7 @@ Money
   money rather than a percentage).
   
  Spy behaviour; Per-building steal money percentage.
+
 
 
 Super Weapons
@@ -203,3 +206,17 @@ Reverse Engineering
 
 For a spy effect to reset a player's build options gained by reverse
 engineering, see ....
+
+
+
+Sabotage
+
+
+[BuildingType]SpyEffect.SabotageDelay=integer - frames
+  The number of frames after which the building will be demolished as if C4 had
+  been planted. If negative, [CombatDamage]►C4Delay is used. Use
+  0 to disable. Defaults to 0.
+
+ Spy behaviour; Demolish infiltrated building
+
+ 0.E

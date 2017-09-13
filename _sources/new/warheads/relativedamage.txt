@@ -1,0 +1,42 @@
+MAD Tank Style Relative Damage
+
+
+This logic is inspired by the MAD Tank known from the Red Alert mission
+disk The Aftermath, where it was used as a large area of effect weapon
+that damaged each victim by taking away a share of its health.
+
+Instead of using a fixed damage value, a value relative to the victim's
+Strength or current health can be dealt by a warhead. Country armor
+multipliers and veterancy bonuses are still applied, as well as Verses.
+
+Relative Damage is not supported on special weapon logics like Temporal
+or Psychedelic warheads, and also doesn't support ProneDamage and
+DeployedDamage for infantry. Suppressing parasites is also not supported.
+
+[Warhead]RelativeDamage=boolean
+  Deal damage relative to Strength or current health instead of
+  dealing conventional damage. If set to yes, the four tags below are
+  used depending on target type. If a tag is not defined, no damage is dealt.
+  Defaults to no.
+
+   A dummy Damage is needed on this warhead for targeting, even
+    though finally the value is not used. If Damage is negative (like for
+    healing weapons), the Relative Damage will be negative also.
+
+[Warhead]RelativeDamage.Buildings=integer - percent
+
+[Warhead]RelativeDamage.Aircraft=integer - percent
+
+[Warhead]RelativeDamage.Infantry=integer - percent
+
+[Warhead]RelativeDamage.Vehicles=integer - percent
+  The damage defined as percentage from either Strength, if positive, or
+  current health, if negative. Supported values range from -100 to
+  100. A value of 0 deals no damage. Defaults to 0.
+
+Relative Damage considers Organic=yes vehicles as infantry and
+ConsideredAircraft=yes vehicles as aircraft.
+
+ Warheads; MAD Tank style Relative Damage
+
+ 0.E

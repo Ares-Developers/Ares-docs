@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>MAD Tank Style Relative Damage &mdash; Ares 0.E documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.E',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 0.E documentation" href="../../index.html" />
+    <link rel="up" title="Warheads" href="index.html" />
+    <link rel="next" title="Damage Airborne Units" href="damageair.html" />
+    <link rel="prev" title="CellSpread Enhancements" href="cellspread.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="damageair.html" title="Damage Airborne Units"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="cellspread.html" title="CellSpread Enhancements"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Warheads</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="cellspread.html"
+                        title="previous chapter"><span><span class="type">CellSpread</span></span> Enhancements</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="damageair.html"
+                        title="next chapter">Damage Airborne Units</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="mad-tank-style-relative-damage">
+<h1>MAD Tank Style Relative Damage<a class="headerlink" href="#mad-tank-style-relative-damage" title="Permalink to this headline">¶</a></h1>
+<p>This logic is inspired by the MAD Tank known from the <span class="game docutils literal">Red Alert</span> mission
+disk <span class="game docutils literal">The Aftermath</span>, where it was used as a large area of effect weapon
+that damaged each victim by taking away a share of its health.</p>
+<p>Instead of using a fixed damage value, a value relative to the victim&#8217;s
+<span><code class="docutils literal"><span class="pre">Strength</span></code></span> or current health can be dealt by a warhead. Country armor
+multipliers and veterancy bonuses are still applied, as well as <span><code class="docutils literal"><span class="pre">Verses</span></code></span>.</p>
+<p>Relative Damage is not supported on special weapon logics like <span><code class="docutils literal"><span class="pre">Temporal</span></code></span>
+or <span><code class="docutils literal"><span class="pre">Psychedelic</span></code></span> warheads, and also doesn&#8217;t support <span><code class="docutils literal"><span class="pre">ProneDamage</span></code></span> and
+<span><code class="docutils literal"><span class="pre">DeployedDamage</span></code></span> for infantry. Suppressing parasites is also not supported.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►RelativeDamage=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd><p class="first">Deal damage relative to <span><code class="docutils literal"><span class="pre">Strength</span></code></span> or current health instead of
+dealing conventional damage. If set to <cite>yes</cite>, the four tags below are
+used depending on target type. If a tag is not defined, no damage is dealt.
+Defaults to <cite>no</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A dummy <span><code class="docutils literal"><span class="pre">Damage</span></code></span> is needed on this warhead for targeting, even
+though finally the value is not used. If <span><code class="docutils literal"><span class="pre">Damage</span></code></span> is negative (like for
+healing weapons), the Relative Damage will be negative also.</p>
+</div>
+</dd>
+</dl>
+<p><span><code class="definition docutils literal"><span class="pre">[Warhead]►RelativeDamage.Buildings=</span></code><span class="type definition"> (integer - percent)</span></span></p>
+<p><span><code class="definition docutils literal"><span class="pre">[Warhead]►RelativeDamage.Aircraft=</span></code><span class="type definition"> (integer - percent)</span></span></p>
+<p><span><code class="definition docutils literal"><span class="pre">[Warhead]►RelativeDamage.Infantry=</span></code><span class="type definition"> (integer - percent)</span></span></p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►RelativeDamage.Vehicles=</span></code><span class="type definition"> (integer - percent)</span></span></dt>
+<dd>The damage defined as percentage from either <span><code class="docutils literal"><span class="pre">Strength</span></code></span>, if positive, or
+current health, if negative. Supported values range from <cite>-100</cite> to
+<cite>100</cite>. A value of <cite>0</cite> deals no damage. Defaults to <cite>0</cite>.</dd>
+</dl>
+<p>Relative Damage considers <span><code class="docutils literal"><span class="pre">Organic=yes</span></code></span> vehicles as infantry and
+<span><code class="docutils literal"><span class="pre">ConsideredAircraft=yes</span></code></span> vehicles as aircraft.</p>
+<div class="versionadded" id="index-0">
+<p><span class="versionmodified">New in version 0.E.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="damageair.html" title="Damage Airborne Units"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="cellspread.html" title="CellSpread Enhancements"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Warheads</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2017, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

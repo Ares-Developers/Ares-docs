@@ -1,0 +1,35 @@
+Veteran and Elite Abilities
+
+
+This is a list of all new veteran and elite abilities Ares supports.
+
++ EMPIMMUNE
+  See Electromagnetic Pulse Immunity.
+
++ RADIMMUNE
+  Makes the unit immune to radiation like ImmuneToRadiation. This affects
+  direct hits from Radiation=yes warheads as well as from radiation sites
+  spread by warheads with RadLevel greater than 0.
+
++ PROTECTED_DRIVER
+  See Killing Drivers and Protected Drivers.
+
++ UNWARPABLE
+  Makes units immune to Temporal=yes weapons like Warpable=no.
+
++ POISONIMMUNE
+  Makes units immune to Poison=yes weapons like
+  ImmuneToPoison=yes.
+
++ PSIONICWEAPONIMMUNE
+  Makes units immune to PsychicDamage=yes weapons like
+  ImmuneToPsionicWeapons=yes.
+
++ PSIONICSIMMUNE
+  Makes units immune to Psychedelic=yes and MindControl=yes
+  weapons like ImmuneToPsionics=yes. The Psychic Dominator can still
+  override this effect just like the unconditional ImmuneToPsionics=yes.
+
+ Veterancy; New abilities
+
+ 0.E

@@ -1,0 +1,16 @@
+Disable Weapons
+
+
+This warhead effect can be used to temporarily jam the target unit, so it will
+not be able to fire its weapons. It will still be able to reload, target a
+victim and even passively acquire new targets, and death weapons will still be
+set off when the target is killed or destroyed. Also note that special effects
+like C4 are not disabled.
+
+[Warhead]DisableWeapons.Duration=integer - frames
+  If positive, the target hit by this warhead will be unable to fire for this
+  amount of frames. Defaults to 0.
+
+ Warheads; Disable Weapons
+
+ 0.E
