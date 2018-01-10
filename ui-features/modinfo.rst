@@ -2,9 +2,11 @@ Mod-specific Information
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following settings describe your mod and give it a name and a version
-number to uniquely identify your mod. These tags are at the moment purely
-diagnostic - they are not shown anywhere in game, but they will be printed out
-in :file:`debug.log`.
+number to uniquely identify your mod. These tags are important for savegames to
+distinguish files from different mods or different versions of the same mod, and
+they are also printed out in :file:`debug.log` to aid diagnosing problems.
+
+It is highly recommended to set those to meaningful individual values.
 
 Both can be defined in :file:`uimd.ini`:
 

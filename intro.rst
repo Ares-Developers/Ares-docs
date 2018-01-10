@@ -72,21 +72,6 @@ should re-enable the service as quickly as possible. `Thanks to FS-21
 <https://bugs.launchpad.net/ares/+bug/1090588/comments/3>`_.
 
 
-Known Major Issues
-~~~~~~~~~~~~~~~~~~
-Save Games
-----------
-:game:`Ares` does not support loading save games or scripted IPB videos that
-were created with any other version of the game than the very same version of
-:game:`Ares` (not even the original :game:`Yuri's Revenge` save games are
-supported).
-
-.. note:: Even adding load/save functionality for the exact same :game:`Ares`
-	version is a huge and complex undertaking, so while the developers would like
-	to add loading and saving one day, it will not happen in the foreseeable
-	future.
-
-
 Required Changes For Mods Using Ares
 ====================================
 Unfortunately, :game:`Ares` will not simply "work" without changes to the

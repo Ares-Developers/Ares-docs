@@ -1,0 +1,40 @@
+Save Games
+~~~~~~~~~~
+
+Only save games made with the same version of either the vanilla game or a mod
+and a compatible version of :game:`Ares` are supported. All incompatible
+save games will be hidden from the list of saved games automatically.
+
+.. note:: Save games work like in the unmodified game: they are stored in the
+  game folder and have a random filename with a :file:`.sav` extension. This
+  might change in future versions.
+
+For save games to work properly, mods are required to set the :doc:`mod-specific
+information </ui-features/modinfo>` settings to values uniquely identifying each
+individual mod version. To ensure that save games correctly restore the previous
+state of the game, you need to make sure to change the mod version whenever you
+make changes to global settings or data.
+
+Those include:
+
+  * changing the order of existing sounds, EVA messages, and themes in the INI
+    files (this includes adding new items into the middle of as well as removing
+    any items from the lists)
+  * changing filenames of files used for terrain or object (buildings, units,
+    projectiles, animations, ...) art, or changing the number of image frames
+    contained in such files
+
+Failing to do so might prevent the game from correctly restoring the previous
+state. This might cause subtle issues ranging from the wrong sounds being played
+to graphical glitches, but it could also cause crashes.
+
+If :game:`Ares` detects a mismatch while reading its own data and is thus unable
+to proceed loading a save game file, it will automatically and forcefully
+terminate the game, no error message will be shown, and the game will not return
+back to the main menu. This should not happen if you follow these guidelines.
+For debugging purposes, the log file will then contain information about the
+last object :game:`Ares` tried to restore.
+
+.. index:: Save Games; Save games per mod and version
+
+.. versionadded:: 1.0
