@@ -23,12 +23,18 @@ section, and they have the following options:
   The maximum :tag:`Size=` units can have to be allowed into this tunnel.
   Defaults to :value:`0.0`.
 
+Then, a :type:`BuildingType` can be turned into a tunnel entrance by setting the
+following tag. Multiple :type:`BuildingType`\ s can share the same tunnel type.
+Only units that have a :tag:`Size` less than or equal to of the :tag:`SizeLimit`
+of the tunnel entrance are allowed to enter through that entrance.
+
+.. note:: For ejection the :tag:`Size` is currently not checked against
+  \ :tag:`MaxSize`. This might change in future versions.
+
 .. quickstart:: If you don't get the enter cursor on the tunnel entrances, check
   that you correctly set :tag:`Passengers=` and :tag:`MaxSize` on the
   :type:`TunnelType`.
 
-Then, a :type:`BuildingType` can be turned into a tunnel entrance by setting the
-following tag. Multiple :type:`BuildingType`\ s can share the same tunnel type.
 Tunnel entrances play :tag:`EnterTransportSound` and :tag:`LeaveTransportSound`
 whenever a unit enters or leaves the building. The entrance building
 will show pips representing the contents of the tunnel system.
@@ -36,8 +42,8 @@ will show pips representing the contents of the tunnel system.
 :tagdef:`[BuildingType]Tunnel=TunnelType`
   The type of tunnel system this building is an entrance to.
 
-  .. note:: Tunnel buildings are not allowed to have weapons, turrets and can't
-    be capturable or mind-controllable.
+  .. note:: Tunnel buildings are not allowed to have weapons nor turrets and
+    cannot be capturable or mind-controllable.
 
   .. warning:: Hover units have the same problems with tunnel entrance buildings
     as they have entering :tag:`UnitAbsorb=yes` buildings.
