@@ -36,7 +36,9 @@ Flags and Observer Graphics
 ---------------------------
 
 :tagdef:`[Country]File.Flag=filename, *including* the .pcx extension`
-  The PCX file to use for the country's flag, in the format "filename.pcx".
+  The PCX file to use for the country's flag, in the format "filename.pcx". If
+  if the flag is not set or the file does not exist, a warning is written into
+  the debug log.
 :tagdef:`[Country]File.ObserverBackground=filename, *including* the .pcx or .shp extension`
   The SHP or PCX file to use for the country's background in observer mode, in
   the format "filename.shp" or "filename.pcx". The size should be 121x96. The
