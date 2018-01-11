@@ -7,6 +7,9 @@
 Ares Documentation
 ==================
 
+.. include:: intro.rst
+
+
 Table of Contents
 =================
 
@@ -15,6 +18,7 @@ Table of Contents
 	:hidden:
 	
 	intro
+	notes
 	whatsnew
 	migration
 	bugfixes/index
@@ -25,7 +29,10 @@ Table of Contents
 
 
 .. toctree::
+	:maxdepth: 1
+	
 	intro
+	notes
 	whatsnew
 	migration
 
@@ -48,7 +55,7 @@ Table of Contents
 * :ref:`Overview of Ares's Bugfixes and Features <genindex>`
 * :ref:`search`
 
-.. include:: intro.rst
+.. include:: notes.rst
 
 
 
