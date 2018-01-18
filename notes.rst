@@ -10,6 +10,10 @@ modifications to the executable change the locations of these points. This would
 lead to :game:`Ares`'s code being injected in the wrong places, leading to
 unforeseeable, bad consequences.
 
+In case :game:`Ares` detects a game version mismatch or a third party patch
+known to be incompatible, it will automatically prevent Syringe to inject it
+into the game.
+
 Comodo Internet Security
 ------------------------
 Commendably, :game:`Comodo Internet Security` actually complains when one
@@ -64,10 +68,6 @@ complex, ultimately wasting time that would be better spent on other tasks.
 This section details the modifications you'll most likely need to make to ensure
 your mod does not receive any unexpected changes from simply being run whilst
 :game:`Ares` is active.
-
-In future these changes will be provided as extensions to the standard files
-that are included with the :game:`YR Unofficial 1.002 Mini-Patch Developer's
-Pack`.
 
 rulesmd.ini
 -----------
