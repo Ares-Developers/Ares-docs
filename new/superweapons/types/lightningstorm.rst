@@ -17,7 +17,7 @@ Default values for general tags:
   Defaults to :tag:`[General]LightningDeferment`.
 :tagdef:`[SuperWeapon]SW.ActivationSound=Sound`
   Defaults to :tag:`[AudioVisual]StormSound`.
-:tagdef:`[SuperWeapon]SW.AITargeting=enum`
+:tagdef:`[SuperWeapon]SW.AITargeting=enumeration`
   Defaults to :value:`LightningStorm`.
 :tagdef:`[SuperWeapon]Light.*=integer`
   Default to the scenario's :tag:`[Lighting]Ion*`.
@@ -33,7 +33,7 @@ Lightning Storm specific tags:
 :tagdef:`[SuperWeapon]Lightning.RadarOutage=integer - frames`
   The number of frames radars are jammed for players defined by
   :tag:`SW.AffectsHouse`. Defaults to :tag:`[General]LightningStormDuration`.
-:tagdef:`[SuperWeapon]Lightning.RadarOutageAffects=enum`
+:tagdef:`[SuperWeapon]Lightning.RadarOutageAffects=enumeration`
   Specifies the houses affected by radar outage. Defaults to :value:`enemies`.
 :tagdef:`[SuperWeapon]Lightning.HitDelay=integer - frames`
   The number of frames between two clouds being created over the target cell.

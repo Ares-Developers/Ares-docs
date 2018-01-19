@@ -14,7 +14,7 @@ an engineer, otherwise the settings in :file:`rulesmd.ini` are used.
 
 This tag goes into :file:`uimd.ini`:
 
-:tagdef:`[UISettings]AllowMultiEngineer=bool`
+:tagdef:`[UISettings]AllowMultiEngineer=boolean`
   Specifies whether the user can turn the Multi Engineer feature on and off from
   the menu. Defaults to :value:`no`. If the checkbox is not shown the settings
   in :file:`rulesmd.ini` will be enforced.

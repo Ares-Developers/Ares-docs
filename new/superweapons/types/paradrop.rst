@@ -3,7 +3,7 @@
 
 Default values for general tags:
 
-:tagdef:`[SuperWeapon]SW.AITargeting=enum`
+:tagdef:`[SuperWeapon]SW.AITargeting=enumeration`
   Defaults to :value:`ParaDrop`.
 :tagdef:`[SuperWeapon]Cursor=mouse cursor`
   Defaults to :value:`ParaDrop`.

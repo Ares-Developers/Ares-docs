@@ -17,11 +17,11 @@ Default values for general tags:
   Defaults to :value:`0`.
 :tagdef:`[SuperWeapon]SW.ActivationSound=Sound`
   Defaults to :tag:`[AudioVisual]PsychicDominatorActivateSound`.
-:tagdef:`[SuperWeapon]SW.AITargeting=enum`
+:tagdef:`[SuperWeapon]SW.AITargeting=enumeration`
   Defaults to :value:`PsychicDominator`.
-:tagdef:`[SuperWeapon]SW.AffectsHouse=enum`
+:tagdef:`[SuperWeapon]SW.AffectsHouse=enumeration`
   Specifies the houses affected by the capture. Defaults to :value:`all`.
-:tagdef:`[SuperWeapon]SW.AffectsTarget=enum`
+:tagdef:`[SuperWeapon]SW.AffectsTarget=enumeration`
   Specifies which types the capture affects. Defaults to
   :value:`infantry,units`.
 :tagdef:`[SuperWeapon]Light.*=integer`

@@ -19,11 +19,11 @@ interval until reaching yellow health.
   situations. Buildings with health equal to or below this will not degrade
   further. Defaults to :tag:`[AudioVisual]ConditionYellow`.
 
-:tagdef:`[General]Degrade.AmountNormal=int - hitpoints`
+:tagdef:`[General]Degrade.AmountNormal=integer - hitpoints`
   The damage caused to buildings with :tag:`Power` equal to or greater than
   :value:`0` in low power situations. Defaults to :value:`0`.
 
-:tagdef:`[General]Degrade.AmountConsumer=int - hitpoints`
+:tagdef:`[General]Degrade.AmountConsumer=integer - hitpoints`
   The damage caused to buildings with :tag:`Power` less than :value:`0` in low
   power situations. Defaults to :value:`1`.
 
@@ -35,7 +35,7 @@ These global options can be customized per :type:`BuildingType`.
   :value:`0.0` will make it degrade till complete destruction. Defaults to
   :tag:`[General]Degrade.Percentage`.
 
-:tagdef:`[BuildingType]Degrade.Amount=int - hitpoints`
+:tagdef:`[BuildingType]Degrade.Amount=integer - hitpoints`
   The amount of damage this building will receive each interval of
   :tag:`DamageDelay` in low power situations. A value of :value:`0` will not
   degrade this building. Defaults to :tag:`[General]Degrade.AmountNormal` if

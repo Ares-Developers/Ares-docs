@@ -13,7 +13,7 @@ maximum random units from a list of types, which all arrive in drop pods.
 
 Default values for general tags:
 
-:tagdef:`[SuperWeapon]SW.AITargeting=enum`
+:tagdef:`[SuperWeapon]SW.AITargeting=enumeration`
   Defaults to :value:`ParaDrop`.
 :tagdef:`[SuperWeapon]EVA.Detected=EVA event`
   Defaults to :value:`EVA_DropPodDetected`.

@@ -18,19 +18,19 @@ Default values for general tags:
 :tagdef:`[SuperWeapon]SW.AnimationHeight=integer`
   The height the :tag:`SW.Animation` is played above the ground. Defaults to
   :value:`5`.
-:tagdef:`[SuperWeapon]SW.AITargeting=enum`
+:tagdef:`[SuperWeapon]SW.AITargeting=enumeration`
   Defaults to :value:`ForceShield` for :value:`ForceShield`, to :value:`none`
   otherwise and the AI cannot use this.
-:tagdef:`[SuperWeapon]SW.AffectsHouse=enum`
+:tagdef:`[SuperWeapon]SW.AffectsHouse=enumeration`
   Specifies the houses affected by the protection. Defaults to :value:`team` for
   :value:`ForceShield`, to :value:`all` otherwise.
-:tagdef:`[SuperWeapon]SW.AffectsTarget=enum`
+:tagdef:`[SuperWeapon]SW.AffectsTarget=enumeration`
   Specifies which types the protection affects. Defaults to :value:`buildings`
   for :value:`ForceShield`, to :value:`all` otherwise.
-:tagdef:`[SuperWeapon]SW.RequiresTarget=enum`
+:tagdef:`[SuperWeapon]SW.RequiresTarget=enumeration`
   Specifies which types the protection can be fired upon. Defaults to
   :value:`buildings` for :value:`ForceShield`, to :value:`all` otherwise.
-:tagdef:`[SuperWeapon]SW.RequiresHouse=enum`
+:tagdef:`[SuperWeapon]SW.RequiresHouse=enumeration`
   Defaults to :value:`team` for :value:`ForceShield`, to :value:`none`
   otherwise.
 :tagdef:`[SuperWeapon]Cursor=mouse cursor`

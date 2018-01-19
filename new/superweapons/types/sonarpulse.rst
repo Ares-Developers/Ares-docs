@@ -12,18 +12,18 @@ Default values for general tags:
   to reveal all units on the map. When using full-map sonar you don't have to
   select a target location; instead the super weapon will be fired when you
   click its cameo icon. Defaults to :value:`10`.
-:tagdef:`[SuperWeapon]SW.AITargeting=enum`
+:tagdef:`[SuperWeapon]SW.AITargeting=enumeration`
   Defaults to :value:`Stealth`.
-:tagdef:`[SuperWeapon]SW.AffectsHouse=enum`
+:tagdef:`[SuperWeapon]SW.AffectsHouse=enumeration`
   Specifies the houses affected by the sonar reveal. Defaults to
   :value:`enemies`.
-:tagdef:`[SuperWeapon]SW.AffectsTarget=enum`
+:tagdef:`[SuperWeapon]SW.AffectsTarget=enumeration`
   Specifies which types the sonar affects. Defaults to :value:`water`, all unit
   types situated on water cells.
-:tagdef:`[SuperWeapon]SW.RequiresTarget=enum`
+:tagdef:`[SuperWeapon]SW.RequiresTarget=enumeration`
   Specifies where human players can fire the sonar at, which excludes land by
   default. Defaults to :value:`water`.
-:tagdef:`[SuperWeapon]SW.AIRequiresTarget=enum`
+:tagdef:`[SuperWeapon]SW.AIRequiresTarget=enumeration`
   Specifies where AI players can fire the sonar at, which excludes land by
   default. Defaults to :value:`water`.
 

@@ -13,7 +13,7 @@ Default values for general tags:
   click its cameo icon.
 :tagdef:`[SuperWeapon]SW.Sound=Sound`
   Defaults to :tag:`[AudioVisual]PsychicRevealActivateSound`.
-:tagdef:`[SuperWeapon]SW.AITargeting=enum`
+:tagdef:`[SuperWeapon]SW.AITargeting=enumeration`
   Defaults to :value:`ParaDrop`.
 :tagdef:`[SuperWeapon]Cursor=mouse cursor`
   Defaults to :value:`PsychicReveal`.

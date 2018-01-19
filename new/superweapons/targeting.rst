@@ -36,7 +36,7 @@ These settings only apply to human players.
   Whether or not this super weapon is allowed to fire into an unexplored area of
   the map. Default is :value:`yes`.
 
-:tagdef:`[SuperWeapon]SW.RequiresTarget=enum none|land|water|empty|infantry|units|buildings`
+:tagdef:`[SuperWeapon]SW.RequiresTarget=enumeration none|land|water|empty|infantry|units|buildings`
   Which items this super weapon can fire upon. Hovering above an allowed item
   will show the :tag:`Cursor`, otherwise the player gets the :tag:`NoCursor` and
   it is not possible to launch the super weapon. For an example see
@@ -46,7 +46,7 @@ These settings only apply to human players.
     \ :tag:`SW.AffectsTarget=` are set to mutually exclusive values not allowing
     the super weapon to affect anything.
 
-:tagdef:`[SuperWeapon]SW.RequiresHouse=enum none|owner|allies|team|enemies|all`
+:tagdef:`[SuperWeapon]SW.RequiresHouse=enumeration none|owner|allies|team|enemies|all`
   Which house's items this super weapon can fire upon.
 
 .. index:: Super Weapons; FireIntoShroud optional.
@@ -59,7 +59,7 @@ Automatic Target Selection
 
 Define the way the AI selects eligible targets to fire the super weapon at.
 
-:tagdef:`[SuperWeapon]SW.AITargeting=enum SW Targeting Type`
+:tagdef:`[SuperWeapon]SW.AITargeting=enumeration SW Targeting Type`
   Select one of the following values to define how the AI will use this super
   weapon:
 
@@ -143,12 +143,12 @@ Define the way the AI selects eligible targets to fire the super weapon at.
   favorite enemy.
 
 
-:tagdef:`[SuperWeapon]SW.AIRequiresTarget=enum none|land|water|empty|infantry|units|buildings|all`
+:tagdef:`[SuperWeapon]SW.AIRequiresTarget=enumeration none|land|water|empty|infantry|units|buildings|all`
   Specifies which targets will be considered eligible by AI players or human
   owned automatically fired super weapons. The default value depends on the
   :tag:`SW.AITargeting` setting. See the table below.
 
-:tagdef:`[SuperWeapon]SW.AIRequiresHouse=enum owner|allies|team|enemies|others|all`
+:tagdef:`[SuperWeapon]SW.AIRequiresHouse=enumeration owner|allies|team|enemies|others|all`
   Specifies which houses will be considered eligible by AI players or human
   owned automatically fired super weapons. The default value depends on the
   :tag:`SW.AITargeting` setting. See the table below.

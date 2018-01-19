@@ -143,7 +143,7 @@ Advanced Rubble is implemented in a similar way to other upgrade systems in
   Whether the building should just disappear instead of being converted to
   rubble. Overrides :tag:`Rubble.Destroyed`. Defaults to :value:`no`.
 
-:tagdef:`[BuildingType]Rubble.Destroyed.Owner=enum default|civilian|special|neutral`
+:tagdef:`[BuildingType]Rubble.Destroyed.Owner=enumeration default|civilian|special|neutral`
   The country the destroyed building will belong to. :value:`default` is the
   current owner, :value:`civilian` is the first country from the side called
   :value:`Civilian`, :value:`special` and :value:`neutral` are the countries
@@ -172,7 +172,7 @@ the first set:
   Whether the building should just disappear instead of being recovered when an
   Engineer enters. Overrides :tag:`Rubble.Intact`. Defaults to :value:`no`.
 
-:tagdef:`[BuildingType]Rubble.Intact.Owner=enum default|civilian|special|neutral`
+:tagdef:`[BuildingType]Rubble.Intact.Owner=enumeration default|civilian|special|neutral`
   The country the recovered building will belong to. :value:`default` is the
   current owner, :value:`civilian` is the first country from the side called
   :value:`Civilian`, :value:`special` and :value:`neutral` are the countries

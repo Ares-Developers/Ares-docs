@@ -13,7 +13,7 @@ Default values for general tags:
   weapon is fired. Note the warhead is detonated in a cell, not on a unit, so
   chances are you will want to set a :tag:`CellSpread` on the warhead to make
   sure the desired targets (especially :type:`InfantryTypes`) are affected.
-:tagdef:`[SuperWeapon]SW.AITargeting=enum`
+:tagdef:`[SuperWeapon]SW.AITargeting=enumeration`
   Defaults to :value:`Offensive`.
 
 Don't forget that the :type:`BuildingType` will need :tag:`DamageSelf=yes` set

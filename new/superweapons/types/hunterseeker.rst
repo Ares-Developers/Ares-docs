@@ -10,11 +10,11 @@ Default values for general tags:
 :tagdef:`[SuperWeapon]SW.MaxCount=integer`
   The maximum number of buildings launching a Hunter Seeker. Set to negative
   values for unlimited buildings. Defaults to :value:`1`.
-:tagdef:`[SuperWeapon]SW.AITargeting=enum`
+:tagdef:`[SuperWeapon]SW.AITargeting=enumeration`
   Defaults to :value:`HunterSeeker`.
-:tagdef:`[SuperWeapon]SW.AffectsHouse=enum`
+:tagdef:`[SuperWeapon]SW.AffectsHouse=enumeration`
   Specifies the houses targeted. Defaults to :value:`enemies`.
-:tagdef:`[SuperWeapon]SW.AffectsTarget=enum`
+:tagdef:`[SuperWeapon]SW.AffectsTarget=enumeration`
   Specifies which types are targeted. Defaults to :value:`all`.
 :tagdef:`[SuperWeapon]EVA.Detected=EVA event`
   Defaults to :value:`EVA_HunterSeekerDetected`.

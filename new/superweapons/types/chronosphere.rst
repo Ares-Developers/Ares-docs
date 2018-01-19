@@ -19,11 +19,11 @@ Default values for general tags:
 :tagdef:`[SuperWeapon]SW.AnimationHeight=integer`
   The height the :tag:`SW.Animation` is played above the ground. Defaults to
   :value:`5`.
-:tagdef:`[SuperWeapon]SW.AITargeting=enum`
+:tagdef:`[SuperWeapon]SW.AITargeting=enumeration`
   Defaults to :value:`none`. The AI cannot use this.
-:tagdef:`[SuperWeapon]SW.AffectsHouse=enum`
+:tagdef:`[SuperWeapon]SW.AffectsHouse=enumeration`
   Specifies the houses affected by the chronoshift. Defaults to :value:`all`.
-:tagdef:`[SuperWeapon]SW.AffectsTarget=enum`
+:tagdef:`[SuperWeapon]SW.AffectsTarget=enumeration`
   Specifies which types the chronoshift affects. Defaults to
   :value:`infantry,units`.
   
@@ -115,7 +115,7 @@ For the actual chronoshifting tags, see :ref:`ChronoSphere <chronosphere>`.
 
 Default values for general tags:
 
-:tagdef:`[SuperWeapon]SW.AITargeting=enum`
+:tagdef:`[SuperWeapon]SW.AITargeting=enumeration`
   Defaults to :value:`none`. The AI cannot use this.
 :tagdef:`[SuperWeapon]Cursor=mouse cursor`
   Defaults to :value:`Chronosphere`.

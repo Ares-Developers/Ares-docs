@@ -12,7 +12,7 @@ Default values for general tags:
 :tagdef:`[SuperWeapon]SW.ActivationSound=Sound`
   The nuke warn siren played at the destination. Defaults to
   :tag:`[AudioVisual]DigSound`.
-:tagdef:`[SuperWeapon]SW.AITargeting=enum`
+:tagdef:`[SuperWeapon]SW.AITargeting=enumeration`
   Defaults to :value:`Nuke`.
 :tagdef:`[SuperWeapon]Light.*=integer`
   Default to :tag:`Light.Ambient=200`, :tag:`Light.Red=175`,

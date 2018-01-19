@@ -4,7 +4,6 @@ Glossary
 
 .. glossary::
 
-	bool
 	boolean
 	booleans
 		Either :value:`yes` or :value:`no`, :value:`true` or :value:`false`,
@@ -34,6 +33,11 @@ Glossary
 	csf string
 		The name of an entry in the CSF file containing the translated strings
 		displayed by the game. Label names can be up to 31 characters long.
+
+	enumeration
+		One value of a fixed set of all possible values. Values of enumerations are
+		strings, associating behavior or options to names. The value names have to
+		be used as described, with spelling unchanged.
 
 	eva entry
 	evamd entry

@@ -25,7 +25,7 @@ Default values for general tags:
   The maximum number of cannons firing. Set to negative values for unlimited
   cannons. Defaults to :value:`1`. 
 
-:tagdef:`[SuperWeapon]SW.AITargeting=enum`
+:tagdef:`[SuperWeapon]SW.AITargeting=enumeration`
   AI does not respect ranges. For :tag:`EMPulse.TargetSelf=yes` super weapons,
   use :value:`NoTarget` to enable AI players to use it. Defaults to
   :value:`None`.

@@ -19,12 +19,12 @@ Default values for general tags:
   Defaults to :value:`5`.
 :tagdef:`[SuperWeapon]SW.Sound=Sound`
   Defaults to :tag:`[AudioVisual]GeneticMutatorActivateSound`.
-:tagdef:`[SuperWeapon]SW.AITargeting=enum`
+:tagdef:`[SuperWeapon]SW.AITargeting=enumeration`
   Defaults to :value:`GeneticMutator`.
-:tagdef:`[SuperWeapon]SW.AffectsHouse=enum`
+:tagdef:`[SuperWeapon]SW.AffectsHouse=enumeration`
   Specifies the houses affected by the mutation, if :tag:`Mutate.Explosion=no`.
   Defaults to :value:`all`.
-:tagdef:`[SuperWeapon]SW.AffectsTarget=enum`
+:tagdef:`[SuperWeapon]SW.AffectsTarget=enumeration`
   Specifies whether the mutation effect should be limited to :value:`land` or
   :value:`water` targets. You cannot define any unit type here and they will be
   ignored. Ignored if :tag:`Mutate.Explosion=yes`. Defaults to :value:`all`.

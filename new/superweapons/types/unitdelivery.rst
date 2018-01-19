@@ -10,7 +10,7 @@ Default values for general tags:
   Delay before the units are placed. Defaults to :value:`20`.
 :tagdef:`[SuperWeapon]SW.ActivationSound=Sound`
   Played when the units are placed. Defaults to :value:`none`.
-:tagdef:`[SuperWeapon]SW.AITargeting=enum`
+:tagdef:`[SuperWeapon]SW.AITargeting=enumeration`
   Defaults to :value:`ParaDrop`.
 
 
@@ -19,7 +19,7 @@ Unit Delivery specific tags:
 :tagdef:`[SuperWeapon]Deliver.Types=list of TechnoTypes`
   The list of units that will be delivered. This works for infantry, vehicles,
   aircraft and buildings.
-:tagdef:`[SuperWeapon]Deliver.Owner=enum invoker|neutral|special|civilian`
+:tagdef:`[SuperWeapon]Deliver.Owner=enumeration invoker|neutral|special|civilian`
   The country the delivered units will belong to. :value:`invoker` is the player
   who fired the super weapon, :value:`civilian` is the first country of the side
   named :value:`Civilian`, :value:`special` is the country named
