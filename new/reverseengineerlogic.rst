@@ -2,7 +2,7 @@ Reverse Engineer logic
 ~~~~~~~~~~~~~~~~~~~~~~
 
 In :game:`Red Alert 2`, the Cloning Vats reverse-engineered any infantry it was
-sent into. :game:`Ares` not just reenables this logic but also enables
+sent into. :game:`Ares` not just re-enables this logic but also enables
 customization.
 
 :tagdef:`[BuildingType]ReverseEngineersVictims=boolean`

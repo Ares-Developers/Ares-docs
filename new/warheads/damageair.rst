@@ -1,7 +1,7 @@
 Damage Airborne Units
 `````````````````````
 
-Warheads detonation on the ground cause explosions that never affect units in
+Warheads detonating on the ground cause explosions that never affect units in
 the air, no matter how large the :tag:`CellSpead` range is. If a warhead
 detonated just a few leptons above the ground however, airborne units would be
 affected if they were in range. This can now be changed.

@@ -18,7 +18,7 @@ Non-Malicious Warheads
 ``````````````````````
 
 :tagdef:`[Warhead]Malicious=boolean`
-  Specifies whether or not EVA should notify a ore miner's owner of an attack
+  Specifies whether or not EVA should notify an ore miner's owner of an attack
   (:value:`EVA_OreMinerUnderAttack`). No other EVA messages are suppressed. For
   example, if a warhead's purpose is to spread ore dealing damage as a side
   effect only you can use :tag:`Malicious=no` to disable unreasonable EVA attack

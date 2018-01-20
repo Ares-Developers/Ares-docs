@@ -60,9 +60,9 @@ AI Support
 ----------
 
 If Toggle Power is enabled, the AI can also make use of it. The AI will try to
-cope with power outages because of insufficient power output. If an AI player is
-being drained or suffering from a power blackout triggered by a spy or Force
-Shield are exempt and will not try to turn off the base.
+cope with power outages because of insufficient power output. AI players being
+drained or suffering from a power blackout triggered by a spy or Force Shield
+are exempt and will not try to turn off the base.
 
 Base defenses are tried to be held online if possible. Super weapons are turned
 off earlier than power consuming buildings that are not base defenses.

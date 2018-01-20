@@ -61,8 +61,8 @@ Unit-specific
 
 :tagdef:`[Unit]Survivor.ElitePassengerChance=integer between 0 and 100`
   Determines the percent chance that each of the unit's passengers (if any) will
-  survive. Rookie/Veteran/Elite refers to the veteran level of the transport
-  unit -- a unit with a higher veteran level could be made to have a greater (or
+  survive. Rookie/Veteran/Elite refer to the veteran level of the transport unit
+  -- a unit with a higher veteran level could be made to have a greater (or
   lesser) chance of allowing its passengers to survive. Passengers will be
   spawned in the cells around the destroyed unit and, so, if these cells are not
   clear then the passengers will not be spawned.

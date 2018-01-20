@@ -7,7 +7,7 @@ Targeting
 General Settings
 ----------------
 
-These settings allow to enable AI targeting even for human players.
+These settings allow enabling AI targeting even for human players.
 
 :tagdef:`[SuperWeapon]SW.AutoFire=boolean`
   Sets whether this super weapon should be launched automatically even for human
@@ -173,10 +173,9 @@ builds or loses buildings. The base center can be manually set and cleared using
 map actions 137 and 138 respectively.
 
 The **preferred target by type** is set by map action 35. The game looks at the
-first team on them map owned by the firing player and has the team leader
-acquire a target of the preferred type. A value of :value:`1` means to use the
-special firing behavior, which usually is Ion Cannon targeting or base center
-selection. 
+first team on the map owned by the firing player and has the team leader acquire
+a target of the preferred type. A value of :value:`1` means to use the special
+firing behavior, which usually is Ion Cannon targeting or base center selection. 
 
 .. note:: Currently, :game:`Ares` does not support preferred types other than
   \ :value:`1`. The super weapons might not check ranges, designators, and

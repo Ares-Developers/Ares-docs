@@ -3,8 +3,8 @@
 
 This type implements the super weapon known from :game:`Tiberian Sun`, with
 several extensions. It makes one or more buildings, called cannons, of arbitrary
-types fire at the same time at either a target location selected by the player
-or at themselves.
+type fire at the same time at either a target location selected by the player or
+at themselves.
 
 .. note:: The AI cannot make full use of this super weapon yet, because it does
   not respect ranges, which is a fundamental feature of this super weapon type.
@@ -84,6 +84,6 @@ Other changes:
 The pulse ball animation that was previously hardcoded to :value:`PULSBALL` has
 now been made customizable and optional. If an :tag:`EMPulseCannon=yes` building
 had a primary weapon without any valid :tag:`Report` set, the game would crash.
-This does not happen any more.
+This does not happen anymore.
 
 .. versionadded:: 0.8

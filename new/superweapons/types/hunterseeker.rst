@@ -3,7 +3,7 @@
 
 The Hunter Seeker super weapon known from :game:`Tiberian Sun` has been restored
 and expanded. The Hunter Seeker is a :type:`VehicleType` that is launched from a
-building and then flys into an enemy object, detonating on impact.
+building and then steers into an enemy object, detonating on impact.
 
 Default values for general tags:
 

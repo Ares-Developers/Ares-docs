@@ -68,7 +68,7 @@ Glossary
 	integers
 		Whole numbers from -2147483648 to 2147483647; in rare cases, only from
 		-32768 to 32767. Allowed formats are all decimal numbers, and hexadecimal
-		numbers either with a :value:`$` prefix or a :value:`H` or :value:`h`
+		numbers either with a :value:`$` prefix or an :value:`H` or :value:`h`
 		suffix. For example :value:`123`, :value:`$7b`, and :value:`7Bh` all mean
 		the same.
 
@@ -105,7 +105,7 @@ Glossary
 		probability or a multiplier. Most commonly a value between :value:`0%` and
 		:value:`100%`.
 		
-		Seldomly an :term:`integer` between :value:`0` and :value:`100`. Note that
+		Seldom an :term:`integer` between :value:`0` and :value:`100`. Note that
 		integer percentages `do not` end with a :value:`%` sign.
 
 	rgb

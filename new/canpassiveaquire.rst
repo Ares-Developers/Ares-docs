@@ -6,7 +6,7 @@ human-controlled unit is in guard mode. It does not affect AI-controlled units.
 Units can be made to effectively hold fire when in guard mode (and optionally
 cloakable), yet pick their own targets when in area guard mode.
 
-In :game:`Tiberian Sun`, the was the default for any unit, and it made Stealth
+In :game:`Tiberian Sun`, this was the default for any unit, and it made Stealth
 Tanks (or any other self-cloaking unit) not give away their position when an
 enemy unit came into range.
 

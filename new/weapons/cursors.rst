@@ -2,7 +2,7 @@ Cursors
 ```````
 
 It is now possible in :game:`Ares` to customize the weapon cursors to give
-certain special weapons dedictated attack cursors.
+certain special weapons dedicated attack cursors.
 
 With these cursors, it's also possible to mimic the behavior of the
 :tag:`SabotageCursor` and :tag:`MigAttackCursor` special cases. If both are set

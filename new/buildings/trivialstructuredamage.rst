@@ -42,7 +42,7 @@ These global options can be customized per :type:`BuildingType`.
   :tag:`Power` is greater than or equal to :value:`0`, otherwise to
   :tag:`[General]Degrade.AmountConsumer`.
 
-Trivial Structure Damage can be enabled or disabled for each house indiviudally.
+Trivial Structure Damage can be enabled or disabled for each house individually.
 By default, :tag:`MultiplayPassive=yes` houses are not affected.
 
 :tagdef:`[Country]Degrades=boolean`

@@ -15,7 +15,7 @@ Movement
 
 These cursors are used for a variety of functions: setting the rally point for
 factories, undeploying structures, and giving units move orders, but they might
-also be used as fallback for other funtions that can't be used, for instance
+also be used as fallback for other functions that can't be used, for instance
 when a target can't be attacked or an object cannot be entered.
 
 :tagdef:`[TechnoType]Cursor.Move=mouse cursor`

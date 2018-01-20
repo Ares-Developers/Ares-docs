@@ -31,7 +31,7 @@ do not default to meaningful values, but the values :game:`Firestorm` uses are
 given here for reference.
 
 :tagdef:`[General]DropPodTypes=list of InfantryTypes`
-  The types to randomly chose from when spawing units for the Drop Pod super
+  The types to randomly choose from when spawning units for the Drop Pod super
   weapon. Each type has an equal chance of being selected. You can add types
   more than once. Only infantry is supported. Defaults to :value:`none`,
   :game:`Firestorm` uses an equivalent :value:`E1,E2`.

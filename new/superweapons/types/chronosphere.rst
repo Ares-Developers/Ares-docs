@@ -72,7 +72,7 @@ Chronosphere specific tags:
   with vehicle placement rules. Defaults to :value:`no`.
 
   .. note:: "Undeployable" means *buildings that can undeploy*, rather than
-    "vehicles that cannot deploy".
+    *vehicles that cannot deploy*.
 
 :tagdef:`[SuperWeapon]Chronosphere.BlowUnplaceable=boolean`
   Defines whether the chronoshift will destroy buildings that don't fit in the

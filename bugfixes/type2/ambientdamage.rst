@@ -7,7 +7,7 @@
 Railguns with :tag:`AmbientDamage=0` would still deal damage, and even though it
 would deal 0 hitpoints, this would count as an attack. Certain buildings would
 special-case a damage of 0 and ensure at last 1 hitpoint of damage is dealt.
-This does not happen any more, and :game:`Ares` lets the game skip the damage
+This does not happen anymore, and :game:`Ares` lets the game skip the damage
 dealing altogether, so Railguns can now be used just for visual purposes.
 
 .. versionadded:: 0.D

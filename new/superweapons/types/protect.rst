@@ -47,7 +47,7 @@ Iron Curtain and Force Shield specific tags:
   :tag:`[General]ForceShieldDuration` for :value:`ForceShield`, to
   :tag:`[CombatDamage]IronCurtainDuration` otherwise.
 :tagdef:`[SuperWeapon]Protect.PowerOutage=integer - frames`
-  The length the owning player will expericence a power outage after firing this
+  The length the owning player will experience a power outage after firing this
   super weapon. Defaults to :tag:`[General]ForceShieldBlackoutDuration` for
   :value:`ForceShield`, to :value:`0` otherwise.
 :tagdef:`[SuperWeapon]Protect.PlayFadeSoundTime=integer - frames`

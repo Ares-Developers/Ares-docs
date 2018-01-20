@@ -15,7 +15,7 @@ walls around a walled in structure.
 Only enemy buildings' solidity will be considered. Units will not try to fire
 through allied buildings to destroy them. Open gates are never considered solid.
 
-.. quickstart:: Setting the Apocalype Tank weapon's projectile to
+.. quickstart:: Setting the Apocalypse Tank weapon's projectile to
   \ :tag:`SolidLevel=1` will make the tank ignore all Solid Buildings with a
   lower level in its path and just fire at its targets. The projectiles will hit
   the buildings and destroy them, then the actual target.

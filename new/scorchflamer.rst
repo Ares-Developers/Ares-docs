@@ -12,7 +12,7 @@ crash when a new animation of these types is about to be created.
 :tagdef:`[Animation]Scorch=boolean`
   Whether a new :tag:`[AudioVisual]SmallFire` animation should be attached to
   the same object this animation is attached to when expiring. Does not spawn on
-  water, beach, ice or rock terrain. For a complete description of behavior and
+  water, beach, ice, or rock terrain. For a complete description of behavior and
   requirements, refer to `Scorch on ModEnc
   <http://modenc.renegadeprojects.com/Scorch>`_ Defaults to :value:`no`.
 

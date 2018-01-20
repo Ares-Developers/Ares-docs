@@ -4,7 +4,7 @@
 Summoned Airstrikes no longer dependent on :captiontag:`SovParaDropInf`
 =======================================================================
 
-If a you were to remove the :tag:`[General]SovParaDropInf` tag, then summoned
+If you were to remove the :tag:`[General]SovParaDropInf` tag, then summoned
 Airstrikes such as Boris' weapon will trigger an Internal Error when fired. This
 no longer happens in :game:`Ares`.
 

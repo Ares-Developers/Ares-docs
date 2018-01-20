@@ -4,7 +4,7 @@ Crashing
 :captiontag:`Crashable` and Aircraft
 ------------------------------------
 
-Any :type:`AircraftType` being destoyed in air would explode and crash, causing
+Any :type:`AircraftType` being destroyed in air would explode and crash, causing
 damage on the ground. A tag, :tag:`Crashable`, exists, but it only works for the
 other :type:`TechnoTypes`, so aircraft cannot be made to not crash. :game:`Ares`
 adds support for :tag:`Crashable=no` and aircraft.

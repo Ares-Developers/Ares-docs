@@ -3,7 +3,7 @@ Particle Spawning
 
 Animations can spawn particles using :tag:`SpawnsParticle`, but no matter how
 many are spawned, they would always spawn at the exact same location as the
-animation. These new tags allow to customize the distance from the center the
+animation. These new tags allow customizing the distance from the center the
 particles will be spawned at.
 
 This feature divides the circle around animation's base coords into
@@ -16,7 +16,7 @@ above the base cell.
   :value:`0.0`.
   
   .. note:: If negative, the resulting random distance could come out as
-    negative. If this happens, the absolute value is used. This allows to double
+    negative. If this happens, the absolute value is used. This allows doubling
     the chance to spawn particles closer to the center.
 
 :tagdef:`[AnimType]SpawnsParticle.RangeMaximum=double - cells`

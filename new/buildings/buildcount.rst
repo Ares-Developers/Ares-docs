@@ -12,7 +12,7 @@ build by difficulty, but also to randomize this number to some extent. The AI
 will build a random number of instances from build count to build count plus
 extra count.
 
-Additional buildings are not build one after another, but instead mix randomly
+Additional buildings are not built one after another, but instead mix randomly
 with the structures in the build list planned to be built later. For example,
 the AI will not always build four barracks before building a war factory, though
 by chance it could do that at times.

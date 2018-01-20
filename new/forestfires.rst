@@ -2,8 +2,8 @@ Forest Fires
 ~~~~~~~~~~~~
 
 Forest fires were a feature of :game:`Tiberian Sun`. Trees were set on fire if
-hit by a :tag:`Sparky=yes` warhead. While burning, they could ignite trees neaby
-and thus over time spread like a wildfire.
+hit by a :tag:`Sparky=yes` warhead. While burning, they could ignite trees
+nearby and thus over time spread like a wildfire.
 
 :game:`Ares`'s implementation of forest fires slightly differs from the one in
 :game:`Tiberian Sun`. It is now required to also set the previously unused tag
@@ -11,7 +11,7 @@ and thus over time spread like a wildfire.
 noticeable change.
 
 See `Sparky on ModEnc <http://modenc.renegadeprojects.com/Sparky>`_ for a more
-detailled description of the logic, and for the requirements to get it working.
+detailed description of the logic, and for the requirements to get it working.
 To prevent crashes when firing a :tag:`Sparky=yes` warhead, do not forget to set
 three valid animations as :tag:`[AudioVisual]OnFire` and two valid animations as
 :tag:`[AudioVisual]TreeFire`.

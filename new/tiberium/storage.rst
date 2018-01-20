@@ -2,7 +2,7 @@ Storage and Silos
 `````````````````
 
 In the earlier games, tiberium and ore were not converted to credits directly.
-Instead, the resouces were dumped at the refiniery, and then stored in silos.
+Instead, the resources were dumped at the refinery, and then stored in silos.
 This feature was not used in :game:`Red Alert 2` and wasn't working any more.
 :game:`Ares` restores the Storage feature.
 
@@ -37,7 +37,7 @@ EVA Notice
 ----------
 
 In case the storage capacity is either depleted or nearly so, EVA will warn the
-player by giving a :value:`EVA_SilosNeeded` notice.
+player by giving an :value:`EVA_SilosNeeded` notice.
 
 .. note:: The game does not have this EVA message defined and has no audio files
   for it. You have to add them before you can use them.

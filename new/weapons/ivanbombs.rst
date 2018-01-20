@@ -50,7 +50,7 @@ the following flags in order to customize that bomb:
   weapon. Defaults to :tag:`[CombatDamage]CanDetonateDeathBomb`.
 :tagdef:`[Weapon]IvanBomb.DetonateOnSell=boolean`
   Whether attached bombs shall explode if the victim is sold. Otherwise, the
-  bomb will will just be disarmed. Defaults to :value:`yes`.
+  bomb will just be disarmed. Defaults to :value:`yes`.
 :tagdef:`[Weapon]IvanBomb.Delay=integer`
   The number of frames that will elapse before the bomb detonates automatically.
   Defaults to :tag:`[CombatDamage]IvanTimedDelay`.

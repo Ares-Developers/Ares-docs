@@ -23,7 +23,7 @@ deployed units are not considered to be prone. Defaults to :value:`100%`.
   Specifies the animation to display when an :type:`InfantryType` (with
   :tag:`NotHuman=no`) is killed by this warhead. Works in the same way as
   existing :tag:`InfDeath` animations except this flag allows you to specify an
-  animation ID rather than an integer. Further more, the animation will be
+  animation ID rather than an integer. Furthermore, the animation will be
   treated as the correct type (e.g. mutation or non-mutation) automatically,
   which means that you can now have any number of mutations that produce
   player-owned :tag:`InfantryTypes`. See :doc:`MakeInfantryOwner

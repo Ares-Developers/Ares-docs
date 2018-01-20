@@ -62,7 +62,7 @@ Also, the AI will not respect this setting. Use the :doc:`Specific Passengers
 No Guard Area on Self
 `````````````````````
 
-Medics usually get a guard area cursor on themselves to players can set the to
+Medics usually get a guard area cursor on themselves so players can set them to
 guard mode by clicking. This prevents infantry with negative damage weapons to
 have deploy ability. :game:`Ares` adds a tag to turn this feature off.
 

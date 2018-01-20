@@ -42,7 +42,7 @@ Wave Coloring
   If this is set to :value:`yes` then the wave will be drawn in the firing
   unit's house color instead of the color specified by :tag:`Wave.Color`.
   
-.. warning:: Sonic Waves do no yet have a sensible default :tag:`Wave.Color`.
+.. warning:: Sonic Waves do not yet have a sensible default :tag:`Wave.Color`.
 
 .. index:: Waves can have custom colors.
 

@@ -1,7 +1,7 @@
 :captiontag:`ProjectileRange`
 -----------------------------
 
-This setting from :game:`Firestorm` allows to customize the maximum distance
+This setting from :game:`Firestorm` allows customizing the maximum distance
 after which a projectile will detonate.
 
 :tagdef:`[Weapon]ProjectileRange=float - cell range`

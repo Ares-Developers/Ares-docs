@@ -5,6 +5,6 @@
 =================================================================
 
 :tag:`Behind` animations would even be shown for passengers in :tag:`OpenTopped`
-vehicles. This does not happen any more.
+vehicles. This does not happen anymore.
 
 .. versionadded:: 0.A

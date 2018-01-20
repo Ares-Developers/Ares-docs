@@ -44,7 +44,7 @@ move up slightly.
 
 At the moment the colors are hardcoded to green for positive amounts and red for
 negative amounts. the format is hardcoded to the amount with a plus or minus
-sign prepended.
+sign prefixed.
 
 .. warning:: This feature might be expanded or changed in the future. Do not
   take the appearance of these texts for granted. Colors, positions, and

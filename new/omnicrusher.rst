@@ -7,7 +7,7 @@ enemy unit firing at it. This mechanism is sometimes useful, but sometimes it is
 not. Like when a Battle Fortress deliberately closes in on a group of enemy
 tanks, and is then lured into an ambush and overpowered itself.
 
-:game:`Ares` allows to deactivate the agressive behavior.
+:game:`Ares` allows deactivating the aggressive behavior.
 
 :tagdef:`[TechnoType]OmniCrusher.Aggressive=boolean`
   Whether or not a unit should try to crush its target aggressively. If

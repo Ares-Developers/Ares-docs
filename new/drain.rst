@@ -20,7 +20,7 @@ some tags to make this customizable.
   the minimum amount of power drained. Defaults to :value:`0`.
 
   The start value is the victim building's :tag:`Power`, then the draining
-  units's :tag:`Drain.Amount` is applied, and finally the drained building's
+  unit's :tag:`Drain.Amount` is applied, and finally the drained building's
   :tag:`Drain.Amount`.
 
 For example: draining a Power Plant with :tag:`Power=500` and

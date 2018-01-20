@@ -30,8 +30,8 @@ Who gets damaged
 
 All units that are not tiberium proof (neither through the tag
 :tag:`TiberiumProof` nor through the :value:`TIBERIUM_PROOF` veteran ability)
-whill be damaged when entering a cell containing tiberium. It does not matter
-how long they stay in a cell.
+will be damaged when entering a cell containing tiberium. It does not matter how
+long they stay in a cell.
 
 :tagdef:`[TechnoType]TiberiumProof=boolean`
   Whether this unit is immune to tiberium damage. Defaults to :value:`no` for

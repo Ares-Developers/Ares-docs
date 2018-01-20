@@ -2,7 +2,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 :game:`Ares` allows you to split your :file:`rulesmd.ini` file up into separate
-pieces so as to better organise the various settings. Any INI files you list
+pieces so as to better organize the various settings. Any INI files you list
 under the new :tag:`[#include]` section will be loaded once the main file itself
 has finished loading. INI files included in this manner can also specify their
 own :tag:`[#include]` section to load further INIs. There is no depth limit, and

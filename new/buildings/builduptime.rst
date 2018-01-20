@@ -6,8 +6,8 @@ into two separate tags for construction and selling on :type:`BuildingTypes`.
 
 Also, :game:`Ares` now supports make animations having more frames than the
 buildup time without glitching. In case the buildup time is too short and it
-would require to skip frames, the buildup time is automatically increased so
-this does not happen any more.
+would require skipping frames, the buildup time is automatically increased so
+this does not happen anymore.
 
 :tagdef:`[BuildingType]BuildupTime=double - minutes`
   The time the buildup animation plays regardless of the number of frames.

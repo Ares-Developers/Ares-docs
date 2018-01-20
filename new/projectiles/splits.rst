@@ -23,7 +23,7 @@ target, a :tag:`Ranged=yes` projectile exceeds its weapon's
 detonates otherwise.
 
 Refer to `Splits on ModEnc <http://modenc.renegadeprojects.com/Splits>`_ for a
-more detailled description of the logic.
+more detailed description of the logic.
 
 .. note:: The Splits logic has been de-hardcoded compared to :game:`Tiberian
   Sun`. The :tag:`AirburstWeapon`'s :tag:`Damage` is no longer multiplied by
@@ -43,7 +43,7 @@ more detailled description of the logic.
 :tagdef:`[Projectile]RetargetAccuracy=float - percentage`
   The probability that a split cluster will aim for the same target the original
   projectile was shot at. The higher the value, the less likely it is for the
-  split projectile to chose another target. Valid range is :value:`0.0` to
+  split projectile to choose another target. Valid range is :value:`0.0` to
   :value:`1.0`. Defaults to :value:`0.0`.
 
 

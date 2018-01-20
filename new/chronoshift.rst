@@ -11,8 +11,8 @@ These options specify what the Chronosphere should do with an object.
   Specifies whether this building is actually a deployed vehicle and should be
   chronoshifted by the Chronosphere super weapon if it affects units and
   :tag:`Chronosphere.ReconsiderBuildings=yes` is set. On the other hand this
-  building will not be considered a building any more and thus will be ignored
-  by a Chronosphere that doesn't affect units. Defaults to :value:`no`.
+  building will not be considered a building anymore and thus will be ignored by
+  a Chronosphere that doesn't affect units. Defaults to :value:`no`.
 
 Units can be made immune to chronoshift-crushing:
 

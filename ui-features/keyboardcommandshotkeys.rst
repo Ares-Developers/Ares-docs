@@ -10,7 +10,7 @@ table).
 Map Snapshot
 ````````````
 
-A key can be assigned to save a snapshot of the current game as a YRM map file,
+A key can be assigned to save a snapshot of the current game as an YRM map file,
 which can be edited in FinalAlert 2 YR.
 
 .. note:: Loading the generated map file in-game causes an Internal Error,

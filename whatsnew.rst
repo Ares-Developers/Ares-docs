@@ -168,7 +168,7 @@ and updates are mentioned here only if they are notable.
 
 + **Forest Fires** :doc:`restored, optional per tree type </new/forestfires>`
 
-+ **Advanced Rubble** :ref:`expanded with customizable owner and inital health
++ **Advanced Rubble** :ref:`expanded with customizable owner and initial health
   <trenches-rubble>`
 
 + **Animation tags** :doc:`Scorch and Flamer have been restored </new/scorchflamer>`
@@ -231,7 +231,7 @@ and updates are mentioned here only if they are notable.
 
 .. rubric:: Ares 0.6
 
-+ **CellSpread** :doc:`not limited to 11 any more, and buildings can define a
++ **CellSpread** :doc:`not limited to 11 anymore, and buildings can define a
   maximum hit count </new/warheads/cellspread>`
 
 + **Sight** :doc:`values above 10 are supported </new/sight>`

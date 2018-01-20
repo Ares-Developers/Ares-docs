@@ -28,7 +28,7 @@ abilities, :tag:`AffectsAllies`, and :tag:`AffectsEnemies`.
 :tagdef:`[Warhead]KillDriver.Owner=enumeration - civilian,special,neutral`
   Specifies the house the units are assigned to. Defaults to :value:`special`.
 :tagdef:`[Warhead]KillDriver.KillBelowPercent=float`
-  Specifies the percentage of health a unit can not exceed to have its driver
+  Specifies the percentage of health a unit cannot exceed to have its driver
   killed by a :tag:`KillDriver=yes` warhead. A unit above this health level
   is only damaged and the driver is not killed. Defaults to :value:`100%`.
 :tagdef:`[Warhead]KillDriver.Chance=float - percentage`

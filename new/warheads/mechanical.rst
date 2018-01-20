@@ -4,7 +4,7 @@ Mechanical and Organic Warheads
 :game:`Yuri's Revenge` was hardcoded to only allow infantry to heal other
 infantry and repair vehicles to only repair other vehicles. :game:`Ares` removes
 this hardcoding and now :type:`InfantryTypes` and :type:`VehicleTypes` can heal
-or repair all :type:`TechnoTypes` depending on verses. This allows to create
+or repair all :type:`TechnoTypes` depending on verses. This allows creating
 Mechanics as known from :game:`The Aftermath` as well as Ambulances known from
 :game:`Generals`.
 
@@ -14,7 +14,7 @@ keys, which allows units to enter damaged transporters.
 
 .. note:: Aircraft docked on a helipad or airport cannot be repaired by
   vehicles. This mimics the original behavior. This limitation has not been
-  recreated for infanry. This might be changed in the future.
+  recreated for infantry. This might be changed in the future.
 
 .. index:: Warheads; Mechanics and Ambulances
 

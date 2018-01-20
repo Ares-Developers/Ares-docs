@@ -3,7 +3,7 @@ Exit Without Confirmation
 
 The game always asks the player for confirmation when clicking the Exit Game
 button in the main menu. So, players have to click twice before the game
-acutally closes. :game:`Ares` adds an option to change this extra step.
+actually closes. :game:`Ares` adds an option to change this extra step.
 
 In :file:`uimd.ini`:
 

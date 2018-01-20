@@ -17,7 +17,7 @@ field. If you enable hijacking by setting :tag:`VehicleThief=yes` on an
   between the controller and the unit will be broken when the hijacker enters.
   Otherwise the hijacker cannot steal the unit. Defaults to :value:`yes`.
 :tagdef:`[InfantryType]VehicleThief.OneTime=boolean`
-  Whether the vehicle thief will be consumed in the procees of capturing a unit.
+  Whether the vehicle thief will be consumed in the process of capturing a unit.
   Otherwise the hijacker will emerge when the captured unit is destroyed. In
   every case the hijacker will be reimbursed when the unit is grinded. Defaults
   to :tag:`no`.
@@ -42,7 +42,7 @@ to change whether a unit can be hijacked.
   problems.
 
 Hijackers remember their health and their previous veterancy level. When the
-vehicle they stole are destroyed, they respawn with a random health up to half
+vehicles they stole are destroyed, they respawn with a random health up to half
 their previous health, and their old rank.
 
 Hijacking works well together with Mind Control now. If a mind-controlled unit
@@ -51,7 +51,7 @@ bogus links left behind. Likewise, mind-controlled hijackers will capture
 vehicles for their original owning houses, not for their capturers'. The
 mind-control link will be transferred to the captured vehicle, if it isn't
 immune to mind control. Otherwise, the mind-controller loses control over both
-hijacker and its vicitm. Same is true for the opposite case: When a hijacked and
+hijacker and its victim. Same is true for the opposite case: When a hijacked and
 mind-controlled unit is destroyed, the link is transferred to the hijacker, if
 it isn't immune to psionics.
 

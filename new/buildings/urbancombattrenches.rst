@@ -136,7 +136,7 @@ Advanced Rubble is implemented in a similar way to other upgrade systems in
     CanBeOccupied=no
 
   .. warning:: Do not create loops using :tag:`Rubble.Destroyed`. This can
-    freeze the game. A building cannot be its own rubble, neither directly nor
+    freeze the game. A building cannot be its own rubble, neither directly or
     indirectly over one or more other :type:`BuildingTypes`.
 
 :tagdef:`[BuildingType]Rubble.Destroyed.Remove=boolean`

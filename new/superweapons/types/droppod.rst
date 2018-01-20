@@ -3,7 +3,8 @@
 
 :game:`Ares` re-implements the Drop Pod SW (:tag:`Type=DropPod`) known from
 :game:`Firestorm`. A super weapon of this type spawns between a minimum and a
-maximum random units from a list of types, which all arrive in drop pods.
+maximum number of random units from a list of types, which all arrive in drop
+pods.
 
 .. note:: \ :game:`Firestorm` had the Drop Pods hardcoded to use :value:`E1`
   (Rifle Soldier) and :value:`E2` (Disk Thrower), a behavior that has not been
@@ -28,7 +29,7 @@ Default values for general tags:
 Drop Pod specific tags:
 
 :tagdef:`[SuperWeapon]DropPod.Types=list of InfantryTypes`
-  The types to chose from. Each type has an equal chance of being selected. You
+  The types to choose from. Each type has an equal chance of being selected. You
   can add types more than once. Only infantry is supported. Defaults to
   :tag:`[General]DropPodTypes`.
 :tagdef:`[SuperWeapon]DropPod.Veterancy=float`

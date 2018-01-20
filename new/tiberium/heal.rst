@@ -44,10 +44,11 @@ setting a tag or by granting the :value:`TIBERIUM_HEAL` veteran ability like in
 How much how often
 ------------------
 
-The delay between the effect being applied and amout of hitpoints to be restored
-can be customized for each unit type and for each of the :type:`Tiberiums`. The
-default tags are also used for other repair logics, so the following tags can be
-used to balance the Tiberium Heal independently from them.
+The delay between the effect being applied and amount of hitpoints to be
+restored can be customized for each unit type and for each of the
+:type:`Tiberiums`. The default tags are also used for other repair logics, so
+the following tags can be used to balance the Tiberium Heal independently from
+them.
 
 .. note Note that :game:`Tiberian Sun` did not make a distinction between
   \ :type:`VehicleTypes` and :type:`AircraftTypes`. It applied

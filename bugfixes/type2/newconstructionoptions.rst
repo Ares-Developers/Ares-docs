@@ -16,6 +16,6 @@ Another cause of the NCO bug is when a house is not listed as a
 buildable building's owner. Ares's prerequisite system does not check
 for that, thereby eliminating this type of bug.
 
-Owners still affect AI baseplanning.
+Owners still affect AI base planning.
 
 .. versionadded:: 0.2

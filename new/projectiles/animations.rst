@@ -2,7 +2,7 @@ Animations and :captiontag:`Rotates=yes`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Projectiles with :tag:`Rotates=yes` used their image's 32 frames to represent
-moving in differnent directions, one frame per facing. This means these
+moving in different directions, one frame per facing. This means these
 projectiles did not support being animated. :game:`Ares` adds support for this.
 
 :tagdef:`[Projectile]AnimLength=integer - frames`

@@ -14,7 +14,7 @@ piece, an animation, and a palette file for all three.
   respectively.
 
 :tagdef:`[Side]CampaignScore.Transition=filename, *including* the .shp extension`
-  An image used as a transition from the looping animation to the statc
+  An image used as a transition from the looping animation to the static
   background image. Played backwards for the opposite case. Uses the palette
   defined as :tag:`CampaignScore.Palette`. Defaults to :value:`ASCRTMD.SHP`,
   :value:`SSCRTMD.SHP` or :value:`SYCRTMD.SHP` for sides 1, 2 and all others

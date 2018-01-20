@@ -54,7 +54,7 @@ Mirage Tanks without their Operator will still maintain their disguise.
        the passengers (including the Operator) to parachute from the aircraft -
        whereupon it will crash.
 
-.. note:: The AI behaves unpredicatably when faced with units that require
+.. note:: The AI behaves unpredictably when faced with units that require
   Operators and may not be subject to certain effects. You should prevent the
   AI from building anything that requires an Operator.
 

@@ -7,8 +7,8 @@ Optimizations
 Particle handling has been greatly optimized in :game:`Ares`. Pixel particles --
 that is types having :tag:`BehavesLike=` set to either :value:`Spark` or
 :value:`Railgun` -- were known to cause lag even with relatively few particles
-involved. That is, even sparse railgun beams created a noticable slowdown. Also,
-:value:`Smoke` particles are created frequently throughout a game.
+involved. That is, even sparse railgun beams created a noticeable slowdown.
+Also, :value:`Smoke` particles are created frequently throughout a game.
 
 In :game:`Ares` the optimization is activated automatically if all of the
 following are true. If any one is false, the optimization will not be applied
@@ -37,7 +37,7 @@ Damage Range for Gas Particles
 ------------------------------
 
 Gas particles could only damage objects residing on the same cell as itself, no
-matter how big the particle's image was. :game:`Ares` allows to customize this.
+matter how big the particle's image was. :game:`Ares` allows customizing this.
 
 :tagdef:`[ParticleType]DamageRange=double - cells`
   The particle damage is applied to all objects in this range around the gas

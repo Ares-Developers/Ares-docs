@@ -174,23 +174,23 @@ Changed tags:
     Default depends on wave type.
 
   :tag:`[SuperWeapon]SW.Damage`
-    Defaults depends on :tag:`Type`.
+    Default depends on :tag:`Type`.
 
   :tag:`[SuperWeapon]SW.Range`
-    Defaults depends on :tag:`Type`.
+    Default depends on :tag:`Type`.
 
   :tag:`[SuperWeapon]SW.Deferment`
     Defaults to :tag:`[General]LightningDeferment` for
     :tag:`Type=LightningStorm`.
 
   :tag:`[SuperWeapon]SW.Animation`
-    Defaults depends on :tag:`Type`.
+    Default depends on :tag:`Type`.
 
   :tag:`[SuperWeapon]SW.Sound`
-    Defaults depends on :tag:`Type`.
+    Default depends on :tag:`Type`.
 
   :tag:`[SuperWeapon]SW.ActivationSound`
-    Defaults depends on :tag:`Type`.
+    Default depends on :tag:`Type`.
 
   :tag:`[SuperWeapon]Lightning.Duration`
     Defaults to :tag:`[General]LightningStormDuration`.
@@ -381,9 +381,9 @@ Other changes:
   Some :type:`ArmorType` parsing issues have been resolved to improve defaulting
   to other types, and to not reset data unexpectedly.
 
-  The Unit Delivery super weapon has been reworked. It now allows to place units
+  The Unit Delivery super weapon has been reworked. It now allows placing units
   on ore, and delivered objects are put on guard, area guard or hunt mission.
-  The option to skip the buildup animations has been deprectated, because it
+  The option to skip the buildup animations has been deprecated, because it
   never worked correctly.
 
   Hunter Seekers no longer target objects under the effect of the Iron Curtain
@@ -403,4 +403,4 @@ Other changes:
   :tag:`KillDriver` has been changed to be applied like regular damage. It now
   respects immunities and supports :tag:`CellSpread`. Thus, the effect might
   not be applied in all cases where it was applied before, and might be applied
-  in cases were it previously was not.
+  in cases where it previously was not.

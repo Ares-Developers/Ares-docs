@@ -9,7 +9,7 @@ Flying Aircraft Carriers
 ------------------------
 
 Non-Missile spawns were always put on the ground for take-off, even if the
-carrier was in the air. This has been changed and spawns now start from the the
+carrier was in the air. This has been changed and spawns now start from the
 carrier.
 
 Spawned units now return to :tag:`BalloonHover=yes` spawners, instead of flying

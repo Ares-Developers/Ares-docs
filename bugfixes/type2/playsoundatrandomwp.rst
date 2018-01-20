@@ -4,9 +4,9 @@
 Play Sound at Random Waypoint
 =============================
 
-The map action `Play Sound at Random Waypont` collected up to 400 waypoints from
-which it then randomly selected one to play a sound effect at. This could crash,
-because it had actually only space to store 100 waypoints. If there were more
-waypoints present on the map, the game would crash. This has been fixed.
+The map action `Play Sound at Random Waypoint` collected up to 400 waypoints
+from which it then randomly selected one to play a sound effect at. This could
+crash, because it had actually only space to store 100 waypoints. If there were
+more waypoints present on the map, the game would crash. This has been fixed.
 
 .. versionadded:: 0.5

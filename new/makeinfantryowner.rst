@@ -10,7 +10,7 @@ several options.
 
 :tagdef:`[Animation]MakeInfantryOwner=enumeration invoker|killer|victim|civilian|special|neutral|random`
   Specifies which house will own the resulting :type:`InfantryType` that gets
-  created after this animation has played. The animation's re-mappable colors
+  created after this animation has played. The animation's remappable colors
   will be shown in that house's color, if not noted otherwise. Defaults to
   :value:`invoker`.
 

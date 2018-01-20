@@ -119,7 +119,7 @@ minor bugs and also extend it to provide a full set of Prism networking options.
   that the towers do not all appear to start charging immediately. For each
   backward-chain in the network, the farthest-forward towers begin charging just
   that little bit later, to give the effect of the beam travelling along the
-  chain. The amount that each tower will delay starting it's charge for can be
+  chain. The amount that each tower will delay starting its charge for can be
   specified by :tag:`PrismForwarding.ChargeDelay`. This delay accumulates for
   each chain in the prism forwarding network.
 
@@ -146,7 +146,7 @@ minor bugs and also extend it to provide a full set of Prism networking options.
   higher than the default :tag:`LaserThickness` of the firing weapon (3). The
   :tag:`PrismForwarding.Intensity` flag treats negative values as an absolute
   addition to the firing beam, so the default value of :value:`-2` leaves the
-  behaviour exactly the same as the original game.
+  behavior exactly the same as the original game.
 
   Positive values, on the other hand, tell :game:`Ares` that you want the
   thickness of the beam to be dependent on the number of backward chains in the
@@ -261,9 +261,9 @@ Support Beam FLH
 ````````````````
 
 The firing origin of the support beam can be set by using the FLH controls on
-the buliding's art entry - :tag:`AlternateFLH0` specifies the rookie support
+the building's art entry - :tag:`AlternateFLH0` specifies the rookie support
 beam origin, :tag:`AlternateFLH1` specifies the elite support beam origin. If
-either of these are set to :value:`0,0,0` (the default FLH value) then they will
+either of these is set to :value:`0,0,0` (the default FLH value) then they will
 fall back to using :tag:`PrimaryFireFLH` or :tag:`ElitePrimaryFireFLH`, as
 appropriate.
 
