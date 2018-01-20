@@ -23,6 +23,7 @@ Contributors
 ===============  =========================
 A Mystery Guest  New Powered Unit Logic
 [Gluk-v48]       Advanced Rubble Expansion
+Marshall         Prism Forwarding
 ===============  =========================
 
 Collaborators
@@ -44,8 +45,7 @@ Westwood Studios
 	into the sun).
 Marshall
 	For developing :game:`Launch Base` and the :game:`YR Unofficial 1.002
-	Mini-Patch` (UMP), whipping this documentation into shape and developing
-	:game:`Ares`' Prism Forwarding feature.
+	Mini-Patch` (UMP), and whipping the documentation into shape.
 Renegade
 	For providing the infrastructure for the :game:`Ares` website and the unstable
 	development builds page.
