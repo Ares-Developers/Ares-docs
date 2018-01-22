@@ -7,9 +7,6 @@ Command Line Arguments
   required files installed, so no further action has to be taken.
 :-NOLOGO: Prevents the EA logo video from playing before the game begins to
   load.
-  
-  .. note:: Launch Base has its own option to just prevent the video playing for
-    mods that do not include their own video.
 :-LOG: Turns :file:`debug.log` file writing on initially. See :doc:`Internal
   Errors/Debugging </ui-features/internalerrorsdebugging>`.
 :-LOG-CSF: Outputs all CSF labels that cannot be found in the language files
