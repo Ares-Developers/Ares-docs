@@ -1,8 +1,8 @@
 .. index:: Performance; Several performance enhancements.
 
-==========================
-Type 3 Fixes (Performance)
-==========================
+========================
+Performance Improvements
+========================
 
 Performance fixes are employed to optimize certain game functions that take much
 more time to perform a task than required or to make :game:`Yuri's Revenge` work
