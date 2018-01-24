@@ -1,4 +1,4 @@
-.. index:: Mirage disguise; Turrets and barrels will be disguised with the unit.
+.. index:: Mirage; Turrets and barrels will be disguised with the unit
 
 =================================
 Mirage Logic with Turrets/Barrels

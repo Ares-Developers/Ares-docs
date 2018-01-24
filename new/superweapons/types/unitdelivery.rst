@@ -1,3 +1,5 @@
+.. index:: Super Weapons; Create units or buildings at target location
+
 :captiontag:`Type=UnitDelivery`
 ```````````````````````````````
 
@@ -43,10 +45,6 @@ and human owned units are put on a guard area mission.
 
 You can mix in naval units and they will be placed where they can normally
 exist.
-
-
-.. index:: Super Weapons; New super weapon type: UnitDelivery (create unit(s) at
-  target location).
 
 .. versionadded:: 0.1
 .. versionchanged:: 0.8

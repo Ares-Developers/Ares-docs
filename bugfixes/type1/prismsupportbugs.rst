@@ -1,4 +1,9 @@
-.. index:: Prism; Prism support modifier fixed for game modes/maps., Prism; Lost prism supports no longer contribute to the firing beam., Prism; Constructing/selling Prism Towers are no longer eligible to be support towers.
+.. index::
+  Prism; Prism support modifier fixed for game modes/maps
+  Prism; Lost prism supports no longer contribute to the firing beam
+  Prism; Constructing/selling towers are no longer eligible to be support towers
+  Bugs; Prism Tower support fixed
+  Bugs; Prism Support Modifier corruption
 
 ==================
 Prism Support Bugs

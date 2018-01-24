@@ -1,3 +1,5 @@
+.. index:: Tiberium; Full harvesters explode
+
 Tiberium Explosive
 ``````````````````
 
@@ -23,7 +25,5 @@ not set or the Harvester Truce feature is enabled, no damage is delivered.
 :tagdef:`[CombatDamage]TiberiumExplosiveWarhead=warhead`
   The warhead to deliver the damage of explosive tiberium. Defaults to
   :value:`none`.
-
-.. index: Tiberium; Full harvesters explode.
 
 .. versionadded:: 0.5

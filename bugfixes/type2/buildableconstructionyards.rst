@@ -1,4 +1,6 @@
-.. index:: Construction Yards; Buildable construction yards no longer cause an IE when canceled.
+.. index::
+  Construction Yards; No longer cause an IE when canceled building from the sidebar
+  Crashes; Buildable Construction Yards no longer cause an IE when canceled
 
 ============================
 Buildable Construction Yards

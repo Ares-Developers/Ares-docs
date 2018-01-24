@@ -1,3 +1,11 @@
+.. index::
+  Vehicle Thief; Enter and exit sounds
+  Vehicle Thief; Works with mind control
+  Vehicle Thief; Make units immune
+  Vehicles; Make units immune to hijacking
+  Mind Control; Works with hijackers
+  single: Infantry; Expanded VehicleThief hijacker logic
+
 Hijackers
 ~~~~~~~~~
 
@@ -60,7 +68,5 @@ Driver warheads. See :doc:`KillDriver and CanDrive </new/killingdrivers>`.
 
 See :doc:`Mouse Cursors </new/mousecursors>` on how to customize the cursor to
 indicate a vehicle can be hijacked by defining :value:`TakeVehicle`.
-
-.. index:: Infantry; Expanded VehicleThief logic.
 
 .. versionadded:: 0.2

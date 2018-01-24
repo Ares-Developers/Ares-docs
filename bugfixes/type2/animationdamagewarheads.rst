@@ -1,4 +1,4 @@
-.. index:: Animations; Animations' warhead flag now works.
+.. index:: Animations; Animations' Warhead= flag now works
 
 =========================
 Animation Damage Warheads

@@ -1,3 +1,5 @@
+.. index:: Buildings; Trenches
+
 Urban Combat - Trenches
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -11,8 +13,11 @@ been designed to be customizable and can be used separately.
   you understand how each new flag works - both on its own and in conjunction
   with other trench-related flags.
 
-.. index:: Buildings; Numerous features added to support trenches.
 
+.. index::
+  Buildings; Weapons passing through urban combat buildings
+  Weapons; Hit occupants inside buildings
+  Projectiles; Subject to trenches
 
 Pass Through
 ````````````
@@ -62,11 +67,12 @@ would therefore definitely harm the occupants.
   :alt: Illustration of different UC.PassThrough values
   :align: center
 
-.. index:: Buildings; Weapons can be made to pass through urban combat buildings
-  to the occupants inside (including fatal chance and damage modifier).
-
 .. versionadded:: 0.1
 
+
+.. index::
+  Buildings; Raid garrisonable but unoccupied enemy buildings
+  Bunkers; Raid unoccupied enemy buildings
 
 Squatters' Rights
 `````````````````
@@ -88,12 +94,16 @@ occupants leave the building then ownership of the building is transferred back
 to its original owner. Whilst a building is held by a player that is not the
 "true" owner, that building cannot be sold.
 
-.. index:: Buildings; Unoccupied player buildings can be garrisoned by enemy infantry.
-
 .. versionadded:: 0.1
 
 
 .. _`trenches-rubble`:
+
+.. index::
+  Buildings; Destruction replaces building with rubble
+  Buildings; Rebuild buildings from rubble with engineers
+  Rubble; Rebuild collapsed buildings with engineers
+  Engineers; Rebuild collapsed rubble buildings
 
 Advanced Rubble
 ```````````````
@@ -104,9 +114,6 @@ making it collapse. Either way, you don't really remove the trench from the
 battlefield - just render it unusable. It will be easier to re-dig a trench
 there than on untouched soil, and, on the other hand, you can't just build
 there like nothing ever happened.
-
-.. index:: Buildings; Buildings can be converted into a different building on
-  destruction (rubble) and back again on repair by an engineer.
 
 Note that Engineers will not be 'used up' by this repair process - they keep
 existing outside of the trench. This is very much intended for trenches: an
@@ -193,6 +200,11 @@ the first set:
 .. versionchanged:: 0.8
 
 
+.. index::
+  Buildings; Infantry can move from one urban combat building to an adjacent one
+  Trenches; Move infantry from one urban combat building to an adjacent one
+  Occupiers; Move infantry from one urban combat building to an adjacent one
+
 Traversing Trenches
 ```````````````````
 
@@ -217,11 +229,13 @@ occupants from the garrisoned segment into the adjacent segment.
   you will not get nice rows of trenches with proper joins/closed off ends like
   you do with, say, walls or Laser Fences. 
 
-.. index:: Buildings; Infantry can jump from one urban combat building to an adjacent one.
-
 .. versionadded:: 0.1
 
 
+
+.. index::
+  Buildings; Specify the allowed occupants
+  Occupiers; Specify the occupants of a building
 
 Specifying the occupants of a building
 ``````````````````````````````````````
@@ -230,7 +244,5 @@ You can now specify which infantries are allowed to enter into a building.
 
 :tagdef:`[BuildingType]CanBeOccupiedBy=list of InfantryTypes`
   Lists the units which are allowed to enter to this building.
-
-.. index:: Buildings; Specifying the occupants of a building.
 
 .. versionadded:: 0.2

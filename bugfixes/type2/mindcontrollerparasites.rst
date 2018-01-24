@@ -1,4 +1,4 @@
-.. index:: Parasites; Mind-controller parasites will no longer draw the mind-control link when the the target is selected.
+.. index:: Parasites; Mind-controller parasites will no longer draw the mind-control link
 
 =========================
 Mind-Controller Parasites

@@ -1,3 +1,5 @@
+.. index:: Art; Animation and projectile palettes
+
 Custom Animation and Projectile Palettes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -19,7 +21,5 @@ three-letter extension.
 
 .. note:: Note that if you're using this on projectiles, you have to add the
   projectile to the :tag:`[Animations]` list.
-
-.. index:: Art; Custom animation and projectile palettes.
 
 .. versionadded:: 0.2

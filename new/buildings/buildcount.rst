@@ -1,3 +1,7 @@
+.. index::
+  AI; Build more than one building of a type
+  Buildings; AI build more than one building of a type
+
 Build More Buildings of a Type
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -27,7 +31,5 @@ by chance it could do that at times.
   on the difficulty. Order is hard to easy. A random number of buildings will be
   build in addition to the ones from the normal build count. Each value must be
   equal to or greater than :value:`0`. Defaults to :value:`0,0,0`.
-
-.. index:: Buildings; AI build more than one building of a type
 
 .. versionadded:: 0.D

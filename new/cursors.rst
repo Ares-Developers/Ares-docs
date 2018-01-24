@@ -1,3 +1,7 @@
+.. index::
+  TechnoTypes; Mouse cursors
+  Art; Cursors on units and structures
+
 Cursors on Units and Structures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -9,6 +13,8 @@ All of these settings take a named cursor defined under
 :doc:`Mouse Cursors </new/mousecursors>`. Also see how to use :doc:`custom
 weapon cursors </new/weapons/cursors>`.
 
+
+.. index:: Cursors; Movement
 
 Movement
 ========
@@ -25,6 +31,8 @@ when a target can't be attacked or an object cannot be entered.
   The cursor to use for representing the no-move action. Defaults to
   :value:`NoMove`.
 
+
+.. index:: single: Cursors; Deploy, eject, area attack
 
 Deploy
 ======
@@ -45,6 +53,8 @@ Desolators, as well as for ordering area attacks like on the Yuri Clone.
   be ejected, or an automatically undeploying infantry is currently deployed.
   Defaults to :value:`NoDeploy`.
 
+
+.. index:: Cursors; Enter or dock
 
 Enter
 =====
@@ -75,6 +85,8 @@ specialized cursors.
   type while entering is not possible. This is used on full transports. Defaults
   to :value:`NoEnter`.
 
+
+.. index:: Cursors; Infiltrate buildings
 
 Spy Infiltration
 ================

@@ -1,3 +1,7 @@
+.. index::
+  Chronosphere; Per-unit Chronosphere options
+  Chronosphere; Crushing other units
+
 Chronoshift
 ~~~~~~~~~~~
 
@@ -26,8 +30,6 @@ Globally disallow chronoshifting infantry to crush non-infantry:
 :tagdef:`[General]ChronoInfantryCrush=boolean`
   If set to :value:`no`, infantry will die when being chronoshifted onto tanks
   instead of destroying the tanks. Defaults to :value:`yes`.
-
-.. index:: Chronosphere; Per-unit Chronosphere options.
 
 .. versionadded:: 0.2
 .. versionchanged:: 0.E

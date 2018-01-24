@@ -1,3 +1,5 @@
+.. index:: Performance; Random Map generation sped up
+
 ====================
 Random Map Generator
 ====================

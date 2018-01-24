@@ -6,6 +6,8 @@ described below, and an issue has been resolved with regard to upgrades as
 prerequisites (see :doc:`Type 2 fixes
 </bugfixes/type2/buildingtypeupgradesarenotviableprerequisites>`).
 
+.. index:: Prerequisites; Require the map to be a specific theater (desert/snow/lunar/etc)
+
 Require Theater
 ```````````````
 
@@ -27,10 +29,10 @@ Require Theater
   .. note:: \ :tag:`PrerequisiteOverride` does *not* override
     \ :tag:`Prerequisite.RequiredTheaters`.
 
-.. index:: Prerequisites; Units can require the map to be a specific theater (desert/snow/lunar/etc).
-
 .. versionadded:: 0.1
 
+
+.. index:: Prerequisites; Make a unit unavailable if a listed building is owned
 
 Negative Prerequisites
 ``````````````````````
@@ -43,11 +45,10 @@ Negative Prerequisites
   .. note:: \ :tag:`PrerequisiteOverride` does *not* override
     \ :tag:`Prerequisite.Negative`.
 
-.. index:: Prerequisites; PrerequisiteNegative makes a unit unavailable if a
-  building on the list is owned.
-
 .. versionadded:: 0.1
 
+
+.. index:: Prerequisites; Multiple separate prerequisite lists
 
 Multiple Alternative Prerequisites Lists
 ````````````````````````````````````````
@@ -80,11 +81,10 @@ Battle Lab.
   .. note:: \ :tag:`Prerequisite.List0`, if specified, overrides the existing
     \ :tag:`Prerequisite` flag.
 
-.. index:: Prerequisites; Multiple separate prerequisite lists - a unit can 
-    require any one of several sets of buildings.
-
 .. versionadded:: 0.1
 
+
+.. index:: Prerequisites; Require stolen tech 
 
 Require Stolen Technology
 `````````````````````````
@@ -94,10 +94,10 @@ Require Stolen Technology
   can be built. See :ref:`Stolen Technology <spybehavior-stolentech>` for more
   information.
 
-.. index:: Prerequisites; New StolenTech requirements.
-
 .. versionadded:: 0.1
 
+
+.. index:: Prerequisites; Require building initially built by certain country
 
 Require Factory Built By Country
 ````````````````````````````````
@@ -121,8 +121,6 @@ Require Factory Built By Country
 .. note:: AI ignores :tag:`FactoryOwners` and :tag:`FactoryOwners.Forbidden` on
   buildings, but not on units.
 
-.. index:: Prerequisites; Require building built by certain country.
-
 .. versionadded:: 0.6
 .. versionchanged:: 0.9
 
@@ -137,6 +135,9 @@ modified or added by :game:`Ares`.
 .. image:: /images/prerequisite_system.svg
   :alt: Flowchart of the current prerequisite system
   :align: center
+
+
+.. index:: Prerequisites; Prerequisite groups
 
 Generic Prerequisite Groups
 ```````````````````````````
@@ -160,7 +161,6 @@ For example:
     etc...
 
 
-
 ::
 
     [TechnoType]
@@ -178,10 +178,12 @@ used *instead* of those specified on the original PrerequisiteGroup flags
 :tag:`[GenericPrerequisites]PROC=` does not override or nullify
 :tag:`[General]PrerequisiteProcAlternate=`.
 
-.. index:: Prerequisites; New Prerequisite Groups.
-
 .. versionadded:: 0.1
 
+
+.. index::
+  Prerequisites; Generalized alternate prerequisite groups
+  Prerequisites; Units as prerequisite
 
 Alternate Prerequisites with Non-Buildings
 ``````````````````````````````````````````
@@ -206,7 +208,5 @@ Groups and expands this feature to support multiple items of arbitrary
 
   .. note:: Using :type:`BuildingTypes` is not supported and adding them here
     might give unexpected results. For example, upgrades will not work.
-
-.. index:: Prerequisites; Generalized Alternate Prerequisite Groups
 
 .. versionadded:: 0.B

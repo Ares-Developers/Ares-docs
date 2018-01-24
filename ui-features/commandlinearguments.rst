@@ -1,3 +1,6 @@
+.. index:: Command Line; Don't require the Yuri's Revenge game disk
+.. index:: Command Line; Don't play the EA/Westwood logo video
+
 Command Line Arguments
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -26,8 +29,5 @@ Command Line Arguments
     testing and AI design testing. Due to this, feature complexity, lack of
     interest and a change in personnel, please note that this feature is NOT
     officially supported.
-
-.. index:: Command line; Option to not require the Yuri's Revenge game disk.
-.. index:: Command line; Option to not play the EA/Westwood logo video.
 
 .. versionadded:: 0.1

@@ -1,3 +1,5 @@
+.. index:: Buildings; BuildupTime and separate SellTime
+
 Buildup and Sell Time
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -19,7 +21,5 @@ this does not happen anymore.
 :tagdef:`[BuildingType]SellTime=double - minutes`
   Analogous to :tag:`BuildTime` when a building is sold. Defaults to
   :tag:`BuildupTime`.
-
-.. index:: Buildings; Deglobalized BuildupTime, separate SellTime
 
 .. versionadded:: 0.D

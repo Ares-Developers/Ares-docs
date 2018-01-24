@@ -1,4 +1,4 @@
-.. index:: Jumpjets; Shadows on jumpjet units will now be drawn correctly when the unit is airborne.
+.. index:: Jumpjets; Shadows on jumpjet not drawn correctly when the unit is airborne
 
 ===============
 Jumpjet Shadows

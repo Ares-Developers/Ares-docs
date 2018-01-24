@@ -1,3 +1,5 @@
+.. index:: Buildings; Pause repair on insufficient funds
+
 Repair and Insufficient Funds
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -12,7 +14,5 @@ With this tag, repairing will pause, but not stop.
   wrench will still be visible, even though the building is no longer actively
   repaired. Repairing will resume when the player gains more funds. This only
   affects human players. Defaults to :value:`yes`.
-
-.. index:: Buildings; Pause repair on insufficient funds
 
 .. versionadded:: 0.D

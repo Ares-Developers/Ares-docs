@@ -1,3 +1,5 @@
+.. index:: Warheads; Suppress death weapons
+
 Suppress Death Weapons
 ``````````````````````
 
@@ -19,7 +21,5 @@ not when the unit is merely damaged and later killed by some other warhead.
   Whether death weapons of all :type:`InfantryTypes` are suppressed when this
   warhead kills. If :value:`no`, :tag:`DeathWeapon.Suppress` is still checked.
   Defaults to :value:`no`.
-
-.. index:: Warheads; Suppress death weapons
 
 .. versionadded:: 0.A

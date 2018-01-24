@@ -1,3 +1,7 @@
+.. index::
+  ArmorTypes; Add custom ArmorTypes to warheads
+  Warheads; Add custom ArmorTypes
+
 Additional :type:`ArmorTypes` and :captiontag:`Verses`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -34,11 +38,13 @@ misspelling of "versus").
 The original :tag:`Verses` flag parser no longer crashes if you specify less
 than 11 values.
 
-.. index:: ArmorTypes; Add custom ArmorTypes to warheads.
-
 .. versionadded:: 0.1
 
 
+
+.. index::
+  ArmorTypes; ForceFire/Retaliate/PassiveAcquire decoupled from Verses
+  Warheads; Verses special behaviors ForceFire/Retaliate/PassiveAcquire
 
 Warhead :captiontag:`Verses`' Special Values
 ````````````````````````````````````````````
@@ -70,11 +76,13 @@ armor type).
 
 Note :game:`Ares`' correct spelling of "acquire".
 
-.. index:: ArmorTypes; Warhead verses special behaviours can be decoupled from Verses (ForceFire/Retaliate/PassiveAcquire).
-
 .. versionadded:: 0.1
 
 
+
+.. index::
+  ArmorTypes; Immunities from certain warheads
+  Warheads; Immunities using ArmorTypes
 
 Immunities
 ``````````
@@ -121,7 +129,5 @@ emulate this as follows:
 
 The above settings give the IceMan unit a damage immunity to the IceBlast
 weapon, even though he can still be attacked by that weapon.
-
-.. index:: ArmorTypes; Define your own immunities from certain warheads.
 
 .. versionadded:: 0.1

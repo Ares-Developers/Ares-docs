@@ -1,3 +1,8 @@
+.. index::
+  Saboteurs; Blow up buildings by entering them
+  Infantry; Saboteurs blowing up buildings
+  Universe; Saboteurs blowing up buildings
+
 Saboteurs
 ~~~~~~~~~
 
@@ -27,7 +32,5 @@ customizable :doc:`Mouse Cursor </new/mousecursors>`.
   .. note: By default, unbuildable occupiable structures cannot be sabotaged.
     This prevents saboteurs from blowing up civilian structures when selected in
     a group with occupiers. This default value might change in the future.
-
-.. index:: InfantryTypes; Saboteurs blowing up buildings
 
 .. versionadded:: 0.A

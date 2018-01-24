@@ -1,3 +1,5 @@
+.. index:: Animations; Choose the owner for MakeInfantry animations
+
 :captiontag:`MakeInfantryOwner`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -51,8 +53,6 @@ including the houses available as :value:`neutral`, :value:`special` and
 .. note:: Like :tag:`InfDeath=9`, mutation animations will be rendered in the
   unit palette with remap colors instead of :file:`anim.pal`, if not noted
   otherwise.
-
-.. index:: Animations; MakeInfantry animations (InfDeathAnim, DeathAnims, ..., and map triggers) can choose who the owner will be.
 
 .. versionadded:: 0.1
 

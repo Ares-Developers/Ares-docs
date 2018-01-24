@@ -3,6 +3,10 @@ Iron Curtain
 
 .. _wh-ironcurtain:
 
+.. index::
+  Warheads; Apply or remove the Iron Curtain effect
+  Iron Curtain; Apply or remove effect using a warhead
+
 Iron Curtain Effect
 -------------------
 
@@ -50,11 +54,12 @@ This feature works with :tag:`CellSpread` to affect multiple targets.
 get the Iron Curtain effect if :tag:`Verses` is equal to :value:`0%`, otherwise
 the target is endowed with the full effect.
 
-.. index:: Warheads; Weapons can apply or remove the Iron Curtain effect for a
-  specified number of frames (stackable or absolute).
-
 .. versionadded:: 0.1
 
+
+.. index::
+  Warheads; Disable the combat light flash on Iron Curtained objects
+  Iron Curtain; Disable the combat light flash
 
 Iron Curtain Flash
 ------------------
@@ -71,7 +76,5 @@ be turned off.
   Whether units and structures will emit a black or blue flash when hit with
   this warhead while under the effect of an Iron Curtain or Force Shield
   respectively. Defaults to :tag:`[AudioVisual]IronCurtainFlash`.
-
-.. index:: Warheads; Disable the combat light flash on Iron Curtained objects
 
 .. versionadded:: 0.D

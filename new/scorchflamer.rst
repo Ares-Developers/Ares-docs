@@ -1,3 +1,5 @@
+.. index:: Animations; Napalm tags Scorch= and Flamer= restored
+
 :captiontag:`Scorch` and :captiontag:`Flamer`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -27,7 +29,5 @@ crash when a new animation of these types is about to be created.
   when expiring. For a complete description of behavior and requirements, refer
   to `Flamer on ModEnc <http://modenc.renegadeprojects.com/Flamer>`_. Defaults
   to :value:`no`.
-
-.. index:: Animations; Napalm tags Scorch= and Flamer= have been restored
 
 .. versionadded:: 0.8

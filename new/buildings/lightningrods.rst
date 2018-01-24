@@ -1,3 +1,5 @@
+.. index:: Buildings; Rudimentary lightning rods
+
 Lightning Rods
 ~~~~~~~~~~~~~~
 
@@ -13,7 +15,5 @@ Lightning rods attract Lightning Storms and optionally modify their damage.
   values increase the damage. Defaults to :value:`1.0`.
 
 .. note:: This logic is likely to be expanded in future versions.
-
-.. index:: Buildings; Rudimentary Lightning Rods.
 
 .. versionadded:: 0.2

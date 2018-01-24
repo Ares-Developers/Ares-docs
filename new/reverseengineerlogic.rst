@@ -1,3 +1,5 @@
+.. index:: Prerequisites; Reverse-Engineering logic
+
 Reverse Engineer logic
 ~~~~~~~~~~~~~~~~~~~~~~
 
@@ -30,7 +32,5 @@ When you are the owner of the reversing facility, reverse-engineering any
 reverse-engineering any :type:`VehicleType` for the first time will play
 :value:`EVA_ReverseEngineeredVehicle` and :value:`EVA_NewTechnologyAcquired`.
 The undo-reversing spy effect will play :value:`EVA_TechnologyStolen`.
-
-.. index:: Prerequisites; Reverse-Engineering logic.
 
 .. versionadded:: 0.2

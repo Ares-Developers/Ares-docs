@@ -1,3 +1,5 @@
+.. index:: Aircraft; ReloadRate per AircraftType
+
 Aircraft-Specific :captiontag:`ReloadRate`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -14,7 +16,5 @@ For this feature to work the reloading has also been changed to reload each
 aircraft individually. This fixes the issue that reload times seemed to vary for
 aircraft and the aircraft that landed first was reloaded substantially faster as
 it required one less interval of :tag:`ReloadRate`.
-
-.. index:: Aircraft; Custom ReloadRate per AircraftType
 
 .. versionadded:: 0.B

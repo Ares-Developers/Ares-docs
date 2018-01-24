@@ -1,3 +1,5 @@
+.. index:: Universe; Sonar Pulse briefly reveals cloaked units
+
 :captiontag:`Type=SonarPulse`
 `````````````````````````````
 
@@ -31,8 +33,6 @@ Sonar Pulse specific tags:
 
 :tagdef:`[SuperWeapon]SonarPulse.Delay=integer - frames`
   The duration that the decloak effect will last. Defaults to :value:`60`.
-
-.. index:: Super Weapons; SonarPulse briefly reveals cloaked units.
 
 .. versionadded:: 0.1
 .. versionchanged:: 0.5

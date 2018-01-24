@@ -1,3 +1,5 @@
+.. index:: Interface; Single-click exit without confirmation
+
 Exit Without Confirmation
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -11,7 +13,5 @@ In :file:`uimd.ini`:
   Whether the game shall exit immediately when clicking the Exit Game button.
   Otherwise a message box is shown and the player can still abort closing the
   game. Defaults to :value:`no`.
-
-.. index:: Menu; Single-click Exit without confirmation
 
 .. versionadded:: 0.A

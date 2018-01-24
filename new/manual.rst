@@ -1,6 +1,10 @@
 Manual Control
 ~~~~~~~~~~~~~~
 
+.. index::
+  Behavior; Disallow manual target selection
+  TechnoTypes; Disable attack cursor
+
 No Manual Target Selection
 ``````````````````````````
 
@@ -13,10 +17,12 @@ nor to retaliate.
   enabled, units will have to rely on auto-targeting and retaliation rules.
   Defaults to :value:`no`.
 
-.. index:: Behavior; Disallow manual target selection, Hide attack cursor
-
 .. versionadded:: 0.A
 
+
+.. index::
+  Behavior; Disallow manual passenger unload
+  TechnoTypes; Disable unload cursor
 
 No Manual Passenger Unload
 ``````````````````````````
@@ -34,10 +40,12 @@ accordingly.
   owning player will not get deploy or no-deploy cursors. Defaults to
   :value:`no`.
 
-.. index:: Behavior; Disallow manual passenger unload, Hide unload cursor
-
 .. versionadded:: 0.A
 
+
+.. index::
+  Behavior; Disallow units to get an enter cursor over a transport
+  TechnoTypes; Prevent players to send units into transports
 
 No Manual Enter Transport
 `````````````````````````
@@ -54,10 +62,12 @@ Also, the AI will not respect this setting. Use the :doc:`Specific Passengers
   :value:`yes`, the select cursor is used, as if this unit is not a transport.
   Defaults to :value:`no`.
 
-.. index:: Behavior; Disallow units to get an enter cursor over a transport
-
 .. versionadded:: 0.B
 
+
+.. index::
+  Behavior; Disable Medics' Guard Area cursor on self
+  Infantry; Medics that can deploy
 
 No Guard Area on Self
 `````````````````````
@@ -71,7 +81,5 @@ have deploy ability. :game:`Ares` adds a tag to turn this feature off.
   on themselves. If :value:`no`, the guard area cursor will not take precedence,
   allowing other cursors like the deploy cursor to be shown. Defaults to
   :value:`no`.
-
-.. index:: Behavior; Disable Medics' Guard Area cursor on self
 
 .. versionadded:: 0.B

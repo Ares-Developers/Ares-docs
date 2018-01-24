@@ -1,3 +1,7 @@
+.. index::
+  single: Weapons; Taking more than one round of ammo, or none at all
+  single: Ammo; Weapons taking more than one round of ammo, or none at all
+
 :captiontag:`Ammo`
 ``````````````````
 
@@ -23,7 +27,5 @@ Firing a weapon that uses up no ammunition does not reset the reload timer.
 
 To make units and structures automatically switch to another weapon when out of
 ammo, see :doc:`NoAmmoWeapon </new/noammoweapon>`.
-
-.. index:: Weapons; Weapon taking more than one round of ammo, or none at all
 
 .. versionadded:: 0.B

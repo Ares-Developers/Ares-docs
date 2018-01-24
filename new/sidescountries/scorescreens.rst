@@ -1,6 +1,11 @@
 Score Screens and Themes
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. index::
+  Score Screens; Campaign screens
+  Interface; Campaign score screens
+  Themes; Separate over and under par themes
+
 Campaign
 --------
 
@@ -47,6 +52,11 @@ finished the mission in under par time.
 .. versionadded:: 0.7
 
 
+.. index::
+  Score Screens; Multiplayer screens
+  Interface; Multiplayer score screens
+  Themes; Separate win and lose themes
+
 Multiplayer
 -----------
 
@@ -84,6 +94,8 @@ played.
 
 .. versionadded:: 0.7
 
+
+.. index:: Interface; Graphical text banner
 
 Graphical Text Banner
 ---------------------

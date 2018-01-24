@@ -1,4 +1,7 @@
-.. index:: Armory; Infantry still inside a Hospital or Armory when it is destroyed/sold may go into limbo instead of emerging meaning that they still count towards the player's units. Now they will emerge.
+.. index::
+  Armory; Infantry still inside a Hospital or Armory may go into limbo
+  Hospital; Infantry still inside a Hospital or Armory may go into limbo
+  Tech Structures; Infantry still inside a Hospital or Armory may go into limbo
 
 ===========================================
 Infantry Lost In Special Function Buildings

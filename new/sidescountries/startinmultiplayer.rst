@@ -1,6 +1,10 @@
 Start in Multiplayer
 ~~~~~~~~~~~~~~~~~~~~
 
+.. index::
+  Countries; Starting infantry and vehicles for multiplayer games
+  Multiplayer; Starting infantry and vehicles
+
 Starting Units
 --------------
 
@@ -15,6 +19,8 @@ Starting Units
 
 .. versionadded:: 0.D
 
+
+.. index:: Multiplayer; Cost for one "unit" for calculating starting units
 
 Fixed Global Unit Cost
 ----------------------
@@ -31,6 +37,11 @@ multiplied by this.
 
 .. versionadded:: 0.D
 
+
+.. index::
+  Countries; Start multiplayer games with a Construction Yard
+  Multiplayer; Start games with a Construction Yard
+  Construction Yards; Start with one in multiplayer games
 
 Pre-Deployed MCV
 ----------------

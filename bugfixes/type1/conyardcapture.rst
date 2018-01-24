@@ -1,3 +1,5 @@
+.. index:: Crashes; Capturing a Construction Yard
+
 ===============================
 Construction Yard Capture Crash
 ===============================

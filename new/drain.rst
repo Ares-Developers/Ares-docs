@@ -1,3 +1,8 @@
+.. index::
+  Drain; Only drain the local power plant
+  Drain; Amount of power drained
+  Weapons; Drain weapons only drain local power or custom amount
+
 Drain Weapon Options
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -33,8 +38,5 @@ With :tag:`Drain.Amount=-1000` on the disk, it will drain 1000, with
 If the building would have :value:`Drain.Amount=-600`, it would never drain less
 than 600. If the building had :tag:`Drain.Amount=800`, it would never drain more
 than 800.
-
-.. index:: Drain; Drain only the local power plant.
-.. index:: Drain; Drain a customizable amount of power.
 
 .. versionadded:: 0.6

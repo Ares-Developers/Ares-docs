@@ -1,4 +1,6 @@
-.. index:: Mutation; Stuck mutation animations are deleted (thus preventing a memory leak).
+.. index::
+  Mutation; Stuck mutation animations are removed
+  Coding; Stuck mutation animations leak memory
 
 =======================================================
 Frozen Mutation (:captiontag:`MakeInfantry`) Animations

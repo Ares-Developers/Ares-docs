@@ -1,3 +1,8 @@
+.. index::
+  single: Infantry; Tiberian Fiends
+  Doggie; Tiberian Fiends
+  Universe; Tiberian Fiends
+
 Tiberian Fiends
 ~~~~~~~~~~~~~~~
 
@@ -16,7 +21,5 @@ players to be overrun by Tiberian Fiends without retaliating automatically.
   badly hurt, and being easily aggravated. Requires :tag:`Crawls=yes`, otherwise
   the unit will not sit down on Tiberium, as well as :tag:`NotHuman=yes` to not
   show human death animations when killed. Defaults to :value:`no`.
-
-.. index:: InfantryTypes; Tiberian Fiends restored, Doggie
 
 .. versionadded:: 0.8

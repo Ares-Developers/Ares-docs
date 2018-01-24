@@ -1,3 +1,7 @@
+.. index::
+  Buildings; Appear solid (like walls) to certain projectiles
+  Projectiles; Solid buildings
+
 Solid Buildings
 ~~~~~~~~~~~~~~~
 
@@ -25,9 +29,6 @@ through allied buildings to destroy them. Open gates are never considered solid.
   trying to shoot at a target behind it, just like walls. If the gate is closed,
   it will take damage when units try to hit a target behind it, but when it is
   open, the projectiles will pass. 
-
-.. index:: Buildings; Buildings can be made solid (like walls) to certain
-  projectiles.
 
 .. versionadded:: 0.1
 .. versionchanged:: 0.A

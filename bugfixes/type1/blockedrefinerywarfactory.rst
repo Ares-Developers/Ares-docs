@@ -1,4 +1,6 @@
-.. index:: Exploit; No longer possible to block enemy refineries and war facs
+.. index::
+  Exploits; No longer possible to block enemy refineries and war factories
+  Bugs; Enemy could block refineries and war factories
 
 ===========================================
 Blocking Enemy Refineries and War Factories

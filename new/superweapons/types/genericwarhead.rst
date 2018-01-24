@@ -1,3 +1,5 @@
+.. index:: Super Weapons; Detonate any warhead at target cell
+
 :captiontag:`Type=GenericWarhead`
 `````````````````````````````````
 
@@ -19,8 +21,5 @@ Default values for general tags:
 Don't forget that the :type:`BuildingType` will need :tag:`DamageSelf=yes` set
 (just like the Soviet Nuclear Missile Silo) if you want the warhead to be
 capable of damaging the firing building.
-
-.. index:: Super Weapons; New super weapon type: GenericWarhead (detonate any
-  warhead at target cell).
 
 .. versionadded:: 0.1

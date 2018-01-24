@@ -1,4 +1,6 @@
-.. index:: Temporal; Temporal warheads won't gain twice the experience any more.
+.. index::
+  Temporal; Temporal warheads won't gain twice the experience anymore
+  Bugs; Temporal warheads gained twice the experience
 
 ======================================================
 :captiontag:`Temporal` Warheads Gain Double Experience

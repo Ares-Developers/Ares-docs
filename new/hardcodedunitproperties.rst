@@ -8,6 +8,8 @@ Hard-coded properties of Cows and Desolators can be toggled on/off for any
 infantry.
 
 
+.. index:: Infantry; Move around randomly like a cow
+
 :captiontag:`IsCow`
 ```````````````````
 
@@ -19,10 +21,10 @@ the :tag:`[COW]`.
 :tagdef:`[InfantryType]IsCow=boolean`
   Defaults to :value:`yes` for :tag:`[COW]`, otherwise to :value:`no`.
 
-.. index:: Infantry; Define whether an InfantryType behaves like a cow.
-
 .. versionadded:: 0.1
 
+
+.. index:: Infantry;Desolator special handling
 
 :captiontag:`IsDesolator`
 `````````````````````````
@@ -35,7 +37,5 @@ now set :tag:`IsDesolator=yes` on other :type:`InfantryTypes` or, indeed,
 
 :tagdef:`[InfantryType]IsDesolator=boolean`
   Defaults to :value:`yes` for :tag:`[DESO]`, otherwise to :value:`no`.
-
-.. index:: Infantry; Enable or disable the Desolator special handling.
 
 .. versionadded:: 0.1

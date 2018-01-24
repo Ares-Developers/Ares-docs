@@ -1,3 +1,6 @@
+.. index:: Secret Labs; Boons per building
+.. index:: Buildings; Secret Lab boons
+
 Secret Labs
 ~~~~~~~~~~~
 
@@ -42,9 +45,6 @@ country if the Secret Lab is captured later on.
 :tagdef:`[Boon]SecretLab.ForbiddenHouses=list of countries`
   Specifies which countries are not allowed to get this unit as a Secret Lab
   boon. Defaults to none.
-
-.. index:: BuildingTypes; Per-building secret lab boons.
-.. index:: BuildingTypes; Secret Lab options.
 
 .. versionadded:: 0.1
 .. versionchanged:: 0.9

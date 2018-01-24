@@ -1,3 +1,5 @@
+.. index:: Interface; Change menu button functions
+
 Menu Button Customization
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -56,7 +58,5 @@ Examples:
 + You can tell the player of your team if you define
   :tag:`ViewCreditsButton=message` and set the string
   :value:`TXT_VIEWCREDITSBUTTON_MSG` to your short copyright message.
-
-.. index:: Interface; Menu button customization.
 
 .. versionadded:: 0.2

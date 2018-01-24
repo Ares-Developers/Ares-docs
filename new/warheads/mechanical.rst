@@ -1,3 +1,7 @@
+.. index::
+  Warheads; Mechanics and ambulances
+  Universe; Mechanics and ambulances
+
 Mechanical and Organic Warheads
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -15,7 +19,5 @@ keys, which allows units to enter damaged transporters.
 .. note:: Aircraft docked on a helipad or airport cannot be repaired by
   vehicles. This mimics the original behavior. This limitation has not been
   recreated for infantry. This might be changed in the future.
-
-.. index:: Warheads; Mechanics and Ambulances
 
 .. versionadded:: 0.D

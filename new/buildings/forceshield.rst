@@ -1,3 +1,7 @@
+.. index::
+  Force Shield; Effect duration per building
+  Buildings; Force Shield effect duration
+
 Force Shield
 ~~~~~~~~~~~~
 
@@ -11,8 +15,6 @@ Like the Iron Curtain the Force Shield duration can be customized for each
 
   .. note:: Buildings with a :tag:`ForceShield.Modifier` value of :value:`0.0`
     or less are not eligible to fire a Force Shield super weapon on.
-
-.. index:: Force Shield; Modify the duration per building.
 
 .. versionadded:: 0.6
 .. versionchanged:: 0.8

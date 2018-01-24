@@ -1,3 +1,5 @@
+.. index:: Super Weapons; Message list texts as alternative to EVA events
+
 Messages
 ````````
 

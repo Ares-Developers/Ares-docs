@@ -1,3 +1,7 @@
+.. index::
+  Super Weapons; EVA events
+  EVA; Super Weapons events
+
 EVA Events
 ``````````
 
@@ -21,8 +25,6 @@ EVA Events
   in the sidebar and the player is required to select a target.
 
 To disable an EVA event, use the value :value:`none`.
-
-.. index:: Super Weapons; Custom EVA events.
 
 .. versionadded:: 0.1
 .. versionchanged:: 0.4

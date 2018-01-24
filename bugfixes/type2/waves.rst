@@ -1,4 +1,6 @@
-.. index:: Weapons; Wave issues (IsLaser, IsBigLaser, IsSonic, IsMagBeam)
+.. index::
+  Weapons; IsMagBeam wave will disconnect when target moves out of range
+  Waves; IsMagBeam will disconnect when target moves out of range
 
 ================================================
 :captiontag:`IsMagBeam` Waves and Moving Targets
@@ -15,6 +17,10 @@ out of range.
 .. versionadded:: 0.B
 
 
+.. index::
+  Weapons; IsSonic wave will not dissolve before reaching its target
+  Waves; IsSonic will not dissolve before reaching its target
+
 ================================================
 :captiontag:`IsSonic` Waves and Hardcoded Ranges
 ================================================
@@ -28,6 +34,10 @@ In :game:`Ares` this has been changed to use the weapon's actual range.
 
 .. versionadded:: 0.B
 
+
+.. index::
+  Weapons; IsLaser and IsBigLaser waves will always draw
+  Waves; IsLaser and IsBigLaser will always draw
 
 =========================================================================
 :captiontag:`IsLaser` and :captiontag:`IsBigLaser` on Lower Detail Levels

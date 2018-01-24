@@ -1,6 +1,10 @@
 :captiontag:`CellSpread` Enhancements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. index::
+  Warheads; CellSpread supports larger values
+  CellSpread; Support larger values
+
 :captiontag:`CellSpread`
 ------------------------
 
@@ -18,10 +22,12 @@ have been updated to support this as well.
   quadrupled. For performance reasons it is not advised to use :tag:`CellSpread`
   for frequent or map wide effects.
 
-.. index:: Warheads; CellSpread supports larger values.
-
 .. versionadded:: 0.6
 
+
+.. index::
+  Warheads; Limit how often CellSpread hits the same object
+  CellSpread; Limit how often the same object is hit
 
 :captiontag:`CellSpread` Hit Limit
 ----------------------------------
@@ -39,7 +45,5 @@ impact site are used, all others are discarded.
   The number of times an object can be affected at most when hit by a warhead
   using :tag:`CellSpread`. Set this to :value:`1` to make the same object not be
   hit not more than once. Defaults to :value:`-1` (infinite).
-
-.. index:: Warheads; Limit how often CellSpread hits the same object.
 
 .. versionadded:: 0.6

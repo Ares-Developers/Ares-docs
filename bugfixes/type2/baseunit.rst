@@ -1,4 +1,4 @@
-.. index:: Sides; BaseUnit can now hold more than 3 vehicles.
+.. index:: Sides; BaseUnit can now hold more than 3 vehicles
 
 ======================
 :captiontag:`BaseUnit`

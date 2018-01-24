@@ -1,3 +1,7 @@
+.. index:: 
+  Super Weapons; Give or take money when firing
+  Super Weapons; Drain money while active
+
 Cost
 ````
 
@@ -20,8 +24,6 @@ is grayed out.
   After this many frames the credits defined in :tag:`Money.DrainAmount=` are
   added to the firing player's account when a :tag:`UseChargeDrain=yes` super
   weapon is active. Defaults to :value:`0`.
-
-.. index:: Super Weapons; Money deductable when firing a superweapon.
 
 .. versionadded:: 0.1
 .. versionchanged:: 0.4

@@ -1,3 +1,8 @@
+.. index:: Random Map Generator; Place urban areas
+.. index:: Random Map Generator; Bridges over rivers
+.. index:: Random Map Generator; New terrain style: Archipelago
+.. index:: Random Map Generator; New tileset: Desert
+
 Random Map Generator
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -27,10 +32,5 @@ after :tag:`Structures=`, :tag:`Vehicles=` and :tag:`Infantry=` respectively:
   investigated. In addition, there are reports of this feature not working at
   all with certain settings. (Known issue: `#794
   <http://bugs.renegadeprojects.com/view.php?id=794>`_)
-
-.. index:: Random Map Generator; Place Urban Areas option.
-.. index:: Random Map Generator; Bridges over rivers.
-.. index:: Random Map Generator; New terrain style: Archipelago.
-.. index:: Random Map Generator; New tileset: Desert.
 
 .. versionadded:: 0.1

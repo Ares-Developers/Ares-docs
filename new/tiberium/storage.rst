@@ -1,3 +1,8 @@
+.. index::
+  Tiberium; Storage logic has been restored on refineries
+  Refineries; Storage logic has been restored
+  Storage; Refineries and silos can store Tiberium
+
 Storage and Silos
 `````````````````
 
@@ -14,8 +19,6 @@ money would be placed on the map, which would create tiberium out of nothing.
 .. warning:: Storage on undeployable refineries like the Slave Miner is not
   supported. Slave Miners cannot provide storage space, because it is lost
   whenever the building undeploys.
-
-.. index: Refineries; Storage logic has been restored.
 
 .. versionadded:: 0.5
 
@@ -59,6 +62,10 @@ Complimentary to the EVA event it is possible to show a test message.
 .. versionadded:: 0.9
 
 
+.. index::
+  Tiberium; PipScale for contained Tiberium
+  Pips; PipScale=Tiberium
+
 :captiontag:`PipScale=Tiberium`
 -------------------------------
 
@@ -72,7 +79,5 @@ To enable :tag:`PipScale=Tiberium` on buildings with :tag:`Refinery=yes` or
 :tag:`Refinery.UseStorage=yes`. This requirement was added because otherwise the
 original game would show the tiberium scale for the unmodded refineries, which
 have :tag:`PipScale=Tiberium` and valid :tag:`Storage` defined.
-
-.. index: Pips; PipScale=Tiberium
 
 .. versionadded:: 0.5

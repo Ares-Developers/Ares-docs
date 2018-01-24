@@ -1,3 +1,8 @@
+.. index::
+  Occupiers; Buildings that can't be assaulted
+  Assaulter; Different levels of protection
+  Buildings; Protect occupants against assault
+
 Assaulter
 ~~~~~~~~~
 
@@ -12,7 +17,5 @@ specially protected buildings.
 
 .. note:: Buildings with :tag:`Assaulter.Level` < :value:`0` are not
   assaultable.
-
-.. index:: Occupiers; Customize Assaulter logic
 
 .. versionadded:: 0.A

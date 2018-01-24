@@ -1,4 +1,6 @@
-.. index:: Veterancy; Units that start veteran as a country-specific bonus will now have veteran build icons.
+.. index::
+  Veterancy; Units being built as veteran will now have veteran build icons
+  Cameos; Units being built as veteran will now have veteran build icons
 
 ======================
 Initial Veteran Cameos

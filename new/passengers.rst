@@ -1,3 +1,7 @@
+.. index::
+  Passengers; Allow only specific passenger types in transports
+  Transports; Allow only specific passenger types
+
 Specific Passengers
 ~~~~~~~~~~~~~~~~~~~
 
@@ -13,7 +17,5 @@ supported on :type:`VehicleTypes` and :type:`AircraftTypes`.
 
 :tagdef:`[TechnoType]Passengers.Disallowed=list of TechnoTypes`
   The list of types that are not allowed to enter this object.
-
-.. index:: Passengers; Allow only specific passenger types
 
 .. versionadded:: 0.A

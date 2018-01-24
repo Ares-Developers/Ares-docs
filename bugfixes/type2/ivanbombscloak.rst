@@ -1,4 +1,4 @@
-.. index:: Ivan Bombs; Ivan Bombs will not damage cloaked Ivans.
+.. index:: Ivan Bombs; Ivan Bombs will not damage cloaked Ivans
 
 ============================
 Ivan Bombs and Cloaked Ivans

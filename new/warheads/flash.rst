@@ -1,3 +1,5 @@
+.. index:: Warheads; Flashing effect
+
 Flashing
 ````````
 
@@ -12,7 +14,5 @@ to indicate a unit being repaired or healed (:value:`7` frames) or promoted. In
 :tagdef:`[Warhead]Flash.Duration=integer - frames`
   If positive, the victim hit by this warhead will flash for the specified
   amount of frames. Defaults to :value:`0`.
-
-.. index:: Warheads; Flashing effect
 
 .. versionadded:: 0.E

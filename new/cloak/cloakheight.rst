@@ -1,3 +1,5 @@
+.. index: Cloak; Units hovering above the ground
+
 Cloaking and Units Above Ground
 ```````````````````````````````
 
@@ -16,7 +18,5 @@ their height is below this value:
   Defaults to :tag:`[General]HoverHeight`.
   
   .. note:: \ :game:`Yuri's Revenge` defaulted to :value:`0`.
-
-.. index: Cloak; Support for units hovering above the ground.
 
 .. versionadded:: 0.5

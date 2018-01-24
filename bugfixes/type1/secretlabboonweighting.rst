@@ -1,4 +1,6 @@
-.. index:: Secret Labs; Secret lab boons are picked truly at random.
+.. index::
+  Secret Labs; Boons are picked truly at random
+  Bugs; Secret Lab boon selection bias
 
 =========================
 Secret Lab Boon Weighting

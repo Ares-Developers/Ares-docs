@@ -1,4 +1,4 @@
-.. index:: Overpowering; Vehicles can overpower buildings.
+.. index:: Overpowering; Vehicles can overpower buildings
 
 ============================
 Units overpowering buildings

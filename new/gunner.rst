@@ -7,6 +7,10 @@ customization for modders, this logic added in :game:`Red Alert 2` was rather
 rigidly hardcoded internally. :game:`Ares` changes this.
 
 
+.. index::
+  Units; Multiple IFVs
+  Gunner; Multiple IFVs
+
 Multiple IFVs
 ~~~~~~~~~~~~~
 
@@ -15,10 +19,13 @@ weapon flags, such as :tag:`SniperTurretIndex`. With :game:`Ares`, all
 :type:`VehicleTypes` with :tag:`Gunner=yes` set will read those flags. This
 means that you can now have multiple types of IFV.
 
-.. index:: Units; IFV clones
-
 .. versionadded:: 0.1
 
+
+.. index::
+  Units; More than 18 weapons and turrets
+  Weapons; More than 18 weapons and turrets
+  Turrets; More than 18 weapons and turrets
 
 More Turrets and Weapons
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -31,10 +38,12 @@ Also, units having multiple turrets enabled by the use of :tag:`TurretCount`
 have been expanded to support more than 18 weapons along with their elite
 counterparts, thus more than 18 different :tag:`IFVMode`\ s are now possible.
 
-.. index:: Units; More than 18 weapons and turrets
-
 .. versionadded:: 0.E
 
+
+.. index::
+  Units; More IFV Modes
+  Gunner; More than 18 IFV Modes
 
 Defining IFV Modes
 ~~~~~~~~~~~~~~~~~~
@@ -73,10 +82,12 @@ passenger type's name and the transport's name.
   :value:`X` is active. :value:`X` is the number from :value:`1` to
   :tag:`WeaponCount`. If not set, defaults to the original behavior.
 
-.. index:: Units; More IFV Modes
-
 .. versionadded:: 0.E
 
+
+.. index::
+  Units; VoiceIFVRepair per IFV unit
+  Gunner; VoiceIFVRepair per unit
 
 :captiontag:`VoiceIFVRepair`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -88,7 +99,5 @@ In :game:`Ares` you can specify the :tag:`VoiceIFVRepair` tag on any IFV unit.
   this value is not set, :tag:`[VehicleType]VoiceAttack` is used. Defaults to 
   :tag:`[AudioVisual]VoiceIFVRepair` for :tag:`[FV]`, otherwise to
   :value:`none`.
-
-.. index:: Units; VoiceIFVRepair can be specified on any IFV unit.
 
 .. versionadded:: 0.2

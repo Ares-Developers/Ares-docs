@@ -1,3 +1,7 @@
+.. index::
+  Drop Pods; Locomotor
+  Locomotors; Drop Pod
+
 Drop Pods
 ~~~~~~~~~
 
@@ -5,11 +9,13 @@ These are the collected settings that apply to the Drop Pod locomotor in general
 and the :doc:`Drop Pod super weapon </new/superweapons/types/droppod>`
 specifically.
 
-.. index:: Drop Pods; Locomotor
-
 .. versionadded:: 0.7
 
 
+.. index::
+  Drop Pods; Trailer animation
+  Art; Drop Pod trailer animation
+ 
 Trailer
 -------
 
@@ -22,6 +28,10 @@ Pod does not have a :tag:`[General]DropPodWeapon` set.
   The animation used as smoke trailer for Drop Pods. Defaults to
   :value:`SMOKEY`.
 
+
+.. index::
+  Drop Pods; Super weapon defaults
+  Super Weapons; Drop Pod global defaults
 
 Global Super Weapon Defaults
 ----------------------------

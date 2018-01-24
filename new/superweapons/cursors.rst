@@ -1,3 +1,7 @@
+.. index::
+  Super Weapons; Custom cursors
+  Cursors; Super weapon cursors
+
 Cursors
 ```````
 
@@ -14,8 +18,6 @@ to define them.
   location. This may be because the selected target is not of the required type
   or its owner is not allowed, or the target is out of range, or there is no
   designator nearby. Defaults to :value:`Disallowed`, if not stated otherwise.
-
-.. index:: Super Weapons; Custom Cursors.
 
 .. versionadded:: 0.1
 .. versionchanged:: 0.D

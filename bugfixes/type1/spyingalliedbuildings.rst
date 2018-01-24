@@ -1,4 +1,7 @@
-.. index:: Spy behaviour; Bonuses won't be granted when infiltrating allied buildings.
+.. index::
+  Spies; Bonuses won't be granted when infiltrating allied buildings
+  Exploits; Infiltrating allied buildings with a spy grants bonuses
+  Bugs; Spies could infiltrate allied buildings and grant bonuses
 
 ==========================
 Spying on Allied Buildings

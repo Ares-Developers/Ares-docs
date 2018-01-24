@@ -1,4 +1,6 @@
-.. index:: Shipyards; Units being repaired are no longer immune to damage.
+.. index::
+  Shipyards; Units being repaired are no longer immune to damage
+  Bugs; Ships being repaired by a Shipyard are immune to damage
 
 ======================================================
 Units Being Repaired on Shipyards are Immune to Damage

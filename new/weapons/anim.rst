@@ -1,3 +1,7 @@
+.. index::
+  Weapons; Muzzle flashes for more than 8 facings
+  Facings; Weapon muzzle flashes
+
 :captiontag:`Anim` for Facings
 ``````````````````````````````
 
@@ -12,7 +16,5 @@ direction.
 
 Fewer than 8 defined animations will result in only the first animation being
 used.
-
-.. index:: Weapons; Muzzle flashes for more than 8 facings
 
 .. versionadded:: 0.9

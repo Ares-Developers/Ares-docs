@@ -1,3 +1,5 @@
+.. index:: Tiberium; Technos can lose tiberium on destruction
+
 Tiberium Spill
 ``````````````
 
@@ -16,7 +18,5 @@ building.
 Units like Harvesters and Slaves can spill up to 9 bails of the first resource
 from the :type:`Tiberiums` list depending on fill state, but not more than the
 unit's :tag:`Storage`.
-
-.. index: Tiberium; Technos can lose tiberium on destruction.
 
 .. versionadded:: 0.5

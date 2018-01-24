@@ -1,4 +1,4 @@
-.. index:: AI; Control over AI's multiple factory-cloning behaviour.
+.. index:: AI; Control over AI's multiple factory-cloning behavior
 
 =================================
 Multiple AI Factories Clone Units
@@ -12,6 +12,9 @@ build. This behavior can be disabled in :game:`Ares`, by the following flag:
 
 :tagdef:`[GlobalControls]AllowParallelAIQueues=boolean`
 	Set this to no to disable AI factory cloning. Defaults to :value:`yes`.
+
+
+.. index:: AI; Force AI to respect BuildLimit
 
 =======================================================
 AI ignores :captiontag:`BuildLimit` when creating teams

@@ -1,4 +1,6 @@
-.. index:: DestroyAnim; DestroyAnims don't cause reconnection errors anymore.
+.. index::
+  DestroyAnim; Don't cause Reconnection Errors
+  Reconnection Errors; DestroyAnim
 
 ======================================================
 :captiontag:`DestroyAnim`\ s Cause Reconnection Errors

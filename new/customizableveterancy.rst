@@ -8,10 +8,10 @@ experience. Mind that an open-topped vehicle in the unmodified game also could
 promote its passengers (but without the mind-control check) if it had
 :tag:`Trainable=no` set.
 
-.. index:: Veterancy; Veterancy options for Passengers, Airstrike and Mind-Control.
-
 .. versionadded:: 0.2
 
+
+.. index:: Veterancy; Experience from passengers
 
 From Passengers
 ```````````````
@@ -31,6 +31,11 @@ From Passengers
   If a kill gets credited to a passenger, the experience gain is multiplied by
   this value. Defaults to :value:`100%`.
 
+
+.. index::
+  Veterancy; Experience from airstrikes
+  Airstrikes; Give experience to designator
+
 From Airstrikes
 ```````````````
 
@@ -42,6 +47,11 @@ From Airstrikes
   If :tag:`Experience.FromAircraft=yes` is set on the designator of an airstrike
   (like Boris), the experience gain is multiplied by this value. Defaults to
   :value:`100%`.
+
+
+.. index::
+  Veterancy; Experience from mind control
+  Mind Control; Give experience to mind-controller
 
 From Mind-Controlled
 ````````````````````
@@ -63,6 +73,11 @@ Mind-controlled open-topped vehicles will not gain any experience from their
 passengers if the mind-controller's and the open-topped's players aren't allied.
 Mind-controllers will not gain experience from killing enemies with a captured
 allied unit.
+
+
+.. index::
+  Veterancy; Experience from spawns
+  Spawns; Give experience to spawners
 
 From Spawns
 ```````````

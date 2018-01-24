@@ -1,3 +1,7 @@
+.. index:
+  TechnoTypes; Consider many different types as one for type selection
+  Type Select; Consider many different TechnoTypes as one
+
 Type Selection Groups
 `````````````````````
 
@@ -29,7 +33,5 @@ types are modified in maps and it doesn't crash.
   .. note:: If you set this to :value:`no`, Slave Miners, Tick Tanks and the
     like will differentiate between their deployed and undeployed forms. You
     will have to manually set :tag:`GroupAs` on the groups you want to keep.
-
-.. index: Type Select; Consider many different types as one.
 
 .. versionadded:: 0.5

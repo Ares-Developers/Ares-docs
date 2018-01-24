@@ -1,3 +1,7 @@
+.. index::
+  Assaulter; Game mixed up assaulter and occupants
+  Occupiers; Attacker and victim mixed up when using Assaulter logic
+
 ==============================
 :captiontag:`Assaulter` Mix Up
 ==============================

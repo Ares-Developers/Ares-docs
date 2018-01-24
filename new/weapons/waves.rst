@@ -1,6 +1,10 @@
 Waves
 ~~~~~
 
+.. index::
+  Weapons; IsLaser and IsBigLaser wave effect
+  Waves; IsLaser and IsBigLaser effect
+
 Wave Effects
 ------------
 
@@ -23,14 +27,16 @@ below, left unit is using :tag:`Wave.IsLaser`, the right one is using
   :alt: Effects of Wave.Is(Big)Laser
   :align: center
 
-.. index:: Enabled unused IsLaser wave effect.
-
 .. versionadded:: 0.1
 
 The following flags are applicable to all Wave effects; the aforementioned
 :tag:`Wave.Is(Big)Laser=yes` as well as :tag:`IsSonic=yes` and
 :tag:`IsMagBeam=yes`.
 
+
+.. index::
+  Weapons; Wave colors
+  Waves; Colors
 
 Wave Coloring
 -------------
@@ -44,10 +50,12 @@ Wave Coloring
   
 .. warning:: Sonic Waves do not yet have a sensible default :tag:`Wave.Color`.
 
-.. index:: Waves can have custom colors.
-
 .. versionadded:: 0.1
 
+
+.. index::
+  Weapons; Wave drawing direction
+  Waves; Direction the wave is drawn in
 
 Wave Direction
 --------------
@@ -75,10 +83,12 @@ unless otherwise specified.
   anything not covered by the other :tag:`ReverseAgainst` flags (i.e. trees,
   overlays, empty cells, etc.). 
 
-.. index:: Customisable wave direction.
-
 .. versionadded:: 0.1
 
+
+.. index::
+  Weapons; Wave ambient damage
+  Waves; Ambient damage for all types
 
 Wave Ambient Damage
 -------------------

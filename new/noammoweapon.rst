@@ -1,3 +1,7 @@
+.. index::
+  Weapons; Switch to other weapon if ammo is empty
+  TechnoTypes; Switch to other weapon if ammo is empty
+
 :captiontag:`NoAmmoWeapon`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -24,7 +28,5 @@ a weapon that requires ammo.
 :tagdef:`[TechnoType]NoAmmoAmount=integer`
   If the current ammo is equal to or below this value, the :tag:`NoAmmoWeapon`
   will be used. Defaults to :value:`0`.
-
-.. index:: Weapons; Switch to other weapon if ammo is empty
 
 .. versionadded:: 0.C

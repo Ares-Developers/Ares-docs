@@ -1,4 +1,6 @@
-.. index:: Exploit; Open-Topped vehicles could jam defensive structures
+.. index::
+  OpenTopped; Jamming defensive structures
+  Exploits; OpenTopped vehicles could jam defensive structures
 
 =====================================================
 Open-Topped Vehicles and Defensive Structures Exploit

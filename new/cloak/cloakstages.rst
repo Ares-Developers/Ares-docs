@@ -1,3 +1,5 @@
+.. index: Cloak; Cloaking stages
+
 Cloaking Stages
 ```````````````
 
@@ -7,7 +9,5 @@ instead of just having one global value.
 :tagdef:`[TechnoType]Cloakable.Stages=integer`
   The number of cloaking stages this techno will go through when cloaking or
   decloaking. Defaults to :tag:`[General]CloakingStages`.
-
-.. index: Cloak; Customizable cloaking stages.
 
 .. versionadded:: 0.5

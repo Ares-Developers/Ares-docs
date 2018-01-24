@@ -1,3 +1,8 @@
+.. index::
+  Pips; User-defined pips
+  TechnoTypes; User-defined pips
+  Infantry; User-defined pip and occupy pip
+
 Pips
 ~~~~
 
@@ -20,7 +25,5 @@ If the value is neither a known name nor an integer, a parsing error is put into
 
   .. note:: If the tag is read as integer and the value is out of bounds, no
     error is logged in :file:`debug.log`. 
-
-.. index:: Pips; User-defined pips.
 
 .. versionadded:: 0.4

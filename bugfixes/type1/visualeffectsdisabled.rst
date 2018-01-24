@@ -1,4 +1,6 @@
-.. index:: Visual Effects; Visual Effects turning off on slower game speeds
+.. index::
+  Visual Effects; Effects being turned off on slower game speeds without need
+  Bugs; Visual Effects turning off on slower game speeds
 
 =======================================
 Visual Effects Switched Off Erratically

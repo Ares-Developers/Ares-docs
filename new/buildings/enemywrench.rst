@@ -1,3 +1,5 @@
+.. index:: Buildings; Repair wrench not visible for enemies
+
 Enemy Wrench
 ~~~~~~~~~~~~
 
@@ -12,7 +14,5 @@ wrench animation appearing when a player click repairs a structure.
 
   .. note:: The wrench animation will not show if a building is being attacked
     by a temporal weapon or an enemy building is cloaked.
-
-.. index:: BuildingTypes; Repair wrench not visible for enemies
 
 .. versionadded:: 0.8

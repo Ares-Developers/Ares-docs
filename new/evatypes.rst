@@ -1,3 +1,5 @@
+.. index:: EVA; Create new EVA announcers
+
 EVA Types
 ~~~~~~~~~
 
@@ -27,7 +29,5 @@ you don't specify a filename for an EVA Type, no sound will play.
 
 Now you are ready to use this new EVA Type. See :ref:`EVA.Tag for Sides
 <sides-evatag>`.
-
-.. index:: EVA Types; Create new EVA announcers.
 
 .. versionadded:: 0.4

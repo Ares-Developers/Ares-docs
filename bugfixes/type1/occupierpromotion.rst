@@ -1,3 +1,7 @@
+.. index::
+  Occupiers; Promotion while inside the building
+  Changes; Occupiers will be promoted without leaving buildings
+
 ==================================================
 Occupiers Are Promoted Only After Exiting Building
 ==================================================

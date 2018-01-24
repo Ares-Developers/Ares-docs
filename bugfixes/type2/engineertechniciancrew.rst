@@ -1,5 +1,6 @@
-.. index:: Engineer, Crew; Crew with Engineer=yes causes infinite loop.
-.. index:: Crew; Undefined crew causes crash.
+.. index::
+  Engineer; Crew with Engineer=yes causes infinite loop
+  Crew; Crew with Engineer=yes causes infinite loop
 
 ==========================================================
 Crew with :captiontag:`Engineer=yes` could freeze the game
@@ -13,6 +14,11 @@ If there are only crew types (set in :tag:`AlliedCrew=`, :tag:`Technician=`,
 and the game will freeze.
 
 .. versionadded:: 0.3
+
+
+.. index::
+  single: Crew; Undefined Technician, Engineer, or Crew causes crash
+  single: Crashes; Undefined Technician, Engineer, or Crew causes crash
 
 ============================================================================================
 Crash with undefined :captiontag:`Engineer`, :captiontag:`Technician` and :captiontag:`Crew`

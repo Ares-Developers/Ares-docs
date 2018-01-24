@@ -1,3 +1,5 @@
+.. index:: Crashes; Loose pips files in game's folder causes crash exit
+
 ==========================
 Crash with Loose SHP Files
 ==========================

@@ -12,6 +12,8 @@ tables.
 .. versionadded:: 0.1
 
 
+.. index:: String Tables; NOSTR prefix
+
 NOSTR Prefix
 ````````````
 
@@ -20,21 +22,20 @@ string table entry) by using the :value:`NOSTR:` prefix. For example,
 :tag:`UIName=NOSTR:Sonar Pulse` will be displayed as "Sonar Pulse". However, the
 string (including the prefix) cannot exceed 31 characters.
 
-.. index:: String Tables; Object names can be written directly into rulesmd.ini
-  rather than adding them to the string table.
-
 .. versionadded:: 0.1
 
+
+.. index:: String Tables; Maximum number of strings increased.
 
 Maximum Number of Strings
 `````````````````````````
 
 The maximum number of strings in the string table has been increased to 20000.
 
-.. index:: String Tables; Maximum number of strings increased to 20000.
-
 .. versionadded:: 0.2
 
+
+.. index:: String Tables; Language-neutral string tables
 
 Language-Neutral String Tables
 ``````````````````````````````
@@ -46,7 +47,5 @@ main string table :file:`ra2md.csf` is.
 
 If your string table editor does not support setting the language manually, use
 a hex editor to set the four bytes starting at offset 0x14 directly.
-
-.. index:: String Tables; Language-neutral string tables
 
 .. versionadded:: 0.A

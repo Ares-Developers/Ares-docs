@@ -1,6 +1,8 @@
 Mouse Cursors
 ~~~~~~~~~~~~~
 
+.. index:: Mouse Cursors; Defining a cursor
+
 Defining Cursors
 ================
 
@@ -46,10 +48,12 @@ comma-separated values as follows:
     \ :value:`12345` by either :value:`Center` or :value:`Middle`, and
     \ :value:`54321` by either :value:`Right` or :value:`Bottom`.
 
-.. index:: Mouse Cursors; Defining a Cursor
-
 .. versionadded:: 0.D
 
+
+.. index::
+  Mouse Cursors; List of default cursors
+  Mouse Cursors; New intrinsic named cursors
 
 Default Cursors
 ===============

@@ -1,3 +1,7 @@
+.. index::
+  Super Weapons; Overlay texts for cameos
+  Cameos; Overlay texts for super weapons
+
 Cameo Overlay Texts
 ```````````````````
 

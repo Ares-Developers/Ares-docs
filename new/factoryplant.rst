@@ -1,3 +1,7 @@
+.. index::
+  Factory Plant; Modify the effect
+  Buildings; Modifiable FactoryPlants effect
+
 Factory Plant Effect
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -19,7 +23,5 @@ An example: If the cost bonus is :value:`0.6` and the multiplier is
 :value:`0.5`, then the final bonus will be :value:`0.8`. In other words: if a
 bonus reduces the cost to 60% and the multiplier only grants half of that, the
 final price will be at 80% of the original cost.
-
-.. index:: Factory Plant; Modify the effect of Industrial Plants
 
 .. versionadded:: 0.C

@@ -1,8 +1,9 @@
-.. index:: BuildLimit; Vehicles that deploy into a building now count towards the BuildLimit of that building and vice versa.
-
-.. index:: BuildLimit; Hijackers inside vehicles now count towards that hijacker's BuildLimit.
-
-.. index:: BuildLimit; AirportBound aircraft did not respect BuildLimit.
+.. index::
+  BuildLimit; Vehicles that deploy into a building now count towards the BuildLimit of that building and vice versa
+  BuildLimit; Hijackers inside vehicles now count towards that hijacker's BuildLimit
+  BuildLimit; AirportBound aircraft did not respect BuildLimit
+  Vehicle Thief; Hijackers inside vehicles now count towards that hijacker's BuildLimit
+  Aircraft; AirportBound aircraft did not respect BuildLimit
 
 ============================================================
 Unit Instances Not Counting Towards :captiontag:`BuildLimit`

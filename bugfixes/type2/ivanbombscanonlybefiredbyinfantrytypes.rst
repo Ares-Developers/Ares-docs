@@ -1,4 +1,4 @@
-.. index:: Ivan Bombs; Ivan bombs can be fired by any unit (instead of just infantry).
+.. index:: Ivan Bombs; Ivan bombs can be fired by any unit (instead of just infantry)
 
 =====================================================
 Ivan Bombs Can Only Be Fired By :type:`InfantryTypes`

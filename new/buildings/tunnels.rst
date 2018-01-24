@@ -1,3 +1,8 @@
+.. index::
+  Buildings; Tunnel network entrances
+  Tunnels; Tunnel Networks
+  Universe; Tunnel Networks
+
 Tunnel Networks
 ~~~~~~~~~~~~~~~
 
@@ -65,7 +70,5 @@ Example:
     ; Civilian Tunnel Entrance Building
     [CATNNL]
     Tunnel=CivilianTunnel
-
-.. index:: Buildings; Tunnel Networks
 
 .. versionadded:: 0.E

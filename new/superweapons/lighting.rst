@@ -1,3 +1,5 @@
+.. index:: Super Weapons; Lighting
+
 Lighting
 ````````
 

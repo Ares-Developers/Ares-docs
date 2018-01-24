@@ -1,3 +1,8 @@
+.. index::
+  Operators; Vehicles and buildings need an operator (driver) before they will function
+  Buildings; Require an operator before it will function
+  Vehicles; Require a driver before it will function
+
 Operator
 ~~~~~~~~
 
@@ -57,8 +62,5 @@ Mirage Tanks without their Operator will still maintain their disguise.
 .. note:: The AI behaves unpredictably when faced with units that require
   Operators and may not be subject to certain effects. You should prevent the
   AI from building anything that requires an Operator.
-
-.. index:: Operators; Vehicles and buildings can be made to require an operator (driver)
-  before they will function.
 
 .. versionadded:: 0.1

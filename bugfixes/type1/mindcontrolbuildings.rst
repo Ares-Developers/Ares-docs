@@ -1,4 +1,6 @@
-.. index:: Mind Control; Mind-controlled buildings won't stop working.
+.. index::
+  Mind Control; Mind-controlled buildings won't stop working anymore
+  Bugs; Mind-controlled buildings stop working
 
 ====================================================
 Mind-Controlled Buildings Stopped Working When Freed

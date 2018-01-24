@@ -1,9 +1,14 @@
+.. index:: Spawners; Support cloaking spawners
+
 Spawners
 ~~~~~~~~
 
 Spawners have been enhanced to support cloak. A cloaking Destroyer or Aircraft
 Carrier will not cause all its spawns to self-destruct any more. Spawners now
 have rudimentary support for :tag:`BalloonHover=yes`.
+
+
+.. index:: Spawners; Flying Aircraft Carriers
 
 Flying Aircraft Carriers
 ------------------------
@@ -25,7 +30,5 @@ going up to the carrier.
 .. note:: Please note that this logics still has some shortcomings and it has
   many opportunities for improvements. For example, move sounds do not work
   correctly once a spawn has launched once.
-
-.. index:: Spawners; Flying Aircraft Carriers
 
 .. versionadded:: 0.6

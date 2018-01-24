@@ -1,4 +1,4 @@
-.. index:: Actions; SellUnit super weapon no longer causes IEs with Tank Bunker.
+.. index:: Super Weapons; SellUnit super weapon no longer causes IEs with Tank Bunker
 
 =============================
 :captiontag:`Action=SellUnit`

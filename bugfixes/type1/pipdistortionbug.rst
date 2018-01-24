@@ -1,4 +1,6 @@
-.. index:: Pips; Pip distortion bug resolved
+.. index::
+  Pips; Pip distortion bug resolved
+  Glitches; Wrong pips being used unexpectedly
 
 ==================
 Pip Distortion Bug

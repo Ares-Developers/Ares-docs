@@ -1,3 +1,7 @@
+.. index::
+  Hunter Seeker; How to set up
+  Universe; Hunter Seekers
+
 Hunter Seeker
 ~~~~~~~~~~~~~
 
@@ -8,10 +12,12 @@ the :doc:`Hunter Seeker super weapon </new/superweapons/types/hunterseeker>`.
 Refer to `ModEnc <http://modenc.renegadeprojects.com/HunterSeeker>`_ for
 more information about Hunter Seeker's movement and targeting logic.
 
-.. index:: Hunter Seeker; How to set up
-
 .. versionadded:: 0.7
 
+
+.. index::
+  Super Weapons; Hunter Seeker global settings
+  Vehicles; Hunter Seeker settings
 
 Global Settings
 ---------------
@@ -70,6 +76,11 @@ makes use of these values.
 :tagdef:`[VehicleType]HunterSeeker.EmergeSpeed=integer`
   Speed value used when ascending from the launch site. Defaults to
   :tag:`[General]HunterSeekerEmergeSpeed`.
+
+
+.. index::
+  Hunter Seeker; Make units untargetable
+  TechnoTypes; Disallow targeting by Hunter Seeker
 
 Disallow Targeting
 ------------------

@@ -1,3 +1,5 @@
+.. index:: Spies; Multiple effects on a single building
+
 Spy Behavior
 ~~~~~~~~~~~~
 
@@ -17,9 +19,9 @@ All of the following flags default to :value:`no` or :value:`0`.
 .. note:: Must be set to :value:`yes` for any of the following effects to
   work...
 
-.. index:: Spy behaviour; Multiple effects can be achieved on a single building.
 
 
+.. index:: Spies; Show what the enemy can see
 
 Radar
 `````
@@ -38,9 +40,9 @@ Radar
   captured. Otherwise the spy effect is removed. Requires
   :tag:`SpyEffect.RevealRadar=yes` and a :tag:`Radar=yes` building.
 
-.. index Spy behaviour; New effect: Reveal radar (shows you what the enemy can see).
 
 
+.. index:: Spies; Create power outage
 
 Power
 `````
@@ -49,9 +51,9 @@ Power
   The number of frames for which the enemy's power will be sabotaged (i.e.
   temporarily reduced to zero).
 
-.. index:: Spy behaviour; Per-building power outage duration.
 
 
+.. index:: Spies; Steal fixed amount or percentage of money
 
 Money
 `````
@@ -69,12 +71,11 @@ Money
   enemy upon spying this enemy building. Only has an effect if
   :tag:`SpyEffect.StolenMoneyAmount=0`.
 
-.. index:: Spy behaviour; New effect: Steal money amount (steals a set amount of
-  money rather than a percentage).
-  
-.. index:: Spy behaviour; Per-building steal money percentage.
 
 
+.. index::
+  Spies; Reset all super weapons a building provides
+  Spies; Grant one-time or permanent super weapon
 
 Super Weapons
 `````````````
@@ -84,8 +85,6 @@ Super Weapons
   attached to it (:tag:`SuperWeapon`, :tag:`SuperWeapon2`, :tag:`SuperWeapons`
   and all super weapons on attached upgrades) to have their countdown timers
   restarted.
-
-.. index:: Spy behaviour; Reset all super weapons provided by a building
 
 
 The following tags can be used to grant super weapons like the Sonar Pulse in
@@ -105,11 +104,11 @@ The following tags can be used to grant super weapons like the Sonar Pulse in
 
 .. versionadded:: 0.B
 
-.. index:: Spy behaviour; Grant one-time or permanent super weapon
-
 
 
 .. _`spybehavior-stolentech`:
+
+.. index:: Spies; Grant multiple stolen techs
 
 Stolen Technology
 `````````````````
@@ -145,11 +144,11 @@ tech 2.
   then those buildings will no longer satisfy the old :tag:`RequiresStolen*Tech`
   flags.
 
-.. index:: Spy behaviour; New effect: Stolen tech index (multiple new stolen techs).
-
 .. versionchanged:: 0.B
 
 
+
+.. index:: Spies; Build vehicles or train infantry as veteran
 
 Veterancy
 `````````
@@ -169,6 +168,8 @@ Veterancy
 
 
 .. _`spybehavior-revealproduction`:
+
+.. index:: single: Spies; Reveal production, money, or power
 
 Intelligence
 ````````````
@@ -195,11 +196,11 @@ Intelligence
   :alt: Screenshot of a current production being revealed
   :align: center
 
-.. index:: Spy behaviour; New effect: Reveal production, money or power
-
 .. versionchanged:: 0.B
 
 
+
+.. index:: single: Spies; Reset all reverse engineered build options
 
 Reverse Engineering
 ```````````````````
@@ -209,6 +210,8 @@ engineering, see :doc:`/new/reverseengineerlogic`.
 
 
 
+.. index:: single: Spies; Demolish infiltrated building
+
 Sabotage
 ````````
 
@@ -216,7 +219,5 @@ Sabotage
   The number of frames after which the building will be demolished as if C4 had
   been planted. If negative, :tag:`[CombatDamage]C4Delay` is used. Use
   :value:`0` to disable. Defaults to :value:`0`.
-
-.. index:: Spy behaviour; Demolish infiltrated building
 
 .. versionadded:: 0.E

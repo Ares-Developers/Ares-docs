@@ -1,3 +1,7 @@
+.. index::
+  CanPassiveAquire; Units hold fire in guard mode
+  Universe; Stealth Tanks hold fire in guard mode
+
 :captiontag:`CanPassiveAquire` Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -40,7 +44,5 @@ ability or picked up a cloak crate.
 
 .. note:: Also note the spelling of both tags. :game:`Ares` keeps the spelling
   error of :tag:`CanPassiveAquire` to stay consistent.
-
-.. index:: CanPassiveAquire; Units hold fire in guard mode
 
 .. versionadded:: 0.A

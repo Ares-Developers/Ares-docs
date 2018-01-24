@@ -1,4 +1,6 @@
-.. index:: Super Weapons; Multiplayer option affecting campaigns
+.. index::
+  Super Weapons; Multiplayer option affecting campaigns
+  Bugs; Super Weapons multiplayer option affects campaigns
 
 ======================================
 Super Weapon Option Affected Campaigns

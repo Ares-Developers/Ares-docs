@@ -1,4 +1,4 @@
-.. index:: Slaves; Slaves change ownership if their enslaving unit does.
+.. index:: Slaves; Slaves change ownership if their enslaving unit does
 
 ==================================================
 Slaves Change Ownership If Enslaver Switches Sides

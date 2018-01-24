@@ -1,3 +1,7 @@
+.. index::
+  Crush; OmniCrusher=yes without aggressive auto-crushing
+  TechnoType; OmniCrusher=yes without aggressive auto-crushing
+
 :captiontag:`OmniCrusher` Enhancements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -16,7 +20,5 @@ tanks, and is then lured into an ambush and overpowered itself.
 
   .. note:: Only supported if :tag:`OmniCrusher=yes` is set. The default might
     change in a later version.
-
-.. index:: Crush; OmniCrusher=yes without aggressive auto-crushing
 
 .. versionadded:: 0.A

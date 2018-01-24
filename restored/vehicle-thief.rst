@@ -1,3 +1,5 @@
+.. index:: Infantry; VehicleThief logic without workarounds
+
 =============
 Vehicle Thief
 =============
@@ -8,7 +10,5 @@ With :game:`Ares` you can create vehicle thieves like the Mutant Hijacker from
 for some customization the original game didn't support.
 
 See the :doc:`/new/hijackers` section for details.
-
-.. index:: Infantry; VehicleThief logic without workarounds.
 
 .. versionadded:: 0.2

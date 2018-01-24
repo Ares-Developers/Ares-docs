@@ -1,4 +1,4 @@
-.. index:: Theaters; Alternate Theater Art for all BuildingTypes regardless of first letter.
+.. index:: Theaters; Alternate Theater Art for all BuildingTypes regardless of first letter
 
 ===============================================
 Alternate Theater Art For :type:`BuildingTypes`

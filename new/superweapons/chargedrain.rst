@@ -1,5 +1,7 @@
 .. _charge-drain-sw:
 
+.. index:: Super Weapons; Charge to drain ratio for each super weapon
+
 Charge/Drain Super Weapons
 ``````````````````````````
 
@@ -18,7 +20,5 @@ only apply for super weapons with :tag:`UseChargeDrain=yes` set.
 .. note:: Note that :tag:`UseChargeDrain` is supported for the Firewall super
   weapon only. Using it along with any other super weapon types it will lead to
   unexpected results.
-
-.. index:: Super Weapons; Customizable charge to drain ratio for each superweapon.
 
 .. versionadded:: 0.2

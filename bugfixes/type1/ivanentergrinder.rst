@@ -1,4 +1,6 @@
-.. index:: Crazy Ivan; Ivan cannot enter a Grinder without bombing it first.
+.. index::
+  Ivan Bombs; Ivan cannot enter a Grinder without bombing it first
+  Bugs; Ivan and Grinders don't work well together
 
 =================================
 Crazy Ivans Cannot Enter Grinders

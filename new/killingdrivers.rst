@@ -1,3 +1,8 @@
+.. index::
+  Kill Driver; Neutralize vehicles
+  Warheads; Kill the driver of a vehicle
+  Universe; Kill drivers like Jarmen Kell or neutron rounds
+
 Killing Drivers
 ~~~~~~~~~~~~~~~
 
@@ -5,8 +10,6 @@ Requested as a `"Jarmen Kell" functionality
 <http://bugs.renegadeprojects.com/view.php?id=733>`_, this feature allows
 specific warheads to kill the driver of a vehicle instead of damaging
 it, and allows others to take over the now-neutral vehicle.
-
-.. index:: Warheads; Warheads can be set to kill the driver of a vehicle, instead of damaging it.
 
 .. versionadded:: 0.2
 
@@ -38,6 +41,10 @@ abilities, :tag:`AffectsAllies`, and :tag:`AffectsEnemies`.
 
 .. _killingdrivers-immunity:
 
+.. index::
+  Kill Driver; Protect drivers of vehicles
+  TechnoTypes; Driver can't be killed
+
 Protected Drivers
 -----------------
 
@@ -62,6 +69,10 @@ that :tag:`ProtectedDriver.MinHealth` is no longer checked), but not against
 damage or other special warhead effects.
 
 
+.. index::
+  Kill Driver; Reclaim vehicles
+  Infantry; Capture units that had their drivers killed
+
 Reclaim Vehicles
 ----------------
 
@@ -85,6 +96,3 @@ their driver killed.
   problems.
 
 See :doc:`/new/hijackers` for more options that relate to :tag:`CanDrive`.
-
-.. index:: Infantry; Capture units that had their drivers killed.
-

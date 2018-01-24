@@ -1,3 +1,7 @@
+.. index::
+  Terrain; Forest fires
+  Universe; Forest fires
+
 Forest Fires
 ~~~~~~~~~~~~
 
@@ -18,7 +22,5 @@ three valid animations as :tag:`[AudioVisual]OnFire` and two valid animations as
 
 .. note:: If trees are not burning down, make sure that the animation used as
   \ :tag:`[AudioVisual]SmallFire` has :tag:`Scorch=no` set.
-
-.. index:: Terrain; Forest Fires
 
 .. versionadded:: 0.8

@@ -1,4 +1,6 @@
-.. index:: Hijackers; Hijackers are reimbursed when a unit is grinded.
+.. index::
+  Vehicle Thief; Hijackers are reimbursed when a unit is grinded
+  Grinders; Hijackers are reimbursed when a unit is grinded
 
 ===============================================
 Hijackers are reimbursed when a unit is grinded

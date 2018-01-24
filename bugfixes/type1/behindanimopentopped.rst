@@ -1,4 +1,6 @@
-.. index:: OpenTopped; Behind anim showing for OpenTopped passengers.
+.. index::
+  OpenTopped; Behind anim showing for OpenTopped passengers
+  Bugs; Passengers of OpenTopped vehicles also show a Behind anim
 
 =================================================================
 :captiontag:`Behind` Anim and :captiontag:`OpenTopped` Transports

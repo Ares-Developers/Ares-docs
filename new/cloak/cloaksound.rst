@@ -1,3 +1,5 @@
+.. index: Cloak; Cloak and decloak sounds
+
 Cloak Sounds
 ````````````
 
@@ -19,7 +21,5 @@ the unit cloaks itself or whether it is cloaked by a Cloak Generator.
 :tagdef:`[TechnoType]DecloakSound=Sound`
   The sound played when this object decloaks or emerges. Defaults to
   \ :tag:`[AudioVisual]DecloakSound`.
-
-.. index: Cloak; Customizable cloak and decloak sounds.
 
 .. versionadded:: 0.5

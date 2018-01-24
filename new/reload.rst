@@ -1,3 +1,7 @@
+.. index::
+  Ammo; Reload and empty reload amounts
+  TechnoTypes; Reload and empty reload amounts
+
 :captiontag:`ReloadAmount` and :captiontag:`EmptyReloadAmount`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -16,7 +20,5 @@ This logic is not supported on :type:`AircraftTypes`.
   The number of rounds restored after reload interval when there is no ammo
   left. If :value:`0` or negative, the unit will not reload. This does not
   require :tag:`EmptyReload` to be set. Defaults to :tag:`ReloadAmount`.
-
-.. index:: Ammo; Customizable reload and empty reload amounts
 
 .. versionadded:: 0.B

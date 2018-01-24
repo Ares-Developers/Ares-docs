@@ -1,3 +1,5 @@
+.. index:: Warheads; Disable weapons temporarily
+
 Disable Weapons
 ```````````````
 
@@ -10,7 +12,5 @@ like C4 are not disabled.
 :tagdef:`[Warhead]DisableWeapons.Duration=integer - frames`
   If positive, the target hit by this warhead will be unable to fire for this
   amount of frames. Defaults to :value:`0`.
-
-.. index:: Warheads; Disable Weapons
 
 .. versionadded:: 0.E

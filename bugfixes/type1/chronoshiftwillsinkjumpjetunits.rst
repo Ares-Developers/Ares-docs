@@ -1,4 +1,4 @@
-.. index:: Jumpjets; Jumpjet units will sink when chronoshifted into water.
+.. index:: Jumpjets; Jumpjet units will sink when chronoshifted into water
 
 ===================================
 Chronoshift Will Sink Jumpjet Units

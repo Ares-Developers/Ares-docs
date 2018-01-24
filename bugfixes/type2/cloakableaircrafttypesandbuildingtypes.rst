@@ -1,4 +1,4 @@
-.. index:: Cloak; AircraftTypes and BuildingTypes can now be cloakable.
+.. index:: Cloak; AircraftTypes and BuildingTypes can now be cloakable
 
 =========================================================
 Cloakable :type:`AircraftTypes` and :type:`BuildingTypes`

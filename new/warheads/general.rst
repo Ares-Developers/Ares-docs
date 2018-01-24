@@ -1,6 +1,8 @@
 General Settings
 ~~~~~~~~~~~~~~~~
 
+.. index:: Warheads; AffectsEnemies= added as counterpart for AffectsAllies=
+
 :captiontag:`AffectsEnemies`
 ````````````````````````````
 
@@ -9,10 +11,12 @@ General Settings
   effect on the warhead's ability to target enemy units. A counterpart to the
   existing :tag:`AffectsAllies` flag.
 
-.. index:: AffectsEnemies= flag added (counterpart for AffectsAllies=).
-
 .. versionadded:: 0.1
 
+
+.. index::
+  Warheads; Suppress EVA's "Ore miner under attack" warnings
+  EVA; Suppress "Ore miner under attack" warnings per warhead
 
 Non-Malicious Warheads
 ``````````````````````
@@ -23,9 +27,6 @@ Non-Malicious Warheads
   example, if a warhead's purpose is to spread ore dealing damage as a side
   effect only you can use :tag:`Malicious=no` to disable unreasonable EVA attack
   warnings for ore miners. Defaults to :value:`yes`.
-
-.. index:: Warheads; Malicious= warhead flag suppresses EVA's *ore miner under
-  attack* warnings.
 
 .. versionadded:: 0.2
 

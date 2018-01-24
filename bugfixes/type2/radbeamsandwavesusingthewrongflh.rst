@@ -1,4 +1,6 @@
-.. index:: Weapons; RadBeams and waves will use the correct FLH (instead of always using PrimaryFLH).
+.. index::
+  Weapons; RadBeams and waves will use the correct FLH (instead of always using PrimaryFLH)
+  Changes; RadBeams and waves will use the correct FLH (instead of always using PrimaryFLH)
 
 ======================================
 RadBeams And Waves Using The Wrong FLH

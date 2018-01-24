@@ -1,4 +1,6 @@
-.. index:: Airstrikes; Summoned Airstrikes are no longer dependent on the SovParaDropInf tag.
+.. index::
+  Airstrikes; No longer depend on the SovParaDropInf tag
+  Super Weapons; SovParaDropInf no longer affects airstrikes
 
 =======================================================================
 Summoned Airstrikes no longer dependent on :captiontag:`SovParaDropInf`

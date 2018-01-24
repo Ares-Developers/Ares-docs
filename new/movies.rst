@@ -1,3 +1,5 @@
+.. index:: Movies; Add new movies to the game
+
 Movies List
 ~~~~~~~~~~~
 
@@ -38,7 +40,5 @@ Example:
     
     [BRIEF01]
     Description=Name:MissionName01
-
-.. index:: Movies; Add new movies to the game
 
 .. versionadded:: 0.E

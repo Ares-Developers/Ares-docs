@@ -1,4 +1,6 @@
-.. index:: Upgrades; Building upgrades can now be used as prerequisites.
+.. index::
+  Prerequisites; Building upgrades qualify as prerequisites
+  Upgrades; Building upgrades can now be used as prerequisites
 
 ==========================================================
 :type:`BuildingType` Upgrades Are Not Viable Prerequisites

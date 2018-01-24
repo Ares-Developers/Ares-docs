@@ -1,4 +1,6 @@
-.. index:: Super Weapons; Several super weapon cursor animations enabled.
+.. index::
+  Super Weapons; Several default Super Weapon cursor animations enabled
+  Glitches; Some Super Weapon cursors are not animated
 
 ============================
 Animated Super Weapon Cursor

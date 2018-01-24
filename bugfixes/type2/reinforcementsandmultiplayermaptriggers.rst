@@ -1,4 +1,6 @@
-.. index:: Map Triggers; Only existing players will receive reinforcements in multiplayer games through triggers.
+.. index::
+  Maps; Only existing players will receive reinforcements in multiplayer games through triggers
+  Triggers; Only existing players will receive reinforcements in multiplayer games through triggers
 
 ===========================================
 Reinforcements and Multiplayer Map Triggers

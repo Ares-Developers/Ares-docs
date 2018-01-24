@@ -1,3 +1,7 @@
+.. index::
+  Bounty; Rewards for killing enemies
+  TechnoTypes; Bounty awarded for killings
+
 Bounty
 ~~~~~~
 
@@ -46,7 +50,5 @@ destroyed by bounty hunters.
 :tagdef:`[TechnoType]Bounty.EliteValue=integer - credits`
   The amount rewarded as bounty if an object with this veterancy is destroyed.
   Can be negative to penalize the player. Defaults to :tag:`Bounty.Value`.
-
-.. index:: TechnoTypes; Bounty awarded for killings
 
 .. versionadded:: 0.C

@@ -1,6 +1,10 @@
 Factories and Cloning
 ~~~~~~~~~~~~~~~~~~~~~
 
+.. index::
+  Factories; Build units from certain factories only
+  Kennels; Build units from certain factories only
+
 Different factories for units (Kennels)
 ```````````````````````````````````````
 
@@ -22,6 +26,10 @@ Different factories for units (Kennels)
     the :tag:`[DOG]Prerequisite` to contain :tag:`[KENN]`.
 
 
+.. index::
+  Clone Facilities; Clone infantry and tanks
+  Factories; Clone infantry and tanks in clone facilities
+
 "Cloning Vats" for :type:`VehicleTypes`
 ```````````````````````````````````````
 
@@ -31,6 +39,11 @@ Different factories for units (Kennels)
   :tag:`ClonedAt=none`. This is the :type:`VehicleType` version of the Cloning
   Vats. Defaults to :value:`no`.
 
+
+.. index::
+  Clone Facilities; Cloning options per type
+  Vehicles; Clone from Clone Facilities
+  Infantry; Clone from Clone Facilities
 
 Cloning options
 ```````````````
@@ -52,10 +65,5 @@ Cloning options
 
   .. note:: If :tag:`ClonedAt` is specified, neither :tag:`Cloning=yes` nor
     \ :tag:`CloningFacility=yes` will clone the object.
-
-
-.. index:: Factories; Build units from certain factories only.
-
-.. index:: Factories; Clone infantry and tanks in clone facilities.
 
 .. versionadded:: 0.2

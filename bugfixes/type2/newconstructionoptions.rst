@@ -1,4 +1,6 @@
-.. index:: EVA; "New construction options" no longer announced if player does not have the correct factory type for a unit or does not own a building through Owner.
+.. index::
+  EVA; "New construction options" no longer announced erratically
+  Bugs; "New construction options" (NCO) no longer announced erratically
 
 ========================
 New Construction Options

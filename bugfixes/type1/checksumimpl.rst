@@ -1,3 +1,5 @@
+.. index:: Coding; Out of bounds array access when hashing
+
 ================================
 Checksummer Implementation Error
 ================================

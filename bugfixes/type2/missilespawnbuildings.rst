@@ -1,3 +1,5 @@
+.. index:: Spawns; MissileSpawn on buildings
+
 =======================================
 :captiontag:`MissileSpawn` on Buildings
 =======================================

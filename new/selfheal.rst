@@ -1,3 +1,8 @@
+.. index::
+  single: Self Heal; Rate, heal amount, and max level
+  single: TechnoTypes; Self Heal rate, heal amount, and max level
+  Universe; Self Heal like Tiberian Dawn Mammoths
+
 Self Heal
 ~~~~~~~~~
 
@@ -40,8 +45,5 @@ of its health.
   The amount of hitpoints restored when self healing, depending on its
   veterancy level. These settings are fully independent of each other. Cannot be
   less than :value:`0`. Defaults to :tag:`SelfHealing.Amount`.
-
-.. index:: Self Heal; Customizable rate, heal amount, and max level
-.. index:: Self Heal; Tiberian Dawn Mammoths
 
 .. versionadded:: 0.B

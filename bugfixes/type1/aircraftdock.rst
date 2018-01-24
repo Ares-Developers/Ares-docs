@@ -1,4 +1,6 @@
-.. index:: Aircraft; Players can again manually select an aircraft's dock.
+.. index::
+  Aircraft; Players can again manually select an aircraft's dock
+  Bugs; Manually choosing a dock for an aircraft
 
 =============================================
 Aircraft Can Be Manually Docked to Structures

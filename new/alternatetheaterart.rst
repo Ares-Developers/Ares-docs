@@ -1,3 +1,7 @@
+.. index::
+  Art; AlternateTheaterArt for InfantryTypes supports all theaters
+  Theaters; AlternateTheaterArt for InfantryTypes supports all theaters
+
 :captiontag:`AlternateTheaterArt`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -19,7 +23,5 @@ only works for the arctic theater and only for :tag:`InfantryTypes`.
 .. note:: This only works for SHP-based units. Voxels do not use this system and
   cannot have theater-specific art (you'd have to use
   \ :tag:`Prerequisite.RequiredTheaters` to achieve that).
-
-.. index:: Art; AlternateTheaterArt for InfantryTypes supports all theaters.
 
 .. versionadded:: 0.2

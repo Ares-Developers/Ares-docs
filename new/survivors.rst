@@ -13,6 +13,10 @@ The following flags control the percent chance of a survivor being spawned, and
 the type of unit that that survivor will be.
 
 
+.. index::
+  single: TechnoTypes; Crew, pilots, or survivors
+  Crew; Survivors per side
+
 Units and Buildings
 ```````````````````
 
@@ -36,6 +40,12 @@ Units and Buildings
     versions. If you want to eject :tag:`Technician` from units, you have to
     manually set :tag:`Crew.TechnicianChance`.
 
+
+.. index::
+  Vehicles; Chance for pilots and/or passengers to emerge when destroyed
+  Aircraft; Chance for pilots and/or passengers to emerge when destroyed
+  Passengers; Chance to survive when transport destroyed
+  Transports; Chance for pilots and/or passengers to survive when destroyed
 
 Unit-specific
 `````````````
@@ -85,10 +95,13 @@ Spawned pilots will be spawned with 50% of their maximum health and the same
 amount of experience as the destroyed unit had. Passengers will emerge with both
 their health and their experience unchanged.
 
-.. index:: Percent chance for pilots and/or passengers to emerge/parachute from destroyed vehicles/aircraft.
-
 .. versionadded:: 0.1
 
+
+.. index::
+  Crew; Customizable building crew
+  Crew; Engineer spawn chance for buildings
+  Engineer; Spawn chance for building crew
 
 Building-specific
 `````````````````
@@ -104,8 +117,5 @@ survivors is halved. At least one survivor is spawned, but no more than five.
   crew member. If the building has been captured, engineers are not allowed to
   be spawned regardless of this setting. Defaults to :value:`25` if
   :tag:`Factory=BuildingType`, to :value:`0` otherwise.
-
-.. index:: Crew; Customizable buiding crew.
-.. index:: Crew; Engineer spawn chance for buildings.
 
 .. versionadded:: 0.5

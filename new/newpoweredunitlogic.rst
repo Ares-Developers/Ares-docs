@@ -1,3 +1,7 @@
+.. index::
+  Powered Unit; Multiple powered units like the Robot Tank
+  TechnoTypes; Alternative to PowersUnit
+
 New Powered Unit Logic
 ~~~~~~~~~~~~~~~~~~~~~~
 

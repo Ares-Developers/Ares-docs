@@ -1,6 +1,8 @@
 Particles
 ~~~~~~~~~
 
+.. index:: single: Particles; Optimizations for Spark, Railgun, and Smoke
+
 Optimizations
 -------------
 
@@ -27,11 +29,11 @@ matching is still possible.
 The game's existing particles have been optimized also, and even if the
 optimization is not applied, particles will be handled more efficiently.
 
-.. index:: Particles; Optimizations for Pixel Particles
-
 .. versionadded:: 0.C
 .. versionchanged:: 0.D
 
+
+.. index:: Particles; Damage range for Gas
 
 Damage Range for Gas Particles
 ------------------------------
@@ -45,10 +47,10 @@ matter how big the particle's image was. :game:`Ares` allows customizing this.
   particle is on are affected. Each object is affected at most once. Defaults to
   :value:`0.0`.
 
-.. index:: Particles; Customize Damage Range for Gas Particles
-
 .. versionadded:: 0.C
 
+
+.. index:: single: Particles; Palettes for Gas, Smoke, and Fire
 
 Custom Palettes for Shape Particles
 -----------------------------------
@@ -60,7 +62,5 @@ using a custom palette.
 :tagdef:`[ParticleType]Palette=filename with .pal extension`
   The palette used to draw an image particle of this type. Defaults to
   :value:`ANIM.PAL`.
-
-.. index:: Particles; Custom Palette for Shape Particles
 
 .. versionadded:: 0.C

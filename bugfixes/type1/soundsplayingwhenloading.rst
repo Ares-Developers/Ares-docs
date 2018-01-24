@@ -1,3 +1,6 @@
+.. index::
+  Glitches; Robot Tank sounds played while starting a new match
+
 ===================================
 Robot Tank Sounds On Loading Screen
 ===================================

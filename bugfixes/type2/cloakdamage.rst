@@ -1,3 +1,5 @@
+.. index:: Cloak; Units don't uncloak if they aren't affected by a warhead
+
 ===============================================
 Cloaked Objects no Longer Uncloak if Unaffected
 ===============================================

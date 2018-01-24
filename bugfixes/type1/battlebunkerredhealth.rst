@@ -1,4 +1,6 @@
-.. index:: Battle Bunkers; Infantry can enter Battle Bunkers even in red health.
+.. index::
+  Bunkers; Infantry can enter Bunkers even in red health
+  Bugs; Infantry is not allowed to enter Bunkers in red health
 
 ==================================================
 Infantry Cannot Enter Battle Bunkers in Red Health

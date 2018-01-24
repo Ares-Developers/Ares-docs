@@ -1,4 +1,6 @@
-.. index:: Temporal; Temporal warheads no longer gain experience when used against allies.
+.. index::
+  Temporal; No longer give experience when used against allies
+  Exploits; Temporal warheads give experience when erasing allies
 
 =========================================================================
 :captiontag:`Temporal` Warheads Earn Experience By Killing Friendly Units

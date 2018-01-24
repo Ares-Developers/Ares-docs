@@ -1,5 +1,7 @@
-LaserThickness
-~~~~~~~~~~~~~~
+.. index:: Weapons; Laser thickness
+
+:captiontag:`LaserThickness`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :tagdef:`[Weapon]LaserThickness=integer`
   Enables the customization of laser widths.

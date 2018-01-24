@@ -1,3 +1,5 @@
+.. index:: Buildings; Trivial Structure Damage in low power situations
+
 Trivial Structure Damage
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -53,7 +55,5 @@ By default, :tag:`MultiplayPassive=yes` houses are not affected.
 :tagdef:`[House]Degrades=boolean`
   Whether buildings owned by this country degrade in low power situations. Only
   supported in single player missions. Defaults to :tag:`[Country]Degrades`.
-
-.. index:: Structures; Trivial Structure Damage in low power situations
 
 .. versionadded:: 0.A

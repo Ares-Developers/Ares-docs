@@ -1,4 +1,8 @@
-.. index:: OpenTopped; OpenTopped Gunner vehicles support passengers with Temporal weapons
+.. index::
+  OpenTopped; OpenTopped Gunner vehicles support passengers with Temporal weapons
+  Gunner; OpenTopped Gunner vehicles support passengers with Temporal weapons
+  Temporal; OpenTopped Gunner vehicles support passengers with Temporal weapons
+  Transports; OpenTopped Gunner vehicles support passengers with Temporal weapons
 
 ===================================================================================
 :captiontag:`OpenTopped` :captiontag:`Gunner`\ s and :captiontag:`Temporal` weapons

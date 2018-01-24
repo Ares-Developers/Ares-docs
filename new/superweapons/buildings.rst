@@ -1,6 +1,10 @@
 Building Options
 ````````````````
 
+.. index::
+  Super Weapons; Unlimited super weapons on buildings
+  Buildings; Provide unlimited super weapons
+
 Multiple Super Weapons on a Building
 ------------------------------------
 
@@ -18,10 +22,10 @@ Multiple Super Weapons on a Building
     weapons. Note that :tag:`SuperWeapon` and :tag:`SuperWeapon2` are still
     considered special, and not all aspects of the logic have been expanded.
 
-.. index:: Super Weapons; Unlimited super weapons on buildings
-
 .. versionadded:: 0.9
 
+
+.. index:: Super Weapons; Building animations played correctly
 
 Building Animations
 -------------------
@@ -31,7 +35,5 @@ charging, is nearly charged (1 minute remaining in the normal game), is ready to
 be fired, and when it fires. However, in :game:`Yuri's Revenge`, these
 animations only work properly for the original super weapons. In :game:`Ares`,
 these will work for any super weapon. 
-
-.. index:: Super Weapons; Building animations played correctly for new super weapons.
 
 .. versionadded:: 0.1

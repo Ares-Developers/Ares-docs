@@ -1,6 +1,10 @@
 :captiontag:`Temporal`
 ``````````````````````
 
+.. index::
+  Warheads; WarpAway animation
+  Temporals; WarpAway animation per warhead
+
 Customizable :captiontag:`WarpAway`
 -----------------------------------
 
@@ -8,10 +12,12 @@ Customizable :captiontag:`WarpAway`
   If set, specifies the animation to be played when this warhead erases an
   object. Defaults to :tag:`[General]WarpAway`.
 
-.. index:: Warheads; Per-weapon WarpAway animation.
-
 .. versionadded:: 0.1
 
+
+.. index::
+  Warheads; Temporals consider health
+  Temporals; Consider victim's health
 
 Consider Health
 ---------------
@@ -26,7 +32,5 @@ Consider Health
   .. note:: Another way to look at it is that the remaining warp value is
     linearly decreased from full for completely healthy targets down by this
     value for a target that has no health left.
-
-.. index:: Warheads; Temporals consider health
 
 .. versionadded:: 0.D

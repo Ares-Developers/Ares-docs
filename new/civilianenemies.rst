@@ -7,6 +7,8 @@ The engine would not know how to deal with them, and this is what :game:`Ares`
 changes.
 
 
+.. index:: Civilians; Always treat as enemy
+
 Treat Civilians as Enemies
 --------------------------
 
@@ -21,10 +23,10 @@ neutral if they are :tag:`Insignificant=no`.
   Enabling this prevents a unit of this type to be considered neutral in
   multiplayer matches. Defaults to :value:`no`.
 
-.. index:: Civilians; Always treat as enemy
-
 .. versionadded:: 0.7
 
+
+.. index:: Civilians; Recognize and repel civilian threats
 
 Repelling Civilian Attacks
 --------------------------
@@ -48,7 +50,5 @@ in range, or alligators eating Engineers with armed bystanders just idling.
   enemy when auto-acquiring targets. This makes units nearby help protect
   against an offender. Otherwise, only the attacked unit retaliates. Defaults to
   :value:`no`.
-
-.. index:: Civilians; Recognize and repel civilian threats
 
 .. versionadded:: 0.7

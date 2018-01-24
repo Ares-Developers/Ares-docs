@@ -1,3 +1,7 @@
+.. index::
+  Crush; Crush damage when running over infantry or vehicles
+  Universe; Sardaukar dealing damage when crushed
+
 Crush Damage
 ~~~~~~~~~~~~
 
@@ -21,7 +25,5 @@ comes at a customizable cost.
 :tagdef:`[TechnoType]CrushDamage.Warhead=Warhead`
   The warhead used to deal crush damage when this unit is crushed. Defaults to
   :tag:`[General]C4Warhead`.
-
-.. index:: Crush; Crush damage when running over infantry or vehicles
 
 .. versionadded:: 0.A

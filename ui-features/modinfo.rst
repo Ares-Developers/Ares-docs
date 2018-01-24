@@ -1,3 +1,5 @@
+.. index:: Mods; Specify mod name and version
+
 Mod-specific Information
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -16,7 +18,5 @@ Both can be defined in :file:`uimd.ini`:
 :tagdef:`[VersionInfo]Version=string`
   The version of the modification in unspecified format. Maximum 63 characters.
   Defaults to :value:`1.001`.
-
-.. index:: Mods; Specify mod name and version
 
 .. versionadded:: 0.8

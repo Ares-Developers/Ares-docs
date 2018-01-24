@@ -1,3 +1,5 @@
+.. index:: Projectiles; BallisticScatter
+
 :captiontag:`BallisticScatter`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

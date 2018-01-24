@@ -1,4 +1,6 @@
-.. index:: Verses; Warhead verses special values (0%/1%/2%) should now apply their behavior consistently.
+.. index::
+  Verses; Warhead verses special values now apply their behavior consistently
+  Bugs; Warhead verses special values behavior inconsistency
 
 ============================================
 Warhead :captiontag:`Verses`' Special Values

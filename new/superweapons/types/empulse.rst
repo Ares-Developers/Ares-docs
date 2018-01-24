@@ -1,3 +1,5 @@
+.. index:: Universe; EMPulse cannons with limited range fired by super weapon
+
 :captiontag:`Type=EMPulse`
 ``````````````````````````
 

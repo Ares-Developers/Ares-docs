@@ -1,4 +1,6 @@
-.. index:: Parasites; Parasites that destroy an airborne unit will fall to the ground and be destroyed too.
+.. index::
+  Parasites; Fall to the ground after destroying an airborne unit
+  Changes; Parasites falling from airborne units will be destroyed too
 
 ===========================
 Parasites In Airborne Units
@@ -15,4 +17,3 @@ the impact.
   the ground like other parasites.
 
 .. versionadded:: 0.1
-

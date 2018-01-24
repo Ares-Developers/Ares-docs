@@ -4,6 +4,11 @@ Side Defaults
 These are the side defaults used instead of global tags.
 
 
+.. index::
+  single: Sides; Crew and survivor defaults
+  Crew; Defaults per side
+  Engineers; Defaults per side
+
 Crew, Survivors and Other Types
 -------------------------------
 
@@ -31,6 +36,10 @@ Crew, Survivors and Other Types
 .. versionchanged:: 0.5
 
 
+.. index::
+  Sides; AI and Base-Building
+  AI; Base defenses per side
+
 AI and Base-Building
 --------------------
 
@@ -45,6 +54,10 @@ AI and Base-Building
 
 .. versionadded:: 0.1
 
+
+.. index::
+  Sides; Paradrop defaults
+  Paradrops; Defaults per side
 
 Paradrop Defaults
 -----------------
@@ -75,10 +88,14 @@ Paradrop Defaults
 .. versionchanged:: 0.D
 
 
+.. _sides-hunterseeker:
+
+.. index::
+  Sides; Hunter Seekers defaults
+  Hunter Seekers; Defaults per side
+
 Hunter Seeker Defaults
 ----------------------
-
-.. _sides-hunterseeker:
 
 :tagdef:`[Side]HunterSeeker=VehicleType`
   The unit used as default Hunter Seeker for the Hunter Seeker super weapon.

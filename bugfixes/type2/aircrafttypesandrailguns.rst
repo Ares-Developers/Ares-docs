@@ -1,4 +1,4 @@
-.. index:: Aircrafts; AircraftTypes can now use railguns without causing Internal Errors.
+.. index:: Aircraft; Use railguns without causing Internal Errors
 
 ==================================
 :type:`AircraftTypes` and Railguns

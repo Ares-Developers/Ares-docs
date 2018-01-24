@@ -1,4 +1,6 @@
-.. index:: Super Weapons; Nuke super weapons can be overridden to use a sound other than DigSound for their siren.
+.. index::
+  Super Weapons; Nukes can be overridden to not use global DigSound for their siren
+  Subterranean; Nuke super weapons using DigSound for their siren
 
 ======================
 :captiontag:`DigSound`

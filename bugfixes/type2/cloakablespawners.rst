@@ -1,4 +1,4 @@
-.. index:: Cloak; Spawner units can be cloakable.
+.. index:: Cloak; Spawner units can be cloakable
 
 ==================
 Cloakable Spawners

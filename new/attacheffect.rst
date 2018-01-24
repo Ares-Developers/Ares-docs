@@ -1,3 +1,5 @@
+.. index:: Weapons; AttachEffect
+
 AttachEffect
 ~~~~~~~~~~~~
 
@@ -86,8 +88,6 @@ The following tags are valid on Warheads only:
 :tagdef:`[Warhead]AttachEffect.AnimResetOnReapply=boolean`
   If this type of AttachEffect is not stackable, enabling this flag resets the
   animation on every time of reapplying. Defaults to :value:`no`.
-
-.. index:: Weapons; AttachEffect
 
 .. versionadded:: 0.4
 .. versionchanged:: 0.E

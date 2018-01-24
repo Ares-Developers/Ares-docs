@@ -1,3 +1,8 @@
+.. index::
+  Cameos; PCX cameos for TechnoTypes and super weapons
+  TechnoTypes; PCX cameos
+  Super Weapons; PCX cameos
+
 PCX Cameos
 ~~~~~~~~~~
 
@@ -12,16 +17,12 @@ In :file:`artmd.ini`:
   Specifies the filename containing the unit's alternate (promoted) cameo, in
   the format "filename.pcx".
 
-.. index:: Cameos; PCX cameos for TechnoTypes.
-
 
 In :file:`rulesmd.ini`:
 
 :tagdef:`[SuperWeapon]SidebarPCX=filename, *including* the .pcx extension`
   Specifies the filename containing the superweapon's cameo, in the format
   "filename.pcx".
-
-.. index:: Cameos; PCX cameos for Superweapons.
 
 .. note:: Like other PCX files used by the game, the PCX files used for this
   feature *must* have 256 colors and dimensions of 60x48 pixels.

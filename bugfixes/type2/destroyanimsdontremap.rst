@@ -1,4 +1,6 @@
-.. index:: DestroyAnims; DestroyAnims can use remappable colors.
+.. index::
+  DestroyAnim; Can use remappable colors
+  Art; DestroyAnim can use remappable colors
 
 ========================================
 :captiontag:`DestroyAnim`\ s Don't Remap

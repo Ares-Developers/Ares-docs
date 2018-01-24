@@ -1,3 +1,5 @@
+.. index:: Aircraft; Smoke animation when damaged
+
 Aircraft Smoke
 ~~~~~~~~~~~~~~
 
@@ -17,7 +19,5 @@ Additionally, the smoke has been made customizable per :type:`AircraftType`.
 :tagdef:`[AircraftType]Smoke.ChanceDead=integer - percent`
   The chance of a crashing aircraft creating a smoke animation each frame.
   Defaults to :value:`80`.
-
-.. index:: Aircraft; Smoke animation
 
 .. versionadded:: 0.7

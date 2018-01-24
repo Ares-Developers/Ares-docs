@@ -1,4 +1,6 @@
-.. index:: Tech Structures; NeedsEngineer is honored when playing animations.
+.. index::
+  Tech Structures; NeedsEngineer is honored when playing animations
+  Glitches; Tech structures start to play active animations when damaged
 
 ==============================
 Tech Structures and Animations

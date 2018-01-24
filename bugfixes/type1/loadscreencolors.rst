@@ -1,4 +1,4 @@
-.. index:: Load Screens; Dedicated load screen text colors for each faction.
+.. index:: Load Screens; Separate load screen text colors for each faction
 
 ==================
 Load Screen Colors

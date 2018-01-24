@@ -1,3 +1,7 @@
+.. index::
+  Aircraft; Carryall settings to disallow certain cargo
+  Carryalls; Disallow cargo by type or by size
+
 Carryalls
 ~~~~~~~~~
 
@@ -31,7 +35,5 @@ customize this :doc:`Mouse Cursor </new/mousecursors>`.
   with :tag:`Naval=yes` set, but they cannot be placed back on water again. If a
   ship is placed on ground, it will explode and take the carryall with it. To
   prevent this, set :tag:`Carryall.Allowed=no` on the ship.
-
-.. index:: Aircraft; Carryall logic updated.
 
 .. versionadded:: 0.2

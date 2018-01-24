@@ -1,3 +1,5 @@
+.. index:: Interface; Campaign list
+
 Campaign List
 ~~~~~~~~~~~~~
 
@@ -40,8 +42,6 @@ You can customize the campaigns in the list by editing :file:`battlemd.ini`:
   Provide an optional summary of the campaign's or mission's story. It will be
   shown below the difficulty slider if not disabled using
   :tag:`[UISettings]ShowSummary`.
-
-.. index:: Interface; Campaign list
 
 .. versionadded:: 0.2
 .. versionchanged:: 0.9

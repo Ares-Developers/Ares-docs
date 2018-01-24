@@ -4,6 +4,8 @@ Targeting
 .. index:: Super Weapons; Customize valid targets.
 
 
+.. index:: Super Weapons; Auto-firing using AI rules
+
 General Settings
 ----------------
 
@@ -27,6 +29,9 @@ These settings allow enabling AI targeting even for human players.
 .. versionadded:: 0.2
 
 
+.. index::
+  Super Weapons; Fire into shroud made optional
+
 Manual Target Selection
 -----------------------
 
@@ -49,10 +54,13 @@ These settings only apply to human players.
 :tagdef:`[SuperWeapon]SW.RequiresHouse=enumeration none|owner|allies|team|enemies|all`
   Which house's items this super weapon can fire upon.
 
-.. index:: Super Weapons; FireIntoShroud optional.
-
 .. versionadded:: 0.2
 
+
+.. index::
+  Super Weapons; Automatic targeting rules
+  Super Weapons; List of AI Targeting Modes
+  AI; Super weapon target selection
 
 Automatic Target Selection
 --------------------------

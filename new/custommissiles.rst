@@ -1,3 +1,5 @@
+.. index:: Missiles; Add new and customize the original missile types
+
 Custom Missiles
 ~~~~~~~~~~~~~~~
 
@@ -5,8 +7,6 @@ Custom Missiles
 types (:tag:`V3RocketType`, :tag:`DMislType`, :tag:`CMislType`). Missiles are
 :type:`AircraftTypes` which have special logic attached to behave like a
 projectile launched from another unit and carrying a warhead to its target.
-
-.. index:: Missiles; Add new and customize the original missile types.
 
 .. versionadded:: 0.3
 .. versionchanged:: 0.A
@@ -103,6 +103,8 @@ Warheads and Damage
   an elite unit. Defaults to :value:`none`.
 
 
+.. index:: Missiles; Weapon instead of damage and warhead
+
 Alternatively Using Weapons
 ```````````````````````````
 
@@ -130,6 +132,10 @@ in case :tag:`Missile.EliteWeapon` is not set. :tag:`Missile.EliteDamage` and
   :tag:`Missile.EliteWarhead` are used to create the explosion. Defaults to
   :value:`none`.
 
+
+.. index::
+  Missiles; Trailer and take-off animations
+  Art; Trailer and take-off animations for missiles
 
 Trailer and Take-Off Animations
 ```````````````````````````````

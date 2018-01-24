@@ -7,6 +7,8 @@ hard-coded, unlike the standard Yuri's Revenge hotkeys (which use the string
 table).
 
 
+.. index:: Keyboard Commands; Save current map snapshot as YRM
+
 Map Snapshot
 ````````````
 
@@ -19,8 +21,6 @@ which can be edited in FinalAlert 2 YR.
 
 .. note:: This keyboard can be disabled in release versions of your mod. See
   \ :ref:`Disabling Keyboard Commands <disable-commands>`.
-
-.. index:: Keyboard Commands; Map snapshot command (saves a YRM map file of the current map).
 
 .. versionadded:: 0.1
 
@@ -37,6 +37,8 @@ A key can be assigned to toggle :file:`debug.log` writing on and off. See
 
 
 
+.. index:: single: Keyboard Commands; Dump type information to a log file, including AI trigger weights
+
 Type Data Dumping
 `````````````````
 
@@ -50,10 +52,10 @@ data will not be written to the file.
 .. note:: This keyboard can be disabled in release versions of your mod. See
   \ :ref:`Disabling Keyboard Commands <disable-commands>`.
 
-.. index:: Keyboard Commands; Type data dumping command (dump type information to a log file, including AI trigger weights).
-
 .. versionadded:: 0.1
 
+
+.. index:: Keyboard Commands; Dump what base the AI plans to build
 
 AI Base Plan Dumping
 ````````````````````
@@ -66,9 +68,6 @@ written to the file.
 
 .. note:: This keyboard can be disabled in release versions of your mod. See
   \ :ref:`Disabling Keyboard Commands <disable-commands>`.
-
-.. index:: Keyboard Commands; AI Base Plan data dumping command (see what the AI
-  plans to build).
 
 .. versionadded:: 0.1
 
@@ -88,6 +87,8 @@ Please refer to section :doc:`Command Line Arguments
 
 
 
+.. index:: Keyboard Commands; Show the current and the average frame rate on the screen
+
 FPS Counter
 ```````````
 
@@ -95,8 +96,6 @@ This keyboard command allows players to display the current frames per second
 the game processes, and their total average value. The text is displayed in
 white color in the left hand side lower corner of the screen. Pressing the key
 again hides the FPS Counter.
-
-.. index:: Keyboard Commands; Display the current and the average frame rate on the screen.
 
 .. versionadded:: 0.3
 
@@ -111,6 +110,8 @@ command. See :doc:`Toggle Power </new/buildings/togglepower>`.
 
 
 .. _`disable-commands`:
+
+.. index:: Keyboard Commands; Disable debugging commands for releases to public
 
 Disabling Keyboard Commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

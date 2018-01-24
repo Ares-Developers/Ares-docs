@@ -1,3 +1,5 @@
+.. index:: single: Super Weapons; Area of effect, affected houses and types, ...
+
 General properties
 ``````````````````
 

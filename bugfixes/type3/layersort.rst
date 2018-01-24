@@ -1,3 +1,5 @@
+.. index:: Performance; Replaced inefficient sorting
+
 ===================
 Inefficient Sorting
 ===================

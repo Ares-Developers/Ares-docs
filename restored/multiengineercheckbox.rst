@@ -1,3 +1,7 @@
+.. index::
+  Interface; Multi Engineer checkbox in Skirmish menu
+  Skirmish; Multi Engineer checkbox
+
 Multi Engineer Checkbox
 ~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -5,8 +9,6 @@ Multi Engineer Checkbox
 from the user interface. :game:`Ares` restores this feature. If the user turns
 off Multi Engineer in the skirmish menu, buildings can always be captured using
 an engineer, otherwise the settings in :file:`rulesmd.ini` are used.
-
-.. index:: Multi Engineer checkbox in Skirmish menu.
 
 .. image:: /images/multiengineer.png
   :alt: Screenshot of the skirmish menu with Multi-Engineer turned on

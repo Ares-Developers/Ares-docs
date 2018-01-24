@@ -1,3 +1,5 @@
+.. index:: Foundations; Buildings can have any size and shape
+
 Custom Building Foundations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -17,7 +19,5 @@ When creating foundations, don't forget to create the outlines.
 .. note:: The Custom Foundation Generator located with the Renegade Project
   Network is incompatible with Google Chrome, and results in gibberish.
   Be advised.
-
-.. index:: Foundations; Buildings can have any size and shape of custom foundations.
 
 .. versionadded:: 0.1

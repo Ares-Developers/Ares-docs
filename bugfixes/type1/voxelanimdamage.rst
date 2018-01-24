@@ -1,3 +1,5 @@
+.. index:: Bugs; Voxel Animations dealt less and less damage over time
+
 =============================
 Voxel Animation Damage Issues
 =============================

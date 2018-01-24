@@ -1,4 +1,4 @@
-.. index:: Weapons; Sonic wave ambient damage comes from the correct weapon (instead of always Primary).
+.. index:: Weapons; Sonic wave ambient damage comes from the correct weapon (instead of always Primary)
 
 =========================
 Sonic Wave Ambient Damage

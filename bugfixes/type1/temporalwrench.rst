@@ -1,4 +1,6 @@
-.. index:: Temporal weapons; Repair animation on attacked buildings
+.. index::
+  Temporal; Repair animation on attacked buildings
+  Glitches; Building attacked by Temporal warheads show repair animation
 
 ======================================
 Repair Wrench Playing When Warping Out

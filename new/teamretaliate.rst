@@ -1,3 +1,5 @@
+.. index:: AI; Team retaliates if a member is attacked
+
 Team Retaliate
 ~~~~~~~~~~~~~~
 
@@ -19,7 +21,5 @@ allow custom tags per team.
 :tagdef:`[General]TeamRetaliate=boolean`
   Whether teams are allowed to retaliate if a member is attacked and not killed
   immediately. Defaults to :value:`no`.
-
-.. index:: AI; Team retaliates if a member is attacked
 
 .. versionadded:: 0.7

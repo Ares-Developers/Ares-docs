@@ -1,3 +1,5 @@
+.. index:: INI; [#include] allows rulesmd.ini to be split up into separate files
+
 :captiontag:`[#include]`
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -36,7 +38,5 @@ in the include list can include subfolders (e.g.
 :tag:`5=MyMod\rules_infantry.ini`). The currently loaded MIXes are also scanned
 for the files if a loose file of that name cannot be found, however, this only
 works if you do not specify a subfolder.
-
-.. index:: INI; [#include] section allows rulesmd.ini to be split up into separate files.
 
 .. versionadded:: 0.1

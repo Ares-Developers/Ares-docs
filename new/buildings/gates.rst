@@ -1,3 +1,7 @@
+.. index::
+  Gates; Sounds per building
+  Buildings; Gate sounds
+
 Gates
 ~~~~~
 
@@ -14,7 +18,5 @@ options customizable.
   The sound played when this gate opens. Defaults to :tag:`[AudioVisual]GateDown`.
 :tagdef:`[BuildingType]GateUpSound=sound name`
   The sound played when this gate closes. Defaults to :tag:`[AudioVisual]GateUp`.
-
-.. index:: Gates; Per-Building gate sounds.
 
 .. versionadded:: 0.4

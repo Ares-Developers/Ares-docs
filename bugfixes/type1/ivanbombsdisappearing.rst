@@ -1,4 +1,6 @@
-.. index:: Ivan Bombs; Ivan Bombs won't disappear when victim is sold, deployed or undeployed.
+.. index::
+  single: Ivan Bombs; Ivan Bombs won't disappear when victim is sold, deployed or undeployed
+  Bugs; Ivan Bombs won't go off all the time
 
 =======================
 Disappearing Ivan Bombs

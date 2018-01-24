@@ -1,3 +1,7 @@
+.. index::
+  Interface; Third campaign button
+  Interface; Campaign buttons
+
 Customizable Campaign Buttons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -8,8 +12,6 @@ Revenge`'s campaign selection menu and customize all of them in
 .. image:: /images/ui_campaignbuttons.jpg
   :alt: Campaign menu showing four campaign buttons
   :align: center
-
-.. index:: Interface; Third Button / Campaign Button Customization.
 
 
 You can customize all campaign buttons using these :file:`uimd.ini` tags by

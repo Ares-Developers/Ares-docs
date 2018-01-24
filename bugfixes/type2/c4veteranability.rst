@@ -1,4 +1,5 @@
-.. index:: Veterancy; C4 Veteran Ability restored.
+.. index::
+  Veterancy; C4 Veteran Ability restored
 
 ===========================
 :value:`C4` Veteran Ability

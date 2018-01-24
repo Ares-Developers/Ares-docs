@@ -1,4 +1,4 @@
-.. index:: Sounds; Units pulled by a Magnetron will on longer play their move sound.
+.. index:: Glitches; Units pulled by a Magnetron play their move sound
 
 =========================================
 Unit Sounds Played At Inappropriate Times

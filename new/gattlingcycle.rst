@@ -1,3 +1,7 @@
+.. index::
+  Weapons; Cycle Gattling weapons without losing target
+  Gattling; Cycle weapons without losing target
+
 Gattling Enhancements
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -20,7 +24,5 @@ its target and thus may not fire at a single unit continuously.
   \ :tag:`RateDown` values as well as the individual state of the firing unit.
   It is not possible to guarantee that a certain stage fires a fixed amount of
   times.
-
-.. index:: Weapon; Cycle Gattling weapons without losing target.
 
 .. versionadded:: 0.3

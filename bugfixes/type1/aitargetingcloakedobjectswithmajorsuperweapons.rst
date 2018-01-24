@@ -1,4 +1,6 @@
-.. index:: AI; AI will not use weather storms, nukes, et al. on cloaked units.
+.. index::
+  single: AI; AI will not use Lightning Storms, Nukes, et al. on cloaked units
+  single: Bugs; AI frequently uses Lightning Storms, Nukes, et al. on cloaked units
 
 =====================================================
 AI Targeting Cloaked Objects With Major Super Weapons

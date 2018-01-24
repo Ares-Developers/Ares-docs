@@ -1,6 +1,10 @@
 User Interface and Loading Theme
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. index::
+  Sides; Sidebar
+  Interface; Sidebar for sides
+
 Sidebar
 -------
 
@@ -11,10 +15,12 @@ Sidebar
   Whether or not to use the Yuri sidebar file names (sidec02md.mix and the
   Yuri-specific files within that MIX).
 
-.. index:: Sides; Sides can specify their own unique UI.
-
 .. versionadded:: 0.1
 
+
+.. index::
+  Sides; Tooltip and message text colors
+  Interface; Tooltip and message text colors for sides
 
 Text Colors
 -----------
@@ -30,11 +36,13 @@ Text Colors
   game, the colors are :value:`DarkRed`, :value:`DarkSky` and :value:`DarkBlue`
   respectively.
 
-.. index:: Sides; Tooltip and message colors.
-
 .. versionadded:: 0.4
 
 
+
+.. index::
+  Sides; Dialog menu backgrounds
+  Interface; Dialog menu backgrounds for sides
 
 Dialogs
 -------
@@ -57,6 +65,10 @@ Requires :tag:`DialogBackground.Image` to be set.
 .. versionadded:: 0.7
 
 
+.. index::
+  Sides; Loading theme
+  Themes; Loading theme for sides
+
 Loading Theme
 -------------
 
@@ -69,6 +81,10 @@ Loading Theme
 
 .. _sides-evatag:
 
+.. index::
+  Sides; EVA announcer
+  EVA; Set announcer for side
+
 EVA
 ---
 
@@ -80,7 +96,5 @@ EVA
 
   See :doc:`EVA Types </new/evatypes>` on how to define values that can be used
   here.
-
-.. index:: Sides; User-defined EVA voices.
 
 .. versionadded:: 0.4

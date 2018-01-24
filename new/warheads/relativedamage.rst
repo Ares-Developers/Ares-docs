@@ -1,3 +1,5 @@
+.. index:: Warheads; MAD Tank style relative damage
+
 MAD Tank Style Relative Damage
 ``````````````````````````````
 
@@ -36,7 +38,5 @@ or :tag:`Psychedelic` warheads, and also doesn't support :tag:`ProneDamage` and
 
 Relative Damage considers :tag:`Organic=yes` vehicles as infantry and
 :tag:`ConsideredAircraft=yes` vehicles as aircraft.
-
-.. index:: Warheads; MAD Tank style Relative Damage
 
 .. versionadded:: 0.E

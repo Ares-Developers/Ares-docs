@@ -1,4 +1,6 @@
-.. index:: EVA; EVA will always announce Low Power now unrelated to [AI]>BuildConst.
+.. index::
+  Sides; EVA will always announce Low Power now unrelated to BuildConst
+  EVA; Low Power announcement plays not just for the first three sides
 
 ========================
 :captiontag:`BuildConst`

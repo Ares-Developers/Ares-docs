@@ -1,3 +1,5 @@
+.. index:: Interface; User interface colors
+
 User Interface Colors
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -55,7 +57,5 @@ you'll have to define the specific :tag:`Color.Observer.*` tags.
 
 .. note:: This feature does not support recoloring the dialog prompting for the
   \ :game:`Yuri's Revenge` disk when starting the game.
-
-.. index:: Interface; Custom User Interface Colors.
 
 .. versionadded:: 0.2

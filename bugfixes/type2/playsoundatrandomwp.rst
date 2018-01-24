@@ -1,4 +1,6 @@
-.. index:: Map Actions; Play sound at random waypoint fixed.
+.. index::
+  Maps; "Play sound at random waypoint" map action fixed
+  Actions; "Play sound at random waypoint" fixed
 
 =============================
 Play Sound at Random Waypoint

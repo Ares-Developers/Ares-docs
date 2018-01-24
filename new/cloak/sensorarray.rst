@@ -1,3 +1,5 @@
+.. index: Sensor Array; Restored and extended
+
 Sensor Arrays
 `````````````
 
@@ -5,8 +7,6 @@ Sensor Arrays are buildings that can detect enemy stealth units and structures,
 as well as subterranean unit movements. The feature was introduced along with
 Cloak Generators in :game:`Tiberian Sun`, but didn't work correctly in
 :game:`Red Alert 2`.
-
-.. index: Sensor Array; Restored and extended.
 
 .. versionadded:: 0.5
 
@@ -34,6 +34,10 @@ Sensor Array detects cloaked units or units moving underground respectively.
   voices.
 
 
+.. index:
+  Sensor Array; Disable warnings per type
+  TechnoTypes; Disable Sensor Array warnings
+
 Suppress Sensor Array Warnings
 ------------------------------
 
@@ -41,7 +45,5 @@ Suppress Sensor Array Warnings
   Whether EVA warnings and radar events should be generated if this type is
   detected. This does not hide the unit or building from the Sensor Array, and
   the object will still become visible. Defaults to :value:`yes`.
-
-.. index: Sensor Array; Disable warnings per type.
 
 .. versionadded:: 0.5

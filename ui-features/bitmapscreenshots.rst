@@ -1,3 +1,5 @@
+.. index:: Screenshots; Screenshots saved as BMP files rather than PCX
+
 Bitmap Screenshots
 ~~~~~~~~~~~~~~~~~~
 
@@ -7,8 +9,6 @@ PCX. BMP files are smaller in size and are more widely supported.
 The screenshot function now generates timestamped filenames instead of
 sequential ones, to avoid progressively longer delays as the output directory
 gets full.
-
-.. index:: Screenshots saved as BMP files rather than PCX.
 
 .. versionadded:: 0.1
 

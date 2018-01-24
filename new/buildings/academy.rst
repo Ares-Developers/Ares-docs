@@ -1,3 +1,7 @@
+.. index::
+  Academies; Promote units when built
+  Tech Structures; Academies promote units when built
+
 Academies
 ~~~~~~~~~
 
@@ -43,7 +47,5 @@ but the specified types. By default, academies promote all types.
 :tagdef:`[BuildingType]Academy.Ignore=list of TechnoTypes`
   The types that will never be affected by this academy. Defaults to
   :value:`none`.
-
-.. index:: Tech Structures; Academies promote units when built
 
 .. versionadded:: 0.8

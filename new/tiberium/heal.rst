@@ -1,11 +1,13 @@
+.. index::
+  Tiberium; Units can heal on tiberium
+  Universe; Tiberium heals units
+
 Tiberium Heal
 `````````````
 
 Tiberium Heal is the effect of units gaining hitpoints when standing or moving
 over cells containing tiberium. This feature from :game:`Tiberian Sun` has been
 restored and made more customizable.
-
-.. index: Tiberium; Units can heal on tiberium.
 
 .. versionadded:: 0.5
 
@@ -73,6 +75,8 @@ them.
 
 .. _tiberium-remains:
 
+.. index:: Tiberium; Units leave behind tiberium when destroyed
+
 Tiberium Remains
 ````````````````
 
@@ -88,7 +92,5 @@ tiberium can be added to them.
   Whether this unit leaves behind tiberium when destroyed. Defaults to
   :tag:`TiberiumHeal` if :tag:`[General]TiberiumHealEnabled=yes`, to :value:`no`
   otherwise.
-
-.. index: Tiberium; Units leave behind tiberium when destroyed.
 
 .. versionadded:: 0.5

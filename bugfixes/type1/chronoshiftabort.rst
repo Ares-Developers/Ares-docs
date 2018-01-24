@@ -1,4 +1,6 @@
-.. index:: Chronosphere; EVA report when aborting target selection
+.. index::
+  Chronosphere; EVA report when aborting target selection
+  Glitches; EVA reports Chronosphere as ready when aborting to fire
 
 ============================================================
 Aborting the Chronoshift announces the Chronosphere as ready

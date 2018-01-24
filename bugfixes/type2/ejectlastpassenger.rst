@@ -1,4 +1,4 @@
-.. index:: Transports; Turret-changing and gattling transports will eject all passengers.
+.. index:: Transports; Turret-changing and gattling transports will eject all passengers
 
 ========================================
 Passengers and :captiontag:`TurretCount`

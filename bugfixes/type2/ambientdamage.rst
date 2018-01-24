@@ -1,4 +1,6 @@
-.. index:: Railguns; AmbientDamage=0 does not deal any damage
+.. index::
+  Weapons; Railguns with AmbientDamage=0 do not deal any damage
+  Railguns; AmbientDamage=0 does not deal any damage
 
 ================================================
 :captiontag:`AmbientDamage=0` Still Dealt Damage

@@ -56,7 +56,5 @@ valid Hunter Seeker unit and how to prevent certain :type:`TechnoTypes` to be
 targeted. See :ref:`Sides & Countries <sides-hunterseeker>` on how to define a
 default Hunter Seeker unit for each side.
 
-.. index:: Super Weapons; HunterSeeker recreated.
-
 .. versionadded:: 0.7
 .. versionchanged:: 0.D

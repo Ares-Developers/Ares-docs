@@ -1,3 +1,7 @@
+.. index::
+  Warheads; Permanent mind-control weapons
+  Mind Control; Permanent mind-control
+
 Permanent Mind-Control
 ``````````````````````
 
@@ -14,7 +18,5 @@ of units that it can permanently mind-control.
 
 Unlike the Psychic Dominator, buildings are susceptible to permanent
 mind-control if the warhead can target them.
-
-.. index:: Warheads; Permanent mind-control weapons.
 
 .. versionadded:: 0.1

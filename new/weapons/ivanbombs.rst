@@ -1,5 +1,10 @@
 .. _custom-ivan-bombs:
 
+.. index::
+  Weapons; Multiple Ivan Bombs with separate settings
+  Ivan Bombs; Multiple weapons with separate settings
+  Ivan Bombs; Death bombs blow up when the victim dies
+
 Ivan Bombs
 ~~~~~~~~~~
 
@@ -87,8 +92,6 @@ replace that SHP file.
 .. image:: /images/bombcurs.png
   :alt: Image of bombcurs.shp
   :align: center
-
-.. index:: Customisable Ivan bomb clones.
 
 .. versionadded:: 0.1
 .. versionchanged:: 0.5

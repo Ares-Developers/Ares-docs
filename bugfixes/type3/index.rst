@@ -1,5 +1,3 @@
-.. index:: Performance; Several performance enhancements.
-
 ========================
 Performance Improvements
 ========================

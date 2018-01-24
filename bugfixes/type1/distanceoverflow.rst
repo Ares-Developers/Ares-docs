@@ -1,3 +1,7 @@
+.. index::
+  Coding; Distance calculations overflowing
+  Bugs; Units miscalculate when looking for the closest docking structure
+
 ====================================
 Distance Calculation Causes Overflow
 ====================================

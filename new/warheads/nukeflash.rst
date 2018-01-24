@@ -1,3 +1,5 @@
+.. index:: Warheads; Nuke flash
+
 Nuke Flash
 ``````````
 
@@ -12,7 +14,5 @@ can be enabled for other warheads, too, or disabled for :tag:`NUKE`.
   The number of frames the nuke flash fades in and stays fully active before it
   fades out again. A value of :value:`0` disables the effect. Defaults to
   :value:`30` for :tag:`NUKE`, to :value:`0` otherwise.
-
-.. index:: Warheads; Nuke Flash
 
 .. versionadded:: 0.E

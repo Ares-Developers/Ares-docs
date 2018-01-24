@@ -1,4 +1,6 @@
-.. index:: 100-Unit-Bug;  100-unit bug fixed for infantry vehicles and aircraft (there's no longer a limit on these).
+.. index::
+  single: Limitations; 100-unit bug fixed for infantry, vehicles, and aircraft
+  single: Bugs; 100-unit bug for infantry, vehicles, and aircraft
 
 ================
 The 100-Unit Bug

@@ -1,3 +1,5 @@
+.. index:: Savegames; Save games per mod and version
+
 Save Games
 ~~~~~~~~~~
 
@@ -34,7 +36,5 @@ terminate the game, no error message will be shown, and the game will not return
 back to the main menu. This should not happen if you follow these guidelines.
 For debugging purposes, the log file will then contain information about the
 last object :game:`Ares` tried to restore.
-
-.. index:: Save Games; Save games per mod and version
 
 .. versionadded:: 1.0

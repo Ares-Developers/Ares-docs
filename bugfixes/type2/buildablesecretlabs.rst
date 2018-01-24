@@ -1,4 +1,4 @@
-.. index:: Secret Labs; Buildable secret labs will now have a boon.
+.. index:: Secret Labs; Buildable secret labs will now have a boon
 
 =====================
 Buildable Secret Labs

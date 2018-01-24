@@ -1,4 +1,6 @@
-.. index:: WaterImage= Amphibious vehicles can change their image when moving between water/land.
+.. index::
+  Vehicles; Amphibious vehicles can change their image when moving between water/land
+  Art; Amphibious vehicles can change their image when moving between water/land
 
 ========================
 Amphibious Image Changes

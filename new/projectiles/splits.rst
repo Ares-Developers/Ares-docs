@@ -8,6 +8,10 @@ to :game:`Yuri's Revenge`, with several changes and additions. The related
 .. versionadded:: 0.7
 
 
+.. index::
+  Projectiles; Splitting in mid-air
+  Universe; Cyborg Reaper missiles
+
 :captiontag:`Splits`
 --------------------
 
@@ -46,6 +50,8 @@ more detailed description of the logic.
   split projectile to choose another target. Valid range is :value:`0.0` to
   :value:`1.0`. Defaults to :value:`0.0`.
 
+
+.. index:: Projectiles; Airburst radius
 
 :captiontag:`Airburst`
 ----------------------

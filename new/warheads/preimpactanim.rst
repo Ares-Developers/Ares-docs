@@ -1,5 +1,7 @@
 .. _preimpactanim:
 
+.. index:: Warheads; Pre-impact anim not just for nukes
+
 :captiontag:`PreImpactAnim`
 ```````````````````````````
 
@@ -14,7 +16,5 @@ warheads.
   impacts. After the animation is over, the actual explosion is created and
   damage is dealt. The animation may not be looping. Defaults to
   :value:`NUKEBALL` for :tag:`NUKE`, otherwise to :value:`none`.
-
-.. index:: Warheads; PreImpactAnim= optional for every warhead, not just for NUKE.
 
 .. versionadded:: 0.2

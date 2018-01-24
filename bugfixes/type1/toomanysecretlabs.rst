@@ -1,4 +1,6 @@
-.. index:: Secret Labs; Too many secret labs on a map would cause them all to be empty. Not anymore.
+.. index::
+  Secret Labs; Too many labs would cause them all to be empty
+  Bugs; Too many Secret Labs would cause them all to be empty
 
 ====================
 Too Many Secret Labs

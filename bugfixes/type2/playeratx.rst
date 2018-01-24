@@ -1,4 +1,6 @@
-.. index:: Maps; Player @ X support for map events
+.. index::
+  Maps; Player @ X support for map events
+  Events; Player @ X support for map events
 
 ===========================================================
 :captiontag:`Player @ X` Support for Multiplayer Map Events

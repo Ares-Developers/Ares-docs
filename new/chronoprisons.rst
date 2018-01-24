@@ -1,3 +1,11 @@
+.. index::
+  Chrono Prison; Abduct units from the battlefield
+  Weapons; Abduct units from the battlefield like a Chrono Prison
+
+.. index::
+  Vehicles; Turret depending on passengers
+  Art; Turret depending on unit's passengers
+
 Chrono Prisons / Abductors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -75,8 +83,5 @@ concept art on the Command & Conquer Wiki
     is, you have to specify :tag:`Turret=yes`, an appropriate
     \ :tag:`TurretCount`, and you have to use the :tag:`WeaponX` flags to specify
     weapons.
-
-.. index:: Weapons; Make the firer abduct units from the battlefield like a Chrono Prison.
-.. index:: Art; Use turret depending on unit's passengers.
 
 .. versionadded:: 0.2

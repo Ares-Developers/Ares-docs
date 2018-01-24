@@ -1,3 +1,7 @@
+.. index::
+  Veterancy; New abilities
+  TechnoTypes; Veteran and elite abilities
+
 Veteran and Elite Abilities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -29,7 +33,5 @@ This is a list of all new veteran and elite abilities :game:`Ares` supports.
   Makes units immune to :tag:`Psychedelic=yes` and :tag:`MindControl=yes`
   weapons like :tag:`ImmuneToPsionics=yes`. The Psychic Dominator can still
   override this effect just like the unconditional :tag:`ImmuneToPsionics=yes`.
-
-.. index:: Veterancy; New abilities
 
 .. versionadded:: 0.E

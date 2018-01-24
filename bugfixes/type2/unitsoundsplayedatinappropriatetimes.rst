@@ -1,4 +1,4 @@
-.. index:: Sounds; Entering/leaving water sounds won't play when infantry is transported.
+.. index:: OpenTopped; Entering/leaving water sounds plays when infantry is transported
 
 =========================================
 Unit Sounds Played At Inappropriate Times

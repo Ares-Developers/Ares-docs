@@ -1,3 +1,7 @@
+.. index::
+  Super Weapons; Animation played at target cell and its visibility
+  Super Weapons; Sounds played when launched or activated
+
 Animation/Sound
 ```````````````
 
@@ -14,9 +18,5 @@ The default values depend on the super weapon's actual :tag:`Type`.
 :tagdef:`[SuperWeapon]SW.ActivationSound=sound`
   The sound to play when a Nuke is fired or a deferrable super weapon like the
   Lightning Storm is activated.
-
-.. index:: Super Weapons; Custom animation played at target cell.
-
-.. index:: Super Weapons; Custom SW animation visibility.
 
 .. versionadded:: 0.1

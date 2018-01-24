@@ -1,4 +1,6 @@
-.. index:: Temporal; Temporal warheads no longer affect objects that are not Warpable.
+.. index::
+  Temporal; Temporal warheads no longer affect objects that are not Warpable
+  Spawns; Temporal warheads will respect Warpable
 
 ==========================================================================
 :captiontag:`Temporal` Warheads Still Affect Objects That Are Not Warpable

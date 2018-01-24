@@ -1,4 +1,4 @@
-.. index:: PKTs; Multiple loose PKT files no longer have their contents duplicated.
+.. index:: PKTs; Multiple loose PKT files no longer have their contents duplicated
 
 ===============
 PKT Duplication

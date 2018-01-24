@@ -1,6 +1,10 @@
 Infantry-related Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. index::
+  Warheads; Damage multiplier against deployed infantry
+  Infantry; Damage multiplier per warhead when deployed
+
 Deployed Infantry Damage multiplier
 ```````````````````````````````````
 
@@ -12,9 +16,11 @@ Deployed Infantry Damage multiplier
 Note that this is not the same as the existing :tag:`ProneDamage=` flag;
 deployed units are not considered to be prone. Defaults to :value:`100%`.
 
-.. index:: Warheads; Per-warhead damage multiplier against deployed infantry.
-
 .. versionadded:: 0.1
+
+.. index::
+  single: Warheads; Infantry death anims, auto-detect mutation
+  single: Infantry; Death anims per warhead
 
 :captiontag:`InfDeathAnim`
 ``````````````````````````
@@ -29,7 +35,5 @@ deployed units are not considered to be prone. Defaults to :value:`100%`.
   player-owned :tag:`InfantryTypes`. See :doc:`MakeInfantryOwner
   </new/makeinfantryowner>` for how to control which player will gain control of
   'mutated' infantry.
-
-.. index:: Warheads; New InfDeaths (InfDeathAnim= any animation, auto-detect mutation).
 
 .. versionadded:: 0.1

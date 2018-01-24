@@ -1,3 +1,7 @@
+.. index::
+  Vehicles; Dimming voxel if deactivated
+  EMP; Dimming affected vehicle voxel
+
 Dimming Deactivated Units
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -22,7 +26,5 @@ of :value:`1.0` disables the dimming effect. Supported range is :value:`0.0` to
 :tagdef:`[AudioVisual]DeactivateDimPowered=float - multiplier`
   The light level for unpowered voxel units. See :doc:`PoweredBy logic
   </new/newpoweredunitlogic>`. Defaults to :value:`0.5`.
-
-.. index:: Units; Dimming deactivated voxel VehicleTypes
 
 .. versionadded:: 0.7

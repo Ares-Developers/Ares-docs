@@ -1,6 +1,8 @@
 Promotion settings
 ~~~~~~~~~~~~~~~~~~
 
+.. index:: Art; Global VeteranFlashTimer
+
 Global :captiontag:`VeteranFlashTimer`
 --------------------------------------
 
@@ -12,8 +14,10 @@ elite veterancy. :game:`Ares` adds a new global tag that works like
   The number of frames a newly veteran unit or structure will flash for.
   Defaults to :value:`0`.
 
-.. index:: AudioVisual; Global VeteranFlashTimer
 
+.. index::
+  Veterancy; Promotion customizations
+  TechnoTypes; Promotion customizations
 
 Sounds, EVA and Flashing
 ------------------------
@@ -45,10 +49,12 @@ when the unit or structure is promoted.
   The message played when a unit or structure of this type is promoted to
   elite level. Defaults to :value:`EVA_UnitPromoted`.
 
-.. index:: TechnoTypes; Promotion customizations
-
 .. versionadded:: 0.C
 
+
+.. index::
+  OpenTopped; Promote passengers as if they are part of the transport
+  Veterancy; Promote passengers as if they are part of the transport
 
 Promote all Passengers
 ----------------------
@@ -70,7 +76,5 @@ despite being much cheaper than the vehicle and thus usually promoted earlier.
   .. note:: The passengers' veterancy is discarded when the vehicle is promoted.
     This should not be used on manually controllable transports, because they
     could degrade elite passengers to veterans, for example.
-
-.. index:: OpenTopped; Promote passengers as if they are part of the transport
 
 .. versionadded:: 0.E

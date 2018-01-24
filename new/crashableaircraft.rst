@@ -1,6 +1,8 @@
 Crashing
 ~~~~~~~~
 
+.. index:: Aircraft; Non-Crashable aircraft
+
 :captiontag:`Crashable` and Aircraft
 ------------------------------------
 
@@ -14,10 +16,10 @@ adds support for :tag:`Crashable=no` and aircraft.
   destroyed. Otherwise the aircraft will explode in mid-air and disappear.
   Defaults to :value:`yes`.
 
-.. index:: Aircraft; Support for Crashable=no.
-
 .. versionadded:: 0.4
 
+
+.. index:: Aircraft; Spinning while crashing
 
 Spinning
 --------
@@ -31,7 +33,5 @@ this can look silly and :game:`Ares` adds an option for this to turn it off.
 
   .. note:: This setting only works for aircraft. :tag:`JumpJet=yes`
     \ :type:`VehicleType`\ s do not support it.
-
-.. index:: Aircraft; Spinning while crashing made optional.
 
 .. versionadded:: 0.6

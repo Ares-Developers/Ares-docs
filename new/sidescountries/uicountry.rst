@@ -1,6 +1,12 @@
 User Interface
 ~~~~~~~~~~~~~~
 
+.. index::
+  Countries; Status bar text when selecting country
+  Countries; Shuffle the countries in the selection lists
+  Countries; Chance of being selected in multiplayer games
+  Multiplayer; Chance of country being selected randomly
+
 Display and Selection Chance
 ----------------------------
 
@@ -32,6 +38,10 @@ Display and Selection Chance
 .. versionchanged:: 0.D
 
 
+.. index::
+  Countries; Flags and observer graphics
+  Interface; Country flags and observer graphics
+
 Flags and Observer Graphics
 ---------------------------
 
@@ -53,6 +63,12 @@ Flags and Observer Graphics
 
 .. versionadded:: 0.1
 .. versionchanged:: 0.3
+
+
+.. index::
+  Countries; Loading screens
+  Interface; Multiplayer country loading screens
+  Themes; Country-specific multiplayer loading theme
 
 Loading Screen
 --------------
@@ -94,6 +110,8 @@ Screen </ui-features/campaignloadscreen>`.
 .. versionadded:: 0.1
 .. versionchanged:: 0.7
 
+
+.. index:: Countries; Taunts
 
 Taunts
 ------

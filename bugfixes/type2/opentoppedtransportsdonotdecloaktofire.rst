@@ -1,4 +1,4 @@
-.. index:: OpenTopped; OpenTopped transports will decloak to fire when their passengers fire.
+.. index:: OpenTopped; OpenTopped transports will decloak to fire when their passengers fire
 
 ==========================================================
 :captiontag:`OpenTopped` Transports Do Not Decloak To Fire

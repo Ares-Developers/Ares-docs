@@ -1,4 +1,6 @@
-.. index:: Palettes; Units can specify a custom palette.
+.. index::
+  Palettes; Units can specify a custom palette
+  Art; Units can specify a custom palette
 
 ===============
 Custom Palettes

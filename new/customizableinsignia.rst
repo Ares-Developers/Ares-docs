@@ -1,3 +1,7 @@
+.. index::
+  Veterancy; Insignia for veteran/elite units
+  Art; Insignia for veteran/elite units
+
 Veterancy Insignia
 ~~~~~~~~~~~~~~~~~~
 
@@ -21,10 +25,12 @@ theater palette. If you specify an insignia, the first frame of its SHP will be
 drawn. Veteran and Elite objects without the insignia specified will still
 display the 15th/16th frames of :file:`pips.shp` as usual.
 
-.. index:: Veterancy; Custom insignia for veteran/elite units.
-
 .. versionadded:: 0.1
 
+
+.. index::
+  Veterancy; Hide insignia of enemy units
+  TechnoTypes; Hide veterancy insignia of enemy units
 
 Hiding Enemy Insignia
 `````````````````````
@@ -42,7 +48,5 @@ on enemy units by using the following tags.
   Defaults to :tag:`[General]EnemyInsignia`.
 
 .. note:: Observers will always be able to see insignia of all players.
-
-.. index:: Veterancy; Hide insignia of enemy units.
 
 .. versionadded:: 0.5

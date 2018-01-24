@@ -1,3 +1,8 @@
+.. index::
+  Radar Jammers; Jam radar or spy sat close to unit
+  TechnoTypes; Radar Jammers
+  Universe; Radar Jammers
+
 Radar Jammers
 ~~~~~~~~~~~~~
 
@@ -18,8 +23,6 @@ those structures.
 The jammer will not work on allied countries, including the player himself.
 
 :game:`Ares`'s jammers also jam the SpySat Uplink.
-
-.. index:: TechnoTypes; Radar Jammers.
 
 :tagdef:`[TechnoType]RadarJamRadius=integer - radius in cells`
   Specifies the radius around the jamming object within structures with

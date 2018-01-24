@@ -1,3 +1,7 @@
+.. index::
+  Weapons; Cursors
+  Cursors; Weapon attack and out of range
+
 Cursors
 ```````
 
@@ -37,7 +41,5 @@ it might not be mind-controllable, etc.), because the game does not have a
 concept of this. Instead the next type of cursor is checked, and sometimes the
 inability to attack gets converted to a different action like move, no move, or
 select (or something entirely different like enter for Engineer infantry).
-
-.. index:: Weapons; Custom cursors
 
 .. versionadded:: 0.D

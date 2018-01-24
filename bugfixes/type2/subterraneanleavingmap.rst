@@ -1,4 +1,6 @@
-.. index:: Subterranean; Units accidentally leaving map fixed
+.. index::
+  Subterranean; Units accidentally leaving map
+  Bugs; Subterranean units accidentally leaving map
 
 ===================================================
 Subterranean Units Could Accidentally Leave The Map

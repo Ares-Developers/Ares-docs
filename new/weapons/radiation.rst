@@ -1,3 +1,7 @@
+.. index::
+  single: Weapons; RadBeam colors, duration, and amplitude
+  single: Radiation Beams; Colors, duration, and amplitude
+
 Radiation Beams
 ~~~~~~~~~~~~~~~
 
@@ -22,7 +26,5 @@ INI section:
   The amplitude of the beam (possibly measured in pixels?). Defaults to
   :value:`40.0` as per original RadBeams. The RadEruption effect originally used
   a random value between :value:`100.0` and :value:`500.0`.
-
-.. index:: Rad beams can have custom colors and duration and amplitude.
 
 .. versionadded:: 0.1

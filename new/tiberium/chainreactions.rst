@@ -1,3 +1,7 @@
+.. index::
+  Tiberium; Chain Reactions
+  Universe; Tiberium chain reactions
+
 Chain Reactions
 ```````````````
 
@@ -5,8 +9,6 @@ There are two distinct logics that have their part in the tiberium chain
 reactions as seen in :game:`Tiberian Sun`. Chain Reactions were not supported
 in :game:`Yuri's Revenge` and have now been restored, and both have been made
 more customizable.
-
-.. index: Tiberium; Chain Reactions.
 
 .. versionadded:: 0.5
 
@@ -57,6 +59,8 @@ Customizable Settings
   to :value:`33`.
 
 
+.. index:: Overlay; Explodes=yes and minimum damage
+
 Minimum Damage to Trigger :captiontag:`Explodes=yes`
 ````````````````````````````````````````````````````
 
@@ -68,7 +72,5 @@ if the damage is higher than a certain value.
   Only if the damage to a cell is higher than this does an overlay with
   :tag:`Explodes=yes` explode. Below this value, the overlay stays intact.
   Defaults to :value:`0`.
-
-.. index: Overlay; Explodes=yes and a minimm damage.
 
 .. versionadded:: 0.5

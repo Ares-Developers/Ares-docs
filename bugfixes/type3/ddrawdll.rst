@@ -1,3 +1,5 @@
+.. index:: Performance; DirectDraw and Software Emulation
+
 =================================
 DirectDraw and Software Emulation
 =================================

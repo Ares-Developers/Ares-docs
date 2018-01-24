@@ -1,3 +1,7 @@
+.. index::
+  Debugging; Improved Internal Error handling
+  Debugging; Logs to assist with debugging mods and Ares
+
 Internal Errors / Debugging
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -52,7 +56,5 @@ Some potential errors may now be triggered when loading rather than waiting for
 the error to crop up in game. Critical errors occur always, less critical errors
 occur only if you have used the :doc:`-STRICT command line argument
 </ui-features/commandlinearguments>`.
-
-.. index:: Improved Internal Error handling and debug logs to assist with debugging mods/Ares.
 
 .. versionadded:: 0.1

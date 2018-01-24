@@ -1,3 +1,7 @@
+.. index::
+  Tiberium; Damage units moving over tiberium
+  Universe; Tiberium deals damage to units
+
 Tiberium Damage
 ```````````````
 
@@ -7,8 +11,6 @@ this feature back and extends it to work with all unit types.
 
 Units killed by Tiberium Damage may convert into a Visceroid. See
 :ref:`Visceroids <visceroids>`
-
-.. index: Tiberium; Damage units moving over tiberium.
 
 .. versionadded:: 0.5
 
@@ -58,6 +60,11 @@ The damage and the warhead used to deliver it can be customized for each of the
 
 .. _visceroids:
 
+.. index::
+  Tiberium; Visceroids
+  Visceroids; Spawn on Tiberium when infantry dies
+  Universe; Tiberium spawns visceroids on infantry death
+
 Visceroids
 ``````````
 
@@ -86,7 +93,5 @@ tag existed since :game:`Tiberian Sun` but did not do anything.
   Chance of which a unit of this type dying of tiberium damage transforms into a
   :tag:`[General]SmallVisceroid`. Defaults to
   :tag:`[General]TiberiumTransmogrify`.
-
-.. index: Tiberium; Visceroids.
 
 .. versionadded:: 0.5

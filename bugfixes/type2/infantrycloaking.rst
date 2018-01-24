@@ -1,4 +1,4 @@
-.. index:: Cloaking; Cloakable infantry will not constantly uncloak and cloak during an attack mission.
+.. index:: Cloak; Infantry will not constantly uncloak and cloak during an attack mission
 
 ========================================
 Cloakable Infantry Constantly Uncloaking

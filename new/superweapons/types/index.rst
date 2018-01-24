@@ -1,3 +1,5 @@
+... index:: Super Weapons; List of supported types
+
 Settings by Super Weapon Type
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -1,4 +1,4 @@
-.. index:: Veterancy; Occupiers with Trainable=no are no longer trained.
+.. index:: Veterancy; Occupiers with Trainable=no are no longer trained
 
 ===============================================================
 Occupiers are always trained even if :captiontag:`Trainable=no`

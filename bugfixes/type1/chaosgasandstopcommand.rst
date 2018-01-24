@@ -1,4 +1,6 @@
-.. index:: Chronosphere; EVA report when aborting target selection
+.. index::
+  Exploits; Stop command no longer works on berserking units
+  Bugs; Berserking units still respect the Stop command
 
 ==============================================================
 Chaos Gas (:captiontag:`Psychedelic=yes`) and the Stop Command

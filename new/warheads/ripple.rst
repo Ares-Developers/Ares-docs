@@ -1,3 +1,5 @@
+.. index:: Warheads; Ion Cannon ripple effect
+
 Ion Cannon Ripple Effect
 ````````````````````````
 
@@ -19,7 +21,5 @@ Ion Cannon Ripple Effect
     radius
   + :tag:`Ripple.Radius=30` and onwards - 3 cell unit-rippling, 5 cell
     terrain-rippling radius
-
-.. index:: Warheads; Ion Cannon ripple effect for weapons.
 
 .. versionadded:: 0.1

@@ -1,3 +1,5 @@
+.. index:: Buildings; Include in or exclude them from drag-selection
+
 Mass-Selection
 ~~~~~~~~~~~~~~
 
@@ -17,7 +19,5 @@ buildings with larger foundations that should be considered vehicles:
   :value:`no`, buildings will not be included in the selection, even if they
   undeploy into a unit and are actually to be considered vehicles. Defaults to
   :value:`yes` for 1x1 buildings with :tag:`UndeploysInto=` set.
-
-.. index:: Buildings; Include buildings in or exclude them from drag-selection
 
 .. versionadded:: 0.B

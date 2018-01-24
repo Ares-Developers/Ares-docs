@@ -11,6 +11,10 @@ weapon set as :tag:`SuperWeapon` is checked for this tag, and the building
 becomes unbuildable even if the super weapon is unavailable.
 
 
+.. index::
+  Super Weapons; Availability by country
+  Countries; Super Weapon availability
+
 Require a Country
 -----------------
 
@@ -28,10 +32,10 @@ weapon will not become available and the cameo will never appear.
   :tag:`SW.RequiredHouses` settings for it to become available. Defaults to
   :value:`none`.
 
-.. index:: Super Weapons; Availability by country
-
 .. versionadded:: 0.9
 
+
+.. index:: Super Weapons; AuxBuilding and negative AuxBuilding
 
 Auxiliary Buildings (:captiontag:`AuxBuilding`)
 -----------------------------------------------
@@ -69,7 +73,5 @@ become available if its :tag:`AuxBuilding` requirement is satisfied.
 
 .. warning:: Super weapons using auxiliary building logics to restrict their
   availability do not support building animations.
-
-.. index:: Super Weapons; AuxBuilding and negative AuxBuilding
 
 .. versionadded:: 0.9

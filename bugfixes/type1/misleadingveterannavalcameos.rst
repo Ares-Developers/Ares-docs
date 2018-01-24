@@ -1,4 +1,6 @@
-.. index:: Spies; Spying a war factory will not give you veteran build icons for naval units incorrectly.
+.. index::
+  Spies; Naval units no longer show veteran icons after infiltrating war factory
+  Glitches; Spying a war factory incorrectly gives veteran build icons for naval units
 
 ===============================
 Misleading Veteran Naval Cameos

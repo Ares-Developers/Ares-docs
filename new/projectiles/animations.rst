@@ -1,3 +1,5 @@
+.. index:: Projectiles; Animations and Rotates=yes
+
 Animations and :captiontag:`Rotates=yes`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

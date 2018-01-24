@@ -1,3 +1,5 @@
+.. index:: Interface; Dropdown colors
+
 Customizable Dropdown Colors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -5,8 +7,6 @@ The player colors shown in the dropdown list in the menu are hardcoded in
 :game:`Yuri's Revenge` and they map to hardcoded color schemes in-game.
 :game:`Ares` removes the hardcoding and lets you customize all existing colors
 and even add more of them.
-
-.. index:: Interface; Custom Dropdown Colors.
 
 Using :file:`uimd.ini` you can define up to 16 colors to be shown in the
 dropdown lists. Replace :tag:`X` by the numbers from :value:`1` to :tag:`Count`

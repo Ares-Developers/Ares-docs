@@ -1,3 +1,8 @@
+.. index::
+  Spotlights; On units and structures
+  Vehicles; Attach spotlights to body or turret
+  Buildings; Spotlights
+
 Spotlights
 ~~~~~~~~~~
 

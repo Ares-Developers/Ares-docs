@@ -1,4 +1,4 @@
-.. index:: Factories;  Factory load sharing for factories of the same type rather than just the same ID.
+.. index:: Factories; Factory load sharing for factories of the same type
 
 ====================
 Factory Load Sharing

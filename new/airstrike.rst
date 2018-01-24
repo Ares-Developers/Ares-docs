@@ -1,3 +1,5 @@
+.. index:: Airstrikes; Attack and abort voices
+
 Airstrike Voices
 ~~~~~~~~~~~~~~~~
 
@@ -14,7 +16,5 @@ empty sound.
 :tagdef:`[TechnoType]VoiceAirstrikeAbort=soundmd entry`
   Specifies the voice played when the designator unit is killed before the
   aircraft had a chance to fire. Defaults to :tag:`AirstrikeAbortSound`.
-
-.. index:: Airstrikes; Custom attack and abort voices.
 
 .. versionadded:: 0.7

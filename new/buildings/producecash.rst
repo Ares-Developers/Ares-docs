@@ -1,3 +1,7 @@
+.. index::
+  Tech Structures; Building upgrades support Oil Derrick logic
+  Upgrades; Oil Derrick logic support
+
 Oil Derricks (:captiontag:`ProduceCash`)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -18,12 +22,12 @@ captured by a :tag:`MultiplayPassive=yes` house.
 Unlike in the original game, :tag:`ProduceCashStartup` does not have to be
 non-null for :tag:`ProduceCashdelay` and :tag:`ProduceCashAmount` to work.
 
-.. index:: Tech Structures; Oil Derrick support for building upgrades
-
 .. versionadded:: 0.9
 
 .. versionchanged:: 0.B
 
+
+.. index:: Tech Structures; Display the produced cash amount
 
 Display Cash Produced
 `````````````````````
@@ -49,7 +53,5 @@ sign prefixed.
 .. warning:: This feature might be expanded or changed in the future. Do not
   take the appearance of these texts for granted. Colors, positions, and
   movement speed might change.
-
-.. index:: Tech Structures; Oil Derrick can show the produced cash amount
 
 .. versionadded:: 0.B

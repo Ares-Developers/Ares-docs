@@ -1,3 +1,9 @@
+.. index::
+  EVA; Unit Lost message per type
+  Infantry; Unit Lost EVA message
+  Vehicles; Unit Lost EVA message
+  Aircraft; Unit Lost EVA message
+
 Unit Lost EVA Report
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -10,7 +16,5 @@ report can now be customized or turned off.
 :tagdef:`[Unit]EVA.Lost=evamd entry`
   The message played when a unit of this type is destroyed. Use :value:`none` to
   disable the report. Defaults to :value:`EVA_UnitLost`.
-
-.. index:: EVA; Unit Lost report customizable.
 
 .. versionadded:: 0.5

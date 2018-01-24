@@ -1,3 +1,5 @@
+.. index:: Prism; Extended Prism networks ("Prism Forwarding")
+
 Prism Forwarding
 ~~~~~~~~~~~~~~~~
 
@@ -12,8 +14,6 @@ screenshot has been doctored).
 
 :game:`Ares` completely replaces the old Prism Tower code to fix a couple of
 minor bugs and also extend it to provide a full set of Prism networking options.
-
-.. index:: Prism: Extended Prism networks ("Prism Forwarding")
 
 .. versionadded:: 0.2
 
@@ -181,6 +181,8 @@ minor bugs and also extend it to provide a full set of Prism networking options.
   If the tower becomes elite then the support beam will get its properties from
   this weapon. Defaults to :tag:`PrismForwarding.SupportWeapon`.
 
+
+.. index:: Prism; Support Beams
 
 Customizing The Support Beam
 ````````````````````````````

@@ -1,3 +1,5 @@
+.. index:: Buildings; Buildings that can be driven upon
+
 Passable Structures
 ~~~~~~~~~~~~~~~~~~~
 
@@ -16,7 +18,5 @@ considerations.
 :tagdef:`[BuildingType]IsPassable=boolean`
   Whether the cells the building occupies can still be entered or stood on by
   vehicles and infantry. Defaults to :value:`no`.
-
-.. index:: Structures; Buildings that can be driven upon.
 
 .. versionadded:: 0.7

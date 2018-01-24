@@ -1,3 +1,9 @@
+.. index::
+  Passengers; Pre-fill units like a Troop Crawler
+  Transports; Pre-fill with passengers like a Troop Crawler
+  Buildings; Pre-fill with occupants
+  Universe; Pre-filled Troop Crawlers
+
 Initial Payload (Troop Crawlers)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -32,7 +38,5 @@ units. It's the responsibility of the modder to check :tag:`Size` and
   If this list contains fewer items than the :tag:`InitialPayload.Types` list,
   the last number is used as count for all following types. If this tag is not
   set, all counts are assumed to be :value:`1`.
-
-.. index:: Passengers; Pre-fill units with passengers like a Troop Crawler
 
 .. versionadded:: 0.A

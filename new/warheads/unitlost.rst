@@ -1,3 +1,7 @@
+.. index::
+  Warheads; Suppress "Unit lost" EVA message
+  EVA; Suppress "Unit lost" message per warhead
+
 Suppress Unit Lost Message
 ``````````````````````````
 
@@ -9,7 +13,5 @@ be considered killing, this message can be suppressed for a warhead.
   Whether units killed by this warhead should not play the Unit Lost EVA
   message. Damaging  units without killing them using this warhead will not
   silence the message. Defaults to :value:`no`.
-
-.. index:: Warheads; Suppress Unit Lost message
 
 .. versionadded:: 0.C

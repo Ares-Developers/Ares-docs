@@ -1,4 +1,6 @@
-.. index:: House; Out of bounds write could corrupt memory
+.. index::
+  Crashes; Threat estimation could corrupt memory
+  Coding; Out of bounds array access while handling threats
 
 ================================================
 Out of Bounds Array Access Could Lead to Crashes

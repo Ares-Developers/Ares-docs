@@ -1,4 +1,6 @@
-.. index:: Weapons; Radiation color was hardcoded for snow theater.
+.. index::
+  Weapons; Radiation color was hardcoded for snow theater
+  Theaters; Radiation color was hardcoded for snow theater
 
 ================================
 Radiation Color and Snow Theater

@@ -1,3 +1,5 @@
+.. index:: Animations; Spawn particles at a distance
+
 Particle Spawning
 ~~~~~~~~~~~~~~~~~
 
@@ -23,7 +25,5 @@ above the base cell.
   The distance from the center where particles will not spawn beyond. Has to be
   equal to or larger than :tag:`SpawnsParticle.RangeMinimum`. Defaults to
   :value:`0.0`.
-
-.. index:: Animations; Spawn Particles at a distance
 
 .. versionadded:: 0.C

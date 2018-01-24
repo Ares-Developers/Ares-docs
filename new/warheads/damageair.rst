@@ -1,3 +1,5 @@
+.. index:: Warheads; Damage or don't damage units in the air
+
 Damage Airborne Units
 `````````````````````
 
@@ -23,7 +25,5 @@ affected if they were in range. This can now be changed.
   If :value:`no`, a warhead detonating on a bridge will be considered to be four
   levels (416 leptons) high in the air, if :value:`yes`, it will be 0 leptons
   above the ground and thus by default not trigger damaging units in the air. 
-
-.. index:: Warheads; Damage or don't damage units in the air
 
 .. versionadded:: 0.B

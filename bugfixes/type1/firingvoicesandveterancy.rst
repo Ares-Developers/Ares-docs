@@ -1,4 +1,6 @@
-.. index:: Veterancy; Units won't lose their special weapon firing voices once they become elite.
+.. index::
+  Veterancy; Units won't lose their special weapon firing voices once they become elite
+  Bugs; Elite units no longer using their special weapon firing voices
 
 ===========================
 Firing Voices and Veterancy
@@ -15,4 +17,3 @@ falls back to the non-elite weapon firing voices instead of using the generic
 :tag:`VoiceAttack` ones.
 
 .. versionadded:: 0.2
-  

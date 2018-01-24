@@ -1,4 +1,4 @@
-.. index:: Walls; Gates can be slammed onto any walls not just GAWALL or NAWALL.
+.. index:: Walls; Gates can be slammed onto any walls not just GAWALL or NAWALL
 
 ================================
 Hardcoded Wall/Gate Interactions

@@ -1,3 +1,5 @@
+.. index:: Projectiles; ParticleSystems as trailers
+
 :captiontag:`AttachedSystem` Trailers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -8,7 +10,5 @@ works like the same tag on :type:`VoxelAnimTypes`.
 :tagdef:`[Projectile]AttachedSystem=ParticleSystemType`
   The type of the particle system to attach to this projectile. Only particle
   systems  with :tag:`BehavesLike=smoke` are supported.
-
-.. index:: Projectiles; Attach ParticleSystems
 
 .. versionadded:: 0.C

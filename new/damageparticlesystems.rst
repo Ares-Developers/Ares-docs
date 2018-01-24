@@ -8,6 +8,10 @@ by sparking repeatedly. See `DamageParticleSystems on ModEnc
 description of this feature.
 
 
+.. index::
+  Particles; Damage sparks for all TechnoTypes
+  TechnoTypes; Damage sparks for all types
+
 Damage Sparks
 -------------
 
@@ -23,10 +27,12 @@ file. :game:`Ares` unties this feature from :tag:`Cyborg` and
   defined by :tag:`DamageParticleSystems`. Defaults to :tag:`Cyborg` for
   :type:`InfantryTypes`, to :value:`no` otherwise.
 
-.. index:: Units; Damage sparks for all TechnoTypes.
-
 .. versionadded:: 0.7
 
+
+.. index::
+  Particles; Smoke and Spark DamageParticleSystems 
+  Units; DamageParticleSystems
 
 Smoke and Spark :captiontag:`DamageParticleSystems`
 ---------------------------------------------------
@@ -55,7 +61,5 @@ opting in by using the new ones, damage particle systems are spawned as always.
   to use :type:`ParticleSystems` with :tag:`BehavesLike` set to other values
   than :value:`Spark`. Defaults to all :tag:`DamageParticleSystems` with
   :tag:`BehavesLike=Spark` set.
-
-.. index:: Units; DamageParticleSystems customizable.
 
 .. versionadded:: 0.7

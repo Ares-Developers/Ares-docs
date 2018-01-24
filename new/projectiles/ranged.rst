@@ -1,3 +1,5 @@
+.. index:: Projectiles; Running out of fuel and detonating
+
 :captiontag:`Ranged`
 ~~~~~~~~~~~~~~~~~~~~
 

@@ -1,4 +1,6 @@
-.. index:: Walls;  Walls remap to the owning player's color.
+.. index::
+  Walls; Remap to the owning player's color
+  Art; Walls remap to the owning player's color
 
 ================
 Remappable Walls

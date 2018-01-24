@@ -1,4 +1,6 @@
-.. index:: Terrain; Destroyable cliffs can be destroyed by non-particle weapons.
+.. index::
+  Terrain; Destroyable cliffs can be destroyed by non-particle weapons
+  Universe; Destroyable cliffs work again
 
 ==================
 Destroyable Cliffs

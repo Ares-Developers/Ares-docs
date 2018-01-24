@@ -9,6 +9,8 @@ A workaround using a fake super weapon was possible, but it did not work well.
 .. versionadded:: 0.8
 
 
+.. index:: Toggle Power; Keyboard command
+
 Keyboard Command
 ----------------
 
@@ -23,8 +25,10 @@ the original :game:`Yuri's Revenge`, which didn't have this command available.
 :tagdef:`[General]TogglePowerAllowed=boolean`
   Whether Toggle Power can be used. Defaults to :value:`no`.
 
-.. index:: Toggle Power; Keyboard command
 
+.. index::
+  Toggle Power; Cursors
+  Mouse Cursors; Toggle Power cursors
 
 Cursors
 -------
@@ -38,8 +42,10 @@ and either :tag:`Power` is less than :value:`0` or :tag:`Powered=yes`.
 
 :value:`NoTogglePower`: Shown if the building's power cannot be toggled.
 
-.. index:: Toggle Power; Customizable cursors
 
+.. index::
+  Toggle Power; Overlay image for powered down buildings
+  Art; Toggle Power image for powered down buildings
 
 Power Off Overlay Animation
 ---------------------------
@@ -53,8 +59,10 @@ are moved to be shown simultaneously.
 
 :file:`poweroff.shp` is drawn using the :file:`mousepal.pal` palette.
 
-.. index:: Toggle Power; Overlay image for powered down buildings
 
+.. index::
+  Toggle Power; AI can cope with low power
+  AI; Toggle power if on low power
 
 AI Support
 ----------
@@ -79,5 +87,3 @@ off earlier than power consuming buildings that are not base defenses.
   Defines the delay between power checks. This makes AI players not respond
   immediately to power level changes. Values less than :value:`0` deactivate
   this logic. Defaults to :value:`45`.
-
-.. index:: Toggle Power; AI can cope with low power

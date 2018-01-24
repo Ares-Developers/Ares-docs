@@ -1,5 +1,5 @@
-.. index:: Alphalights; Alpha lights will now move with the object they are attached to.
-.. index:: Alphalights; Alpha lights can now have multiple facings.
+.. index:: Alpha Lights; Will now move with the object they are attached to
+.. index:: Alpha Lights; Can now have multiple facings
 
 ===================
 Moving Alpha Lights

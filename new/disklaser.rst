@@ -1,3 +1,7 @@
+.. index::
+  Disk Lasers; Animations and Bright
+  Weapons; Disk Lasers with animations and Bright
+
 Disk Laser Animations
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -12,7 +16,5 @@ because the Disk Laser weapons in :game:`Yuri's Revenge` have animations set.
 :tagdef:`[AudioVisual]DiskLaserAnimEnabled=boolean`
   Whether Disk Lasers should display an animation from their warhead's
   :tag:`AnimList`. Defaults to :value:`no`.
-
-.. index:: Weapons; Disk Lasers support animations and Bright=
 
 .. versionadded:: 0.A

@@ -1,3 +1,5 @@
+.. index:: Universe; DropPod reinforcements
+
 :captiontag:`Type=DropPod`
 ``````````````````````````
 
@@ -51,7 +53,5 @@ the super weapon stops to place more units.
 
 See :doc:`Drop Pods </new/droppod>` for information about the global defaults
 and other related additions.
-
-.. index:: Super Weapons; DropPod reinforcements.
 
 .. versionadded:: 0.7

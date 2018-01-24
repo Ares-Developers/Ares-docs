@@ -1,4 +1,6 @@
-.. index:: Savegames; Crates will no longer disappear after loading a savegame
+.. index::
+  Savegames; Crates will no longer disappear after loading
+  Crates; Disappearing after loading a savegame
 
 ====================================
 Crates Disappear When Loading A Game

@@ -1,3 +1,5 @@
+.. index:: Crashes; CPU too fast for the game
+
 ==================
 Crash on Fast CPUs
 ==================
