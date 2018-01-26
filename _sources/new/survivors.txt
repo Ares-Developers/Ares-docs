@@ -13,6 +13,10 @@ The following flags control the percent chance of a survivor being spawned, and
 the type of unit that that survivor will be.
 
 
+
+  single: TechnoTypes; Crew, pilots, or survivors
+  Crew; Survivors per side
+
 Units and Buildings
 
 
@@ -36,6 +40,12 @@ Units and Buildings
     versions. If you want to eject Technician from units, you have to
     manually set Crew.TechnicianChance.
 
+
+
+  Vehicles; Chance for pilots and/or passengers to emerge when destroyed
+  Aircraft; Chance for pilots and/or passengers to emerge when destroyed
+  Passengers; Chance to survive when transport destroyed
+  Transports; Chance for pilots and/or passengers to survive when destroyed
 
 Unit-specific
 
@@ -61,8 +71,8 @@ Unit-specific
 
 [Unit]Survivor.ElitePassengerChance=integer between 0 and 100
   Determines the percent chance that each of the unit's passengers (if any) will
-  survive. Rookie/Veteran/Elite refers to the veteran level of the transport
-  unit -- a unit with a higher veteran level could be made to have a greater (or
+  survive. Rookie/Veteran/Elite refer to the veteran level of the transport unit
+  -- a unit with a higher veteran level could be made to have a greater (or
   lesser) chance of allowing its passengers to survive. Passengers will be
   spawned in the cells around the destroyed unit and, so, if these cells are not
   clear then the passengers will not be spawned.
@@ -85,10 +95,13 @@ Spawned pilots will be spawned with 50% of their maximum health and the same
 amount of experience as the destroyed unit had. Passengers will emerge with both
 their health and their experience unchanged.
 
- Percent chance for pilots and/or passengers to emerge/parachute from destroyed vehicles/aircraft.
-
  0.1
 
+
+
+  Crew; Customizable building crew
+  Crew; Engineer spawn chance for buildings
+  Engineer; Spawn chance for building crew
 
 Building-specific
 
@@ -104,8 +117,5 @@ survivors is halved. At least one survivor is spawned, but no more than five.
   crew member. If the building has been captured, engineers are not allowed to
   be spawned regardless of this setting. Defaults to 25 if
   Factory=BuildingType, to 0 otherwise.
-
- Crew; Customizable buiding crew.
- Crew; Engineer spawn chance for buildings.
 
  0.5

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Gunner IFVs &mdash; Ares 0.E documentation</title>
+    <title>Gunner IFVs &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="../index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Hard-coded Unit Properties" href="hardcodedunitproperties.html" />
     <link rel="prev" title="Gattling Enhancements" href="gattlingcycle.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="gattlingcycle.html" title="Gattling Enhancements"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -93,29 +93,29 @@ passenger. While it was quite versatile for players and while it supported some
 customization for modders, this logic added in <span class="game docutils literal">Red Alert 2</span> was rather
 rigidly hardcoded internally. <span class="game docutils literal">Ares</span> changes this.</p>
 <div class="section" id="multiple-ifvs">
-<h2>Multiple IFVs<a class="headerlink" href="#multiple-ifvs" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2>Multiple IFVs<a class="headerlink" href="#multiple-ifvs" title="Permalink to this headline">¶</a></h2>
 <p>The <span><code class="docutils literal"><span class="pre">[FV]</span></code></span> was the only unit to be checked for the special turret and
 weapon flags, such as <span><code class="docutils literal"><span class="pre">SniperTurretIndex</span></code></span>. With <span class="game docutils literal">Ares</span>, all
 <span class="type docutils literal">VehicleTypes</span> with <span><code class="docutils literal"><span class="pre">Gunner=yes</span></code></span> set will read those flags. This
 means that you can now have multiple types of IFV.</p>
-<div class="versionadded" id="index-0">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.1.</span></p>
 </div>
 </div>
 <div class="section" id="more-turrets-and-weapons">
-<h2>More Turrets and Weapons<a class="headerlink" href="#more-turrets-and-weapons" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2>More Turrets and Weapons<a class="headerlink" href="#more-turrets-and-weapons" title="Permalink to this headline">¶</a></h2>
 <p><span class="game docutils literal">Ares</span> supports more than 18 different turret and barrel voxels, which
 means <span><code class="docutils literal"><span class="pre">TurretCount</span></code></span> now can be set to values greater than <cite>18</cite>.
 <span><code class="docutils literal"><span class="pre">TurretCount</span></code></span> values greater than <cite>127</cite> are not supported, though.</p>
 <p>Also, units having multiple turrets enabled by the use of <span><code class="docutils literal"><span class="pre">TurretCount</span></code></span>
 have been expanded to support more than 18 weapons along with their elite
 counterparts, thus more than 18 different <span><code class="docutils literal"><span class="pre">IFVMode</span></code></span>s are now possible.</p>
-<div class="versionadded" id="index-1">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.E.</span></p>
 </div>
 </div>
 <div class="section" id="defining-ifv-modes">
-<h2>Defining IFV Modes<a class="headerlink" href="#defining-ifv-modes" title="Permalink to this headline">¶</a></h2>
+<span id="index-2"></span><h2>Defining IFV Modes<a class="headerlink" href="#defining-ifv-modes" title="Permalink to this headline">¶</a></h2>
 <p><span class="game docutils literal">Ares</span> replaces the original parsing of the tags mapping weapons to
 turrets like <span><code class="docutils literal"><span class="pre">InitiateWeaponIndex</span></code></span> and <span><code class="docutils literal"><span class="pre">InitiateTurretIndex</span></code></span>. No
 longer are the values applied even though the weapon index is <cite>-1</cite> (which
@@ -151,12 +151,12 @@ passenger type&#8217;s name and the transport&#8217;s name.</p>
 <cite>X</cite> is active. <cite>X</cite> is the number from <cite>1</cite> to
 <span><code class="docutils literal"><span class="pre">WeaponCount</span></code></span>. If not set, defaults to the original behavior.</dd>
 </dl>
-<div class="versionadded" id="index-2">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.E.</span></p>
 </div>
 </div>
 <div class="section" id="voiceifvrepair">
-<h2><span><span class="type">VoiceIFVRepair</span></span><a class="headerlink" href="#voiceifvrepair" title="Permalink to this headline">¶</a></h2>
+<span id="index-3"></span><h2><span><span class="type">VoiceIFVRepair</span></span><a class="headerlink" href="#voiceifvrepair" title="Permalink to this headline">¶</a></h2>
 <p>In <span class="game docutils literal">Ares</span> you can specify the <span><code class="docutils literal"><span class="pre">VoiceIFVRepair</span></code></span> tag on any IFV unit.</p>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[VehicleType]►VoiceIFVRepair=</span></code><span class="type definition"> (soundmd entry)</span></span></dt>
@@ -165,7 +165,7 @@ this value is not set, <span><code class="docutils literal"><span class="pre">[V
 <span><code class="docutils literal"><span class="pre">[AudioVisual]►VoiceIFVRepair</span></code></span> for <span><code class="docutils literal"><span class="pre">[FV]</span></code></span>, otherwise to
 <cite>none</cite>.</dd>
 </dl>
-<div class="versionadded" id="index-3">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.2.</span></p>
 </div>
 </div>
@@ -189,12 +189,12 @@ this value is not set, <span><code class="docutils literal"><span class="pre">[V
         <li class="right" >
           <a href="gattlingcycle.html" title="Gattling Enhancements"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

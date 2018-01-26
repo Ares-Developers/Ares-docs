@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>User Interface and Loading Theme &mdash; Ares 0.E documentation</title>
+    <title>User Interface and Loading Theme &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="../../index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="../../index.html" />
     <link rel="up" title="Sides &amp; Countries" href="index.html" />
     <link rel="next" title="Score Screens and Themes" href="scorescreens.html" />
     <link rel="prev" title="Side Defaults" href="defaultside.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="defaultside.html" title="Side Defaults"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Sides &amp; Countries</a> &raquo;</li> 
       </ul>
@@ -91,7 +91,7 @@
   <div class="section" id="user-interface-and-loading-theme">
 <h1>User Interface and Loading Theme<a class="headerlink" href="#user-interface-and-loading-theme" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="sidebar">
-<h2>Sidebar<a class="headerlink" href="#sidebar" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2>Sidebar<a class="headerlink" href="#sidebar" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[Side]►Sidebar.MixFileIndex=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>The MIX file number to use for the sidebar (e.g. <cite>1</cite> for the Allied
@@ -100,12 +100,12 @@ sidec01.mix, <cite>2</cite> for the Soviet sidec02.mix).</dd>
 <dd>Whether or not to use the Yuri sidebar file names (sidec02md.mix and the
 Yuri-specific files within that MIX).</dd>
 </dl>
-<div class="versionadded" id="index-0">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.1.</span></p>
 </div>
 </div>
 <div class="section" id="text-colors">
-<h2>Text Colors<a class="headerlink" href="#text-colors" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2>Text Colors<a class="headerlink" href="#text-colors" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[Side]►ToolTipColor=</span></code><span class="type definition"> (R,G,B)</span></span></dt>
 <dd>Interface text and border color for tool tips, the credits counter, and other
@@ -118,12 +118,12 @@ for side <cite>ThirdSide</cite>, to 11th color scheme otherwise. In the unmodifi
 game, the colors are <cite>DarkRed</cite>, <cite>DarkSky</cite> and <cite>DarkBlue</cite>
 respectively.</dd>
 </dl>
-<div class="versionadded" id="index-1">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.4.</span></p>
 </div>
 </div>
 <div class="section" id="dialogs">
-<h2>Dialogs<a class="headerlink" href="#dialogs" title="Permalink to this headline">¶</a></h2>
+<span id="index-2"></span><h2>Dialogs<a class="headerlink" href="#dialogs" title="Permalink to this headline">¶</a></h2>
 <p>The side specific dialog background is used when a Reconnection error occurs or
 while loading or saving a game.</p>
 <p><span><code class="definition docutils literal"><span class="pre">[Side]►DialogBackground.Image=</span></code><span class="type definition"> (filename, *including* the .shp extension)</span></span>
@@ -141,7 +141,7 @@ Requires <span><code class="docutils literal"><span class="pre">DialogBackground
 </div>
 </div>
 <div class="section" id="loading-theme">
-<h2>Loading Theme<a class="headerlink" href="#loading-theme" title="Permalink to this headline">¶</a></h2>
+<span id="index-3"></span><h2>Loading Theme<a class="headerlink" href="#loading-theme" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[Side]►LoadingTheme=</span></code><span class="type definition"> (theme id)</span></span></dt>
 <dd>The theme playing for a player of this side while the multiplayer match is
@@ -150,9 +150,9 @@ loading. Defaults to <cite>LOADING</cite>.</dd>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 0.7.</span></p>
 </div>
-</div>
+<span class="target" id="sides-evatag"></span></div>
 <div class="section" id="eva">
-<span id="sides-evatag"></span><h2>EVA<a class="headerlink" href="#eva" title="Permalink to this headline">¶</a></h2>
+<span id="index-4"></span><h2>EVA<a class="headerlink" href="#eva" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[Side]►EVA.Tag=</span></code><span class="type definition"> (EVA Type)</span></span></dt>
 <dd><p class="first">Name of the EVA Type tag to load from <code class="file docutils literal"><span class="pre">evamd.ini</span></code> for this side&#8217;s EVA
@@ -163,7 +163,7 @@ side <cite>Nod</cite>, to <cite>Yuri</cite> for side <cite>ThirdSide</cite>, to
 here.</p>
 </dd>
 </dl>
-<div class="versionadded" id="index-2">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.4.</span></p>
 </div>
 </div>
@@ -187,13 +187,13 @@ here.</p>
         <li class="right" >
           <a href="defaultside.html" title="Side Defaults"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Sides &amp; Countries</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

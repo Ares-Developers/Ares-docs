@@ -1,4 +1,6 @@
- DestroyAnim; DestroyAnims don't cause reconnection errors anymore.
+
+  DestroyAnim; Don't cause Reconnection Errors
+  Reconnection Errors; DestroyAnim
 
 
 DestroyAnim\ s Cause Reconnection Errors

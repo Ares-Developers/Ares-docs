@@ -1,3 +1,7 @@
+
+  Veterancy; New abilities
+  TechnoTypes; Veteran and elite abilities
+
 Veteran and Elite Abilities
 
 
@@ -29,7 +33,5 @@ This is a list of all new veteran and elite abilities Ares supports.
   Makes units immune to Psychedelic=yes and MindControl=yes
   weapons like ImmuneToPsionics=yes. The Psychic Dominator can still
   override this effect just like the unconditional ImmuneToPsionics=yes.
-
- Veterancy; New abilities
 
  0.E

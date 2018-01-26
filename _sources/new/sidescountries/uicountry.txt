@@ -1,6 +1,12 @@
 User Interface
 
 
+
+  Countries; Status bar text when selecting country
+  Countries; Shuffle the countries in the selection lists
+  Countries; Chance of being selected in multiplayer games
+  Multiplayer; Chance of country being selected randomly
+
 Display and Selection Chance
 
 
@@ -32,11 +38,17 @@ Display and Selection Chance
  0.D
 
 
+
+  Countries; Flags and observer graphics
+  Interface; Country flags and observer graphics
+
 Flags and Observer Graphics
 
 
 [Country]File.Flag=filename, *including* the .pcx extension
-  The PCX file to use for the country's flag, in the format "filename.pcx".
+  The PCX file to use for the country's flag, in the format "filename.pcx". If
+  the flag is not set or the file does not exist, a warning is written into the
+  debug log.
 [Country]File.ObserverBackground=filename, *including* the .pcx or .shp extension
   The SHP or PCX file to use for the country's background in observer mode, in
   the format "filename.shp" or "filename.pcx". The size should be 121x96. The
@@ -51,6 +63,12 @@ Flags and Observer Graphics
 
  0.1
  0.3
+
+
+
+  Countries; Loading screens
+  Interface; Multiplayer country loading screens
+  Themes; Country-specific multiplayer loading theme
 
 Loading Screen
 
@@ -92,6 +110,8 @@ Screen.
  0.1
  0.7
 
+
+ Countries; Taunts
 
 Taunts
 

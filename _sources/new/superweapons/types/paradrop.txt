@@ -3,7 +3,7 @@ Type=ParaDrop and Type=AmerParaDrop
 
 Default values for general tags:
 
-[SuperWeapon]SW.AITargeting=enum
+[SuperWeapon]SW.AITargeting=enumeration
   Defaults to ParaDrop.
 [SuperWeapon]Cursor=mouse cursor
   Defaults to ParaDrop.

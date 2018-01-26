@@ -1,3 +1,7 @@
+
+  Gates; Sounds per building
+  Buildings; Gate sounds
+
 Gates
 
 
@@ -14,7 +18,5 @@ options customizable.
   The sound played when this gate opens. Defaults to [AudioVisual]►GateDown.
 [BuildingType]GateUpSound=sound name
   The sound played when this gate closes. Defaults to [AudioVisual]►GateUp.
-
- Gates; Per-Building gate sounds.
 
  0.4

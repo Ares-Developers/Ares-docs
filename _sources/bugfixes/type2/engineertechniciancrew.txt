@@ -1,5 +1,6 @@
- Engineer, Crew; Crew with Engineer=yes causes infinite loop.
- Crew; Undefined crew causes crash.
+
+  Engineer; Crew with Engineer=yes causes infinite loop
+  Crew; Crew with Engineer=yes causes infinite loop
 
 
 Crew with Engineer=yes could freeze the game
@@ -13,6 +14,11 @@ Engineer= and others) with Engineer=yes, this will never succeed
 and the game will freeze.
 
  0.3
+
+
+
+  single: Crew; Undefined Technician, Engineer, or Crew causes crash
+  single: Crashes; Undefined Technician, Engineer, or Crew causes crash
 
 
 Crash with undefined Engineer, Technician and Crew

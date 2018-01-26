@@ -1,9 +1,11 @@
+ single: Super Weapons; SpyPlane can now specify which AircraftType, how many, and what mission to perform.
+
 Type=SpyPlane
 
 
 Default values for general tags:
 
-[SuperWeapon]SW.AITargeting=enum
+[SuperWeapon]SW.AITargeting=enumeration
   Defaults to ParaDrop.
 [SuperWeapon]Cursor=mouse cursor
   Defaults to SpyPlane.
@@ -19,9 +21,5 @@ Spy Plane specific tags:
 [SuperWeapon]SpyPlane.Mission=mission
   The mission that the aircraft will be sent on (Guard,
   Attack, Move, etc). Defaults to SpyPlane Approach.
-
- Super Weapons; SpyPlane can now specify which AircraftType, how many,
-  and what mission to perform.
-
 
  0.1

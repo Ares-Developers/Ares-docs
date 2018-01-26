@@ -6,6 +6,8 @@ One is the distance to the building firing the super weapon at the target, the
 second is the distance of a certain unit to the target area, which is called a
 designator.
 
+ Super Weapons; Limit minimum and maximum firing range
+
 Range around Launch Site
 
 
@@ -27,10 +29,10 @@ shown.
   providing this super weapon. Values below 0.0 mean type-specific
   default, which usually disables this range check. Defaults to -1.0.
 
- Super Weapons; Limit minimum and maximum firing range.
-
  0.8
 
+
+ Super Weapons; Designators providing targets around themselves
 
 Designators
 
@@ -55,10 +57,10 @@ The designator range can be customized for each TechnoType individually.
   weapons requiring this object as designator. Defaults to
   [TechnoType]►Sight.
 
- Super Weapons; Designators providing targets.
-
  0.8
 
+
+ Super Weapons; Inhibitors disallow targeting around themselves
 
 Inhibitors
 
@@ -89,7 +91,5 @@ The inhibitor range can be customized for each TechnoType individually.
   Range in cells around the unit or structure that becomes untargetable by super
   weapons having this object set as inhibitor. Defaults to
   [TechnoType]►Sight.
-
- Super Weapons; Inhibitors disallowing targeting.
 
  0.9

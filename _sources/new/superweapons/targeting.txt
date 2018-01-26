@@ -4,10 +4,12 @@ Targeting
  Super Weapons; Customize valid targets.
 
 
+ Super Weapons; Auto-firing using AI rules
+
 General Settings
 
 
-These settings allow to enable AI targeting even for human players.
+These settings allow enabling AI targeting even for human players.
 
 [SuperWeapon]SW.AutoFire=boolean
   Sets whether this super weapon should be launched automatically even for human
@@ -27,6 +29,9 @@ These settings allow to enable AI targeting even for human players.
  0.2
 
 
+
+  Super Weapons; Fire into shroud made optional
+
 Manual Target Selection
 
 
@@ -36,7 +41,7 @@ These settings only apply to human players.
   Whether or not this super weapon is allowed to fire into an unexplored area of
   the map. Default is yes.
 
-[SuperWeapon]SW.RequiresTarget=enum none|land|water|empty|infantry|units|buildings
+[SuperWeapon]SW.RequiresTarget=enumeration none|land|water|empty|infantry|units|buildings
   Which items this super weapon can fire upon. Hovering above an allowed item
   will show the Cursor, otherwise the player gets the NoCursor and
   it is not possible to launch the super weapon. For an example see
@@ -46,20 +51,23 @@ These settings only apply to human players.
     SW.AffectsTarget= are set to mutually exclusive values not allowing
     the super weapon to affect anything.
 
-[SuperWeapon]SW.RequiresHouse=enum none|owner|allies|team|enemies|all
+[SuperWeapon]SW.RequiresHouse=enumeration none|owner|allies|team|enemies|all
   Which house's items this super weapon can fire upon.
-
- Super Weapons; FireIntoShroud optional.
 
  0.2
 
+
+
+  Super Weapons; Automatic targeting rules
+  Super Weapons; List of AI Targeting Modes
+  AI; Super weapon target selection
 
 Automatic Target Selection
 
 
 Define the way the AI selects eligible targets to fire the super weapon at.
 
-[SuperWeapon]SW.AITargeting=enum SW Targeting Type
+[SuperWeapon]SW.AITargeting=enumeration SW Targeting Type
   Select one of the following values to define how the AI will use this super
   weapon:
 
@@ -143,12 +151,12 @@ Define the way the AI selects eligible targets to fire the super weapon at.
   favorite enemy.
 
 
-[SuperWeapon]SW.AIRequiresTarget=enum none|land|water|empty|infantry|units|buildings|all
+[SuperWeapon]SW.AIRequiresTarget=enumeration none|land|water|empty|infantry|units|buildings|all
   Specifies which targets will be considered eligible by AI players or human
   owned automatically fired super weapons. The default value depends on the
   SW.AITargeting setting. See the table below.
 
-[SuperWeapon]SW.AIRequiresHouse=enum owner|allies|team|enemies|others|all
+[SuperWeapon]SW.AIRequiresHouse=enumeration owner|allies|team|enemies|others|all
   Specifies which houses will be considered eligible by AI players or human
   owned automatically fired super weapons. The default value depends on the
   SW.AITargeting setting. See the table below.
@@ -173,10 +181,9 @@ builds or loses buildings. The base center can be manually set and cleared using
 map actions 137 and 138 respectively.
 
 The **preferred target by type** is set by map action 35. The game looks at the
-first team on them map owned by the firing player and has the team leader
-acquire a target of the preferred type. A value of 1 means to use the
-special firing behavior, which usually is Ion Cannon targeting or base center
-selection. 
+first team on the map owned by the firing player and has the team leader acquire
+a target of the preferred type. A value of 1 means to use the special
+firing behavior, which usually is Ion Cannon targeting or base center selection. 
 
  Currently, Ares does not support preferred types other than
   1. The super weapons might not check ranges, designators, and

@@ -1,4 +1,4 @@
- Actions; SellUnit super weapon no longer causes IEs with Tank Bunker.
+ Super Weapons; SellUnit super weapon no longer causes IEs with Tank Bunker
 
 
 Action=SellUnit

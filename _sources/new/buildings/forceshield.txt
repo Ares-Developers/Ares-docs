@@ -1,3 +1,7 @@
+
+  Force Shield; Effect duration per building
+  Buildings; Force Shield effect duration
+
 Force Shield
 
 
@@ -11,8 +15,6 @@ BuildingType.
 
    Buildings with a ForceShield.Modifier value of 0.0
     or less are not eligible to fire a Force Shield super weapon on.
-
- Force Shield; Modify the duration per building.
 
  0.6
  0.8

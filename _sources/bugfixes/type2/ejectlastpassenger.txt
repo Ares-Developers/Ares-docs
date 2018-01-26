@@ -1,4 +1,4 @@
- Transports; Turret-changing and gattling transports will eject all passengers.
+ Transports; Turret-changing and gattling transports will eject all passengers
 
 
 Passengers and TurretCount

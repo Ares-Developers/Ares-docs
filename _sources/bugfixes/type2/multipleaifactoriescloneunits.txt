@@ -1,4 +1,4 @@
- AI; Control over AI's multiple factory-cloning behaviour.
+ AI; Control over AI's multiple factory-cloning behavior
 
 
 Multiple AI Factories Clone Units
@@ -12,6 +12,9 @@ build. This behavior can be disabled in Ares, by the following flag:
 
 [GlobalControls]AllowParallelAIQueues=boolean
 	Set this to no to disable AI factory cloning. Defaults to yes.
+
+
+ AI; Force AI to respect BuildLimit
 
 
 AI ignores BuildLimit when creating teams

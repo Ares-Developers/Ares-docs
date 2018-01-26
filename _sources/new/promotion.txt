@@ -1,6 +1,8 @@
 Promotion settings
 
 
+ Art; Global VeteranFlashTimer
+
 Global VeteranFlashTimer
 
 
@@ -12,8 +14,10 @@ EliteFlashTimer.
   The number of frames a newly veteran unit or structure will flash for.
   Defaults to 0.
 
- AudioVisual; Global VeteranFlashTimer
 
+
+  Veterancy; Promotion customizations
+  TechnoTypes; Promotion customizations
 
 Sounds, EVA and Flashing
 
@@ -45,10 +49,12 @@ when the unit or structure is promoted.
   The message played when a unit or structure of this type is promoted to
   elite level. Defaults to EVA_UnitPromoted.
 
- TechnoTypes; Promotion customizations
-
  0.C
 
+
+
+  OpenTopped; Promote passengers as if they are part of the transport
+  Veterancy; Promote passengers as if they are part of the transport
 
 Promote all Passengers
 
@@ -70,7 +76,5 @@ despite being much cheaper than the vehicle and thus usually promoted earlier.
    The passengers' veterancy is discarded when the vehicle is promoted.
     This should not be used on manually controllable transports, because they
     could degrade elite passengers to veterans, for example.
-
- OpenTopped; Promote passengers as if they are part of the transport
 
  0.E

@@ -1,3 +1,5 @@
+ Interface; Change menu button functions
+
 Menu Button Customization
 
 
@@ -56,7 +58,5 @@ Examples:
 + You can tell the player of your team if you define
   ViewCreditsButton=message and set the string
   TXT_VIEWCREDITSBUTTON_MSG to your short copyright message.
-
- Interface; Menu button customization.
 
  0.2

@@ -1,4 +1,4 @@
- Aircrafts; Aircraft can now attack other aircraft if given a weapon with an AA=yes projectile.
+ Aircraft; Attack other aircraft if given a weapon with an AA=yes projectile
 
 
 Air-To-Air Combat

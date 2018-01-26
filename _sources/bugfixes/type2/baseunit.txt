@@ -1,4 +1,4 @@
- Sides; BaseUnit can now hold more than 3 vehicles.
+ Sides; BaseUnit can now hold more than 3 vehicles
 
 
 BaseUnit

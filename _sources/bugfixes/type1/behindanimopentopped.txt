@@ -1,10 +1,12 @@
- OpenTopped; Behind anim showing for OpenTopped passengers.
+
+  OpenTopped; Behind anim showing for OpenTopped passengers
+  Bugs; Passengers of OpenTopped vehicles also show a Behind anim
 
 
 Behind Anim and OpenTopped Transports
 
 
 Behind animations would even be shown for passengers in OpenTopped
-vehicles. This does not happen any more.
+vehicles. This does not happen anymore.
 
  0.A

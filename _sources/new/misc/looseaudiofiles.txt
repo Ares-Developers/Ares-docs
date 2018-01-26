@@ -1,3 +1,5 @@
+.. index: Sounds; WAV files loose in the folder or in the MIX files
+
 Loose Audio Files
 
 
@@ -5,8 +7,6 @@ The game can now load sounds from any wave files the game supports - they no
 longer have to be packed into a bag file. The files can be read from the game's
 folder or from mix files. Sounds should be referenced in soundmd.ini
 just the same as always (without the .wav extension).
-
-.. index: Sounds; WAV files loose in the folder or in the MIX files can be played without having to include them in audio.bag.
 
  0.1
  0.A

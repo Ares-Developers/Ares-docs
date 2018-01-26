@@ -1,3 +1,5 @@
+ Crates; Random money amount
+
 Crate Settings
 
 
@@ -8,7 +10,5 @@ amount randomly by 900 credits. This can be customized using this new tag.
   A random money amount between 0 and this value is added on money
   crate bonuses. To make the granted money amount deterministic, set this to
   0. Defaults to 900.
-
- Crates; Configure the random money amount
 
  0.C

@@ -1,4 +1,6 @@
- Mutation; Stuck mutation animations are deleted (thus preventing a memory leak).
+
+  Mutation; Stuck mutation animations are removed
+  Coding; Stuck mutation animations leak memory
 
 
 Frozen Mutation (MakeInfantry) Animations

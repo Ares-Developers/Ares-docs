@@ -1,3 +1,7 @@
+
+  Tech Structures; Building upgrades support Oil Derrick logic
+  Upgrades; Oil Derrick logic support
+
 Oil Derricks (ProduceCash)
 
 
@@ -18,12 +22,12 @@ captured by a MultiplayPassive=yes house.
 Unlike in the original game, ProduceCashStartup does not have to be
 non-null for ProduceCashdelay and ProduceCashAmount to work.
 
- Tech Structures; Oil Derrick support for building upgrades
-
  0.9
 
  0.B
 
+
+ Tech Structures; Display the produced cash amount
 
 Display Cash Produced
 
@@ -44,12 +48,10 @@ move up slightly.
 
 At the moment the colors are hardcoded to green for positive amounts and red for
 negative amounts. the format is hardcoded to the amount with a plus or minus
-sign prepended.
+sign prefixed.
 
  This feature might be expanded or changed in the future. Do not
   take the appearance of these texts for granted. Colors, positions, and
   movement speed might change.
-
- Tech Structures; Oil Derrick can show the produced cash amount
 
  0.B

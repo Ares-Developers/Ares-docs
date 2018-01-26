@@ -7,25 +7,37 @@
 Ares Documentation
 
 
+Introduction
+
+Ares is the new tool to extend the capabilities of Yuri's
+Revenge and to fix bugs in the game engine. It was conceived by pd near the end
+of 2007, developed over the years by The Ares Contributors and
+first released to the public in 2010.
+
+This documentation is aimed primarily at mod authors wishing to make use of the
+new functionality that Ares offers.
+
+Ares is incorporated into Yuri's Revenge via the use of
+Syringe, a program initially developed by pd to 'inject' DLL code into a
+running executable without modifying the executable file itself.
+
+In this case, the Ares DLL is injected into the Yuri's Revenge
+1.001 main executable, gamemd.exe. The properly patched original CD
+version as well as the compilations The First Decade and The
+Ultimate Collection are supported.
+
+Syringe can be run directly via a command line prompt or automatically
+run from external launcher applications provided by a mod. See the respective
+documentations of those programs for further details.
+
+
 Table of Contents
 
 
 
-	:glob:
-	:hidden:
+	:maxdepth: 1
 	
-	intro
-	whatsnew
-	migration
-	bugfixes/index
-	restored/index
-	new/index
-	ui-features/index
-	*
-
-
-
-	intro
+	notes
 	whatsnew
 	migration
 
@@ -47,8 +59,3 @@ Table of Contents
 
 * Overview of Ares's Bugfixes and Features
 * ...
-
- intro.rst
-
-
-

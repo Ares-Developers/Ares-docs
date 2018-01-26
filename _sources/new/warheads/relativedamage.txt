@@ -1,3 +1,5 @@
+ Warheads; MAD Tank style relative damage
+
 MAD Tank Style Relative Damage
 
 
@@ -36,7 +38,5 @@ DeployedDamage for infantry. Suppressing parasites is also not supported.
 
 Relative Damage considers Organic=yes vehicles as infantry and
 ConsideredAircraft=yes vehicles as aircraft.
-
- Warheads; MAD Tank style Relative Damage
 
  0.E

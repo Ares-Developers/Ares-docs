@@ -1,3 +1,5 @@
+ Super Weapons; Detonate any warhead at target cell
+
 Type=GenericWarhead
 
 
@@ -13,14 +15,11 @@ Default values for general tags:
   weapon is fired. Note the warhead is detonated in a cell, not on a unit, so
   chances are you will want to set a CellSpread on the warhead to make
   sure the desired targets (especially InfantryTypes) are affected.
-[SuperWeapon]SW.AITargeting=enum
+[SuperWeapon]SW.AITargeting=enumeration
   Defaults to Offensive.
 
 Don't forget that the BuildingType will need DamageSelf=yes set
 (just like the Soviet Nuclear Missile Silo) if you want the warhead to be
 capable of damaging the firing building.
-
- Super Weapons; New super weapon type: GenericWarhead (detonate any
-  warhead at target cell).
 
  0.1

@@ -1,25 +1,5 @@
-Introduction
-
-Ares is the new tool to extend the capabilities of Yuri's
-Revenge. It was conceived by pd near the end of 2007, and is currently in an
-early development and testing cycle.
-
-This documentation is aimed primarily at Ares testers, as Ares
-is a work in progress and subject to many further changes. However, the
-documentation is also aimed at mod authors wishing to make use of the new
-functionality that Ares offers.
-
-Ares is incorporated into Yuri's Revenge via the use of
-Syringe, a program developed by pd to 'inject' DLL code into a running
-executable without modifying the executable itself. In this case, the
-Ares DLL is injected into the Yuri's Revenge 1.001 main
-executable, gamemd.exe.
-
-Syringe can be run directly via a command line prompt, or automatically
-using Launch Base. See the respective documentations of those programs
-for further details.
-
 Compatibility Notes
+
 
 RockPatch/NPatch
 
@@ -29,6 +9,10 @@ its code injected into Yuri's Revenge at very specific points, and
 modifications to the executable change the locations of these points. This would
 lead to Ares's code being injected in the wrong places, leading to
 unforeseeable, bad consequences.
+
+In case Ares detects a game version mismatch or a third party patch
+known to be incompatible, it will automatically prevent Syringe to inject it
+into the game.
 
 Comodo Internet Security
 
@@ -72,21 +56,6 @@ should re-enable the service as quickly as possible. Thanks to FS-21
 .
 
 
-Known Major Issues
-
-Save Games
-
-Ares does not support loading save games or scripted IPB videos that
-were created with any other version of the game than the very same version of
-Ares (not even the original Yuri's Revenge save games are
-supported).
-
- Even adding load/save functionality for the exact same Ares
-	version is a huge and complex undertaking, so while the developers would like
-	to add loading and saving one day, it will not happen in the foreseeable
-	future.
-
-
 Required Changes For Mods Using Ares
 
 Unfortunately, Ares will not simply "work" without changes to the
@@ -99,10 +68,6 @@ complex, ultimately wasting time that would be better spent on other tasks.
 This section details the modifications you'll most likely need to make to ensure
 your mod does not receive any unexpected changes from simply being run whilst
 Ares is active.
-
-In future these changes will be provided as extensions to the standard files
-that are included with the YR Unofficial 1.002 Mini-Patch Developer's
-Pack.
 
 rulesmd.ini
 

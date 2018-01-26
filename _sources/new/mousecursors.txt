@@ -1,6 +1,8 @@
 Mouse Cursors
 
 
+ Mouse Cursors; Defining a cursor
+
 Defining Cursors
 
 
@@ -46,10 +48,12 @@ comma-separated values as follows:
     12345 by either Center or Middle, and
     54321 by either Right or Bottom.
 
- Mouse Cursors; Defining a Cursor
-
  0.D
 
+
+
+  Mouse Cursors; List of default cursors
+  Mouse Cursors; New intrinsic named cursors
 
 Default Cursors
 

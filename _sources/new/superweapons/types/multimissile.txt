@@ -12,7 +12,7 @@ Default values for general tags:
 [SuperWeapon]SW.ActivationSound=Sound
   The nuke warn siren played at the destination. Defaults to
   [AudioVisual]►DigSound.
-[SuperWeapon]SW.AITargeting=enum
+[SuperWeapon]SW.AITargeting=enumeration
   Defaults to Nuke.
 [SuperWeapon]Light.*=integer
   Default to Light.Ambient=200, Light.Red=175,

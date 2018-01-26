@@ -1,3 +1,5 @@
+ EVA; Create new EVA announcers
+
 EVA Types
 
 
@@ -26,7 +28,5 @@ you don't specify a filename for an EVA Type, no sound will play.
     GDI=cgdi053
 
 Now you are ready to use this new EVA Type. See EVA.Tag for Sides.
-
- EVA Types; Create new EVA announcers.
 
  0.4

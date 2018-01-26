@@ -1,3 +1,8 @@
+
+  Kill Driver; Neutralize vehicles
+  Warheads; Kill the driver of a vehicle
+  Universe; Kill drivers like Jarmen Kell or neutron rounds
+
 Killing Drivers
 
 
@@ -5,8 +10,6 @@ Requested as a "Jarmen Kell" functionality
 , this feature allows
 specific warheads to kill the driver of a vehicle instead of damaging
 it, and allows others to take over the now-neutral vehicle.
-
- Warheads; Warheads can be set to kill the driver of a vehicle, instead of damaging it.
 
  0.2
 
@@ -28,7 +31,7 @@ abilities, AffectsAllies, and AffectsEnemies.
 [Warhead]KillDriver.Owner=enumeration - civilian,special,neutral
   Specifies the house the units are assigned to. Defaults to special.
 [Warhead]KillDriver.KillBelowPercent=float
-  Specifies the percentage of health a unit can not exceed to have its driver
+  Specifies the percentage of health a unit cannot exceed to have its driver
   killed by a KillDriver=yes warhead. A unit above this health level
   is only damaged and the driver is not killed. Defaults to 100%.
 [Warhead]KillDriver.Chance=float - percentage
@@ -37,6 +40,10 @@ abilities, AffectsAllies, and AffectsEnemies.
 
 
 .. _killingdrivers-immunity:
+
+
+  Kill Driver; Protect drivers of vehicles
+  TechnoTypes; Driver can't be killed
 
 Protected Drivers
 
@@ -62,6 +69,10 @@ that ProtectedDriver.MinHealth is no longer checked), but not against
 damage or other special warhead effects.
 
 
+
+  Kill Driver; Reclaim vehicles
+  Infantry; Capture units that had their drivers killed
+
 Reclaim Vehicles
 
 
@@ -85,6 +96,3 @@ their driver killed.
   problems.
 
 See ... for more options that relate to CanDrive.
-
- Infantry; Capture units that had their drivers killed.
-

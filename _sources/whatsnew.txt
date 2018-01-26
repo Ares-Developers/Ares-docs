@@ -6,6 +6,10 @@ This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of Ares. Internal changes, optimizations
 and updates are mentioned here only if they are notable.
 
+ Ares 1.0
+
++ **Save Games** are supported again
+
  Ares 0.E
 
 + **Tunnel Networks** allow to move units between entrance buildings
@@ -134,7 +138,7 @@ and updates are mentioned here only if they are notable.
 
 + **Forest Fires** restored, optional per tree type
 
-+ **Advanced Rubble** expanded with customizable owner and inital health
++ **Advanced Rubble** expanded with customizable owner and initial health
 
 + **Animation tags** Scorch and Flamer have been restored
 
@@ -189,7 +193,7 @@ and updates are mentioned here only if they are notable.
 
  Ares 0.6
 
-+ **CellSpread** not limited to 11 any more, and buildings can define a
++ **CellSpread** not limited to 11 anymore, and buildings can define a
   maximum hit count
 
 + **Sight** values above 10 are supported

@@ -3,18 +3,21 @@ Prerequisites
 
 The prerequisite system has been enhanced in several ways. New flags are
 described below, and an issue has been resolved with regard to upgrades as
-prerequisites (see Type 2 fixes).
+prerequisites (see
+...).
+
+ Prerequisites; Require the map to be a specific theater (desert/snow/lunar/etc)
 
 Require Theater
 
 
-[Unit]Prerequisite.RequiredTheaters=list of theater names
-  The map theaters in which the unit is available. Defaults to all theaters. For
-  example, if only the SNOW theater were specified then the unit would
+[TechnoType]Prerequisite.RequiredTheaters=list of theater names
+  The map theaters in which the type is available. Defaults to all theaters. For
+  example, if only the SNOW theater were specified then the type would
   only be available on arctic maps. This allows you to implement, for example,
   the AlternateArcticArt functionality used on the Navy SEAL, but for all
-  unit types and all theaters (however this may present challenges for your AI).
-  The theater names are:
+  types and all theaters (however this may present challenges for your AI). The
+  theater names are:
 
     + TEMPERATE - most maps
     + SNOW - arctic/snowy maps
@@ -26,27 +29,26 @@ Require Theater
    \ PrerequisiteOverride does *not* override
     Prerequisite.RequiredTheaters.
 
- Prerequisites; Units can require the map to be a specific theater (desert/snow/lunar/etc).
-
  0.1
 
+
+ Prerequisites; Make an object unavailable if a listed building is owned
 
 Negative Prerequisites
 
 
-[Unit]Prerequisite.Negative=list of BuildingTypes
-  The buildings that preclude construction of the unit. If the player owns one
-  or more of the buildings on this list then the unit will not be available.
+[TechnoType]Prerequisite.Negative=list of BuildingTypes
+  The buildings that preclude construction of the type. If the player owns one
+  or more of the buildings on this list then the type will not be available.
   Defaults to none.
 
    \ PrerequisiteOverride does *not* override
     Prerequisite.Negative.
 
- Prerequisites; PrerequisiteNegative makes a unit unavailable if a
-  building on the list is owned.
-
  0.1
 
+
+ Prerequisites; Multiple separate prerequisite lists
 
 Multiple Alternative Prerequisites Lists
 
@@ -57,7 +59,7 @@ minimum of one of the prerequisite lists must be satisfied for this type to
 become buildable.
 
 For example, if you set Prerequisite=GAPILE,GATECH and
-Prerequisite.List1=NAHAND,NATECH then the unit will be available to any
+Prerequisite.List1=NAHAND,NATECH then the object will be available to any
 player who owns both an Allied Barracks and Battle Lab, or a Soviet Barracks and
 Battle Lab.
 
@@ -79,24 +81,23 @@ Battle Lab.
    \ Prerequisite.List0, if specified, overrides the existing
     Prerequisite flag.
 
- Prerequisites; Multiple separate prerequisite lists - a unit can 
-    require any one of several sets of buildings.
-
  0.1
 
+
+ Prerequisites; Require stolen tech 
 
 Require Stolen Technology
 
 
-[Unit]Prerequisite.StolenTechs=list of integers
+[TechnoType]Prerequisite.StolenTechs=list of integers
   The list of stealable technology types that must be stolen before this object
   can be built. See Stolen Technology for more
   information.
 
- Prerequisites; New StolenTech requirements.
-
  0.1
 
+
+ Prerequisites; Require building initially built by certain country
 
 Require Factory Built By Country
 
@@ -120,8 +121,6 @@ Require Factory Built By Country
  AI ignores FactoryOwners and FactoryOwners.Forbidden on
   buildings, but not on units.
 
- Prerequisites; Require building built by certain country.
-
  0.6
  0.9
 
@@ -136,6 +135,9 @@ modified or added by Ares.
  /images/prerequisite_system.svg
   :alt: Flowchart of the current prerequisite system
   :align: center
+
+
+ Prerequisites; Prerequisite groups
 
 Generic Prerequisite Groups
 
@@ -159,7 +161,6 @@ For example:
     etc...
 
 
-
 ::
 
     [TechnoType]
@@ -177,10 +178,12 @@ used *instead* of those specified on the original PrerequisiteGroup flags
 [GenericPrerequisites]►PROC= does not override or nullify
 [General]►PrerequisiteProcAlternate=.
 
- Prerequisites; New Prerequisite Groups.
-
  0.1
 
+
+
+  Prerequisites; Generalized alternate prerequisite groups
+  Prerequisites; Units as prerequisite
 
 Alternate Prerequisites with Non-Buildings
 
@@ -205,7 +208,5 @@ TechnoTypes.
 
    Using BuildingTypes is not supported and adding them here
     might give unexpected results. For example, upgrades will not work.
-
- Prerequisites; Generalized Alternate Prerequisite Groups
 
  0.B

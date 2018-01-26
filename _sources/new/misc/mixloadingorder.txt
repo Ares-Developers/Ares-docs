@@ -1,9 +1,9 @@
+ MIX; expandmd##.mix can override content from langmd.mix
+
 MIX Loading Order
 
 
 expandmd##.mix files are now loaded earlier, allowing them to override
 content from langmd.mix.
-
- MIX; expandmd##.mix can override content from langmd.mix.
 
  0.1

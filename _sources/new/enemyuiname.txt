@@ -1,3 +1,5 @@
+ TechnoTypes; Hide the actual name from enemies
+
 EnemyUIName
 
 
@@ -12,7 +14,5 @@ Structure" instead. This setting is useful to hide the name of fake structures.
 
    This tag is currently limited to BuildingTypes. It might be
     expanded to other TechnoTypes in the future.
-
- Technos; Hide the actual name from enemies
 
  0.B

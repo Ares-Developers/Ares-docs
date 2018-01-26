@@ -1,4 +1,4 @@
- PKTs; Multiple loose PKT files no longer have their contents duplicated.
+ PKTs; Multiple loose PKT files no longer have their contents duplicated
 
 
 PKT Duplication

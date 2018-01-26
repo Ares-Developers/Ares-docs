@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Save Games &mdash; Ares 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 1.0 documentation" href="../index.html" />
+    <link rel="up" title="User Interface Features" href="index.html" />
+    <link rel="next" title="User Interface Colors" href="userinterfacecolors.html" />
+    <link rel="prev" title="Release Note" href="releasenote.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="userinterfacecolors.html" title="User Interface Colors"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="releasenote.html" title="Release Note"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="releasenote.html"
+                        title="previous chapter">Release Note</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="userinterfacecolors.html"
+                        title="next chapter">User Interface Colors</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="save-games">
+<span id="index-0"></span><h1>Save Games<a class="headerlink" href="#save-games" title="Permalink to this headline">¶</a></h1>
+<p>Only save games made with the same version of either the vanilla game or a mod
+and a compatible version of <span class="game docutils literal">Ares</span> are supported. All incompatible
+save games will be hidden from the list of saved games automatically.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Save games work like in the unmodified game: they are stored in the
+game folder and have a random filename with a <code class="file docutils literal"><span class="pre">.sav</span></code> extension. This
+might change in future versions.</p>
+</div>
+<p>For save games to work properly, mods are required to set the <a class="reference internal" href="modinfo.html"><em>mod-specific
+information</em></a> settings to values uniquely identifying each
+individual mod version. To ensure that save games correctly restore the previous
+state of the game, you need to make sure to change the mod version whenever you
+make changes to global settings or data.</p>
+<p>Those include:</p>
+<blockquote>
+<div><ul class="simple">
+<li>changing the order of existing sounds, EVA messages, and themes in the INI
+files (this includes adding new items into the middle of as well as removing
+any items from the lists)</li>
+<li>changing filenames of files used for terrain or object (buildings, units,
+projectiles, animations, ...) art, or changing the number of image frames
+contained in such files</li>
+</ul>
+</div></blockquote>
+<p>Failing to do so might prevent the game from correctly restoring the previous
+state. This might cause subtle issues ranging from the wrong sounds being played
+to graphical glitches, but it could also cause crashes.</p>
+<p>If <span class="game docutils literal">Ares</span> detects a mismatch while reading its own data and is thus unable
+to proceed loading a save game file, it will automatically and forcefully
+terminate the game, no error message will be shown, and the game will not return
+back to the main menu. This should not happen if you follow these guidelines.
+For debugging purposes, the log file will then contain information about the
+last object <span class="game docutils literal">Ares</span> tried to restore.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 1.0.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="userinterfacecolors.html" title="User Interface Colors"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="releasenote.html" title="Release Note"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >User Interface Features</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2018, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

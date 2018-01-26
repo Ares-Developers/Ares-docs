@@ -1,4 +1,6 @@
- Chronosphere; EVA report when aborting target selection
+
+  Chronosphere; EVA report when aborting target selection
+  Glitches; EVA reports Chronosphere as ready when aborting to fire
 
 
 Aborting the Chronoshift announces the Chronosphere as ready
@@ -6,6 +8,6 @@ Aborting the Chronoshift announces the Chronosphere as ready
 
 When the Chronosphere SW is used to select a source location and the target
 selection is then aborted, EVA would report the Chronosphere as ready again,
-even though it was never actually discharged. This does not happen any more.
+even though it was never actually discharged. This does not happen anymore.
 
  0.4

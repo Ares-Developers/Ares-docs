@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Type=DropPod &mdash; Ares 0.E documentation</title>
+    <title>Type=DropPod &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="../../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="../../../index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="../../../index.html" />
     <link rel="up" title="Settings by Super Weapon Type" href="index.html" />
     <link rel="next" title="Type=EMPulse" href="empulse.html" />
     <link rel="prev" title="Type=HunterSeeker" href="hunterseeker.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="hunterseeker.html" title="Type=HunterSeeker"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
           <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
@@ -78,10 +78,11 @@
           <div class="body" role="main">
             
   <div class="section" id="type-droppod">
-<h1><span><span class="type">Type=DropPod</span></span><a class="headerlink" href="#type-droppod" title="Permalink to this headline">¶</a></h1>
+<span id="index-0"></span><h1><span><span class="type">Type=DropPod</span></span><a class="headerlink" href="#type-droppod" title="Permalink to this headline">¶</a></h1>
 <p><span class="game docutils literal">Ares</span> re-implements the Drop Pod SW (<span><code class="docutils literal"><span class="pre">Type=DropPod</span></code></span>) known from
 <span class="game docutils literal">Firestorm</span>. A super weapon of this type spawns between a minimum and a
-maximum random units from a list of types, which all arrive in drop pods.</p>
+maximum number of random units from a list of types, which all arrive in drop
+pods.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last"><span class="game docutils literal">Firestorm</span> had the Drop Pods hardcoded to use <cite>E1</cite>
@@ -91,7 +92,7 @@ correctly.</p>
 </div>
 <p>Default values for general tags:</p>
 <dl class="docutils">
-<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></code><span class="type definition"> (enum)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></code><span class="type definition"> (enumeration)</span></span></dt>
 <dd>Defaults to <cite>ParaDrop</cite>.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►EVA.Detected=</span></code><span class="type definition"> (EVA event)</span></span></dt>
 <dd>Defaults to <cite>EVA_DropPodDetected</cite>.</dd>
@@ -105,7 +106,7 @@ correctly.</p>
 <p>Drop Pod specific tags:</p>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►DropPod.Types=</span></code><span class="type definition"> (list of InfantryTypes)</span></span></dt>
-<dd>The types to chose from. Each type has an equal chance of being selected. You
+<dd>The types to choose from. Each type has an equal chance of being selected. You
 can add types more than once. Only infantry is supported. Defaults to
 <span><code class="docutils literal"><span class="pre">[General]►DropPodTypes</span></code></span>.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►DropPod.Veterancy=</span></code><span class="type definition"> (float)</span></span></dt>
@@ -126,7 +127,7 @@ units is 3 times the number of units to spawn. In case this limit is exceeded,
 the super weapon stops to place more units.</p>
 <p>See <a class="reference internal" href="../../droppod.html"><em>Drop Pods</em></a> for information about the global defaults
 and other related additions.</p>
-<div class="versionadded" id="index-0">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.7.</span></p>
 </div>
 </div>
@@ -149,14 +150,14 @@ and other related additions.</p>
         <li class="right" >
           <a href="hunterseeker.html" title="Type=HunterSeeker"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
           <li class="nav-item nav-item-3"><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

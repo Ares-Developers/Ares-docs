@@ -1,3 +1,5 @@
+ Aircraft; Smoke animation when damaged
+
 Aircraft Smoke
 
 
@@ -17,7 +19,5 @@ Additionally, the smoke has been made customizable per AircraftType.
 [AircraftType]Smoke.ChanceDead=integer - percent
   The chance of a crashing aircraft creating a smoke animation each frame.
   Defaults to 80.
-
- Aircraft; Smoke animation
 
  0.7

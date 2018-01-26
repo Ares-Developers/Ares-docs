@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>General properties &mdash; Ares 0.E documentation</title>
+    <title>General properties &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="../../index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="../../index.html" />
     <link rel="up" title="Super Weapons" href="index.html" />
     <link rel="next" title="Availability" href="availability.html" />
     <link rel="prev" title="Building Options" href="buildings.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="buildings.html" title="Building Options"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Super Weapons</a> &raquo;</li> 
       </ul>
@@ -77,24 +77,24 @@
           <div class="body" role="main">
             
   <div class="section" id="general-properties">
-<h1>General properties<a class="headerlink" href="#general-properties" title="Permalink to this headline">¶</a></h1>
+<span id="index-0"></span><h1>General properties<a class="headerlink" href="#general-properties" title="Permalink to this headline">¶</a></h1>
 <dl class="docutils">
-<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Range=</span></code><span class="type definition"> (float,int)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Range=</span></code><span class="type definition"> (float,integer)</span></span></dt>
 <dd>Most superweapons having a ranged effect can take a float or two integers. One
 float is taken as radius around the target cell, two integers separated by
 comma denote a rectangular area. For example, <span><code class="docutils literal"><span class="pre">SW.Range=3.5</span></code></span> defines a
 circle with 7 cells diameter, <span><code class="docutils literal"><span class="pre">SW.Range=4,6</span></code></span> defines a rectangle 4 cells
 wide and 6 cells high. The range is no longer bound to cell spread&#8217;s
 limitation of a maximum range of 10.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.CreateRadarEvent=</span></code><span class="type definition"> (bool)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.CreateRadarEvent=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Creates a radar event rectangle for every player centered above the super
 weapon&#8217;s target cell.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AffectsHouse=</span></code><span class="type definition"> (enum none|owner|allies|team|enemies|all)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AffectsHouse=</span></code><span class="type definition"> (enumeration none|owner|allies|team|enemies|all)</span></span></dt>
 <dd>Which houses items are affected by this super weapon. You can combine multiple
 values by comma. <cite>team</cite> equals <cite>owner,allies</cite>, <cite>all</cite>
 equals <cite>owner,allies,enemies</cite>. Defaults to <cite>team</cite> for the Force
 Shield, to <cite>all</cite> otherwise.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AffectsTarget=</span></code><span class="type definition"> (enum none|land|water|empty|infantry|units|buildings)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AffectsTarget=</span></code><span class="type definition"> (enumeration none|land|water|empty|infantry|units|buildings)</span></span></dt>
 <dd>Which items are allowed to be affected by this super weapon. You can combine
 multiple values by comma. If you don&#8217;t specify either land or water, both will
 be allowed. If you don&#8217;t specify any of the other values, everything can be
@@ -105,7 +105,7 @@ water cell, occupied or empty.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.ShowCameo=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Sets whether this super weapon will appear in the side bar. This setting is
 ignored if <span><code class="docutils literal"><span class="pre">SW.AutoFire=no</span></code></span> is set. Defaults to <cite>yes</cite>.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Deferment=</span></code><span class="type definition"> (integer frames)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Deferment=</span></code><span class="type definition"> (integer - frames)</span></span></dt>
 <dd>The number of frames after the fired super weapon takes effect. Not all super
 weapons support deferment.</dd>
 </dl>
@@ -132,13 +132,13 @@ weapons support deferment.</dd>
         <li class="right" >
           <a href="buildings.html" title="Building Options"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Super Weapons</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

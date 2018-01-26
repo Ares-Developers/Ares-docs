@@ -1,3 +1,7 @@
+
+  Drop Pods; Locomotor
+  Locomotors; Drop Pod
+
 Drop Pods
 
 
@@ -5,11 +9,13 @@ These are the collected settings that apply to the Drop Pod locomotor in general
 and the Drop Pod super weapon
 specifically.
 
- Drop Pods; Locomotor
-
  0.7
 
 
+
+  Drop Pods; Trailer animation
+  Art; Drop Pod trailer animation
+ 
 Trailer
 
 
@@ -23,6 +29,10 @@ Pod does not have a [General]►DropPodWeapon set.
   SMOKEY.
 
 
+
+  Drop Pods; Super weapon defaults
+  Super Weapons; Drop Pod global defaults
+
 Global Super Weapon Defaults
 
 
@@ -31,7 +41,7 @@ do not default to meaningful values, but the values Firestorm uses are
 given here for reference.
 
 [General]DropPodTypes=list of InfantryTypes
-  The types to randomly chose from when spawing units for the Drop Pod super
+  The types to randomly choose from when spawning units for the Drop Pod super
   weapon. Each type has an equal chance of being selected. You can add types
   more than once. Only infantry is supported. Defaults to none,
   Firestorm uses an equivalent E1,E2.

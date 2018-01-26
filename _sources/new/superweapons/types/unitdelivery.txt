@@ -1,3 +1,5 @@
+ Super Weapons; Create units or buildings at target location
+
 Type=UnitDelivery
 
 
@@ -10,7 +12,7 @@ Default values for general tags:
   Delay before the units are placed. Defaults to 20.
 [SuperWeapon]SW.ActivationSound=Sound
   Played when the units are placed. Defaults to none.
-[SuperWeapon]SW.AITargeting=enum
+[SuperWeapon]SW.AITargeting=enumeration
   Defaults to ParaDrop.
 
 
@@ -19,7 +21,7 @@ Unit Delivery specific tags:
 [SuperWeapon]Deliver.Types=list of TechnoTypes
   The list of units that will be delivered. This works for infantry, vehicles,
   aircraft and buildings.
-[SuperWeapon]Deliver.Owner=enum invoker|neutral|special|civilian
+[SuperWeapon]Deliver.Owner=enumeration invoker|neutral|special|civilian
   The country the delivered units will belong to. invoker is the player
   who fired the super weapon, civilian is the first country of the side
   named Civilian, special is the country named
@@ -43,10 +45,6 @@ and human owned units are put on a guard area mission.
 
 You can mix in naval units and they will be placed where they can normally
 exist.
-
-
- Super Weapons; New super weapon type: UnitDelivery (create unit(s) at
-  target location).
 
  0.1
  0.8

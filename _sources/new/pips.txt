@@ -1,3 +1,8 @@
+
+  Pips; User-defined pips
+  TechnoTypes; User-defined pips
+  Infantry; User-defined pip and occupy pip
+
 Pips
 
 
@@ -20,7 +25,5 @@ debug.log.
 
    If the tag is read as integer and the value is out of bounds, no
     error is logged in debug.log. 
-
- Pips; User-defined pips.
 
  0.4

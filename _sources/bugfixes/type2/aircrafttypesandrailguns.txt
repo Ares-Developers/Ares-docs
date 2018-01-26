@@ -1,4 +1,4 @@
- Aircrafts; AircraftTypes can now use railguns without causing Internal Errors.
+ Aircraft; Use railguns without causing Internal Errors
 
 
 AircraftTypes and Railguns

@@ -1,3 +1,7 @@
+
+  Fakes; Decoy buildings
+  Universe; Fake decoy buildings
+
 Fakes
 
 
@@ -15,7 +19,5 @@ enabled.
 
 See EnemyUIName to find out how to hide the real name
 of the building from enemy players.
-
- Fakes; Decoy buildings
 
  0.B

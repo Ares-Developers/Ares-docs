@@ -1,13 +1,15 @@
+
+  Weapons; Ranged and ProjectileRange
+  Projectiles; Maximum range per weapon
+
 ProjectileRange
 
 
-This setting from Firestorm allows to customize the maximum distance
+This setting from Firestorm allows customizing the maximum distance
 after which a projectile will detonate.
 
 [Weapon]ProjectileRange=float - cell range
   The distance a Ranged=yes projectile is allowed to travel before
   running out of fuel and detonating. Defaults to 390.
-
- Weapons; Ranged and ProjectileRange
 
  0.7

@@ -1,3 +1,5 @@
+ Animations; Choose the owner for MakeInfantry animations
+
 MakeInfantryOwner
 
 
@@ -10,7 +12,7 @@ several options.
 
 [Animation]MakeInfantryOwner=enumeration invoker|killer|victim|civilian|special|neutral|random
   Specifies which house will own the resulting InfantryType that gets
-  created after this animation has played. The animation's re-mappable colors
+  created after this animation has played. The animation's remappable colors
   will be shown in that house's color, if not noted otherwise. Defaults to
   invoker.
 
@@ -51,8 +53,6 @@ civilian.
  Like InfDeath=9, mutation animations will be rendered in the
   unit palette with remap colors instead of anim.pal, if not noted
   otherwise.
-
- Animations; MakeInfantry animations (InfDeathAnim, DeathAnims, ..., and map triggers) can choose who the owner will be.
 
  0.1
 

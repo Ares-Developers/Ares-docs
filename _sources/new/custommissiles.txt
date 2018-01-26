@@ -1,3 +1,5 @@
+ Missiles; Add new and customize the original missile types
+
 Custom Missiles
 
 
@@ -5,8 +7,6 @@ Ares allows you to create new missile types and customize the existing
 types (V3RocketType, DMislType, CMislType). Missiles are
 AircraftTypes which have special logic attached to behave like a
 projectile launched from another unit and carrying a warhead to its target.
-
- Missiles; Add new and customize the original missile types.
 
  0.3
  0.A
@@ -103,6 +103,8 @@ Warheads and Damage
   an elite unit. Defaults to none.
 
 
+ Missiles; Weapon instead of damage and warhead
+
 Alternatively Using Weapons
 
 
@@ -130,6 +132,10 @@ Missile.EliteWarhead are used instead.
   Missile.EliteWarhead are used to create the explosion. Defaults to
   none.
 
+
+
+  Missiles; Trailer and take-off animations
+  Art; Trailer and take-off animations for missiles
 
 Trailer and Take-Off Animations
 

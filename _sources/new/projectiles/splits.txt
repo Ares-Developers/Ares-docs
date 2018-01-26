@@ -8,6 +8,10 @@ Airburst logic has been expanded.
  0.7
 
 
+
+  Projectiles; Splitting in mid-air
+  Universe; Cyborg Reaper missiles
+
 Splits
 
 
@@ -23,7 +27,7 @@ ProjectileRange or the projectile
 detonates otherwise.
 
 Refer to Splits on ModEnc  for a
-more detailled description of the logic.
+more detailed description of the logic.
 
  The Splits logic has been de-hardcoded compared to Tiberian
   Sun. The AirburstWeapon's Damage is no longer multiplied by
@@ -43,9 +47,11 @@ more detailled description of the logic.
 [Projectile]RetargetAccuracy=float - percentage
   The probability that a split cluster will aim for the same target the original
   projectile was shot at. The higher the value, the less likely it is for the
-  split projectile to chose another target. Valid range is 0.0 to
+  split projectile to choose another target. Valid range is 0.0 to
   1.0. Defaults to 0.0.
 
+
+ Projectiles; Airburst radius
 
 Airburst
 

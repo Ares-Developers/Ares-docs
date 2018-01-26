@@ -1,12 +1,14 @@
+
+  Tiberium; Chain Reactions
+  Universe; Tiberium chain reactions
+
 Chain Reactions
 
 
 There are two distinct logics that have their part in the tiberium chain
 reactions as seen in Tiberian Sun. Chain Reactions were not supported
-in Yuri's Revenge and has now been restored, and both have been made
+in Yuri's Revenge and have now been restored, and both have been made
 more customizable.
-
-.. index: Tiberium; Chain Reactions.
 
  0.5
 
@@ -16,7 +18,7 @@ Tiberium Explosion
 
 Tiberium Explosion occurs if an animation with TiberiumChainReaction=yes
 hits a cell containing tiberium. There is a chance that debris is spawned. For a
-more detailled description, refer to TiberiumChainReaction on ModEnc
+more detailed description, refer to TiberiumChainReaction on ModEnc
 .
 
 The warhead, the damage delivered and the chance to spawn debris can be
@@ -27,8 +29,8 @@ Chain Reaction
 
 
 Overlay can be made to trigger a chain reaction when damaged. An animation is
-spawned on the neighbour cells that can propagate the effect. For a more
-detailled description, refer to ChainReaction on ModEnc
+spawned on the neighbor cells that can propagate the effect. For a more detailed
+description, refer to ChainReaction on ModEnc
 .
 
 The logic has been restored and new works as in Tiberian Sun. The
@@ -57,6 +59,8 @@ Customizable Settings
   to 33.
 
 
+ Overlay; Explodes=yes and minimum damage
+
 Minimum Damage to Trigger Explodes=yes
 
 
@@ -68,7 +72,5 @@ if the damage is higher than a certain value.
   Only if the damage to a cell is higher than this does an overlay with
   Explodes=yes explode. Below this value, the overlay stays intact.
   Defaults to 0.
-
-.. index: Overlay; Explodes=yes and a minimm damage.
 
  0.5

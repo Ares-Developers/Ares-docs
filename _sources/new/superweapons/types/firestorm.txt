@@ -1,3 +1,7 @@
+
+  Firestorm; Super weapon to activate walls
+  Universe; Firestorm Defense System
+
 Type=Firestorm
 
 
@@ -23,8 +27,6 @@ is required to make it activate from a single click of the sidebar icon.
 
  The AI will not use this super weapon. In missions, it is possible to
   control the Firestorm using the map actions 92 and 93.
-
- Super Weapons; Firestorm Wall
 
  0.1
  0.A

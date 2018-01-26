@@ -1,4 +1,6 @@
- Upgrades; Building upgrades can now be used as prerequisites.
+
+  Prerequisites; Building upgrades qualify as prerequisites
+  Upgrades; Building upgrades can now be used as prerequisites
 
 
 BuildingType Upgrades Are Not Viable Prerequisites

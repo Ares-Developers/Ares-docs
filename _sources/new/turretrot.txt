@@ -1,3 +1,5 @@
+ TechnoTypes; Separate Turret rate of turn
+
 Turret ROT
 
 
@@ -7,7 +9,5 @@ rotation speed for a unit's turret.
 [TechnoType]TurretROT=integer
   Defines the rate of turn for the turret. Valid values range from 0 to
   127. Defaults to ROT.
-
- Units; Separate Turret ROT
 
  0.D

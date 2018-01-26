@@ -1,3 +1,5 @@
+ Universe; Sonar Pulse briefly reveals cloaked units
+
 Type=SonarPulse
 
 
@@ -12,18 +14,18 @@ Default values for general tags:
   to reveal all units on the map. When using full-map sonar you don't have to
   select a target location; instead the super weapon will be fired when you
   click its cameo icon. Defaults to 10.
-[SuperWeapon]SW.AITargeting=enum
+[SuperWeapon]SW.AITargeting=enumeration
   Defaults to Stealth.
-[SuperWeapon]SW.AffectsHouse=enum
+[SuperWeapon]SW.AffectsHouse=enumeration
   Specifies the houses affected by the sonar reveal. Defaults to
   enemies.
-[SuperWeapon]SW.AffectsTarget=enum
+[SuperWeapon]SW.AffectsTarget=enumeration
   Specifies which types the sonar affects. Defaults to water, all unit
   types situated on water cells.
-[SuperWeapon]SW.RequiresTarget=enum
+[SuperWeapon]SW.RequiresTarget=enumeration
   Specifies where human players can fire the sonar at, which excludes land by
   default. Defaults to water.
-[SuperWeapon]SW.AIRequiresTarget=enum
+[SuperWeapon]SW.AIRequiresTarget=enumeration
   Specifies where AI players can fire the sonar at, which excludes land by
   default. Defaults to water.
 
@@ -31,8 +33,6 @@ Sonar Pulse specific tags:
 
 [SuperWeapon]SonarPulse.Delay=integer - frames
   The duration that the decloak effect will last. Defaults to 60.
-
- Super Weapons; SonarPulse briefly reveals cloaked units.
 
  0.1
  0.5

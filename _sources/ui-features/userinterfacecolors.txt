@@ -1,3 +1,5 @@
+ Interface; User interface colors
+
 User Interface Colors
 
 
@@ -55,7 +57,5 @@ you'll have to define the specific Color.Observer.* tags.
 
  This feature does not support recoloring the dialog prompting for the
   Yuri's Revenge disk when starting the game.
-
- Interface; Custom User Interface Colors.
 
  0.2

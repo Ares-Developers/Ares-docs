@@ -1,10 +1,12 @@
+ Universe; EMPulse cannons with limited range fired by super weapon
+
 Type=EMPulse
 
 
 This type implements the super weapon known from Tiberian Sun, with
 several extensions. It makes one or more buildings, called cannons, of arbitrary
-types fire at the same time at either a target location selected by the player
-or at themselves.
+type fire at the same time at either a target location selected by the player or
+at themselves.
 
  The AI cannot make full use of this super weapon yet, because it does
   not respect ranges, which is a fundamental feature of this super weapon type.
@@ -25,7 +27,7 @@ Default values for general tags:
   The maximum number of cannons firing. Set to negative values for unlimited
   cannons. Defaults to 1. 
 
-[SuperWeapon]SW.AITargeting=enum
+[SuperWeapon]SW.AITargeting=enumeration
   AI does not respect ranges. For EMPulse.TargetSelf=yes super weapons,
   use NoTarget to enable AI players to use it. Defaults to
   None.
@@ -84,6 +86,6 @@ Other changes:
 The pulse ball animation that was previously hardcoded to PULSBALL has
 now been made customizable and optional. If an EMPulseCannon=yes building
 had a primary weapon without any valid Report set, the game would crash.
-This does not happen any more.
+This does not happen anymore.
 
  0.8

@@ -1,3 +1,7 @@
+
+  Debugging; Improved Internal Error handling
+  Debugging; Logs to assist with debugging mods and Ares
+
 Internal Errors / Debugging
 
 
@@ -50,7 +54,5 @@ message.
 Some potential errors may now be triggered when loading rather than waiting for
 the error to crop up in game. Critical errors occur always, less critical errors
 occur only if you have used the -STRICT command line argument.
-
- Improved Internal Error handling and debug logs to assist with debugging mods/Ares.
 
  0.1

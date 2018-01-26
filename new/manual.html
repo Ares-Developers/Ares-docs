@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Manual Control &mdash; Ares 0.E documentation</title>
+    <title>Manual Control &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="../index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Mouse Cursors" href="mousecursors.html" />
     <link rel="prev" title="MakeInfantryOwner" href="makeinfantryowner.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="makeinfantryowner.html" title="MakeInfantryOwner"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -89,7 +89,7 @@
   <div class="section" id="manual-control">
 <h1>Manual Control<a class="headerlink" href="#manual-control" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="no-manual-target-selection">
-<h2>No Manual Target Selection<a class="headerlink" href="#no-manual-target-selection" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2>No Manual Target Selection<a class="headerlink" href="#no-manual-target-selection" title="Permalink to this headline">¶</a></h2>
 <p>Like <span><code class="docutils literal"><span class="pre">EMPulseCannon</span></code></span>, this disallows players to manually select targets,
 but it neither prevents the object from picking its own targets automatically,
 nor to retaliate.</p>
@@ -99,12 +99,12 @@ nor to retaliate.</p>
 enabled, units will have to rely on auto-targeting and retaliation rules.
 Defaults to <cite>no</cite>.</dd>
 </dl>
-<div class="versionadded" id="index-0">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.A.</span></p>
 </div>
 </div>
 <div class="section" id="no-manual-passenger-unload">
-<h2>No Manual Passenger Unload<a class="headerlink" href="#no-manual-passenger-unload" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2>No Manual Passenger Unload<a class="headerlink" href="#no-manual-passenger-unload" title="Permalink to this headline">¶</a></h2>
 <p>This setting disallows players to manually eject the passengers. This is useful
 for vehicles that are no real transports, like <a class="reference internal" href="chronoprisons.html"><em>Chrono Prisons</em></a>.</p>
 <p>By default, passengers might still be ejected when the vehicle is destroyed. To
@@ -116,12 +116,12 @@ accordingly.</p>
 owning player will not get deploy or no-deploy cursors. Defaults to
 <cite>no</cite>.</dd>
 </dl>
-<div class="versionadded" id="index-1">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.A.</span></p>
 </div>
 </div>
 <div class="section" id="no-manual-enter-transport">
-<h2>No Manual Enter Transport<a class="headerlink" href="#no-manual-enter-transport" title="Permalink to this headline">¶</a></h2>
+<span id="index-2"></span><h2>No Manual Enter Transport<a class="headerlink" href="#no-manual-enter-transport" title="Permalink to this headline">¶</a></h2>
 <p>This cosmetic setting allows to hide the fact that a unit is a transport by
 removing the enter and no-enter cursors.</p>
 <p>This does not prevent units from entering by other means, like scripts, though.
@@ -132,13 +132,13 @@ Also, the AI will not respect this setting. Use the <a class="reference internal
 <cite>yes</cite>, the select cursor is used, as if this unit is not a transport.
 Defaults to <cite>no</cite>.</dd>
 </dl>
-<div class="versionadded" id="index-2">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.B.</span></p>
 </div>
 </div>
 <div class="section" id="no-guard-area-on-self">
-<h2>No Guard Area on Self<a class="headerlink" href="#no-guard-area-on-self" title="Permalink to this headline">¶</a></h2>
-<p>Medics usually get a guard area cursor on themselves to players can set the to
+<span id="index-3"></span><h2>No Guard Area on Self<a class="headerlink" href="#no-guard-area-on-self" title="Permalink to this headline">¶</a></h2>
+<p>Medics usually get a guard area cursor on themselves so players can set them to
 guard mode by clicking. This prevents infantry with negative damage weapons to
 have deploy ability. <span class="game docutils literal">Ares</span> adds a tag to turn this feature off.</p>
 <dl class="docutils">
@@ -148,7 +148,7 @@ on themselves. If <cite>no</cite>, the guard area cursor will not take precedenc
 allowing other cursors like the deploy cursor to be shown. Defaults to
 <cite>no</cite>.</dd>
 </dl>
-<div class="versionadded" id="index-3">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.B.</span></p>
 </div>
 </div>
@@ -172,12 +172,12 @@ allowing other cursors like the deploy cursor to be shown. Defaults to
         <li class="right" >
           <a href="makeinfantryowner.html" title="MakeInfantryOwner"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

@@ -1,3 +1,8 @@
+
+  Subterranean; Dig animations and sounds
+  Units; Subterranean dig animations and sounds
+  Art; Dig animations and sounds per type
+
 Dig Animation and Sound
 
 
@@ -20,7 +25,5 @@ the surface and emerging from the ground again.
 [TechnoType]DigOutSound=sound entry
   The optional sound played when this unit digs out of the ground. Defaults to
   [AudioVisual]►DigSound.
-
- Units; Customizable dig animations and sounds
 
  0.D

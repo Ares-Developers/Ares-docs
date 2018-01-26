@@ -1,3 +1,7 @@
+
+  Crush; Crush damage when running over infantry or vehicles
+  Universe; Sardaukar dealing damage when crushed
+
 Crush Damage
 
 
@@ -21,7 +25,5 @@ comes at a customizable cost.
 [TechnoType]CrushDamage.Warhead=Warhead
   The warhead used to deal crush damage when this unit is crushed. Defaults to
   [General]►C4Warhead.
-
- Crush; Crush damage when running over infantry or vehicles
 
  0.A

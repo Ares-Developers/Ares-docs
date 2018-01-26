@@ -1,3 +1,8 @@
+
+  Paradrops; Parachute animations per unit
+  TechnoTypes; Parachute animations
+  Art; Parachute animations
+
 Customizable Parachute Animations
 
 
@@ -5,15 +10,7 @@ Units can now have their own individual parachute animation.
 
 [TechnoType]Parachute.Anim=animation
   Specifies the animation from artmd.ini to use as the unit's parachute
-  when the it is falling. If omitted, Parachute.Anim will default to
+  when it is falling. If omitted, Parachute.Anim will default to
   PARACH. The SHP is expected to be in the unit palette.
-
-
-While the animation is playing, the units's falling speed will reach, but not
-exceed, [General]►ParachuteMaxFallRate=. After the animation disappears,
-if the unit is still falling then the object's speed will increase to match
-[General]►NoParachuteMaxFallRate=.
-
- Art; Custom parachute animations.
 
  0.1

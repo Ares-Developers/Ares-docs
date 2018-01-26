@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Migration Guide &mdash; Ares 0.E documentation</title>
+    <title>Migration Guide &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="index.html" />
     <link rel="next" title="Bug Fixes" href="bugfixes/index.html" />
     <link rel="prev" title="What’s New" href="whatsnew.html" /> 
   </head>
@@ -41,7 +41,7 @@
         <li class="right" >
           <a href="whatsnew.html" title="What’s New"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Ares 0.E documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -62,6 +62,7 @@
 <li><a class="reference internal" href="#from-ares-0-b-and-below">From Ares 0.B and below</a></li>
 <li><a class="reference internal" href="#from-ares-0-c-and-below">From Ares 0.C and below</a></li>
 <li><a class="reference internal" href="#from-ares-0-d-and-below">From Ares 0.D and below</a></li>
+<li><a class="reference internal" href="#from-ares-0-e-and-below">From Ares 0.E and below</a></li>
 </ul>
 </li>
 </ul>
@@ -237,18 +238,18 @@ tags. (Continued work from earlier <span class="game docutils literal">Ares</spa
 <dt><span><code class="docutils literal"><span class="pre">[Weapon]►Wave.Color</span></code></span></dt>
 <dd>Default depends on wave type.</dd>
 <dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►SW.Damage</span></code></span></dt>
-<dd>Defaults depends on <span><code class="docutils literal"><span class="pre">Type</span></code></span>.</dd>
+<dd>Default depends on <span><code class="docutils literal"><span class="pre">Type</span></code></span>.</dd>
 <dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►SW.Range</span></code></span></dt>
-<dd>Defaults depends on <span><code class="docutils literal"><span class="pre">Type</span></code></span>.</dd>
+<dd>Default depends on <span><code class="docutils literal"><span class="pre">Type</span></code></span>.</dd>
 <dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►SW.Deferment</span></code></span></dt>
 <dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►LightningDeferment</span></code></span> for
 <span><code class="docutils literal"><span class="pre">Type=LightningStorm</span></code></span>.</dd>
 <dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►SW.Animation</span></code></span></dt>
-<dd>Defaults depends on <span><code class="docutils literal"><span class="pre">Type</span></code></span>.</dd>
+<dd>Default depends on <span><code class="docutils literal"><span class="pre">Type</span></code></span>.</dd>
 <dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►SW.Sound</span></code></span></dt>
-<dd>Defaults depends on <span><code class="docutils literal"><span class="pre">Type</span></code></span>.</dd>
+<dd>Default depends on <span><code class="docutils literal"><span class="pre">Type</span></code></span>.</dd>
 <dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►SW.ActivationSound</span></code></span></dt>
-<dd>Defaults depends on <span><code class="docutils literal"><span class="pre">Type</span></code></span>.</dd>
+<dd>Default depends on <span><code class="docutils literal"><span class="pre">Type</span></code></span>.</dd>
 <dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.Duration</span></code></span></dt>
 <dd>Defaults to <span><code class="docutils literal"><span class="pre">[General]►LightningStormDuration</span></code></span>.</dd>
 <dt><span><code class="docutils literal"><span class="pre">[SuperWeapon]►Lightning.RadarOutage</span></code></span></dt>
@@ -408,9 +409,9 @@ instead.</dd>
 <blockquote>
 <div><p>Some <span class="type docutils literal">ArmorType</span> parsing issues have been resolved to improve defaulting
 to other types, and to not reset data unexpectedly.</p>
-<p>The Unit Delivery super weapon has been reworked. It now allows to place units
+<p>The Unit Delivery super weapon has been reworked. It now allows placing units
 on ore, and delivered objects are put on guard, area guard or hunt mission.
-The option to skip the buildup animations has been deprectated, because it
+The option to skip the buildup animations has been deprecated, because it
 never worked correctly.</p>
 <p>Hunter Seekers no longer target objects under the effect of the Iron Curtain
 or objects being temporally attacked.</p>
@@ -431,7 +432,19 @@ is known to the game by adding it to the <span><code class="docutils literal"><s
 <div><span><code class="docutils literal"><span class="pre">KillDriver</span></code></span> has been changed to be applied like regular damage. It now
 respects immunities and supports <span><code class="docutils literal"><span class="pre">CellSpread</span></code></span>. Thus, the effect might
 not be applied in all cases where it was applied before, and might be applied
-in cases were it previously was not.</div></blockquote>
+in cases where it previously was not.</div></blockquote>
+</div>
+<div class="section" id="from-ares-0-e-and-below">
+<h2>From Ares 0.E and below<a class="headerlink" href="#from-ares-0-e-and-below" title="Permalink to this headline">¶</a></h2>
+<p>Changed tags:</p>
+<blockquote>
+<div>No changes required.</div></blockquote>
+<p>Other changes:</p>
+<blockquote>
+<div>Some Super Weapon Targeting Modes used the wrong target cell when firing at
+buildings. Now, the centers of the buildings are targeted. Affected modes are
+<cite>Nuke</cite>, <cite>LightningStorm</cite>, <cite>Offensive</cite>, <cite>Stealth</cite>,
+<cite>Self</cite>, and <cite>MultiMissile</cite>.</div></blockquote>
 </div>
 </div>
 
@@ -453,11 +466,11 @@ in cases were it previously was not.</div></blockquote>
         <li class="right" >
           <a href="whatsnew.html" title="What’s New"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Ares 0.E documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

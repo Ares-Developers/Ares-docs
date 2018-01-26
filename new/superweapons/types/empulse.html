@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Type=EMPulse &mdash; Ares 0.E documentation</title>
+    <title>Type=EMPulse &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="../../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="../../../index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="../../../index.html" />
     <link rel="up" title="Settings by Super Weapon Type" href="index.html" />
     <link rel="next" title="Tiberium" href="../../tiberium/index.html" />
     <link rel="prev" title="Type=DropPod" href="droppod.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="droppod.html" title="Type=DropPod"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
           <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
@@ -78,11 +78,11 @@
           <div class="body" role="main">
             
   <div class="section" id="type-empulse">
-<h1><span><span class="type">Type=EMPulse</span></span><a class="headerlink" href="#type-empulse" title="Permalink to this headline">¶</a></h1>
+<span id="index-0"></span><h1><span><span class="type">Type=EMPulse</span></span><a class="headerlink" href="#type-empulse" title="Permalink to this headline">¶</a></h1>
 <p>This type implements the super weapon known from <span class="game docutils literal">Tiberian Sun</span>, with
 several extensions. It makes one or more buildings, called cannons, of arbitrary
-types fire at the same time at either a target location selected by the player
-or at themselves.</p>
+type fire at the same time at either a target location selected by the player or
+at themselves.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The AI cannot make full use of this super weapon yet, because it does
@@ -101,7 +101,7 @@ negative values to use the each cannon&#8217;s primary weapon&#8217;s range. Def
 <dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.MaxCount=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>The maximum number of cannons firing. Set to negative values for unlimited
 cannons. Defaults to <cite>1</cite>.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></code><span class="type definition"> (enum)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></code><span class="type definition"> (enumeration)</span></span></dt>
 <dd>AI does not respect ranges. For <span><code class="docutils literal"><span class="pre">EMPulse.TargetSelf=yes</span></code></span> super weapons,
 use <cite>NoTarget</cite> to enable AI players to use it. Defaults to
 <cite>None</cite>.</dd>
@@ -150,7 +150,7 @@ didn&#8217;t rotate in the right direction before the super weapon is fired.</p>
 <p>The pulse ball animation that was previously hardcoded to <cite>PULSBALL</cite> has
 now been made customizable and optional. If an <span><code class="docutils literal"><span class="pre">EMPulseCannon=yes</span></code></span> building
 had a primary weapon without any valid <span><code class="docutils literal"><span class="pre">Report</span></code></span> set, the game would crash.
-This does not happen any more.</p>
+This does not happen anymore.</p>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 0.8.</span></p>
 </div>
@@ -174,14 +174,14 @@ This does not happen any more.</p>
         <li class="right" >
           <a href="droppod.html" title="Type=DropPod"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
           <li class="nav-item nav-item-3"><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

@@ -1,3 +1,7 @@
+
+  Chronosphere; Per-unit Chronosphere options
+  Chronosphere; Crushing other units
+
 Chronoshift
 
 
@@ -11,8 +15,8 @@ These options specify what the Chronosphere should do with an object.
   Specifies whether this building is actually a deployed vehicle and should be
   chronoshifted by the Chronosphere super weapon if it affects units and
   Chronosphere.ReconsiderBuildings=yes is set. On the other hand this
-  building will not be considered a building any more and thus will be ignored
-  by a Chronosphere that doesn't affect units. Defaults to no.
+  building will not be considered a building anymore and thus will be ignored by
+  a Chronosphere that doesn't affect units. Defaults to no.
 
 Units can be made immune to chronoshift-crushing:
 
@@ -26,8 +30,6 @@ Globally disallow chronoshifting infantry to crush non-infantry:
 [General]ChronoInfantryCrush=boolean
   If set to no, infantry will die when being chronoshifted onto tanks
   instead of destroying the tanks. Defaults to yes.
-
- Chronosphere; Per-unit Chronosphere options.
 
  0.2
  0.E

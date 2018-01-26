@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Prism Forwarding &mdash; Ares 0.E documentation</title>
+    <title>Prism Forwarding &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="../../index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="../../index.html" />
     <link rel="up" title="Buildings" href="index.html" />
     <link rel="next" title="Oil Derricks (ProduceCash)" href="producecash.html" />
     <link rel="prev" title="Passable Structures" href="passablestructures.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="passablestructures.html" title="Passable Structures"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Buildings</a> &raquo;</li> 
       </ul>
@@ -88,7 +88,7 @@
           <div class="body" role="main">
             
   <div class="section" id="prism-forwarding">
-<h1>Prism Forwarding<a class="headerlink" href="#prism-forwarding" title="Permalink to this headline">¶</a></h1>
+<span id="index-0"></span><h1>Prism Forwarding<a class="headerlink" href="#prism-forwarding" title="Permalink to this headline">¶</a></h1>
 <p>In this pre-release screenshot for <span class="game docutils literal">Red Alert 2</span>, Prism Towers are seen to
 feed their energy from one tower to another along a whole chain of towers. This,
 of course, is not possible in the released game (which suggests that this
@@ -96,7 +96,7 @@ screenshot has been doctored).</p>
 <img alt="Red Alert 2 pre-release screenshot" class="align-center" src="../../_images/prism1.jpg" />
 <p><span class="game docutils literal">Ares</span> completely replaces the old Prism Tower code to fix a couple of
 minor bugs and also extend it to provide a full set of Prism networking options.</p>
-<div class="versionadded" id="index-0">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.2.</span></p>
 </div>
 <div class="quickstart admonition" id="quickstart-0">
@@ -200,7 +200,7 @@ enlisted on the same frame. That said, a charge delay has been introduced so
 that the towers do not all appear to start charging immediately. For each
 backward-chain in the network, the farthest-forward towers begin charging just
 that little bit later, to give the effect of the beam travelling along the
-chain. The amount that each tower will delay starting it&#8217;s charge for can be
+chain. The amount that each tower will delay starting its charge for can be
 specified by <span><code class="docutils literal"><span class="pre">PrismForwarding.ChargeDelay</span></code></span>. This delay accumulates for
 each chain in the prism forwarding network.</p>
 <p>So, for example, if <span><code class="docutils literal"><span class="pre">PrismForwarding.ChargeDelay=2</span></code></span> and you have a prism
@@ -226,7 +226,7 @@ prism network increases. By default, a firing Prism Tower that is supported by
 higher than the default <span><code class="docutils literal"><span class="pre">LaserThickness</span></code></span> of the firing weapon (3). The
 <span><code class="docutils literal"><span class="pre">PrismForwarding.Intensity</span></code></span> flag treats negative values as an absolute
 addition to the firing beam, so the default value of <cite>-2</cite> leaves the
-behaviour exactly the same as the original game.</p>
+behavior exactly the same as the original game.</p>
 <p class="last">Positive values, on the other hand, tell <span class="game docutils literal">Ares</span> that you want the
 thickness of the beam to be dependent on the number of backward chains in the
 network, and also have the support beam thickness increase in the same way. A
@@ -258,7 +258,7 @@ if you don&#8217;t specify one.</p>
 this weapon. Defaults to <span><code class="docutils literal"><span class="pre">PrismForwarding.SupportWeapon</span></code></span>.</dd>
 </dl>
 <div class="section" id="customizing-the-support-beam">
-<h2>Customizing The Support Beam<a class="headerlink" href="#customizing-the-support-beam" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2>Customizing The Support Beam<a class="headerlink" href="#customizing-the-support-beam" title="Permalink to this headline">¶</a></h2>
 <p>The <span><code class="docutils literal"><span class="pre">PrismForwarding.SupportWeapon</span></code></span> is not a weapon in the traditional
 sense and does not actually get fired. Only specific properties of the weapon
 are used by the Prism Forwarding system, and these are all described below. Note
@@ -331,9 +331,9 @@ however this could be changed in the future.</p>
 <div class="section" id="support-beam-flh">
 <h2>Support Beam FLH<a class="headerlink" href="#support-beam-flh" title="Permalink to this headline">¶</a></h2>
 <p>The firing origin of the support beam can be set by using the FLH controls on
-the buliding&#8217;s art entry - <span><code class="docutils literal"><span class="pre">AlternateFLH0</span></code></span> specifies the rookie support
+the building&#8217;s art entry - <span><code class="docutils literal"><span class="pre">AlternateFLH0</span></code></span> specifies the rookie support
 beam origin, <span><code class="docutils literal"><span class="pre">AlternateFLH1</span></code></span> specifies the elite support beam origin. If
-either of these are set to <cite>0,0,0</cite> (the default FLH value) then they will
+either of these is set to <cite>0,0,0</cite> (the default FLH value) then they will
 fall back to using <span><code class="docutils literal"><span class="pre">PrimaryFireFLH</span></code></span> or <span><code class="docutils literal"><span class="pre">ElitePrimaryFireFLH</span></code></span>, as
 appropriate.</p>
 </div>
@@ -370,13 +370,13 @@ that your PF modification defines warhead values or damage values.
         <li class="right" >
           <a href="passablestructures.html" title="Passable Structures"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Buildings</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

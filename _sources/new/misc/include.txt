@@ -1,8 +1,10 @@
+ INI; [#include] allows rulesmd.ini to be split up into separate files
+
 [#include]
 
 
 Ares allows you to split your rulesmd.ini file up into separate
-pieces so as to better organise the various settings. Any INI files you list
+pieces so as to better organize the various settings. Any INI files you list
 under the new [#include]► section will be loaded once the main file itself
 has finished loading. INI files included in this manner can also specify their
 own [#include]► section to load further INIs. There is no depth limit, and
@@ -36,7 +38,5 @@ in the include list can include subfolders (e.g.
 5=MyMod\rules_infantry.ini). The currently loaded MIXes are also scanned
 for the files if a loose file of that name cannot be found, however, this only
 works if you do not specify a subfolder.
-
- INI; [#include] section allows rulesmd.ini to be split up into separate files.
 
  0.1

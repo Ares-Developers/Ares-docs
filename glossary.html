@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Glossary &mdash; Ares 0.E documentation</title>
+    <title>Glossary &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="index.html" />
     <link rel="prev" title="Credits" href="credits.html" /> 
   </head>
   <body role="document">
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="credits.html" title="Credits"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Ares 0.E documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -69,39 +69,86 @@
   <div class="section" id="glossary">
 <h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
 <dl class="glossary docutils">
-<dt id="term-int"><span id="term-integer"></span><span id="term-integers"></span><span id="term-signed-integer"></span><span id="term-signed-integers"></span>int<br />integer<br />integers<br />signed integer<br />signed integers</dt>
-<dd>All whole numbers from -2147483648 to 2147483647; in rare cases, only from -32768 to 32767.</dd>
-<dt id="term-unsigned-integer"><span id="term-unsigned-integers"></span>unsigned integer<br />unsigned integers</dt>
-<dd>All non-negative whole numbers from 0 to either 32767, 2147483647 or 4294967296.</dd>
-<dt id="term-float"><span id="term-floats"></span><span id="term-double"></span><span id="term-doubles"></span>float<br />floats<br />double<br />doubles</dt>
-<dd>Any decimal number.</dd>
-<dt id="term-byte"><span id="term-bytes"></span><span id="term-unsigned-byte"></span><span id="term-unsigned-bytes"></span>byte<br />bytes<br />unsigned byte<br />unsigned bytes</dt>
-<dd>All whole numbers from 0 to 255.</dd>
-<dt id="term-signed-byte"><span id="term-signed-bytes"></span>signed byte<br />signed bytes</dt>
-<dd>All whole numbers from -128 to 127.</dd>
-<dt id="term-bool"><span id="term-boolean"></span><span id="term-booleans"></span>bool<br />boolean<br />booleans</dt>
-<dd>yes or no, true or false, 1 or 0.</dd>
-<dt id="term-str"><span id="term-string"></span><span id="term-strings"></span>str<br />string<br />strings</dt>
-<dd>Normal text.</dd>
-<dt id="term-stringlist"><span id="term-listofstrings"></span>stringlist<br />listofstrings</dt>
-<dd>Character-separated list of <a class="reference internal" href="#term-strings"><span class="xref std std-term">strings</span></a>.</dd>
-<dt id="term-intlist"><span id="term-listofints"></span>intlist<br />listofints</dt>
-<dd>Character-separated list of <a class="reference internal" href="#term-integers"><span class="xref std std-term">integers</span></a>.</dd>
-<dt id="term-rgb">rgb</dt>
-<dd>Red, Green, and Blue is the most common way colors are represented. Each <a class="reference internal" href="#term-byte"><span class="xref std std-term">byte</span></a> represents the amount of each color respectively, with 0 as the minimum and 255 as the maximum.
-This color model is used with RadColor, for instance.</dd>
-<dt id="term-hsb">hsb</dt>
-<dd>Hue, Saturation, and Brightness is used much less frequently than <a class="reference internal" href="#term-rgb"><span class="xref std std-term">RGB</span></a>. Similarly, each <a class="reference internal" href="#term-byte"><span class="xref std std-term">byte</span></a> represents the amount of each factor. However, it is important to note that the Tiberian Sun and Red Alert 2 engines use a unique HSB color model that is not the same as the one used by most PC programs, like MS Paint.</dd>
-<dt id="term-color"><span id="term-colors"></span>color<br />colors</dt>
-<dd>Color definition values, either in <a class="reference internal" href="#term-rgb"><span class="xref std std-term">R,G,B</span></a> or <a class="reference internal" href="#term-hsb"><span class="xref std std-term">H,S,B</span></a> notation.
-This unique color model is used with flags in the <code class="docutils literal"><span class="pre">[Colors]</span></code> section.</dd>
+<dt id="term-boolean"><span id="term-booleans"></span>boolean<br />booleans</dt>
+<dd>Either <cite>yes</cite> or <cite>no</cite>, <cite>true</cite> or <cite>false</cite>,
+<cite>1</cite> or <cite>0</cite>.</dd>
+<dt id="term-byte"><span id="term-bytes"></span>byte<br />bytes</dt>
+<dd>All whole numbers from 0 to 255. For allowed formats see <a class="reference internal" href="#term-integer"><span class="xref std std-term">integer</span></a></dd>
+<dt id="term-cell"><span id="term-cells"></span>cell<br />cells</dt>
+<dd>Depending on context, range or distance as <a class="reference internal" href="#term-integer"><span class="xref std std-term">integer</span></a> or
+<a class="reference internal" href="#term-float"><span class="xref std std-term">floating point value</span></a>.</dd>
 <dt id="term-clsid"><span id="term-clsids"></span><span id="term-locomotor"></span><span id="term-locomotors"></span>clsid<br />clsids<br />locomotor<br />locomotors</dt>
-<dd>Either a locomotor, or an AI general identifier.</dd>
-<dt id="term-percent"><span id="term-percents"></span><span id="term-percentage"></span><span id="term-percentages"></span><span id="term-"></span>percent<br />percents<br />percentage<br />percentages<br />%</dt>
-<dd>Either a direct percentage (e.g. &#8220;50%&#8221;), or a <a class="reference internal" href="#term-float"><span class="xref std std-term">floating point value</span></a> (e.g. &#8220;0.5&#8221;).</dd>
+<dd>One of the fixed locomotor clsids.</dd>
+<dt id="term-color"><span id="term-colors"></span>color<br />colors</dt>
+<dd>Color definition values, either in <a class="reference internal" href="#term-rgb"><span class="xref std std-term">R,G,B</span></a> or
+<a class="reference internal" href="#term-hsb"><span class="xref std std-term">H,S,B</span></a> notation.</dd>
+<dt id="term-csf-label"><span id="term-csf-string"></span>csf label<br />csf string</dt>
+<dd>The name of an entry in the CSF file containing the translated strings
+displayed by the game. Label names can be up to 31 characters long.</dd>
+<dt id="term-enumeration">enumeration</dt>
+<dd>One value of a fixed set of all possible values. Values of enumerations are
+strings, associating behavior or options to names. The value names have to
+be used as described, with spelling unchanged.</dd>
+<dt id="term-eva-entry"><span id="term-evamd-entry"></span>eva entry<br />evamd entry</dt>
+<dd>The name of an EVA message defined in <code class="file docutils literal"><span class="pre">evamd.ini</span></code>.</dd>
+<dt id="term-float"><span id="term-floats"></span><span id="term-double"></span><span id="term-doubles"></span>float<br />floats<br />double<br />doubles</dt>
+<dd>Any decimal number, using the dot <cite>.</cite> as decimal point. If the value
+ends with a percentage sign <cite>%</cite>, the value is divided by 100.</dd>
+<dt id="term-frame"><span id="term-frames"></span>frame<br />frames</dt>
+<dd>Ticks of game-time as <a class="reference internal" href="#term-integer"><span class="xref std std-term">integer</span></a>. One second of game-time is 15 frames;
+one minute of game-time is 900 frames. One second of game-time equals one
+second of real-time on normal game speed. Used to define durations, delays,
+or intervals.</dd>
+<dt id="term-hsb">hsb</dt>
+<dd>Hue, Saturation, and Brightness is used much less frequently than
+<a class="reference internal" href="#term-rgb"><span class="xref std std-term">RGB</span></a>. Similarly, each <a class="reference internal" href="#term-byte"><span class="xref std std-term">byte</span></a> represents the amount of each
+factor. However, it is important to note that the Tiberian Sun and Red Alert
+2 engines use a unique HSB color model that is not the same as the one used
+by most PC programs, like MS Paint.</dd>
+<dt id="term-integer"><span id="term-integers"></span>integer<br />integers</dt>
+<dd>Whole numbers from -2147483648 to 2147483647; in rare cases, only from
+-32768 to 32767. Allowed formats are all decimal numbers, and hexadecimal
+numbers either with a <cite>$</cite> prefix or an <cite>H</cite> or <cite>h</cite>
+suffix. For example <cite>123</cite>, <cite>$7b</cite>, and <cite>7Bh</cite> all mean
+the same.</dd>
+<dt id="term-lepton"><span id="term-leptons"></span>lepton<br />leptons</dt>
+<dd>Distance as <a class="reference internal" href="#term-integer"><span class="xref std std-term">integer</span></a> as fractions of a <a class="reference internal" href="#term-cell"><span class="xref std std-term">cell</span></a>. 256 leptons are
+one cell.</dd>
+<dt id="term-list">list</dt>
+<dd>A comma-separated list of items like integers or type names. Usually, lists
+can be up to 127 characters long.</dd>
+<dt id="term-minute"><span id="term-minutes"></span>minute<br />minutes</dt>
+<dd>Minutes as <a class="reference internal" href="#term-float"><span class="xref std std-term">floating point value</span></a>, with support for fractions.
+Multiplied by 900, gives the number of <a class="reference internal" href="#term-frames"><span class="xref std std-term">frames</span></a> of game-time. Used to
+define durations, delays, or intervals. Note that this is sometimes used as
+<cite>real-time</cite> minutes.</dd>
+<dt id="term-modifier"><span id="term-multiplier"></span>modifier<br />multiplier</dt>
+<dd>A <a class="reference internal" href="#term-float"><span class="xref std std-term">floating point value</span></a> used as a factor, that is it is being
+multiplied to strengthen or weaken an effect. <cite>1.0</cite> or <cite>100%</cite>
+usually mean an effect is not changed, while <cite>0.0</cite> or <cite>0%</cite>
+mean an effect is nullified. Depending on context, values larger than
+<cite>100%</cite> are allowed.</dd>
+<dt id="term-percent"><span id="term-percents"></span><span id="term-percentage"></span><span id="term-percentages"></span><span id="term-chance"></span>percent<br />percents<br />percentage<br />percentages<br />chance</dt>
+<dd><p class="first">A <a class="reference internal" href="#term-float"><span class="xref std std-term">floating point value</span></a> that is used as a percentage value, a
+probability or a multiplier. Most commonly a value between <cite>0%</cite> and
+<cite>100%</cite>.</p>
+<p class="last">Seldom an <a class="reference internal" href="#term-integer"><span class="xref std std-term">integer</span></a> between <cite>0</cite> and <cite>100</cite>. Note that
+integer percentages <cite>do not</cite> end with a <cite>%</cite> sign.</p>
+</dd>
+<dt id="term-rgb">rgb</dt>
+<dd>Red, Green, and Blue is the most common way colors are represented. Each
+<a class="reference internal" href="#term-byte"><span class="xref std std-term">byte</span></a> represents the amount of each color respectively, with
+<cite>0</cite> as the minimum and <cite>255</cite> as the maximum.</dd>
+<dt id="term-sound-entry"><span id="term-soundmd-entry"></span>sound entry<br />soundmd entry</dt>
+<dd>The name of a sound entry defined in <code class="file docutils literal"><span class="pre">soundmd.ini</span></code>.</dd>
 <dt id="term-special">special</dt>
 <dd>If given as a value type, this value doesn&#8217;t conform to any typical format.
-Please check the context of the documentation to see how the value must be formatted.</dd>
+Please check the context of the documentation to see how the value must be
+formatted.</dd>
+<dt id="term-string"><span id="term-strings"></span>string<br />strings</dt>
+<dd>Normal text. Mind the length limits that apply.</dd>
+<dt id="term-theme"><span id="term-theme-id"></span>theme<br />theme id</dt>
+<dd>The name of a theme entry defined in <code class="file docutils literal"><span class="pre">thememd.ini</span></code>.</dd>
 </dl>
 </div>
 
@@ -120,11 +167,11 @@ Please check the context of the documentation to see how the value must be forma
         <li class="right" >
           <a href="credits.html" title="Credits"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Ares 0.E documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 1.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

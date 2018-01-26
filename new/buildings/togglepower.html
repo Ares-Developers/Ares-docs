@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Toggle Power &mdash; Ares 0.E documentation</title>
+    <title>Toggle Power &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="../../index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="../../index.html" />
     <link rel="up" title="Buildings" href="index.html" />
     <link rel="next" title="Trivial Structure Damage" href="trivialstructuredamage.html" />
     <link rel="prev" title="Tech Structures Return to Neutral" href="techstructures.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="techstructures.html" title="Tech Structures Return to Neutral"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Buildings</a> &raquo;</li> 
       </ul>
@@ -97,7 +97,7 @@ A workaround using a fake super weapon was possible, but it did not work well.
 <p><span class="versionmodified">New in version 0.8.</span></p>
 </div>
 <div class="section" id="keyboard-command">
-<h2>Keyboard Command<a class="headerlink" href="#keyboard-command" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2>Keyboard Command<a class="headerlink" href="#keyboard-command" title="Permalink to this headline">¶</a></h2>
 <p>Toggle Power is now available as a proper keyboard command, which functions like
 clicking the corresponding button in the <span class="game docutils literal">Tiberian Sun</span> sidebar. You can
 find it in the category <cite>Interface</cite>.</p>
@@ -110,7 +110,7 @@ the original <span class="game docutils literal">Yuri&#8217;s Revenge</span>, wh
 </dl>
 </div>
 <div class="section" id="cursors">
-<span id="index-0"></span><h2>Cursors<a class="headerlink" href="#cursors" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2>Cursors<a class="headerlink" href="#cursors" title="Permalink to this headline">¶</a></h2>
 <p>The two mouse cursors this feature uses can be customized with the following
 <a class="reference internal" href="../mousecursors.html"><em>Mouse Cursor</em></a> definitions:</p>
 <p><cite>TogglePower</cite>: Shown if the building&#8217;s power status can be toggled. Only
@@ -119,7 +119,7 @@ and either <span><code class="docutils literal"><span class="pre">Power</span></
 <p><cite>NoTogglePower</cite>: Shown if the building&#8217;s power cannot be toggled.</p>
 </div>
 <div class="section" id="power-off-overlay-animation">
-<span id="index-1"></span><h2>Power Off Overlay Animation<a class="headerlink" href="#power-off-overlay-animation" title="Permalink to this headline">¶</a></h2>
+<span id="index-2"></span><h2>Power Off Overlay Animation<a class="headerlink" href="#power-off-overlay-animation" title="Permalink to this headline">¶</a></h2>
 <p>If a building is powered down, <code class="file docutils literal"><span class="pre">poweroff.shp</span></code> is shown as overlay like the
 repair wrench. Only the player owning this building as well as observers can see
 this overlay, and other players will just see a building without power.</p>
@@ -128,11 +128,11 @@ are moved to be shown simultaneously.</p>
 <p><code class="file docutils literal"><span class="pre">poweroff.shp</span></code> is drawn using the <code class="file docutils literal"><span class="pre">mousepal.pal</span></code> palette.</p>
 </div>
 <div class="section" id="ai-support">
-<span id="index-2"></span><h2>AI Support<a class="headerlink" href="#ai-support" title="Permalink to this headline">¶</a></h2>
+<span id="index-3"></span><h2>AI Support<a class="headerlink" href="#ai-support" title="Permalink to this headline">¶</a></h2>
 <p>If Toggle Power is enabled, the AI can also make use of it. The AI will try to
-cope with power outages because of insufficient power output. If an AI player is
-being drained or suffering from a power blackout triggered by a spy or Force
-Shield are exempt and will not try to turn off the base.</p>
+cope with power outages because of insufficient power output. AI players being
+drained or suffering from a power blackout triggered by a spy or Force Shield
+are exempt and will not try to turn off the base.</p>
 <p>Base defenses are tried to be held online if possible. Super weapons are turned
 off earlier than power consuming buildings that are not base defenses.</p>
 <div class="admonition note">
@@ -150,7 +150,7 @@ Defaults to <cite>-1</cite>.</dd>
 immediately to power level changes. Values less than <cite>0</cite> deactivate
 this logic. Defaults to <cite>45</cite>.</dd>
 </dl>
-<span class="target" id="index-3"></span></div>
+</div>
 </div>
 
 
@@ -171,13 +171,13 @@ this logic. Defaults to <cite>45</cite>.</dd>
         <li class="right" >
           <a href="techstructures.html" title="Tech Structures Return to Neutral"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Buildings</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

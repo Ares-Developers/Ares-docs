@@ -1,3 +1,7 @@
+
+  Art; AlternateTheaterArt for InfantryTypes supports all theaters
+  Theaters; AlternateTheaterArt for InfantryTypes supports all theaters
+
 AlternateTheaterArt
 
 
@@ -19,7 +23,5 @@ only works for the arctic theater and only for InfantryTypes.
  This only works for SHP-based units. Voxels do not use this system and
   cannot have theater-specific art (you'd have to use
   Prerequisite.RequiredTheaters to achieve that).
-
- Art; AlternateTheaterArt for InfantryTypes supports all theaters.
 
  0.2

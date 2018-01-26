@@ -1,3 +1,7 @@
+
+  Hunter Seeker; How to set up
+  Universe; Hunter Seekers
+
 Hunter Seeker
 
 
@@ -8,10 +12,12 @@ the Hunter Seeker super weapon.
 Refer to ModEnc  for
 more information about Hunter Seeker's movement and targeting logic.
 
- Hunter Seeker; How to set up
-
  0.7
 
+
+
+  Super Weapons; Hunter Seeker global settings
+  Vehicles; Hunter Seeker settings
 
 Global Settings
 
@@ -70,6 +76,11 @@ makes use of these values.
 [VehicleType]HunterSeeker.EmergeSpeed=integer
   Speed value used when ascending from the launch site. Defaults to
   [General]►HunterSeekerEmergeSpeed.
+
+
+
+  Hunter Seeker; Make units untargetable
+  TechnoTypes; Disallow targeting by Hunter Seeker
 
 Disallow Targeting
 

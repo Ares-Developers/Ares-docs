@@ -1,3 +1,7 @@
+ 
+  Super Weapons; Give or take money when firing
+  Super Weapons; Drain money while active
+
 Cost
 
 
@@ -20,8 +24,6 @@ is grayed out.
   After this many frames the credits defined in Money.DrainAmount= are
   added to the firing player's account when a UseChargeDrain=yes super
   weapon is active. Defaults to 0.
-
- Super Weapons; Money deductable when firing a superweapon.
 
  0.1
  0.4

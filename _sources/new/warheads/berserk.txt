@@ -1,3 +1,7 @@
+
+  TechnoType; Reloading time multiplier when berserking
+  Berserk; Reloading time multiplier
+
 Berserk Reloading Time Modifier
 
 
@@ -13,7 +17,5 @@ each TechnoType.
 [TechnoType]Berserk.ROFMultiplier=float - multiplier
   The multiplier applied when this unit is berserking. Smaller means faster
   firing. Defaults to [CombatDamage]►BerserkROFMultiplier.
-
- Berserk; Reloading time multiplier
 
  0.8

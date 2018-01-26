@@ -1,4 +1,4 @@
- Weapons; Special weapons (mind-control/parasite/temporal) will now work in the Secondary slot.
+ Weapons; Special weapons will now work in the Secondary slot
 
 
 "Special" Weapons now function in secondary slots

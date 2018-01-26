@@ -1,3 +1,8 @@
+
+  Buildings; Tunnel network entrances
+  Tunnels; Tunnel Networks
+  Universe; Tunnel Networks
+
 Tunnel Networks
 
 
@@ -23,12 +28,18 @@ section, and they have the following options:
   The maximum Size= units can have to be allowed into this tunnel.
   Defaults to 0.0.
 
+Then, a BuildingType can be turned into a tunnel entrance by setting the
+following tag. Multiple BuildingType\ s can share the same tunnel type.
+Only units that have a Size less than or equal to of the SizeLimit
+of the tunnel entrance are allowed to enter through that entrance.
+
+ For ejection the Size is currently not checked against
+  MaxSize. This might change in future versions.
+
  If you don't get the enter cursor on the tunnel entrances, check
   that you correctly set Passengers= and MaxSize on the
   TunnelType.
 
-Then, a BuildingType can be turned into a tunnel entrance by setting the
-following tag. Multiple BuildingType\ s can share the same tunnel type.
 Tunnel entrances play EnterTransportSound and LeaveTransportSound
 whenever a unit enters or leaves the building. The entrance building
 will show pips representing the contents of the tunnel system.
@@ -36,8 +47,8 @@ will show pips representing the contents of the tunnel system.
 [BuildingType]Tunnel=TunnelType
   The type of tunnel system this building is an entrance to.
 
-   Tunnel buildings are not allowed to have weapons, turrets and can't
-    be capturable or mind-controllable.
+   Tunnel buildings are not allowed to have weapons nor turrets and
+    cannot be capturable or mind-controllable.
 
    Hover units have the same problems with tunnel entrance buildings
     as they have entering UnitAbsorb=yes buildings.
@@ -59,7 +70,5 @@ Example:
     ; Civilian Tunnel Entrance Building
     [CATNNL]
     Tunnel=CivilianTunnel
-
- Buildings; Tunnel Networks
 
  0.E

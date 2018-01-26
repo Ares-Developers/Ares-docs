@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Crew with Engineer=yes could freeze the game &mdash; Ares 0.E documentation</title>
+    <title>Crew with Engineer=yes could freeze the game &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,8 +24,8 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="../../index.html" />
-    <link rel="up" title="Type 2 Fixes (Mod Logics)" href="index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="../../index.html" />
+    <link rel="up" title="Fixes to Mod Logics" href="index.html" />
     <link rel="next" title="Factory Load Sharing" href="factoryloadsharing.html" />
     <link rel="prev" title="Passengers and TurretCount" href="ejectlastpassenger.html" /> 
   </head>
@@ -42,9 +42,9 @@
         <li class="right" >
           <a href="ejectlastpassenger.html" title="Passengers and TurretCount"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Bug Fixes</a> &raquo;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Type 2 Fixes (Mod Logics)</a> &raquo;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Fixes to Mod Logics</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -82,8 +82,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="index-0"></span><div class="section" id="crew-with-engineer-yes-could-freeze-the-game">
-<span id="index-1"></span><h1>Crew with <span><span class="type">Engineer=yes</span></span> could freeze the game<a class="headerlink" href="#crew-with-engineer-yes-could-freeze-the-game" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="crew-with-engineer-yes-could-freeze-the-game">
+<span id="index-0"></span><h1>Crew with <span><span class="type">Engineer=yes</span></span> could freeze the game<a class="headerlink" href="#crew-with-engineer-yes-could-freeze-the-game" title="Permalink to this headline">¶</a></h1>
 <p>Because of a bad algorithm selling a building could go into an infinite loop.
 The game ensures to at most spawn one infantry unit having <span><code class="docutils literal"><span class="pre">Engineer=yes</span></code></span>
 set by just generating a new crew member until it has <span><code class="docutils literal"><span class="pre">Engineer=no</span></code></span> set.
@@ -95,7 +95,7 @@ and the game will freeze.</p>
 </div>
 </div>
 <div class="section" id="crash-with-undefined-engineer-technician-and-crew">
-<h1>Crash with undefined <span><span class="type">Engineer</span></span>, <span><span class="type">Technician</span></span> and <span><span class="type">Crew</span></span><a class="headerlink" href="#crash-with-undefined-engineer-technician-and-crew" title="Permalink to this headline">¶</a></h1>
+<span id="index-1"></span><h1>Crash with undefined <span><span class="type">Engineer</span></span>, <span><span class="type">Technician</span></span> and <span><span class="type">Crew</span></span><a class="headerlink" href="#crash-with-undefined-engineer-technician-and-crew" title="Permalink to this headline">¶</a></h1>
 <p>When <span><code class="docutils literal"><span class="pre">Technician=</span></code></span>, <span><code class="docutils literal"><span class="pre">Engineer=</span></code></span>, <span><code class="docutils literal"><span class="pre">AlliedCrew=</span></code></span> and others
 weren&#8217;t defined, the game crashed when a building was sold or destroyed. This
 was just because of oversights in both cases.</p>
@@ -127,13 +127,13 @@ of the result.</p>
         <li class="right" >
           <a href="ejectlastpassenger.html" title="Passengers and TurretCount"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Bug Fixes</a> &raquo;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" >Type 2 Fixes (Mod Logics)</a> &raquo;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" >Fixes to Mod Logics</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

@@ -174,23 +174,23 @@ Changed tags:
     Default depends on wave type.
 
   [SuperWeapon]►SW.Damage
-    Defaults depends on Type.
+    Default depends on Type.
 
   [SuperWeapon]►SW.Range
-    Defaults depends on Type.
+    Default depends on Type.
 
   [SuperWeapon]►SW.Deferment
     Defaults to [General]►LightningDeferment for
     Type=LightningStorm.
 
   [SuperWeapon]►SW.Animation
-    Defaults depends on Type.
+    Default depends on Type.
 
   [SuperWeapon]►SW.Sound
-    Defaults depends on Type.
+    Default depends on Type.
 
   [SuperWeapon]►SW.ActivationSound
-    Defaults depends on Type.
+    Default depends on Type.
 
   [SuperWeapon]►Lightning.Duration
     Defaults to [General]►LightningStormDuration.
@@ -381,9 +381,9 @@ Other changes:
   Some ArmorType parsing issues have been resolved to improve defaulting
   to other types, and to not reset data unexpectedly.
 
-  The Unit Delivery super weapon has been reworked. It now allows to place units
+  The Unit Delivery super weapon has been reworked. It now allows placing units
   on ore, and delivered objects are put on guard, area guard or hunt mission.
-  The option to skip the buildup animations has been deprectated, because it
+  The option to skip the buildup animations has been deprecated, because it
   never worked correctly.
 
   Hunter Seekers no longer target objects under the effect of the Iron Curtain
@@ -403,4 +403,18 @@ Other changes:
   KillDriver has been changed to be applied like regular damage. It now
   respects immunities and supports CellSpread. Thus, the effect might
   not be applied in all cases where it was applied before, and might be applied
-  in cases were it previously was not.
+  in cases where it previously was not.
+
+From Ares 0.E and below
+
+
+Changed tags:
+
+  No changes required.
+
+Other changes:
+
+  Some Super Weapon Targeting Modes used the wrong target cell when firing at
+  buildings. Now, the centers of the buildings are targeted. Affected modes are
+  Nuke, LightningStorm, Offensive, Stealth,
+  Self, and MultiMissile.

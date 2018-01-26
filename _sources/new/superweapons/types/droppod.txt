@@ -1,9 +1,12 @@
+ Universe; DropPod reinforcements
+
 Type=DropPod
 
 
 Ares re-implements the Drop Pod SW (Type=DropPod) known from
 Firestorm. A super weapon of this type spawns between a minimum and a
-maximum random units from a list of types, which all arrive in drop pods.
+maximum number of random units from a list of types, which all arrive in drop
+pods.
 
  \ Firestorm had the Drop Pods hardcoded to use E1
   (Rifle Soldier) and E2 (Disk Thrower), a behavior that has not been
@@ -13,7 +16,7 @@ maximum random units from a list of types, which all arrive in drop pods.
 
 Default values for general tags:
 
-[SuperWeapon]SW.AITargeting=enum
+[SuperWeapon]SW.AITargeting=enumeration
   Defaults to ParaDrop.
 [SuperWeapon]EVA.Detected=EVA event
   Defaults to EVA_DropPodDetected.
@@ -28,7 +31,7 @@ Default values for general tags:
 Drop Pod specific tags:
 
 [SuperWeapon]DropPod.Types=list of InfantryTypes
-  The types to chose from. Each type has an equal chance of being selected. You
+  The types to choose from. Each type has an equal chance of being selected. You
   can add types more than once. Only infantry is supported. Defaults to
   [General]►DropPodTypes.
 [SuperWeapon]DropPod.Veterancy=float
@@ -50,7 +53,5 @@ the super weapon stops to place more units.
 
 See Drop Pods for information about the global defaults
 and other related additions.
-
- Super Weapons; DropPod reinforcements.
 
  0.7

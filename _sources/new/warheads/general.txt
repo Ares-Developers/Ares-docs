@@ -1,6 +1,8 @@
 General Settings
 
 
+ Warheads; AffectsEnemies= added as counterpart for AffectsAllies=
+
 AffectsEnemies
 
 
@@ -9,23 +11,22 @@ AffectsEnemies
   effect on the warhead's ability to target enemy units. A counterpart to the
   existing AffectsAllies flag.
 
- AffectsEnemies= flag added (counterpart for AffectsAllies=).
-
  0.1
 
+
+
+  Warheads; Suppress EVA's "Ore miner under attack" warnings
+  EVA; Suppress "Ore miner under attack" warnings per warhead
 
 Non-Malicious Warheads
 
 
 [Warhead]Malicious=boolean
-  Specifies whether or not EVA should notify a ore miner's owner of an attack
+  Specifies whether or not EVA should notify an ore miner's owner of an attack
   (EVA_OreMinerUnderAttack). No other EVA messages are suppressed. For
   example, if a warhead's purpose is to spread ore dealing damage as a side
   effect only you can use Malicious=no to disable unreasonable EVA attack
   warnings for ore miners. Defaults to yes.
-
- Warheads; Malicious= warhead flag suppresses EVA's *ore miner under
-  attack* warnings.
 
  0.2
 

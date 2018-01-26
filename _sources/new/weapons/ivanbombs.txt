@@ -1,5 +1,10 @@
 .. _custom-ivan-bombs:
 
+
+  Weapons; Multiple Ivan Bombs with separate settings
+  Ivan Bombs; Multiple weapons with separate settings
+  Ivan Bombs; Death bombs blow up when the victim dies
+
 Ivan Bombs
 
 
@@ -50,7 +55,7 @@ the following flags in order to customize that bomb:
   weapon. Defaults to [CombatDamage]►CanDetonateDeathBomb.
 [Weapon]IvanBomb.DetonateOnSell=boolean
   Whether attached bombs shall explode if the victim is sold. Otherwise, the
-  bomb will will just be disarmed. Defaults to yes.
+  bomb will just be disarmed. Defaults to yes.
 [Weapon]IvanBomb.Delay=integer
   The number of frames that will elapse before the bomb detonates automatically.
   Defaults to [CombatDamage]►IvanTimedDelay.
@@ -87,8 +92,6 @@ replace that SHP file.
  /images/bombcurs.png
   :alt: Image of bombcurs.shp
   :align: center
-
- Customisable Ivan bomb clones.
 
  0.1
  0.5

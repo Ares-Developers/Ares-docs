@@ -1,6 +1,8 @@
 Cloak Depending On State
 
 
+.. index: Cloak; CloakStop restored
+
 Cloak Only If Standing Still (CloakStop)
 
 
@@ -12,10 +14,10 @@ though. Ares implements it.
   units. It does not work without Cloakable=yes. CLOAK ability
   will not be affected by it.
 
-.. index: Cloak; CloakStop restored.
-
  0.5
 
+
+.. index: Cloak; Cloakable only if infantry is deployed
 
 Cloak Only If Deployed
 
@@ -29,10 +31,10 @@ cloak the infantry even if not deployed.
   Whether this infantry is only allowed to self-cloak when deployed. Requires
   Deployer=yes and Cloakable=yes. Defaults to no.
 
-.. index: Cloak; Cloakable only if infantry is deployed.
-
  0.5
 
+
+.. index: Cloak; Cloakable only if building has power
 
 Cloak Only If Powered
 
@@ -45,10 +47,13 @@ Cloak Generator.
   Whether this building will uncloak when shut down or in low-power situations.
   Otherwise the building will be allowed to cloak. Defaults to no.
 
-.. index: Cloak; Cloakable only if building has power.
-
  0.5
 
+
+.. index:
+  Cloak; Non-cloakable technos
+  TechnoTypes; Make non-cloakable
+  Universe; Non-cloakable Disruption Tower
 
 Disallow Cloaking
 
@@ -65,7 +70,5 @@ even if other Disruption Towers are placed nearby.
 If a unit is disallowed from cloaking, it will not receive cloak bonuses through
 crates. In case a crate provides the cloaking ability, it will fall back to
 money.
-
-.. index: Cloak; Uncloakable technos.
 
  0.5

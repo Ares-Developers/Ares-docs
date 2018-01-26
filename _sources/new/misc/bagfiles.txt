@@ -1,3 +1,5 @@
+ Sounds; Multiple custom audio.bag files
+
 Additional Bag Files
 
 
@@ -14,7 +16,5 @@ file.
 Index files loaded later can override sound files that were included earlier,
 thus it is possible to update sound files using relatively small bag files for
 patches.
-
-.. index: Sounds; Multiple custom audio.bag files.
 
  0.A

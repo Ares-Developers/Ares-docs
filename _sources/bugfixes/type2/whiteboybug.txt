@@ -1,4 +1,8 @@
- Whiteboy-Bug;  The game now allows unlimited cameos in the sidebar instead of just 74.
+
+  Whiteboy; The sidebar now allows unlimited cameos instead of just 74
+  Limitations; Whiteboy bug with more than 74 sidebar cameos
+  Cameos; Unlimited cameos in the sidebar instead of just 74
+  Crashes; Whiteboy bug with more than 74 sidebar cameos
 
 
 The Whiteboy Bug

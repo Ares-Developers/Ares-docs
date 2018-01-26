@@ -1,6 +1,11 @@
 Score Screens and Themes
 
 
+
+  Score Screens; Campaign screens
+  Interface; Campaign score screens
+  Themes; Separate over and under par themes
+
 Campaign
 
 
@@ -14,7 +19,7 @@ piece, an animation, and a palette file for all three.
   respectively.
 
 [Side]CampaignScore.Transition=filename, *including* the .shp extension
-  An image used as a transition from the looping animation to the statc
+  An image used as a transition from the looping animation to the static
   background image. Played backwards for the opposite case. Uses the palette
   defined as CampaignScore.Palette. Defaults to ASCRTMD.SHP,
   SSCRTMD.SHP or SYCRTMD.SHP for sides 1, 2 and all others
@@ -46,6 +51,11 @@ finished the mission in under par time.
 
  0.7
 
+
+
+  Score Screens; Multiplayer screens
+  Interface; Multiplayer score screens
+  Themes; Separate win and lose themes
 
 Multiplayer
 
@@ -84,6 +94,8 @@ played.
 
  0.7
 
+
+ Interface; Graphical text banner
 
 Graphical Text Banner
 

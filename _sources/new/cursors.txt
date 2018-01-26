@@ -1,3 +1,7 @@
+
+  TechnoTypes; Mouse cursors
+  Art; Cursors on units and structures
+
 Cursors on Units and Structures
 
 
@@ -10,12 +14,14 @@ Mouse Cursors. Also see how to use custom
 weapon cursors.
 
 
+ Cursors; Movement
+
 Movement
 
 
 These cursors are used for a variety of functions: setting the rally point for
 factories, undeploying structures, and giving units move orders, but they might
-also be used as fallback for other funtions that can't be used, for instance
+also be used as fallback for other functions that can't be used, for instance
 when a target can't be attacked or an object cannot be entered.
 
 [TechnoType]Cursor.Move=mouse cursor
@@ -25,6 +31,8 @@ when a target can't be attacked or an object cannot be entered.
   The cursor to use for representing the no-move action. Defaults to
   NoMove.
 
+
+ single: Cursors; Deploy, eject, area attack
 
 Deploy
 
@@ -45,6 +53,8 @@ Desolators, as well as for ordering area attacks like on the Yuri Clone.
   be ejected, or an automatically undeploying infantry is currently deployed.
   Defaults to NoDeploy.
 
+
+ Cursors; Enter or dock
 
 Enter
 
@@ -75,6 +85,8 @@ specialized cursors.
   type while entering is not possible. This is used on full transports. Defaults
   to NoEnter.
 
+
+ Cursors; Infiltrate buildings
 
 Spy Infiltration
 

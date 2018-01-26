@@ -1,6 +1,10 @@
 CellSpread Enhancements
 
 
+
+  Warheads; CellSpread supports larger values
+  CellSpread; Support larger values
+
 CellSpread
 
 
@@ -18,10 +22,12 @@ have been updated to support this as well.
   quadrupled. For performance reasons it is not advised to use CellSpread
   for frequent or map wide effects.
 
- Warheads; CellSpread supports larger values.
-
  0.6
 
+
+
+  Warheads; Limit how often CellSpread hits the same object
+  CellSpread; Limit how often the same object is hit
 
 CellSpread Hit Limit
 
@@ -39,7 +45,5 @@ impact site are used, all others are discarded.
   The number of times an object can be affected at most when hit by a warhead
   using CellSpread. Set this to 1 to make the same object not be
   hit not more than once. Defaults to -1 (infinite).
-
- Warheads; Limit how often CellSpread hits the same object.
 
  0.6

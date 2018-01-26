@@ -1,3 +1,5 @@
+ Weapons; Electric bolts can have custom colors
+
 Electric Bolt Coloring
 
 
@@ -10,7 +12,5 @@ Electric Bolt Coloring
 
 The three colors used to draw this Electric Bolt. Can be omitted to use the
 default values (default values are palette-dependent as opposed to RGB). 
-
- Electric bolts can have custom colors.
 
  0.1

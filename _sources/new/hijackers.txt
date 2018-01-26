@@ -1,3 +1,11 @@
+
+  Vehicle Thief; Enter and exit sounds
+  Vehicle Thief; Works with mind control
+  Vehicle Thief; Make units immune
+  Vehicles; Make units immune to hijacking
+  Mind Control; Works with hijackers
+  single: Infantry; Expanded VehicleThief hijacker logic
+
 Hijackers
 
 
@@ -17,7 +25,7 @@ InfantryType, you can customize it in various ways:
   between the controller and the unit will be broken when the hijacker enters.
   Otherwise the hijacker cannot steal the unit. Defaults to yes.
 [InfantryType]VehicleThief.OneTime=boolean
-  Whether the vehicle thief will be consumed in the procees of capturing a unit.
+  Whether the vehicle thief will be consumed in the process of capturing a unit.
   Otherwise the hijacker will emerge when the captured unit is destroyed. In
   every case the hijacker will be reimbursed when the unit is grinded. Defaults
   to no.
@@ -42,7 +50,7 @@ to change whether a unit can be hijacked.
   problems.
 
 Hijackers remember their health and their previous veterancy level. When the
-vehicle they stole are destroyed, they respawn with a random health up to half
+vehicles they stole are destroyed, they respawn with a random health up to half
 their previous health, and their old rank.
 
 Hijacking works well together with Mind Control now. If a mind-controlled unit
@@ -51,7 +59,7 @@ bogus links left behind. Likewise, mind-controlled hijackers will capture
 vehicles for their original owning houses, not for their capturers'. The
 mind-control link will be transferred to the captured vehicle, if it isn't
 immune to mind control. Otherwise, the mind-controller loses control over both
-hijacker and its vicitm. Same is true for the opposite case: When a hijacked and
+hijacker and its victim. Same is true for the opposite case: When a hijacked and
 mind-controlled unit is destroyed, the link is transferred to the hijacker, if
 it isn't immune to psionics.
 
@@ -60,7 +68,5 @@ Driver warheads. See KillDriver and CanDrive.
 
 See Mouse Cursors on how to customize the cursor to
 indicate a vehicle can be hijacked by defining TakeVehicle.
-
- Infantry; Expanded VehicleThief logic.
 
  0.2

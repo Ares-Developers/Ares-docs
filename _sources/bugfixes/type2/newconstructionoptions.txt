@@ -1,4 +1,6 @@
- EVA; "New construction options" no longer announced if player does not have the correct factory type for a unit or does not own a building through Owner.
+
+  EVA; "New construction options" no longer announced erratically
+  Bugs; "New construction options" (NCO) no longer announced erratically
 
 
 New Construction Options
@@ -16,6 +18,6 @@ Another cause of the NCO bug is when a house is not listed as a
 buildable building's owner. Ares's prerequisite system does not check
 for that, thereby eliminating this type of bug.
 
-Owners still affect AI baseplanning.
+Owners still affect AI base planning.
 
  0.2

@@ -1,3 +1,5 @@
+ Spies; Multiple effects on a single building
+
 Spy Behavior
 
 
@@ -17,9 +19,9 @@ All of the following flags default to no or 0.
  Must be set to yes for any of the following effects to
   work...
 
- Spy behaviour; Multiple effects can be achieved on a single building.
 
 
+ Spies; Show what the enemy can see
 
 Radar
 
@@ -38,9 +40,9 @@ Radar
   captured. Otherwise the spy effect is removed. Requires
   SpyEffect.RevealRadar=yes and a Radar=yes building.
 
-.. index Spy behaviour; New effect: Reveal radar (shows you what the enemy can see).
 
 
+ Spies; Create power outage
 
 Power
 
@@ -49,9 +51,9 @@ Power
   The number of frames for which the enemy's power will be sabotaged (i.e.
   temporarily reduced to zero).
 
- Spy behaviour; Per-building power outage duration.
 
 
+ Spies; Steal fixed amount or percentage of money
 
 Money
 
@@ -69,12 +71,11 @@ Money
   enemy upon spying this enemy building. Only has an effect if
   SpyEffect.StolenMoneyAmount=0.
 
- Spy behaviour; New effect: Steal money amount (steals a set amount of
-  money rather than a percentage).
-  
- Spy behaviour; Per-building steal money percentage.
 
 
+
+  Spies; Reset all super weapons a building provides
+  Spies; Grant one-time or permanent super weapon
 
 Super Weapons
 
@@ -84,8 +85,6 @@ Super Weapons
   attached to it (SuperWeapon, SuperWeapon2, SuperWeapons
   and all super weapons on attached upgrades) to have their countdown timers
   restarted.
-
- Spy behaviour; Reset all super weapons provided by a building
 
 
 The following tags can be used to grant super weapons like the Sonar Pulse in
@@ -105,11 +104,11 @@ Red Alert when a spy infiltrates a Sub Pen.
 
  0.B
 
- Spy behaviour; Grant one-time or permanent super weapon
 
 
 
 
+ Spies; Grant multiple stolen techs
 
 Stolen Technology
 
@@ -145,11 +144,11 @@ tech 2.
   then those buildings will no longer satisfy the old RequiresStolen*Tech
   flags.
 
- Spy behaviour; New effect: Stolen tech index (multiple new stolen techs).
-
  0.B
 
 
+
+ Spies; Build vehicles or train infantry as veteran
 
 Veterancy
 
@@ -169,6 +168,8 @@ Veterancy
 
 
 
+
+ single: Spies; Reveal production, money, or power
 
 Intelligence
 
@@ -195,11 +196,11 @@ Intelligence
   :alt: Screenshot of a current production being revealed
   :align: center
 
- Spy behaviour; New effect: Reveal production, money or power
-
  0.B
 
 
+
+ single: Spies; Reset all reverse engineered build options
 
 Reverse Engineering
 
@@ -209,6 +210,8 @@ engineering, see ....
 
 
 
+ single: Spies; Demolish infiltrated building
+
 Sabotage
 
 
@@ -216,7 +219,5 @@ Sabotage
   The number of frames after which the building will be demolished as if C4 had
   been planted. If negative, [CombatDamage]►C4Delay is used. Use
   0 to disable. Defaults to 0.
-
- Spy behaviour; Demolish infiltrated building
 
  0.E

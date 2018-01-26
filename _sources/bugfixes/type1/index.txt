@@ -1,5 +1,5 @@
 
-Type 1 Fixes (Original Bugs)
+Fixes to Original Bugs
 
 
 Fixes to genuine bugs in the original, unmodded Yuri's Revenge 1.001,

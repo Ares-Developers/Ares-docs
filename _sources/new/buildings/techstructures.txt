@@ -1,3 +1,5 @@
+ Tech Structures; Return to neutral when player defeated
+
 Tech Structures Return to Neutral
 
 
@@ -18,10 +20,12 @@ The country the buildings are given back to is their initial owner.
   Whether this building type will return to the civilian side when the owning
   player is defeated or giving up. Defaults to [General]►ReturnStructures.
 
- Tech Structures; Return to neutral when player defeated.
-
  0.6
 
+
+
+  Tech Structures; EVA and text notifications when captured or lost
+  EVA; Notifications when Tech Structures captured or lost
 
 Tech Structure Notifications
 
@@ -43,7 +47,5 @@ optional text messages for each of them.
 [BuildingType]Message.Lost=CSF label
   The text printed when a building of this type is captured by the enemy.
   Requires NeedsEngineer=yes. Defaults to none.
-
- Tech Structures; EVA and text notifications when captured and lost.
 
  0.9

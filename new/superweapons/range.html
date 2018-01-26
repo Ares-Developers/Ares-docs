@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Range Limits &mdash; Ares 0.E documentation</title>
+    <title>Range Limits &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="../../index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="../../index.html" />
     <link rel="up" title="Super Weapons" href="index.html" />
     <link rel="next" title="Cursors" href="cursors.html" />
     <link rel="prev" title="Targeting" href="targeting.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="targeting.html" title="Targeting"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Super Weapons</a> &raquo;</li> 
       </ul>
@@ -93,7 +93,7 @@ One is the distance to the building firing the super weapon at the target, the
 second is the distance of a certain unit to the target area, which is called a
 designator.</p>
 <div class="section" id="range-around-launch-site">
-<h2>Range around Launch Site<a class="headerlink" href="#range-around-launch-site" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2>Range around Launch Site<a class="headerlink" href="#range-around-launch-site" title="Permalink to this headline">¶</a></h2>
 <p>Two tags define the range a super weapon can fire in: the maximum range the
 target can be away from the super weapon building, and the minimum range, below
 which the super weapon cannot fire.</p>
@@ -110,12 +110,12 @@ default, which usually disables this range check. Defaults to <cite>-1.0</cite>.
 providing this super weapon. Values below <cite>0.0</cite> mean type-specific
 default, which usually disables this range check. Defaults to <cite>-1.0</cite>.</dd>
 </dl>
-<div class="versionadded" id="index-0">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.8.</span></p>
 </div>
 </div>
 <div class="section" id="designators">
-<h2>Designators<a class="headerlink" href="#designators" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2>Designators<a class="headerlink" href="#designators" title="Permalink to this headline">¶</a></h2>
 <p>A designator is a unit or structure that does the reconnaissance and provides a
 targeting area around itself. A super weapon requiring a designator can only
 fire at a location if at least one designator is in range. If no designator is
@@ -135,12 +135,12 @@ weapon. Overrides <span><code class="docutils literal"><span class="pre">SW.Desi
 weapons requiring this object as designator. Defaults to
 <span><code class="docutils literal"><span class="pre">[TechnoType]►Sight</span></code></span>.</dd>
 </dl>
-<div class="versionadded" id="index-1">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.8.</span></p>
 </div>
 </div>
 <div class="section" id="inhibitors">
-<h2>Inhibitors<a class="headerlink" href="#inhibitors" title="Permalink to this headline">¶</a></h2>
+<span id="index-2"></span><h2>Inhibitors<a class="headerlink" href="#inhibitors" title="Permalink to this headline">¶</a></h2>
 <p>In a sense, inhibitors are double negative designators: All enemy units and
 structures are checked instead of player owned ones, and they disallow firing a
 super weapon around them instead of being a requirement. In a positive sense,
@@ -165,7 +165,7 @@ weapon. Overrides <span><code class="docutils literal"><span class="pre">SW.Inhi
 weapons having this object set as inhibitor. Defaults to
 <span><code class="docutils literal"><span class="pre">[TechnoType]►Sight</span></code></span>.</dd>
 </dl>
-<div class="versionadded" id="index-2">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.9.</span></p>
 </div>
 </div>
@@ -189,13 +189,13 @@ weapons having this object set as inhibitor. Defaults to
         <li class="right" >
           <a href="targeting.html" title="Targeting"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Super Weapons</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

@@ -1,3 +1,5 @@
+.. index: INI; Several INI flag lists have been extended
+
 List Lengths
 
 
@@ -7,7 +9,5 @@ always long enough for lists -- especially with some of the extensions that
 Ares allows. This limit has been relaxed *for flags that take lists* --
 the maximum length for flags that take lists is now 512 characters (including
 tag name and equal sign).
-
-.. index: INI; Several INI flag lists have been extended to allow more text to be parsed.
 
  0.1

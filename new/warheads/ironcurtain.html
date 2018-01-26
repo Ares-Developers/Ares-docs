@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Iron Curtain &mdash; Ares 0.E documentation</title>
+    <title>Iron Curtain &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="../../index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="../../index.html" />
     <link rel="up" title="Warheads" href="index.html" />
     <link rel="next" title="Sonar / Decloak" href="sonar.html" />
     <link rel="prev" title="Damage Airborne Units" href="damageair.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="damageair.html" title="Damage Airborne Units"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Warheads</a> &raquo;</li> 
       </ul>
@@ -87,8 +87,8 @@
             
   <div class="section" id="iron-curtain">
 <h1>Iron Curtain<a class="headerlink" href="#iron-curtain" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="iron-curtain-effect">
-<span id="wh-ironcurtain"></span><h2>Iron Curtain Effect<a class="headerlink" href="#iron-curtain-effect" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="wh-ironcurtain"></span><div class="section" id="iron-curtain-effect">
+<span id="index-0"></span><h2>Iron Curtain Effect<a class="headerlink" href="#iron-curtain-effect" title="Permalink to this headline">¶</a></h2>
 <p>The Iron Curtain effect can now be given to or removed from units and buildings
 using new <span class="game docutils literal">Ares</span> warhead settings.</p>
 <dl class="docutils">
@@ -102,16 +102,17 @@ the effect duration be cumulative rather than absolute.
 <dd>If this value is negative the <span><code class="docutils literal"><span class="pre">IronCurtain.Duration</span></code></span> is absolute and will
 not stack up if a target is fired upon multiple times. If this value is
 <cite>0</cite> the effect duration can stack up indefinitely. Otherwise the Iron
-Curtain effect can not stack up to durations longer than this value &#8211; except
+Curtain effect cannot stack up to durations longer than this value &#8211; except
 for when a unit&#8217;s duration already is higher and <span><code class="docutils literal"><span class="pre">IronCurtain.Duration</span></code></span>
 isn&#8217;t negative (the duration will not be decreased, then).
-<span><code class="docutils literal"><span class="pre">IronCurtain.Cap</span></code></span> defaults to <cite>-1</cite> (non-stacking, absolute duration).</dd>
+<span><code class="docutils literal"><span class="pre">IronCurtain.Cap</span></code></span> defaults to <cite>-1</cite> (non-stacking, absolute
+duration).</dd>
 </dl>
 <p>To change the effect the Iron Curtain has on specific units:</p>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►IronCurtain.Modifier=</span></code><span class="type definition"> (float - multiplier)</span></span></dt>
 <dd>If the Iron Curtain effect duration is positive it will be multiplied by this
-factor. Use <cite>0%</cite> to create a unit that can not be affected by the Iron
+factor. Use <cite>0%</cite> to create a unit that cannot be affected by the Iron
 Curtain. <span><code class="docutils literal"><span class="pre">IronCurtain.Modifier</span></code></span> defaults to <cite>100%</cite>.</dd>
 </dl>
 <div class="quickstart admonition" id="quickstart-0">
@@ -131,12 +132,12 @@ time, the damage will be dealt first. <span class="type docutils literal">Infant
 <span><code class="docutils literal"><span class="pre">AffectsAllies</span></code></span> and <span><code class="docutils literal"><span class="pre">AffectsEnemies</span></code></span> are respected. A unit does not
 get the Iron Curtain effect if <span><code class="docutils literal"><span class="pre">Verses</span></code></span> is equal to <cite>0%</cite>, otherwise
 the target is endowed with the full effect.</p>
-<div class="versionadded" id="index-0">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.1.</span></p>
 </div>
 </div>
 <div class="section" id="iron-curtain-flash">
-<h2>Iron Curtain Flash<a class="headerlink" href="#iron-curtain-flash" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2>Iron Curtain Flash<a class="headerlink" href="#iron-curtain-flash" title="Permalink to this headline">¶</a></h2>
 <p>With these two tags the combat lights created when protected objects are hit can
 be turned off.</p>
 <dl class="docutils">
@@ -149,7 +150,7 @@ Defaults to <cite>yes</cite>.</dd>
 this warhead while under the effect of an Iron Curtain or Force Shield
 respectively. Defaults to <span><code class="docutils literal"><span class="pre">[AudioVisual]►IronCurtainFlash</span></code></span>.</dd>
 </dl>
-<div class="versionadded" id="index-1">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.D.</span></p>
 </div>
 </div>
@@ -173,13 +174,13 @@ respectively. Defaults to <span><code class="docutils literal"><span class="pre"
         <li class="right" >
           <a href="damageair.html" title="Damage Airborne Units"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Warheads</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

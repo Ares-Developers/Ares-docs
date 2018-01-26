@@ -1,4 +1,6 @@
- Maps; Player @ X support for map events
+
+  Maps; Player @ X support for map events
+  Events; Player @ X support for map events
 
 
 Player @ X Support for Multiplayer Map Events

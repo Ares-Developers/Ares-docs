@@ -1,3 +1,5 @@
+ Art; Animation and projectile palettes
+
 Custom Animation and Projectile Palettes
 
 
@@ -19,7 +21,5 @@ three-letter extension.
 
  Note that if you're using this on projectiles, you have to add the
   projectile to the [Animations]► list.
-
- Art; Custom animation and projectile palettes.
 
  0.2

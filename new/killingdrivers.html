@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Killing Drivers &mdash; Ares 0.E documentation</title>
+    <title>Killing Drivers &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="../index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="MakeInfantryOwner" href="makeinfantryowner.html" />
     <link rel="prev" title="Initial Payload (Troop Crawlers)" href="initialpayload.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="initialpayload.html" title="Initial Payload (Troop Crawlers)"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -86,11 +86,11 @@
           <div class="body" role="main">
             
   <div class="section" id="killing-drivers">
-<h1>Killing Drivers<a class="headerlink" href="#killing-drivers" title="Permalink to this headline">¶</a></h1>
+<span id="index-0"></span><h1>Killing Drivers<a class="headerlink" href="#killing-drivers" title="Permalink to this headline">¶</a></h1>
 <p>Requested as a <a class="reference external" href="http://bugs.renegadeprojects.com/view.php?id=733">&#8220;Jarmen Kell&#8221; functionality</a>, this feature allows
 specific warheads to kill the driver of a vehicle instead of damaging
 it, and allows others to take over the now-neutral vehicle.</p>
-<div class="versionadded" id="index-0">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.2.</span></p>
 </div>
 <div class="versionchanged">
@@ -110,16 +110,16 @@ ejected. Defaults to <cite>no</cite>.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►KillDriver.Owner=</span></code><span class="type definition"> (enumeration - civilian,special,neutral)</span></span></dt>
 <dd>Specifies the house the units are assigned to. Defaults to <cite>special</cite>.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►KillDriver.KillBelowPercent=</span></code><span class="type definition"> (float)</span></span></dt>
-<dd>Specifies the percentage of health a unit can not exceed to have its driver
+<dd>Specifies the percentage of health a unit cannot exceed to have its driver
 killed by a <span><code class="docutils literal"><span class="pre">KillDriver=yes</span></code></span> warhead. A unit above this health level
 is only damaged and the driver is not killed. Defaults to <cite>100%</cite>.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►KillDriver.Chance=</span></code><span class="type definition"> (float - percentage)</span></span></dt>
 <dd>Specifies the chance that a unit hit by a <span><code class="docutils literal"><span class="pre">KillDriver=yes</span></code></span> warhead will
 have its driver killed. Defaults to <cite>100%</cite>.</dd>
 </dl>
-</div>
+<span class="target" id="killingdrivers-immunity"></span></div>
 <div class="section" id="protected-drivers">
-<span id="killingdrivers-immunity"></span><h2>Protected Drivers<a class="headerlink" href="#protected-drivers" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2>Protected Drivers<a class="headerlink" href="#protected-drivers" title="Permalink to this headline">¶</a></h2>
 <p>The following settings can make a unit immune to the Kill Driver logic:</p>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►ProtectedDriver=</span></code><span class="type definition"> (boolean)</span></span></dt>
@@ -141,7 +141,7 @@ that <span><code class="docutils literal"><span class="pre">ProtectedDriver.MinH
 damage or other special warhead effects.</p>
 </div>
 <div class="section" id="reclaim-vehicles">
-<h2>Reclaim Vehicles<a class="headerlink" href="#reclaim-vehicles" title="Permalink to this headline">¶</a></h2>
+<span id="index-2"></span><h2>Reclaim Vehicles<a class="headerlink" href="#reclaim-vehicles" title="Permalink to this headline">¶</a></h2>
 <p>Drivers are infantry units that can capture neutral vehicles, like ones that had
 their driver killed.</p>
 <dl class="docutils">
@@ -163,7 +163,7 @@ map without them being capturable. Defaults to <span><code class="docutils liter
 problems.</p>
 </div>
 <p>See <a class="reference internal" href="hijackers.html"><em>Hijackers</em></a> for more options that relate to <span><code class="docutils literal"><span class="pre">CanDrive</span></code></span>.</p>
-<span class="target" id="index-1"></span></div>
+</div>
 </div>
 
 
@@ -184,12 +184,12 @@ problems.</p>
         <li class="right" >
           <a href="initialpayload.html" title="Initial Payload (Troop Crawlers)"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

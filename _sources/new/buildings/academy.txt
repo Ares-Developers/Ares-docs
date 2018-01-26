@@ -1,3 +1,7 @@
+
+  Academies; Promote units when built
+  Tech Structures; Academies promote units when built
+
 Academies
 
 
@@ -43,7 +47,5 @@ but the specified types. By default, academies promote all types.
 [BuildingType]Academy.Ignore=list of TechnoTypes
   The types that will never be affected by this academy. Defaults to
   none.
-
- Tech Structures; Academies promote units when built
 
  0.8

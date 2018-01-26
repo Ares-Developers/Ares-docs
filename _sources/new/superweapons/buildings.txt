@@ -1,6 +1,10 @@
 Building Options
 
 
+
+  Super Weapons; Unlimited super weapons on buildings
+  Buildings; Provide unlimited super weapons
+
 Multiple Super Weapons on a Building
 
 
@@ -17,10 +21,10 @@ Multiple Super Weapons on a Building
     weapons. Note that SuperWeapon and SuperWeapon2 are still
     considered special, and not all aspects of the logic have been expanded.
 
- Super Weapons; Unlimited super weapons on buildings
-
  0.9
 
+
+ Super Weapons; Building animations played correctly
 
 Building Animations
 
@@ -30,7 +34,5 @@ charging, is nearly charged (1 minute remaining in the normal game), is ready to
 be fired, and when it fires. However, in Yuri's Revenge, these
 animations only work properly for the original super weapons. In Ares,
 these will work for any super weapon. 
-
- Super Weapons; Building animations played correctly for new super weapons.
 
  0.1

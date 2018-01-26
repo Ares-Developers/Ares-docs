@@ -1,3 +1,5 @@
+ Interface; Dropdown colors
+
 Customizable Dropdown Colors
 
 
@@ -5,8 +7,6 @@ The player colors shown in the dropdown list in the menu are hardcoded in
 Yuri's Revenge and they map to hardcoded color schemes in-game.
 Ares removes the hardcoding and lets you customize all existing colors
 and even add more of them.
-
- Interface; Custom Dropdown Colors.
 
 Using uimd.ini you can define up to 16 colors to be shown in the
 dropdown lists. Replace X by the numbers from 1 to Count

@@ -1,3 +1,7 @@
+
+  Interface; Third campaign button
+  Interface; Campaign buttons
+
 Customizable Campaign Buttons
 
 
@@ -8,8 +12,6 @@ uimd.ini.
  /images/ui_campaignbuttons.jpg
   :alt: Campaign menu showing four campaign buttons
   :align: center
-
- Interface; Third Button / Campaign Button Customization.
 
 
 You can customize all campaign buttons using these uimd.ini tags by

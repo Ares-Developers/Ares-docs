@@ -1,3 +1,7 @@
+
+  Warheads; InfantryElectrocuted animation
+  Art; InfantryElectrocuted animation
+
 InfantryElectrocuted
 
 
@@ -10,9 +14,5 @@ from the [Animations]► list. You can now specify
   If InfantryElectrocuted is not defined then the game will search for an
   animation named ELECTRO, before finally falling back to the second
   animation like before.
-
- Warheads; Animation for InfDeath=5 can be overriden
-  using InfantryElectrocuted= (instead of using the second animation
-  from [Animations]).
 
  0.1

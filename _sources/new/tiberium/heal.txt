@@ -1,11 +1,13 @@
+
+  Tiberium; Units can heal on tiberium
+  Universe; Tiberium heals units
+
 Tiberium Heal
 
 
 Tiberium Heal is the effect of units gaining hitpoints when standing or moving
 over cells containing tiberium. This feature from Tiberian Sun has been
 restored and made more customizable.
-
-.. index: Tiberium; Units can heal on tiberium.
 
  0.5
 
@@ -44,10 +46,11 @@ Tiberian Sun.
 How much how often
 
 
-The delay between the effect being applied and amout of hitpoints to be restored
-can be customized for each unit type and for each of the Tiberiums. The
-default tags are also used for other repair logics, so the following tags can be
-used to balance the Tiberium Heal independently from them.
+The delay between the effect being applied and amount of hitpoints to be
+restored can be customized for each unit type and for each of the
+Tiberiums. The default tags are also used for other repair logics, so
+the following tags can be used to balance the Tiberium Heal independently from
+them.
 
 .. note Note that Tiberian Sun did not make a distinction between
   VehicleTypes and AircraftTypes. It applied
@@ -72,6 +75,8 @@ used to balance the Tiberium Heal independently from them.
 
 .. _tiberium-remains:
 
+ Tiberium; Units leave behind tiberium when destroyed
+
 Tiberium Remains
 
 
@@ -87,7 +92,5 @@ tiberium can be added to them.
   Whether this unit leaves behind tiberium when destroyed. Defaults to
   TiberiumHeal if [General]►TiberiumHealEnabled=yes, to no
   otherwise.
-
-.. index: Tiberium; Units leave behind tiberium when destroyed.
 
  0.5

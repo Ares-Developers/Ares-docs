@@ -8,25 +8,31 @@ by sparking repeatedly. See DamageParticleSystems on ModEnc
 description of this feature.
 
 
+
+  Particles; Damage sparks for all TechnoTypes
+  TechnoTypes; Damage sparks for all types
+
 Damage Sparks
 
 
 There was a hardcoded setting in the games since Tiberian Sun that
 enabled InfantryTypes with Cyborg=yes to repeatedly spawn damage
-spark particle systems when damaged into yellow or red healh. The setting was
+spark particle systems when damaged into yellow or red health. The setting was
 cleared whenever the infantry's section was not present in the map or scenario
-file. Ares unties this feature from Cyborg and InfantryTypes by
-making this a proper tag.
+file. Ares unties this feature from Cyborg and
+InfantryTypes by making this a proper tag.
 
 [TechnoType]DamageSparks=boolean
   Defines whether an object of this type should spawn spark particle systems
   defined by DamageParticleSystems. Defaults to Cyborg for
   InfantryTypes, to no otherwise.
 
- Units; Damage sparks for all TechnoTypes.
-
  0.7
 
+
+
+  Particles; Smoke and Spark DamageParticleSystems 
+  Units; DamageParticleSystems
 
 Smoke and Spark DamageParticleSystems
 
@@ -55,7 +61,5 @@ opting in by using the new ones, damage particle systems are spawned as always.
   to use ParticleSystems with BehavesLike set to other values
   than Spark. Defaults to all DamageParticleSystems with
   BehavesLike=Spark set.
-
- Units; DamageParticleSystems customizable.
 
  0.7

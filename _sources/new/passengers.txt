@@ -1,3 +1,7 @@
+
+  Passengers; Allow only specific passenger types in transports
+  Transports; Allow only specific passenger types
+
 Specific Passengers
 
 
@@ -13,7 +17,5 @@ supported on VehicleTypes and AircraftTypes.
 
 [TechnoType]Passengers.Disallowed=list of TechnoTypes
   The list of types that are not allowed to enter this object.
-
- Passengers; Allow only specific passenger types
 
  0.A

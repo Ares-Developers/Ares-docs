@@ -1,3 +1,5 @@
+ Animations; Napalm tags Scorch= and Flamer= restored
+
 Scorch and Flamer
 
 
@@ -12,7 +14,7 @@ crash when a new animation of these types is about to be created.
 [Animation]Scorch=boolean
   Whether a new [AudioVisual]►SmallFire animation should be attached to
   the same object this animation is attached to when expiring. Does not spawn on
-  water, beach, ice or rock terrain. For a complete description of behavior and
+  water, beach, ice, or rock terrain. For a complete description of behavior and
   requirements, refer to Scorch on ModEnc
    Defaults to no.
 
@@ -27,7 +29,5 @@ crash when a new animation of these types is about to be created.
   when expiring. For a complete description of behavior and requirements, refer
   to Flamer on ModEnc . Defaults
   to no.
-
- Animations; Napalm tags Scorch= and Flamer= have been restored
 
  0.8

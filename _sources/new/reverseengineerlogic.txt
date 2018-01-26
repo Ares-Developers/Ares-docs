@@ -1,8 +1,10 @@
+ Prerequisites; Reverse-Engineering logic
+
 Reverse Engineer logic
 
 
 In Red Alert 2, the Cloning Vats reverse-engineered any infantry it was
-sent into. Ares not just reenables this logic but also enables
+sent into. Ares not just re-enables this logic but also enables
 customization.
 
 [BuildingType]ReverseEngineersVictims=boolean
@@ -30,7 +32,5 @@ EVA_ReverseEngineeredInfantry and EVA_NewTechnologyAcquired;
 reverse-engineering any VehicleType for the first time will play
 EVA_ReverseEngineeredVehicle and EVA_NewTechnologyAcquired.
 The undo-reversing spy effect will play EVA_TechnologyStolen.
-
- Prerequisites; Reverse-Engineering logic.
 
  0.2

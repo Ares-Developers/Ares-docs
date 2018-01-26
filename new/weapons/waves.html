@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Waves &mdash; Ares 0.E documentation</title>
+    <title>Waves &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="../../index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="../../index.html" />
     <link rel="up" title="Weapons" href="index.html" />
     <link rel="next" title="LaserThickness" href="laser.html" />
     <link rel="prev" title="Electric Bolt Coloring" href="electricbolts.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="electricbolts.html" title="Electric Bolt Coloring"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Weapons</a> &raquo;</li> 
       </ul>
@@ -65,7 +65,7 @@
                         title="previous chapter">Electric Bolt Coloring</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="laser.html"
-                        title="next chapter">LaserThickness</a></p>
+                        title="next chapter"><span><span class="type">LaserThickness</span></span></a></p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
@@ -90,7 +90,7 @@
   <div class="section" id="waves">
 <h1>Waves<a class="headerlink" href="#waves" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="wave-effects">
-<h2>Wave Effects<a class="headerlink" href="#wave-effects" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2>Wave Effects<a class="headerlink" href="#wave-effects" title="Permalink to this headline">¶</a></h2>
 <p>An unused weapon effect (present in the game code but disabled) has been
 enabled. It is similar in appearance to the old laser beam or the old Disruptor
 wave from previous games. For now it is referred to as <em>Laser</em>.</p>
@@ -106,7 +106,7 @@ however their naming was established before the effects were fully tested:
 below, left unit is using <span><code class="docutils literal"><span class="pre">Wave.IsLaser</span></code></span>, the right one is using
 <span><code class="docutils literal"><span class="pre">Wave.IsBigLaser</span></code></span>:</p>
 <img alt="Effects of Wave.Is(Big)Laser" class="align-center" src="../../_images/wave_lasers.png" />
-<div class="versionadded" id="index-0">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.1.</span></p>
 </div>
 <p>The following flags are applicable to all Wave effects; the aforementioned
@@ -114,7 +114,7 @@ below, left unit is using <span><code class="docutils literal"><span class="pre"
 <span><code class="docutils literal"><span class="pre">IsMagBeam=yes</span></code></span>.</p>
 </div>
 <div class="section" id="wave-coloring">
-<h2>Wave Coloring<a class="headerlink" href="#wave-coloring" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2>Wave Coloring<a class="headerlink" href="#wave-coloring" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►Wave.Color=</span></code><span class="type definition"> (R,G,B)</span></span></dt>
 <dd>The color of the wave. Default value is different depending on the type of
@@ -125,14 +125,14 @@ unit&#8217;s house color instead of the color specified by <span><code class="do
 </dl>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">Sonic Waves do no yet have a sensible default <span><code class="docutils literal"><span class="pre">Wave.Color</span></code></span>.</p>
+<p class="last">Sonic Waves do not yet have a sensible default <span><code class="docutils literal"><span class="pre">Wave.Color</span></code></span>.</p>
 </div>
-<div class="versionadded" id="index-1">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.1.</span></p>
 </div>
 </div>
 <div class="section" id="wave-direction">
-<h2>Wave Direction<a class="headerlink" href="#wave-direction" title="Permalink to this headline">¶</a></h2>
+<span id="index-2"></span><h2>Wave Direction<a class="headerlink" href="#wave-direction" title="Permalink to this headline">¶</a></h2>
 <p>Waves are drawn in different directions (from firer to target or vice versa)
 depending on the type of wave and the circumstances. This direction can now be
 customized in several ways. The following flags all default to <cite>no</cite>
@@ -156,12 +156,12 @@ target is an <span class="type docutils literal">AircraftType</span>.</dd>
 anything not covered by the other <span><code class="docutils literal"><span class="pre">ReverseAgainst</span></code></span> flags (i.e. trees,
 overlays, empty cells, etc.).</dd>
 </dl>
-<div class="versionadded" id="index-2">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.1.</span></p>
 </div>
 </div>
 <div class="section" id="wave-ambient-damage">
-<h2>Wave Ambient Damage<a class="headerlink" href="#wave-ambient-damage" title="Permalink to this headline">¶</a></h2>
+<span id="index-3"></span><h2>Wave Ambient Damage<a class="headerlink" href="#wave-ambient-damage" title="Permalink to this headline">¶</a></h2>
 <p>All waves can now deal disruptor-style damage to objects that they pass through,
 a feature that was previously limited to Sonic Waves only. As a reminder, the
 flags that control this are:</p>
@@ -195,13 +195,13 @@ flags that control this are:</p>
         <li class="right" >
           <a href="electricbolts.html" title="Electric Bolt Coloring"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Weapons</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

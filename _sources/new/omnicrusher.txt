@@ -1,3 +1,7 @@
+
+  Crush; OmniCrusher=yes without aggressive auto-crushing
+  TechnoType; OmniCrusher=yes without aggressive auto-crushing
+
 OmniCrusher Enhancements
 
 
@@ -7,7 +11,7 @@ enemy unit firing at it. This mechanism is sometimes useful, but sometimes it is
 not. Like when a Battle Fortress deliberately closes in on a group of enemy
 tanks, and is then lured into an ambush and overpowered itself.
 
-Ares allows to deactivate the agressive behavior.
+Ares allows deactivating the aggressive behavior.
 
 [TechnoType]OmniCrusher.Aggressive=boolean
   Whether or not a unit should try to crush its target aggressively. If
@@ -16,7 +20,5 @@ Ares allows to deactivate the agressive behavior.
 
    Only supported if OmniCrusher=yes is set. The default might
     change in a later version.
-
- Crush; OmniCrusher=yes without aggressive auto-crushing
 
  0.A

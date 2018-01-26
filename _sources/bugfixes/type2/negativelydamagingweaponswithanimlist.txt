@@ -1,11 +1,13 @@
- Weapons; Negatively Damaging Weapons with AnimList tags on their warheads will no longer cause errors.
+
+  Weapons; Negative Damage with AnimList tags on their warheads will not crash
+  Crashes; Negative Damage weapons with AnimList tags on their warheads
 
 
 Negatively Damaging Weapons with AnimList
 
 
-Weapons that contain a negative Damage flag, and have AnimList
-specified on their associated warheads, would cause an Internal Error upon
+Weapons that have a negative Damage value and have AnimList
+specified on their associated warheads would cause an Internal Error upon
 firing. This no longer happens in Ares.
 
  0.2

@@ -1,0 +1,13 @@
+ Spawns; MissileSpawn on buildings
+
+
+MissileSpawn on Buildings
+
+
+Buildings were able to use Spawns logic only as long as the spawned
+AircraftType had MissileSpawn=no set, thus could only spawn
+aircraft like the Destroyer and the Aircraft Carrier. If a building were to
+spawn a missile, the game would crash. Ares fixed the missile handling
+and thus MissileSpawn=yes no longer crashes the game.
+
+ 1.0

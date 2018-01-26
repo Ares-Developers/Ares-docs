@@ -1,4 +1,4 @@
- Overpowering; Vehicles can overpower buildings.
+ Overpowering; Vehicles can overpower buildings
 
 
 Units overpowering buildings

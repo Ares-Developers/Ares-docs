@@ -1,8 +1,13 @@
+
+  Tiberium; Storage logic has been restored on refineries
+  Refineries; Storage logic has been restored
+  Storage; Refineries and silos can store Tiberium
+
 Storage and Silos
 
 
 In the earlier games, tiberium and ore were not converted to credits directly.
-Instead, the resouces were dumped at the refiniery, and then stored in silos.
+Instead, the resources were dumped at the refinery, and then stored in silos.
 This feature was not used in Red Alert 2 and wasn't working any more.
 Ares restores the Storage feature.
 
@@ -14,8 +19,6 @@ money would be placed on the map, which would create tiberium out of nothing.
  Storage on undeployable refineries like the Slave Miner is not
   supported. Slave Miners cannot provide storage space, because it is lost
   whenever the building undeploys.
-
-.. index: Refineries; Storage logic has been restored.
 
  0.5
 
@@ -37,7 +40,7 @@ EVA Notice
 
 
 In case the storage capacity is either depleted or nearly so, EVA will warn the
-player by giving a EVA_SilosNeeded notice.
+player by giving an EVA_SilosNeeded notice.
 
  The game does not have this EVA message defined and has no audio files
   for it. You have to add them before you can use them.
@@ -59,6 +62,10 @@ Complimentary to the EVA event it is possible to show a test message.
  0.9
 
 
+
+  Tiberium; PipScale for contained Tiberium
+  Pips; PipScale=Tiberium
+
 PipScale=Tiberium
 
 
@@ -72,7 +79,5 @@ ResourceDestination=yes, you also have to enable
 Refinery.UseStorage=yes. This requirement was added because otherwise the
 original game would show the tiberium scale for the unmodded refineries, which
 have PipScale=Tiberium and valid Storage defined.
-
-.. index: Pips; PipScale=Tiberium
 
  0.5

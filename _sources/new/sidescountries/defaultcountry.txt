@@ -1,6 +1,10 @@
 Country Defaults
 
 
+
+  Countries; Power plants
+  AI; Power plants per country
+
 AI and Base-Building
 
 
@@ -13,6 +17,10 @@ AI and Base-Building
 
  0.1
 
+
+
+  Countries; Paradrop defaults
+  Paradrops; Defaults per country
 
 Paradrop Defaults
 
@@ -41,6 +49,10 @@ Paradrop Defaults
  0.2
  0.D
 
+
+
+  Countries; VeteranBuildings
+  Veterancy; Initial veteran buildings
 
 Others
 

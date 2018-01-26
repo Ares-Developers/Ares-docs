@@ -1,3 +1,5 @@
+ Warheads; Nuke flash
+
 Nuke Flash
 
 
@@ -12,7 +14,5 @@ can be enabled for other warheads, too, or disabled for NUKE.
   The number of frames the nuke flash fades in and stays fully active before it
   fades out again. A value of 0 disables the effect. Defaults to
   30 for NUKE, to 0 otherwise.
-
- Warheads; Nuke Flash
 
  0.E

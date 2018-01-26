@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Particles &mdash; Ares 0.E documentation</title>
+    <title>Particles &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="../index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Specific Passengers" href="passengers.html" />
     <link rel="prev" title="Operator" href="operator.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="operator.html" title="Operator"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -88,12 +88,12 @@
   <div class="section" id="particles">
 <h1>Particles<a class="headerlink" href="#particles" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="optimizations">
-<h2>Optimizations<a class="headerlink" href="#optimizations" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2>Optimizations<a class="headerlink" href="#optimizations" title="Permalink to this headline">¶</a></h2>
 <p>Particle handling has been greatly optimized in <span class="game docutils literal">Ares</span>. Pixel particles &#8211;
 that is types having <span><code class="docutils literal"><span class="pre">BehavesLike=</span></code></span> set to either <cite>Spark</cite> or
 <cite>Railgun</cite> &#8211; were known to cause lag even with relatively few particles
-involved. That is, even sparse railgun beams created a noticable slowdown. Also,
-<cite>Smoke</cite> particles are created frequently throughout a game.</p>
+involved. That is, even sparse railgun beams created a noticeable slowdown.
+Also, <cite>Smoke</cite> particles are created frequently throughout a game.</p>
 <p>In <span class="game docutils literal">Ares</span> the optimization is activated automatically if all of the
 following are true. If any one is false, the optimization will not be applied
 and the particles will be handled like in earlier versions. That is, mixing and
@@ -112,7 +112,7 @@ optimization from being applied.</p>
 </div>
 <p>The game&#8217;s existing particles have been optimized also, and even if the
 optimization is not applied, particles will be handled more efficiently.</p>
-<div class="versionadded" id="index-0">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.C.</span></p>
 </div>
 <div class="versionchanged">
@@ -120,9 +120,9 @@ optimization is not applied, particles will be handled more efficiently.</p>
 </div>
 </div>
 <div class="section" id="damage-range-for-gas-particles">
-<h2>Damage Range for Gas Particles<a class="headerlink" href="#damage-range-for-gas-particles" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2>Damage Range for Gas Particles<a class="headerlink" href="#damage-range-for-gas-particles" title="Permalink to this headline">¶</a></h2>
 <p>Gas particles could only damage objects residing on the same cell as itself, no
-matter how big the particle&#8217;s image was. <span class="game docutils literal">Ares</span> allows to customize this.</p>
+matter how big the particle&#8217;s image was. <span class="game docutils literal">Ares</span> allows customizing this.</p>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[ParticleType]►DamageRange=</span></code><span class="type definition"> (double - cells)</span></span></dt>
 <dd>The particle damage is applied to all objects in this range around the gas
@@ -130,12 +130,12 @@ particle. If less or equal to <cite>0.0</cite>, all objects in the cell the gas
 particle is on are affected. Each object is affected at most once. Defaults to
 <cite>0.0</cite>.</dd>
 </dl>
-<div class="versionadded" id="index-1">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.C.</span></p>
 </div>
 </div>
 <div class="section" id="custom-palettes-for-shape-particles">
-<h2>Custom Palettes for Shape Particles<a class="headerlink" href="#custom-palettes-for-shape-particles" title="Permalink to this headline">¶</a></h2>
+<span id="index-2"></span><h2>Custom Palettes for Shape Particles<a class="headerlink" href="#custom-palettes-for-shape-particles" title="Permalink to this headline">¶</a></h2>
 <p>Particles drawing shape images &#8211; that is types having <span><code class="docutils literal"><span class="pre">BehavesLike=</span></code></span> set
 to <cite>Gas</cite>, <cite>Smoke</cite>, or <cite>Fire</cite> &#8211; now support to be drawn
 using a custom palette.</p>
@@ -144,7 +144,7 @@ using a custom palette.</p>
 <dd>The palette used to draw an image particle of this type. Defaults to
 <cite>ANIM.PAL</cite>.</dd>
 </dl>
-<div class="versionadded" id="index-2">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.C.</span></p>
 </div>
 </div>
@@ -168,12 +168,12 @@ using a custom palette.</p>
         <li class="right" >
           <a href="operator.html" title="Operator"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

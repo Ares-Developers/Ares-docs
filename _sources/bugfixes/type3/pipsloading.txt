@@ -3,6 +3,6 @@ Pips Loading
 
 
 pips.shp was getting reloaded from disk six times in a row. This does
-not happen any more.
+not happen anymore.
 
  0.1

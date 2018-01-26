@@ -8,6 +8,8 @@ Hard-coded properties of Cows and Desolators can be toggled on/off for any
 infantry.
 
 
+ Infantry; Move around randomly like a cow
+
 IsCow
 
 
@@ -19,10 +21,10 @@ the [COW]►.
 [InfantryType]IsCow=boolean
   Defaults to yes for [COW]►, otherwise to no.
 
- Infantry; Define whether an InfantryType behaves like a cow.
-
  0.1
 
+
+ Infantry;Desolator special handling
 
 IsDesolator
 
@@ -35,7 +37,5 @@ IsDesolator=no on the [DESO]►.
 
 [InfantryType]IsDesolator=boolean
   Defaults to yes for [DESO]►, otherwise to no.
-
- Infantry; Enable or disable the Desolator special handling.
 
  0.1

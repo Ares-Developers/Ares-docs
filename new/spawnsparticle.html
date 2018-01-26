@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Particle Spawning &mdash; Ares 0.E documentation</title>
+    <title>Particle Spawning &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="../index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Survivors" href="survivors.html" />
     <link rel="prev" title="Spawners" href="spawners.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="spawners.html" title="Spawners"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -76,10 +76,10 @@
           <div class="body" role="main">
             
   <div class="section" id="particle-spawning">
-<h1>Particle Spawning<a class="headerlink" href="#particle-spawning" title="Permalink to this headline">¶</a></h1>
+<span id="index-0"></span><h1>Particle Spawning<a class="headerlink" href="#particle-spawning" title="Permalink to this headline">¶</a></h1>
 <p>Animations can spawn particles using <span><code class="docutils literal"><span class="pre">SpawnsParticle</span></code></span>, but no matter how
 many are spawned, they would always spawn at the exact same location as the
-animation. These new tags allow to customize the distance from the center the
+animation. These new tags allow customizing the distance from the center the
 particles will be spawned at.</p>
 <p>This feature divides the circle around animation&#8217;s base coords into
 <span><code class="docutils literal"><span class="pre">NumParticles</span></code></span> sections. Each section will get exactly one spawned
@@ -92,7 +92,7 @@ above the base cell.</p>
 <div class="last admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">If negative, the resulting random distance could come out as
-negative. If this happens, the absolute value is used. This allows to double
+negative. If this happens, the absolute value is used. This allows doubling
 the chance to spawn particles closer to the center.</p>
 </div>
 </dd>
@@ -101,7 +101,7 @@ the chance to spawn particles closer to the center.</p>
 equal to or larger than <span><code class="docutils literal"><span class="pre">SpawnsParticle.RangeMinimum</span></code></span>. Defaults to
 <cite>0.0</cite>.</dd>
 </dl>
-<div class="versionadded" id="index-0">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.C.</span></p>
 </div>
 </div>
@@ -124,12 +124,12 @@ equal to or larger than <span><code class="docutils literal"><span class="pre">S
         <li class="right" >
           <a href="spawners.html" title="Spawners"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

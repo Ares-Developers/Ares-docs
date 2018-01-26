@@ -3,6 +3,10 @@ Iron Curtain
 
 .. _wh-ironcurtain:
 
+
+  Warheads; Apply or remove the Iron Curtain effect
+  Iron Curtain; Apply or remove effect using a warhead
+
 Iron Curtain Effect
 
 
@@ -19,17 +23,18 @@ using new Ares warhead settings.
   If this value is negative the IronCurtain.Duration is absolute and will
   not stack up if a target is fired upon multiple times. If this value is
   0 the effect duration can stack up indefinitely. Otherwise the Iron
-  Curtain effect can not stack up to durations longer than this value -- except
+  Curtain effect cannot stack up to durations longer than this value -- except
   for when a unit's duration already is higher and IronCurtain.Duration
   isn't negative (the duration will not be decreased, then).
-  IronCurtain.Cap defaults to -1 (non-stacking, absolute duration).
+  IronCurtain.Cap defaults to -1 (non-stacking, absolute
+  duration).
 
 
 To change the effect the Iron Curtain has on specific units:
 
 [TechnoType]IronCurtain.Modifier=float - multiplier
   If the Iron Curtain effect duration is positive it will be multiplied by this
-  factor. Use 0% to create a unit that can not be affected by the Iron
+  factor. Use 0% to create a unit that cannot be affected by the Iron
   Curtain. IronCurtain.Modifier defaults to 100%.
 
  To have a unit protect a target for ten seconds, set
@@ -49,11 +54,12 @@ AffectsAllies and AffectsEnemies are respected. A unit does not
 get the Iron Curtain effect if Verses is equal to 0%, otherwise
 the target is endowed with the full effect.
 
- Warheads; Weapons can apply or remove the Iron Curtain effect for a
-  specified number of frames (stackable or absolute).
-
  0.1
 
+
+
+  Warheads; Disable the combat light flash on Iron Curtained objects
+  Iron Curtain; Disable the combat light flash
 
 Iron Curtain Flash
 
@@ -70,7 +76,5 @@ be turned off.
   Whether units and structures will emit a black or blue flash when hit with
   this warhead while under the effect of an Iron Curtain or Force Shield
   respectively. Defaults to [AudioVisual]►IronCurtainFlash.
-
- Warheads; Disable the combat light flash on Iron Curtained objects
 
  0.D

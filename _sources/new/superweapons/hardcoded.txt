@@ -1,5 +1,9 @@
 .. _sw-postdependent:
 
+
+  single: Super Weapons; PreClick, PostClick, and PreDependent are replaced by PostDependent
+  single: Deprecated; PreClick, PostClick, and PreDependent on Super Weapons
+
 Hardcoded Values
 
 
@@ -14,7 +18,5 @@ have no effect any more. Instead, SW.PostDependent takes their place.
   you can provide the specific super weapon ID here. For example,
   [ChronoSphereSpecial]►SW.PostDependent=ChronoWarpSpecial switches to the
   ChronoWarp type super weapon after you chose the source location.
-
- Super Weapons; PreClick, PostClick, and PreDependent are replaced by PostDependent.
 
  0.2

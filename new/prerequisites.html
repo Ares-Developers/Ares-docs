@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Prerequisites &mdash; Ares 0.E documentation</title>
+    <title>Prerequisites &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="../index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Promotion settings" href="promotion.html" />
     <link rel="prev" title="Pips" href="pips.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="pips.html" title="Pips"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -94,17 +94,18 @@
 <h1>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h1>
 <p>The prerequisite system has been enhanced in several ways. New flags are
 described below, and an issue has been resolved with regard to upgrades as
-prerequisites (see <a class="reference internal" href="../bugfixes/type2/buildingtypeupgradesarenotviableprerequisites.html"><em>Type 2 fixes</em></a>).</p>
+prerequisites (see
+<a class="reference internal" href="../bugfixes/type2/buildingtypeupgradesarenotviableprerequisites.html"><em>BuildingType Upgrades Are Not Viable Prerequisites</em></a>).</p>
 <div class="section" id="require-theater">
-<h2>Require Theater<a class="headerlink" href="#require-theater" title="Permalink to this headline">¶</a></h2>
+<span id="index-0"></span><h2>Require Theater<a class="headerlink" href="#require-theater" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
-<dt><span><code class="definition docutils literal"><span class="pre">[Unit]►Prerequisite.RequiredTheaters=</span></code><span class="type definition"> (list of theater names)</span></span></dt>
-<dd><p class="first">The map theaters in which the unit is available. Defaults to all theaters. For
-example, if only the <cite>SNOW</cite> theater were specified then the unit would
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Prerequisite.RequiredTheaters=</span></code><span class="type definition"> (list of theater names)</span></span></dt>
+<dd><p class="first">The map theaters in which the type is available. Defaults to all theaters. For
+example, if only the <cite>SNOW</cite> theater were specified then the type would
 only be available on arctic maps. This allows you to implement, for example,
 the <span><code class="docutils literal"><span class="pre">AlternateArcticArt</span></code></span> functionality used on the Navy SEAL, but for all
-unit types and all theaters (however this may present challenges for your AI).
-The theater names are:</p>
+types and all theaters (however this may present challenges for your AI). The
+theater names are:</p>
 <blockquote>
 <div><ul class="simple">
 <li><cite>TEMPERATE</cite> - most maps</li>
@@ -122,16 +123,16 @@ The theater names are:</p>
 </div>
 </dd>
 </dl>
-<div class="versionadded" id="index-0">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.1.</span></p>
 </div>
 </div>
 <div class="section" id="negative-prerequisites">
-<h2>Negative Prerequisites<a class="headerlink" href="#negative-prerequisites" title="Permalink to this headline">¶</a></h2>
+<span id="index-1"></span><h2>Negative Prerequisites<a class="headerlink" href="#negative-prerequisites" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
-<dt><span><code class="definition docutils literal"><span class="pre">[Unit]►Prerequisite.Negative=</span></code><span class="type definition"> (list of BuildingTypes)</span></span></dt>
-<dd><p class="first">The buildings that preclude construction of the unit. If the player owns one
-or more of the buildings on this list then the unit will not be available.
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Prerequisite.Negative=</span></code><span class="type definition"> (list of BuildingTypes)</span></span></dt>
+<dd><p class="first">The buildings that preclude construction of the type. If the player owns one
+or more of the buildings on this list then the type will not be available.
 Defaults to <cite>none</cite>.</p>
 <div class="last admonition note">
 <p class="first admonition-title">Note</p>
@@ -140,18 +141,18 @@ Defaults to <cite>none</cite>.</p>
 </div>
 </dd>
 </dl>
-<div class="versionadded" id="index-1">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.1.</span></p>
 </div>
 </div>
 <div class="section" id="multiple-alternative-prerequisites-lists">
-<h2>Multiple Alternative Prerequisites Lists<a class="headerlink" href="#multiple-alternative-prerequisites-lists" title="Permalink to this headline">¶</a></h2>
+<span id="index-2"></span><h2>Multiple Alternative Prerequisites Lists<a class="headerlink" href="#multiple-alternative-prerequisites-lists" title="Permalink to this headline">¶</a></h2>
 <p><span class="game docutils literal">Ares</span> supports more than one prerequisite list. Each prerequisite list
 acts as an independent copy of the existing <span><code class="docutils literal"><span class="pre">Prerequisite</span></code></span> flag, and a
 minimum of one of the prerequisite lists must be satisfied for this type to
 become buildable.</p>
 <p>For example, if you set <span><code class="docutils literal"><span class="pre">Prerequisite=GAPILE,GATECH</span></code></span> and
-<span><code class="docutils literal"><span class="pre">Prerequisite.List1=NAHAND,NATECH</span></code></span> then the unit will be available to any
+<span><code class="docutils literal"><span class="pre">Prerequisite.List1=NAHAND,NATECH</span></code></span> then the object will be available to any
 player who owns both an Allied Barracks and Battle Lab, or a Soviet Barracks and
 Battle Lab.</p>
 <div class="admonition note">
@@ -177,24 +178,24 @@ requirement is satisfied.</p>
 </div>
 </dd>
 </dl>
-<div class="versionadded" id="index-2">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.1.</span></p>
 </div>
 </div>
 <div class="section" id="require-stolen-technology">
-<h2>Require Stolen Technology<a class="headerlink" href="#require-stolen-technology" title="Permalink to this headline">¶</a></h2>
+<span id="index-3"></span><h2>Require Stolen Technology<a class="headerlink" href="#require-stolen-technology" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
-<dt><span><code class="definition docutils literal"><span class="pre">[Unit]►Prerequisite.StolenTechs=</span></code><span class="type definition"> (list of integers)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Prerequisite.StolenTechs=</span></code><span class="type definition"> (list of integers)</span></span></dt>
 <dd>The list of stealable technology types that must be stolen before this object
 can be built. See <a class="reference internal" href="buildings/spybehavior.html#spybehavior-stolentech"><span>Stolen Technology</span></a> for more
 information.</dd>
 </dl>
-<div class="versionadded" id="index-3">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.1.</span></p>
 </div>
 </div>
 <div class="section" id="require-factory-built-by-country">
-<h2>Require Factory Built By Country<a class="headerlink" href="#require-factory-built-by-country" title="Permalink to this headline">¶</a></h2>
+<span id="index-4"></span><h2>Require Factory Built By Country<a class="headerlink" href="#require-factory-built-by-country" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►FactoryOwners.HaveAllPlans=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether a player capturing a building of this type would permanently gain all
@@ -217,7 +218,7 @@ countries are prevented from producing it.</dd>
 <p class="last">AI ignores <span><code class="docutils literal"><span class="pre">FactoryOwners</span></code></span> and <span><code class="docutils literal"><span class="pre">FactoryOwners.Forbidden</span></code></span> on
 buildings, but not on units.</p>
 </div>
-<div class="versionadded" id="index-4">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.6.</span></p>
 </div>
 <div class="versionchanged">
@@ -232,7 +233,7 @@ modified or added by <span class="game docutils literal">Ares</span>.</p>
 <div align="center" class="align-center"><img alt="Flowchart of the current prerequisite system" src="../_images/prerequisite_system.svg" /></div>
 </div>
 <div class="section" id="generic-prerequisite-groups">
-<h2>Generic Prerequisite Groups<a class="headerlink" href="#generic-prerequisite-groups" title="Permalink to this headline">¶</a></h2>
+<span id="index-5"></span><h2>Generic Prerequisite Groups<a class="headerlink" href="#generic-prerequisite-groups" title="Permalink to this headline">¶</a></h2>
 <p>You can now create custom generic prerequisite groups like the existing
 <cite>POWER</cite> (<span><code class="docutils literal"><span class="pre">PrerequisitePower</span></code></span>), <cite>FACTORY</cite>
 (<span><code class="docutils literal"><span class="pre">PrerequisiteFactory</span></code></span>), <cite>BARRACKS</cite> (<span><code class="docutils literal"><span class="pre">PrerequisiteBarracks</span></code></span>),
@@ -260,12 +261,12 @@ used <em>instead</em> of those specified on the original PrerequisiteGroup flags
 <span><code class="docutils literal"><span class="pre">[General]►PrerequisitePower=</span></code></span>). Take note that
 <span><code class="docutils literal"><span class="pre">[GenericPrerequisites]►PROC=</span></code></span> does not override or nullify
 <span><code class="docutils literal"><span class="pre">[General]►PrerequisiteProcAlternate=</span></code></span>.</p>
-<div class="versionadded" id="index-5">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.1.</span></p>
 </div>
 </div>
 <div class="section" id="alternate-prerequisites-with-non-buildings">
-<h2>Alternate Prerequisites with Non-Buildings<a class="headerlink" href="#alternate-prerequisites-with-non-buildings" title="Permalink to this headline">¶</a></h2>
+<span id="index-6"></span><h2>Alternate Prerequisites with Non-Buildings<a class="headerlink" href="#alternate-prerequisites-with-non-buildings" title="Permalink to this headline">¶</a></h2>
 <p>To support the Slave Miner as prerequisite, <span class="game docutils literal">Yuri&#8217;s Revenge</span> added the
 option to satisfy the <cite>PROC</cite> requirement by either owning the deployed
 building or alternatively the undeployed Slave Miner vehicle. This was done only
@@ -288,7 +289,7 @@ might give unexpected results. For example, upgrades will not work.</p>
 </div>
 </dd>
 </dl>
-<div class="versionadded" id="index-6">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.B.</span></p>
 </div>
 </div>
@@ -312,12 +313,12 @@ might give unexpected results. For example, upgrades will not work.</p>
         <li class="right" >
           <a href="pips.html" title="Pips"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

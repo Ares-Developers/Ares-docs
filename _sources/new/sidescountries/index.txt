@@ -1,3 +1,5 @@
+ Sides; Support for more sides & countries
+
 Sides & Countries
 
 
@@ -11,8 +13,6 @@ ways...
   fail after merely 16 - it is recommended to not have any more than 16
   playable countries and 32 total countries. Put the playable countries first in
   the list, followed by the other countries.
-
- Sides; New sides & countries (including numerous enhancements).
 
 
 Sides

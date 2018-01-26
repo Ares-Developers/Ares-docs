@@ -1,3 +1,7 @@
+
+  Vehicles; Always play HVA animation when unit in air
+  Art; Always play HVA animation when unit in air
+
 AirRate
 
 
@@ -12,7 +16,5 @@ were in air. Ares adds a new tag for this situation.
   is to be advanced to the next frame when the unit is in air. AirRate
   takes precedence over WalkRate and IdleRate. 0 disables
   AirRate. Defaults to 0.
-
- HVA; Always play animation when unit in air.
 
  0.6

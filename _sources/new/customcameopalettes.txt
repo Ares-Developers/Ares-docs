@@ -1,3 +1,7 @@
+
+  Cameos; Palettes
+  Art; Palettes for cameos
+
 Custom Cameo Palettes
 
 
@@ -20,7 +24,5 @@ In rulesmd.ini:
 
  The cameo must not use the color at index 0 of the palette. It
   will be transparent in-game.
-
- Art; Custom palettes for cameos.
 
  0.1

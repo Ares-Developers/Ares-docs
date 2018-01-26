@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Buildup and Sell Time &mdash; Ares 0.E documentation</title>
+    <title>Buildup and Sell Time &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="../../index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="../../index.html" />
     <link rel="up" title="Buildings" href="index.html" />
     <link rel="next" title="Custom Building Foundations" href="custombuildingfoundations.html" />
     <link rel="prev" title="Building Slam" href="buildingslam.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="buildingslam.html" title="Building Slam"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Buildings</a> &raquo;</li> 
       </ul>
@@ -77,13 +77,13 @@
           <div class="body" role="main">
             
   <div class="section" id="buildup-and-sell-time">
-<h1>Buildup and Sell Time<a class="headerlink" href="#buildup-and-sell-time" title="Permalink to this headline">¶</a></h1>
+<span id="index-0"></span><h1>Buildup and Sell Time<a class="headerlink" href="#buildup-and-sell-time" title="Permalink to this headline">¶</a></h1>
 <p>The global setting <span><code class="docutils literal"><span class="pre">[General]►BuildupTime</span></code></span> has been deglobalized and split
 into two separate tags for construction and selling on <span class="type docutils literal">BuildingTypes</span>.</p>
 <p>Also, <span class="game docutils literal">Ares</span> now supports make animations having more frames than the
 buildup time without glitching. In case the buildup time is too short and it
-would require to skip frames, the buildup time is automatically increased so
-this does not happen any more.</p>
+would require skipping frames, the buildup time is automatically increased so
+this does not happen anymore.</p>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►BuildupTime=</span></code><span class="type definition"> (double - minutes)</span></span></dt>
 <dd><p class="first">The time the buildup animation plays regardless of the number of frames.
@@ -98,7 +98,7 @@ immediately after being placed, not only after being fully constructed.</p>
 <dd>Analogous to <span><code class="docutils literal"><span class="pre">BuildTime</span></code></span> when a building is sold. Defaults to
 <span><code class="docutils literal"><span class="pre">BuildupTime</span></code></span>.</dd>
 </dl>
-<div class="versionadded" id="index-0">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.D.</span></p>
 </div>
 </div>
@@ -121,13 +121,13 @@ immediately after being placed, not only after being fully constructed.</p>
         <li class="right" >
           <a href="buildingslam.html" title="Building Slam"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Buildings</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

@@ -9,6 +9,8 @@ Ares adds this feature back (though not the sidebar button).
  0.8
 
 
+ Toggle Power; Keyboard command
+
 Keyboard Command
 
 
@@ -23,8 +25,10 @@ the original Yuri's Revenge, which didn't have this command available.
 [General]TogglePowerAllowed=boolean
   Whether Toggle Power can be used. Defaults to no.
 
- Toggle Power; Keyboard command
 
+
+  Toggle Power; Cursors
+  Mouse Cursors; Toggle Power cursors
 
 Cursors
 
@@ -38,8 +42,10 @@ and either Power is less than 0 or Powered=yes.
 
 NoTogglePower: Shown if the building's power cannot be toggled.
 
- Toggle Power; Customizable cursors
 
+
+  Toggle Power; Overlay image for powered down buildings
+  Art; Toggle Power image for powered down buildings
 
 Power Off Overlay Animation
 
@@ -53,16 +59,18 @@ are moved to be shown simultaneously.
 
 poweroff.shp is drawn using the mousepal.pal palette.
 
- Toggle Power; Overlay image for powered down buildings
 
+
+  Toggle Power; AI can cope with low power
+  AI; Toggle power if on low power
 
 AI Support
 
 
 If Toggle Power is enabled, the AI can also make use of it. The AI will try to
-cope with power outages because of insufficient power output. If an AI player is
-being drained or suffering from a power blackout triggered by a spy or Force
-Shield are exempt and will not try to turn off the base.
+cope with power outages because of insufficient power output. AI players being
+drained or suffering from a power blackout triggered by a spy or Force Shield
+are exempt and will not try to turn off the base.
 
 Base defenses are tried to be held online if possible. Super weapons are turned
 off earlier than power consuming buildings that are not base defenses.
@@ -79,5 +87,3 @@ off earlier than power consuming buildings that are not base defenses.
   Defines the delay between power checks. This makes AI players not respond
   immediately to power level changes. Values less than 0 deactivate
   this logic. Defaults to 45.
-
- Toggle Power; AI can cope with low power

@@ -1,3 +1,5 @@
+ Buildings; Trivial Structure Damage in low power situations
+
 Trivial Structure Damage
 
 
@@ -19,11 +21,11 @@ interval until reaching yellow health.
   situations. Buildings with health equal to or below this will not degrade
   further. Defaults to [AudioVisual]►ConditionYellow.
 
-[General]Degrade.AmountNormal=int - hitpoints
+[General]Degrade.AmountNormal=integer - hitpoints
   The damage caused to buildings with Power equal to or greater than
   0 in low power situations. Defaults to 0.
 
-[General]Degrade.AmountConsumer=int - hitpoints
+[General]Degrade.AmountConsumer=integer - hitpoints
   The damage caused to buildings with Power less than 0 in low
   power situations. Defaults to 1.
 
@@ -35,14 +37,14 @@ These global options can be customized per BuildingType.
   0.0 will make it degrade till complete destruction. Defaults to
   [General]►Degrade.Percentage.
 
-[BuildingType]Degrade.Amount=int - hitpoints
+[BuildingType]Degrade.Amount=integer - hitpoints
   The amount of damage this building will receive each interval of
   DamageDelay in low power situations. A value of 0 will not
   degrade this building. Defaults to [General]►Degrade.AmountNormal if
   Power is greater than or equal to 0, otherwise to
   [General]►Degrade.AmountConsumer.
 
-Trivial Structure Damage can be enabled or disabled for each house indiviudally.
+Trivial Structure Damage can be enabled or disabled for each house individually.
 By default, MultiplayPassive=yes houses are not affected.
 
 [Country]Degrades=boolean
@@ -53,7 +55,5 @@ By default, MultiplayPassive=yes houses are not affected.
 [House]Degrades=boolean
   Whether buildings owned by this country degrade in low power situations. Only
   supported in single player missions. Defaults to [Country]►Degrades.
-
- Structures; Trivial Structure Damage in low power situations
 
  0.A

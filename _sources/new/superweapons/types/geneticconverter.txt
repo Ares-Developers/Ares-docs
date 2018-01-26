@@ -19,12 +19,12 @@ Default values for general tags:
   Defaults to 5.
 [SuperWeapon]SW.Sound=Sound
   Defaults to [AudioVisual]►GeneticMutatorActivateSound.
-[SuperWeapon]SW.AITargeting=enum
+[SuperWeapon]SW.AITargeting=enumeration
   Defaults to GeneticMutator.
-[SuperWeapon]SW.AffectsHouse=enum
+[SuperWeapon]SW.AffectsHouse=enumeration
   Specifies the houses affected by the mutation, if Mutate.Explosion=no.
   Defaults to all.
-[SuperWeapon]SW.AffectsTarget=enum
+[SuperWeapon]SW.AffectsTarget=enumeration
   Specifies whether the mutation effect should be limited to land or
   water targets. You cannot define any unit type here and they will be
   ignored. Ignored if Mutate.Explosion=yes. Defaults to all.

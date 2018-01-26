@@ -1,3 +1,5 @@
+ Spawners; Support cloaking spawners
+
 Spawners
 
 
@@ -5,11 +7,14 @@ Spawners have been enhanced to support cloak. A cloaking Destroyer or Aircraft
 Carrier will not cause all its spawns to self-destruct any more. Spawners now
 have rudimentary support for BalloonHover=yes.
 
+
+ Spawners; Flying Aircraft Carriers
+
 Flying Aircraft Carriers
 
 
 Non-Missile spawns were always put on the ground for take-off, even if the
-carrier was in the air. This has been changed and spawns now start from the the
+carrier was in the air. This has been changed and spawns now start from the
 carrier.
 
 Spawned units now return to BalloonHover=yes spawners, instead of flying
@@ -25,7 +30,5 @@ going up to the carrier.
  Please note that this logics still has some shortcomings and it has
   many opportunities for improvements. For example, move sounds do not work
   correctly once a spawn has launched once.
-
- Spawners; Flying Aircraft Carriers
 
  0.6

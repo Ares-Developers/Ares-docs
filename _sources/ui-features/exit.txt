@@ -1,9 +1,11 @@
+ Interface; Single-click exit without confirmation
+
 Exit Without Confirmation
 
 
 The game always asks the player for confirmation when clicking the Exit Game
 button in the main menu. So, players have to click twice before the game
-acutally closes. Ares adds an option to change this extra step.
+actually closes. Ares adds an option to change this extra step.
 
 In uimd.ini:
 
@@ -11,7 +13,5 @@ In uimd.ini:
   Whether the game shall exit immediately when clicking the Exit Game button.
   Otherwise a message box is shown and the player can still abort closing the
   game. Defaults to no.
-
- Menu; Single-click Exit without confirmation
 
  0.A

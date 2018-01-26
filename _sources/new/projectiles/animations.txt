@@ -1,8 +1,10 @@
+ Projectiles; Animations and Rotates=yes
+
 Animations and Rotates=yes
 
 
 Projectiles with Rotates=yes used their image's 32 frames to represent
-moving in differnent directions, one frame per facing. This means these
+moving in different directions, one frame per facing. This means these
 projectiles did not support being animated. Ares adds support for this.
 
 [Projectile]AnimLength=integer - frames

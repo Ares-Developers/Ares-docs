@@ -3,18 +3,18 @@ Type=HunterSeeker
 
 The Hunter Seeker super weapon known from Tiberian Sun has been restored
 and expanded. The Hunter Seeker is a VehicleType that is launched from a
-building and then flys into an enemy object, detonating on impact.
+building and then steers into an enemy object, detonating on impact.
 
 Default values for general tags:
 
 [SuperWeapon]SW.MaxCount=integer
   The maximum number of buildings launching a Hunter Seeker. Set to negative
   values for unlimited buildings. Defaults to 1.
-[SuperWeapon]SW.AITargeting=enum
+[SuperWeapon]SW.AITargeting=enumeration
   Defaults to HunterSeeker.
-[SuperWeapon]SW.AffectsHouse=enum
+[SuperWeapon]SW.AffectsHouse=enumeration
   Specifies the houses targeted. Defaults to enemies.
-[SuperWeapon]SW.AffectsTarget=enum
+[SuperWeapon]SW.AffectsTarget=enumeration
   Specifies which types are targeted. Defaults to all.
 [SuperWeapon]EVA.Detected=EVA event
   Defaults to EVA_HunterSeekerDetected.
@@ -55,8 +55,6 @@ See Hunter Seeker for information on how to define a
 valid Hunter Seeker unit and how to prevent certain TechnoTypes to be
 targeted. See Sides & Countries on how to define a
 default Hunter Seeker unit for each side.
-
- Super Weapons; HunterSeeker recreated.
 
  0.7
  0.D

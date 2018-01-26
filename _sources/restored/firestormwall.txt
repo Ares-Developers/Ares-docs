@@ -1,3 +1,5 @@
+ Buildings; Firestorm Wall
+
 
 Firestorm Wall
 
@@ -22,6 +24,8 @@ more details.
  0.C
 
 
+ Firestorm; Defining Walls
+
 Defining a Wall
 
 
@@ -34,6 +38,8 @@ controlled).
   Whether this building is part of the Firestorm Defense System. Defaults to
   no.
 
+
+ Firestorm; Global settings restored
 
 Global Settings
 
@@ -73,6 +79,11 @@ Wall is active, or idle, or immolating something.
   the air. This is drawn in the animation palette. Defaults to FSAIR.
 
 
+
+  Firestorm; Map actions 92 and 93 restored
+  Maps; Firestorm related actions 92 and 93 restored
+  Actions; Firestorm related actions 92 and 93 restored
+
 Firestorm Map Actions
 
 
@@ -86,5 +97,3 @@ destroyed, loses power or goes offline due to other game logics, the Firestorm
 Defense is turned off like usual.
 
  These map actions are only supported for non-human controlled houses.
-
- Map Actions; Firestorm related actions 92 and 93 restored

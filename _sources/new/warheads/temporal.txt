@@ -1,6 +1,10 @@
 Temporal
 
 
+
+  Warheads; WarpAway animation
+  Temporals; WarpAway animation per warhead
+
 Customizable WarpAway
 
 
@@ -8,10 +12,12 @@ Customizable WarpAway
   If set, specifies the animation to be played when this warhead erases an
   object. Defaults to [General]►WarpAway.
 
- Warheads; Per-weapon WarpAway animation.
-
  0.1
 
+
+
+  Warheads; Temporals consider health
+  Temporals; Consider victim's health
 
 Consider Health
 
@@ -26,7 +32,5 @@ Consider Health
    Another way to look at it is that the remaining warp value is
     linearly decreased from full for completely healthy targets down by this
     value for a target that has no health left.
-
- Warheads; Temporals consider health
 
  0.D

@@ -1,4 +1,6 @@
- Palettes; Units can specify a custom palette.
+
+  Palettes; Units can specify a custom palette
+  Art; Units can specify a custom palette
 
 
 Custom Palettes

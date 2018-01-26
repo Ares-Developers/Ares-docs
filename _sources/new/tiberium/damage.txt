@@ -1,3 +1,7 @@
+
+  Tiberium; Damage units moving over tiberium
+  Universe; Tiberium deals damage to units
+
 Tiberium Damage
 
 
@@ -7,8 +11,6 @@ this feature back and extends it to work with all unit types.
 
 Units killed by Tiberium Damage may convert into a Visceroid. See
 Visceroids
-
-.. index: Tiberium; Damage units moving over tiberium.
 
  0.5
 
@@ -30,8 +32,8 @@ Who gets damaged
 
 All units that are not tiberium proof (neither through the tag
 TiberiumProof nor through the TIBERIUM_PROOF veteran ability)
-whill be damaged when entering a cell containing tiberium. It does not matter
-how long they stay in a cell.
+will be damaged when entering a cell containing tiberium. It does not matter how
+long they stay in a cell.
 
 [TechnoType]TiberiumProof=boolean
   Whether this unit is immune to tiberium damage. Defaults to no for
@@ -57,6 +59,11 @@ Tiberiums.
 
 
 .. _visceroids:
+
+
+  Tiberium; Visceroids
+  Visceroids; Spawn on Tiberium when infantry dies
+  Universe; Tiberium spawns visceroids on infantry death
 
 Visceroids
 
@@ -86,7 +93,5 @@ tag existed since Tiberian Sun but did not do anything.
   Chance of which a unit of this type dying of tiberium damage transforms into a
   [General]►SmallVisceroid. Defaults to
   [General]►TiberiumTransmogrify.
-
-.. index: Tiberium; Visceroids.
 
  0.5

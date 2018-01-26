@@ -1,4 +1,4 @@
- Cloak; AircraftTypes and BuildingTypes can now be cloakable.
+ Cloak; AircraftTypes and BuildingTypes can now be cloakable
 
 
 Cloakable AircraftTypes and BuildingTypes

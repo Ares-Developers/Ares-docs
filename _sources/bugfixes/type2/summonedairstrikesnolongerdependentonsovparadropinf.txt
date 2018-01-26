@@ -1,10 +1,12 @@
- Airstrikes; Summoned Airstrikes are no longer dependent on the SovParaDropInf tag.
+
+  Airstrikes; No longer depend on the SovParaDropInf tag
+  Super Weapons; SovParaDropInf no longer affects airstrikes
 
 
 Summoned Airstrikes no longer dependent on SovParaDropInf
 
 
-If a you were to remove the [General]►SovParaDropInf tag, then summoned
+If you were to remove the [General]►SovParaDropInf tag, then summoned
 Airstrikes such as Boris' weapon will trigger an Internal Error when fired. This
 no longer happens in Ares.
 

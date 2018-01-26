@@ -1,3 +1,5 @@
+ AI; Team retaliates if a member is attacked
+
 Team Retaliate
 
 
@@ -19,7 +21,5 @@ allow custom tags per team.
 [General]TeamRetaliate=boolean
   Whether teams are allowed to retaliate if a member is attacked and not killed
   immediately. Defaults to no.
-
- AI; Team retaliates if a member is attacked
 
  0.7

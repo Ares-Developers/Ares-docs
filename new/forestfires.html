@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Forest Fires &mdash; Ares 0.E documentation</title>
+    <title>Forest Fires &mdash; Ares 1.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.E',
+        VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 0.E documentation" href="../index.html" />
+    <link rel="top" title="Ares 1.0 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Gattling Enhancements" href="gattlingcycle.html" />
     <link rel="prev" title="Fall Rate" href="fallrate.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="fallrate.html" title="Fall Rate"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -76,16 +76,16 @@
           <div class="body" role="main">
             
   <div class="section" id="forest-fires">
-<h1>Forest Fires<a class="headerlink" href="#forest-fires" title="Permalink to this headline">¶</a></h1>
+<span id="index-0"></span><h1>Forest Fires<a class="headerlink" href="#forest-fires" title="Permalink to this headline">¶</a></h1>
 <p>Forest fires were a feature of <span class="game docutils literal">Tiberian Sun</span>. Trees were set on fire if
-hit by a <span><code class="docutils literal"><span class="pre">Sparky=yes</span></code></span> warhead. While burning, they could ignite trees neaby
-and thus over time spread like a wildfire.</p>
+hit by a <span><code class="docutils literal"><span class="pre">Sparky=yes</span></code></span> warhead. While burning, they could ignite trees
+nearby and thus over time spread like a wildfire.</p>
 <p><span class="game docutils literal">Ares</span>&#8216;s implementation of forest fires slightly differs from the one in
 <span class="game docutils literal">Tiberian Sun</span>. It is now required to also set the previously unused tag
 <span><code class="docutils literal"><span class="pre">IsFlammable=yes</span></code></span> on each tree that may be set on fire. This is the only
 noticeable change.</p>
 <p>See <a class="reference external" href="http://modenc.renegadeprojects.com/Sparky">Sparky on ModEnc</a> for a more
-detailled description of the logic, and for the requirements to get it working.
+detailed description of the logic, and for the requirements to get it working.
 To prevent crashes when firing a <span><code class="docutils literal"><span class="pre">Sparky=yes</span></code></span> warhead, do not forget to set
 three valid animations as <span><code class="docutils literal"><span class="pre">[AudioVisual]►OnFire</span></code></span> and two valid animations as
 <span><code class="docutils literal"><span class="pre">[AudioVisual]►TreeFire</span></code></span>.</p>
@@ -94,7 +94,7 @@ three valid animations as <span><code class="docutils literal"><span class="pre"
 <p class="last">If trees are not burning down, make sure that the animation used as
 <span><code class="docutils literal"><span class="pre">[AudioVisual]►SmallFire</span></code></span> has <span><code class="docutils literal"><span class="pre">Scorch=no</span></code></span> set.</p>
 </div>
-<div class="versionadded" id="index-0">
+<div class="versionadded">
 <p><span class="versionmodified">New in version 0.8.</span></p>
 </div>
 </div>
@@ -117,12 +117,12 @@ three valid animations as <span><code class="docutils literal"><span class="pre"
         <li class="right" >
           <a href="fallrate.html" title="Fall Rate"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 0.E documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2017, The Ares Contributors.
+        &copy; Copyright 2018, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

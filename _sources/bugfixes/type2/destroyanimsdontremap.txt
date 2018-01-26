@@ -1,4 +1,6 @@
- DestroyAnims; DestroyAnims can use remappable colors.
+
+  DestroyAnim; Can use remappable colors
+  Art; DestroyAnim can use remappable colors
 
 
 DestroyAnim\ s Don't Remap

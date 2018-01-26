@@ -1,3 +1,6 @@
+ Command Line; Don't require the Yuri's Revenge game disk
+ Command Line; Don't play the EA/Westwood logo video
+
 Command Line Arguments
 
 
@@ -7,9 +10,6 @@ Command Line Arguments
   required files installed, so no further action has to be taken.
 :-NOLOGO: Prevents the EA logo video from playing before the game begins to
   load.
-  
-   Launch Base has its own option to just prevent the video playing for
-    mods that do not include their own video.
 :-LOG: Turns debug.log file writing on initially. See Internal
   Errors/Debugging.
 :-LOG-CSF: Outputs all CSF labels that cannot be found in the language files
@@ -29,8 +29,5 @@ Command Line Arguments
     testing and AI design testing. Due to this, feature complexity, lack of
     interest and a change in personnel, please note that this feature is NOT
     officially supported.
-
- Command line; Option to not require the Yuri's Revenge game disk.
- Command line; Option to not play the EA/Westwood logo video.
 
  0.1
