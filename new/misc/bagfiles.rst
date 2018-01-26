@@ -1,4 +1,4 @@
-.. index: Sounds; Multiple custom audio.bag files
+.. index:: Sounds; Multiple custom audio.bag files
 
 Additional Bag Files
 ~~~~~~~~~~~~~~~~~~~~
