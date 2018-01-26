@@ -6,8 +6,8 @@ Secret Labs
 
 The original Secret Lab system had three separate global flags to control the
 boons and did not allow for :type:`AircraftTypes` to be granted. Secret Lab
-logic also had some flaws which have been resolved (see :doc:`Type 1 Fixes
-</bugfixes/type1/index>`).
+logic also had some flaws which have been resolved (see
+:doc:`/bugfixes/type1/index`).
 
 In :game:`Ares`, the boon is only picked after the building is first captured by
 a :tag:`MultiplayPassive=no` country, or assigned to it if pre-placed on the

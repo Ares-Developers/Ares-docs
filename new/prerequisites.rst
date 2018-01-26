@@ -3,8 +3,8 @@ Prerequisites
 
 The prerequisite system has been enhanced in several ways. New flags are
 described below, and an issue has been resolved with regard to upgrades as
-prerequisites (see :doc:`Type 2 fixes
-</bugfixes/type2/buildingtypeupgradesarenotviableprerequisites>`).
+prerequisites (see
+:doc:`/bugfixes/type2/buildingtypeupgradesarenotviableprerequisites`).
 
 .. index:: Prerequisites; Require the map to be a specific theater (desert/snow/lunar/etc)
 
