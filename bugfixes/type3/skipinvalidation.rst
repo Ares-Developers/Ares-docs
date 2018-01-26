@@ -1,4 +1,4 @@
-.. index:: Performance; Skip invalidatin certain objects
+.. index:: Performance; Skip invalidating certain objects
 
 =================
 Skip Invalidation

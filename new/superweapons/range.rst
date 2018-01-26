@@ -60,7 +60,7 @@ The designator range can be customized for each :type:`TechnoType` individually.
 .. versionadded:: 0.8
 
 
-.. index:: Super Weapons; Inhibitors disallow targeting around thenselves
+.. index:: Super Weapons; Inhibitors disallow targeting around themselves
 
 Inhibitors
 ----------
