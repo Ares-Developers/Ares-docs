@@ -404,3 +404,17 @@ Other changes:
   respects immunities and supports :tag:`CellSpread`. Thus, the effect might
   not be applied in all cases where it was applied before, and might be applied
   in cases where it previously was not.
+
+From Ares 0.E and below
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Changed tags:
+
+  No changes required.
+
+Other changes:
+
+  Some Super Weapon Targeting Modes used the wrong target cell when firing at
+  buildings. Now, the centers of the buildings are targeted. Affected modes are
+  :value:`Nuke`, :value:`LightningStorm`, :value:`Offensive`, :value:`Stealth`,
+  :value:`Self`, and :value:`MultiMissile`.

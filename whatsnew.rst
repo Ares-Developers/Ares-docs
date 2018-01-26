@@ -6,6 +6,10 @@ This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of :game:`Ares`. Internal changes, optimizations
 and updates are mentioned here only if they are notable.
 
+.. rubric:: Ares 1.0
+
++ **Save Games** are :doc:`supported again </ui-features/savegames>`
+
 .. rubric:: Ares 0.E
 
 + **Tunnel Networks** allow to :doc:`move units between entrance buildings
