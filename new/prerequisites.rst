@@ -11,13 +11,13 @@ prerequisites (see
 Require Theater
 ```````````````
 
-:tagdef:`[Unit]Prerequisite.RequiredTheaters=list of theater names`
-  The map theaters in which the unit is available. Defaults to all theaters. For
-  example, if only the :value:`SNOW` theater were specified then the unit would
+:tagdef:`[TechnoType]Prerequisite.RequiredTheaters=list of theater names`
+  The map theaters in which the type is available. Defaults to all theaters. For
+  example, if only the :value:`SNOW` theater were specified then the type would
   only be available on arctic maps. This allows you to implement, for example,
   the :tag:`AlternateArcticArt` functionality used on the Navy SEAL, but for all
-  unit types and all theaters (however this may present challenges for your AI).
-  The theater names are:
+  types and all theaters (however this may present challenges for your AI). The
+  theater names are:
 
     + :value:`TEMPERATE` - most maps
     + :value:`SNOW` - arctic/snowy maps
@@ -32,14 +32,14 @@ Require Theater
 .. versionadded:: 0.1
 
 
-.. index:: Prerequisites; Make a unit unavailable if a listed building is owned
+.. index:: Prerequisites; Make an object unavailable if a listed building is owned
 
 Negative Prerequisites
 ``````````````````````
 
-:tagdef:`[Unit]Prerequisite.Negative=list of BuildingTypes`
-  The buildings that preclude construction of the unit. If the player owns one
-  or more of the buildings on this list then the unit will not be available.
+:tagdef:`[TechnoType]Prerequisite.Negative=list of BuildingTypes`
+  The buildings that preclude construction of the type. If the player owns one
+  or more of the buildings on this list then the type will not be available.
   Defaults to :value:`none`.
 
   .. note:: \ :tag:`PrerequisiteOverride` does *not* override
@@ -59,7 +59,7 @@ minimum of one of the prerequisite lists must be satisfied for this type to
 become buildable.
 
 For example, if you set :tag:`Prerequisite=GAPILE,GATECH` and
-:tag:`Prerequisite.List1=NAHAND,NATECH` then the unit will be available to any
+:tag:`Prerequisite.List1=NAHAND,NATECH` then the object will be available to any
 player who owns both an Allied Barracks and Battle Lab, or a Soviet Barracks and
 Battle Lab.
 
@@ -89,7 +89,7 @@ Battle Lab.
 Require Stolen Technology
 `````````````````````````
 
-:tagdef:`[Unit]Prerequisite.StolenTechs=list of integers`
+:tagdef:`[TechnoType]Prerequisite.StolenTechs=list of integers`
   The list of stealable technology types that must be stolen before this object
   can be built. See :ref:`Stolen Technology <spybehavior-stolentech>` for more
   information.
