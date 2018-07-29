@@ -1,0 +1,10 @@
+.. index:: Crashes; Minimizing while Radial Indicator visible
+
+=========================================
+Minimizing While Radial Indicator Visible
+=========================================
+
+If the game is minimized while a Radial Indicator is visible (usually when a
+building is selected), the game could crash. This does not happen any more.
+
+.. versionadded:: 1.0

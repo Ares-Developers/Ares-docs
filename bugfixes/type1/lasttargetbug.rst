@@ -1,0 +1,11 @@
+.. index:: Crashes; Last target not cleared correctly
+
+=================================
+Last Target not Cleared Correctly
+=================================
+
+Under certain circumstances units and structures did not correctly let go of
+their targets when they are destroyed. This most commonly caused random crashes
+with aircraft units. :game:`Ares` fixes this.
+
+.. versionadded:: 1.0
