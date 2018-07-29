@@ -12,7 +12,7 @@ Plant can be modified per :type:`TechnoType`, using this multiplier.
   The effect of the respective :tag:`CostBonus` tag for this type is multiplied
   by this value to either increase, decrease, or nullify the effect. Fully
   supported values range from :value:`-1.0` to reverse the effect to
-  :value:`1.0` to not affect the effect. :value:`0.0` nullifies the bonus.
+  :value:`1.0` to not apply the effect. :value:`0.0` nullifies the bonus.
   Defaults to :value:`1.0`.
 
   .. note:: Values beyond :value:`1.0` can potentially cause the cost to drop to
