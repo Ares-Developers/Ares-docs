@@ -12,7 +12,7 @@ Plant can be modified per TechnoType, using this multiplier.
   The effect of the respective CostBonus tag for this type is multiplied
   by this value to either increase, decrease, or nullify the effect. Fully
   supported values range from -1.0 to reverse the effect to
-  1.0 to not affect the effect. 0.0 nullifies the bonus.
+  1.0 to not apply the effect. 0.0 nullifies the bonus.
   Defaults to 1.0.
 
    Values beyond 1.0 can potentially cause the cost to drop to
