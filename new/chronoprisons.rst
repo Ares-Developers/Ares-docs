@@ -57,7 +57,8 @@ concept art on the Command & Conquer Wiki
 
 :tagdef:`[Weapon]Abductor.ChangeOwner=boolean`
   Sets whether the abducted unit shall change its owner to the abductor's house.
-  Units which are :tag:`ImmuneToPsionics=yes` will not change owner. Defaults to
+  Units which are :tag:`ImmuneToPsionics=yes` or which gained the
+  :value:`PSIONICSIMMUNE` veteran ability will not change owner. Defaults to
   :value:`no`.
 
 :tagdef:`[Weapon]Abductor.AbductBelowPercent=float`
@@ -81,7 +82,7 @@ concept art on the Command & Conquer Wiki
 
   .. note:: In order to use this, you have to use YR's multi-turret logic, that
     is, you have to specify :tag:`Turret=yes`, an appropriate
-    \ :tag:`TurretCount`, and you have to use the :tag:`WeaponX` flags to specify
-    weapons.
+    \ :tag:`TurretCount`, and you have to use the :tag:`WeaponX` flags to
+    specify weapons.
 
 .. versionadded:: 0.2

@@ -6,8 +6,7 @@ Specific Passengers
 ~~~~~~~~~~~~~~~~~~~
 
 Additionally to the checks for :tag:`Size` and :tag:`SizeLimit`, it is possible
-to allow passengers to enter depending on their type. This feature is only
-supported on :type:`VehicleTypes` and :type:`AircraftTypes`.
+to allow passengers to enter depending on their type.
 
 :tagdef:`[TechnoType]Passengers.Allowed=list of TechnoTypes`
   The list of allowed passenger types. If this contains at least one type, all
@@ -19,3 +18,4 @@ supported on :type:`VehicleTypes` and :type:`AircraftTypes`.
   The list of types that are not allowed to enter this object.
 
 .. versionadded:: 0.A
+.. versionchanged:: 2.0

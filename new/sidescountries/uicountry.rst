@@ -116,17 +116,12 @@ Screen </ui-features/campaignloadscreen>`.
 Taunts
 ------
 
-.. warning:: The following filename specifications (where raw C-style format
-  specifiers like %s are required) are going to be changed into safer versions
-  in the future. The replacement style has not been decided yet.
-
 :tagdef:`[Country]File.Taunt=filename, *including* the Taunts\ directory and .wav extension`
   Path of the files to use for the country's taunts, in the format
-  "Taunts\\filename%02i.wav". The filename specified *must* include "`%02i`",
+  "Taunts\\filename~~.wav". The filename specified *must* include "`~~`",
   which will be substituted for the taunt ID (01 through 08). For example,
-  :tag:`File.Taunt=Taunts\\tauam%02i.wav` will make the game load taunts
+  :tag:`File.Taunt=Taunts\\tauam~~.wav` will make the game load taunts
   :file:`tauam01.wav` through :file:`tauam08.wav`.
 
-  .. note:: Taunts will only be registered for up to 16 countries.
-
 .. versionadded:: 0.1
+.. versionchanged:: 2.0

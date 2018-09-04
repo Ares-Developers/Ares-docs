@@ -15,6 +15,9 @@ AI and Base-Building
   :tag:`[General]NodRegularPower` and :tag:`[General]NodAdvancedPower` for the
   second side and all other sides.
 
+  .. note:: There has to be at least one building in this list that always
+    satisfies prerequisites.
+
 .. versionadded:: 0.1
 
 

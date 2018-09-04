@@ -10,10 +10,10 @@ Additionally, cameos can be loaded from PCX files instead of SHP.
 
 In :file:`artmd.ini`:
 
-:tagdef:`[UnitArt]CameoPCX=filename, *including* the .pcx extension`
+:tagdef:`[Image]CameoPCX=filename, *including* the .pcx extension`
   Specifies the filename containing the unit's cameo, in the format
   "filename.pcx".
-:tagdef:`[UnitArt]AltCameoPCX=filename, *including* the .pcx extension`
+:tagdef:`[Image]AltCameoPCX=filename, *including* the .pcx extension`
   Specifies the filename containing the unit's alternate (promoted) cameo, in
   the format "filename.pcx".
 

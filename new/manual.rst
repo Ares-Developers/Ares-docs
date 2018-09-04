@@ -35,12 +35,13 @@ By default, passengers might still be ejected when the vehicle is destroyed. To
 change this, set the :doc:`Passenger Survivor Chance </new/survivors>`
 accordingly.
 
-:tagdef:`[VehicleType]NoManualUnload=boolean`
-  Whether this vehicle is disallowed to eject its passengers. If enabled, the
-  owning player will not get deploy or no-deploy cursors. Defaults to
-  :value:`no`.
+:tagdef:`[TechnoType]NoManualUnload=boolean`
+  Whether this vehicle or aircraft is disallowed to eject its passengers. If
+  enabled, the owning player will not get deploy or no-deploy cursors. Defaults
+  to :value:`no`.
 
 .. versionadded:: 0.A
+.. versionchanged:: 2.0
 
 
 .. index::
