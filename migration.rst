@@ -431,6 +431,9 @@ Changed tags:
     for :type:`BuildingType`\ s with :tag:`Factory=UnitType` to achieve the
     previous effect.
 
+  :tag:`[BuildingType]FactoryOwners.HaveAllPlans=` --> :tag:`[BuildingType]FactoryOwners.Permanent=`.
+    Replace the old tag name by the new tag name.
+
 Other changes:
 
   None.
