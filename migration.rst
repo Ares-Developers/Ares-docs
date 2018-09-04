@@ -418,3 +418,19 @@ Other changes:
   buildings. Now, the centers of the buildings are targeted. Affected modes are
   :value:`Nuke`, :value:`LightningStorm`, :value:`Offensive`, :value:`Stealth`,
   :value:`Self`, and :value:`MultiMissile`.
+
+From Ares 1.0 and below
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Changed tags:
+
+  :tag:`[BuildingType]SpyEffect.UnitVeterancy`
+    This setting has been replaced by finer grained options. Replace with
+    :tag:`SpyEffect.InfantryVeterancy=yes` for :type:`BuildingType`\ s with
+    :tag:`Factory=InfantryType`, and with :tag:`SpyEffect.VehicleVeterancy=yes`
+    for :type:`BuildingType`\ s with :tag:`Factory=UnitType` to achieve the
+    previous effect.
+
+Other changes:
+
+  None.

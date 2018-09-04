@@ -66,7 +66,7 @@ Money
   amount of money they presently have (i.e. if
   :tag:`SpyEffect.StolenMoneyAmount=500` but the enemy only has 200 credits then
   you will only gain 200 credits from spying the building).
-:tagdef:`[BuildingType]SpyEffect.StolenMoneyPercentage=float - multiplier`
+:tagdef:`[BuildingType]SpyEffect.StolenMoneyPercentage=float - percentage`
   The percentage of the enemy's current credits that will be stolen from the
   enemy upon spying this enemy building. Only has an effect if
   :tag:`SpyEffect.StolenMoneyAmount=0`.
@@ -149,21 +149,43 @@ tech 2.
 
 
 .. index:: Spies; Build vehicles or train infantry as veteran
+.. index:: Spies; Veteran buildings or aircraft or navy
 
 Veterancy
 `````````
 
-:tagdef:`[BuildingType]SpyEffect.UnitVeterancy=boolean`
-  Whether or not spying this enemy factory will make all future units you build
-  from your own factories of the same type start veteran. For example, spying an
-  enemy barracks with :tag:`SpyEffect.UnitVeterancy=yes` set will cause all
-  future :type:`InfantryTypes` that you build to start veteran.
-  
-  .. note:: This only works for :type:`VehicleType` and :type:`InfantryType`
-    factories at present. Also note that infiltrating any :type:`VehicleType`
-    factory (i.e. War Factory or Naval Yard) will only make land vehicles start
-    veteran - Naval vehicles cannot be made to start veteran through spy
-    infiltration logic.
+:game:`Ares` adds five independent fine grained controls to gain veterancy by
+spying, thus it is possible to grant one or more types veterancy at the same
+time where the original game only supported either :type:`InfantryType`\ s or
+:type:`VehicleType`\ s depending on the :tag:`Factory=` setting.
+
+:tagdef:`[BuildingType]SpyEffect.InfantryVeterancy=boolean`
+  Whether spying this building will make all future infantry with
+  :tag:`Trainable=yes` you build from your own factories start veteran. Defaults
+  to :value:`no`.
+
+:tagdef:`[BuildingType]SpyEffect.VehicleVeterancy=boolean`
+  Whether spying this building will make all future :tag:`Naval=no` vehicles
+  with :tag:`Trainable=yes` you build from your own factories start veteran.
+  Defaults to :value:`no`.
+
+:tagdef:`[BuildingType]SpyEffect.NavalVeterancy=boolean`
+  **NEW EFFECT** Whether spying this building will make all future
+  :tag:`Naval=yes` vehicles with :tag:`Trainable=yes` you build from your own
+  factories start veteran. Defaults to :value:`no`.
+
+:tagdef:`[BuildingType]SpyEffect.AircraftVeterancy=boolean`
+  **NEW EFFECT** Whether spying this building will make all future aircraft with
+  :tag:`Trainable=yes` you build from your own factories start veteran.
+  Defaults to :value:`no`.
+
+:tagdef:`[BuildingType]SpyEffect.BuildingVeterancy=boolean`
+  **NEW EFFECT** Whether spying this building will make all future buildings
+  with :tag:`Trainable=yes` you build from your own Construction Yards start
+  veteran. Defaults to :value:`no`.
+
+.. versionadded:: 0.1
+.. versionchanged:: 2.0
 
 
 
