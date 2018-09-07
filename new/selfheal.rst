@@ -46,4 +46,11 @@ of its health.
   veterancy level. These settings are fully independent of each other. Cannot be
   less than :value:`0`. Defaults to :tag:`SelfHealing.Amount`.
 
+Self healing can be interrupted for an amount of time when a unit is damaged.
+
+:tagdef:`[TechnoType]SelfHealing.CombatDelay=integer - frames`
+  Defines how long after a damaging attack a unit will not be able to self heal.
+  Healing weapons do not trigger this delay. Use :value:`0` to disable this.
+  Defaults to :value:`0`.
+
 .. versionadded:: 0.B

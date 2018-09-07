@@ -37,6 +37,10 @@ abilities, :tag:`AffectsAllies`, and :tag:`AffectsEnemies`.
 :tagdef:`[Warhead]KillDriver.Chance=float - percentage`
   Specifies the chance that a unit hit by a :tag:`KillDriver=yes` warhead will
   have its driver killed. Defaults to :value:`100%`.
+:tagdef:`[Warhead]KillDriver.RemoveVeterancy=boolean`
+  Whether a unit will revert to rookie rank when the driver is killed and the
+  unit changes owner. Not applied if the owner does not change. Defaults to
+  :value:`no`.
 
 
 .. _killingdrivers-immunity:
