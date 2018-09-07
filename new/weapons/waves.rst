@@ -35,22 +35,59 @@ The following flags are applicable to all Wave effects; the aforementioned
 
 
 .. index::
-  Weapons; Wave colors
-  Waves; Colors
+  Weapons; Wave colors and intensity
+  Waves; Colors and intensity
 
 Wave Coloring
 -------------
 
-:tagdef:`[Weapon]Wave.Color=R,G,B`
-  The color of the wave. Default value is different depending on the type of
-  Wave.
+Color is a constant addition not depending on the original pixel color.
+Intensity on the other hand is multiplied with the original values before being
+added to the original pixel component, thus, the darker a color is, the smaller
+the effect. If a value is larger though, the effect is larger, more quickly
+approaching 255.
+
+:tagdef:`[Weapon]Wave.Color=list of 3 integers`
+  The value added to the color component of the wave independent of the original
+  pixel color. Supports negative values to darken the wave. Default value is
+  different depending on the type of the wave.
+:tagdef:`[Weapon]Wave.Intensity=list of 3 integers`
+  The value added to the color component of the wave with respect to the
+  original pixel color. Supports negative values to darken the wave.
+  :value:`0,0,0` means no change by intensity. Default value is different
+  depending on the type of the wave. If :tag:`Wave.Color` is set, the default is
+  :value:`0,0,0`.
 :tagdef:`[Weapon]Wave.IsHouseColor=boolean`
   If this is set to :value:`yes` then the wave will be drawn in the firing
   unit's house color instead of the color specified by :tag:`Wave.Color`.
-  
-.. warning:: Sonic Waves do not yet have a sensible default :tag:`Wave.Color`.
+
+Wave colors in :game:`Ares` default to the same values as the original game. The
+intensity default value is cleared to mimic the behavior of :game:`Ares` 1.0 and
+earlier, though. If this is not desired, set :tag:`Wave.Intensity` to the
+appropriate default value from the Defaults list.
+
+  .. table:: Wave Color and Intensity Defaults
+
+    ===================  ====================  ======================  =============================
+    Wave Type            :tag:`Wave.Color`     :tag:`Wave.Intensity`   Remarks
+    ===================  ====================  ======================  =============================
+    Laser                :value:`64,0,96`      :value:`0,0,0`          Red/blue tint
+    Sonic                :value:`0,0,0`        :value:`0,256,256`      Green/blue light
+    Magnetron            :value:`0,0,0`        :value:`128,0,1024`     Cold blue-ish light
+    ===================  ====================  ======================  =============================
+
+It is possible to use hexadecimal notation for color and intensity like
+:value:`40h,0h,60h`. It is also possible to use negative values like
+:value:`-64,0,-96`.
+
+Each of the three component values can be considered as 1/256th, thus
+:value:`64` representing 0.25. Then, the resulting value for a color component
+is calculated using the original pixel color component :value:`0 <= c <= 255`
+and a value determined by the game :value:`0.0 <= x < 1.0` by the formula:
+:value:`c + color * x + c * intensity * x`.
 
 .. versionadded:: 0.1
+.. versionchanged:: 2.0
 
 
 .. index::
