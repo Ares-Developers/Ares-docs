@@ -222,13 +222,21 @@ Intelligence
 
 
 
+.. _`spybehavior-unreverse`:
+
 .. index:: single: Spies; Reset all reverse engineered build options
 
 Reverse Engineering
 ```````````````````
 
-For a spy effect to reset a player's build options gained by reverse
-engineering, see :doc:`/new/reverseengineerlogic`.
+Reset a player's build options gained by :doc:`Reverse Engineering
+</new/reverseengineerlogic>`.
+
+:tagdef:`[BuildingType]SpyEffect.UndoReverseEngineer=boolean`
+  **NEW EFFECT** Enables Spies to disable all reverse-engineered technology from
+  that building. Defaults to :value:`no`.
+
+.. versionadded:: 0.2
 
 
 
