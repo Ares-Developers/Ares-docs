@@ -434,6 +434,9 @@ Changed tags:
   :tag:`[BuildingType]FactoryOwners.HaveAllPlans=` --> :tag:`[BuildingType]FactoryOwners.Permanent=`.
     Replace the old tag name by the new tag name.
 
+  :tag:`[Warhead]Ripple.Radius=` --> :tag:`[Warhead]IonCannon.Ripple=`.
+    Replace the old tag name by the new tag name.
+
   :tag:`[Weapon]Abductor.ChangeOwner=`.
     Respects :value:`PSIONICSIMMUNE` veteran ability.
 
