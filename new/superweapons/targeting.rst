@@ -98,6 +98,11 @@ Define the way the AI selects eligible targets to fire the super weapon at.
   range 1 nearby. Does not fire if a preferred target cell is set. Ignores
   cloaked targets.
 
++ :value:`IronCurtain`
+
+  Will not fire automatically. Instead, will wait for a team script requesting
+  an Iron Curtain with matching :tag:`SW.Group`.
+
 + :value:`ForceShield`
 
   Fires at the position the last super weapon with :tag:`AIDefendAgainst=yes`
@@ -229,6 +234,8 @@ preferred target type is set using map action 35, they are not checked.
 | :value:`PsychicDominator` | :value:`infantry,units`           | :value:`all`              | yes                    | hold if offensive      | yes       |
 +---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
 | :value:`GeneticMutator`   | :value:`infantry`                 | :value:`all`              | no                     | hold if offensive      | yes       |
++---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
+| :value:`IronCurtain`      | do not use                        | do not use                | no                     | nothing                | no        |
 +---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
 | :value:`ForceShield`      | do not use                        | do not use                | no                     | defensive              | yes       |
 +---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+

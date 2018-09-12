@@ -19,8 +19,8 @@ Default values for general tags:
   The height the :tag:`SW.Animation` is played above the ground. Defaults to
   :value:`5`.
 :tagdef:`[SuperWeapon]SW.AITargeting=enumeration`
-  Defaults to :value:`ForceShield` for :value:`ForceShield`, to :value:`none`
-  otherwise and the AI cannot use this.
+  Defaults to :value:`ForceShield` for :value:`ForceShield`, to
+  :value:`IronCurtain` otherwise.
 :tagdef:`[SuperWeapon]SW.AffectsHouse=enumeration`
   Specifies the houses affected by the protection. Defaults to :value:`team` for
   :value:`ForceShield`, to :value:`all` otherwise.
@@ -62,4 +62,12 @@ See the :doc:`Force Shield Modifier </new/buildings/forceshield>` section for
 :tag:`Type=ForceShield`, otherwise see the :ref:`Iron Curtain Effect on Warheads
 <wh-ironcurtain>` section.
 
+The AI can use Iron Curtains. Multiple Iron Curtains can be distinguised by
+grouping them using :tag:`SW.Group`. See :ref:`Iron Curtain Team Script Action
+<script-ironcurtain>`.
+
+.. note:: The AI only fully supports Team Script Actions. It does not yet
+  support AI Triggers.
+
 .. versionadded:: 0.2
+.. versionchanged:: 2.0

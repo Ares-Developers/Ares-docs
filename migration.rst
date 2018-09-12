@@ -449,3 +449,8 @@ Other changes:
   Units lifted by a Magnetron no longer count as being actively in air, and EMP
   might no longer destroy them.
 
+  The AI supports other Iron Curtains and it might now use super weapons with
+  :tag:`Type=IronCurtain` it has not used before, because of the changed default
+  for :tag:`SW.AITargetingMode`. To restore previous behavior, manually set
+  :tag:`SW.AITargetingMode=none` on all but the first super weapon with
+  :tag:`Type=IronCurtain`.
