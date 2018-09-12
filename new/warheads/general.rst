@@ -14,6 +14,18 @@ General Settings
 .. versionadded:: 0.1
 
 
+.. index:: Warheads; AffectsOwner= split from AffectsAllies=
+
+:captiontag:`AffectsOwner`
+``````````````````````````
+
+:tagdef:`[Warhead]AffectsOwner=boolean`
+  Whether this warhead can affect the very player who fired it. Defaults to
+  :tag:`AffectsAllies` flag.
+
+.. versionadded:: 2.0
+
+
 .. index::
   Warheads; Suppress EVA's "Ore miner under attack" warnings
   EVA; Suppress "Ore miner under attack" warnings per warhead

@@ -442,4 +442,10 @@ Changed tags:
 
 Other changes:
 
-  None.
+  Splits logic only targets air units if the :tag:`AirburstWeapon` projectile is
+  :tag:`AA=yes`. Furthermore, Splits logic now only retargets objects that the
+  projectile's warhead can affect.
+
+  Units lifted by a Magnetron no longer count as being actively in air, and EMP
+  might no longer destroy them.
+

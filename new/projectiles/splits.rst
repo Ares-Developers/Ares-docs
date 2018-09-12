@@ -33,7 +33,9 @@ more detailed description of the logic.
   Sun`. The :tag:`AirburstWeapon`'s :tag:`Damage` is no longer multiplied by
   \ :value:`10`. Its :tag:`Speed` is used instead of the hardcoded :value:`19`,
   and its :tag:`Bright` setting is now also respected instead of just being
-  disabled.
+  disabled. In :game:`Ares`, :tag:`Splits` only targets air units if the
+  :tag:`Airburst` projectile is :tag:`AA=yes`, and it only retargets objects the
+  projectile's warhead can affect.
 
 .. warning:: Even though speed is not hardcoded any more, you cannot use
   \ :tag:`Speed` values lower than :value:`19` on the :tag:`AirburstWeapon` or
@@ -49,6 +51,12 @@ more detailed description of the logic.
   projectile was shot at. The higher the value, the less likely it is for the
   split projectile to choose another target. Valid range is :value:`0.0` to
   :value:`1.0`. Defaults to :value:`0.0`.
+
+:tagdef:`[Projectile]RetargetSelf=boolean`
+  Whether the firing unit itself can become the target when retargeting. If
+  :value:`no`, the firer will be exempt, though could still be hit by a
+  retargeted projectile that hits the cell the firer is on. Defaults to
+  :value:`yes`.
 
 
 .. index:: Projectiles; Airburst radius

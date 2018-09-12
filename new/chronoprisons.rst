@@ -61,10 +61,14 @@ concept art on the Command & Conquer Wiki
   :value:`PSIONICSIMMUNE` veteran ability will not change owner. Defaults to
   :value:`no`.
 
-:tagdef:`[Weapon]Abductor.AbductBelowPercent=float`
+:tagdef:`[Weapon]Abductor.AbductBelowPercent=float - percentage`
   Specifies the percentage of health a unit has to go below to be abducted.
   Units with more health than this percentage will not be abducted. Defaults to
   :value:`100%`.
+
+:tagdef:`[Weapon]Abductor.MaxHealth=integer - hitpoints`
+  The amount of hitpoints above which it cannot be abducted any longer. If
+  :value:`0`, health is not checked. Defaults to :value:`0`.
 
 :tagdef:`[TechnoType]ImmuneToAbduction=boolean`
   Specifies whether the unit cannot be abducted. Only the conventional damage is

@@ -16,3 +16,19 @@ With this tag, repairing will pause, but not stop.
   affects human players. Defaults to :value:`yes`.
 
 .. versionadded:: 0.D
+
+
+.. index::
+  Buildings; Not repairable by Engineers
+  Engineer; Disallow instantly repairing a building
+
+Buildings not repairable by Engineers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:tagdef:`[BuildingType]EngineerRepairable=boolean`
+  Whether engineers can repair this building. If :value:`no`, the building might
+  still be repaired by the normal building repair (:tag:`ClickRepairable=yes`),
+  but Engineers cannot be used to restore full health instantly. Defaults to
+  :tag:`Repairable`.
+
+.. versionadded:: 2.0

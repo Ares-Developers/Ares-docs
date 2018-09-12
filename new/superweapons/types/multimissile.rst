@@ -56,6 +56,11 @@ down again.
 super weapon. :game:`Yuri's Revenge` only tried to find the first building type
 that matched those criteria.
 
+:game:`Ares` adds support to launch the missile and have it aim for the target
+directly like in :game:`Tiberian Sun` instead of going straight up from the silo
+and coming down on the target. This is controlled by :tag:`Vertical` on the
+projectile.
+
 :game:`Yuri's Revenge` supported the nuke impact animation only for the warhead
 called :tag:`NUKE`, hardcoded to :tag:`NUKEBALL`. To change this animation in
 :game:`Ares`, have a look at :ref:`PreImpactAnim <preimpactanim>`.

@@ -103,7 +103,7 @@ to its original owner. Whilst a building is held by a player that is not the
   Buildings; Destruction replaces building with rubble
   Buildings; Rebuild buildings from rubble with engineers
   Rubble; Rebuild collapsed buildings with engineers
-  Engineers; Rebuild collapsed rubble buildings
+  Engineer; Rebuild collapsed rubble buildings
 
 Advanced Rubble
 ```````````````

@@ -11,10 +11,17 @@ explosion and dealing damage. The game was hard-coded to use this only for
 warheads with the ID :tag:`NUKE`. :game:`Ares` enables this for arbitrary
 warheads.
 
-:tagdef:`[Warhead]PreImpactAnim=string, animation ID`
+:tagdef:`[Warhead]PreImpactAnim=animation`
   Specifies the animation to display when a projectile which uses this warhead
   impacts. After the animation is over, the actual explosion is created and
   damage is dealt. The animation may not be looping. Defaults to
   :value:`NUKEBALL` for :tag:`NUKE`, otherwise to :value:`none`.
 
+:tagdef:`[Warhead]PreImpactAnim.Moves=boolean`
+  Can be used to optionally move the bullet when the animation used as
+  :tag:`PreImpactAnim` moves while playing. If :value:`yes`, moves the bullet to
+  the last location of the animation and sets the target to the cell containing
+  the animation. Defaults to :value:`no`.
+
 .. versionadded:: 0.2
+.. versionchanged:: 2.0

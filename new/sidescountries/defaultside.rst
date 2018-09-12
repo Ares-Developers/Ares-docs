@@ -7,7 +7,7 @@ These are the side defaults used instead of global tags.
 .. index::
   single: Sides; Crew and survivor defaults
   Crew; Defaults per side
-  Engineers; Defaults per side
+  Engineer; Defaults per side
 
 Crew, Survivors and Other Types
 -------------------------------

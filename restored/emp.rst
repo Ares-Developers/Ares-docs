@@ -226,8 +226,9 @@ units and just stay alive.
   Defaults to :value:`inair`, destroying all units if they are in the air the
   instant the EMP hits.
 
-  .. note:: Parachuting units do not count as being in the air. Only exceeding
-    their positive threshold (if set) will kill them.
+  .. note:: Parachuting units and units being lifted or lowered by a Magnetron
+    do not count as being in air. Only exceeding their positive threshold (if
+    set) will kill them.
 
 For example, using :value:`inair` causes a deployed Siege Chopper not to be
 destroyed. Using :value:`-100` will crash the Siege Chopper only if it is in-air
@@ -262,3 +263,13 @@ This animation can be overridden by the warhead that initiates the EMP effect.
   still in the :game:`Tiberian Sun` palette and needs to be converted.
 
 .. versionadded:: 0.A
+
+
+Global Settings
+---------------
+
+:tagdef:`[CombatDamage]EMPAIRecoverMission=mission`
+  The mission units controlled by the AI will go onto when an EMP effect
+  expires. Defaults to :value:`Hunt`.
+
+.. versionadded:: 2.0

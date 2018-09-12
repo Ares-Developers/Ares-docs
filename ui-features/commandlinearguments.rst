@@ -29,5 +29,15 @@ Command Line Arguments
     testing and AI design testing. Due to this, feature complexity, lack of
     interest and a change in personnel, please note that this feature is NOT
     officially supported.
+:-AFFINITY\:N: Controls which processors the game will run on. :value:`N` is a
+  bit mask with one bit for each processor starting with :value:`1` for the
+  first, :value:`2` for the second, :value:`4` for the third and so on. If not
+  set, :value:`1` is used, meaning the game will run on the first processor
+  only. Use :value:`0` to disable this feature.
+
+  .. warning:: Several bits can be combined, like :value:`3` representing the
+    first two processors. Usually, the game should run on only one processor
+    (that is, :value:`N` being a power of 2), as it is not designed to make use
+    of multiple processors.
 
 .. versionadded:: 0.1

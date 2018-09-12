@@ -90,6 +90,12 @@ their driver killed.
   passenger that can be ejected later, otherwise the driver is swallowed,
   becoming the permanent driver of the vehicle. Defaults to :value:`no`.
 
+:tagdef:`[TechnoType]CanBeDriven=boolean`
+  Whether this unit can be reclaimed by a driver. If :value:`no`, this unit
+  cannot be captured by a driver after the original driver has been killed.
+  If :value:`yes`, ownership and other still might still prevent the unit from
+  being captured. Defaults to :value:`yes`.
+
 :tagdef:`[Country]CanBeDriven=boolean`
   Whether units owned by this country can be captured by :tag:`CanDrive=yes`
   infantry. This can be used to place units owned by neutral countries on the

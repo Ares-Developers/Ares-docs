@@ -26,4 +26,10 @@ not set or the Harvester Truce feature is enabled, no damage is delivered.
   The warhead to deliver the damage of explosive tiberium. Defaults to
   :value:`none`.
 
+:tagdef:`[CombatDamage]TiberiumExplosiveAnim=animation`
+  Optional animation displayed when Tiberium contained in a unit explodes. Can
+  be used independently of damage delivery; :tag:`TiberiumExplosiveWarhead`
+  needs not be set. Defaults to :value:`none`.
+
 .. versionadded:: 0.5
+.. versionchanged:: 2.0

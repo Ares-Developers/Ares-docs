@@ -12,3 +12,10 @@ were not restored. :game:`Ares` now does this. Also, the facing in which the
 cargo is dropped off has been changed to be the same as the Carryall facing.
 
 .. versionadded:: 0.D
+
+When a Carryall releases its cargo, it will go on guard mission instead of
+sitting there frozen. If it was part of a team previously, it will try to rejoin
+that team. If the unit cannot be placed on the map, it is now put back into the
+Carryall, instead of potentially disappearing.
+
+.. versionadded:: 2.0
