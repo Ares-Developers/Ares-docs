@@ -1,0 +1,14 @@
+.. index:: TechnoTypes; Prevent selection keyboard commands to reveal information
+
+:captiontag:`FakeOf`
+====================
+
+The Keyboard Commands that select units depending on their health or veterancy
+can accidentally reveal that certain units aren't what they seem to be if the
+fake or decoy units had a different price.
+
+:tagdef:`[TechnoType]FakeOf=TechnoType`
+  If set, this type is used to calculate the price for the health and veterancy
+  selection Keyboard Commands. Defaults to :value:`none`.
+
+.. versionadded:: 2.0

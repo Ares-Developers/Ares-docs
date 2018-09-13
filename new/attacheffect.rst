@@ -47,6 +47,21 @@ superweapons. AttachEffect tags can be applied to both the Big Four (all
 :tagdef:`[Section]AttachEffect.FirepowerMultiplier=float - multiplier`
   Firepower bonus while the AttachEffect lasts. Defaults to :value:`1.0`.
 
+  .. note:: Mind that this works fundamentally differently from the other
+    effects, which are applied the instant they are needed (like a firepower for
+    a bullet impacting) as long as the effect is active: the reload time is
+    computed once when the reloading starts, but the modified reloading time may
+    take longer than the attached effect lasts.
+
+    For instance, a unit that was struck with an effect slowing down the ROF
+    extremely might thus render the unit unable to fire way longer than the
+    AttachEffect is active, because the reload timer will not speed up again
+    when the effect expires.
+
+:tagdef:`[Section]AttachEffect.ROFMultiplier=float - multiplier`
+  Rate of fire bonus while the AttachEffect lasts. Defaults to :value:`1.0`.
+
+
 :tagdef:`[Section]AttachEffect.Cloakable=boolean`
   Whether the unit gains cloaking ability while the AttachEffect lasts. Defaults
   to :value:`no`.
@@ -90,4 +105,4 @@ The following tags are valid on Warheads only:
   animation on every time of reapplying. Defaults to :value:`no`.
 
 .. versionadded:: 0.4
-.. versionchanged:: 0.E
+.. versionchanged:: 2.0
