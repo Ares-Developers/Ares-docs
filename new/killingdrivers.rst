@@ -23,6 +23,9 @@ This logic supports :tag:`CellSpread` and respects all immunities as any other
 conventional warhead like :tag:`ImmuneToPoison` as well as their veteran
 abilities, :tag:`AffectsAllies`, and :tag:`AffectsEnemies`.
 
+Whether this effect is applied when no conventional damage is dealt can be
+customized. See :ref:`wh-effects`.
+
 :tagdef:`[Warhead]KillDriver=boolean`
   Specifies whether this warhead kills the driver of the vehicle, instead of
   damaging the vehicle itself. The first passenger matching the vehicle's

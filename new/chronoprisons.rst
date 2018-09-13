@@ -25,7 +25,7 @@ concept art on the Command & Conquer Wiki
 <http://cnc.wikia.com/wiki/Chrono_Prison>`_)
 
 :tagdef:`[Weapon]Abductor=boolean`
-  If set to yes, weapons with this flag will absorb the target into the
+  If set to :value:`yes`, weapons with this flag will absorb the target into the
   attacker's passenger hold. Should the attacking unit be destroyed, its
   passengers will emerge. Slaves' and spawned units' owner will be changed to
   the house `Special`. If the abductor is "full" or the victim cannot be

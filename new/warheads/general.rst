@@ -27,6 +27,52 @@ General Settings
 
 
 .. index::
+  Warheads; Effects without damage
+  Warheads; Effects requiring damage
+
+.. _wh-effects:
+
+Warhead Effects
+```````````````
+
+The effects KillDriver, Sonar, Disable Weapon and Flashing can be applied
+independently of conventional damage.
+
+:tagdef:`[Warhead]EffectsRequireDamage=boolean`
+  Whether warheads will only apply the effects if at least one hitpoint of
+  damage has actually been dealt to a unit or structure. If :value:`no`, effects
+  are also applied if the no damage is dealt. Requires positive damage; healing
+  does not use this setting. Defaults to :value:`no`.
+
+:tagdef:`[Warhead]EffectsRequireVerses=boolean`
+  Whether :tag:`Verses` needs to be greater than :value:`0%` for the warhead to
+  apply effects. Can be used to distinguish between :value:`0%` and greater
+  verses that potentially nullify damage, between immunity and vulnerability. If
+  :value:`no`, effects are applied to any unit or structure regardless of
+  verses. Defaults to :value:`yes`.
+
+.. versionadded:: 2.0
+
+
+.. index:: Warheads; No conventional damage
+
+Non-Damaging Warheads
+`````````````````````
+
+This can be used to punctually disable an optimization in the game to still
+apply warhead effects without doing damage. By default, :game:`Yuri's Revenge`
+checks whether no damage is to be dealt before expensively determining which
+units and structures are in range.
+
+:tagdef:`[Warhead]AllowZeroDamage=boolean`
+  Whether damage of 0 hitpoints will still be passed on to all units and
+  structures affected by the warhead. Otherwise, a damage of 0 will not be
+  passed on. Defaults to :value:`no`.
+
+.. versionadded:: 2.0
+
+
+.. index::
   Warheads; Suppress EVA's "Ore miner under attack" warnings
   EVA; Suppress "Ore miner under attack" warnings per warhead
 

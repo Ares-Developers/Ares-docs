@@ -1,11 +1,44 @@
 Script Actions
 ~~~~~~~~~~~~~~
 
+:captiontag:`Gather at Enemy` (53)
+``````````````````````````````````
+
+The previously unused parameter of the :value:`Gather at Enemy` script action is
+now added to :tag:`[General]AISafeDistance` to determine the distance from the
+center of the enemy base the team should gather at. Can be negative to shorten
+the distance.
+
+.. versionadded:: 2.0
+
+
+
+.. index:: Scripts; Distance setting for Gather at Base
+
+:captiontag:`Gather at Base` (54)
+`````````````````````````````````
+
+:game:`Ares` splits the tag :tag:`[General]AISafeDistance` into two, which is
+used for two similar team script actions serving different purposes.
+
+:tagdef:`[General]AIFriendlyDistance=integer - cells`
+  Cell distance the AI will use for gathering outside the owning player's base
+  using script action 54. Defaults to :tag:`[General]AISafeDistance`.
+
+Like for the :value:`Gather at Enemy` script action, the previously unused
+parameter of the :value:`Gather at Base` script action is now added to the
+distance from the center of the own base the team should gather at. Can be
+negative to shorten the distance.
+
+.. versionadded:: 2.0
+
+
+
 .. _script-ironcurtain:
 
-.. index:: Scripts; IronCurtain team script extended
+.. index:: Scripts; Iron Curtain team script extended
 
-:captiontag:`IronCurtain` (55)
+:captiontag:`Iron Curtain` (55)
 ``````````````````````````````
 
 Previously, the game would only look at the first (and usually only) super

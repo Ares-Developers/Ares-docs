@@ -9,6 +9,9 @@ victim and even passively acquire new targets, and death weapons will still be
 set off when the target is killed or destroyed. Also note that special effects
 like C4 are not disabled.
 
+Whether this effect is applied when no conventional damage is dealt can be
+customized. See :ref:`wh-effects`.
+
 :tagdef:`[Warhead]DisableWeapons.Duration=integer - frames`
   If positive, the target hit by this warhead will be unable to fire for this
   amount of frames. Defaults to :value:`0`.
