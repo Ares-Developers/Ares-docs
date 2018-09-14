@@ -6,6 +6,26 @@ This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of :game:`Ares`. Internal changes, optimizations
 and updates are mentioned here only if they are notable.
 
+.. rubric:: Ares 2.0
+
++ **Animations** can :doc:`deal damage using a weapon, optionally with a delay
+  </new/animations>`
+
++ **Waves** optimized and expanded to support to recreate :doc:`original colors
+  </new/weapons/waves>`
+
++ **Warheads** can fire :doc:`Ion Cannons </new/warheads/ioncannon>`, can
+  :doc:`distinguish between firer and allies </new/warheads/general>`, 
+
++ **AI** can use custom :doc:`Iron Curtains </new/scripts>`, and even use any
+  super weapon with :doc:`Iron Curtain Targeting </new/superweapons/targeting>`
+  to support teams
+
++ **Build Time** can be :doc:`customized for each type </new/buildtime>`
+
++ **Spy Effects** to :doc:`build buildings, naval units or aircraft as veteran
+  </new/buildings/spybehavior>`
+
 .. rubric:: Ares 1.0
 
 + **Save Games** are :doc:`supported again </ui-features/savegames>`
