@@ -454,3 +454,6 @@ Other changes:
   for :tag:`SW.AITargetingMode`. To restore previous behavior, manually set
   :tag:`SW.AITargetingMode=none` on all but the first super weapon with
   :tag:`Type=IronCurtain`.
+
+  :tag:`DeployToLand=yes` units will only turn towards :tag:`DeployDir` if they
+  have a :tag:`DeployingAnim`.
