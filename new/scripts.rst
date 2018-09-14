@@ -39,7 +39,7 @@ negative to shorten the distance.
 .. index:: Scripts; Iron Curtain team script extended
 
 :captiontag:`Iron Curtain` (55)
-``````````````````````````````
+```````````````````````````````
 
 Previously, the game would only look at the first (and usually only) super
 weapon with :tag:`Type=IronCurtain`, then check whether it was either ready or

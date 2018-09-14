@@ -9,6 +9,7 @@ customization.
 
 :tagdef:`[BuildingType]ReverseEngineersVictims=boolean`
   Enables the reverse-engineering logic. Defaults to :value:`no`.
+
 .. note:: Currently :tag:`Grinding=yes` is needed to the reverse-engineering
   building to have this logic working. Also, reverse-engineered units will
   ignore :tag:`Prerequisite`, :tag:`Prerequisite.Lists`,
