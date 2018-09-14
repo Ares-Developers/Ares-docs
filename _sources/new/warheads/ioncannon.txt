@@ -1,0 +1,95 @@
+Ion Cannon
+
+
+Any warhead can launch an Ion Cannon effect in Ares. The Ion Cannon
+consists of a beam and an impact animation on the ground as well as damage
+delivery using a custom warhead.
+
+
+
+  Warheads; Fire an Ion Cannon where the warhead impacts
+  Ion Cannon; Fire from any warhead
+
+Ion Cannon Blast
+
+
+[Warhead]IonCannon=boolean
+  Whether Ion Cannon logic will be activated when this warhead impacts. Defaults
+  to no.
+
+The following settings are available for Ion Cannon warheads.
+
+[Warhead]IonCannon.Blast=Animation
+  The optional first animation on the impact site. This is only used if the
+  warhead impacts on land. If the impact site is on water, the last animation
+  from the [CombatDamage]►SplashList is used. Set to none to
+  deactivate. Defaults to [General]►IonBlast.
+
+[Warhead]IonCannon.Beam=Animation
+  The optional second animation on the impact site. Set to none to
+  deactivate. Defaults to [General]►IonBeam.
+
+[Warhead]IonCannon.Warhead=Warhead
+  The optional warhead to deliver the damage. Set to none to deal no
+  Ion Cannon damage. Defaults to [CombatDamage]►IonCannonWarhead.
+
+[Warhead]IonCannon.Damage=integer - hitpoints
+  The damage dealt by the Ion Cannon warhead. Defaults to
+  [CombatDamage]►IonCannonDamage.
+
+[Warhead]IonCannon.Rock=boolean
+  Whether voxel units are rocked by the impact. Defaults to yes.
+
+ 2.0
+
+
+
+ Warheads; Ion Cannon ripple effect
+
+Ripple Effect
+
+
+The shockwave visual effect can be activated independently of a warhead being
+an Ion Cannon.
+
+[Warhead]IonCannon.Ripple=integer - frames
+  This generates a visual shockwave when the warhead detonates, identical to the
+  one produced by Tiberian Sun's Ion Cannon. Note that this is a visual
+  effect only. Valid values range from 0 (off) to 79 (max
+  effect). Defaults to 79 for IonCannon=yes, to 0
+  otherwise.
+
+  Below are listed some results of modifying the tag values.
+
+  + Ripple.Radius=1 - Forget it, nothing.
+  + Ripple.Radius=5 - Target cell, only voxel rippling
+  + Ripple.Radius=8 - Target cell, both voxel and SHP rippling.
+  + Ripple.Radius=10 - 1 cell radius
+  + Ripple.Radius=15 - 2 cell radius
+  + Ripple.Radius=20 - 3 cell radius
+  + Ripple.Radius=25 - 3 cell radius
+  + Ripple.Radius=28 - 3 cell unit-rippling, 4 cell terrain rippling
+    radius
+  + Ripple.Radius=30 and onwards - 3 cell unit-rippling, 5 cell
+    terrain-rippling radius
+
+ 0.1
+
+
+
+ Warheads; Destroy bridges instantly
+
+Bridge Destroyer
+
+
+A hardcoded property of the original Ion Cannon from Tiberian Sun was
+that it instantly destroyed bridges it hit. This special logic was only applied
+for the warhead defined as IonCannonWarhead. With Ares, this
+feature can be used on any warhead, and turned off for the original warhead.
+
+[Warhead]BridgeAbsoluteDestroyer=boolean
+  Whether this warhead immediately destroys a bridge it hits. Requires
+  Wall=yes. Defaults to yes for
+  [CombatDamage]►IonCannonWarhead, to no otherwise.
+
+ 2.0

@@ -51,4 +51,12 @@ destroyed by bounty hunters.
   The amount rewarded as bounty if an object with this veterancy is destroyed.
   Can be negative to penalize the player. Defaults to Bounty.Value.
 
+The following tag can be used to disable bounty for killing objects owned by a
+house.
+
+[Country]GivesBounty=boolean
+  Whether this country is eligible for giving bounty. If no, killing
+  units and structures of this country will not give any bounty. Defaults to
+  yes.
+
  0.C

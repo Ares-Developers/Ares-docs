@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>AttachEffect &mdash; Ares 1.0p1 documentation</title>
+    <title>AttachEffect &mdash; Ares 2.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1.0p1',
+        VERSION:     '2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,10 +24,10 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 1.0p1 documentation" href="../index.html" />
+    <link rel="top" title="Ares 2.0 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Bounty" href="bounty.html" />
-    <link rel="prev" title="AlternateTheaterArt" href="alternatetheaterart.html" /> 
+    <link rel="prev" title="Animation Damage" href="animations.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -40,17 +40,17 @@
           <a href="bounty.html" title="Bounty"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="alternatetheaterart.html" title="AlternateTheaterArt"
+          <a href="animations.html" title="Animation Damage"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="alternatetheaterart.html"
-                        title="previous chapter"><span><span class="type">AlternateTheaterArt</span></span></a></p>
+  <p class="topless"><a href="animations.html"
+                        title="previous chapter">Animation Damage</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="bounty.html"
                         title="next chapter">Bounty</a></p>
@@ -120,7 +120,22 @@ weapon. Defaults to <cite>no</cite>.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[Section]►AttachEffect.ArmorMultiplier=</span></code><span class="type definition"> (float - multiplier)</span></span></dt>
 <dd>Armor bonus while the AttachEffect lasts. Defaults to <cite>1.0</cite>.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[Section]►AttachEffect.FirepowerMultiplier=</span></code><span class="type definition"> (float - multiplier)</span></span></dt>
-<dd>Firepower bonus while the AttachEffect lasts. Defaults to <cite>1.0</cite>.</dd>
+<dd><p class="first">Firepower bonus while the AttachEffect lasts. Defaults to <cite>1.0</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p>Mind that this works fundamentally differently from the other
+effects, which are applied the instant they are needed (like a firepower for
+a bullet impacting) as long as the effect is active: the reload time is
+computed once when the reloading starts, but the modified reloading time may
+take longer than the attached effect lasts.</p>
+<p class="last">For instance, a unit that was struck with an effect slowing down the ROF
+extremely might thus render the unit unable to fire way longer than the
+AttachEffect is active, because the reload timer will not speed up again
+when the effect expires.</p>
+</div>
+</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Section]►AttachEffect.ROFMultiplier=</span></code><span class="type definition"> (float - multiplier)</span></span></dt>
+<dd>Rate of fire bonus while the AttachEffect lasts. Defaults to <cite>1.0</cite>.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[Section]►AttachEffect.Cloakable=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether the unit gains cloaking ability while the AttachEffect lasts. Defaults
 to <cite>no</cite>.</dd>
@@ -162,7 +177,7 @@ animation on every time of reapplying. Defaults to <cite>no</cite>.</dd>
 <p><span class="versionmodified">New in version 0.4.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">Changed in version 0.E.</span></p>
+<p><span class="versionmodified">Changed in version 2.0.</span></p>
 </div>
 </div>
 
@@ -182,9 +197,9 @@ animation on every time of reapplying. Defaults to <cite>no</cite>.</dd>
           <a href="bounty.html" title="Bounty"
              >next</a> |</li>
         <li class="right" >
-          <a href="alternatetheaterart.html" title="AlternateTheaterArt"
+          <a href="animations.html" title="Animation Damage"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

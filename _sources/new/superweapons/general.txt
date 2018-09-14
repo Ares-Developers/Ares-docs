@@ -32,5 +32,10 @@ General properties
 [SuperWeapon]SW.Deferment=integer - frames
   The number of frames after the fired super weapon takes effect. Not all super
   weapons support deferment.
+[SuperWeapon]SW.TimerVisibility=enumeration none|owner|allies|team|enemies|all
+  Defines who can see the super weapon timer, if ShowTimer=yes. Observers
+  are considered to be allied all players. Defaults to all.
+[SuperWeapon]SW.Group=integer
+  Distinguish multiple super weapons of the same type. Defaults to 0.
 
  0.1

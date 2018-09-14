@@ -102,12 +102,19 @@ Require Stolen Technology
 Require Factory Built By Country
 
 
-[BuildingType]FactoryOwners.HaveAllPlans=boolean
-  Whether a player capturing a building of this type would permanently gain all
-  plans of its initial owner. The initial owner is the player who owned it
-  first: the player who built it, or the owner of buildings pre-placed on the
-  map. For neutral structures, this would be the neutral country. Defaults to
+Satisfying prerequisites can be tied to the initial owner of a factory building.
+The initial owner is the player who owned it first: the player who built it, or
+the owner of buildings pre-placed on the map. For neutral structures, this would
+be the neutral country.
+
+[BuildingType]FactoryOwners.HasAllPlans=boolean
+  Whether this building provides plans for all factory types of the initial
+  owner. If yes, this building satisfies FactoryOwner requirements of
+  all object types. If the building is lost, the plans are lost. Defaults to
   no.
+[BuildingType]FactoryOwners.Permanent=boolean
+  Whether a player capturing a building of this type would permanently gain all
+  plans of its initial owner. Supported on upgrades. Defaults to no.
 [TechnoType]FactoryOwners=list of houses
   The list of countries whose factories can build this object. If empty, every
   country is allowed to build this object. Otherwise, players need to own at
@@ -122,7 +129,7 @@ Require Factory Built By Country
   buildings, but not on units.
 
  0.6
- 0.9
+ 2.0
 
 
 Overview

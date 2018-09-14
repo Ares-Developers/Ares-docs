@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Berserk Reloading Time Modifier &mdash; Ares 1.0p1 documentation</title>
+    <title>Berserk &mdash; Ares 2.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.0p1',
+        VERSION:     '2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 1.0p1 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 2.0 documentation" href="../../index.html" />
     <link rel="up" title="Warheads" href="index.html" />
     <link rel="next" title="Suppress Death Weapons" href="deathweapon.html" />
     <link rel="prev" title="Infantry-related Settings" href="infantry.html" /> 
@@ -42,13 +42,22 @@
         <li class="right" >
           <a href="infantry.html" title="Infantry-related Settings"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Warheads</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Berserk</a><ul>
+<li><a class="reference internal" href="#reloading-time-modifier">Reloading Time Modifier</a></li>
+<li><a class="reference internal" href="#immunity-to-berserk">Immunity to Berserk</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="infantry.html"
                         title="previous chapter">Infantry-related Settings</a></p>
@@ -76,8 +85,10 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="berserk-reloading-time-modifier">
-<span id="index-0"></span><h1>Berserk Reloading Time Modifier<a class="headerlink" href="#berserk-reloading-time-modifier" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="berserk">
+<h1>Berserk<a class="headerlink" href="#berserk" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reloading-time-modifier">
+<span id="index-0"></span><h2>Reloading Time Modifier<a class="headerlink" href="#reloading-time-modifier" title="Permalink to this headline">¶</a></h2>
 <p>Units under the effect of Chaos Gas or other <span><code class="docutils literal"><span class="pre">Psychedelic=yes</span></code></span> warheads go
 berserk, which reduces their willingness to obey orders as well as their
 reloading time. This reloading time factor can be customized globally and for
@@ -92,6 +103,33 @@ firing. Defaults to <span><code class="docutils literal"><span class="pre">[Comb
 </dl>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 0.8.</span></p>
+</div>
+</div>
+<div class="section" id="immunity-to-berserk">
+<span id="index-1"></span><h2>Immunity to Berserk<a class="headerlink" href="#immunity-to-berserk" title="Permalink to this headline">¶</a></h2>
+<p>The tag <span><code class="docutils literal"><span class="pre">ImmuneToPsionics</span></code></span> is determines whether a unit or structure is
+susceptible to mind control and <span><code class="docutils literal"><span class="pre">Psychedelic=yes</span></code></span> weapons. If the object is
+immune to one, it is immune to the other. <span class="game docutils literal">Ares</span> allows to differentiate.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►ImmuneToBerserk=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd><p class="first">Whether this object is immune to berserking, the Chaos Gas effect. Can be used
+to override <span><code class="docutils literal"><span class="pre">ImmuneToPsionics</span></code></span> and the PSIONICSIMMUNE ability. If set to
+<cite>yes</cite>, the object is not affected by Chaos Gas even if not
+<span><code class="docutils literal"><span class="pre">ImmuneToPsionics=yes</span></code></span>; if set to <cite>no</cite>, the object can be affected
+by Chaos Gas despite maybe being immune to psionics.</p>
+<p>If not set, acts as if set to <cite>yes</cite> if <span><code class="docutils literal"><span class="pre">ImmuneToPsionics=yes</span></code></span> or
+the object gained the <cite>PSIONICSIMMUNE</cite> ability through veterancy,
+otherwise as if set to <cite>no</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Currently, the default of not being set cannot be restored once this
+tag has been set.</p>
+</div>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.0.</span></p>
+</div>
 </div>
 </div>
 
@@ -113,7 +151,7 @@ firing. Defaults to <span><code class="docutils literal"><span class="pre">[Comb
         <li class="right" >
           <a href="infantry.html" title="Infantry-related Settings"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Warheads</a> &raquo;</li> 
       </ul>

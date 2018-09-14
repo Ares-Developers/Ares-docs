@@ -11,10 +11,17 @@ explosion and dealing damage. The game was hard-coded to use this only for
 warheads with the ID NUKE. Ares enables this for arbitrary
 warheads.
 
-[Warhead]PreImpactAnim=string, animation ID
+[Warhead]PreImpactAnim=animation
   Specifies the animation to display when a projectile which uses this warhead
   impacts. After the animation is over, the actual explosion is created and
   damage is dealt. The animation may not be looping. Defaults to
   NUKEBALL for NUKE, otherwise to none.
 
+[Warhead]PreImpactAnim.Moves=boolean
+  Can be used to optionally move the bullet when the animation used as
+  PreImpactAnim moves while playing. If yes, moves the bullet to
+  the last location of the animation and sets the target to the cell containing
+  the animation. Defaults to no.
+
  0.2
+ 2.0

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Targeting &mdash; Ares 1.0p1 documentation</title>
+    <title>Targeting &mdash; Ares 2.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.0p1',
+        VERSION:     '2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 1.0p1 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 2.0 documentation" href="../../index.html" />
     <link rel="up" title="Super Weapons" href="index.html" />
     <link rel="next" title="Range Limits" href="range.html" />
     <link rel="prev" title="Hardcoded Values" href="hardcoded.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="hardcoded.html" title="Hardcoded Values"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Super Weapons</a> &raquo;</li> 
       </ul>
@@ -168,6 +168,10 @@ target cell is set. Ignores cloaked targets.</p>
 <p>Selects the valid target that has the most enemy infantry units in Cell Spread
 range 1 nearby. Does not fire if a preferred target cell is set. Ignores
 cloaked targets.</p>
+</li>
+<li><p class="first"><cite>IronCurtain</cite></p>
+<p>Will not fire automatically. Instead, will wait for a team script requesting
+an Iron Curtain with matching <span><code class="docutils literal"><span class="pre">SW.Group</span></code></span>.</p>
 </li>
 <li><p class="first"><cite>ForceShield</cite></p>
 <p>Fires at the position the last super weapon with <span><code class="docutils literal"><span class="pre">AIDefendAgainst=yes</span></code></span>
@@ -325,70 +329,77 @@ preferred target type is set using map action 35, they are not checked.</p>
 <td>hold if offensive</td>
 <td>yes</td>
 </tr>
-<tr class="row-odd"><td><cite>ForceShield</cite></td>
+<tr class="row-odd"><td><cite>IronCurtain</cite></td>
+<td>do not use</td>
+<td>do not use</td>
+<td>no</td>
+<td>nothing</td>
+<td>no</td>
+</tr>
+<tr class="row-even"><td><cite>ForceShield</cite></td>
 <td>do not use</td>
 <td>do not use</td>
 <td>no</td>
 <td>defensive</td>
 <td>yes</td>
 </tr>
-<tr class="row-even"><td><cite>ParaDrop</cite></td>
+<tr class="row-odd"><td><cite>ParaDrop</cite></td>
 <td>do not use</td>
 <td>do not use</td>
 <td>no</td>
 <td>offensive, base center</td>
 <td>yes</td>
 </tr>
-<tr class="row-odd"><td><cite>Offensive</cite></td>
+<tr class="row-even"><td><cite>Offensive</cite></td>
 <td><cite>infantry,units,buildings</cite></td>
 <td><cite>enemies</cite></td>
 <td>yes</td>
 <td>nothing</td>
 <td>yes</td>
 </tr>
-<tr class="row-even"><td><cite>MultiMissile</cite></td>
+<tr class="row-odd"><td><cite>MultiMissile</cite></td>
 <td><cite>buildings</cite></td>
 <td><cite>none</cite></td>
 <td>yes</td>
 <td>offensive</td>
 <td>yes</td>
 </tr>
-<tr class="row-odd"><td><cite>HunterSeeker</cite></td>
+<tr class="row-even"><td><cite>HunterSeeker</cite></td>
 <td>N/A</td>
 <td>N/A</td>
 <td>yes</td>
 <td>nothing</td>
 <td>no</td>
 </tr>
-<tr class="row-even"><td><cite>NoTarget</cite></td>
+<tr class="row-odd"><td><cite>NoTarget</cite></td>
 <td>N/A</td>
 <td>N/A</td>
 <td>no</td>
 <td>nothing</td>
 <td>no</td>
 </tr>
-<tr class="row-odd"><td><cite>Stealth</cite></td>
+<tr class="row-even"><td><cite>Stealth</cite></td>
 <td><cite>infantry,units,buildings</cite></td>
 <td><cite>enemies</cite></td>
 <td>no</td>
 <td>nothing</td>
 <td>yes</td>
 </tr>
-<tr class="row-even"><td><cite>Self</cite></td>
+<tr class="row-odd"><td><cite>Self</cite></td>
 <td><cite>none</cite>1)</td>
 <td>do not use</td>
 <td>no</td>
 <td>nothing</td>
 <td>yes</td>
 </tr>
-<tr class="row-odd"><td><cite>Base</cite></td>
+<tr class="row-even"><td><cite>Base</cite></td>
 <td>do not use</td>
 <td>do not use</td>
 <td>no</td>
 <td>base center</td>
 <td>yes</td>
 </tr>
-<tr class="row-even"><td><cite>EnemyBase</cite></td>
+<tr class="row-odd"><td><cite>EnemyBase</cite></td>
 <td>do not use</td>
 <td>do not use</td>
 <td>yes</td>
@@ -423,7 +434,7 @@ values are invalid.</p>
         <li class="right" >
           <a href="hardcoded.html" title="Hardcoded Values"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Super Weapons</a> &raquo;</li> 
       </ul>

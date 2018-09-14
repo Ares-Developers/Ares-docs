@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Warheads &mdash; Ares 1.0p1 documentation</title>
+    <title>Warheads &mdash; Ares 2.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.0p1',
+        VERSION:     '2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 1.0p1 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 2.0 documentation" href="../../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="../index.html" />
     <link rel="next" title="General Settings" href="general.html" />
     <link rel="prev" title="ProjectileRange" href="../weapons/projectilerange.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="../weapons/projectilerange.html" title="ProjectileRange"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -81,6 +81,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="general.html">General Settings</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="general.html#affectsenemies"><span><span class="type">AffectsEnemies</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="general.html#affectsowner"><span><span class="type">AffectsOwner</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="general.html#warhead-effects">Warhead Effects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="general.html#non-damaging-warheads">Non-Damaging Warheads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="general.html#non-malicious-warheads">Non-Malicious Warheads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="general.html#prevent-scattering">Prevent scattering</a></li>
 </ul>
@@ -97,6 +100,12 @@
 <li class="toctree-l2"><a class="reference internal" href="ironcurtain.html#iron-curtain-flash">Iron Curtain Flash</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="ioncannon.html">Ion Cannon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ioncannon.html#ion-cannon-blast">Ion Cannon Blast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ioncannon.html#ripple-effect">Ripple Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ioncannon.html#bridge-destroyer">Bridge Destroyer</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="sonar.html">Sonar / Decloak</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flash.html">Flashing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nukeflash.html">Nuke Flash</a></li>
@@ -108,14 +117,17 @@
 <li class="toctree-l2"><a class="reference internal" href="temporal.html#consider-health">Consider Health</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ripple.html">Ion Cannon Ripple Effect</a></li>
 <li class="toctree-l1"><a class="reference internal" href="preimpactanim.html"><span><span class="type">PreImpactAnim</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="infantry.html">Infantry-related Settings</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="infantry.html#deployed-infantry-damage-multiplier">Deployed Infantry Damage multiplier</a></li>
 <li class="toctree-l2"><a class="reference internal" href="infantry.html#infdeathanim"><span><span class="type">InfDeathAnim</span></span></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="berserk.html">Berserk Reloading Time Modifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="berserk.html">Berserk</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="berserk.html#reloading-time-modifier">Reloading Time Modifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="berserk.html#immunity-to-berserk">Immunity to Berserk</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="deathweapon.html">Suppress Death Weapons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="unitlost.html">Suppress Unit Lost Message</a></li>
 </ul>
@@ -140,7 +152,7 @@
         <li class="right" >
           <a href="../weapons/projectilerange.html" title="ProjectileRange"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

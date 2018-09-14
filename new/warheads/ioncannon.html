@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Ion Cannon &mdash; Ares 2.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 2.0 documentation" href="../../index.html" />
+    <link rel="up" title="Warheads" href="index.html" />
+    <link rel="next" title="Sonar / Decloak" href="sonar.html" />
+    <link rel="prev" title="Iron Curtain" href="ironcurtain.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sonar.html" title="Sonar / Decloak"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ironcurtain.html" title="Iron Curtain"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Warheads</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Ion Cannon</a><ul>
+<li><a class="reference internal" href="#ion-cannon-blast">Ion Cannon Blast</a></li>
+<li><a class="reference internal" href="#ripple-effect">Ripple Effect</a></li>
+<li><a class="reference internal" href="#bridge-destroyer">Bridge Destroyer</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ironcurtain.html"
+                        title="previous chapter">Iron Curtain</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sonar.html"
+                        title="next chapter">Sonar / Decloak</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="ion-cannon">
+<h1>Ion Cannon<a class="headerlink" href="#ion-cannon" title="Permalink to this headline">¶</a></h1>
+<p>Any warhead can launch an Ion Cannon effect in <span class="game docutils literal">Ares</span>. The Ion Cannon
+consists of a beam and an impact animation on the ground as well as damage
+delivery using a custom warhead.</p>
+<div class="section" id="ion-cannon-blast">
+<span id="index-0"></span><h2>Ion Cannon Blast<a class="headerlink" href="#ion-cannon-blast" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►IonCannon=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether Ion Cannon logic will be activated when this warhead impacts. Defaults
+to <cite>no</cite>.</dd>
+</dl>
+<p>The following settings are available for Ion Cannon warheads.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►IonCannon.Blast=</span></code><span class="type definition"> (Animation)</span></span></dt>
+<dd>The optional first animation on the impact site. This is only used if the
+warhead impacts on land. If the impact site is on water, the last animation
+from the <span><code class="docutils literal"><span class="pre">[CombatDamage]►SplashList</span></code></span> is used. Set to <cite>none</cite> to
+deactivate. Defaults to <span><code class="docutils literal"><span class="pre">[General]►IonBlast</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►IonCannon.Beam=</span></code><span class="type definition"> (Animation)</span></span></dt>
+<dd>The optional second animation on the impact site. Set to <cite>none</cite> to
+deactivate. Defaults to <span><code class="docutils literal"><span class="pre">[General]►IonBeam</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►IonCannon.Warhead=</span></code><span class="type definition"> (Warhead)</span></span></dt>
+<dd>The optional warhead to deliver the damage. Set to <cite>none</cite> to deal no
+Ion Cannon damage. Defaults to <span><code class="docutils literal"><span class="pre">[CombatDamage]►IonCannonWarhead</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►IonCannon.Damage=</span></code><span class="type definition"> (integer - hitpoints)</span></span></dt>
+<dd>The damage dealt by the Ion Cannon warhead. Defaults to
+<span><code class="docutils literal"><span class="pre">[CombatDamage]►IonCannonDamage</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►IonCannon.Rock=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether voxel units are rocked by the impact. Defaults to <cite>yes</cite>.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.0.</span></p>
+</div>
+</div>
+<div class="section" id="ripple-effect">
+<span id="index-1"></span><h2>Ripple Effect<a class="headerlink" href="#ripple-effect" title="Permalink to this headline">¶</a></h2>
+<p>The shockwave visual effect can be activated independently of a warhead being
+an Ion Cannon.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►IonCannon.Ripple=</span></code><span class="type definition"> (integer - frames)</span></span></dt>
+<dd><p class="first">This generates a visual shockwave when the warhead detonates, identical to the
+one produced by <span class="game docutils literal">Tiberian Sun</span>&#8216;s Ion Cannon. Note that this is a visual
+effect only. Valid values range from <cite>0</cite> (off) to <cite>79</cite> (max
+effect). Defaults to <cite>79</cite> for <span><code class="docutils literal"><span class="pre">IonCannon=yes</span></code></span>, to <cite>0</cite>
+otherwise.</p>
+<p>Below are listed some results of modifying the tag values.</p>
+<ul class="last simple">
+<li><span><code class="docutils literal"><span class="pre">Ripple.Radius=1</span></code></span> - Forget it, nothing.</li>
+<li><span><code class="docutils literal"><span class="pre">Ripple.Radius=5</span></code></span> - Target cell, only voxel rippling</li>
+<li><span><code class="docutils literal"><span class="pre">Ripple.Radius=8</span></code></span> - Target cell, both voxel and SHP rippling.</li>
+<li><span><code class="docutils literal"><span class="pre">Ripple.Radius=10</span></code></span> - 1 cell radius</li>
+<li><span><code class="docutils literal"><span class="pre">Ripple.Radius=15</span></code></span> - 2 cell radius</li>
+<li><span><code class="docutils literal"><span class="pre">Ripple.Radius=20</span></code></span> - 3 cell radius</li>
+<li><span><code class="docutils literal"><span class="pre">Ripple.Radius=25</span></code></span> - 3 cell radius</li>
+<li><span><code class="docutils literal"><span class="pre">Ripple.Radius=28</span></code></span> - 3 cell unit-rippling, 4 cell terrain rippling
+radius</li>
+<li><span><code class="docutils literal"><span class="pre">Ripple.Radius=30</span></code></span> and onwards - 3 cell unit-rippling, 5 cell
+terrain-rippling radius</li>
+</ul>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
+</div>
+<div class="section" id="bridge-destroyer">
+<span id="index-2"></span><h2>Bridge Destroyer<a class="headerlink" href="#bridge-destroyer" title="Permalink to this headline">¶</a></h2>
+<p>A hardcoded property of the original Ion Cannon from <span class="game docutils literal">Tiberian Sun</span> was
+that it instantly destroyed bridges it hit. This special logic was only applied
+for the warhead defined as <span><code class="docutils literal"><span class="pre">IonCannonWarhead</span></code></span>. With <span class="game docutils literal">Ares</span>, this
+feature can be used on any warhead, and turned off for the original warhead.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►BridgeAbsoluteDestroyer=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether this warhead immediately destroys a bridge it hits. Requires
+<span><code class="docutils literal"><span class="pre">Wall=yes</span></code></span>. Defaults to <cite>yes</cite> for
+<span><code class="docutils literal"><span class="pre">[CombatDamage]►IonCannonWarhead</span></code></span>, to <cite>no</cite> otherwise.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.0.</span></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sonar.html" title="Sonar / Decloak"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ironcurtain.html" title="Iron Curtain"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Warheads</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2018, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

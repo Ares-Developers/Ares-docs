@@ -226,8 +226,9 @@ units and just stay alive.
   Defaults to inair, destroying all units if they are in the air the
   instant the EMP hits.
 
-   Parachuting units do not count as being in the air. Only exceeding
-    their positive threshold (if set) will kill them.
+   Parachuting units and units being lifted or lowered by a Magnetron
+    do not count as being in air. Only exceeding their positive threshold (if
+    set) will kill them.
 
 For example, using inair causes a deployed Siege Chopper not to be
 destroyed. Using -100 will crash the Siege Chopper only if it is in-air
@@ -262,3 +263,13 @@ This animation can be overridden by the warhead that initiates the EMP effect.
   still in the Tiberian Sun palette and needs to be converted.
 
  0.A
+
+
+Global Settings
+
+
+[CombatDamage]EMPAIRecoverMission=mission
+  The mission units controlled by the AI will go onto when an EMP effect
+  expires. Defaults to Hunt.
+
+ 2.0

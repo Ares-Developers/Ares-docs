@@ -29,5 +29,15 @@ Command Line Arguments
     testing and AI design testing. Due to this, feature complexity, lack of
     interest and a change in personnel, please note that this feature is NOT
     officially supported.
+:-AFFINITY\:N: Controls which processors the game will run on. N is a
+  bit mask with one bit for each processor starting with 1 for the
+  first, 2 for the second, 4 for the third and so on. If not
+  set, 1 is used, meaning the game will run on the first processor
+  only. Use 0 to disable this feature.
+
+   Several bits can be combined, like 3 representing the
+    first two processors. Usually, the game should run on only one processor
+    (that is, N being a power of 2), as it is not designed to make use
+    of multiple processors.
 
  0.1

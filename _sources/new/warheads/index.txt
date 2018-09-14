@@ -9,6 +9,7 @@ Warheads
 	relativedamage
 	damageair
 	ironcurtain
+	ioncannon
 	sonar
 	flash
 	nukeflash
@@ -16,7 +17,6 @@ Warheads
 	mechanical
 	mindcontrol
 	temporal
-	ripple
 	preimpactanim
 	infantry
 	berserk

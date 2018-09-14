@@ -1,16 +1,30 @@
  Weapons; Electric bolts can have custom colors
 
-Electric Bolt Coloring
+Electric Bolts
+
+
+Bolt Coloring
 
 
 [Weapon]Bolt.Color1=R,G,B
-  First color used for drawing this bolt.
-[Weapon]Bolt.Color2=R,G,B
-  Second color used for drawing this bolt.
-[Weapon]Bolt.Color3=R,G,B
-  Third color used for drawing this bolt.
 
-The three colors used to draw this Electric Bolt. Can be omitted to use the
-default values (default values are palette-dependent as opposed to RGB). 
+[Weapon]Bolt.Color2=R,G,B
+
+[Weapon]Bolt.Color3=R,G,B
+  The three colors used to draw this Electric Bolt. Can be omitted to use the
+  palette-dependent default values. 
 
  0.1
+
+
+ Weapons; Electric bolt spark particle systems
+
+Spark Particle System
+
+
+[Weapon]Bolt.ParticleSystem=ParticleSystem
+  Defines the spark particle system to spawn at the target location. Use
+  none to disable the particle system. Defaults to
+  [CombatDamage]►DefaultSparkSystem.
+
+ 2.0

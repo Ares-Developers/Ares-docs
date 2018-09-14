@@ -33,7 +33,9 @@ more detailed description of the logic.
   Sun. The AirburstWeapon's Damage is no longer multiplied by
   10. Its Speed is used instead of the hardcoded 19,
   and its Bright setting is now also respected instead of just being
-  disabled.
+  disabled. In Ares, Splits only targets air units if the
+  Airburst projectile is AA=yes, and it only retargets objects the
+  projectile's warhead can affect.
 
  Even though speed is not hardcoded any more, you cannot use
   Speed values lower than 19 on the AirburstWeapon or
@@ -49,6 +51,12 @@ more detailed description of the logic.
   projectile was shot at. The higher the value, the less likely it is for the
   split projectile to choose another target. Valid range is 0.0 to
   1.0. Defaults to 0.0.
+
+[Projectile]RetargetSelf=boolean
+  Whether the firing unit itself can become the target when retargeting. If
+  no, the firer will be exempt, though could still be hit by a
+  retargeted projectile that hits the cell the firer is on. Defaults to
+  yes.
 
 
  Projectiles; Airburst radius

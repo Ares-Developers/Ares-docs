@@ -418,3 +418,42 @@ Other changes:
   buildings. Now, the centers of the buildings are targeted. Affected modes are
   Nuke, LightningStorm, Offensive, Stealth,
   Self, and MultiMissile.
+
+From Ares 1.0 and below
+
+
+Changed tags:
+
+  [BuildingType]►SpyEffect.UnitVeterancy
+    This setting has been replaced by finer grained options. Replace with
+    SpyEffect.InfantryVeterancy=yes for BuildingType\ s with
+    Factory=InfantryType, and with SpyEffect.VehicleVeterancy=yes
+    for BuildingType\ s with Factory=UnitType to achieve the
+    previous effect.
+
+  [BuildingType]►FactoryOwners.HaveAllPlans= --> [BuildingType]►FactoryOwners.Permanent=.
+    Replace the old tag name by the new tag name.
+
+  [Warhead]►Ripple.Radius= --> [Warhead]►IonCannon.Ripple=.
+    Replace the old tag name by the new tag name.
+
+  [Weapon]►Abductor.ChangeOwner=.
+    Respects PSIONICSIMMUNE veteran ability.
+
+Other changes:
+
+  Splits logic only targets air units if the AirburstWeapon projectile is
+  AA=yes. Furthermore, Splits logic now only retargets objects that the
+  projectile's warhead can affect.
+
+  Units lifted by a Magnetron no longer count as being actively in air, and EMP
+  might no longer destroy them.
+
+  The AI supports other Iron Curtains and it might now use super weapons with
+  Type=IronCurtain it has not used before, because of the changed default
+  for SW.AITargetingMode. To restore previous behavior, manually set
+  SW.AITargetingMode=none on all but the first super weapon with
+  Type=IronCurtain.
+
+  DeployToLand=yes units will only turn towards DeployDir if they
+  have a DeployingAnim.

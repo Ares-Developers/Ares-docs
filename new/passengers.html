@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Specific Passengers &mdash; Ares 1.0p1 documentation</title>
+    <title>Specific Passengers &mdash; Ares 2.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1.0p1',
+        VERSION:     '2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 1.0p1 documentation" href="../index.html" />
+    <link rel="top" title="Ares 2.0 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="PCX Cameos" href="pcxcameos.html" />
     <link rel="prev" title="Particles" href="particles.html" /> 
@@ -42,12 +42,18 @@
         <li class="right" >
           <a href="particles.html" title="Particles"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Specific Passengers</a></li>
+<li><a class="reference internal" href="#ignoring-passenger-size">Ignoring Passenger Size</a></li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="particles.html"
                         title="previous chapter">Particles</a></p>
@@ -78,8 +84,7 @@
   <div class="section" id="specific-passengers">
 <span id="index-0"></span><h1>Specific Passengers<a class="headerlink" href="#specific-passengers" title="Permalink to this headline">¶</a></h1>
 <p>Additionally to the checks for <span><code class="docutils literal"><span class="pre">Size</span></code></span> and <span><code class="docutils literal"><span class="pre">SizeLimit</span></code></span>, it is possible
-to allow passengers to enter depending on their type. This feature is only
-supported on <span class="type docutils literal">VehicleTypes</span> and <span class="type docutils literal">AircraftTypes</span>.</p>
+to allow passengers to enter depending on their type.</p>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Passengers.Allowed=</span></code><span class="type definition"> (list of TechnoTypes)</span></span></dt>
 <dd>The list of allowed passenger types. If this contains at least one type, all
@@ -91,6 +96,30 @@ units from entering, set this to either a dummy unit or a
 </dl>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 0.A.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 2.0.</span></p>
+</div>
+</div>
+<div class="section" id="ignoring-passenger-size">
+<h1>Ignoring Passenger Size<a class="headerlink" href="#ignoring-passenger-size" title="Permalink to this headline">¶</a></h1>
+<p>Transports can ignore the actual size of its passengers and use up one slot for
+each only.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[UnitType]►Passengers.BySize=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd><p class="first">Whether passengers will take up as much space in the cargo hold as their
+<span><code class="docutils literal"><span class="pre">Size</span></code></span> instead of taking up only one seat no matter the size of the
+object. If <cite>no</cite>, the transport can always contain up to
+<span><code class="docutils literal"><span class="pre">Passengers</span></code></span> units. Defaults to <cite>yes</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><span><code class="docutils literal"><span class="pre">SizeLimit</span></code></span> is always respected. A too large unit will still
+not be able to enter.</p>
+</div>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.0.</span></p>
 </div>
 </div>
 
@@ -112,7 +141,7 @@ units from entering, set this to either a dummy unit or a
         <li class="right" >
           <a href="particles.html" title="Particles"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

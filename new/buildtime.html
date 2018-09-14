@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Build Time &mdash; Ares 2.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 2.0 documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="CanPassiveAquire Settings" href="canpassiveaquire.html" />
+    <link rel="prev" title="Bounty" href="bounty.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="canpassiveaquire.html" title="CanPassiveAquire Settings"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="bounty.html" title="Bounty"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="bounty.html"
+                        title="previous chapter">Bounty</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="canpassiveaquire.html"
+                        title="next chapter"><span><span class="type">CanPassiveAquire</span></span> Settings</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="build-time">
+<span id="index-0"></span><h1>Build Time<a class="headerlink" href="#build-time" title="Permalink to this headline">¶</a></h1>
+<p>In <span class="game docutils literal">Ares</span> it is possible to customize all settings related to the build
+time of objects per type.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►BuildTime.Speed=</span></code><span class="type definition"> (double - minutes)</span></span></dt>
+<dd><p class="first">The time in minutes it takes to produce an object which costs 1000 credits.
+Defaults to <span><code class="docutils literal"><span class="pre">[General]►BuildSpeed</span></code></span>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If set, <span><code class="docutils literal"><span class="pre">WallBuildSpeedCoefficient</span></code></span> will not be applied to
+<span><code class="docutils literal"><span class="pre">Wall=yes</span></code></span> buildings any more, because <span><code class="docutils literal"><span class="pre">BuildTime.Speed</span></code></span> is taken
+as final value.</p>
+</div>
+</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►BuildTime.Cost=</span></code><span class="type definition"> (integer - credits)</span></span></dt>
+<dd>If set, the build time is calculated as if this item cost this much, instead
+of using actual <span><code class="docutils literal"><span class="pre">Cost</span></code></span>. Defaults to <span><code class="docutils literal"><span class="pre">Cost</span></code></span>.</dd>
+</dl>
+<p>If the player does not have enough power, the following settings apply. They
+define a factor applied to the amount of power lacking and the range the
+resulting modifier will be clamped in before being multipled with the build
+time.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►BuildTime.LowPowerPenalty=</span></code><span class="type definition"> (double - modifier)</span></span></dt>
+<dd>The penalty to apply to the build time in low power situations. Defaults to
+<span><code class="docutils literal"><span class="pre">[General]►LowPowerPenaltyModifier</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►BuildTime.MinLowPower=</span></code><span class="type definition"> (double)</span></span></dt>
+<dd>The minimum production speed when power is low. The resulting low power
+modifier will not be lower than this. Defaults to
+<span><code class="docutils literal"><span class="pre">[General]►MinLowPowerProductionSpeed</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►BuildTime.MaxLowPower=</span></code><span class="type definition"> (double)</span></span></dt>
+<dd>The maximum production speed when power is low. The resulting low power
+modifier will not be greater than this. Defaults to
+<span><code class="docutils literal"><span class="pre">[General]►MaxLowPowerProductionSpeed</span></code></span>.</dd>
+</dl>
+<p>When a player has more than one factory of the same type, the following modifier
+also applies.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►BuildTime.MultipleFactory=</span></code><span class="type definition"> (double - multiplier)</span></span></dt>
+<dd>The factor multiplied by the build time per additional factory of the same
+type. Defaults to <span><code class="docutils literal"><span class="pre">[General]►MultipleFactory</span></code></span>.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.0.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="canpassiveaquire.html" title="CanPassiveAquire Settings"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="bounty.html" title="Bounty"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2018, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

@@ -23,6 +23,9 @@ This logic supports CellSpread and respects all immunities as any other
 conventional warhead like ImmuneToPoison as well as their veteran
 abilities, AffectsAllies, and AffectsEnemies.
 
+Whether this effect is applied when no conventional damage is dealt can be
+customized. See ....
+
 [Warhead]KillDriver=boolean
   Specifies whether this warhead kills the driver of the vehicle, instead of
   damaging the vehicle itself. The first passenger matching the vehicle's
@@ -37,6 +40,10 @@ abilities, AffectsAllies, and AffectsEnemies.
 [Warhead]KillDriver.Chance=float - percentage
   Specifies the chance that a unit hit by a KillDriver=yes warhead will
   have its driver killed. Defaults to 100%.
+[Warhead]KillDriver.RemoveVeterancy=boolean
+  Whether a unit will revert to rookie rank when the driver is killed and the
+  unit changes owner. Not applied if the owner does not change. Defaults to
+  no.
 
 
 .. _killingdrivers-immunity:
@@ -85,6 +92,12 @@ their driver killed.
   requires an Operator the infantry driver turns the unit and enters as
   passenger that can be ejected later, otherwise the driver is swallowed,
   becoming the permanent driver of the vehicle. Defaults to no.
+
+[TechnoType]CanBeDriven=boolean
+  Whether this unit can be reclaimed by a driver. If no, this unit
+  cannot be captured by a driver after the original driver has been killed.
+  If yes, ownership and other still might still prevent the unit from
+  being captured. Defaults to yes.
 
 [Country]CanBeDriven=boolean
   Whether units owned by this country can be captured by CanDrive=yes

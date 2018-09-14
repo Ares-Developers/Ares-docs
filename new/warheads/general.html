@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>General Settings &mdash; Ares 1.0p1 documentation</title>
+    <title>General Settings &mdash; Ares 2.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.0p1',
+        VERSION:     '2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 1.0p1 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 2.0 documentation" href="../../index.html" />
     <link rel="up" title="Warheads" href="index.html" />
     <link rel="next" title="CellSpread Enhancements" href="cellspread.html" />
     <link rel="prev" title="Warheads" href="index.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="index.html" title="Warheads"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Warheads</a> &raquo;</li> 
       </ul>
@@ -53,6 +53,9 @@
   <ul>
 <li><a class="reference internal" href="#">General Settings</a><ul>
 <li><a class="reference internal" href="#affectsenemies"><span><span class="type">AffectsEnemies</span></span></a></li>
+<li><a class="reference internal" href="#affectsowner"><span><span class="type">AffectsOwner</span></span></a></li>
+<li><a class="reference internal" href="#warhead-effects">Warhead Effects</a></li>
+<li><a class="reference internal" href="#non-damaging-warheads">Non-Damaging Warheads</a></li>
 <li><a class="reference internal" href="#non-malicious-warheads">Non-Malicious Warheads</a></li>
 <li><a class="reference internal" href="#prevent-scattering">Prevent scattering</a></li>
 </ul>
@@ -100,8 +103,56 @@ existing <span><code class="docutils literal"><span class="pre">AffectsAllies</s
 <p><span class="versionmodified">New in version 0.1.</span></p>
 </div>
 </div>
+<div class="section" id="affectsowner">
+<span id="index-1"></span><h2><span><span class="type">AffectsOwner</span></span><a class="headerlink" href="#affectsowner" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►AffectsOwner=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether this warhead can affect the very player who fired it. Defaults to
+<span><code class="docutils literal"><span class="pre">AffectsAllies</span></code></span> flag.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.0.</span></p>
+</div>
+</div>
+<div class="section" id="warhead-effects">
+<span id="wh-effects"></span><span id="index-2"></span><h2>Warhead Effects<a class="headerlink" href="#warhead-effects" title="Permalink to this headline">¶</a></h2>
+<p>The effects KillDriver, Sonar, Disable Weapon and Flashing can be applied
+independently of conventional damage.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►EffectsRequireDamage=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether warheads will only apply the effects if at least one hitpoint of
+damage has actually been dealt to a unit or structure. If <cite>no</cite>, effects
+are also applied if the no damage is dealt. Requires positive damage; healing
+does not use this setting. Defaults to <cite>no</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►EffectsRequireVerses=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether <span><code class="docutils literal"><span class="pre">Verses</span></code></span> needs to be greater than <cite>0%</cite> for the warhead to
+apply effects. Can be used to distinguish between <cite>0%</cite> and greater
+verses that potentially nullify damage, between immunity and vulnerability. If
+<cite>no</cite>, effects are applied to any unit or structure regardless of
+verses. Defaults to <cite>yes</cite>.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.0.</span></p>
+</div>
+</div>
+<div class="section" id="non-damaging-warheads">
+<span id="index-3"></span><h2>Non-Damaging Warheads<a class="headerlink" href="#non-damaging-warheads" title="Permalink to this headline">¶</a></h2>
+<p>This can be used to punctually disable an optimization in the game to still
+apply warhead effects without doing damage. By default, <span class="game docutils literal">Yuri&#8217;s Revenge</span>
+checks whether no damage is to be dealt before expensively determining which
+units and structures are in range.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►AllowZeroDamage=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether damage of 0 hitpoints will still be passed on to all units and
+structures affected by the warhead. Otherwise, a damage of 0 will not be
+passed on. Defaults to <cite>no</cite>.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.0.</span></p>
+</div>
+</div>
 <div class="section" id="non-malicious-warheads">
-<span id="index-1"></span><h2>Non-Malicious Warheads<a class="headerlink" href="#non-malicious-warheads" title="Permalink to this headline">¶</a></h2>
+<span id="index-4"></span><h2>Non-Malicious Warheads<a class="headerlink" href="#non-malicious-warheads" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►Malicious=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Specifies whether or not EVA should notify an ore miner&#8217;s owner of an attack
@@ -147,7 +198,7 @@ have the ability to. Defaults to <cite>no</cite>.</dd>
         <li class="right" >
           <a href="index.html" title="Warheads"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Warheads</a> &raquo;</li> 
       </ul>

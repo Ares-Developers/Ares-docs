@@ -35,22 +35,59 @@ IsMagBeam=yes.
 
 
 
-  Weapons; Wave colors
-  Waves; Colors
+  Weapons; Wave colors and intensity
+  Waves; Colors and intensity
 
 Wave Coloring
 
 
-[Weapon]Wave.Color=R,G,B
-  The color of the wave. Default value is different depending on the type of
-  Wave.
+Color is a constant addition not depending on the original pixel color.
+Intensity on the other hand is multiplied with the original values before being
+added to the original pixel component, thus, the darker a color is, the smaller
+the effect. If a value is larger though, the effect is larger, more quickly
+approaching 255.
+
+[Weapon]Wave.Color=list of 3 integers
+  The value added to the color component of the wave independent of the original
+  pixel color. Supports negative values to darken the wave. Default value is
+  different depending on the type of the wave.
+[Weapon]Wave.Intensity=list of 3 integers
+  The value added to the color component of the wave with respect to the
+  original pixel color. Supports negative values to darken the wave.
+  0,0,0 means no change by intensity. Default value is different
+  depending on the type of the wave. If Wave.Color is set, the default is
+  0,0,0.
 [Weapon]Wave.IsHouseColor=boolean
   If this is set to yes then the wave will be drawn in the firing
   unit's house color instead of the color specified by Wave.Color.
-  
- Sonic Waves do not yet have a sensible default Wave.Color.
+
+Wave colors in Ares default to the same values as the original game. The
+intensity default value is cleared to mimic the behavior of Ares 1.0 and
+earlier, though. If this is not desired, set Wave.Intensity to the
+appropriate default value from the Defaults list.
+
+   Wave Color and Intensity Defaults
+
+          
+    Wave Type            Wave.Color     Wave.Intensity   Remarks
+          
+    Laser                64,0,96      0,0,0          Red/blue tint
+    Sonic                0,0,0        0,256,256      Green/blue light
+    Magnetron            0,0,0        128,0,1024     Cold blue-ish light
+          
+
+It is possible to use hexadecimal notation for color and intensity like
+40h,0h,60h. It is also possible to use negative values like
+-64,0,-96.
+
+Each of the three component values can be considered as 1/256th, thus
+64 representing 0.25. Then, the resulting value for a color component
+is calculated using the original pixel color component 0 <= c <= 255
+and a value determined by the game 0.0 <= x < 1.0 by the formula:
+c + color * x + c * intensity * x.
 
  0.1
+ 2.0
 
 
 

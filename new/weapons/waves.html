@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Waves &mdash; Ares 1.0p1 documentation</title>
+    <title>Waves &mdash; Ares 2.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.0p1',
+        VERSION:     '2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,10 +24,10 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 1.0p1 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 2.0 documentation" href="../../index.html" />
     <link rel="up" title="Weapons" href="index.html" />
     <link rel="next" title="LaserThickness" href="laser.html" />
-    <link rel="prev" title="Electric Bolt Coloring" href="electricbolts.html" /> 
+    <link rel="prev" title="Electric Bolts" href="electricbolts.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -40,9 +40,9 @@
           <a href="laser.html" title="LaserThickness"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="electricbolts.html" title="Electric Bolt Coloring"
+          <a href="electricbolts.html" title="Electric Bolts"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Weapons</a> &raquo;</li> 
       </ul>
@@ -62,7 +62,7 @@
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="electricbolts.html"
-                        title="previous chapter">Electric Bolt Coloring</a></p>
+                        title="previous chapter">Electric Bolts</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="laser.html"
                         title="next chapter"><span><span class="type">LaserThickness</span></span></a></p>
@@ -115,20 +115,78 @@ below, left unit is using <span><code class="docutils literal"><span class="pre"
 </div>
 <div class="section" id="wave-coloring">
 <span id="index-1"></span><h2>Wave Coloring<a class="headerlink" href="#wave-coloring" title="Permalink to this headline">¶</a></h2>
+<p>Color is a constant addition not depending on the original pixel color.
+Intensity on the other hand is multiplied with the original values before being
+added to the original pixel component, thus, the darker a color is, the smaller
+the effect. If a value is larger though, the effect is larger, more quickly
+approaching 255.</p>
 <dl class="docutils">
-<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►Wave.Color=</span></code><span class="type definition"> (R,G,B)</span></span></dt>
-<dd>The color of the wave. Default value is different depending on the type of
-Wave.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►Wave.Color=</span></code><span class="type definition"> (list of 3 integers)</span></span></dt>
+<dd>The value added to the color component of the wave independent of the original
+pixel color. Supports negative values to darken the wave. Default value is
+different depending on the type of the wave.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►Wave.Intensity=</span></code><span class="type definition"> (list of 3 integers)</span></span></dt>
+<dd>The value added to the color component of the wave with respect to the
+original pixel color. Supports negative values to darken the wave.
+<cite>0,0,0</cite> means no change by intensity. Default value is different
+depending on the type of the wave. If <span><code class="docutils literal"><span class="pre">Wave.Color</span></code></span> is set, the default is
+<cite>0,0,0</cite>.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►Wave.IsHouseColor=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>If this is set to <cite>yes</cite> then the wave will be drawn in the firing
 unit&#8217;s house color instead of the color specified by <span><code class="docutils literal"><span class="pre">Wave.Color</span></code></span>.</dd>
 </dl>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Sonic Waves do not yet have a sensible default <span><code class="docutils literal"><span class="pre">Wave.Color</span></code></span>.</p>
-</div>
+<p>Wave colors in <span class="game docutils literal">Ares</span> default to the same values as the original game. The
+intensity default value is cleared to mimic the behavior of <span class="game docutils literal">Ares</span> 1.0 and
+earlier, though. If this is not desired, set <span><code class="docutils literal"><span class="pre">Wave.Intensity</span></code></span> to the
+appropriate default value from the Defaults list.</p>
+<blockquote>
+<div><table border="1" class="docutils" id="id1">
+<caption><span class="caption-text">Wave Color and Intensity Defaults</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="21%" />
+<col width="22%" />
+<col width="24%" />
+<col width="32%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Wave Type</th>
+<th class="head"><span><code class="docutils literal"><span class="pre">Wave.Color</span></code></span></th>
+<th class="head"><span><code class="docutils literal"><span class="pre">Wave.Intensity</span></code></span></th>
+<th class="head">Remarks</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Laser</td>
+<td><cite>64,0,96</cite></td>
+<td><cite>0,0,0</cite></td>
+<td>Red/blue tint</td>
+</tr>
+<tr class="row-odd"><td>Sonic</td>
+<td><cite>0,0,0</cite></td>
+<td><cite>0,256,256</cite></td>
+<td>Green/blue light</td>
+</tr>
+<tr class="row-even"><td>Magnetron</td>
+<td><cite>0,0,0</cite></td>
+<td><cite>128,0,1024</cite></td>
+<td>Cold blue-ish light</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>It is possible to use hexadecimal notation for color and intensity like
+<cite>40h,0h,60h</cite>. It is also possible to use negative values like
+<cite>-64,0,-96</cite>.</p>
+<p>Each of the three component values can be considered as 1/256th, thus
+<cite>64</cite> representing 0.25. Then, the resulting value for a color component
+is calculated using the original pixel color component <cite>0 &lt;= c &lt;= 255</cite>
+and a value determined by the game <cite>0.0 &lt;= x &lt; 1.0</cite> by the formula:
+<cite>c + color * x + c * intensity * x</cite>.</p>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 2.0.</span></p>
 </div>
 </div>
 <div class="section" id="wave-direction">
@@ -193,9 +251,9 @@ flags that control this are:</p>
           <a href="laser.html" title="LaserThickness"
              >next</a> |</li>
         <li class="right" >
-          <a href="electricbolts.html" title="Electric Bolt Coloring"
+          <a href="electricbolts.html" title="Electric Bolts"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Weapons</a> &raquo;</li> 
       </ul>

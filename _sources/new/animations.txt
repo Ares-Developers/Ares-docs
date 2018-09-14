@@ -1,0 +1,41 @@
+Animation Damage
+
+
+Using a Weapon
+
+
+Instead of dealing damage directly using the Warhead, a weapon can be
+defined to create a projectile and detonate it immediately. This allows some
+weapon effects to be applied.
+
+[Animation]Weapon=weapon
+  The weapon used to deliver animation damage. If set, creates a projectile and
+  detonates it immediately. The damage delivered is defined by the animation,
+  not the weapon.
+
+   The weapon has to be known to the game already, otherwise it cannot
+    be parsed correctly. It is recommended to add it to the WeaponTypes
+    list.
+
+   Currently, the created projectile is neither owned by the player who
+    created the animation nor the owner of the unit or structure the animation
+    is attached to. While damage delivered using Warhead at least knows
+    about the player who created the animation for scoring purposes, weapon
+    damage does not pass on this information. This might change in the future.
+
+ 2.0
+
+
+Damage Delay
+
+
+[Animation]Damage.Delay=integer - animation frames
+  The delay between two applications of animation damage. Requires Damage
+  greater than or equal to 1.0. A value of 0 disables the
+  delay. Defaults to 0.
+
+   Mind that this value is measured in animation frames: depending on
+    Rate, the animation might not advance to the next animation frame
+    every game frame.
+
+ 2.0

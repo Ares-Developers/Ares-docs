@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Type Conversion &mdash; Ares 2.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 2.0 documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Type Selection Groups" href="typeselect.html" />
+    <link rel="prev" title="Turret ROT" href="turretrot.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="typeselect.html" title="Type Selection Groups"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="turretrot.html" title="Turret ROT"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Type Conversion</a><ul>
+<li><a class="reference internal" href="#on-promotion">On Promotion</a></li>
+<li><a class="reference internal" href="#via-issimpledeployer">Via <span><span class="type">IsSimpleDeployer</span></span></a></li>
+<li><a class="reference internal" href="#when-transitioning-between-land-and-water">When Transitioning Between Land and Water</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="turretrot.html"
+                        title="previous chapter">Turret <span><span class="type">ROT</span></span></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="typeselect.html"
+                        title="next chapter">Type Selection Groups</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="type-conversion">
+<span id="index-0"></span><h1>Type Conversion<a class="headerlink" href="#type-conversion" title="Permalink to this headline">¶</a></h1>
+<p>To a limited extent, it is possible to change the type of a unit in certain
+conditions. Supported are only unit to unit, infantry to infantry, and aircraft
+to aircraft. This is not supported for buildings.</p>
+<p>There is one rule to follow, which is easily stated but difficult to adhere to:
+<strong>a unit is not allowed to convert into another type that has a chance to
+currently be in a position where the new type cannot be</strong>. For example if an
+infantry unit gets bigger while inside a full open topped transport, the
+converted type not being allowed as passenger or occupant. This also works
+backwards: a vehicle cannot lose its ability to hold passengers.</p>
+<p>A unit that has not been created with a temporal weapon, a mind control weapon,
+or a parasite weapon cannot gain such by changing the type.</p>
+<p>The following are fully supported:</p>
+<ul class="simple">
+<li>changing <span><code class="docutils literal"><span class="pre">Strength</span></code></span> will keep the units health the same</li>
+<li>changing <span><code class="docutils literal"><span class="pre">Armor</span></code></span></li>
+<li>Ammo is deduced if new type has less <span><code class="docutils literal"><span class="pre">Ammo</span></code></span></li>
+<li><span><code class="docutils literal"><span class="pre">Cloakable</span></code></span> is applied again</li>
+<li>Spotlight is removed or created</li>
+<li>AttachEffect on the type is removed or created</li>
+<li><span><code class="docutils literal"><span class="pre">ROT</span></code></span> and <span><code class="docutils literal"><span class="pre">TurretRot</span></code></span> are reset</li>
+</ul>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.0.</span></p>
+</div>
+<div class="section" id="on-promotion">
+<span id="index-1"></span><h2>On Promotion<a class="headerlink" href="#on-promotion" title="Permalink to this headline">¶</a></h2>
+<p>The unit type can be changed by promotion, not only allowing for more than the
+usual three veterancy levels, but also allowing to change several of the unit&#8217;s
+attributes including their appearance.</p>
+<p>Note that if the unit skips the veteran rank and becomes elite immediately,
+Veteran settings are not applied. Also note that this is not cascading: if a
+unit is promoted to elite and converts to a veteran version of another type,
+which in turn should convert to something else, no further conversion takes
+place.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Promote.VeteranType=</span></code><span class="type definition"> (TechnoType)</span></span></dt>
+<dd>If set, the unit converts into this type when being promoted to veteran rank.
+Defaults to <cite>none</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Promote.EliteType=</span></code><span class="type definition"> (TechnoType)</span></span></dt>
+<dd>If set, the unit converts into this type when being promoted to elite rank.
+Defaults to <cite>none</cite>.</dd>
+</dl>
+<p>The following tags can be used to promote a unit to a rookie of another type.
+Using <cite>-1.0</cite> removes one rank, thus a unit becoming veteran gets one rank
+removed and essentially ends as a rookie of the converted type, while a unit
+becoming elite gets one rank removed and essentially becomes a veteran of the
+converted type. <cite>-2.0</cite> would make the latter a rookie, too.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Promote.VeteranExperience=</span></code><span class="type definition"> (double)</span></span></dt>
+<dd>A value added to the experience when a unit type is converted using
+<span><code class="docutils literal"><span class="pre">Promote.VeteranType</span></code></span>. Defaults to <cite>0.0</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Promote.EliteExperience=</span></code><span class="type definition"> (double)</span></span></dt>
+<dd>A value added to the experience when a unit type is converted using
+<span><code class="docutils literal"><span class="pre">Promote.EliteType</span></code></span>. Defaults to <cite>0.0</cite>.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.0.</span></p>
+</div>
+</div>
+<div class="section" id="via-issimpledeployer">
+<span id="index-2"></span><h2>Via <span><span class="type">IsSimpleDeployer</span></span><a class="headerlink" href="#via-issimpledeployer" title="Permalink to this headline">¶</a></h2>
+<p>Unit can simple-deploy into another type. Unlike in the original game the unit
+will be movable after deploying, opposed to being locked in place like the
+original Siege Chopper.</p>
+<p><span><code class="docutils literal"><span class="pre">DeployingAnim</span></code></span> is optional. If not present, units will convert types
+immediately, without turning their facing to <span><code class="docutils literal"><span class="pre">DeployDir</span></code></span>. See
+<a class="reference internal" href="deploydir.html"><em>DeployDir</em></a>.</p>
+<p><span class="game docutils literal">Ares</span> extends <span><code class="docutils literal"><span class="pre">IsSimpleDeployer</span></code></span> logic to allow deploying units not
+on the ground. Also, <span><code class="docutils literal"><span class="pre">DeployToLand</span></code></span> has been extended to also work on units
+using the Hover locomotor. If <cite>yes</cite>, units will land, also respecting
+<span><code class="docutils literal"><span class="pre">DeployDir</span></code></span>.</p>
+<p>Because this conversion always happens with the unit being present on the map
+and guaranteed to be standing still, settings like <span><code class="docutils literal"><span class="pre">Locomotor</span></code></span> and
+<span><code class="docutils literal"><span class="pre">Size</span></code></span> can be changed within reasonable limits.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Convert.Deploy=</span></code><span class="type definition"> (TechnoType)</span></span></dt>
+<dd>The type a <span><code class="docutils literal"><span class="pre">IsSimpleDeployer=yes</span></code></span> unit deploys into. This converts the
+type after deploying completed, and after the optional <span><code class="docutils literal"><span class="pre">DeployingAnim</span></code></span>
+has finished playing. Defaults to <cite>none</cite>.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.0.</span></p>
+</div>
+</div>
+<div class="section" id="when-transitioning-between-land-and-water">
+<span id="index-3"></span><h2>When Transitioning Between Land and Water<a class="headerlink" href="#when-transitioning-between-land-and-water" title="Permalink to this headline">¶</a></h2>
+<p>The tag <span><code class="docutils literal"><span class="pre">WaterImage</span></code></span> allows to render a unit differently when it is on
+water, which was used on the GDI APC in <span class="game docutils literal">Tiberian Sun</span>. The following
+settings allow to change a unit&#8217;s type. This way, the unit could change image,
+weapons, armor and so on.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Water and Land units should not define a conversion to their own type,
+like a water unit converting into an other water unit.</p>
+</div>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Convert.Water=</span></code><span class="type definition"> (TechnoType)</span></span></dt>
+<dd>The type to convert to when a unit moves onto a beach or water cell. Defaults
+to <cite>none</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Convert.Land=</span></code><span class="type definition"> (TechnoType)</span></span></dt>
+<dd>The type to convert to when a unit moves onto a cell that&#8217;s neither beach nor
+water. Defaults to <cite>none</cite>.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.0.</span></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="typeselect.html" title="Type Selection Groups"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="turretrot.html" title="Turret ROT"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2018, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

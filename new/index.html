@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>New &amp; Enhanced In-Game Logic &mdash; Ares 1.0p1 documentation</title>
+    <title>New &amp; Enhanced In-Game Logic &mdash; Ares 2.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1.0p1',
+        VERSION:     '2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 1.0p1 documentation" href="../index.html" />
+    <link rel="top" title="Ares 2.0 documentation" href="../index.html" />
     <link rel="next" title="Additional ArmorTypes and Verses" href="additionalarmortypesandverses.html" />
     <link rel="prev" title="Vehicle Thief" href="../restored/vehicle-thief.html" /> 
   </head>
@@ -41,7 +41,7 @@
         <li class="right" >
           <a href="../restored/vehicle-thief.html" title="Vehicle Thief"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0p1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -89,8 +89,14 @@ the game.</p>
 <li class="toctree-l1"><a class="reference internal" href="airrate.html"><span><span class="type">AirRate</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="airstrike.html">Airstrike Voices</a></li>
 <li class="toctree-l1"><a class="reference internal" href="alternatetheaterart.html"><span><span class="type">AlternateTheaterArt</span></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="animations.html">Animation Damage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="animations.html#using-a-weapon">Using a Weapon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animations.html#damage-delay">Damage Delay</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="attacheffect.html">AttachEffect</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bounty.html">Bounty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="buildtime.html">Build Time</a></li>
 <li class="toctree-l1"><a class="reference internal" href="canpassiveaquire.html"><span><span class="type">CanPassiveAquire</span></span> Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="carryalls.html">Carryalls</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chronoprisons.html">Chrono Prisons / Abductors</a></li>
@@ -142,6 +148,7 @@ the game.</p>
 <li class="toctree-l2"><a class="reference internal" href="damageparticlesystems.html#smoke-and-spark-damageparticlesystems">Smoke and Spark <span><span class="type">DamageParticleSystems</span></span></a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="deploydir.html"><span><span class="type">DeployDir</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="dig.html">Dig Animation and Sound</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dimming.html">Dimming Deactivated Units</a></li>
 <li class="toctree-l1"><a class="reference internal" href="disklaser.html">Disk Laser Animations</a></li>
@@ -157,6 +164,7 @@ the game.</p>
 <li class="toctree-l1"><a class="reference internal" href="evatypes.html">EVA Types</a></li>
 <li class="toctree-l1"><a class="reference internal" href="facings.html"><span><span class="type">Facings</span></span> on Units</a></li>
 <li class="toctree-l1"><a class="reference internal" href="factoryplant.html">Factory Plant Effect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fakeof.html"><span><span class="type">FakeOf</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="fallrate.html">Fall Rate</a></li>
 <li class="toctree-l1"><a class="reference internal" href="forestfires.html">Forest Fires</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gattlingcycle.html">Gattling Enhancements</a></li>
@@ -213,6 +221,7 @@ the game.</p>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="passengers.html">Specific Passengers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="passengers.html#ignoring-passenger-size">Ignoring Passenger Size</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pcxcameos.html">PCX Cameos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pips.html">Pips</a></li>
 <li class="toctree-l1"><a class="reference internal" href="prerequisites.html">Prerequisites</a><ul>
@@ -237,6 +246,12 @@ the game.</p>
 <li class="toctree-l1"><a class="reference internal" href="reverseengineerlogic.html">Reverse Engineer logic</a></li>
 <li class="toctree-l1"><a class="reference internal" href="saboteur.html">Saboteurs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scorchflamer.html"><span><span class="type">Scorch</span></span> and <span><span class="type">Flamer</span></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="scripts.html">Script Actions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html#gather-at-enemy-53"><span><span class="type">Gather at Enemy</span></span> (53)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html#gather-at-base-54"><span><span class="type">Gather at Base</span></span> (54)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts.html#iron-curtain-55"><span><span class="type">Iron Curtain</span></span> (55)</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="selfheal.html">Self Heal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sight.html">Sight</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spawners.html">Spawners</a><ul>
@@ -244,6 +259,7 @@ the game.</p>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="spawnsparticle.html">Particle Spawning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="speakdelays.html">Speak Delays</a></li>
 <li class="toctree-l1"><a class="reference internal" href="survivors.html">Survivors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="survivors.html#units-and-buildings">Units and Buildings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="survivors.html#unit-specific">Unit-specific</a></li>
@@ -252,6 +268,12 @@ the game.</p>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="teamretaliate.html">Team Retaliate</a></li>
 <li class="toctree-l1"><a class="reference internal" href="turretrot.html">Turret <span><span class="type">ROT</span></span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="typeconversion.html">Type Conversion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="typeconversion.html#on-promotion">On Promotion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="typeconversion.html#via-issimpledeployer">Via <span><span class="type">IsSimpleDeployer</span></span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="typeconversion.html#when-transitioning-between-land-and-water">When Transitioning Between Land and Water</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="typeselect.html">Type Selection Groups</a></li>
 <li class="toctree-l1"><a class="reference internal" href="unitlost.html">Unit Lost EVA Report</a></li>
 <li class="toctree-l1"><a class="reference internal" href="veteranabilities.html">Veteran and Elite Abilities</a></li>
@@ -337,6 +359,7 @@ the game.</p>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="buildings/repair.html">Repair and Insufficient Funds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="buildings/repair.html#buildings-not-repairable-by-engineers">Buildings not repairable by Engineers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buildings/secretlabs.html">Secret Labs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="buildings/solidbuildings.html">Solid Buildings</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="buildings/solidbuildings.html#the-attackers-enabling-projectiles">The Attackers - Enabling Projectiles</a></li>
@@ -421,7 +444,11 @@ the game.</p>
 <li class="toctree-l2"><a class="reference internal" href="weapons/ammo.html"><span><span class="type">Ammo</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="weapons/ivanbombs.html">Ivan Bombs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="weapons/radiation.html">Radiation Beams</a></li>
-<li class="toctree-l2"><a class="reference internal" href="weapons/electricbolts.html">Electric Bolt Coloring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="weapons/electricbolts.html">Electric Bolts</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="weapons/electricbolts.html#bolt-coloring">Bolt Coloring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="weapons/electricbolts.html#spark-particle-system">Spark Particle System</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="weapons/waves.html">Waves</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="weapons/waves.html#wave-effects">Wave Effects</a></li>
 <li class="toctree-l3"><a class="reference internal" href="weapons/waves.html#wave-coloring">Wave Coloring</a></li>
@@ -436,6 +463,9 @@ the game.</p>
 <li class="toctree-l1"><a class="reference internal" href="warheads/index.html">Warheads</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="warheads/general.html">General Settings</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="warheads/general.html#affectsenemies"><span><span class="type">AffectsEnemies</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="warheads/general.html#affectsowner"><span><span class="type">AffectsOwner</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="warheads/general.html#warhead-effects">Warhead Effects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="warheads/general.html#non-damaging-warheads">Non-Damaging Warheads</a></li>
 <li class="toctree-l3"><a class="reference internal" href="warheads/general.html#non-malicious-warheads">Non-Malicious Warheads</a></li>
 <li class="toctree-l3"><a class="reference internal" href="warheads/general.html#prevent-scattering">Prevent scattering</a></li>
 </ul>
@@ -452,6 +482,12 @@ the game.</p>
 <li class="toctree-l3"><a class="reference internal" href="warheads/ironcurtain.html#iron-curtain-flash">Iron Curtain Flash</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="warheads/ioncannon.html">Ion Cannon</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="warheads/ioncannon.html#ion-cannon-blast">Ion Cannon Blast</a></li>
+<li class="toctree-l3"><a class="reference internal" href="warheads/ioncannon.html#ripple-effect">Ripple Effect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="warheads/ioncannon.html#bridge-destroyer">Bridge Destroyer</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/sonar.html">Sonar / Decloak</a></li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/flash.html">Flashing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/nukeflash.html">Nuke Flash</a></li>
@@ -463,14 +499,17 @@ the game.</p>
 <li class="toctree-l3"><a class="reference internal" href="warheads/temporal.html#consider-health">Consider Health</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="warheads/ripple.html">Ion Cannon Ripple Effect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/preimpactanim.html"><span><span class="type">PreImpactAnim</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/infantry.html">Infantry-related Settings</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="warheads/infantry.html#deployed-infantry-damage-multiplier">Deployed Infantry Damage multiplier</a></li>
 <li class="toctree-l3"><a class="reference internal" href="warheads/infantry.html#infdeathanim"><span><span class="type">InfDeathAnim</span></span></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="warheads/berserk.html">Berserk Reloading Time Modifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="warheads/berserk.html">Berserk</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="warheads/berserk.html#reloading-time-modifier">Reloading Time Modifier</a></li>
+<li class="toctree-l3"><a class="reference internal" href="warheads/berserk.html#immunity-to-berserk">Immunity to Berserk</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/deathweapon.html">Suppress Death Weapons</a></li>
 <li class="toctree-l2"><a class="reference internal" href="warheads/unitlost.html">Suppress Unit Lost Message</a></li>
 </ul>
@@ -607,7 +646,7 @@ the game.</p>
         <li class="right" >
           <a href="../restored/vehicle-thief.html" title="Vehicle Thief"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0p1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

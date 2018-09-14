@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Bounty &mdash; Ares 1.0p1 documentation</title>
+    <title>Bounty &mdash; Ares 2.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1.0p1',
+        VERSION:     '2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,9 +24,9 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 1.0p1 documentation" href="../index.html" />
+    <link rel="top" title="Ares 2.0 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
-    <link rel="next" title="CanPassiveAquire Settings" href="canpassiveaquire.html" />
+    <link rel="next" title="Build Time" href="buildtime.html" />
     <link rel="prev" title="AttachEffect" href="attacheffect.html" /> 
   </head>
   <body role="document">
@@ -37,12 +37,12 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="canpassiveaquire.html" title="CanPassiveAquire Settings"
+          <a href="buildtime.html" title="Build Time"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="attacheffect.html" title="AttachEffect"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -52,8 +52,8 @@
   <p class="topless"><a href="attacheffect.html"
                         title="previous chapter">AttachEffect</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="canpassiveaquire.html"
-                        title="next chapter"><span><span class="type">CanPassiveAquire</span></span> Settings</a></p>
+  <p class="topless"><a href="buildtime.html"
+                        title="next chapter">Build Time</a></p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
@@ -117,6 +117,14 @@ specific values. Defaults to <cite>0</cite>.</dd>
 <dd>The amount rewarded as bounty if an object with this veterancy is destroyed.
 Can be negative to penalize the player. Defaults to <span><code class="docutils literal"><span class="pre">Bounty.Value</span></code></span>.</dd>
 </dl>
+<p>The following tag can be used to disable bounty for killing objects owned by a
+house.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[Country]►GivesBounty=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether this country is eligible for giving bounty. If <cite>no</cite>, killing
+units and structures of this country will not give any bounty. Defaults to
+<cite>yes</cite>.</dd>
+</dl>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 0.C.</span></p>
 </div>
@@ -135,12 +143,12 @@ Can be negative to penalize the player. Defaults to <span><code class="docutils 
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="canpassiveaquire.html" title="CanPassiveAquire Settings"
+          <a href="buildtime.html" title="Build Time"
              >next</a> |</li>
         <li class="right" >
           <a href="attacheffect.html" title="AttachEffect"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

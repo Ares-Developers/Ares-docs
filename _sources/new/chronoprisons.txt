@@ -57,13 +57,18 @@ concept art on the Command & Conquer Wiki
 
 [Weapon]Abductor.ChangeOwner=boolean
   Sets whether the abducted unit shall change its owner to the abductor's house.
-  Units which are ImmuneToPsionics=yes will not change owner. Defaults to
+  Units which are ImmuneToPsionics=yes or which gained the
+  PSIONICSIMMUNE veteran ability will not change owner. Defaults to
   no.
 
-[Weapon]Abductor.AbductBelowPercent=float
+[Weapon]Abductor.AbductBelowPercent=float - percentage
   Specifies the percentage of health a unit has to go below to be abducted.
   Units with more health than this percentage will not be abducted. Defaults to
   100%.
+
+[Weapon]Abductor.MaxHealth=integer - hitpoints
+  The amount of hitpoints above which it cannot be abducted any longer. If
+  0, health is not checked. Defaults to 0.
 
 [TechnoType]ImmuneToAbduction=boolean
   Specifies whether the unit cannot be abducted. Only the conventional damage is
@@ -81,7 +86,7 @@ concept art on the Command & Conquer Wiki
 
    In order to use this, you have to use YR's multi-turret logic, that
     is, you have to specify Turret=yes, an appropriate
-    TurretCount, and you have to use the WeaponX flags to specify
-    weapons.
+    TurretCount, and you have to use the WeaponX flags to
+    specify weapons.
 
  0.2

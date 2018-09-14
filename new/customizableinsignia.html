@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Veterancy Insignia &mdash; Ares 1.0p1 documentation</title>
+    <title>Veterancy Insignia &mdash; Ares 2.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1.0p1',
+        VERSION:     '2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 1.0p1 documentation" href="../index.html" />
+    <link rel="top" title="Ares 2.0 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Customizable Parachute Animations" href="customizableparachuteanimations.html" />
     <link rel="prev" title="Custom Cameo Palettes" href="customcameopalettes.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="customcameopalettes.html" title="Custom Cameo Palettes"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -95,14 +95,24 @@ level.</p>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Insignia.Elite=</span></code><span class="type definition"> (filename, excluding the .shp extension)</span></span></dt>
 <dd>For example, <span><code class="docutils literal"><span class="pre">Insignia.Rookie=SAMPLE</span></code></span> would display <code class="file docutils literal"><span class="pre">sample.shp</span></code> as
-the insignia while the object is rookie.</dd>
+the insignia while the object is rookie. Defaults to <cite>PIPS</cite>.</dd>
 </dl>
 <p>These SHPs - like the original <code class="file docutils literal"><span class="pre">pips.shp</span></code> - are expected to be in the
 theater palette. If you specify an insignia, the first frame of its SHP will be
 drawn. Veteran and Elite objects without the insignia specified will still
 display the 15th/16th frames of <code class="file docutils literal"><span class="pre">pips.shp</span></code> as usual.</p>
+<p><span><code class="definition docutils literal"><span class="pre">[TechnoType]►InsigniaFrame.Rookie=</span></code><span class="type definition"> (integer - frame)</span></span></p>
+<p><span><code class="definition docutils literal"><span class="pre">[TechnoType]►InsigniaFrame.Veteran=</span></code><span class="type definition"> (integer - frame)</span></span></p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►InsigniaFrame.Elite=</span></code><span class="type definition"> (integer - frame)</span></span></dt>
+<dd>The frame used from the insignia shape. Set to <cite>-1</cite> to use the default
+frame index.</dd>
+</dl>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 2.0.</span></p>
 </div>
 </div>
 <div class="section" id="hiding-enemy-insignia">
@@ -146,7 +156,7 @@ Defaults to <span><code class="docutils literal"><span class="pre">[General]►E
         <li class="right" >
           <a href="customcameopalettes.html" title="Custom Cameo Palettes"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

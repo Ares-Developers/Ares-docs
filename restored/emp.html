@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Electromagnetic Pulse (EMP) &mdash; Ares 1.0p1 documentation</title>
+    <title>Electromagnetic Pulse (EMP) &mdash; Ares 2.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1.0p1',
+        VERSION:     '2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 1.0p1 documentation" href="../index.html" />
+    <link rel="top" title="Ares 2.0 documentation" href="../index.html" />
     <link rel="up" title="Restored Tiberian Sun Logic" href="index.html" />
     <link rel="next" title="Firestorm Wall" href="firestormwall.html" />
     <link rel="prev" title="Amphibious Image Changes" href="amphibiousimagechanges.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="amphibiousimagechanges.html" title="Amphibious Image Changes"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Restored Tiberian Sun Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -60,6 +60,7 @@
 <li><a class="reference internal" href="#modifying-the-effect-duration">Modifying the Effect Duration</a></li>
 <li><a class="reference internal" href="#destructive-emp">Destructive EMP</a></li>
 <li><a class="reference internal" href="#sparkles-animation">Sparkles Animation</a></li>
+<li><a class="reference internal" href="#global-settings">Global Settings</a></li>
 </ul>
 </li>
 </ul>
@@ -317,8 +318,9 @@ this value. <cite>yes</cite> equals <cite>1</cite>, meaning immediately.</li>
 instant the EMP hits.</p>
 <div class="last admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Parachuting units do not count as being in the air. Only exceeding
-their positive threshold (if set) will kill them.</p>
+<p class="last">Parachuting units and units being lifted or lowered by a Magnetron
+do not count as being in air. Only exceeding their positive threshold (if
+set) will kill them.</p>
 </div>
 </dd>
 </dl>
@@ -357,6 +359,17 @@ still in the <span class="game docutils literal">Tiberian Sun</span> palette and
 <p><span class="versionmodified">New in version 0.A.</span></p>
 </div>
 </div>
+<div class="section" id="global-settings">
+<h2>Global Settings<a class="headerlink" href="#global-settings" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[CombatDamage]►EMPAIRecoverMission=</span></code><span class="type definition"> (mission)</span></span></dt>
+<dd>The mission units controlled by the AI will go onto when an EMP effect
+expires. Defaults to <cite>Hunt</cite>.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 2.0.</span></p>
+</div>
+</div>
 </div>
 
 
@@ -377,7 +390,7 @@ still in the <span class="game docutils literal">Tiberian Sun</span> palette and
         <li class="right" >
           <a href="amphibiousimagechanges.html" title="Amphibious Image Changes"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >Restored Tiberian Sun Logic</a> &raquo;</li> 
       </ul>
     </div>

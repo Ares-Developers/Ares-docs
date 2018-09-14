@@ -56,6 +56,11 @@ Ares supports multiple buildings with NukeSilo=yes providing this
 super weapon. Yuri's Revenge only tried to find the first building type
 that matched those criteria.
 
+Ares adds support to launch the missile and have it aim for the target
+directly like in Tiberian Sun instead of going straight up from the silo
+and coming down on the target. This is controlled by Vertical on the
+projectile.
+
 Yuri's Revenge supported the nuke impact animation only for the warhead
 called NUKE, hardcoded to NUKEBALL. To change this animation in
 Ares, have a look at PreImpactAnim.

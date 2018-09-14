@@ -34,12 +34,13 @@ By default, passengers might still be ejected when the vehicle is destroyed. To
 change this, set the Passenger Survivor Chance
 accordingly.
 
-[VehicleType]NoManualUnload=boolean
-  Whether this vehicle is disallowed to eject its passengers. If enabled, the
-  owning player will not get deploy or no-deploy cursors. Defaults to
-  no.
+[TechnoType]NoManualUnload=boolean
+  Whether this vehicle or aircraft is disallowed to eject its passengers. If
+  enabled, the owning player will not get deploy or no-deploy cursors. Defaults
+  to no.
 
  0.A
+ 2.0
 
 
 

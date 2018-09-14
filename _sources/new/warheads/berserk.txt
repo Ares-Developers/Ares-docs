@@ -1,8 +1,11 @@
+Berserk
+
+
 
   TechnoType; Reloading time multiplier when berserking
   Berserk; Reloading time multiplier
 
-Berserk Reloading Time Modifier
+Reloading Time Modifier
 
 
 Units under the effect of Chaos Gas or other Psychedelic=yes warheads go
@@ -19,3 +22,31 @@ each TechnoType.
   firing. Defaults to [CombatDamage]►BerserkROFMultiplier.
 
  0.8
+
+
+
+  TechnoType; Immunity to Berserk
+  Berserk; Immunity
+
+Immunity to Berserk
+
+
+The tag ImmuneToPsionics is determines whether a unit or structure is
+susceptible to mind control and Psychedelic=yes weapons. If the object is
+immune to one, it is immune to the other. Ares allows to differentiate.
+
+[TechnoType]ImmuneToBerserk=boolean
+  Whether this object is immune to berserking, the Chaos Gas effect. Can be used
+  to override ImmuneToPsionics and the PSIONICSIMMUNE ability. If set to
+  yes, the object is not affected by Chaos Gas even if not
+  ImmuneToPsionics=yes; if set to no, the object can be affected
+  by Chaos Gas despite maybe being immune to psionics.
+
+  If not set, acts as if set to yes if ImmuneToPsionics=yes or
+  the object gained the PSIONICSIMMUNE ability through veterancy,
+  otherwise as if set to no.
+
+   Currently, the default of not being set cannot be restored once this
+    tag has been set.
+
+ 2.0

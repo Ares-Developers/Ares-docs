@@ -6,8 +6,7 @@ Specific Passengers
 
 
 Additionally to the checks for Size and SizeLimit, it is possible
-to allow passengers to enter depending on their type. This feature is only
-supported on VehicleTypes and AircraftTypes.
+to allow passengers to enter depending on their type.
 
 [TechnoType]Passengers.Allowed=list of TechnoTypes
   The list of allowed passenger types. If this contains at least one type, all
@@ -19,3 +18,22 @@ supported on VehicleTypes and AircraftTypes.
   The list of types that are not allowed to enter this object.
 
  0.A
+ 2.0
+
+
+Ignoring Passenger Size
+
+
+Transports can ignore the actual size of its passengers and use up one slot for
+each only.
+
+[UnitType]Passengers.BySize=boolean
+  Whether passengers will take up as much space in the cargo hold as their
+  Size instead of taking up only one seat no matter the size of the
+  object. If no, the transport can always contain up to
+  Passengers units. Defaults to yes.
+
+   SizeLimit is always respected. A too large unit will still
+    not be able to enter.
+
+ 2.0

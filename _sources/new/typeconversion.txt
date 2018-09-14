@@ -1,0 +1,124 @@
+ TechnoTypes; Convert one unit type into another
+
+Type Conversion
+
+
+To a limited extent, it is possible to change the type of a unit in certain
+conditions. Supported are only unit to unit, infantry to infantry, and aircraft
+to aircraft. This is not supported for buildings.
+
+There is one rule to follow, which is easily stated but difficult to adhere to:
+**a unit is not allowed to convert into another type that has a chance to
+currently be in a position where the new type cannot be**. For example if an
+infantry unit gets bigger while inside a full open topped transport, the
+converted type not being allowed as passenger or occupant. This also works
+backwards: a vehicle cannot lose its ability to hold passengers.
+
+A unit that has not been created with a temporal weapon, a mind control weapon,
+or a parasite weapon cannot gain such by changing the type.
+
+The following are fully supported:
+
++ changing Strength will keep the units health the same
++ changing Armor
++ Ammo is deduced if new type has less Ammo
++ Cloakable is applied again
++ Spotlight is removed or created
++ AttachEffect on the type is removed or created
++ ROT and TurretRot are reset
+
+ 2.0
+
+
+ TechnoTypes; Type change on promotion
+
+On Promotion
+
+
+The unit type can be changed by promotion, not only allowing for more than the
+usual three veterancy levels, but also allowing to change several of the unit's
+attributes including their appearance.
+
+Note that if the unit skips the veteran rank and becomes elite immediately,
+Veteran settings are not applied. Also note that this is not cascading: if a
+unit is promoted to elite and converts to a veteran version of another type,
+which in turn should convert to something else, no further conversion takes
+place.
+
+[TechnoType]Promote.VeteranType=TechnoType
+  If set, the unit converts into this type when being promoted to veteran rank.
+  Defaults to none.
+
+[TechnoType]Promote.EliteType=TechnoType
+  If set, the unit converts into this type when being promoted to elite rank.
+  Defaults to none.
+
+The following tags can be used to promote a unit to a rookie of another type.
+Using -1.0 removes one rank, thus a unit becoming veteran gets one rank
+removed and essentially ends as a rookie of the converted type, while a unit
+becoming elite gets one rank removed and essentially becomes a veteran of the
+converted type. -2.0 would make the latter a rookie, too.
+
+[TechnoType]Promote.VeteranExperience=double
+  A value added to the experience when a unit type is converted using
+  Promote.VeteranType. Defaults to 0.0.
+
+[TechnoType]Promote.EliteExperience=double
+  A value added to the experience when a unit type is converted using
+  Promote.EliteType. Defaults to 0.0.
+
+ 2.0
+
+
+ TechnoTypes; Type change when deploying
+
+Via IsSimpleDeployer
+
+
+Unit can simple-deploy into another type. Unlike in the original game the unit
+will be movable after deploying, opposed to being locked in place like the
+original Siege Chopper.
+
+DeployingAnim is optional. If not present, units will convert types
+immediately, without turning their facing to DeployDir. See
+DeployDir.
+
+Ares extends IsSimpleDeployer logic to allow deploying units not
+on the ground. Also, DeployToLand has been extended to also work on units
+using the Hover locomotor. If yes, units will land, also respecting
+DeployDir.
+
+Because this conversion always happens with the unit being present on the map
+and guaranteed to be standing still, settings like Locomotor and
+Size can be changed within reasonable limits.
+
+[TechnoType]Convert.Deploy=TechnoType
+  The type a IsSimpleDeployer=yes unit deploys into. This converts the
+  type after deploying completed, and after the optional DeployingAnim
+  has finished playing. Defaults to none.
+
+ 2.0
+
+
+ TechnoTypes; Type change when entering water
+
+When Transitioning Between Land and Water
+
+
+The tag WaterImage allows to render a unit differently when it is on
+water, which was used on the GDI APC in Tiberian Sun. The following
+settings allow to change a unit's type. This way, the unit could change image,
+weapons, armor and so on.
+
+ Water and Land units should not define a conversion to their own type,
+  like a water unit converting into an other water unit.
+
+[TechnoType]Convert.Water=TechnoType
+  The type to convert to when a unit moves onto a beach or water cell. Defaults
+  to none.
+
+[TechnoType]Convert.Land=TechnoType
+  The type to convert to when a unit moves onto a cell that's neither beach nor
+  water. Defaults to none.
+
+ 2.0

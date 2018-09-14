@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>User Interface &mdash; Ares 1.0p1 documentation</title>
+    <title>User Interface &mdash; Ares 2.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.0p1',
+        VERSION:     '2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 1.0p1 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 2.0 documentation" href="../../index.html" />
     <link rel="up" title="Sides &amp; Countries" href="index.html" />
     <link rel="next" title="Start in Multiplayer" href="startinmultiplayer.html" />
     <link rel="prev" title="Country Defaults" href="defaultcountry.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="defaultcountry.html" title="Country Defaults"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Sides &amp; Countries</a> &raquo;</li> 
       </ul>
@@ -194,27 +194,19 @@ loading. Defaults to <span><code class="docutils literal"><span class="pre">[Sid
 </div>
 <div class="section" id="taunts">
 <span id="index-3"></span><h2>Taunts<a class="headerlink" href="#taunts" title="Permalink to this headline">¶</a></h2>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">The following filename specifications (where raw C-style format
-specifiers like %s are required) are going to be changed into safer versions
-in the future. The replacement style has not been decided yet.</p>
-</div>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[Country]►File.Taunt=</span></code><span class="type definition"> (filename, *including* the Taunts  directory and .wav extension)</span></span></dt>
-<dd><p class="first">Path of the files to use for the country&#8217;s taunts, in the format
-&#8220;Taunts\filename%02i.wav&#8221;. The filename specified <em>must</em> include &#8220;<cite>%02i</cite>&#8221;,
+<dd>Path of the files to use for the country&#8217;s taunts, in the format
+&#8220;Taunts\filename~~.wav&#8221;. The filename specified <em>must</em> include &#8220;<cite>~~</cite>&#8221;,
 which will be substituted for the taunt ID (01 through 08). For example,
-<span><code class="docutils literal"><span class="pre">File.Taunt=Taunts \tauam%02i.wav</span></code></span> will make the game load taunts
-<code class="file docutils literal"><span class="pre">tauam01.wav</span></code> through <code class="file docutils literal"><span class="pre">tauam08.wav</span></code>.</p>
-<div class="last admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Taunts will only be registered for up to 16 countries.</p>
-</div>
-</dd>
+<span><code class="docutils literal"><span class="pre">File.Taunt=Taunts \tauam~~.wav</span></code></span> will make the game load taunts
+<code class="file docutils literal"><span class="pre">tauam01.wav</span></code> through <code class="file docutils literal"><span class="pre">tauam08.wav</span></code>.</dd>
 </dl>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 2.0.</span></p>
 </div>
 </div>
 </div>
@@ -237,7 +229,7 @@ which will be substituted for the taunt ID (01 through 08). For example,
         <li class="right" >
           <a href="defaultcountry.html" title="Country Defaults"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Sides &amp; Countries</a> &raquo;</li> 
       </ul>

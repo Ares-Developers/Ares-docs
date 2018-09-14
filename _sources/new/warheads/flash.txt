@@ -8,8 +8,8 @@ to indicate a unit being repaired or healed (7 frames) or promoted. In
 Red Alert, flashing was also used when a unit was hit by a
 Charges=yes weapon (4 frames).
 
- This is only supported on warheads doing damage, not for healing
-  warheads.
+Whether this effect is applied when no conventional damage is dealt can be
+customized. See ....
 
 [Warhead]Flash.Duration=integer - frames
   If positive, the victim hit by this warhead will flash for the specified

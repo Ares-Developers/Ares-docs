@@ -1,0 +1,19 @@
+ TechnoTypes; DeployDir for each type
+
+DeployDir
+
+
+Originally, this setting was used for DeployToLand=yes units. When
+ordered to deploy, they would turn towards this direction first.
+
+With Ares, all units having a DeployingAnim will turn towards
+this direction first when deploying, ignoring DeployToLand. This way,
+deploying anims can hide the transition of unit types better, while units not
+having a DeployingAnim do not turn needlessly.
+
+[TechnoType]DeployDir=integer - facing
+  The direction a unit will face when deploying. Valid values range from
+  0 for north to 7 for north west. Defaults to
+  [General]►DeployDir.
+
+ 2.0

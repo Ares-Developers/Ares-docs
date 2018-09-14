@@ -15,6 +15,9 @@ AI and Base-Building
   [General]►NodRegularPower and [General]►NodAdvancedPower for the
   second side and all other sides.
 
+   There has to be at least one building in this list that always
+    satisfies prerequisites.
+
  0.1
 
 

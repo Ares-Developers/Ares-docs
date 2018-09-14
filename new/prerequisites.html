@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Prerequisites &mdash; Ares 1.0p1 documentation</title>
+    <title>Prerequisites &mdash; Ares 2.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1.0p1',
+        VERSION:     '2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 1.0p1 documentation" href="../index.html" />
+    <link rel="top" title="Ares 2.0 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Promotion settings" href="promotion.html" />
     <link rel="prev" title="Pips" href="pips.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="pips.html" title="Pips"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -196,13 +196,19 @@ information.</dd>
 </div>
 <div class="section" id="require-factory-built-by-country">
 <span id="index-4"></span><h2>Require Factory Built By Country<a class="headerlink" href="#require-factory-built-by-country" title="Permalink to this headline">¶</a></h2>
+<p>Satisfying prerequisites can be tied to the initial owner of a factory building.
+The initial owner is the player who owned it first: the player who built it, or
+the owner of buildings pre-placed on the map. For neutral structures, this would
+be the neutral country.</p>
 <dl class="docutils">
-<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►FactoryOwners.HaveAllPlans=</span></code><span class="type definition"> (boolean)</span></span></dt>
-<dd>Whether a player capturing a building of this type would permanently gain all
-plans of its initial owner. The initial owner is the player who owned it
-first: the player who built it, or the owner of buildings pre-placed on the
-map. For neutral structures, this would be the neutral country. Defaults to
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►FactoryOwners.HasAllPlans=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether this building provides plans for all factory types of the initial
+owner. If <cite>yes</cite>, this building satisfies FactoryOwner requirements of
+all object types. If the building is lost, the plans are lost. Defaults to
 <cite>no</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►FactoryOwners.Permanent=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether a player capturing a building of this type would permanently gain all
+plans of its initial owner. Supported on upgrades. Defaults to <cite>no</cite>.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►FactoryOwners=</span></code><span class="type definition"> (list of houses)</span></span></dt>
 <dd>The list of countries whose factories can build this object. If empty, every
 country is allowed to build this object. Otherwise, players need to own at
@@ -222,7 +228,7 @@ buildings, but not on units.</p>
 <p><span class="versionmodified">New in version 0.6.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified">Changed in version 0.9.</span></p>
+<p><span class="versionmodified">Changed in version 2.0.</span></p>
 </div>
 </div>
 <div class="section" id="overview">
@@ -313,7 +319,7 @@ might give unexpected results. For example, upgrades will not work.</p>
         <li class="right" >
           <a href="pips.html" title="Pips"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>

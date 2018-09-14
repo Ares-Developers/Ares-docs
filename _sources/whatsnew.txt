@@ -6,6 +6,23 @@ This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of Ares. Internal changes, optimizations
 and updates are mentioned here only if they are notable.
 
+ Ares 2.0
+
++ **Animations** can deal damage using a weapon, optionally with a delay
+
++ **Waves** optimized and expanded to support to recreate original colors
+
++ **Warheads** can fire Ion Cannons, can
+  distinguish between firer and allies, 
+
++ **AI** can use custom Iron Curtains, and even use any
+  super weapon with Iron Curtain Targeting
+  to support teams
+
++ **Build Time** can be customized for each type
+
++ **Spy Effects** to build buildings, naval units or aircraft as veteran
+
  Ares 1.0
 
 + **Save Games** are supported again

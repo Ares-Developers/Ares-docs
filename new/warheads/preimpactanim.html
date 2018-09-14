@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>PreImpactAnim &mdash; Ares 1.0p1 documentation</title>
+    <title>PreImpactAnim &mdash; Ares 2.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '1.0p1',
+        VERSION:     '2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,10 +24,10 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 1.0p1 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 2.0 documentation" href="../../index.html" />
     <link rel="up" title="Warheads" href="index.html" />
     <link rel="next" title="Infantry-related Settings" href="infantry.html" />
-    <link rel="prev" title="Ion Cannon Ripple Effect" href="ripple.html" /> 
+    <link rel="prev" title="Temporal" href="temporal.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -40,9 +40,9 @@
           <a href="infantry.html" title="Infantry-related Settings"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="ripple.html" title="Ion Cannon Ripple Effect"
+          <a href="temporal.html" title="Temporal"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Warheads</a> &raquo;</li> 
       </ul>
@@ -50,8 +50,8 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="ripple.html"
-                        title="previous chapter">Ion Cannon Ripple Effect</a></p>
+  <p class="topless"><a href="temporal.html"
+                        title="previous chapter"><span><span class="type">Temporal</span></span></a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="infantry.html"
                         title="next chapter">Infantry-related Settings</a></p>
@@ -84,14 +84,22 @@ explosion and dealing damage. The game was hard-coded to use this only for
 warheads with the ID <span><code class="docutils literal"><span class="pre">NUKE</span></code></span>. <span class="game docutils literal">Ares</span> enables this for arbitrary
 warheads.</p>
 <dl class="docutils">
-<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►PreImpactAnim=</span></code><span class="type definition"> (string, animation ID)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►PreImpactAnim=</span></code><span class="type definition"> (animation)</span></span></dt>
 <dd>Specifies the animation to display when a projectile which uses this warhead
 impacts. After the animation is over, the actual explosion is created and
 damage is dealt. The animation may not be looping. Defaults to
 <cite>NUKEBALL</cite> for <span><code class="docutils literal"><span class="pre">NUKE</span></code></span>, otherwise to <cite>none</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►PreImpactAnim.Moves=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Can be used to optionally move the bullet when the animation used as
+<span><code class="docutils literal"><span class="pre">PreImpactAnim</span></code></span> moves while playing. If <cite>yes</cite>, moves the bullet to
+the last location of the animation and sets the target to the cell containing
+the animation. Defaults to <cite>no</cite>.</dd>
 </dl>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 2.0.</span></p>
 </div>
 </div>
 
@@ -111,9 +119,9 @@ damage is dealt. The animation may not be looping. Defaults to
           <a href="infantry.html" title="Infantry-related Settings"
              >next</a> |</li>
         <li class="right" >
-          <a href="ripple.html" title="Ion Cannon Ripple Effect"
+          <a href="temporal.html" title="Temporal"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Warheads</a> &raquo;</li> 
       </ul>

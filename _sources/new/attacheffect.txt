@@ -47,6 +47,21 @@ TechnoTypes) and Warheads, unless stated otherwise.
 [Section]AttachEffect.FirepowerMultiplier=float - multiplier
   Firepower bonus while the AttachEffect lasts. Defaults to 1.0.
 
+   Mind that this works fundamentally differently from the other
+    effects, which are applied the instant they are needed (like a firepower for
+    a bullet impacting) as long as the effect is active: the reload time is
+    computed once when the reloading starts, but the modified reloading time may
+    take longer than the attached effect lasts.
+
+    For instance, a unit that was struck with an effect slowing down the ROF
+    extremely might thus render the unit unable to fire way longer than the
+    AttachEffect is active, because the reload timer will not speed up again
+    when the effect expires.
+
+[Section]AttachEffect.ROFMultiplier=float - multiplier
+  Rate of fire bonus while the AttachEffect lasts. Defaults to 1.0.
+
+
 [Section]AttachEffect.Cloakable=boolean
   Whether the unit gains cloaking ability while the AttachEffect lasts. Defaults
   to no.
@@ -90,4 +105,4 @@ The following tags are valid on Warheads only:
   animation on every time of reapplying. Defaults to no.
 
  0.4
- 0.E
+ 2.0

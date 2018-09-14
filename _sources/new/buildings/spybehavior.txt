@@ -66,7 +66,7 @@ Money
   amount of money they presently have (i.e. if
   SpyEffect.StolenMoneyAmount=500 but the enemy only has 200 credits then
   you will only gain 200 credits from spying the building).
-[BuildingType]SpyEffect.StolenMoneyPercentage=float - multiplier
+[BuildingType]SpyEffect.StolenMoneyPercentage=float - percentage
   The percentage of the enemy's current credits that will be stolen from the
   enemy upon spying this enemy building. Only has an effect if
   SpyEffect.StolenMoneyAmount=0.
@@ -149,21 +149,43 @@ tech 2.
 
 
  Spies; Build vehicles or train infantry as veteran
+ Spies; Veteran buildings or aircraft or navy
 
 Veterancy
 
 
-[BuildingType]SpyEffect.UnitVeterancy=boolean
-  Whether or not spying this enemy factory will make all future units you build
-  from your own factories of the same type start veteran. For example, spying an
-  enemy barracks with SpyEffect.UnitVeterancy=yes set will cause all
-  future InfantryTypes that you build to start veteran.
-  
-   This only works for VehicleType and InfantryType
-    factories at present. Also note that infiltrating any VehicleType
-    factory (i.e. War Factory or Naval Yard) will only make land vehicles start
-    veteran - Naval vehicles cannot be made to start veteran through spy
-    infiltration logic.
+Ares adds five independent fine grained controls to gain veterancy by
+spying, thus it is possible to grant one or more types veterancy at the same
+time where the original game only supported either InfantryType\ s or
+VehicleType\ s depending on the Factory= setting.
+
+[BuildingType]SpyEffect.InfantryVeterancy=boolean
+  Whether spying this building will make all future infantry with
+  Trainable=yes you build from your own factories start veteran. Defaults
+  to no.
+
+[BuildingType]SpyEffect.VehicleVeterancy=boolean
+  Whether spying this building will make all future Naval=no vehicles
+  with Trainable=yes you build from your own factories start veteran.
+  Defaults to no.
+
+[BuildingType]SpyEffect.NavalVeterancy=boolean
+  **NEW EFFECT** Whether spying this building will make all future
+  Naval=yes vehicles with Trainable=yes you build from your own
+  factories start veteran. Defaults to no.
+
+[BuildingType]SpyEffect.AircraftVeterancy=boolean
+  **NEW EFFECT** Whether spying this building will make all future aircraft with
+  Trainable=yes you build from your own factories start veteran.
+  Defaults to no.
+
+[BuildingType]SpyEffect.BuildingVeterancy=boolean
+  **NEW EFFECT** Whether spying this building will make all future buildings
+  with Trainable=yes you build from your own Construction Yards start
+  veteran. Defaults to no.
+
+ 0.1
+ 2.0
 
 
 
@@ -200,13 +222,20 @@ Intelligence
 
 
 
+
+
  single: Spies; Reset all reverse engineered build options
 
 Reverse Engineering
 
 
-For a spy effect to reset a player's build options gained by reverse
-engineering, see ....
+Reset a player's build options gained by Reverse Engineering.
+
+[BuildingType]SpyEffect.UndoReverseEngineer=boolean
+  **NEW EFFECT** Enables Spies to disable all reverse-engineered technology from
+  that building. Defaults to no.
+
+ 0.2
 
 
 

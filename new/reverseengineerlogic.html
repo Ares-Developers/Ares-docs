@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Reverse Engineer logic &mdash; Ares 1.0p1 documentation</title>
+    <title>Reverse Engineer logic &mdash; Ares 2.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '1.0p1',
+        VERSION:     '2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 1.0p1 documentation" href="../index.html" />
+    <link rel="top" title="Ares 2.0 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Saboteurs" href="saboteur.html" />
     <link rel="prev" title="ReloadAmount and EmptyReloadAmount" href="reload.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="reload.html" title="ReloadAmount and EmptyReloadAmount"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -83,11 +83,6 @@ customization.</p>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►ReverseEngineersVictims=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Enables the reverse-engineering logic. Defaults to <cite>no</cite>.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►SpyEffect.UndoReverseEngineer=</span></code><span class="type definition"> (boolean)</span></span></dt>
-<dd>Enables Spies to disable all reverse-engineered technology from that building.
-Defaults to <cite>no</cite>.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[InfantryOrVehicle]►CanBeReversed=</span></code><span class="type definition"> (boolean)</span></span></dt>
-<dd>Allows the unit to be reverse-engineered. Defaults to <cite>yes</cite>.</dd>
 </dl>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -104,6 +99,16 @@ obeying <span><code class="docutils literal"><span class="pre">BuildLimit</span>
 <p class="last">While this logic appears to be working, there have also been some
 minor bugs related to this feature. Be advised.</p>
 </div>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[InfantryOrVehicle]►CanBeReversed=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Allows the unit to be reverse-engineered. Defaults to <cite>yes</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[InfantryOrVehicle]►ReversedAs=</span></code><span class="type definition"> (TechnoType)</span></span></dt>
+<dd>The optional type to override what a unit is reversed as. If not set, uses the
+actual unit type. Supports <span class="type docutils literal">BuildingType</span>s. Use <cite>none</cite> to
+reset. Defaults to <cite>none</cite>.</dd>
+</dl>
+<p>For a spy effect to reset a player&#8217;s build options gained by reverse
+engineering, see <a class="reference internal" href="buildings/spybehavior.html#spybehavior-unreverse"><span>Spy Behavior</span></a>.</p>
 <p>When you are the owner of the reversing facility, reverse-engineering any
 <span class="type docutils literal">InfantryType</span> for the first time will play
 <cite>EVA_ReverseEngineeredInfantry</cite> and <cite>EVA_NewTechnologyAcquired</cite>;
@@ -133,7 +138,7 @@ The undo-reversing spy effect will play <cite>EVA_TechnologyStolen</cite>.</p>
         <li class="right" >
           <a href="reload.html" title="ReloadAmount and EmptyReloadAmount"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 1.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
