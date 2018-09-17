@@ -13,7 +13,7 @@ it, and allows others to take over the now-neutral vehicle.
 
 .. versionadded:: 0.2
 
-.. versionchanged:: 0.E
+.. versionchanged:: 2.0
 
 
 Warhead Settings

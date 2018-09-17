@@ -23,7 +23,7 @@ define a factor applied to the amount of power lacking and the range the
 resulting modifier will be clamped in before being multipled with the build
 time.
 
-:tagdef:`[TechnoType]BuildTime.LowPowerPenalty=double - modifier`
+:tagdef:`[TechnoType]BuildTime.LowPowerPenalty=double - multiplier`
   The penalty to apply to the build time in low power situations. Defaults to
   :tag:`[General]LowPowerPenaltyModifier`.
 
