@@ -14,7 +14,7 @@ once in a while, defined by the setting :tag:`[AudioVisual]SpeakDelay`.
 :tagdef:`[AudioVisual]StealthSpeakDelay=double - minutes`
   Minutes between EVA repeating the warning that a stealth unit has been
   detected. Defaults to :value:`0.0`.
-:tagdef:`[AudioVisual]StealthSpeakDelay=double - minutes`
+:tagdef:`[AudioVisual]SubterraneanSpeakDelay=double - minutes`
   Minutes between EVA repeating the warning that a subterranean unit has been
   detected. Defaults to :value:`0.0`.
 
