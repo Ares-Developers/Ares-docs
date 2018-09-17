@@ -8,6 +8,9 @@ and updates are mentioned here only if they are notable.
 
 .. rubric:: Ares 2.0
 
++ **Type Conversions** can switch a unit type when :doc:`deploying, promoting or
+  moving into or out of water</new/typeconversion>`
+
 + **Animations** can :doc:`deal damage using a weapon, optionally with a delay
   </new/animations>`
 
