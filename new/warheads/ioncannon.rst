@@ -61,16 +61,16 @@ an Ion Cannon.
 
   Below are listed some results of modifying the tag values.
 
-  + :tag:`Ripple.Radius=1` - Forget it, nothing.
-  + :tag:`Ripple.Radius=5` - Target cell, only voxel rippling
-  + :tag:`Ripple.Radius=8` - Target cell, both voxel and SHP rippling.
-  + :tag:`Ripple.Radius=10` - 1 cell radius
-  + :tag:`Ripple.Radius=15` - 2 cell radius
-  + :tag:`Ripple.Radius=20` - 3 cell radius
-  + :tag:`Ripple.Radius=25` - 3 cell radius
-  + :tag:`Ripple.Radius=28` - 3 cell unit-rippling, 4 cell terrain rippling
+  + :tag:`IonCannon.Ripple=1` - Forget it, nothing.
+  + :tag:`IonCannon.Ripple=5` - Target cell, only voxel rippling
+  + :tag:`IonCannon.Ripple=8` - Target cell, both voxel and SHP rippling.
+  + :tag:`IonCannon.Ripple=10` - 1 cell radius
+  + :tag:`IonCannon.Ripple=15` - 2 cell radius
+  + :tag:`IonCannon.Ripple=20` - 3 cell radius
+  + :tag:`IonCannon.Ripple=25` - 3 cell radius
+  + :tag:`IonCannon.Ripple=28` - 3 cell unit-rippling, 4 cell terrain rippling
     radius
-  + :tag:`Ripple.Radius=30` and onwards - 3 cell unit-rippling, 5 cell
+  + :tag:`IonCannon.Ripple=30` and onwards - 3 cell unit-rippling, 5 cell
     terrain-rippling radius
 
 .. versionadded:: 0.1
