@@ -44,7 +44,8 @@ Damage and Warhead
 ------------------
 
 The damage and the warhead used to deliver it can be customized for each of the
-:type:`Tiberiums`.
+:type:`Tiberiums`. This allows to have damaging and non-damaging resources at
+the same time, for example Tiberium and ore respectively.
 
 :tagdef:`[Tiberium]Damage=integer`
   The damage a unit that is not tiberium proof receives from entering a cell

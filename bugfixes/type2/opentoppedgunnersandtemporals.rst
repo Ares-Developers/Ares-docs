@@ -8,7 +8,7 @@
 :captiontag:`OpenTopped` :captiontag:`Gunner`\ s and :captiontag:`Temporal` weapons
 ===================================================================================
 
-:tag:`Gunner=yes` vehicles use the passenger's temporal device to fire  if it is
+:tag:`Gunner=yes` vehicles use the passenger's temporal device to fire if it is
 equipped with a :tag:`Temporal=yes` weapon. This can be done safely, and the
 device is replaced once the infantry exits the vehicle. If the :tag:`Gunner=yes`
 vehicle is also :tag:`OpenTopped=yes`, the infantry with the :tag:`Temporal=yes`

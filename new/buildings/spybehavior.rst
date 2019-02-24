@@ -31,13 +31,14 @@ Radar
   behavior (i.e. re-shrouding the enemy's map down to just the terrain that they
   can presently see).
 :tagdef:`[BuildingType]SpyEffect.RevealRadar=boolean`
-  **NEW EFFECT** Whether or not spying this enemy radar will reveal to you, the
-  infiltrator, all of the terrain that they, the enemy, have thus far explored.
+  **NEW EFFECT** Whether or not spying this enemy radar will reveal all further
+  unit movements to the infiltrating player. Enemy units will then scout the map
+  like own units until the infiltrated building is destroyed, sold, or captured.
   The building must also have :tag:`Radar=yes` set.
 :tagdef:`[BuildingType]SpyEffect.KeepRadar=boolean`
   **NEW EFFECT** If enabled, a player infiltrating this building will still have
-  access to the owning player's radar even if the building is destroyed, sold or
-  captured. Otherwise the spy effect is removed. Requires
+  access to the owning player's radar even if the building is destroyed, sold,
+  or captured. Otherwise the spy effect is removed. Requires
   :tag:`SpyEffect.RevealRadar=yes` and a :tag:`Radar=yes` building.
 
 
@@ -233,8 +234,8 @@ Reset a player's build options gained by :doc:`Reverse Engineering
 </new/reverseengineerlogic>`.
 
 :tagdef:`[BuildingType]SpyEffect.UndoReverseEngineer=boolean`
-  **NEW EFFECT** Enables Spies to disable all reverse-engineered technology from
-  that building. Defaults to :value:`no`.
+  **NEW EFFECT** Whether spying this building will remove all technology the
+  infiltrated player has reverse-engineered so far. Defaults to :value:`no`.
 
 .. versionadded:: 0.2
 

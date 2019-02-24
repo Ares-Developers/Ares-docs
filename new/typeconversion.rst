@@ -25,7 +25,7 @@ The following are fully supported:
 + :tag:`Cloakable` is applied again
 + Spotlight is removed or created
 + AttachEffect on the type is removed or created
-+ :tag:`ROT` and :tag:`TurretRot` are reset
++ :tag:`ROT` and :tag:`TurretROT` are reset
 
 .. versionadded:: 2.0
 

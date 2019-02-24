@@ -20,7 +20,7 @@ placed. Also, :tag:`ProduceCashStartup` is no longer granted if a building is
 captured by a :tag:`MultiplayPassive=yes` house.
 
 Unlike in the original game, :tag:`ProduceCashStartup` does not have to be
-non-null for :tag:`ProduceCashdelay` and :tag:`ProduceCashAmount` to work.
+non-null for :tag:`ProduceCashDelay` and :tag:`ProduceCashAmount` to work.
 
 .. versionadded:: 0.9
 

@@ -6,9 +6,9 @@ Multi Engineer Checkbox
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 :game:`Tiberian Sun` lets the user enable and disable the Multi Engineer feature
-from the user interface. :game:`Ares` restores this feature. If the user turns
+from the user interface. :game:`Ares` restores this feature. If the player turns
 off Multi Engineer in the skirmish menu, buildings can always be captured using
-an engineer, otherwise the settings in :file:`rulesmd.ini` are used.
+a single engineer, otherwise the settings in :file:`rulesmd.ini` apply.
 
 .. image:: /images/multiengineer.png
   :alt: Screenshot of the skirmish menu with Multi-Engineer turned on
@@ -21,11 +21,13 @@ This tag goes into :file:`uimd.ini`:
   the menu. Defaults to :value:`no`. If the checkbox is not shown the settings
   in :file:`rulesmd.ini` will be enforced.
 
+  The checkbox uses `GUI:MultiEngineer` as its caption.
+
 See :doc:`/restored/multiengineer` for more info on :tag:`EngineerDamage` and
 :tag:`EngineerCaptureLevel`.
 
 .. note:: Currently only the skirmish menu supports changing the Multi Engineer
-  option. This will be changed in the future to support network and online games
-  as well.
+  option. This might be changed in the future to support network and online
+  games as well.
 
 .. versionadded:: 0.2

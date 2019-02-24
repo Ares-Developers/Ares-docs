@@ -17,6 +17,7 @@ The default values depend on the super weapon's actual :tag:`Type`.
   The sound to play at the super weapon's target cell.
 :tagdef:`[SuperWeapon]SW.ActivationSound=sound`
   The sound to play when a Nuke is fired or a deferrable super weapon like the
-  Lightning Storm is activated.
+  Lightning Storm is activated. The sound is usually played at the target
+  location.
 
 .. versionadded:: 0.1

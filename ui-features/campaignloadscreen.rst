@@ -15,8 +15,12 @@ You can override these defaults for each mission using this new
 
 :tagdef:`[Mission]LoadScreenText.Color=Color scheme`
   Text on the campaign loading screens for this mission will be drawn using this
-  color from the :tag:`[Colors]` list. For example,
-  :tag:`LoadScreenText.Color=AlliedLoad`.
+  color from the :tag:`[Colors]` list.
+
+  Defaults to :value:`SovietLoad` if mission ID starts with :value:`SOV`, to
+  :value:`YuriLoad` if mission ID starts with :value:`YUR`, to
+  :value:`LightGrey` if mission ID starts with :value:`TUT`, otherwise to
+  :value:`AlliedLoad`.
 
 .. versionadded:: 0.2
 

@@ -16,7 +16,8 @@ Default values for general tags:
 :tagdef:`[SuperWeapon]SW.Deferment=integer frames`
   Defaults to :tag:`[General]LightningDeferment`.
 :tagdef:`[SuperWeapon]SW.ActivationSound=Sound`
-  Defaults to :tag:`[AudioVisual]StormSound`.
+  The sound played globally when the Lightning Storm starts. Defaults to
+  :tag:`[AudioVisual]StormSound`.
 :tagdef:`[SuperWeapon]SW.AITargeting=enumeration`
   Defaults to :value:`LightningStorm`.
 :tagdef:`[SuperWeapon]Light.*=integer`

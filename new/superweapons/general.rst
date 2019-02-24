@@ -34,7 +34,7 @@ General properties
   weapons support deferment.
 :tagdef:`[SuperWeapon]SW.TimerVisibility=enumeration none|owner|allies|team|enemies|all`
   Defines who can see the super weapon timer, if :tag:`ShowTimer=yes`. Observers
-  are considered to be allied all players. Defaults to :value:`all`.
+  are considered to be allied to all players. Defaults to :value:`all`.
 :tagdef:`[SuperWeapon]SW.Group=integer`
   Distinguish multiple super weapons of the same type. Defaults to :value:`0`.
 

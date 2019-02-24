@@ -6,7 +6,7 @@ Fakes
 ~~~~~
 
 Fakes are buildings known from :game:`Red Alert` which look like their original
-counterparts but are weaker and serve no function. There mere purpose is to
+counterparts but are weaker and serve no function. Their mere purpose is to
 hide the location of the real buildings.
 
 Fakes show the string defined by :value:`TXT_FAKE` when selected by the owning
