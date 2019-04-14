@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Remappable Walls &mdash; Ares 2.0 documentation</title>
+    <title>Remappable Walls &mdash; Ares 2.0p1 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0',
+        VERSION:     '2.0p1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 2.0p1 documentation" href="../../index.html" />
     <link rel="up" title="Fixes to Mod Logics" href="index.html" />
     <link rel="next" title="Shape Compression 1 Draws Vertical Lines on Large Images" href="shpcompression1.html" />
     <link rel="prev" title="Reinforcements and Multiplayer Map Triggers" href="reinforcementsandmultiplayermaptriggers.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="reinforcementsandmultiplayermaptriggers.html" title="Reinforcements and Multiplayer Map Triggers"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Bug Fixes</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Fixes to Mod Logics</a> &raquo;</li> 
       </ul>
@@ -78,10 +78,10 @@
             
   <div class="section" id="remappable-walls">
 <span id="index-0"></span><h1>Remappable Walls<a class="headerlink" href="#remappable-walls" title="Permalink to this headline">¶</a></h1>
-<p>Walls (i.e. <span class="type docutils literal">OverlayTypes</span> with <span><code class="docutils literal"><span class="pre">Wall=yes</span></code></span>) always use the same color
-in place of the remap for all players, regardless of the owning player&#8217;s color.
-<span class="game docutils literal">Ares</span> will instead draw walls&#8217; remappable sections in their respective
-owner&#8217;s colors.</p>
+<p>Walls (i.e. <span class="type docutils literal">OverlayTypes</span> with <span><code class="docutils literal"><span class="pre">Wall=yes</span></code></span>) were always rendered in
+the remap colors of the current player (the human playing on this computer),
+instead of using the remap color of the wall&#8217;s actual owner. <span class="game docutils literal">Ares</span> will
+instead draw walls&#8217; remappable sections in their respective owner&#8217;s colors.</p>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 0.2.</span></p>
 </div>
@@ -105,13 +105,13 @@ owner&#8217;s colors.</p>
         <li class="right" >
           <a href="reinforcementsandmultiplayermaptriggers.html" title="Reinforcements and Multiplayer Map Triggers"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Bug Fixes</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Fixes to Mod Logics</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2018, The Ares Contributors.
+        &copy; Copyright 2019, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

@@ -16,7 +16,8 @@ Default values for general tags:
 [SuperWeapon]SW.Deferment=integer frames
   Defaults to [General]►LightningDeferment.
 [SuperWeapon]SW.ActivationSound=Sound
-  Defaults to [AudioVisual]►StormSound.
+  The sound played globally when the Lightning Storm starts. Defaults to
+  [AudioVisual]►StormSound.
 [SuperWeapon]SW.AITargeting=enumeration
   Defaults to LightningStorm.
 [SuperWeapon]Light.*=integer

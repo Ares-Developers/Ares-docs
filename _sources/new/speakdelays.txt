@@ -14,7 +14,7 @@ Ares adds distinct speak delays for the unit detectiion notices.
 [AudioVisual]StealthSpeakDelay=double - minutes
   Minutes between EVA repeating the warning that a stealth unit has been
   detected. Defaults to 0.0.
-[AudioVisual]StealthSpeakDelay=double - minutes
+[AudioVisual]SubterraneanSpeakDelay=double - minutes
   Minutes between EVA repeating the warning that a subterranean unit has been
   detected. Defaults to 0.0.
 

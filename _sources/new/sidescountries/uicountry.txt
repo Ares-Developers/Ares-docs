@@ -96,8 +96,9 @@ Options regarding the text drawn on the background:
   screen. For example, LoadScreenText.Brief=loadbrief:usa.
 [Country]LoadScreenText.Color=Color scheme
   Text on the multiplayer loading screens for this country will be drawn using
-  this color from the [Colors]► enumeration. For example,
-  LoadScreenText.Color=AlliedLoad.
+  this color from the [Colors]► list. Defaults to AlliedLoad for
+  the first side, to SovietLoad for the second side, and to
+  YuriLoad or Purple for the third side.
 
 The music theme for multiplayer matches can be customized with the following
 tag. For single player mission loading themes, please see Campaign Load

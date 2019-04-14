@@ -5,12 +5,15 @@
 Hunter Seeker
 
 
-The Hunter Seeker known from Tiberian Sun is a VehicleType that
-uses the Fly locomotor and has HunterSeeker=yes set. It is launched by
-the Hunter Seeker super weapon.
+The Hunter Seeker known from Tiberian Sun is a voxel VehicleType
+that uses the Fly locomotor and has HunterSeeker=yes set. It is launched
+by the Hunter Seeker super weapon.
 
 Refer to ModEnc  for
 more information about Hunter Seeker's movement and targeting logic.
+
+ SHP units are not supported. They do not respect FlightLevel
+  and might detonate before reaching their target.
 
  0.7
 

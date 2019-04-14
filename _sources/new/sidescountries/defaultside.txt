@@ -20,6 +20,11 @@ Crew, Survivors and Other Types
   The InfantryType that has a chance to be spawned when buildings with
   Factory=BuildingType owned by this side are destroyed or sold. Defaults
   to [General]►Engineer.
+
+   To make the Soviet Construction Yards spawn Soviet Engineers
+    instead of the Allied one as set by [General]Engineer, set
+    [Nod]Engineer=SENGINEER. Similarily, for Yuri's side set
+    [ThirdSide]Engineer=YENGINEER.
 [Side]Technician=InfantryType
   The InfantryType that has a chance to be spawned when armed objects
   owned by this side are destroyed or sold. Defaults to
@@ -100,7 +105,7 @@ Hunter Seeker Defaults
 [Side]HunterSeeker=VehicleType
   The unit used as default Hunter Seeker for the Hunter Seeker super weapon.
   Replaces [General]►GDIHunterSeeker and [General]►NodHunterSeeker
-  from Tiberian Sun. Set this to a VehicleType with Fly
+  from Tiberian Sun. Set this to a voxel VehicleType with Fly
   locomotor as specified under Hunter Seeker.
   Defaults to none.
 

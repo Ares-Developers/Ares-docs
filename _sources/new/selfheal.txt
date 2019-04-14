@@ -54,3 +54,4 @@ Self healing can be interrupted for an amount of time when a unit is damaged.
   Defaults to 0.
 
  0.B
+ 2.0

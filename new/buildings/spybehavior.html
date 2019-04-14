@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Spy Behavior &mdash; Ares 2.0 documentation</title>
+    <title>Spy Behavior &mdash; Ares 2.0p1 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0',
+        VERSION:     '2.0p1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 2.0p1 documentation" href="../../index.html" />
     <link rel="up" title="Buildings" href="index.html" />
     <link rel="next" title="Tech Structures Return to Neutral" href="techstructures.html" />
     <link rel="prev" title="Solid Buildings" href="solidbuildings.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="solidbuildings.html" title="Solid Buildings"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Buildings</a> &raquo;</li> 
       </ul>
@@ -120,13 +120,14 @@ work...</p>
 behavior (i.e. re-shrouding the enemy&#8217;s map down to just the terrain that they
 can presently see).</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►SpyEffect.RevealRadar=</span></code><span class="type definition"> (boolean)</span></span></dt>
-<dd><strong>NEW EFFECT</strong> Whether or not spying this enemy radar will reveal to you, the
-infiltrator, all of the terrain that they, the enemy, have thus far explored.
+<dd><strong>NEW EFFECT</strong> Whether or not spying this enemy radar will reveal all further
+unit movements to the infiltrating player. Enemy units will then scout the map
+like own units until the infiltrated building is destroyed, sold, or captured.
 The building must also have <span><code class="docutils literal"><span class="pre">Radar=yes</span></code></span> set.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►SpyEffect.KeepRadar=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd><strong>NEW EFFECT</strong> If enabled, a player infiltrating this building will still have
-access to the owning player&#8217;s radar even if the building is destroyed, sold or
-captured. Otherwise the spy effect is removed. Requires
+access to the owning player&#8217;s radar even if the building is destroyed, sold,
+or captured. Otherwise the spy effect is removed. Requires
 <span><code class="docutils literal"><span class="pre">SpyEffect.RevealRadar=yes</span></code></span> and a <span><code class="docutils literal"><span class="pre">Radar=yes</span></code></span> building.</dd>
 </dl>
 </div>
@@ -296,8 +297,8 @@ information.</p>
 <p>Reset a player&#8217;s build options gained by <a class="reference internal" href="../reverseengineerlogic.html"><em>Reverse Engineering</em></a>.</p>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►SpyEffect.UndoReverseEngineer=</span></code><span class="type definition"> (boolean)</span></span></dt>
-<dd><strong>NEW EFFECT</strong> Enables Spies to disable all reverse-engineered technology from
-that building. Defaults to <cite>no</cite>.</dd>
+<dd><strong>NEW EFFECT</strong> Whether spying this building will remove all technology the
+infiltrated player has reverse-engineered so far. Defaults to <cite>no</cite>.</dd>
 </dl>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 0.2.</span></p>
@@ -335,13 +336,13 @@ been planted. If negative, <span><code class="docutils literal"><span class="pre
         <li class="right" >
           <a href="solidbuildings.html" title="Solid Buildings"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Buildings</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2018, The Ares Contributors.
+        &copy; Copyright 2019, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

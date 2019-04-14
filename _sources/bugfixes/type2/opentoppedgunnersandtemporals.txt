@@ -8,7 +8,7 @@
 OpenTopped Gunner\ s and Temporal weapons
 
 
-Gunner=yes vehicles use the passenger's temporal device to fire  if it is
+Gunner=yes vehicles use the passenger's temporal device to fire if it is
 equipped with a Temporal=yes weapon. This can be done safely, and the
 device is replaced once the infantry exits the vehicle. If the Gunner=yes
 vehicle is also OpenTopped=yes, the infantry with the Temporal=yes

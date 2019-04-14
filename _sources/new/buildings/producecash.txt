@@ -20,7 +20,7 @@ placed. Also, ProduceCashStartup is no longer granted if a building is
 captured by a MultiplayPassive=yes house.
 
 Unlike in the original game, ProduceCashStartup does not have to be
-non-null for ProduceCashdelay and ProduceCashAmount to work.
+non-null for ProduceCashDelay and ProduceCashAmount to work.
 
  0.9
 

@@ -10,6 +10,7 @@ data thus could change during the course of the game, and the type of Voxel Anim
 would do less and less damage over time. Secondly, the game could crash if the
 Voxel Animation had no Warhead defined.
 
-Both issues have been fixed in Ares.
+Both issues have been fixed in Ares. If no warhead is set, the Voxel
+Animation will not deliver any damage.
 
  0.E

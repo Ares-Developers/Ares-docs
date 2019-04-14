@@ -25,7 +25,7 @@ The following are fully supported:
 + Cloakable is applied again
 + Spotlight is removed or created
 + AttachEffect on the type is removed or created
-+ ROT and TurretRot are reset
++ ROT and TurretROT are reset
 
  2.0
 

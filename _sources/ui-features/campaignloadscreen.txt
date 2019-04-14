@@ -15,8 +15,12 @@ missionmd.ini tag.
 
 [Mission]LoadScreenText.Color=Color scheme
   Text on the campaign loading screens for this mission will be drawn using this
-  color from the [Colors]► list. For example,
-  LoadScreenText.Color=AlliedLoad.
+  color from the [Colors]► list.
+
+  Defaults to SovietLoad if mission ID starts with SOV, to
+  YuriLoad if mission ID starts with YUR, to
+  LightGrey if mission ID starts with TUT, otherwise to
+  AlliedLoad.
 
  0.2
 

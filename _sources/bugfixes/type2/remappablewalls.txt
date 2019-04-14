@@ -6,9 +6,9 @@
 Remappable Walls
 
 
-Walls (i.e. OverlayTypes with Wall=yes) always use the same color
-in place of the remap for all players, regardless of the owning player's color.
-Ares will instead draw walls' remappable sections in their respective
-owner's colors.
+Walls (i.e. OverlayTypes with Wall=yes) were always rendered in
+the remap colors of the current player (the human playing on this computer),
+instead of using the remap color of the wall's actual owner. Ares will
+instead draw walls' remappable sections in their respective owner's colors.
 
  0.2
