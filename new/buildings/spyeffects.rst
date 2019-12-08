@@ -1,7 +1,7 @@
 .. index:: Spies; Multiple effects on a single building
 
-Spy Behavior
-~~~~~~~~~~~~
+Spy Effects
+~~~~~~~~~~~
 
 :game:`Yuri's Revenge` only permits a Spy to achieve one effect on infiltrating,
 which is determined by a hard-coded order of precedence. Spy infiltration logic

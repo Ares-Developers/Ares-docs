@@ -27,7 +27,7 @@ and updates are mentioned here only if they are notable.
 + **Build Time** can be :doc:`customized for each type </new/buildtime>`
 
 + **Spy Effects** to :doc:`build buildings, naval units or aircraft as veteran
-  </new/buildings/spybehavior>`
+  </new/buildings/spyeffects>`
 
 .. rubric:: Ares 1.0
 
@@ -117,7 +117,7 @@ and updates are mentioned here only if they are notable.
 + **Self Heal** :doc:`made customizable </new/selfheal>`
 
 + **Spies** can steal plans for :doc:`one-time or permanent super weapons
-  </new/buildings/spybehavior>`, and they can be deceived by :doc:`deploying
+  </new/buildings/spyeffects>`, and they can be deceived by :doc:`deploying
   fake buildings </new/buildings/fakes>`
 
 + **Disallow** players from getting the :doc:`enter or no-enter cursor on
@@ -341,7 +341,7 @@ and updates are mentioned here only if they are notable.
 + **Pips** :doc:`support more than only the hardcoded values </new/pips>`
 
 + **Spy Effects** now support :doc:`PCX cameos and persistent radar reveal
-  </new/buildings/spybehavior>`, and :doc:`spies can no longer infiltrate allied
+  </new/buildings/spyeffects>`, and :doc:`spies can no longer infiltrate allied
   buildings </bugfixes/type1/spyingalliedbuildings>`
   
 + **Gate** :doc:`sounds are now customizable </new/buildings/gates>`
