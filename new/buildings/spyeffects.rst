@@ -59,18 +59,23 @@ Power
 Money
 `````
 
-:tagdef:`[BuildingType]SpyEffect.StolenMoneyAmount=integer - credits`
-  **NEW EFFECT** The amount of credits that will be stolen from the enemy upon
-  spying this enemy building.
-  
-  The amount of money ultimately stolen from the enemy is always capped by the
-  amount of money they presently have (i.e. if
-  :tag:`SpyEffect.StolenMoneyAmount=500` but the enemy only has 200 credits then
-  you will only gain 200 credits from spying the building).
+The amount of money ultimately stolen from the enemy is always capped by the
+amount of money they presently have.
+
 :tagdef:`[BuildingType]SpyEffect.StolenMoneyPercentage=float - percentage`
   The percentage of the enemy's current credits that will be stolen from the
-  enemy upon spying this enemy building. Only has an effect if
-  :tag:`SpyEffect.StolenMoneyAmount=0`.
+  enemy upon spying this enemy building. Defaults to :value:`0%`.
+:tagdef:`[BuildingType]SpyEffect.StolenMoneyAmount=integer - credits`
+  **NEW EFFECT** The fixed amount of credits that will be stolen from the enemy
+  upon spying this enemy building. Defaults to :value:`0`.
+
+  If used together with :tag:`SpyEffect.StolenMoneyPercentage`, this defines the
+  maximum amount of money to steal.
+
+  .. quickstart:: If you want to express "Take three quarters of the enemy's
+    money, but no more than 10,000 credits", use both tags:
+    \ :tag:`SpyEffect.StolenMoneyPercentage=75%` and
+    \ :tag:`SpyEffect.StolenMoneyAmount=10000`.
 
 
 
