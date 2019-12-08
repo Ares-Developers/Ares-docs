@@ -9,7 +9,7 @@ Ivan Bombs
 ~~~~~~~~~~
 
 As with many other features of :game:`Yuri's Revenge`, the settings that control
-Crazy Ivan Bombs are global so you can't have multiple variations of them with
+Crazy Ivan Bombs are global so you cannot have multiple variations of them with
 their own controls. With :game:`Ares` it is now possible to create new Ivan
 Bomb-esque weapons -- new types of sticky bomb with whatever settings you like.
 
@@ -23,8 +23,7 @@ detonates it, if allowed.
 :tag:`CellSpread` of :value:`0.5` or more.
 
 .. versionadded:: 0.1
-.. versionchanged:: 0.5
-.. versionchanged:: 0.D
+.. versionchanged:: 3.0
 
 
 General Bomb Settings
@@ -34,9 +33,9 @@ When :tag:`IvanBomb=yes` is set on the weapon's warhead, the weapon can specify
 the following flags in order to customize that bomb:
 
 :tagdef:`[Weapon]IvanBomb.Delay=integer`
-  The number of frames that will elapse before the bomb detonates automatically.
-  Defaults to :tag:`[CombatDamage]IvanTimedDelay`.
-:tagdef:`[Weapon]IvanBomb.Warhead=WarheadType`
+  The number of frames that will elapse before a time bomb detonates
+  automatically. Defaults to :tag:`[CombatDamage]IvanTimedDelay`.
+:tagdef:`[Weapon]IvanBomb.Warhead=Warhead`
   The warhead that will be used when the bomb detonates. Defaults to
   :tag:`[CombatDamage]IvanWarhead`.
 :tagdef:`[Weapon]IvanBomb.Damage=integer`
@@ -75,15 +74,36 @@ Bomb Behavior
   to. Defaults to :value:`yes`.
 :tagdef:`[Weapon]IvanBomb.DestroysBridges=boolean`
   Whether or not this bomb can be used on Bridge Repair Huts in order to destroy
-  the corresponding Bridge. Defaults to :value:`yes`.
+  the corresponding bridge. Defaults to :value:`yes`.
   
-  .. note:: Bombs can always be attached to Bridge Huts, but the resulting
-    explosion will not destroy the bridge unless
+  .. note:: Bombs can always be attached to Bridge Repair Huts, but the
+    resulting explosion will not destroy the bridge unless
     \ :tag:`IvanBomb.DestroysBridges=yes` is set.
 
 
 Bomb Overlay Image
 ------------------
+
+A bomb overlay image file has to contain zero or more blocks (each consisting of
+two frames) of flickering images for time bombs, followed by a single, optional
+frame used as image for Death Bombs.
+
+The image file used for only Death Bombs thus might contain a single frame only,
+while the image file used only for time bombs are allowed to contain the
+flickering image blocks only and omit the last frame. If a bomb might be both,
+the image file has to contain images for both bomb types.
+
+.. image:: /images/bombcurs.png
+  :alt: Image of bombcurs.shp
+  :align: center
+
+The original :file:`bombcurs.shp` contains thirteen frames: six blocks of
+flickering images at the beginning, followed by one image at the end for the
+Death Bomb that was planned but cut from :game:`Red Alert 2`.
+
+Death Bombs will always display their only frame while for time bombs the
+animation defined by the flickering image blocks is stretched to play over the
+entire lifetime of the bomb defined by :tag:`IvanBomb.Delay`.
 
 :tagdef:`[Weapon]IvanBomb.Image=filename, *excluding*the .shp extension`
   The SHP file for the image to display over a unit that has a bomb attached to
@@ -91,22 +111,20 @@ Bomb Overlay Image
   the engine). If the image cannot be loaded then the game will fall back to the
   default :file:`bombcurs.shp`.
 :tagdef:`[Weapon]IvanBomb.FlickerRate=integer`
-  The rate at which the bomb SHP will flip back and forth between two frames to
-  give the impression of a flickering fuse. Must be higher than :value:`0`.
-  Defaults to :tag:`[CombatDamage]IvanIconFlickerRate`.
-  
-  The animation is slowed down to play over the entire lifetime of the bomb
-  (:tag:`IvanBomb.Delay`). The flicker rate is the number of frames between
-  alternating between the current frame and the following frame.
-  :tag:`IvanBomb.FlickerRate=5` means the current frame is shown 5 frames, then
-  the next one for 5 frames, then the current one again for 5 frames, ....
+  The number of frames at which the bomb image will alternate between the two
+  flickering images in a block to give the impression of a flickering fuse. If
+  :value:`0`, flickering is disabled. Defaults to
+  :tag:`[CombatDamage]IvanIconFlickerRate`.
 
-Originally this logic was hard-coded to ignore the last frame of the bomb SHP,
-which was originally planned to be used for Death Bombs. This hard-coding has
-been changed so that the whole SHP is now considered for the fuse, however this
-means that you'll now see that extra frame from :file:`bombcurs.shp`, unless you
-replace that SHP file.
+  :tag:`IvanBomb.FlickerRate=5` means the first frame is shown 5 frames, then
+  the second one for 5 frames, then the first one again for 5 more frames, ....
 
-.. image:: /images/bombcurs.png
-  :alt: Image of bombcurs.shp
-  :align: center
+  If flickering is disabled, all images in all blocks are played over the
+  lifetime of the bomb. The second frame of each block is not ignored and
+  it thus is not necessary to add an empty frame to fill up a block. Still, the
+  logic only deals in full flickering image blocks and will ignore the last
+  frame if the number of frames in the file is odd.
+
+.. note:: The logic works best if :tag:`IvanBomb.Delay` is a multiple of the
+  number of flickering image blocks and :tag:`IvanBomb.FlickerRate`. Then each
+  frame is played smoothly for the same amount of time.

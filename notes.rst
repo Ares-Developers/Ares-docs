@@ -80,12 +80,6 @@ artmd.ini
 :tag:`[TELE]SecondaryFireFLH=85,0,130`
 	See :doc:`/bugfixes/type2/radbeamsandwavesusingthewrongflh`.
 
-bombcurs.shp
-------------
-The :file:`bombcurs.shp` animation needs to have its last frame removed if you
-don't want to see the previously unused skull image. See
-:ref:`IvanBomb.FlickerRate <custom-ivan-bombs>`.
-
 ares.mix
 --------
 Mods should not include their own version of :file:`ares.mix`. This new MIX file
