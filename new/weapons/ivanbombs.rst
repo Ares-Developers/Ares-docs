@@ -22,21 +22,54 @@ detonates it, if allowed.
 :game:`Ares` now also supports shrapnel weapons, as long as they have a
 :tag:`CellSpread` of :value:`0.5` or more.
 
+.. versionadded:: 0.1
+.. versionchanged:: 0.5
+.. versionchanged:: 0.D
+
+
+General Bomb Settings
+---------------------
+
 When :tag:`IvanBomb=yes` is set on the weapon's warhead, the weapon can specify
 the following flags in order to customize that bomb:
 
+:tagdef:`[Weapon]IvanBomb.Delay=integer`
+  The number of frames that will elapse before the bomb detonates automatically.
+  Defaults to :tag:`[CombatDamage]IvanTimedDelay`.
 :tagdef:`[Weapon]IvanBomb.Warhead=WarheadType`
   The warhead that will be used when the bomb detonates. Defaults to
   :tag:`[CombatDamage]IvanWarhead`.
 :tagdef:`[Weapon]IvanBomb.Damage=integer`
   The damage that will be dealt when the bomb detonates. Defaults to
   :tag:`[CombatDamage]IvanDamage`.
+:tagdef:`[Weapon]IvanBomb.AttachSound=sound name`
+  The sound that will be played when the bomb is attached to a target. Defaults
+  to :tag:`[AudioVisual]BombAttachSound`.
+:tagdef:`[Weapon]IvanBomb.TickingSound=sound name`
+  The sound that will be played whilst the bomb is attached to a unit. In order
+  for this sound to loop correctly, the sound must have :tag:`Control=loop` set
+  in its INI section in :file:`soundmd.ini`. Defaults to
+  :tag:`[AudioVisual]BombTickingSound`.
+
+
+Bomb Behavior
+-------------
+
 :tagdef:`[Weapon]IvanBomb.DeathBomb=boolean`
   Whether this bomb will be a death bomb instead of a timed bomb when planted on
   enemy objects. Defaults to :value:`no`.
 :tagdef:`[Weapon]IvanBomb.DeathBombOnAllies=boolean`
   Whether this bomb will be a death bomb instead of a timed bomb when planted on
   allied objects. Defaults to :value:`no`.
+:tagdef:`[Weapon]IvanBomb.CanDetonateTimeBomb=boolean`
+  Whether or not players can manually detonate time bombs attached by this
+  weapon. Defaults to :tag:`[CombatDamage]CanDetonateTimeBomb`.
+:tagdef:`[Weapon]IvanBomb.CanDetonateDeathBomb=boolean`
+  Whether or not players can manually detonate death bombs attached by this
+  weapon. Defaults to :tag:`[CombatDamage]CanDetonateDeathBomb`.
+:tagdef:`[Weapon]IvanBomb.DetonateOnSell=boolean`
+  Whether attached bombs shall explode if the victim is sold. Otherwise, the
+  bomb will just be disarmed. Defaults to :value:`yes`.
 :tagdef:`[Weapon]IvanBomb.Detachable=boolean`
   Whether or not Engineers can remove this bomb from units it has been attached
   to. Defaults to :value:`yes`.
@@ -47,26 +80,11 @@ the following flags in order to customize that bomb:
   .. note:: Bombs can always be attached to Bridge Huts, but the resulting
     explosion will not destroy the bridge unless
     \ :tag:`IvanBomb.DestroysBridges=yes` is set.
-:tagdef:`[Weapon]IvanBomb.CanDetonateTimeBomb=boolean`
-  Whether or not players can manually detonate time bombs attached by this
-  weapon. Defaults to :tag:`[CombatDamage]CanDetonateTimeBomb`.
-:tagdef:`[Weapon]IvanBomb.CanDetonateDeathBomb=boolean`
-  Whether or not players can manually detonate death bombs attached by this
-  weapon. Defaults to :tag:`[CombatDamage]CanDetonateDeathBomb`.
-:tagdef:`[Weapon]IvanBomb.DetonateOnSell=boolean`
-  Whether attached bombs shall explode if the victim is sold. Otherwise, the
-  bomb will just be disarmed. Defaults to :value:`yes`.
-:tagdef:`[Weapon]IvanBomb.Delay=integer`
-  The number of frames that will elapse before the bomb detonates automatically.
-  Defaults to :tag:`[CombatDamage]IvanTimedDelay`.
-:tagdef:`[Weapon]IvanBomb.AttachSound=sound name`
-  The sound that will be played when the bomb is attached to a target. Defaults
-  to :tag:`[AudioVisual]BombAttachSound`.
-:tagdef:`[Weapon]IvanBomb.TickingSound=sound name`
-  The sound that will be played whilst the bomb is attached to a unit. In order
-  for this sound to loop correctly, the sound must have :tag:`Control=loop` set
-  in its INI section in :file:`soundmd.ini`. Defaults to
-  :tag:`[AudioVisual]BombTickingSound`.
+
+
+Bomb Overlay Image
+------------------
+
 :tagdef:`[Weapon]IvanBomb.Image=filename, *excluding*the .shp extension`
   The SHP file for the image to display over a unit that has a bomb attached to
   them, in the format "filename"(the ".shp" extension is automatically added by
@@ -92,7 +110,3 @@ replace that SHP file.
 .. image:: /images/bombcurs.png
   :alt: Image of bombcurs.shp
   :align: center
-
-.. versionadded:: 0.1
-.. versionchanged:: 0.5
-.. versionchanged:: 0.D
