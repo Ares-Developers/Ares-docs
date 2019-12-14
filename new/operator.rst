@@ -6,33 +6,36 @@
 Operator
 ~~~~~~~~
 
-Any :type:`TechnoType` can now require a specific :type:`InfantryType` to be
-among its passengers before it will function.
+:type:`BuildingType`\ s and :type:`VehicleType`\ s can now require specific
+:type:`InfantryType`\ s or :type:`VehicleType`\ s to be among its passengers
+before they will function.
 
-:tagdef:`[TechnoType]Operator=string, either an InfantryType or "_ANY_"`
-  Specifies the :type:`InfantryType` that must be among the :type:`TechnoType`'s
-  passengers before the :type:`TechnoType` will function. If ":value:`_ANY_`"
-  (sans quotes) is specified then it doesn't matter which :type:`InfantryType`
-  is inside as long as some :type:`InfantryType` is. Use :value:`none` to remove
-  the requirement of having an operator. Defaults to :value:`none`.
-
+:tagdef:`[TechnoType]Operator=list of TechnoTypes or "_ANY_"`
+  Specifies a list of :type:`InfantryType`\ s and :type:`VehicleType`\ s of
+  which at least one unit must be among the passengers before this object will
+  function. If ":value:`_ANY_`" (sans quotes) is specified, then it does not
+  matter which passenger is inside, as long as any is. Use :value:`none` to
+  remove the requirement of having an operator. Defaults to :value:`none`.
 
 On the :type:`TechnoType` you will need to set :tag:`Passengers=1` (or higher)
 and :tag:`SizeLimit=1` (or higher).
 
-For :type:`BuildingTypes` you will also need to set :tag:`InfantryAbsorb=yes`.
+For :type:`BuildingTypes` you will also need to set :tag:`InfantryAbsorb=yes` or
+:tag:`UnitAbsorb=yes`.
 
 If the needed passenger is not inside then the :type:`TechnoType` will power
 down in a similar fashion to the Robot Tank when the Robot Control Centre is
 offline -- the unit will not be able to move or fire.
 
-:type:`BuildingTypes` without their Operator will not be able to fire their
+:type:`BuildingType`\ s without their Operator will not be able to fire their
 weapon, if they have one.
 
 No other building-specific functions will be affected (e.g. providing power,
 being a factory, undeploying, super weapons, radar, etc).
 
-Mirage Tanks without their Operator will still maintain their disguise.
+Units and structures will not cloak themselves if they are not operated, but
+they can still be cloaked by Cloak Generators. Mirage Tanks without their
+Operator will still maintain their disguise.
 
 
 + Operator logic has no effect on Service Depots -- the Operator cannot enter.
@@ -64,3 +67,4 @@ Mirage Tanks without their Operator will still maintain their disguise.
   AI from building anything that requires an Operator.
 
 .. versionadded:: 0.1
+.. versionchanged:: 3.0
