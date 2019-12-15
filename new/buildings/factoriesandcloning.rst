@@ -53,6 +53,12 @@ Cloning options
   :tag:`CloningFacility=yes` or their respective :tag:`ClonedAt` buildings.
   Defaults to :value:`yes`.
 
+:tagdef:`[InfantryOrVehicle]ClonedAs=TechnoType`
+  The type to use as override when producing a clone of this object. If not set,
+  the clones will be made of the same type as this object. Units can only be
+  cloned as :type:`VehicleType`, and infantry can only be cloned as
+  :type:`InfantryType`. Defaults to :value:`none`.
+
 :tagdef:`[InfantryOrVehicle]ClonedAt=list of BuildingTypes`
   Each building of the types mentioned in the list owned by the same house will
   kick out an extra clone of this object for free. If a building is blocked, the
@@ -67,3 +73,4 @@ Cloning options
     \ :tag:`CloningFacility=yes` will clone the object.
 
 .. versionadded:: 0.2
+.. versionchanged:: 3.0
