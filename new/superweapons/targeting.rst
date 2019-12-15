@@ -115,6 +115,11 @@ Define the way the AI selects eligible targets to fire the super weapon at.
   base center. If the owner has not settled for a favorite enemy yet, tries to
   find a location around the owning player's base center.
 
++ :value:`DropPod`
+
+  Fires at a randomly chosen land cell in one of the four outer sectors around
+  the owning player's base center.
+
 + :value:`Offensive`
 
   Selects a valid target using the Ion Cannon rules. Ignores cloaked targets.
@@ -240,6 +245,8 @@ preferred target type is set using map action 35, they are not checked.
 | :value:`ForceShield`      | do not use                        | do not use                | no                     | defensive              | yes       |
 +---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
 | :value:`ParaDrop`         | do not use                        | do not use                | no                     | offensive, base center | yes       |
++---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
+| :value:`DropPod`          | do not use                        | do not use                | no                     | base center            | yes       |
 +---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
 | :value:`Offensive`        | :value:`infantry,units,buildings` | :value:`enemies`          | yes                    | nothing                | yes       |
 +---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+

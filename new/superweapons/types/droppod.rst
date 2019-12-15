@@ -17,7 +17,7 @@ pods.
 Default values for general tags:
 
 :tagdef:`[SuperWeapon]SW.AITargeting=enumeration`
-  Defaults to :value:`ParaDrop`.
+  Defaults to :value:`DropPod`.
 :tagdef:`[SuperWeapon]EVA.Detected=EVA event`
   Defaults to :value:`EVA_DropPodDetected`.
 :tagdef:`[SuperWeapon]EVA.Ready=EVA event`
@@ -55,3 +55,4 @@ See :doc:`Drop Pods </new/droppod>` for information about the global defaults
 and other related additions.
 
 .. versionadded:: 0.7
+.. versionchanged:: 3.0
