@@ -160,6 +160,11 @@ Define the way the AI selects eligible targets to fire the super weapon at.
   Fires at what the game considers the base center of the firing player's
   favorite enemy.
 
++ :value:`LightningRandom`
+
+  Targets a random cell no matter its contents, and is not otherwise constrained
+  except for checking Designators and Inhibitors.
+
 
 :tagdef:`[SuperWeapon]SW.AIRequiresTarget=enumeration none|land|water|empty|infantry|units|buildings|all`
   Specifies which targets will be considered eligible by AI players or human
@@ -263,6 +268,8 @@ preferred target type is set using map action 35, they are not checked.
 | :value:`Base`             | do not use                        | do not use                | no                     | base center            | yes       |
 +---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
 | :value:`EnemyBase`        | do not use                        | do not use                | yes                    | base center            | yes       |
++---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
+| :value:`LightningRandom`  | N/A                               | N/A                       | no                     | nothing                | yes       |
 +---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
 
 If you define the :tag:`SW.AIRequiresTarget` or :tag:`SW.AIRequiresHouse` when
