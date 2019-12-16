@@ -48,3 +48,21 @@ Affected Targets
   valid. For example, :tag:`SW.AffectsTarget=land,buildings` affects all
   buildings that aren't water-bound, :tag:`SW.AffectsTarget=water` affects every
   water cell, occupied or empty.
+
+
+Charging Settings
+-----------------
+
+:tagdef:`[SuperWeapon]SW.InitialReady=boolean`
+  Whether the first super weapon of this type will be available immediately
+  after the super weapon becomes available. Once the super weapon has been
+  fired, it will charge normally. Defaults to :value:`no`.
+:tagdef:`[SuperWeapon]SW.VirtualCharge=boolean`
+  Once the super weapon becomes available, it will charge continuously, even if
+  the the owning player loses all buildings that provide it. The super weapon
+  will continue to charge in the background or outside the map. When the cameo
+  is removed and added again, the super weapon will appear with the cameo charge
+  already partially progressed instead of restarting to charge. Defaults to
+  :value:`no`.
+
+.. versionadded:: 3.0

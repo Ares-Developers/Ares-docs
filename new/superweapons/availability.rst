@@ -78,3 +78,65 @@ become available if its :tag:`AuxBuilding` requirement is satisfied.
   availability do not support building animations.
 
 .. versionadded:: 0.9
+
+
+.. index:: Super Weapons; Available only for human or AI players
+
+Only for Human or AI Players
+----------------------------
+
+Super weapons can be restricted to be used by houses controlled by human or AI
+players only. This allows to hide special super weapons the AI might use to gain
+an advantage from human players.
+
+:tagdef:`[SuperWeapon]SW.AllowPlayer=boolean`
+  Whether this super weapon will be available to human players. Defaults to
+  :value:`yes`.
+
+:tagdef:`[SuperWeapon]SW.AllowAI=boolean`
+  Whether this super weapon will be available to AI players. Defaults to
+  :value:`yes`.
+
+.. versionadded:: 3.0
+
+
+.. index:: Super Weapons; Available only a number of times
+
+Limited Number of Shots
+-----------------------
+
+Super weapons can become unavailable after having been fired a certain number of
+times. The super weapon cameo will disappear after the super weapon became
+unavailable.
+
+:tagdef:`[SuperWeapon]SW.Shots=integer`
+  How often this super weapon is allowed to fire before becoming unavailable.
+  Use :value:`-1` to allow unlimited firing. Is not supported for Charge Drain
+  super weapons. Defaults to :value:`-1`.
+
+.. note:: Super weapons granted by crates or map actions will also count against
+  this limit. This might change in the future.
+
+.. versionadded:: 3.0
+
+
+.. index:: Super Weapons; Available without building
+
+Always Granted Without Building
+-------------------------------
+
+With :game:`Ares` it is possible to use super weapons that are not tied to a
+building that provides them. Instead, the always granted super weapon will
+become immediately.
+
+This setting still respects :tag:`AuxBuilding`, :tag:`SW.AuxBuidings`,
+:tag:`SW.NegBuildings`, :tag:`SW.ForbiddenHouses`, :tag:`SW.RequiredHouses`,
+:tag:`SW.AllowPlayer` and :tag:`SW.AllowAI`.
+
+:tagdef:`[SuperWeapon]SW.AlwaysGranted=boolean`
+  Whether this super weapon is not provided by any particular building but is
+  instead always available as long as the player has not been defeated. Defaults
+  to :value:`no`.
+
+.. versionadded:: 3.0
+

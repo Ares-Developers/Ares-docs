@@ -20,6 +20,9 @@ Messages
 :tagdef:`[SuperWeapon]Message.InsufficientFunds=CSF label`
   Message displayed if the firing player doesn't have enough money to launch
   this super weapon.
+:tagdef:`[SuperWeapon]Message.CannotFire=CSF label`
+  Message displayed to the owning player if firing a super weapon using
+  AITargeting fails. Defaults to :value:`MSG:CannotFire`.
 :tagdef:`[SuperWeapon]Message.FirerColor=boolean`
   Messages are displayed in the firing house's color scheme. Defaults to
   :value:`no`.

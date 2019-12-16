@@ -11,6 +11,17 @@ General Settings
 
 These settings allow enabling AI targeting even for human players.
 
+:tagdef:`[SuperWeapon]SW.UseAITargeting=boolean`
+  Whether AI targeting will decide the target used when firing this super
+  weapon. If :value:`yes`, clicking the cameo will not allow manual target
+  selection and instead fire the super weapon at an automatically determined
+  location. Defaults to :value:`no`.
+
+  All applicable AI targeting constraints have to be satisfied for the super
+  weapon to fire and actually discharge. If the constraints are not satisfied,
+  the cameo will be darkened. If the player tries to fire the super weapon
+  anyhow, the message :tag:`Message.CannotFire` is displayed.
+
 :tagdef:`[SuperWeapon]SW.AutoFire=boolean`
   Sets whether this super weapon will be launched automatically once ready even
   for human players. If set to :value:`yes`, the AI targeting options are used
@@ -28,6 +39,7 @@ These settings allow enabling AI targeting even for human players.
     Dominator, if another super weapon of this type is currently active).
 
 .. versionadded:: 0.2
+.. versionchanged:: 3.0
 
 
 .. index::
@@ -161,6 +173,21 @@ Define the way the AI selects eligible targets to fire the super weapon at.
   Fires at what the game considers the base center of the firing player's
   favorite enemy.
 
++ :value:`Attack`
+
+  Fires like :value:`NoTarget` when the last attack on a building was recent.
+
++ :value:`LowPower`
+
+  Fires to the same cell as :value:`NoTarget` when the owning house has
+  insufficient power.
+
++ :value:`LowPowerAttack`
+
+  Fires like :value:`LowPower`, but only if the last attack on a building was
+  recent. This can be used to activate auxiliary power or to force-overcharge
+  base defenses.
+
 + :value:`LightningRandom`
 
   Targets a random cell no matter its contents, and is not otherwise constrained
@@ -177,9 +204,82 @@ Define the way the AI selects eligible targets to fire the super weapon at.
   owned automatically fired super weapons. The default value depends on the
   :tag:`SW.AITargeting` setting. See the table below.
 
-.. versionadded:: 0.2
+:tagdef:`[SuperWeapon]SW.AITargeting.Constraints=enumeration SW Targeting Constraints`
+  A comma-separated list of constraints that all have to be satisfied for the
+  super weapon to fire. Defaults depend on the :tag:`Type=`.
 
-.. versionchanged:: 0.9
++ :value:`None`
+
+  No constraint.
+
++ :value:`Enemy`
+
+  This targeting mode will only select a target automatically if the house has
+  settled for a favorite enemy player. This is usually determined when a player
+  is attacked. Without a favorite enemy, the super weapon will not fire.
+
++ :value:`Offensive_Cell_Set`
+
+  Requires the offensive cell to be set by Map Action 135. In combination with
+  the :value:`offensive` preference, can be used to create user-triggered super
+  weapons at a location the mapper decides.
+
++ :value:`Offensive_Cell_Clear`
+
+  Requires the offensive cell to be not set by Map Action 135.
+
++ :value:`Defensive_Cell_Set`
+
+  Requires the defensive cell to be set by Map Action 140. In combination with
+  the :value:`defensive` preference, can be used to create user-triggered super
+  weapons at a location the mapper decides.
+
++ :value:`Defensive_Cell_Clear`
+
+  Requires the defensive cell to be not set by Map Action 140.
+
++ :value:`LightningStorm_Inactive`
+
+  Satisfied if there currently is no Lightning Storm manifesting or active. This
+  constraint does not apply to human players manually firing the super weapon.
+
++ :value:`Dominator_Inactive`
+
+  Satisfied if there currently is no Psychic Dominator active. This constraint
+  does not apply to human players manually firing the super weapon.
+
++ :value:`Attacked`
+
+  Satisfied if the firing house has been attacked recently. This constraint does
+  not apply to human players manually firing the super weapon.
+
++ :value:`LowPower`
+
+  Satisfied if the firing house currently has low power. This constraint does
+  not apply to human players manually firing the super weapon.
+
+
+:tagdef:`[SuperWeapon]SW.AITargeting.Preference=enumeration SW Targeting Preference`
+  The preference overrides the actual targeting. As long as these overrides are
+  set, the super weapons will prefer these set targets. Defaults depend on the
+  :tag:`Type=`.
+
++ :value:`None`
+
+  No preference.
+
++ :value:`Offensive`
+
+  Use the the offensive cell if set by Map Action 135. Use Map Action 136 to
+  clear the offensive cell.
+
++ :value:`Defensive`
+
+  Use the the defensive cell if set by Map Action 140. Use Map Action 141 to
+  clear the defensive cell.
+
+.. versionadded:: 0.2
+.. versionchanged:: 3.0
 
 
 Mechanisms
@@ -217,61 +317,49 @@ type always takes precedence. See the specific super weapon type documentation
 for the actual values. If no specific value is given, the value from this table
 is used.
 
-**Requires Enemy** means that this targeting mode will only select a target
-automatically if the house has settled for a favorite enemy player. This is
-usually determined when a player is attacked. Without a favorite enemy, the
-super weapon will not fire.
-
-The **Preference** is overriding the actual targeting. Offensive targets are set
-using the map action 135. Defensive targets are set using map action 140. As
-long as these overrides are set, the super weapons will prefer these targets.
-Super weapons might also hold and stop firing as long as an override is set.
-They will resume once the override is cleared using the corresponding map
-action.
-
 Most targeting modes support the new **extra** features added by :game:`Ares`.
 That is maximum and minimum ranges, designators and inhibitors. Note that if a
 preferred target type is set using map action 35, they are not checked.
 
-+---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
-| :tag:`SW.AITargeting`     | :tag:`SW.AIRequiresTarget`        | :tag:`SW.AIRequiresHouse` | Requires Enemy         | Preference             | Extras    |
-+===========================+===================================+===========================+========================+========================+===========+
-| :value:`None`             | N/A                               | N/A                       | N/A                    | N/A                    | N/A       |
-+---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
-| :value:`Nuke`             | :value:`infantry,units,buildings` | :value:`enemies`          | yes                    | offensive              | yes       |
-+---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
-| :value:`LightningStorm`   | :value:`infantry,units,buildings` | :value:`enemies`          | yes                    | offensive              | yes       |
-+---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
-| :value:`PsychicDominator` | :value:`infantry,units`           | :value:`all`              | yes                    | hold if offensive      | yes       |
-+---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
-| :value:`GeneticMutator`   | :value:`infantry`                 | :value:`all`              | no                     | hold if offensive      | yes       |
-+---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
-| :value:`IronCurtain`      | do not use                        | do not use                | no                     | nothing                | no        |
-+---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
-| :value:`ForceShield`      | do not use                        | do not use                | no                     | defensive              | yes       |
-+---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
-| :value:`ParaDrop`         | do not use                        | do not use                | no                     | offensive, base center | yes       |
-+---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
-| :value:`DropPod`          | do not use                        | do not use                | no                     | base center            | yes       |
-+---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
-| :value:`Offensive`        | :value:`infantry,units,buildings` | :value:`enemies`          | yes                    | nothing                | yes       |
-+---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
-| :value:`MultiMissile`     | :value:`buildings`                | :value:`none`             | yes                    | offensive              | yes       |
-+---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
-| :value:`HunterSeeker`     | N/A                               | N/A                       | yes                    | nothing                | no        |
-+---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
-| :value:`NoTarget`         | N/A                               | N/A                       | no                     | nothing                | no        |
-+---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
-| :value:`Stealth`          | :value:`infantry,units,buildings` | :value:`enemies`          | no                     | nothing                | yes       |
-+---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
-| :value:`Self`             | :value:`none`\ 1)                 | do not use                | no                     | nothing                | yes       |
-+---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
-| :value:`Base`             | do not use                        | do not use                | no                     | base center            | yes       |
-+---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
-| :value:`EnemyBase`        | do not use                        | do not use                | yes                    | base center            | yes       |
-+---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
-| :value:`LightningRandom`  | N/A                               | N/A                       | no                     | nothing                | yes       |
-+---------------------------+-----------------------------------+---------------------------+------------------------+------------------------+-----------+
++---------------------------+-----------------------------------+---------------------------+--------------------------------------------------------+---------------------------------+-----------+
+| :tag:`SW.AITargeting`     | :tag:`SW.AIRequiresTarget`        | :tag:`SW.AIRequiresHouse` | :tag:`SW.AITargeting.Constraints`                      | :tag:`SW.AITargeting.Preference`| Extras    |
++===========================+===================================+===========================+========================================================+=================================+===========+
+| :value:`None`             | N/A                               | N/A                       | :value:`none`                                          | :value:`none`                   | N/A       |
++---------------------------+-----------------------------------+---------------------------+--------------------------------------------------------+---------------------------------+-----------+
+| :value:`Nuke`             | :value:`infantry,units,buildings` | :value:`enemies`          | :value:`enemy`                                         | :value:`offensive`              | yes       |
++---------------------------+-----------------------------------+---------------------------+--------------------------------------------------------+---------------------------------+-----------+
+| :value:`LightningStorm`   | :value:`infantry,units,buildings` | :value:`enemies`          | :value:`enemy,lightningstorm_inactive`                 | :value:`offensive`              | yes       |
++---------------------------+-----------------------------------+---------------------------+--------------------------------------------------------+---------------------------------+-----------+
+| :value:`PsychicDominator` | :value:`infantry,units`           | :value:`all`              | :value:`enemy,dominator_inactive,offensive_cell_clear` | :value:`none`                   | yes       |
++---------------------------+-----------------------------------+---------------------------+--------------------------------------------------------+---------------------------------+-----------+
+| :value:`GeneticMutator`   | :value:`infantry`                 | :value:`all`              | :value:`offensive_cell_clear`                          | :value:`none`                   | yes       |
++---------------------------+-----------------------------------+---------------------------+--------------------------------------------------------+---------------------------------+-----------+
+| :value:`IronCurtain`      | do not use                        | do not use                | :value:`none`                                          | :value:`none`                   | no        |
++---------------------------+-----------------------------------+---------------------------+--------------------------------------------------------+---------------------------------+-----------+
+| :value:`ForceShield`      | do not use                        | do not use                | :value:`none`                                          | :value:`defensive`              | yes       |
++---------------------------+-----------------------------------+---------------------------+--------------------------------------------------------+---------------------------------+-----------+
+| :value:`ParaDrop`         | do not use                        | do not use                | :value:`none`                                          | :value:`offensive`              | yes       |
++---------------------------+-----------------------------------+---------------------------+--------------------------------------------------------+---------------------------------+-----------+
+| :value:`DropPod`          | do not use                        | do not use                | :value:`enemy`                                         | :value:`none`                   | yes       |
++---------------------------+-----------------------------------+---------------------------+--------------------------------------------------------+---------------------------------+-----------+
+| :value:`Offensive`        | :value:`infantry,units,buildings` | :value:`enemies`          | :value:`enemy`                                         | :value:`none`                   | yes       |
++---------------------------+-----------------------------------+---------------------------+--------------------------------------------------------+---------------------------------+-----------+
+| :value:`MultiMissile`     | :value:`buildings`                | :value:`none`             | :value:`enemy`                                         | :value:`offensive`              | yes       |
++---------------------------+-----------------------------------+---------------------------+--------------------------------------------------------+---------------------------------+-----------+
+| :value:`HunterSeeker`     | N/A                               | N/A                       | :value:`enemy`                                         | N/A                             | no        |
++---------------------------+-----------------------------------+---------------------------+--------------------------------------------------------+---------------------------------+-----------+
+| :value:`NoTarget`         | N/A                               | N/A                       | :value:`none`                                          | N/A                             | no        |
++---------------------------+-----------------------------------+---------------------------+--------------------------------------------------------+---------------------------------+-----------+
+| :value:`Stealth`          | :value:`infantry,units,buildings` | :value:`enemies`          | :value:`none`                                          | :value:`none`                   | yes       |
++---------------------------+-----------------------------------+---------------------------+--------------------------------------------------------+---------------------------------+-----------+
+| :value:`Self`             | :value:`none`\ 1)                 | do not use                | :value:`none`                                          | :value:`none`                   | yes       |
++---------------------------+-----------------------------------+---------------------------+--------------------------------------------------------+---------------------------------+-----------+
+| :value:`Base`             | do not use                        | do not use                | :value:`none`                                          | :value:`none`                   | yes       |
++---------------------------+-----------------------------------+---------------------------+--------------------------------------------------------+---------------------------------+-----------+
+| :value:`EnemyBase`        | do not use                        | do not use                | :value:`enemy`                                         | :value:`none`                   | yes       |
++---------------------------+-----------------------------------+---------------------------+--------------------------------------------------------+---------------------------------+-----------+
+| :value:`LightningRandom`  | N/A                               | N/A                       | :value:`none`                                          | :value:`none`                   | yes       |
++---------------------------+-----------------------------------+---------------------------+--------------------------------------------------------+---------------------------------+-----------+
 
 If you define the :tag:`SW.AIRequiresTarget` or :tag:`SW.AIRequiresHouse` when
 the table says *do not use*, you might render the super weapon unable to fire.
