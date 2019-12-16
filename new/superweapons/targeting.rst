@@ -12,19 +12,20 @@ General Settings
 These settings allow enabling AI targeting even for human players.
 
 :tagdef:`[SuperWeapon]SW.AutoFire=boolean`
-  Sets whether this super weapon should be launched automatically even for human
-  players. If this is set to :value:`yes`, the AI targeting options are used to
-  infer the best target cell. Defaults to :value:`no`.
+  Sets whether this super weapon will be launched automatically once ready even
+  for human players. If set to :value:`yes`, the AI targeting options are used
+  to infer the target cell. Defaults to :value:`no`.
 
 :tagdef:`[SuperWeapon]SW.ManualFire=boolean`
   Sets whether this super weapon can be manually fired by the owning player. If
   set to :value:`no`, the player will not be able to get a selection cursor for
   this super weapon when clicking the cameo. This setting is ignored if
   :tag:`SW.AutoFire=no` is set, because the player would have no way to fire
-  this super weapon. You can use this on auto-firing super weapons where the
-  targeting mode might prevent it from being fired (like the Lightning Storm or
-  Psychic Dominator, if another super weapon of this type is currently active).
-  Defaults to :value:`yes`.
+  this super weapon. Defaults to :value:`yes`.
+
+  .. note:: You can use this on auto-firing super weapons where the targeting
+    mode might prevent it from being fired (like the Lightning Storm or Psychic
+    Dominator, if another super weapon of this type is currently active).
 
 .. versionadded:: 0.2
 
@@ -42,9 +43,9 @@ These settings only apply to human players.
   the map. Default is :value:`yes`.
 
 :tagdef:`[SuperWeapon]SW.RequiresTarget=enumeration none|land|water|empty|infantry|units|buildings`
-  Which items this super weapon can fire upon. Hovering above an allowed item
-  will show the :tag:`Cursor`, otherwise the player gets the :tag:`NoCursor` and
-  it is not possible to launch the super weapon. For an example see
+  Which items this super weapon can fire at. Hovering above an allowed item will
+  show the :tag:`Cursor`, otherwise the player gets the :tag:`NoCursor` and it
+  is not possible to launch the super weapon. For an example see
   :tag:`SW.AffectsTarget=`.
   
   .. note:: Please be aware of the problems that can arise if this and
@@ -52,7 +53,7 @@ These settings only apply to human players.
     the super weapon to affect anything.
 
 :tagdef:`[SuperWeapon]SW.RequiresHouse=enumeration none|owner|allies|team|enemies|all`
-  Which house's items this super weapon can fire upon.
+  Which house's items this super weapon can fire at.
 
 .. versionadded:: 0.2
 

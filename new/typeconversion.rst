@@ -21,11 +21,16 @@ The following are fully supported:
 
 + changing :tag:`Strength` will keep the units health the same
 + changing :tag:`Armor`
-+ Ammo is deduced if new type has less :tag:`Ammo`
++ Ammo is reduced if new type has less :tag:`Ammo`
 + :tag:`Cloakable` is applied again
 + Spotlight is removed or created
 + AttachEffect on the type is removed or created
 + :tag:`ROT` and :tag:`TurretROT` are reset
++ All prerequisites are rechecked once a unit converts
+
+.. note:: Converted units no longer count as original units for
+  :tag:`BuildLimit` checks. As with all other prerequisite checks, units will
+  not be disallowed to convert, even if it violates :tag:`BuildLimit` rules.
 
 .. versionadded:: 2.0
 

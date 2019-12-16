@@ -10,6 +10,9 @@ This does not affect the way :tag:`DisableableFromShell` works. Only the super
 weapon set as :tag:`SuperWeapon` is checked for this tag, and the building
 becomes unbuildable even if the super weapon is unavailable.
 
+Even if all super weapons a building provides are disabled by whatever
+restriction, it will still play the Super animation.
+
 
 .. index::
   Super Weapons; Availability by country

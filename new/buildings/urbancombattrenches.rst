@@ -244,6 +244,6 @@ You can now specify which infantries are allowed to enter into a building.
 
 :tagdef:`[BuildingType]CanBeOccupiedBy=list of InfantryTypes`
   Lists the units which are allowed to enter to this building. Requires
-  :tag:`Occupier=yes` on the infantry.
+  :tag:`CanBeOccupied=yes` and :tag:`Occupier=yes` on the infantry.
 
 .. versionadded:: 0.2
