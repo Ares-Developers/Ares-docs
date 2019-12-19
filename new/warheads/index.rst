@@ -22,3 +22,4 @@ Warheads
 	berserk
 	deathweapon
 	unitlost
+	culling
