@@ -324,7 +324,7 @@ and updates are mentioned here only if they are notable.
 + **C4 veteran ability** has been restored back :doc:`into working state
   </bugfixes/type2/c4veteranability>`
 
-+ **EVA message** :doc:`in case a unit is destroyed </new/unitlost>`
++ **EVA message** :doc:`in case a unit is destroyed </new/losteva>`
 
 
 .. rubric:: Ares 0.4
