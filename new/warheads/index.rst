@@ -21,5 +21,6 @@ Warheads
 	infantry
 	berserk
 	deathweapon
+	diesound
 	unitlost
 	culling
