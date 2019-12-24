@@ -127,3 +127,34 @@ weapons, armor and so on.
   water. Defaults to :value:`none`.
 
 .. versionadded:: 2.0
+
+
+.. _convert-script:
+
+.. index:: TechnoTypes; Type change by Script Action
+
+Triggered by Team Script
+------------------------
+
+This tag generalizes the relationship that existed since :game:`Tiberian Sun`,
+where team members of the hardcoded :type:`UnitType`\ s :tag:`[TRUCKA]` and
+:tag:`[TRUCKB]` could be converted between each other by two Team Scripts. This
+gave the impression of cargo trucks loading or unloading, which was the only
+purpose of this logic and limited to exactly this combination of types.
+
+:game:`Ares` allows to define a type to convert to for each individual type. See
+:ref:`Convert Type Team Script <script-converttype>` for how to trigger the
+conversion.
+
+:tagdef:`[TechnoType]Convert.Script=TechnoType`
+  The type to convert an object to when executing the Convert Type Team Script.
+  Defaults to :value:`none`.
+
+Because the type changes immediately when the conversion is triggered, you
+cannot generally assume the units to be standing still, idling. Thus, changing
+locomotors is not supported, while changing other movement settings or weapons
+might not work reliably. It is possible to change type settings unrelated to
+moving and firing, though: Add the ability to deploy, remove the restriction to
+manually unload, change the image or the Death Weapon, ...
+
+.. versionadded:: 3.0
