@@ -27,6 +27,11 @@ Unit Delivery specific tags:
   named :value:`Civilian`, :value:`special` is the country named
   :value:`Special` and :value:`neutral` is the country named :value:`Neutral`.
   Defaults to :value:`invoker`.
+:tagdef:`[SuperWeapon]Deliver.BaseNormal=boolean`
+  Whether other buildings can be built adjacent to buildings delivered using
+  this super weapon. If :value:`yes`, normal base space rules will apply. If set
+  to :value:`no`, delivered buildings will not provide base space to build
+  adjacent to. Defaults to :value:`yes`.
 
 
 The delivery of the units happens all at once, after firing the super weapon and

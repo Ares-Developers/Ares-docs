@@ -79,6 +79,9 @@ Chronosphere specific tags:
   target location, otherwise the buildings will stay at the source location.
   This function will not spare units that have been deployed into buildings.
   Defaults to :value:`yes`.
+:tagdef:`[SuperWeapon]Chronosphere.KillCargo=boolean`
+  Whether all passengers and occupants should be killed when the object is
+  chronshifted. Defaults to :value:`no`.
 
 
 Other changes:
