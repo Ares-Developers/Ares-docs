@@ -25,3 +25,4 @@ well as custom tags that only apply to this type.
 	hunterseeker
 	droppod
 	empulse
+	battery
