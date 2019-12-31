@@ -83,6 +83,8 @@ cursor without also changing the original cursors.
   vehicles. Defaults to the :value:`Enter`.
 + :value:`Sabotage`: used for Saboteur infantry on valid target buildings.
   Defaults to the :value:`Enter`.
++ :value:`RepairTrench`: used for Engineers on trench buildings to rebuild.
+  Defaults to the :value:`Repair`.
 
 .. note:: The default cursors might change. :game:`Ares` might add more special
   cursors to differentiate actions in a later version, change the defaults of

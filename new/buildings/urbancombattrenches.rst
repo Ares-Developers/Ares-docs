@@ -131,9 +131,9 @@ Advanced Rubble is implemented in a similar way to other upgrade systems in
 :tagdef:`[BuildingType]Rubble.Destroyed=BuildingType`
   The new :type:`BuildingType` that this :type:`BuildingType` will transform
   into upon destruction. By default the building will be created with maximum
-  :tag:`Strength`. Engineers will always get a repair cursor over the building.
-  Buildings that are created via `Rubble.Destroyed` will have the following
-  properties forced upon them:
+  :tag:`Strength`. Engineers will always get the cursor :value:`RepairTrench`
+  on the building. Buildings that are created via `Rubble.Destroyed` will have
+  the following properties forced upon them:
 
   ::
 
