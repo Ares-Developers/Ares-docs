@@ -34,9 +34,9 @@ negative to shorten the distance.
 
 
 
-.. _script-ironcurtain:
-
 .. index:: Scripts; Iron Curtain team script extended
+
+.. _script-ironcurtain:
 
 :captiontag:`Iron Curtain` (55)
 ```````````````````````````````
@@ -112,9 +112,9 @@ The format is :value:`67,0`.
 
 
 
-.. _script-converttype:
-
 .. index:: Scripts; Convert Type
+
+.. _script-converttype:
 
 :captiontag:`Convert Type` (68)
 ```````````````````````````````
