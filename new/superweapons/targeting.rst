@@ -367,3 +367,8 @@ the table says *do not use*, you might render the super weapon unable to fire.
 \ 1) :value:`Self` always only checks buildings owned by the owning player. You
 can only use :value:`land`, :value:`water`, and :value:`none` here. All other
 values are invalid.
+
+.. warning:: If a targeting mode is constrained to require (:value:`enemy`), the
+  targeting mode might not work if this constraint is not defined. For example,
+  if the mode by design only considers the buildings owned by the favorite
+  enemy, there's nothing to chose from, thus no target can be picked.

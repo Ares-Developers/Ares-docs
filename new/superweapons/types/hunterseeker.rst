@@ -51,10 +51,13 @@ Hunter Seekers might pick other targets while in flight. They will not target
 objects under the effect of the Iron Curtain or objects currently being warped
 out of time.
 
+If the unit used as Hunter Seeker has :tag:`Harvester=yes` set, the unit will go
+on a harvest mission automatically.
+
 See :doc:`Hunter Seeker </new/hunterseeker>` for information on how to define a
 valid Hunter Seeker unit and how to prevent certain :type:`TechnoTypes` to be
 targeted. See :ref:`Sides & Countries <sides-hunterseeker>` on how to define a
 default Hunter Seeker unit for each side.
 
 .. versionadded:: 0.7
-.. versionchanged:: 0.D
+.. versionchanged:: 3.0

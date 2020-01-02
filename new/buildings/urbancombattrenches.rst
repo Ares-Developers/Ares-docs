@@ -132,15 +132,10 @@ Advanced Rubble is implemented in a similar way to other upgrade systems in
   The new :type:`BuildingType` that this :type:`BuildingType` will transform
   into upon destruction. By default the building will be created with maximum
   :tag:`Strength`. Engineers will always get the cursor :value:`RepairTrench`
-  on the building. Buildings that are created via `Rubble.Destroyed` will have
-  the following properties forced upon them:
+  on the building.
 
-  ::
-
-    Capturable=no
-    TogglePower=no
-    Unsellable=yes
-    CanBeOccupied=no
+  Buildings that are used as rubble via `Rubble.Destroyed` are not allowed to be
+  occupied or have passengers of any kind. Capturable rubble is not supported.
 
   .. warning:: Do not create loops using :tag:`Rubble.Destroyed`. This can
     freeze the game. A building cannot be its own rubble, neither directly or

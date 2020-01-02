@@ -75,6 +75,9 @@ Add :value:`APOCEXP` to the end of the :type:`Animations` list. Because
 :game:`Ares` doesn't automatically add types into the list when parsing tags,
 the game no longer knows about this Apocalypse Tank weapon animation.
 
+:tag:`[NADEPT]UnitSell=no`
+	See :doc:`/bugfixes/type1/unitselldock`.
+
 artmd.ini
 ---------
 :tag:`[TELE]SecondaryFireFLH=85,0,130`
@@ -106,3 +109,4 @@ changes/additions rely on. This MIX file presently includes:
   'SCRN.date-time.BMP' file in Red Alert 2 run directory.)`
 + `TXT_RELEASE=Launch`
 + `TXT_FAKE=Fake`
++ `MSG:CannotFire=Cannot fire at the moment. Activation aborted.`
