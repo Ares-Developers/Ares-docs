@@ -26,8 +26,8 @@ target, a :tag:`Ranged=yes` projectile exceeds its weapon's
 :doc:`ProjectileRange </new/weapons/projectilerange>` or the projectile
 detonates otherwise.
 
-Refer to `Splits on ModEnc <http://modenc.renegadeprojects.com/Splits>`_ for a
-more detailed description of the logic.
+Refer to `Splits on ModEnc <https://www.modenc.renegadeprojects.com/Splits>`_
+for a more detailed description of the logic.
 
 .. note:: The Splits logic has been de-hardcoded compared to :game:`Tiberian
   Sun`. The :tag:`AirburstWeapon`'s :tag:`Damage` is no longer multiplied by

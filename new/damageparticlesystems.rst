@@ -4,7 +4,7 @@ Damage Particle Systems
 Damage particle systems are used to visually indicate a unit has been damaged
 severely, by either emitting smoke when the unit enters yellow or red health or
 by sparking repeatedly. See `DamageParticleSystems on ModEnc
-<http://modenc.renegadeprojects.com/DamageParticleSystems>`_ for a thorough
+<https://www.modenc.renegadeprojects.com/DamageParticleSystems>`_ for a thorough
 description of this feature.
 
 

@@ -24,7 +24,7 @@ which happily let it happen. Unfortunately, this is exactly the way
 In order for :game:`Syringe`/:game:`Ares` to work with :game:`Comodo Internet
 Security`, you have to make the following changes to Comodo's settings
 (`courtesy of eva-251
-<http://forums.renegadeprojects.com/showthread.php?tid=1714&pid=17592#pid17592>`_):
+<https://www.forums.renegadeprojects.com/showthread.php?tid=1714&pid=17592#pid17592>`_):
 
 #. :file:`gamemd.exe` and :file:`Syringe.exe` need to be in the "Trusted Files"
    list.

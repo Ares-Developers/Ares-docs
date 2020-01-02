@@ -19,7 +19,7 @@ Tiberium Explosion
 Tiberium Explosion occurs if an animation with :tag:`TiberiumChainReaction=yes`
 hits a cell containing tiberium. There is a chance that debris is spawned. For a
 more detailed description, refer to `TiberiumChainReaction on ModEnc
-<http://modenc.renegadeprojects.com/TiberiumChainReaction>`_.
+<https://www.modenc.renegadeprojects.com/TiberiumChainReaction>`_.
 
 The warhead, the damage delivered and the chance to spawn debris can be
 customized for each of the :type:`Tiberiums`.
@@ -31,7 +31,7 @@ Chain Reaction
 Overlay can be made to trigger a chain reaction when damaged. An animation is
 spawned on the neighbor cells that can propagate the effect. For a more detailed
 description, refer to `ChainReaction on ModEnc
-<http://modenc.renegadeprojects.com/ChainReaction>`_.
+<https://www.modenc.renegadeprojects.com/ChainReaction>`_.
 
 The logic has been restored and new works as in :game:`Tiberian Sun`. The
 warhead can be customized for each of the :type:`Tiberiums`.

@@ -11,7 +11,7 @@ been extended to search for all :type:`BuildingTypes` with the same
 :tag:`Factory` and :tag:`Naval` settings.
 
 .. note:: This fix prevents the `kennel hack as described on ModEnc
-  <http://modenc.renegadeprojects.com/Correctly_Working_Naval_Yards>`_ from
+  <https://www.modenc.renegadeprojects.com/Correctly_Working_Naval_Yards>`_ from
   working. See :doc:`/new/buildings/factoriesandcloning` for a solution.
 
 .. versionadded:: 0.1

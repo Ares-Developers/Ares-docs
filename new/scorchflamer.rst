@@ -16,7 +16,7 @@ crash when a new animation of these types is about to be created.
   the same object this animation is attached to when expiring. Does not spawn on
   water, beach, ice, or rock terrain. For a complete description of behavior and
   requirements, refer to `Scorch on ModEnc
-  <http://modenc.renegadeprojects.com/Scorch>`_ Defaults to :value:`no`.
+  <https://www.modenc.renegadeprojects.com/Scorch>`_ Defaults to :value:`no`.
 
   .. note:: Do not set :tag:`Scorch=yes` on :tag:`[AudioVisual]SmallFire`,
     because this would create a loop: if the animation expires, a new animation
@@ -27,7 +27,7 @@ crash when a new animation of these types is about to be created.
   Whether new :tag:`[AudioVisual]SmallFire` and :tag:`[AudioVisual]LargeFire`
   animations should be randomly created close to the location of this animation
   when expiring. For a complete description of behavior and requirements, refer
-  to `Flamer on ModEnc <http://modenc.renegadeprojects.com/Flamer>`_. Defaults
-  to :value:`no`.
+  to `Flamer on ModEnc <https://www.modenc.renegadeprojects.com/Flamer>`_.
+  Defaults to :value:`no`.
 
 .. versionadded:: 0.8

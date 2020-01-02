@@ -4,7 +4,7 @@
 :type:`BuildingTypes` and :type:`InfantryTypes` Do Not Reload Ammo Properly
 ===========================================================================
 
-See `Ammo on ModEnc <http://modenc.renegadeprojects.com/Ammo>`_ for exact
+See `Ammo on ModEnc <https://www.modenc.renegadeprojects.com/Ammo>`_ for exact
 details of this problem. Put simply, ammo/reloading logic did not work properly
 on :type:`BuildingTypes` or :type:`InfantryTypes` and was essentially useless
 on those object types. :game:`Ares` fixes this logic such that these object

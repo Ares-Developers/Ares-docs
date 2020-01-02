@@ -6,10 +6,9 @@
 Killing Drivers
 ~~~~~~~~~~~~~~~
 
-Requested as a `"Jarmen Kell" functionality
-<http://bugs.renegadeprojects.com/view.php?id=733>`_, this feature allows
-specific warheads to kill the driver of a vehicle instead of damaging
-it, and allows others to take over the now-neutral vehicle.
+Requested as a "Jarmen Kell" functionality, this feature allows specific
+warheads to kill the driver of a vehicle instead of damaging it, and allows
+others to take over the now-neutral vehicle.
 
 .. versionadded:: 0.2
 

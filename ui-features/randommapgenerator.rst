@@ -30,7 +30,6 @@ after :tag:`Structures=`, :tag:`Vehicles=` and :tag:`Infantry=` respectively:
 .. note:: Urban areas generated in the minimap preview do not always correspond
   to content generated ingame, especially in Desert maps -- this is still being
   investigated. In addition, there are reports of this feature not working at
-  all with certain settings. (Known issue: `#794
-  <http://bugs.renegadeprojects.com/view.php?id=794>`_)
+  all with certain settings.
 
 .. versionadded:: 0.1

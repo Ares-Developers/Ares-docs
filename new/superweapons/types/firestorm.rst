@@ -16,8 +16,8 @@ charging process.
 Whilst the effect is active, players can click the super weapon button again to
 manually deactivate it, thus allowing the recharge process to begin earlier and
 finish faster. See :ref:`Charge/Drain <charge-drain-sw>`, or refer to `ModEnc
-<http://modenc.renegadeprojects.com/ChargeToDrainRatio>`_ for more information
-about Charge/Drain logic.
+<https://www.modenc.renegadeprojects.com/ChargeToDrainRatio>`_ for more
+information about Charge/Drain logic.
 
 In :game:`Tiberian Sun`, the Charge/Drain feature was disableable through an
 INI flag (:tag:`[SuperWeapon]UseChargeDrain=no`) however: :game:`Ares` forces

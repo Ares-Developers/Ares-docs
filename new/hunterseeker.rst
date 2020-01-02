@@ -9,7 +9,7 @@ The Hunter Seeker known from :game:`Tiberian Sun` is a voxel :type:`VehicleType`
 that uses the Fly locomotor and has :tag:`HunterSeeker=yes` set. It is launched
 by the :doc:`Hunter Seeker super weapon </new/superweapons/types/hunterseeker>`.
 
-Refer to `ModEnc <http://modenc.renegadeprojects.com/HunterSeeker>`_ for
+Refer to `ModEnc <https://www.modenc.renegadeprojects.com/HunterSeeker>`_ for
 more information about Hunter Seeker's movement and targeting logic.
 
 .. note:: SHP units are not supported. They do not respect :tag:`FlightLevel`

@@ -14,11 +14,11 @@ nearby and thus over time spread like a wildfire.
 :tag:`IsFlammable=yes` on each tree that may be set on fire. This is the only
 noticeable change.
 
-See `Sparky on ModEnc <http://modenc.renegadeprojects.com/Sparky>`_ for a more
-detailed description of the logic, and for the requirements to get it working.
-To prevent crashes when firing a :tag:`Sparky=yes` warhead, do not forget to set
-three valid animations as :tag:`[AudioVisual]OnFire` and two valid animations as
-:tag:`[AudioVisual]TreeFire`.
+See `Sparky on ModEnc <https://www.modenc.renegadeprojects.com/Sparky>`_ for a
+more detailed description of the logic, and for the requirements to get it
+working. To prevent crashes when firing a :tag:`Sparky=yes` warhead, do not
+forget to set three valid animations as :tag:`[AudioVisual]OnFire` and two valid
+animations as :tag:`[AudioVisual]TreeFire`.
 
 .. note:: If trees are not burning down, make sure that the animation used as
   \ :tag:`[AudioVisual]SmallFire` has :tag:`Scorch=no` set.
