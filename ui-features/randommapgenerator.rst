@@ -9,15 +9,15 @@ Random Map Generator
 :game:`Ares` lets you create random maps using some new map styles --
 Archipelago terrain and the Desert tileset.
 
-The RMG will now place bridges at random on maps that include rivers.
+The Random Map Generator will now place bridges at random on maps that include
+rivers.
 
 Random Map Generator enhancements:
 
-A new checkbox -- `Place Urban Areas` -- allows the user to add an assortment of
-streets and urban combat buildings at random spots throughout the generated map.
-The objects placed by this feature can be modified by adding the heading
-:tag:`[Urban]` in the :file:`rmgmd.ini` file, and adding the following lists
-after :tag:`Structures=`, :tag:`Vehicles=` and :tag:`Infantry=` respectively:
+A new checkbox -- `Create Urban Areas` -- allows the user to add an assortment
+of streets and urban combat buildings at random spots throughout the generated
+map. The objects placed by this feature can be modified by adding the heading
+:tag:`[Urban]` in the :file:`rmgmd.ini` file, and adding the following lists:
 
 :tagdef:`[Urban]Structures=list of BuildingTypes`
   Defaults to :value:`CABUNK01,CABUNK02,CAARMY01,CAARMY02,CAARMY03,CAARMY04,
@@ -28,8 +28,7 @@ after :tag:`Structures=`, :tag:`Vehicles=` and :tag:`Infantry=` respectively:
   Defaults to :value:`CIV1,CIV2,CIV3,CIVA,CIVB,CIVC`.
 
 .. note:: Urban areas generated in the minimap preview do not always correspond
-  to content generated ingame, especially in Desert maps -- this is still being
-  investigated. In addition, there are reports of this feature not working at
-  all with certain settings.
+  to content generated ingame, especially in Desert maps. In addition, there are
+  reports of this feature not working at all with certain settings.
 
 .. versionadded:: 0.1
