@@ -1,6 +1,6 @@
 .. index::
   Crush; OmniCrusher=yes without aggressive auto-crushing
-  TechnoType; OmniCrusher=yes without aggressive auto-crushing
+  TechnoTypes; OmniCrusher=yes without aggressive auto-crushing
 
 :captiontag:`OmniCrusher` Enhancements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

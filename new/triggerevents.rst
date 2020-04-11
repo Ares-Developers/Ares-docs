@@ -4,7 +4,7 @@ Trigger Events
 :game:`Ares` adds the following Trigger Events to :game:`Yuri's Revenge`.
 
 
-.. index:: Trigger Events; Activate Firestorm
+.. index:: Trigger Events; Electromagnetic Pulse
 
 Electromagnetic Pulse (62-65)
 `````````````````````````````

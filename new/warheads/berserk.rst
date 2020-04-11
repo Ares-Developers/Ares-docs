@@ -2,7 +2,7 @@ Berserk
 =======
 
 .. index::
-  TechnoType; Reloading time multiplier when berserking
+  TechnoTypes; Reloading time multiplier when berserking
   Berserk; Reloading time multiplier
 
 Reloading Time Modifier
@@ -25,7 +25,7 @@ each :type:`TechnoType`.
 
 
 .. index::
-  TechnoType; Immunity to Berserk
+  TechnoTypes; Immunity to Berserk
   Berserk; Immunity
 
 Immunity to Berserk
