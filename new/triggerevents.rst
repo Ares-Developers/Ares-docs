@@ -6,8 +6,8 @@ Trigger Events
 
 .. index:: Trigger Events; Electromagnetic Pulse
 
-Electromagnetic Pulse (62-65)
-`````````````````````````````
+:captiontag:`Electromagnetic Pulse` (62-65)
+```````````````````````````````````````````
 
 :value:`62,0,0` Under EMP: Triggers when the attached object is disabled by EMP
 (works like Trigger Event :value:`53` in :game:`Tiberian Sun`).
@@ -33,8 +33,8 @@ allow a specific house to take precedence over the general case.
 
 .. index:: Trigger Events; Enemy In Spotlight Now
 
-Enemy In Spotlight Now (66)
-```````````````````````````
+:captiontag:`Enemy In Spotlight Now` (66)
+`````````````````````````````````````````
 
 :value:`66,0,0` Enemy In Spotlight Now: Triggers when the attached building's
 searching spotlight found an enemy. This works like event :value:`54` in
@@ -51,8 +51,8 @@ This event is incidental and non-persistent.
 
 .. index:: Trigger Events; Kill Driver
 
-Kill Driver (67+68)
-```````````````````
+:captiontag:`Kill Driver` (67+68)
+`````````````````````````````````
 
 :value:`67,0,0` Driver Killed: Triggers when the driver of the attached object
 has been killed.
@@ -71,11 +71,11 @@ is to allow a specific house to take precedence over the general case.
 
 .. index:: Trigger Events; Vehicle Taken
 
-Vehicle Taken (69+70)
-`````````````````````
+:captiontag:`Vehicle Taken` (69+70)
+```````````````````````````````````
 
-:value:`69,0,0` Vehicle Taken: Triggers when the a driver or Vehicle Thief
-enters the attached object.
+:value:`69,0,0` Vehicle Taken: Triggers when a driver or Vehicle Thief enters
+the attached object.
 
 :value:`70,0,<house>` Vehicle Taken By House: Triggers when a driver or Vehicle
 Thief of the specified house enters the attached object.
@@ -92,8 +92,8 @@ trigger before the :value:`Entered By` event.
 
 .. index:: Trigger Events; Abduction
 
-Abduction (71-74)
-`````````````````
+:captiontag:`Abduction` (71-74)
+```````````````````````````````
 
 :value:`71,0,0` Abducted: Triggers when the attached object is abducted.
 
@@ -118,8 +118,8 @@ is to allow a specific house to take precedence over the general case.
 
 .. index:: Trigger Events; Super Weapon Activation
 
-Super Weapon Activation (75+76)
-```````````````````````````````
+:captiontag:`Super Weapon Activation` (75+76)
+`````````````````````````````````````````````
 
 :value:`75,0,<super weapon>` Super Weapon Activated: Triggers when the owning
 house fires the super weapon.
@@ -136,8 +136,8 @@ Both events are incidental and persistent.
 
 .. index:: Trigger Events; Super Weapon Near Waypoint
 
-Super Weapon Near Waypoint (77)
-```````````````````````````````
+:captiontag:`Super Weapon Near Waypoint` (77)
+`````````````````````````````````````````````
 
 :value:`77,2,<waypoint>,<super weapon ID>` Super Weapon Activated Near Waypoint:
 Triggers when the named super weapon is used near the waypoint.
@@ -152,18 +152,16 @@ The definition of *near* is the same as for :value:`Comes Near Waypoint`.
 
 .. index:: Trigger Events; Reverse Engineered
 
-Reverse Engineered (78)
-```````````````````````
+:captiontag:`Reverse Engineered` (78)
+`````````````````````````````````````
 
 :value:`78,2,0,<techno type id>` Reverse Engineered: Triggers while the owning
 house has access to reverse engineered techno type.
 
 This event is situational and non-persistent.
 
-This event will trigger for the original type that is put into a reverse
-engineering structure, not respecting :tag:`ReversedAs=`. It will however only
-trigger if a unit has been reversed successfully, that is, that a new unit
-became buildable, respecting :tag:`ReversedAs=`.
+This event will trigger for the type a unit has been reversed as when put into a
+reverse engineering structure, that is, respecting :tag:`ReversedAs=`.
 
 .. versionadded:: 3.0
 
@@ -171,8 +169,8 @@ became buildable, respecting :tag:`ReversedAs=`.
 
 .. index:: Trigger Events; Reverse Engineering
 
-Reverse Engineering (79+80)
-```````````````````````````
+:captiontag:`Reverse Engineering` (79+80)
+`````````````````````````````````````````
 
 :value:`79,0,0` Reverse Engineers Anything: Triggers when the attached building
 successfully reverse engineers any type.
@@ -184,8 +182,8 @@ Both events are incidental and persistent.
 
 This event will trigger for the original type that is put into a reverse
 engineering structure, not respecting :tag:`ReversedAs=`. It will however only
-trigger if a unit has been reversed successfully, that is, that a new unit
-became buildable, respecting :tag:`ReversedAs=`.
+trigger if a unit has been reversed successfully, that is, only once per
+reversed type, respecting :tag:`ReversedAs=`.
 
 When reverse engineering, event :value:`80` is triggered before :value:`79`.
 This is to allow a specific house to take precedence over the general case.
@@ -196,8 +194,8 @@ This is to allow a specific house to take precedence over the general case.
 
 .. index:: Trigger Events; House Owns Techno Type
 
-House Owns Techno Type (81+82)
-``````````````````````````````
+:captiontag:`House Owns Techno Type` (81+82)
+````````````````````````````````````````````
 
 :value:`81,2,<count>,<techno type id>` House Owns Techno Type: Triggers while
 the owning house has at least count instances of the specified techno type.
@@ -217,8 +215,8 @@ Exist` (61), but they only check the owning house instead of all houses.
 
 .. index:: Trigger Events; Attacked Or Destroyed By
 
-Attacked Or Destroyed By (83+84)
-````````````````````````````````
+:captiontag:`Attacked Or Destroyed By` (83+84)
+``````````````````````````````````````````````
 
 :value:`83,0,0` Attacked Or Destroyed By Anybody: Triggers when the attached
 object is attacked or destroyed by any attack (even ones without source).
@@ -242,8 +240,8 @@ more specific event to take precedence over the less specific one.
 
 .. index:: Trigger Events; Destroyed By House
 
-Destroyed By House (85)
-```````````````````````
+:captiontag:`Destroyed By House` (85)
+`````````````````````````````````````
 
 :value:`85,0,<house>` Destroyed By House: Triggers when the attached object is
 destroyed by any attack where the source is owned by a specific house.
@@ -260,8 +258,8 @@ precedence over the less specific one.
 
 .. index:: Trigger Events; Techno Type Doesn't Exist More Than
 
-Techno Type Doesn't Exist More Than (86)
-````````````````````````````````````````
+:captiontag:`Techno Type Doesn't Exist More Than` (86)
+``````````````````````````````````````````````````````
 
 :value:`86,2,<count>,<techno type id>` Techno Type Doesn't Exist More Than:
 Triggers while there are no more than count instances of the specified techno
@@ -275,8 +273,8 @@ This event is situational and non-persistent.
 
 .. index:: Trigger Events; All KeepAlives Destroyed
 
-All KeepAlives Destroyed (87+88)
-````````````````````````````````
+:captiontag:`All KeepAlives Destroyed` (87+88)
+``````````````````````````````````````````````
 
 :value:`87,0,<house>` All KeepAlives Destroyed: Triggers when the specified
 house has no more :tag:`KeepAlive=yes` objects.

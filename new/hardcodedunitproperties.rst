@@ -30,12 +30,20 @@ the :tag:`[COW]`.
 `````````````````````````
 
 The :tag:`[DESO]` was hard-coded to have different deploy-weapon firing timing
-than other units. The change to the timing appears to be related to the unit's
-art :tag:`Sequence` although the exact effect has not been investigated. You can
-now set :tag:`IsDesolator=yes` on other :type:`InfantryTypes` or, indeed,
-:tag:`IsDesolator=no` on the :tag:`[DESO]`.
+than other units to coincide with the unit's art :tag:`Sequence`.
+
+Deployable infantry that is also :tag:`ImmuneToRadiation=yes` has an additional
+hardcoded effect which causes the unit to automatically fire at the ground when
+deployed, depending on the radiation of the cell the unit is deployed on and the
+:tag:`RadLevel` of the infantry's secondary weapon.
+
+You can now set :tag:`IsDesolator=yes` on other :type:`InfantryTypes` or,
+indeed, :tag:`IsDesolator=no` on the :tag:`[DESO]`.
 
 :tagdef:`[InfantryType]IsDesolator=boolean`
-  Defaults to :value:`yes` for :tag:`[DESO]`, otherwise to :value:`no`.
+  Whether the firing timing and deploy behavior is changed for this infantry
+  unit as described above. Defaults to :value:`yes` for :tag:`[DESO]`, otherwise
+  to :value:`no`.
 
 .. versionadded:: 0.1
+.. versionchanged:: 3.0

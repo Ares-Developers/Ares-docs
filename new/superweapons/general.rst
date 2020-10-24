@@ -54,9 +54,9 @@ Charging Settings
 -----------------
 
 :tagdef:`[SuperWeapon]SW.InitialReady=boolean`
-  Whether the first super weapon of this type will be available immediately
+  Whether the first super weapon of this type will be ready to fire immediately
   after the super weapon becomes available. Once the super weapon has been
-  fired, it will charge normally. Defaults to :value:`no`.
+  fired once, it will recharge normally. Defaults to :value:`no`.
 :tagdef:`[SuperWeapon]SW.VirtualCharge=boolean`
   Once the super weapon becomes available, it will charge continuously, even if
   the the owning player loses all buildings that provide it. The super weapon
@@ -64,5 +64,8 @@ Charging Settings
   is removed and added again, the super weapon will appear with the cameo charge
   already partially progressed instead of restarting to charge. Defaults to
   :value:`no`.
+
+  .. note:: Virtual charge is not supported on :tag:`UseChargeDrain=yes` super
+    weapons.
 
 .. versionadded:: 3.0

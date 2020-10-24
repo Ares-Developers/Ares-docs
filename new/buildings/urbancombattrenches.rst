@@ -57,7 +57,7 @@ would therefore definitely harm the occupants.
 
 .. note:: The name :tag:`SubjectToTrenches` is misleading if you are not
   thinking about trenches. This has an effect on all occupiable buildings with
-  \ :tag:`UC.PassThrough` > 0%.
+  \ :tag:`UC.PassThrough` > :value:`0%`.
 
 .. image:: /images/subjecttotrenches.png
   :alt: Illustration of different SubjectToTrenches values
@@ -207,13 +207,15 @@ A major concept of trenches is the ability for infantry to move from one segment
 of a trench to the next, on the basis that adjacent segments are connected and,
 in essence, the same trench.
 
+Trench buildings have to have a foundation of one by one, or they will not
+function properly.
+
 :tagdef:`[BuildingType]IsTrench=string - trench type ID`
   Specifies a unique name for this particular trench so that the game knows that
   it is a trench for traversal purposes, and allows occupants to transfer
   between segments of the same trench type.
 
-
-For example, let's say you have :tag:`IsTrench=AlliedModern`. You have 2
+For example, let's say you have :tag:`IsTrench=AlliedModern`. You have two
 segments of this trench adjacent to one another and one of these segments is
 garrisoned. If you select the garrisoned segment and then position the mouse
 cursor over the adjacent segment, you will get an 'enter' cursor over the

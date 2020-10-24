@@ -49,6 +49,9 @@ to change whether a unit can be hijacked.
   \ :tag:`VehicleThief=yes` can be combined with :tag:`CanDrive=yes` without
   problems.
 
+After hijacking, units owned by a human player will go on Guard mission, while
+computer controlled units will go on a Hunt mission.
+
 Hijackers remember their health and their previous veterancy level. When the
 vehicles they stole are destroyed, they respawn with a random health up to half
 their previous health, and their old rank.

@@ -6,8 +6,8 @@
 Buildable Construction Yards
 ============================
 
-Construction Yards that were made buildable from the sidebar would cause an
-Internal Error if the player started construction of one and then cancelled it.
-This error no longer occurs.
+Construction Yards (:tag:`Factory=BuildingType`) that were made buildable from
+the sidebar would cause an Internal Error if the player started construction of
+one and then cancelled it. This error no longer occurs.
 
 .. versionadded:: 0.1

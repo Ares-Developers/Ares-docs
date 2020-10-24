@@ -17,13 +17,13 @@ or :tag:`Psychedelic` warheads, and also doesn't support :tag:`ProneDamage` and
 
 :tagdef:`[Warhead]RelativeDamage=boolean`
   Deal damage relative to :tag:`Strength` or current health instead of
-  dealing conventional damage. If set to :value:`yes`, the four tags below are
-  used depending on target type. If a tag is not defined, no damage is dealt.
+  dealing conventional damage. If set to :value:`yes`, the tags below are used
+  depending on target type. If a tag is not defined, no damage is dealt.
   Defaults to :value:`no`.
 
   .. note:: A dummy :tag:`Damage` is needed on this warhead for targeting, even
-    though finally the value is not used. If :tag:`Damage` is negative (like for
-    healing weapons), the Relative Damage will be negative also.
+    though the value ultimately is not used. If :tag:`Damage` is negative (like
+    for healing weapons), the Relative Damage will be negative also.
 
 :tagdef:`[Warhead]RelativeDamage.Buildings=integer - percent`
 
@@ -32,6 +32,8 @@ or :tag:`Psychedelic` warheads, and also doesn't support :tag:`ProneDamage` and
 :tagdef:`[Warhead]RelativeDamage.Infantry=integer - percent`
 
 :tagdef:`[Warhead]RelativeDamage.Vehicles=integer - percent`
+
+:tagdef:`[Warhead]RelativeDamage.Terrain=integer - percent`
   The damage defined as percentage from either :tag:`Strength`, if positive, or
   current health, if negative. Supported values range from :value:`-100` to
   :value:`100`. A value of :value:`0` deals no damage. Defaults to :value:`0`.
@@ -40,3 +42,4 @@ Relative Damage considers :tag:`Organic=yes` vehicles as infantry and
 :tag:`ConsideredAircraft=yes` vehicles as aircraft.
 
 .. versionadded:: 0.E
+.. versionchanged:: 3.0
