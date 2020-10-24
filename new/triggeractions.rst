@@ -3,6 +3,9 @@ Trigger Actions
 
 :game:`Ares` adds the following Trigger Actions to :game:`Yuri's Revenge`.
 
+See :doc:`Editor Support </new/editorsupport>` on how to use the new Trigger
+Actions from map editors.
+
 
 .. index:: Trigger Actions; Activate Firestorm
 

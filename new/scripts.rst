@@ -1,6 +1,9 @@
 Script Actions
 ~~~~~~~~~~~~~~
 
+See :doc:`Editor Support </new/editorsupport>` on how to use the new Script
+Actions from map editors.
+
 :captiontag:`Gather at Enemy` (53)
 ``````````````````````````````````
 

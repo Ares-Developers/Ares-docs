@@ -28,6 +28,9 @@ It also means that if a trigger contains a chain of events, and it includes one
 non-persistent incidental event, it will have to be the last event satisfied to
 fire the trigger and execute the actions.
 
+See :doc:`Editor Support </new/editorsupport>` on how to use the new Trigger
+Events from map editors.
+
 
 .. index:: Trigger Events; Electromagnetic Pulse
 
