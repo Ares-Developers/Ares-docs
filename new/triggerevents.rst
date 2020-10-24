@@ -3,6 +3,31 @@ Trigger Events
 
 :game:`Ares` adds the following Trigger Events to :game:`Yuri's Revenge`.
 
+In this section, the following terms are used:
+
+Events that are *persistent* need to be satisfied only once and the game will
+remember that they occured. Events that are not persistent thus have to be
+satisfied the very instant for the event to fire.
+
+An event is *incidental* if the event is actually satisfied by triggering that
+very event. Incidental events occur at a specific point in time and are tied to
+some specific action taking place. An example would be :value:`Spied By` (2),
+which is triggered the moment a Spy enters a building.
+
+An event is *situational* if it depends on the circumstances of the match and
+thus is satisfied at any point in time the condition is currently true. That is,
+the condition is usually satisfied over a period of time and can potentially
+change over time. Examples are :value:`No Factories Left` (17) and :value:`Low
+Power` (30).
+
+This means that a trigger with two non-persistent incidental events will never
+fire, because they are raised one after another, not simultaneously, and thus
+can never be satisfied at the same time.
+
+It also means that if a trigger contains a chain of events, and it includes one
+non-persistent incidental event, it will have to be the last event satisfied to
+fire the trigger and execute the actions.
+
 
 .. index:: Trigger Events; Electromagnetic Pulse
 
