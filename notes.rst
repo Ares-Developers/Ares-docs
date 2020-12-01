@@ -85,11 +85,18 @@ artmd.ini
 
 ares.mix
 --------
-Mods should not include their own version of :file:`ares.mix`. This new MIX file
-is bundled with :game:`Ares` to provide any new/modified files that :game:`Ares`
-changes/additions rely on. This MIX file presently includes:
+This new MIX file is bundled with :game:`Ares` to provide any new/modified files
+that :game:`Ares` changes/additions rely on. This file should always be
+distributed together with the other :game:`Ares` files and updated whenever
+:game:`Ares` is updated.
 
-:file:`ares.csf` includes a few new strings:
+Mods should include neither their own version of :file:`ares.mix` nor a version
+that does not belong to the respective version of :game:`Ares`.
+
+This MIX file presently includes:
+
+:file:`ares.csf` and additional language dependent files include a few new
+strings:
 
 + `GUI:SelectCampaign=Select your Campaign`
 + `GUI:PlayMission=Play`
@@ -110,3 +117,18 @@ changes/additions rely on. This MIX file presently includes:
 + `TXT_RELEASE=Launch`
 + `TXT_FAKE=Fake`
 + `MSG:CannotFire=Cannot fire at the moment. Activation aborted.`
++ `TXT_DEVELOPMENT=Development`
++ `TXT_DUMP_AI_BASE_PLAN=AI Base Plan Logger`
++ `TXT_DUMP_AI_BASE_PLAN_DESC=Dumps the AI Base Plans to the log.`
++ `TXT_AI_CONTROL=AI Control`
++ `TXT_AI_CONTROL_DESC=Let the AI assume control.`
++ `TXT_DUMP_MEMORY=Dump Memory`
++ `TXT_DUMP_MEMORY_DESC=Dumps the current process's memory.`
++ `TXT_DUMP_TYPES=Dump Types`
++ `TXT_DUMP_TYPES_DESC=Dumps the current type lists to the log.`
++ `TXT_FPS_COUNTER=FPS Counter`
++ `TXT_FPS_COUNTER_DESC=Displays the current and an average of frames per second.`
++ `TXT_MAP_SNAPSHOT=Map Snapshot`
++ `TXT_MAP_SNAPSHOT_DESC=Saves the currently played map.`
++ `TXT_TOGGLE_POWER=Toggle Power Mode`
++ `TXT_TOGGLE_POWER_DESC=Turn toggle power mode on / off.`
