@@ -6,6 +6,54 @@ This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of :game:`Ares`. Internal changes, optimizations
 and updates are mentioned here only if they are notable.
 
+.. rubric:: Ares 3.0
+
++ **Super Weapons** can be :doc:`limited to human or AI players, only provide a
+  limited number of shots, or be granted without any building
+  </new/superweapons/availability>`, :doc:`charged initially or charge in the
+  background without any building to provide them </new/superweapons/general>`,
+  :doc:`can be fired according to AI targeting rules, but at the player's
+  command, with fully customizable constraints </new/superweapons/targeting>`.
+  A :doc:`new Battery super weapon type </new/superweapons/types/battery>` has
+  been added, as well as :doc:`some new AI targeting modes
+  </new/superweapons/targeting>`.
+
++ **Trigger Actions** :doc:`provide auxiliary power, kill drivers, change the
+  EVA voice or the group units belong to dynamically </new/triggeractions>`
+
++ **Trigger Events** raised for :doc:`EMP, spotlights, killing drivers,
+  tanking vehicles, abduction, reverse engineering, super weapon use, houses
+  owning a certain object type, a certain house destroying an object, no more
+  objects of a certain type existing, and a house having no more objects keeping
+  the player alive </new/triggerevents>`
+
++ **Team Scripts** have been added to :doc:`provide auxiliary power, kill
+  drivers, capture vehicles, convert the type, cause sonar detection, and
+  disable weapons </new/scripts>`
+
++ **Short Games** :doc:`end only if the player has no more units or structures
+  that keep them alive </new/keepalive>`
+
++ **Harvesters** allow to :doc:`customize the global scan and distance settings
+  </new/harvesters>`
+
++ **Refineries** allow to slightly :doc:`customize dock unloading cells and
+  facings </new/buildings/refineries>`
+
++ **Warheads** support :doc:`culling enemies like the Squid parasite attack does
+  </new/warheads/culling>`
+
++ **Railguns** can be :doc:`detached and fire before the last one has
+  disappeared </new/weapons/railgun>`
+
++ **Selling Units** can be :doc:`customized per type, and buildings can be set
+  to allow selling units </new/sellunit>`
+
++ **Bugfixes** have been added to solve :doc:`burst abuse
+  </bugfixes/type1/burstabuse>`, :doc:`IFVs chasing aircraft
+  </bugfixes/type1/guardapproachtarget>`, an :doc:`infantry deploy jam
+  </bugfixes/type1/infantrydeploy>`
+
 .. rubric:: Ares 2.0
 
 + **Type Conversions** can switch a unit type when :doc:`deploying, promoting or

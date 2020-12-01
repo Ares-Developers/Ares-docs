@@ -28,14 +28,16 @@ Marshall         Prism Forwarding
 
 Collaborators
 =============
-========================  =============
+========================  =================
 Project Manager           Nighthawk
 Documentation Maintainer  Steel Mirage
 User Support Agent        Graion Dilach
 Project Ambassador        Graion Dilach
 Promo Material Creator    Speeder
+Final Alert Support       Starkku
+Chinese Translation       Project z Zomboid
 French Translation        Kik0u
-========================  =============
+========================  =================
 
 Special Thanks
 ==============

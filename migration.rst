@@ -457,3 +457,38 @@ Other changes:
 
   :tag:`DeployToLand=yes` units will only turn towards :tag:`DeployDir` if they
   have a :tag:`DeployingAnim`.
+
+From Ares 2.0 and below
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Changed tags:
+
+  :tag:`[BuildingType]SpyEffect.StolenMoneyAmount`
+    :tag:`[BuildingType]SpyEffect.StolenMoneyPercentage` now takes precedence,
+    and the meaning of this tag changed if both tags are used together. To
+    retain the previous behavior in this case, remove
+    :tag:`[BuildingType]SpyEffect.StolenMoneyPercentage`.
+
+  :tag:`[BuildingType]PrismForwarding.MyHeight`
+    The tag has been removed. It had no effect.
+
+  :tag:`[BuildingType]Rubble.Destroyed`
+    The hardcoded building properties have been removed. To go back to the
+    previous behavior, set :tag:`TogglePower=no` and :tag:`Unsellable=yes`.
+    Rubble buildings are not allowed to have occupants or passengers.
+
+  :tag:`[InfantryType]IsDesolator`
+    Now also controls the behavior that deployed infantry starts firing at the
+    ground automatically. Desolator-like infantry has to have this set.
+
+Other changes:
+
+  Overlay images for Ivan Bombs have been rewritten to work like in the original
+  game. Editing :file:`bombcurs.shp` is no longer necessary.
+
+  The default :tag:`SW.AITargeting` for :tag:`Type=DropPod` super weapons
+  has been changed from :value:`ParaDrop` to :value:`DropPod`. The effect is
+  similar.
+
+  The Soviet Repair Depot can now by default be used to sell units. To restore
+  the vanilla behavior, add :tag:`[NADEPT]UnitSell=no` to :file:`rulesmd.ini`.
