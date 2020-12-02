@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Type=EMPulse &mdash; Ares 2.0p1 documentation</title>
+    <title>Type=EMPulse &mdash; Ares 3.0 documentation</title>
     
     <link rel="stylesheet" href="../../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
-        VERSION:     '2.0p1',
+        VERSION:     '3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,9 +24,9 @@
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0p1 documentation" href="../../../index.html" />
+    <link rel="top" title="Ares 3.0 documentation" href="../../../index.html" />
     <link rel="up" title="Settings by Super Weapon Type" href="index.html" />
-    <link rel="next" title="Tiberium" href="../../tiberium/index.html" />
+    <link rel="next" title="Type=Battery" href="battery.html" />
     <link rel="prev" title="Type=DropPod" href="droppod.html" /> 
   </head>
   <body role="document">
@@ -37,12 +37,12 @@
           <a href="../../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../../tiberium/index.html" title="Tiberium"
+          <a href="battery.html" title="Type=Battery"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="droppod.html" title="Type=DropPod"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
           <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
@@ -54,8 +54,8 @@
   <p class="topless"><a href="droppod.html"
                         title="previous chapter"><span><span class="type">Type=DropPod</span></span></a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="../../tiberium/index.html"
-                        title="next chapter">Tiberium</a></p>
+  <p class="topless"><a href="battery.html"
+                        title="next chapter"><span><span class="type">Type=Battery</span></span></a></p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../../search.html" method="get">
@@ -138,7 +138,8 @@ started the <span><code class="docutils literal"><span class="pre">EMPulse.Pulse
 <p>There are three firing modes opposed to the one known from <span class="game docutils literal">Tiberian Sun</span>.
 Buildings with <span><code class="docutils literal"><span class="pre">EMPulseCannon=yes</span></code></span> rotate their turret and then create a
 single bullet using the primary weapon that is thrown at the target. The
-building does not actually fire and several weapon effects are not respected.</p>
+building does not actually fire and several weapon and building effects are not
+respected that apply when the building is on a regular attack mission.</p>
 <p>If <span><code class="docutils literal"><span class="pre">EMPulse.TargetSelf=yes</span></code></span>, a single bullet is immediately detonated at
 each firing cannon&#8217;s location. Again, the building does not actually fire.</p>
 <p>If a building with <span><code class="docutils literal"><span class="pre">EMPulseCannon=no</span></code></span> is put into <span><code class="docutils literal"><span class="pre">EMPulse.Cannons</span></code></span>,
@@ -169,19 +170,19 @@ This does not happen anymore.</p>
           <a href="../../../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="../../tiberium/index.html" title="Tiberium"
+          <a href="battery.html" title="Type=Battery"
              >next</a> |</li>
         <li class="right" >
           <a href="droppod.html" title="Type=DropPod"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
           <li class="nav-item nav-item-3"><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2019, The Ares Contributors.
+        &copy; Copyright 2020, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

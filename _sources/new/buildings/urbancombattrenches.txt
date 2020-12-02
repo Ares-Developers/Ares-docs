@@ -131,16 +131,11 @@ Ares. The first set is for converting a building to rubble:
 [BuildingType]Rubble.Destroyed=BuildingType
   The new BuildingType that this BuildingType will transform
   into upon destruction. By default the building will be created with maximum
-  Strength. Engineers will always get a repair cursor over the building.
-  Buildings that are created via `Rubble.Destroyed` will have the following
-  properties forced upon them:
+  Strength. Engineers will always get the cursor RepairTrench
+  on the building.
 
-  ::
-
-    Capturable=no
-    TogglePower=no
-    Unsellable=yes
-    CanBeOccupied=no
+  Buildings that are used as rubble via `Rubble.Destroyed` are not allowed to be
+  occupied or have passengers of any kind. Capturable rubble is not supported.
 
    Do not create loops using Rubble.Destroyed. This can
     freeze the game. A building cannot be its own rubble, neither directly or
@@ -212,13 +207,15 @@ A major concept of trenches is the ability for infantry to move from one segment
 of a trench to the next, on the basis that adjacent segments are connected and,
 in essence, the same trench.
 
+Trench buildings have to have a foundation of one by one, or they will not
+function properly.
+
 [BuildingType]IsTrench=string - trench type ID
   Specifies a unique name for this particular trench so that the game knows that
   it is a trench for traversal purposes, and allows occupants to transfer
   between segments of the same trench type.
 
-
-For example, let's say you have IsTrench=AlliedModern. You have 2
+For example, let's say you have IsTrench=AlliedModern. You have two
 segments of this trench adjacent to one another and one of these segments is
 garrisoned. If you select the garrisoned segment and then position the mouse
 cursor over the adjacent segment, you will get an 'enter' cursor over the
@@ -244,6 +241,6 @@ You can now specify which infantries are allowed to enter into a building.
 
 [BuildingType]CanBeOccupiedBy=list of InfantryTypes
   Lists the units which are allowed to enter to this building. Requires
-  Occupier=yes on the infantry.
+  CanBeOccupied=yes and Occupier=yes on the infantry.
 
  0.2

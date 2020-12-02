@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Unit Lost EVA Report &mdash; Ares 2.0p1 documentation</title>
+    <title>Editor Support &mdash; Ares 3.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0p1',
+        VERSION:     '3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,10 +24,10 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0p1 documentation" href="../index.html" />
+    <link rel="top" title="Ares 3.0 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
-    <link rel="next" title="Veteran and Elite Abilities" href="veteranabilities.html" />
-    <link rel="prev" title="Type Selection Groups" href="typeselect.html" /> 
+    <link rel="next" title="EnemyUIName" href="enemyuiname.html" />
+    <link rel="prev" title="Drop Pods" href="droppod.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -37,23 +37,31 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="veteranabilities.html" title="Veteran and Elite Abilities"
+          <a href="enemyuiname.html" title="EnemyUIName"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="typeselect.html" title="Type Selection Groups"
+          <a href="droppod.html" title="Drop Pods"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Editor Support</a><ul>
+<li><a class="reference internal" href="#finalalert2"><span><span class="type">FinalAlert2</span></span></a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
-  <p class="topless"><a href="typeselect.html"
-                        title="previous chapter">Type Selection Groups</a></p>
+  <p class="topless"><a href="droppod.html"
+                        title="previous chapter">Drop Pods</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="veteranabilities.html"
-                        title="next chapter">Veteran and Elite Abilities</a></p>
+  <p class="topless"><a href="enemyuiname.html"
+                        title="next chapter"><span><span class="type">EnemyUIName</span></span></a></p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
@@ -75,22 +83,24 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="unit-lost-eva-report">
-<span id="index-0"></span><h1>Unit Lost EVA Report<a class="headerlink" href="#unit-lost-eva-report" title="Permalink to this headline">¶</a></h1>
-<p>If a unit is destroyed, EVA announces that the player has lost a unit. This EVA
-report can now be customized or turned off.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The EVA message is not played for units if <span><code class="docutils literal"><span class="pre">DontScore=yes</span></code></span>,
-<span><code class="docutils literal"><span class="pre">Insignificant=yes</span></code></span> or <span><code class="docutils literal"><span class="pre">Spawned=yes</span></code></span>.</p>
-</div>
-<dl class="docutils">
-<dt><span><code class="definition docutils literal"><span class="pre">[Unit]►EVA.Lost=</span></code><span class="type definition"> (evamd entry)</span></span></dt>
-<dd>The message played when a unit of this type is destroyed. Use <cite>none</cite> to
-disable the report. Defaults to <cite>EVA_UnitLost</cite>.</dd>
-</dl>
+  <span class="target" id="index-0"></span><div class="section" id="editor-support">
+<span id="index-1"></span><h1>Editor Support<a class="headerlink" href="#editor-support" title="Permalink to this headline">¶</a></h1>
+<p>Before using the new <a class="reference internal" href="scripts.html"><em>Team Scripts</em></a>, <a class="reference internal" href="triggerevents.html"><em>Trigger Events</em></a> and <a class="reference internal" href="triggeractions.html"><em>Actions</em></a> :game:&#8217;Ares&#8217;
+added, their names and data formats have to be made known to your map editor.</p>
+<div class="section" id="finalalert2">
+<h2><span><span class="type">FinalAlert2</span></span><a class="headerlink" href="#finalalert2" title="Permalink to this headline">¶</a></h2>
+<p>Merge the <a class="reference download internal" href="../_downloads/FADataCode.txt"><code class="xref download docutils literal"><span class="pre">definitions</span> <span class="pre">for</span> <span class="pre">FinalAlert2</span></code></a>
+(courtesy of Starkku) into <code class="file docutils literal"><span class="pre">FAData.ini</span></code> to gain access to the new Trigger
+Actions and Trigger Events in the editor, so you can comfortably use them in the
+maps and missions you create.</p>
+<p>To also get access to the new Team Scripts from the user interface, you will
+need to use <code class="file docutils literal"><span class="pre">FA2Ext.dll</span></code>, a third party extension dll which is not bundled
+with <span class="game docutils literal">Ares</span>.</p>
+<p>If you already added new <span class="type docutils literal">ParamTypes</span> to <code class="file docutils literal"><span class="pre">FAData.ini</span></code>, you may have
+to update the definitions accordingly before you can use them.</p>
 <div class="versionadded">
-<p><span class="versionmodified">New in version 0.5.</span></p>
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
 </div>
 </div>
 
@@ -107,17 +117,17 @@ disable the report. Defaults to <cite>EVA_UnitLost</cite>.</dd>
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="veteranabilities.html" title="Veteran and Elite Abilities"
+          <a href="enemyuiname.html" title="EnemyUIName"
              >next</a> |</li>
         <li class="right" >
-          <a href="typeselect.html" title="Type Selection Groups"
+          <a href="droppod.html" title="Drop Pods"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2019, The Ares Contributors.
+        &copy; Copyright 2020, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

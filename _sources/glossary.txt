@@ -43,6 +43,10 @@ Glossary
 	evamd entry
 		The name of an EVA message defined in evamd.ini.
 
+	facing32
+		An integer from 0 (north) to 31 (north west) representing
+		a direction. 8 is east, 16 is south, 24 is west.
+
 	float
 	floats
 	double

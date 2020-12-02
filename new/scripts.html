@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Script Actions &mdash; Ares 2.0p1 documentation</title>
+    <title>Script Actions &mdash; Ares 3.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0p1',
+        VERSION:     '3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0p1 documentation" href="../index.html" />
+    <link rel="top" title="Ares 3.0 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
     <link rel="next" title="Self Heal" href="selfheal.html" />
     <link rel="prev" title="Scorch and Flamer" href="scorchflamer.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="scorchflamer.html" title="Scorch and Flamer"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -54,6 +54,12 @@
 <li><a class="reference internal" href="#gather-at-enemy-53"><span><span class="type">Gather at Enemy</span></span> (53)</a></li>
 <li><a class="reference internal" href="#gather-at-base-54"><span><span class="type">Gather at Base</span></span> (54)</a></li>
 <li><a class="reference internal" href="#iron-curtain-55"><span><span class="type">Iron Curtain</span></span> (55)</a></li>
+<li><a class="reference internal" href="#auxiliary-power-65"><span><span class="type">Auxiliary Power</span></span> (65)</a></li>
+<li><a class="reference internal" href="#kill-drivers-66"><span><span class="type">Kill Drivers</span></span> (66)</a></li>
+<li><a class="reference internal" href="#take-vehicles-67"><span><span class="type">Take Vehicles</span></span> (67)</a></li>
+<li><a class="reference internal" href="#convert-type-68"><span><span class="type">Convert Type</span></span> (68)</a></li>
+<li><a class="reference internal" href="#sonar-reveal-69"><span><span class="type">Sonar Reveal</span></span> (69)</a></li>
+<li><a class="reference internal" href="#disable-weapons-70"><span><span class="type">Disable Weapons</span></span> (70)</a></li>
 </ul>
 </li>
 </ul>
@@ -87,6 +93,8 @@
             
   <div class="section" id="script-actions">
 <h1>Script Actions<a class="headerlink" href="#script-actions" title="Permalink to this headline">¶</a></h1>
+<p>See <a class="reference internal" href="editorsupport.html"><em>Editor Support</em></a> on how to use the new Script
+Actions from map editors.</p>
 <div class="section" id="gather-at-enemy-53">
 <h2><span><span class="type">Gather at Enemy</span></span> (53)<a class="headerlink" href="#gather-at-enemy-53" title="Permalink to this headline">¶</a></h2>
 <p>The previously unused parameter of the <cite>Gather at Enemy</cite> script action is
@@ -113,9 +121,9 @@ negative to shorten the distance.</p>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 2.0.</span></p>
 </div>
-<span class="target" id="script-ironcurtain"></span></div>
+</div>
 <div class="section" id="iron-curtain-55">
-<span id="index-1"></span><h2><span><span class="type">Iron Curtain</span></span> (55)<a class="headerlink" href="#iron-curtain-55" title="Permalink to this headline">¶</a></h2>
+<span id="script-ironcurtain"></span><span id="index-1"></span><h2><span><span class="type">Iron Curtain</span></span> (55)<a class="headerlink" href="#iron-curtain-55" title="Permalink to this headline">¶</a></h2>
 <p>Previously, the game would only look at the first (and usually only) super
 weapon with <span><code class="docutils literal"><span class="pre">Type=IronCurtain</span></code></span>, then check whether it was either ready or
 almost charged. If that was not the case, the script action failed.</p>
@@ -130,6 +138,74 @@ traditional Iron Curtain and new AttachEffect boosts) and different teams to
 rely on different super weapon groups.</p>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 2.0.</span></p>
+</div>
+</div>
+<div class="section" id="auxiliary-power-65">
+<span id="index-2"></span><h2><span><span class="type">Auxiliary Power</span></span> (65)<a class="headerlink" href="#auxiliary-power-65" title="Permalink to this headline">¶</a></h2>
+<p>This new script action permanently changes the power output of the house owning
+the team. Power value can be negative to create a power drain. Applying this
+effect multiple times is cumulative.</p>
+<p>The format is <cite>65,&lt;power&gt;</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="kill-drivers-66">
+<span id="index-3"></span><h2><span><span class="type">Kill Drivers</span></span> (66)<a class="headerlink" href="#kill-drivers-66" title="Permalink to this headline">¶</a></h2>
+<p>Kills all drivers of the units in this team. This script respects Protected
+Drivers, Iron Curtain and all the other mechanisms that prevent drivers being
+killed.</p>
+<p>All affected units will change to the country called <cite>Special</cite>.</p>
+<p>The format is <cite>66,0</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="take-vehicles-67">
+<span id="index-4"></span><h2><span><span class="type">Take Vehicles</span></span> (67)<a class="headerlink" href="#take-vehicles-67" title="Permalink to this headline">¶</a></h2>
+<p>All infantry in this team that are either <span><code class="docutils literal"><span class="pre">CanDrive=yes</span></code></span> or
+<span><code class="docutils literal"><span class="pre">VehicleThief=yes</span></code></span> will be assigned the closest vehicle they can drive or
+hijack. If the infantry finds a vehicle to take, it will leave the team.</p>
+<p>This works like the similar script actions <cite>Garrison Structure</cite>,
+<cite>Enter Occupiable</cite>, and <cite>Enter Tank Bunker</cite>: The infantry will try
+to find a new object once the current one becomes unavailable for capturing. If
+there is none such alternative object to take, the infantry will stop.</p>
+<p>The format is <cite>67,0</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="convert-type-68">
+<span id="script-converttype"></span><span id="index-5"></span><h2><span><span class="type">Convert Type</span></span> (68)<a class="headerlink" href="#convert-type-68" title="Permalink to this headline">¶</a></h2>
+<p>Immediately changes all members of this team into their respective script
+conversion types, if set. Units that don&#8217;t have this tag set stay unaffected.
+This is a generalization of the script actions <cite>Unload Truck</cite> and
+<cite>Load Truck</cite>.</p>
+<p>See <a class="reference internal" href="typeconversion.html#convert-script"><span>Conversion Triggered by Team Script</span></a> for a
+description of this feature.</p>
+<p>The format is <cite>68,0</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="sonar-reveal-69">
+<span id="index-6"></span><h2><span><span class="type">Sonar Reveal</span></span> (69)<a class="headerlink" href="#sonar-reveal-69" title="Permalink to this headline">¶</a></h2>
+<p>Disables the ability of all team members to cloak themselves for a number of
+frames defined by the second parameter.</p>
+<p>Use <cite>0</cite> to end the sonar effect.</p>
+<p>The format is <cite>69,&lt;frames&gt;</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="disable-weapons-70">
+<span id="index-7"></span><h2><span><span class="type">Disable Weapons</span></span> (70)<a class="headerlink" href="#disable-weapons-70" title="Permalink to this headline">¶</a></h2>
+<p>Disables the ability of all team members to fire for a number of frames defined
+by the second parameter.</p>
+<p>Use <cite>0</cite> to end the weapon disabling effect.</p>
+<p>The format is <cite>70,&lt;frames&gt;</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
 </div>
 </div>
 </div>
@@ -152,12 +228,12 @@ rely on different super weapon groups.</p>
         <li class="right" >
           <a href="scorchflamer.html" title="Scorch and Flamer"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2019, The Ares Contributors.
+        &copy; Copyright 2020, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

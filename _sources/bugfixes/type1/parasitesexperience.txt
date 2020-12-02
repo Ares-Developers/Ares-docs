@@ -1,0 +1,10 @@
+ Parasites; No longer gain experience from killing allies
+
+
+Parasites Gaining Experience From Killing Allies
+
+
+Naval=yes parasites like Squids gained experience from grabbing and
+killing allied vessels. This has been fixed.
+
+ 3.0

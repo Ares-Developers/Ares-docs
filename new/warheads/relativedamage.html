@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>MAD Tank Style Relative Damage &mdash; Ares 2.0p1 documentation</title>
+    <title>MAD Tank Style Relative Damage &mdash; Ares 3.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0p1',
+        VERSION:     '3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0p1 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 3.0 documentation" href="../../index.html" />
     <link rel="up" title="Warheads" href="index.html" />
     <link rel="next" title="Damage Airborne Units" href="damageair.html" />
     <link rel="prev" title="CellSpread Enhancements" href="cellspread.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="cellspread.html" title="CellSpread Enhancements"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Warheads</a> &raquo;</li> 
       </ul>
@@ -90,22 +90,23 @@ or <span><code class="docutils literal"><span class="pre">Psychedelic</span></co
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►RelativeDamage=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd><p class="first">Deal damage relative to <span><code class="docutils literal"><span class="pre">Strength</span></code></span> or current health instead of
-dealing conventional damage. If set to <cite>yes</cite>, the four tags below are
-used depending on target type. If a tag is not defined, no damage is dealt.
+dealing conventional damage. If set to <cite>yes</cite>, the tags below are used
+depending on target type. If a tag is not defined, no damage is dealt.
 Defaults to <cite>no</cite>.</p>
 <div class="last admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">A dummy <span><code class="docutils literal"><span class="pre">Damage</span></code></span> is needed on this warhead for targeting, even
-though finally the value is not used. If <span><code class="docutils literal"><span class="pre">Damage</span></code></span> is negative (like for
-healing weapons), the Relative Damage will be negative also.</p>
+though the value ultimately is not used. If <span><code class="docutils literal"><span class="pre">Damage</span></code></span> is negative (like
+for healing weapons), the Relative Damage will be negative also.</p>
 </div>
 </dd>
 </dl>
 <p><span><code class="definition docutils literal"><span class="pre">[Warhead]►RelativeDamage.Buildings=</span></code><span class="type definition"> (integer - percent)</span></span></p>
 <p><span><code class="definition docutils literal"><span class="pre">[Warhead]►RelativeDamage.Aircraft=</span></code><span class="type definition"> (integer - percent)</span></span></p>
 <p><span><code class="definition docutils literal"><span class="pre">[Warhead]►RelativeDamage.Infantry=</span></code><span class="type definition"> (integer - percent)</span></span></p>
+<p><span><code class="definition docutils literal"><span class="pre">[Warhead]►RelativeDamage.Vehicles=</span></code><span class="type definition"> (integer - percent)</span></span></p>
 <dl class="docutils">
-<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►RelativeDamage.Vehicles=</span></code><span class="type definition"> (integer - percent)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►RelativeDamage.Terrain=</span></code><span class="type definition"> (integer - percent)</span></span></dt>
 <dd>The damage defined as percentage from either <span><code class="docutils literal"><span class="pre">Strength</span></code></span>, if positive, or
 current health, if negative. Supported values range from <cite>-100</cite> to
 <cite>100</cite>. A value of <cite>0</cite> deals no damage. Defaults to <cite>0</cite>.</dd>
@@ -114,6 +115,9 @@ current health, if negative. Supported values range from <cite>-100</cite> to
 <span><code class="docutils literal"><span class="pre">ConsideredAircraft=yes</span></code></span> vehicles as aircraft.</p>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 0.E.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 3.0.</span></p>
 </div>
 </div>
 
@@ -135,13 +139,13 @@ current health, if negative. Supported values range from <cite>-100</cite> to
         <li class="right" >
           <a href="cellspread.html" title="CellSpread Enhancements"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Warheads</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2019, The Ares Contributors.
+        &copy; Copyright 2020, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

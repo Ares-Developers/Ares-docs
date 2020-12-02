@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Harvesters, Slave Miners, and Slaves &mdash; Ares 3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 3.0 documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Hijackers" href="hijackers.html" />
+    <link rel="prev" title="Hard-coded Unit Properties" href="hardcodedunitproperties.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="hijackers.html" title="Hijackers"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="hardcodedunitproperties.html" title="Hard-coded Unit Properties"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="hardcodedunitproperties.html"
+                        title="previous chapter">Hard-coded Unit Properties</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="hijackers.html"
+                        title="next chapter">Hijackers</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <span class="target" id="index-0"></span><span class="target" id="index-1"></span><div class="section" id="harvesters-slave-miners-and-slaves">
+<span id="index-2"></span><h1>Harvesters, Slave Miners, and Slaves<a class="headerlink" href="#harvesters-slave-miners-and-slaves" title="Permalink to this headline">¶</a></h1>
+<p>The following new tags deglobalize settings that define harvesting behavior like
+scan ranges for Harvesters and Slaves and intervals in which to wake up Slave
+Miners.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Harvester.LongScan=</span></code><span class="type definition"> (integer - cells)</span></span></dt>
+<dd>Overrides the distance to consider for long scans. For <span><code class="docutils literal"><span class="pre">Harvester=yes</span></code></span>
+units, defaults to <span><code class="docutils literal"><span class="pre">[General]►TiberiumLongScan</span></code></span>. For Slave Miners,
+defaults to <span><code class="docutils literal"><span class="pre">[General]►SlaveMinerLongScan</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Harvester.ShortScan=</span></code><span class="type definition"> (integer - cells)</span></span></dt>
+<dd>Overrides the distance to consider for short scans. For <span><code class="docutils literal"><span class="pre">Harvester=yes</span></code></span>
+units, defaults to <span><code class="docutils literal"><span class="pre">[General]►TiberiumShortScan</span></code></span>. For Slave Miners,
+defaults to <span><code class="docutils literal"><span class="pre">[General]►SlaveMinerShortScan</span></code></span>, and for Slaves defaults to
+<span><code class="docutils literal"><span class="pre">[General]►SlaveMinerSlaveScan</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►Harvester.ScanCorrection=</span></code><span class="type definition"> (integer - cells)</span></span></dt>
+<dd>Overrides the distance to consider better when scooting forward. For Slave
+Miner buildings only. Defaults to <span><code class="docutils literal"><span class="pre">[General]►SlaveMinerScanCorrection</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[VehicleType]►Harvester.TooFarDistance=</span></code><span class="type definition"> (integer - cells)</span></span></dt>
+<dd>Overrides the distance to consider too far to reserve a refinery. Requires
+<span><code class="docutils literal"><span class="pre">Harvester=yes</span></code></span>. Defaults to <span><code class="docutils literal"><span class="pre">[General]►ChronoHarvTooFarDistance</span></code></span> for
+<span><code class="docutils literal"><span class="pre">Teleporter=yes</span></code></span> units, otherwise to
+<span><code class="docutils literal"><span class="pre">[General]►HarvesterTooFarDistance</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[VehicleType]►Harvester.KickDelay=</span></code><span class="type definition"> (integer - frames)</span></span></dt>
+<dd>Overrides the interval in which to wake up the Slave Miner. For Slave Miner
+unis only. Use <cite>-1</cite> to not wake up the Slave Miner automatically.
+Defaults to <span><code class="docutils literal"><span class="pre">[General]►SlaveMinerKickFrameDelay</span></code></span>.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="hijackers.html" title="Hijackers"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="hardcodedunitproperties.html" title="Hard-coded Unit Properties"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2020, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

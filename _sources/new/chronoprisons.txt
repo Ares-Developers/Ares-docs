@@ -13,16 +13,12 @@ Originally intended for Yuri's Revenge, with published concept art and
 even appearing on the original version of the box art, the Chrono Prison was
 planned as a unit which would suck units into a "containment sphere" in its
 turret; the turret would grow with each unit sucked in, and if the prison were
-destroyed, the units would be free again.
+destroyed, the units would be free again. Original concept art on the Command
+& Conquer Wiki .
 
 Ares includes functionality which can be used to create such a unit, but
 the implementation is liberal enough to use the parts for a variety of other
 units.
-
-(Original requests: #680 
-and #1208 , original
-concept art on the Command & Conquer Wiki
-)
 
 [Weapon]Abductor=boolean
   If set to yes, weapons with this flag will absorb the target into the

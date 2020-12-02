@@ -1,0 +1,38 @@
+ Harvester; Scan and Distance Settings
+ Slave Miner; Scan and Distance Settings
+ Slaves; Scan and Distance Settings
+
+Harvesters, Slave Miners, and Slaves
+
+
+The following new tags deglobalize settings that define harvesting behavior like
+scan ranges for Harvesters and Slaves and intervals in which to wake up Slave
+Miners.
+
+[TechnoType]Harvester.LongScan=integer - cells
+  Overrides the distance to consider for long scans. For Harvester=yes
+  units, defaults to [General]►TiberiumLongScan. For Slave Miners,
+  defaults to [General]►SlaveMinerLongScan.
+
+[TechnoType]Harvester.ShortScan=integer - cells
+  Overrides the distance to consider for short scans. For Harvester=yes
+  units, defaults to [General]►TiberiumShortScan. For Slave Miners,
+  defaults to [General]►SlaveMinerShortScan, and for Slaves defaults to
+  [General]►SlaveMinerSlaveScan.
+
+[BuildingType]Harvester.ScanCorrection=integer - cells
+  Overrides the distance to consider better when scooting forward. For Slave
+  Miner buildings only. Defaults to [General]►SlaveMinerScanCorrection.
+
+[VehicleType]Harvester.TooFarDistance=integer - cells
+  Overrides the distance to consider too far to reserve a refinery. Requires
+  Harvester=yes. Defaults to [General]►ChronoHarvTooFarDistance for
+  Teleporter=yes units, otherwise to
+  [General]►HarvesterTooFarDistance.
+
+[VehicleType]Harvester.KickDelay=integer - frames
+  Overrides the interval in which to wake up the Slave Miner. For Slave Miner
+  unis only. Use -1 to not wake up the Slave Miner automatically.
+  Defaults to [General]►SlaveMinerKickFrameDelay.
+
+ 3.0

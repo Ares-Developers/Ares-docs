@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Keep Alive &mdash; Ares 3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 3.0 documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Killing Drivers" href="killingdrivers.html" />
+    <link rel="prev" title="Initial Payload (Troop Crawlers)" href="initialpayload.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="killingdrivers.html" title="Killing Drivers"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="initialpayload.html" title="Initial Payload (Troop Crawlers)"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="initialpayload.html"
+                        title="previous chapter">Initial Payload (Troop Crawlers)</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="killingdrivers.html"
+                        title="next chapter">Killing Drivers</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="keep-alive">
+<span id="index-0"></span><h1>Keep Alive<a class="headerlink" href="#keep-alive" title="Permalink to this headline">¶</a></h1>
+<p>Originally, all <span><code class="docutils literal"><span class="pre">Insignificant=no</span></code></span> and <span><code class="docutils literal"><span class="pre">DontScore=no</span></code></span> buildings keep
+players alive in Short Games, excluding fake vehicles like Slave Miners and
+deployable tanks and artilleries, and only these, aside from vehicles in the
+<span><code class="docutils literal"><span class="pre">BaseUnit</span></code></span> list.</p>
+<p>Using <span class="game docutils literal">Ares</span> you can customize this set by including insignificant
+buildings, fake as well as actual vehicles and even infantry or aircraft, or by
+removing certain buildings that should not keep players alive despite being
+significant.</p>
+<p>As long as a player owns at least one object that keeps alive, a Short Game will
+not count as lost.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►KeepAlive=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd><p class="first">Whether an object of this type will keep the owning player alive, independent
+of <span><code class="docutils literal"><span class="pre">DontScore=</span></code></span> and <span><code class="docutils literal"><span class="pre">Insignificant=</span></code></span>. Defaults to <cite>yes</cite> for
+<span><code class="docutils literal"><span class="pre">Insignificant=no</span></code></span> and <span><code class="docutils literal"><span class="pre">DontScore=no</span></code></span> buildings, to <cite>no</cite>
+otherwise (including all units, infantry and aircraft).</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">No matter this setting, <span class="type docutils literal">VehicleType</span>s contained in the
+<span><code class="docutils literal"><span class="pre">[General]►BaseUnit=</span></code></span> list will always keep the player alive during
+Short Games. This might change in the future.</p>
+</div>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="killingdrivers.html" title="Killing Drivers"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="initialpayload.html" title="Initial Payload (Troop Crawlers)"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2020, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

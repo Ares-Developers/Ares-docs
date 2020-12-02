@@ -1,0 +1,21 @@
+ Exploit; Burst abuse is fixed
+
+
+Burst Abuse
+
+
+If a unit with a multiple burst weapon (Burst > 1) destroys its
+target or is assigned a new target before it has fired all shots, the game
+resets the burst counter, but does not also restart reloading. The result is
+that the unit can attack the next target immediately, with a fresh set of
+bursts.
+
+Given that the delay between bursts is usually shorter than the reload time,
+this gives an unfair advantage. Given that manually changing targets or issuing
+a Stop command also resets the burst counter, this can be exploited.
+
+Ares fixes this by not resetting the burst counter.
+
+ This might be changed in the future to also restart reloading.
+
+ 3.0

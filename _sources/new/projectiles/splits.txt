@@ -26,8 +26,8 @@ target, a Ranged=yes projectile exceeds its weapon's
 ProjectileRange or the projectile
 detonates otherwise.
 
-Refer to Splits on ModEnc  for a
-more detailed description of the logic.
+Refer to Splits on ModEnc 
+for a more detailed description of the logic.
 
  The Splits logic has been de-hardcoded compared to Tiberian
   Sun. The AirburstWeapon's Damage is no longer multiplied by

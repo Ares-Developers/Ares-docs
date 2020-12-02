@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Extending Base Space of the AI &mdash; Ares 3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 3.0 documentation" href="../../index.html" />
+    <link rel="up" title="Buildings" href="index.html" />
+    <link rel="next" title="Build More Buildings of a Type" href="buildcount.html" />
+    <link rel="prev" title="Assaulter" href="assaulter.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="buildcount.html" title="Build More Buildings of a Type"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="assaulter.html" title="Assaulter"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Buildings</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Extending Base Space of the AI</a></li>
+<li><a class="reference internal" href="#prefer-to-build-in-the-ai-s-inner-base">Prefer to build in the AI&#8217;s Inner Base</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="assaulter.html"
+                        title="previous chapter">Assaulter</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="buildcount.html"
+                        title="next chapter">Build More Buildings of a Type</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="extending-base-space-of-the-ai">
+<span id="index-0"></span><h1>Extending Base Space of the AI<a class="headerlink" href="#extending-base-space-of-the-ai" title="Permalink to this headline">¶</a></h1>
+<p>The AI&#8217;s base space is extended by any building that is not considered a
+vehicle, and unrestricted by <span><code class="docutils literal"><span class="pre">BaseNormal</span></code></span>, which only applies to human
+players. <span class="game docutils literal">Ares</span> adds an option to disable extending base space.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►AIBaseNormal=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether this building will extend the base space of the AI player. Defaults to
+<cite>no</cite> if both <span><code class="docutils literal"><span class="pre">UndeploysInto=</span></code></span> is set and
+<span><code class="docutils literal"><span class="pre">ResourceGatherer=yes</span></code></span>, otherwise defaults to whether the building is
+considered a vehicle.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="prefer-to-build-in-the-ai-s-inner-base">
+<span id="index-1"></span><h1>Prefer to build in the AI&#8217;s Inner Base<a class="headerlink" href="#prefer-to-build-in-the-ai-s-inner-base" title="Permalink to this headline">¶</a></h1>
+<p>Preferrably placing Stealth Generators in the center of the base rather than on
+the perimeter was a side effect of <span><code class="docutils literal"><span class="pre">CloakGenerator=yes</span></code></span> in
+<span class="game docutils literal">Tiberian Sun</span>. This feature has been recreated and made optional.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►AIInnerBase=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd><p class="first">Whether the AI prefers to place this building closer to the center of its
+base. Use this for buildings that are to be protected or that provide a ranged
+effect that works best if it covers large portions of the base. Defaults to
+<cite>yes</cite> if <span><code class="docutils literal"><span class="pre">CloakGenerator=yes</span></code></span>, to <cite>no</cite> otherwise.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The larger the building foundation, the more unlikely it will be for
+the AI to find a place to build it near the base center in late game, in
+which case the game will fall back to the original logic and find a place in
+the perimeter.</p>
+</div>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="buildcount.html" title="Build More Buildings of a Type"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="assaulter.html" title="Assaulter"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Buildings</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2020, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

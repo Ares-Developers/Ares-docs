@@ -1,0 +1,39 @@
+ Bases; Disable extending base space for the AI
+
+Extending Base Space of the AI
+
+
+The AI's base space is extended by any building that is not considered a
+vehicle, and unrestricted by BaseNormal, which only applies to human
+players. Ares adds an option to disable extending base space.
+
+[BuildingType]AIBaseNormal=boolean
+  Whether this building will extend the base space of the AI player. Defaults to
+  no if both UndeploysInto= is set and
+  ResourceGatherer=yes, otherwise defaults to whether the building is
+  considered a vehicle.
+
+ 3.0
+
+
+ Bases; Prefer placing buildings in the AI's inner base
+
+Prefer to build in the AI's Inner Base
+
+
+Preferrably placing Stealth Generators in the center of the base rather than on
+the perimeter was a side effect of CloakGenerator=yes in
+Tiberian Sun. This feature has been recreated and made optional.
+
+[BuildingType]AIInnerBase=boolean
+  Whether the AI prefers to place this building closer to the center of its
+  base. Use this for buildings that are to be protected or that provide a ranged
+  effect that works best if it covers large portions of the base. Defaults to
+  yes if CloakGenerator=yes, to no otherwise.
+
+   The larger the building foundation, the more unlikely it will be for
+    the AI to find a place to build it near the base center in late game, in
+    which case the game will fall back to the original logic and find a place in
+    the perimeter.
+
+ 3.0

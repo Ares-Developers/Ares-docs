@@ -53,6 +53,12 @@ Cloning options
   CloningFacility=yes or their respective ClonedAt buildings.
   Defaults to yes.
 
+[InfantryOrVehicle]ClonedAs=TechnoType
+  The type to use as override when producing a clone of this object. If not set,
+  the clones will be made of the same type as this object. Units can only be
+  cloned as VehicleType, and infantry can only be cloned as
+  InfantryType. Defaults to none.
+
 [InfantryOrVehicle]ClonedAt=list of BuildingTypes
   Each building of the types mentioned in the list owned by the same house will
   kick out an extra clone of this object for free. If a building is blocked, the
@@ -67,3 +73,4 @@ Cloning options
     CloningFacility=yes will clone the object.
 
  0.2
+ 3.0

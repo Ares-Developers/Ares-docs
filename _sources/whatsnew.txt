@@ -6,6 +6,47 @@ This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of Ares. Internal changes, optimizations
 and updates are mentioned here only if they are notable.
 
+ Ares 3.0
+
++ **Super Weapons** can be limited to human or AI players, only provide a
+  limited number of shots, or be granted without any building, charged initially or charge in the
+  background without any building to provide them,
+  can be fired according to AI targeting rules, but at the player's
+  command, with fully customizable constraints.
+  A new Battery super weapon type has
+  been added, as well as some new AI targeting modes.
+
++ **Trigger Actions** provide auxiliary power, kill drivers, change the
+  EVA voice or the group units belong to dynamically
+
++ **Trigger Events** raised for EMP, spotlights, killing drivers,
+  tanking vehicles, abduction, reverse engineering, super weapon use, houses
+  owning a certain object type, a certain house destroying an object, no more
+  objects of a certain type existing, and a house having no more objects keeping
+  the player alive
+
++ **Team Scripts** have been added to provide auxiliary power, kill
+  drivers, capture vehicles, convert the type, cause sonar detection, and
+  disable weapons
+
++ **Short Games** end only if the player has no more units or structures
+  that keep them alive
+
++ **Harvesters** allow to customize the global scan and distance settings
+
++ **Refineries** allow to slightly customize dock unloading cells and
+  facings
+
++ **Warheads** support culling enemies like the Squid parasite attack does
+
++ **Railguns** can be detached and fire before the last one has
+  disappeared
+
++ **Selling Units** can be customized per type, and buildings can be set
+  to allow selling units
+
++ **Bugfixes** have been added to solve burst abuse, IFVs chasing aircraft, an infantry deploy jam
+
  Ares 2.0
 
 + **Type Conversions** can switch a unit type when deploying, promoting or

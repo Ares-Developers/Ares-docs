@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Availability &mdash; Ares 2.0p1 documentation</title>
+    <title>Availability &mdash; Ares 3.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0p1',
+        VERSION:     '3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,10 +24,10 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0p1 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 3.0 documentation" href="../../index.html" />
     <link rel="up" title="Super Weapons" href="index.html" />
     <link rel="next" title="Hardcoded Values" href="hardcoded.html" />
-    <link rel="prev" title="General properties" href="general.html" /> 
+    <link rel="prev" title="General Settings" href="general.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -40,9 +40,9 @@
           <a href="hardcoded.html" title="Hardcoded Values"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="general.html" title="General properties"
+          <a href="general.html" title="General Settings"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Super Weapons</a> &raquo;</li> 
       </ul>
@@ -54,13 +54,16 @@
 <li><a class="reference internal" href="#">Availability</a><ul>
 <li><a class="reference internal" href="#require-a-country">Require a Country</a></li>
 <li><a class="reference internal" href="#auxiliary-buildings-auxbuilding">Auxiliary Buildings (<span><span class="type">AuxBuilding</span></span>)</a></li>
+<li><a class="reference internal" href="#only-for-human-or-ai-players">Only for Human or AI Players</a></li>
+<li><a class="reference internal" href="#limited-number-of-shots">Limited Number of Shots</a></li>
+<li><a class="reference internal" href="#always-granted-without-building">Always Granted Without Building</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="general.html"
-                        title="previous chapter">General properties</a></p>
+                        title="previous chapter">General Settings</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="hardcoded.html"
                         title="next chapter">Hardcoded Values</a></p>
@@ -94,6 +97,8 @@ EVA will not announce its detection once the building is placed.</p>
 <p>This does not affect the way <span><code class="docutils literal"><span class="pre">DisableableFromShell</span></code></span> works. Only the super
 weapon set as <span><code class="docutils literal"><span class="pre">SuperWeapon</span></code></span> is checked for this tag, and the building
 becomes unbuildable even if the super weapon is unavailable.</p>
+<p>Even if all super weapons a building provides are disabled by whatever
+restriction, it will still play the Super animation.</p>
 <div class="section" id="require-a-country">
 <span id="index-0"></span><h2>Require a Country<a class="headerlink" href="#require-a-country" title="Permalink to this headline">¶</a></h2>
 <p>Access to super weapons can be restricted by the owning player&#8217;s country. If the
@@ -158,6 +163,61 @@ availability do not support building animations.</p>
 <p><span class="versionmodified">New in version 0.9.</span></p>
 </div>
 </div>
+<div class="section" id="only-for-human-or-ai-players">
+<span id="index-2"></span><h2>Only for Human or AI Players<a class="headerlink" href="#only-for-human-or-ai-players" title="Permalink to this headline">¶</a></h2>
+<p>Super weapons can be restricted to be used by houses controlled by human or AI
+players only. This allows to hide special super weapons the AI might use to gain
+an advantage from human players.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AllowPlayer=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether this super weapon will be available to human players. Defaults to
+<cite>yes</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AllowAI=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether this super weapon will be available to AI players. Defaults to
+<cite>yes</cite>.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="limited-number-of-shots">
+<span id="index-3"></span><h2>Limited Number of Shots<a class="headerlink" href="#limited-number-of-shots" title="Permalink to this headline">¶</a></h2>
+<p>Super weapons can become unavailable after having been fired a certain number of
+times. The super weapon cameo will disappear after the super weapon became
+unavailable.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Shots=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd>How often this super weapon is allowed to fire before becoming unavailable.
+Use <cite>-1</cite> to allow unlimited firing. Is not supported for Charge Drain
+super weapons. Defaults to <cite>-1</cite>.</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Super weapons granted by crates or map actions will also count against
+this limit. This might change in the future.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="always-granted-without-building">
+<span id="index-4"></span><h2>Always Granted Without Building<a class="headerlink" href="#always-granted-without-building" title="Permalink to this headline">¶</a></h2>
+<p>With <span class="game docutils literal">Ares</span> it is possible to use super weapons that are not tied to a
+building that provides them. Instead, the always granted super weapon will
+become immediately.</p>
+<p>This setting still respects <span><code class="docutils literal"><span class="pre">AuxBuilding</span></code></span>, <span><code class="docutils literal"><span class="pre">SW.AuxBuidings</span></code></span>,
+<span><code class="docutils literal"><span class="pre">SW.NegBuildings</span></code></span>, <span><code class="docutils literal"><span class="pre">SW.ForbiddenHouses</span></code></span>, <span><code class="docutils literal"><span class="pre">SW.RequiredHouses</span></code></span>,
+<span><code class="docutils literal"><span class="pre">SW.AllowPlayer</span></code></span> and <span><code class="docutils literal"><span class="pre">SW.AllowAI</span></code></span>.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AlwaysGranted=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether this super weapon is not provided by any particular building but is
+instead always available as long as the player has not been defeated. Defaults
+to <cite>no</cite>.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
 </div>
 
 
@@ -176,15 +236,15 @@ availability do not support building animations.</p>
           <a href="hardcoded.html" title="Hardcoded Values"
              >next</a> |</li>
         <li class="right" >
-          <a href="general.html" title="General properties"
+          <a href="general.html" title="General Settings"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Super Weapons</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2019, The Ares Contributors.
+        &copy; Copyright 2020, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

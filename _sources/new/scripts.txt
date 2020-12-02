@@ -1,6 +1,9 @@
 Script Actions
 
 
+See Editor Support on how to use the new Script
+Actions from map editors.
+
 Gather at Enemy (53)
 
 
@@ -34,9 +37,9 @@ negative to shorten the distance.
 
 
 
-.. _script-ironcurtain:
-
  Scripts; Iron Curtain team script extended
+
+.. _script-ironcurtain:
 
 Iron Curtain (55)
 
@@ -57,3 +60,108 @@ traditional Iron Curtain and new AttachEffect boosts) and different teams to
 rely on different super weapon groups.
 
  2.0
+
+
+
+ Scripts; Auxiliary Power
+
+Auxiliary Power (65)
+
+
+This new script action permanently changes the power output of the house owning
+the team. Power value can be negative to create a power drain. Applying this
+effect multiple times is cumulative.
+
+The format is 65,<power>.
+
+ 3.0
+
+
+
+ Scripts; Kill Drivers
+
+Kill Drivers (66)
+
+
+Kills all drivers of the units in this team. This script respects Protected
+Drivers, Iron Curtain and all the other mechanisms that prevent drivers being
+killed.
+
+All affected units will change to the country called Special.
+
+The format is 66,0.
+
+ 3.0
+
+
+
+ Scripts; Take Vehicles
+
+Take Vehicles (67)
+
+
+All infantry in this team that are either CanDrive=yes or
+VehicleThief=yes will be assigned the closest vehicle they can drive or
+hijack. If the infantry finds a vehicle to take, it will leave the team.
+
+This works like the similar script actions Garrison Structure,
+Enter Occupiable, and Enter Tank Bunker: The infantry will try
+to find a new object once the current one becomes unavailable for capturing. If
+there is none such alternative object to take, the infantry will stop.
+
+The format is 67,0.
+
+ 3.0
+
+
+
+ Scripts; Convert Type
+
+.. _script-converttype:
+
+Convert Type (68)
+
+
+Immediately changes all members of this team into their respective script
+conversion types, if set. Units that don't have this tag set stay unaffected.
+This is a generalization of the script actions Unload Truck and
+Load Truck.
+
+See Conversion Triggered by Team Script for a
+description of this feature.
+
+The format is 68,0.
+
+ 3.0
+
+
+
+ Scripts; Sonar Reveal
+
+Sonar Reveal (69)
+
+
+Disables the ability of all team members to cloak themselves for a number of
+frames defined by the second parameter.
+
+Use 0 to end the sonar effect.
+
+The format is 69,<frames>.
+
+ 3.0
+
+
+
+ Scripts; Disable Weapons
+
+Disable Weapons (70)
+
+
+Disables the ability of all team members to fire for a number of frames defined
+by the second parameter.
+
+Use 0 to end the weapon disabling effect.
+
+The format is 70,<frames>.
+
+ 3.0

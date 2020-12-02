@@ -1,0 +1,11 @@
+ Sidebar; Queue more than one unit with a single click
+
+Queue More Than One Unit with a Single Click
+
+
+Mirroring the shortcut Shift + Right Mouse Button on a unit's cameo to
+abort all queued units of that type, Ares adds Shift + Left
+Mouse Button to queue up five unit to build with a single click. This is not
+supported for buildings.
+
+ 3.0

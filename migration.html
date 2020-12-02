@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Migration Guide &mdash; Ares 2.0p1 documentation</title>
+    <title>Migration Guide &mdash; Ares 3.0 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '2.0p1',
+        VERSION:     '3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0p1 documentation" href="index.html" />
+    <link rel="top" title="Ares 3.0 documentation" href="index.html" />
     <link rel="next" title="Bug Fixes" href="bugfixes/index.html" />
     <link rel="prev" title="What’s New" href="whatsnew.html" /> 
   </head>
@@ -41,7 +41,7 @@
         <li class="right" >
           <a href="whatsnew.html" title="What’s New"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Ares 2.0p1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 3.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -64,6 +64,7 @@
 <li><a class="reference internal" href="#from-ares-0-d-and-below">From Ares 0.D and below</a></li>
 <li><a class="reference internal" href="#from-ares-0-e-and-below">From Ares 0.E and below</a></li>
 <li><a class="reference internal" href="#from-ares-1-0-and-below">From Ares 1.0 and below</a></li>
+<li><a class="reference internal" href="#from-ares-2-0-and-below">From Ares 2.0 and below</a></li>
 </ul>
 </li>
 </ul>
@@ -482,6 +483,38 @@ for <span><code class="docutils literal"><span class="pre">SW.AITargetingMode</s
 have a <span><code class="docutils literal"><span class="pre">DeployingAnim</span></code></span>.</p>
 </div></blockquote>
 </div>
+<div class="section" id="from-ares-2-0-and-below">
+<h2>From Ares 2.0 and below<a class="headerlink" href="#from-ares-2-0-and-below" title="Permalink to this headline">¶</a></h2>
+<p>Changed tags:</p>
+<blockquote>
+<div><dl class="docutils">
+<dt><span><code class="docutils literal"><span class="pre">[BuildingType]►SpyEffect.StolenMoneyAmount</span></code></span></dt>
+<dd><span><code class="docutils literal"><span class="pre">[BuildingType]►SpyEffect.StolenMoneyPercentage</span></code></span> now takes precedence,
+and the meaning of this tag changed if both tags are used together. To
+retain the previous behavior in this case, remove
+<span><code class="docutils literal"><span class="pre">[BuildingType]►SpyEffect.StolenMoneyPercentage</span></code></span>.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[BuildingType]►PrismForwarding.MyHeight</span></code></span></dt>
+<dd>The tag has been removed. It had no effect.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[BuildingType]►Rubble.Destroyed</span></code></span></dt>
+<dd>The hardcoded building properties have been removed. To go back to the
+previous behavior, set <span><code class="docutils literal"><span class="pre">TogglePower=no</span></code></span> and <span><code class="docutils literal"><span class="pre">Unsellable=yes</span></code></span>.
+Rubble buildings are not allowed to have occupants or passengers.</dd>
+<dt><span><code class="docutils literal"><span class="pre">[InfantryType]►IsDesolator</span></code></span></dt>
+<dd>Now also controls the behavior that deployed infantry starts firing at the
+ground automatically. Desolator-like infantry has to have this set.</dd>
+</dl>
+</div></blockquote>
+<p>Other changes:</p>
+<blockquote>
+<div><p>Overlay images for Ivan Bombs have been rewritten to work like in the original
+game. Editing <code class="file docutils literal"><span class="pre">bombcurs.shp</span></code> is no longer necessary.</p>
+<p>The default <span><code class="docutils literal"><span class="pre">SW.AITargeting</span></code></span> for <span><code class="docutils literal"><span class="pre">Type=DropPod</span></code></span> super weapons
+has been changed from <cite>ParaDrop</cite> to <cite>DropPod</cite>. The effect is
+similar.</p>
+<p>The Soviet Repair Depot can now by default be used to sell units. To restore
+the vanilla behavior, add <span><code class="docutils literal"><span class="pre">[NADEPT]►UnitSell=no</span></code></span> to <code class="file docutils literal"><span class="pre">rulesmd.ini</span></code>.</p>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -502,11 +535,11 @@ have a <span><code class="docutils literal"><span class="pre">DeployingAnim</spa
         <li class="right" >
           <a href="whatsnew.html" title="What’s New"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Ares 2.0p1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 3.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2019, The Ares Contributors.
+        &copy; Copyright 2020, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

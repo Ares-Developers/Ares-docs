@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Ivan Bombs &mdash; Ares 2.0p1 documentation</title>
+    <title>Ivan Bombs &mdash; Ares 3.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0p1',
+        VERSION:     '3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0p1 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 3.0 documentation" href="../../index.html" />
     <link rel="up" title="Weapons" href="index.html" />
     <link rel="next" title="Radiation Beams" href="radiation.html" />
     <link rel="prev" title="Ammo" href="ammo.html" /> 
@@ -42,13 +42,23 @@
         <li class="right" >
           <a href="ammo.html" title="Ammo"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Weapons</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Ivan Bombs</a><ul>
+<li><a class="reference internal" href="#general-bomb-settings">General Bomb Settings</a></li>
+<li><a class="reference internal" href="#bomb-behavior">Bomb Behavior</a></li>
+<li><a class="reference internal" href="#bomb-overlay-image">Bomb Overlay Image</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="ammo.html"
                         title="previous chapter"><span><span class="type">Ammo</span></span></a></p>
@@ -79,7 +89,7 @@
   <span class="target" id="custom-ivan-bombs"></span><div class="section" id="ivan-bombs">
 <span id="index-0"></span><h1>Ivan Bombs<a class="headerlink" href="#ivan-bombs" title="Permalink to this headline">¶</a></h1>
 <p>As with many other features of <span class="game docutils literal">Yuri&#8217;s Revenge</span>, the settings that control
-Crazy Ivan Bombs are global so you can&#8217;t have multiple variations of them with
+Crazy Ivan Bombs are global so you cannot have multiple variations of them with
 their own controls. With <span class="game docutils literal">Ares</span> it is now possible to create new Ivan
 Bomb-esque weapons &#8211; new types of sticky bomb with whatever settings you like.</p>
 <p><span class="game docutils literal">Ares</span> adds the Death Bombs feature, which was originally planned to be in
@@ -89,34 +99,45 @@ active either until the unit dies to go off then, or the owner manually
 detonates it, if allowed.</p>
 <p><span class="game docutils literal">Ares</span> now also supports shrapnel weapons, as long as they have a
 <span><code class="docutils literal"><span class="pre">CellSpread</span></code></span> of <cite>0.5</cite> or more.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 3.0.</span></p>
+</div>
+<div class="section" id="general-bomb-settings">
+<h2>General Bomb Settings<a class="headerlink" href="#general-bomb-settings" title="Permalink to this headline">¶</a></h2>
 <p>When <span><code class="docutils literal"><span class="pre">IvanBomb=yes</span></code></span> is set on the weapon&#8217;s warhead, the weapon can specify
 the following flags in order to customize that bomb:</p>
 <dl class="docutils">
-<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Warhead=</span></code><span class="type definition"> (WarheadType)</span></span></dt>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Delay=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd>The number of frames that will elapse before a time bomb detonates
+automatically. Defaults to <span><code class="docutils literal"><span class="pre">[CombatDamage]►IvanTimedDelay</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Warhead=</span></code><span class="type definition"> (Warhead)</span></span></dt>
 <dd>The warhead that will be used when the bomb detonates. Defaults to
 <span><code class="docutils literal"><span class="pre">[CombatDamage]►IvanWarhead</span></code></span>.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Damage=</span></code><span class="type definition"> (integer)</span></span></dt>
 <dd>The damage that will be dealt when the bomb detonates. Defaults to
 <span><code class="docutils literal"><span class="pre">[CombatDamage]►IvanDamage</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.AttachSound=</span></code><span class="type definition"> (sound name)</span></span></dt>
+<dd>The sound that will be played when the bomb is attached to a target. Defaults
+to <span><code class="docutils literal"><span class="pre">[AudioVisual]►BombAttachSound</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.TickingSound=</span></code><span class="type definition"> (sound name)</span></span></dt>
+<dd>The sound that will be played whilst the bomb is attached to a unit. In order
+for this sound to loop correctly, the sound must have <span><code class="docutils literal"><span class="pre">Control=loop</span></code></span> set
+in its INI section in <code class="file docutils literal"><span class="pre">soundmd.ini</span></code>. Defaults to
+<span><code class="docutils literal"><span class="pre">[AudioVisual]►BombTickingSound</span></code></span>.</dd>
+</dl>
+</div>
+<div class="section" id="bomb-behavior">
+<h2>Bomb Behavior<a class="headerlink" href="#bomb-behavior" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.DeathBomb=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether this bomb will be a death bomb instead of a timed bomb when planted on
 enemy objects. Defaults to <cite>no</cite>.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.DeathBombOnAllies=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether this bomb will be a death bomb instead of a timed bomb when planted on
 allied objects. Defaults to <cite>no</cite>.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Detachable=</span></code><span class="type definition"> (boolean)</span></span></dt>
-<dd>Whether or not Engineers can remove this bomb from units it has been attached
-to. Defaults to <cite>yes</cite>.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.DestroysBridges=</span></code><span class="type definition"> (boolean)</span></span></dt>
-<dd><p class="first">Whether or not this bomb can be used on Bridge Repair Huts in order to destroy
-the corresponding Bridge. Defaults to <cite>yes</cite>.</p>
-<div class="last admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Bombs can always be attached to Bridge Huts, but the resulting
-explosion will not destroy the bridge unless
-<span><code class="docutils literal"><span class="pre">IvanBomb.DestroysBridges=yes</span></code></span> is set.</p>
-</div>
-</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.CanDetonateTimeBomb=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether or not players can manually detonate time bombs attached by this
 weapon. Defaults to <span><code class="docutils literal"><span class="pre">[CombatDamage]►CanDetonateTimeBomb</span></code></span>.</dd>
@@ -126,47 +147,63 @@ weapon. Defaults to <span><code class="docutils literal"><span class="pre">[Comb
 <dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.DetonateOnSell=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Whether attached bombs shall explode if the victim is sold. Otherwise, the
 bomb will just be disarmed. Defaults to <cite>yes</cite>.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Delay=</span></code><span class="type definition"> (integer)</span></span></dt>
-<dd>The number of frames that will elapse before the bomb detonates automatically.
-Defaults to <span><code class="docutils literal"><span class="pre">[CombatDamage]►IvanTimedDelay</span></code></span>.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.AttachSound=</span></code><span class="type definition"> (sound name)</span></span></dt>
-<dd>The sound that will be played when the bomb is attached to a target. Defaults
-to <span><code class="docutils literal"><span class="pre">[AudioVisual]►BombAttachSound</span></code></span>.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.TickingSound=</span></code><span class="type definition"> (sound name)</span></span></dt>
-<dd>The sound that will be played whilst the bomb is attached to a unit. In order
-for this sound to loop correctly, the sound must have <span><code class="docutils literal"><span class="pre">Control=loop</span></code></span> set
-in its INI section in <code class="file docutils literal"><span class="pre">soundmd.ini</span></code>. Defaults to
-<span><code class="docutils literal"><span class="pre">[AudioVisual]►BombTickingSound</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Detachable=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether or not Engineers can remove this bomb from units it has been attached
+to. Defaults to <cite>yes</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.DestroysBridges=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd><p class="first">Whether or not this bomb can be used on Bridge Repair Huts in order to destroy
+the corresponding bridge. Defaults to <cite>yes</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Bombs can always be attached to Bridge Repair Huts, but the
+resulting explosion will not destroy the bridge unless
+<span><code class="docutils literal"><span class="pre">IvanBomb.DestroysBridges=yes</span></code></span> is set.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="bomb-overlay-image">
+<h2>Bomb Overlay Image<a class="headerlink" href="#bomb-overlay-image" title="Permalink to this headline">¶</a></h2>
+<p>A bomb overlay image file has to contain zero or more blocks (each consisting of
+two frames) of flickering images for time bombs, followed by a single, optional
+frame used as image for Death Bombs.</p>
+<p>The image file used for only Death Bombs thus might contain a single frame only,
+while the image file used only for time bombs are allowed to contain the
+flickering image blocks only and omit the last frame. If a bomb might be both,
+the image file has to contain images for both bomb types.</p>
+<img alt="Image of bombcurs.shp" class="align-center" src="../../_images/bombcurs.png" />
+<p>The original <code class="file docutils literal"><span class="pre">bombcurs.shp</span></code> contains thirteen frames: six blocks of
+flickering images at the beginning, followed by one image at the end for the
+Death Bomb that was planned but cut from <span class="game docutils literal">Red Alert 2</span>.</p>
+<p>Death Bombs will always display their only frame while for time bombs the
+animation defined by the flickering image blocks is stretched to play over the
+entire lifetime of the bomb defined by <span><code class="docutils literal"><span class="pre">IvanBomb.Delay</span></code></span>.</p>
+<dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.Image=</span></code><span class="type definition"> (filename, *excluding*the .shp extension)</span></span></dt>
 <dd>The SHP file for the image to display over a unit that has a bomb attached to
 them, in the format &#8220;filename&#8221;(the &#8221;.shp&#8221; extension is automatically added by
 the engine). If the image cannot be loaded then the game will fall back to the
 default <code class="file docutils literal"><span class="pre">bombcurs.shp</span></code>.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[Weapon]►IvanBomb.FlickerRate=</span></code><span class="type definition"> (integer)</span></span></dt>
-<dd><p class="first">The rate at which the bomb SHP will flip back and forth between two frames to
-give the impression of a flickering fuse. Must be higher than <cite>0</cite>.
-Defaults to <span><code class="docutils literal"><span class="pre">[CombatDamage]►IvanIconFlickerRate</span></code></span>.</p>
-<p class="last">The animation is slowed down to play over the entire lifetime of the bomb
-(<span><code class="docutils literal"><span class="pre">IvanBomb.Delay</span></code></span>). The flicker rate is the number of frames between
-alternating between the current frame and the following frame.
-<span><code class="docutils literal"><span class="pre">IvanBomb.FlickerRate=5</span></code></span> means the current frame is shown 5 frames, then
-the next one for 5 frames, then the current one again for 5 frames, ....</p>
+<dd><p class="first">The number of frames at which the bomb image will alternate between the two
+flickering images in a block to give the impression of a flickering fuse. If
+<cite>0</cite>, flickering is disabled. Defaults to
+<span><code class="docutils literal"><span class="pre">[CombatDamage]►IvanIconFlickerRate</span></code></span>.</p>
+<p><span><code class="docutils literal"><span class="pre">IvanBomb.FlickerRate=5</span></code></span> means the first frame is shown 5 frames, then
+the second one for 5 frames, then the first one again for 5 more frames, ....</p>
+<p class="last">If flickering is disabled, all images in all blocks are played over the
+lifetime of the bomb. The second frame of each block is not ignored and
+it thus is not necessary to add an empty frame to fill up a block. Still, the
+logic only deals in full flickering image blocks and will ignore the last
+frame if the number of frames in the file is odd.</p>
 </dd>
 </dl>
-<p>Originally this logic was hard-coded to ignore the last frame of the bomb SHP,
-which was originally planned to be used for Death Bombs. This hard-coding has
-been changed so that the whole SHP is now considered for the fuse, however this
-means that you&#8217;ll now see that extra frame from <code class="file docutils literal"><span class="pre">bombcurs.shp</span></code>, unless you
-replace that SHP file.</p>
-<img alt="Image of bombcurs.shp" class="align-center" src="../../_images/bombcurs.png" />
-<div class="versionadded">
-<p><span class="versionmodified">New in version 0.1.</span></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The logic works best if <span><code class="docutils literal"><span class="pre">IvanBomb.Delay</span></code></span> is a multiple of the
+number of flickering image blocks and <span><code class="docutils literal"><span class="pre">IvanBomb.FlickerRate</span></code></span>. Then each
+frame is played smoothly for the same amount of time.</p>
 </div>
-<div class="versionchanged">
-<p><span class="versionmodified">Changed in version 0.5.</span></p>
-</div>
-<div class="versionchanged">
-<p><span class="versionmodified">Changed in version 0.D.</span></p>
 </div>
 </div>
 
@@ -188,13 +225,13 @@ replace that SHP file.</p>
         <li class="right" >
           <a href="ammo.html" title="Ammo"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Weapons</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2019, The Ares Contributors.
+        &copy; Copyright 2020, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Type=UnitDelivery &mdash; Ares 2.0p1 documentation</title>
+    <title>Type=UnitDelivery &mdash; Ares 3.0 documentation</title>
     
     <link rel="stylesheet" href="../../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../../',
-        VERSION:     '2.0p1',
+        VERSION:     '3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0p1 documentation" href="../../../index.html" />
+    <link rel="top" title="Ares 3.0 documentation" href="../../../index.html" />
     <link rel="up" title="Settings by Super Weapon Type" href="index.html" />
     <link rel="next" title="Type=Firestorm" href="firestorm.html" />
     <link rel="prev" title="Type=GenericWarhead" href="genericwarhead.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="genericwarhead.html" title="Type=GenericWarhead"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
           <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
@@ -101,6 +101,11 @@ who fired the super weapon, <cite>civilian</cite> is the first country of the si
 named <cite>Civilian</cite>, <cite>special</cite> is the country named
 <cite>Special</cite> and <cite>neutral</cite> is the country named <cite>Neutral</cite>.
 Defaults to <cite>invoker</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Deliver.BaseNormal=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether other buildings can be built adjacent to buildings delivered using
+this super weapon. If <cite>yes</cite>, normal base space rules will apply. If set
+to <cite>no</cite>, delivered buildings will not provide base space to build
+adjacent to. Defaults to <cite>yes</cite>.</dd>
 </dl>
 <p>The delivery of the units happens all at once, after firing the super weapon and
 awaiting its deferment.</p>
@@ -140,14 +145,14 @@ exist.</p>
         <li class="right" >
           <a href="genericwarhead.html" title="Type=GenericWarhead"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
           <li class="nav-item nav-item-3"><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2019, The Ares Contributors.
+        &copy; Copyright 2020, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

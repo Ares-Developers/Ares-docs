@@ -18,3 +18,4 @@ on modern computers.
 	mapactions
 	layersort
 	skipinvalidation
+	macros

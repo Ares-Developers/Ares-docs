@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Fixes to Mod Logics &mdash; Ares 2.0p1 documentation</title>
+    <title>Fixes to Mod Logics &mdash; Ares 3.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0p1',
+        VERSION:     '3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0p1 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 3.0 documentation" href="../../index.html" />
     <link rel="up" title="Bug Fixes" href="../index.html" />
     <link rel="next" title="AircraftTypes and Railguns" href="aircrafttypesandrailguns.html" />
     <link rel="prev" title="Warhead Verses‘ Special Values" href="../type1/warheadversesspecialvalues.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="../type1/warheadversesspecialvalues.html" title="Warhead Verses‘ Special Values"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Bug Fixes</a> &raquo;</li> 
       </ul>
     </div>
@@ -113,6 +113,8 @@ used in mods.</p>
 <li class="toctree-l1"><a class="reference internal" href="engineertechniciancrew.html">Crew with <span><span class="type">Engineer=yes</span></span> could freeze the game</a></li>
 <li class="toctree-l1"><a class="reference internal" href="engineertechniciancrew.html#crash-with-undefined-engineer-technician-and-crew">Crash with undefined <span><span class="type">Engineer</span></span>, <span><span class="type">Technician</span></span> and <span><span class="type">Crew</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="factoryloadsharing.html">Factory Load Sharing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="freeunit.html">Free Unit Initial Mission</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gapradius.html">Gap Generator Radius can be greater than 127 Cells</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hardcodedwallgateinteractions.html">Hardcoded Wall/Gate Interactions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hijackersarereimbursedwhenaunitisgrinded.html">Hijackers are reimbursed when a unit is grinded</a></li>
 <li class="toctree-l1"><a class="reference internal" href="infantrycloaking.html">Cloakable Infantry Constantly Uncloaking</a></li>
@@ -131,10 +133,12 @@ used in mods.</p>
 <li class="toctree-l1"><a class="reference internal" href="multipleaifactoriescloneunits.html#ai-ignores-buildlimit-when-creating-teams">AI ignores <span><span class="type">BuildLimit</span></span> when creating teams</a></li>
 <li class="toctree-l1"><a class="reference internal" href="negativelydamagingweaponswithanimlist.html">Negatively Damaging Weapons with AnimList</a></li>
 <li class="toctree-l1"><a class="reference internal" href="newconstructionoptions.html">New Construction Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nospawnaltturret.html"><span><span class="type">NoSpawnAlt</span></span> and <span><span class="type">Turret</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="occupiersalwaystrained.html">Occupiers are always trained even if <span><span class="type">Trainable=no</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="opentoppedgunnersandtemporals.html"><span><span class="type">OpenTopped</span></span> <span><span class="type">Gunner</span></span>s and <span><span class="type">Temporal</span></span> weapons</a></li>
 <li class="toctree-l1"><a class="reference internal" href="opentoppedtransportsdonotdecloaktofire.html"><span><span class="type">OpenTopped</span></span> Transports Do Not Decloak To Fire</a></li>
 <li class="toctree-l1"><a class="reference internal" href="overridingmissionsmdpkt.html">Overriding missionsmd.pkt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="paradropcrash.html">Paradropping from Player-Loaded Aircraft</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pktduplication.html">PKT Duplication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="playeratx.html"><span><span class="type">Player &#64; X</span></span> Support for Multiplayer Map Events</a></li>
 <li class="toctree-l1"><a class="reference internal" href="playsoundatrandomwp.html">Play Sound at Random Waypoint</a></li>
@@ -144,6 +148,7 @@ used in mods.</p>
 <li class="toctree-l1"><a class="reference internal" href="reinforcementsandmultiplayermaptriggers.html">Reinforcements and Multiplayer Map Triggers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="remappablewalls.html">Remappable Walls</a></li>
 <li class="toctree-l1"><a class="reference internal" href="shpcompression1.html">Shape Compression 1 Draws Vertical Lines on Large Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sonicwall.html">Sonic Waves Respect <span><span class="type">Wall=no</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="sonicwaveambientdamage.html">Sonic Wave Ambient Damage</a></li>
 <li class="toctree-l1"><a class="reference internal" href="specialweaponsnowfunctioninsecondaryslots.html">&#8220;Special&#8221; Weapons now function in secondary slots</a></li>
 <li class="toctree-l1"><a class="reference internal" href="spyplanecountdecoupledfromallyparadropnum.html">SpyPlane Count Decoupled From <span><span class="type">AllyParaDropNum</span></span></a></li>
@@ -151,6 +156,7 @@ used in mods.</p>
 <li class="toctree-l1"><a class="reference internal" href="summonedairstrikesnolongerdependentonsovparadropinf.html">Summoned Airstrikes no longer dependent on <span><span class="type">SovParaDropInf</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="temporalwarheadsstillaffectobjectsthatarenotwarpable.html"><span><span class="type">Temporal</span></span> Warheads Still Affect Objects That Are Not Warpable</a></li>
 <li class="toctree-l1"><a class="reference internal" href="the100unitbug.html">The 100-Unit Bug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="toolongidnames.html">Warning When a Too Long ID is Used</a></li>
 <li class="toctree-l1"><a class="reference internal" href="unitinstancesnotcountingtowardsbuildlimit.html">Unit Instances Not Counting Towards <span><span class="type">BuildLimit</span></span></a></li>
 <li class="toctree-l1"><a class="reference internal" href="unitsoundsplayedatinappropriatetimes.html">Unit Sounds Played At Inappropriate Times</a></li>
 <li class="toctree-l1"><a class="reference internal" href="unitsoverpoweringbuildings.html">Units overpowering buildings</a></li>
@@ -181,12 +187,12 @@ used in mods.</p>
         <li class="right" >
           <a href="../type1/warheadversesspecialvalues.html" title="Warhead Verses‘ Special Values"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Bug Fixes</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2019, The Ares Contributors.
+        &copy; Copyright 2020, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

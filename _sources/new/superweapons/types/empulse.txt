@@ -70,7 +70,8 @@ EMPulse specific tags:
 There are three firing modes opposed to the one known from Tiberian Sun.
 Buildings with EMPulseCannon=yes rotate their turret and then create a
 single bullet using the primary weapon that is thrown at the target. The
-building does not actually fire and several weapon effects are not respected.
+building does not actually fire and several weapon and building effects are not
+respected that apply when the building is on a regular attack mission.
 
 If EMPulse.TargetSelf=yes, a single bullet is immediately detonated at
 each firing cannon's location. Again, the building does not actually fire.

@@ -30,12 +30,20 @@ IsDesolator
 
 
 The [DESO]► was hard-coded to have different deploy-weapon firing timing
-than other units. The change to the timing appears to be related to the unit's
-art Sequence although the exact effect has not been investigated. You can
-now set IsDesolator=yes on other InfantryTypes or, indeed,
-IsDesolator=no on the [DESO]►.
+than other units to coincide with the unit's art Sequence.
+
+Deployable infantry that is also ImmuneToRadiation=yes has an additional
+hardcoded effect which causes the unit to automatically fire at the ground when
+deployed, depending on the radiation of the cell the unit is deployed on and the
+RadLevel of the infantry's secondary weapon.
+
+You can now set IsDesolator=yes on other InfantryTypes or,
+indeed, IsDesolator=no on the [DESO]►.
 
 [InfantryType]IsDesolator=boolean
-  Defaults to yes for [DESO]►, otherwise to no.
+  Whether the firing timing and deploy behavior is changed for this infantry
+  unit as described above. Defaults to yes for [DESO]►, otherwise
+  to no.
 
  0.1
+ 3.0

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>General properties &mdash; Ares 2.0p1 documentation</title>
+    <title>General Settings &mdash; Ares 3.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0p1',
+        VERSION:     '3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0p1 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 3.0 documentation" href="../../index.html" />
     <link rel="up" title="Super Weapons" href="index.html" />
     <link rel="next" title="Availability" href="availability.html" />
     <link rel="prev" title="Building Options" href="buildings.html" /> 
@@ -42,13 +42,23 @@
         <li class="right" >
           <a href="buildings.html" title="Building Options"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Super Weapons</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">General Settings</a><ul>
+<li><a class="reference internal" href="#common-settings">Common Settings</a></li>
+<li><a class="reference internal" href="#affected-targets">Affected Targets</a></li>
+<li><a class="reference internal" href="#charging-settings">Charging Settings</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="buildings.html"
                         title="previous chapter">Building Options</a></p>
@@ -76,8 +86,13 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="general-properties">
-<span id="index-0"></span><h1>General properties<a class="headerlink" href="#general-properties" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="general-settings">
+<span id="index-0"></span><h1>General Settings<a class="headerlink" href="#general-settings" title="Permalink to this headline">¶</a></h1>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
+<div class="section" id="common-settings">
+<h2>Common Settings<a class="headerlink" href="#common-settings" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Range=</span></code><span class="type definition"> (float,integer)</span></span></dt>
 <dd>Most superweapons having a ranged effect can take a float or two integers. One
@@ -86,12 +101,28 @@ comma denote a rectangular area. For example, <span><code class="docutils litera
 circle with 7 cells diameter, <span><code class="docutils literal"><span class="pre">SW.Range=4,6</span></code></span> defines a rectangle 4 cells
 wide and 6 cells high. The range is no longer bound to cell spread&#8217;s
 limitation of a maximum range of 10.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Deferment=</span></code><span class="type definition"> (integer - frames)</span></span></dt>
+<dd>The number of frames after the fired super weapon takes effect. Not all super
+weapons support deferment.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.CreateRadarEvent=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Creates a radar event rectangle for every player centered above the super
 weapon&#8217;s target cell.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.ShowCameo=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Sets whether this super weapon will appear in the side bar. This setting is
+ignored if <span><code class="docutils literal"><span class="pre">SW.AutoFire=no</span></code></span> is set. Defaults to <cite>yes</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.TimerVisibility=</span></code><span class="type definition"> (enumeration none|owner|allies|team|enemies|all)</span></span></dt>
+<dd>Defines who can see the super weapon timer, if <span><code class="docutils literal"><span class="pre">ShowTimer=yes</span></code></span>. Observers
+are considered to be allied to all players. Defaults to <cite>all</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Group=</span></code><span class="type definition"> (integer)</span></span></dt>
+<dd>Distinguish multiple super weapons of the same type. Defaults to <cite>0</cite>.</dd>
+</dl>
+</div>
+<div class="section" id="affected-targets">
+<h2>Affected Targets<a class="headerlink" href="#affected-targets" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AffectsHouse=</span></code><span class="type definition"> (enumeration none|owner|allies|team|enemies|all)</span></span></dt>
 <dd>Which houses items are affected by this super weapon. You can combine multiple
-values by comma. <cite>team</cite> equals <cite>owner,allies</cite>, <cite>all</cite>
+values by comma. <cite>team</cite> equals <cite>owner,allies</cite>, and <cite>all</cite>
 equals <cite>owner,allies,enemies</cite>. Defaults to <cite>team</cite> for the Force
 Shield, to <cite>all</cite> otherwise.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AffectsTarget=</span></code><span class="type definition"> (enumeration none|land|water|empty|infantry|units|buildings)</span></span></dt>
@@ -102,20 +133,32 @@ affected. Thus, if you specify no restriction (<cite>none</cite>), all targets a
 valid. For example, <span><code class="docutils literal"><span class="pre">SW.AffectsTarget=land,buildings</span></code></span> affects all
 buildings that aren&#8217;t water-bound, <span><code class="docutils literal"><span class="pre">SW.AffectsTarget=water</span></code></span> affects every
 water cell, occupied or empty.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.ShowCameo=</span></code><span class="type definition"> (boolean)</span></span></dt>
-<dd>Sets whether this super weapon will appear in the side bar. This setting is
-ignored if <span><code class="docutils literal"><span class="pre">SW.AutoFire=no</span></code></span> is set. Defaults to <cite>yes</cite>.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Deferment=</span></code><span class="type definition"> (integer - frames)</span></span></dt>
-<dd>The number of frames after the fired super weapon takes effect. Not all super
-weapons support deferment.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.TimerVisibility=</span></code><span class="type definition"> (enumeration none|owner|allies|team|enemies|all)</span></span></dt>
-<dd>Defines who can see the super weapon timer, if <span><code class="docutils literal"><span class="pre">ShowTimer=yes</span></code></span>. Observers
-are considered to be allied to all players. Defaults to <cite>all</cite>.</dd>
-<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.Group=</span></code><span class="type definition"> (integer)</span></span></dt>
-<dd>Distinguish multiple super weapons of the same type. Defaults to <cite>0</cite>.</dd>
+</dl>
+</div>
+<div class="section" id="charging-settings">
+<h2>Charging Settings<a class="headerlink" href="#charging-settings" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.InitialReady=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether the first super weapon of this type will be ready to fire immediately
+after the super weapon becomes available. Once the super weapon has been
+fired once, it will recharge normally. Defaults to <cite>no</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.VirtualCharge=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd><p class="first">Once the super weapon becomes available, it will charge continuously, even if
+the the owning player loses all buildings that provide it. The super weapon
+will continue to charge in the background or outside the map. When the cameo
+is removed and added again, the super weapon will appear with the cameo charge
+already partially progressed instead of restarting to charge. Defaults to
+<cite>no</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Virtual charge is not supported on <span><code class="docutils literal"><span class="pre">UseChargeDrain=yes</span></code></span> super
+weapons.</p>
+</div>
+</dd>
 </dl>
 <div class="versionadded">
-<p><span class="versionmodified">New in version 0.1.</span></p>
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
 </div>
 </div>
 
@@ -137,13 +180,13 @@ are considered to be allied to all players. Defaults to <cite>all</cite>.</dd>
         <li class="right" >
           <a href="buildings.html" title="Building Options"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Super Weapons</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2019, The Ares Contributors.
+        &copy; Copyright 2020, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Trigger Events &mdash; Ares 3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 3.0 documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Turret ROT" href="turretrot.html" />
+    <link rel="prev" title="Trigger Actions" href="triggeractions.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="turretrot.html" title="Turret ROT"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="triggeractions.html" title="Trigger Actions"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Trigger Events</a><ul>
+<li><a class="reference internal" href="#electromagnetic-pulse-62-65"><span><span class="type">Electromagnetic Pulse</span></span> (62-65)</a></li>
+<li><a class="reference internal" href="#enemy-in-spotlight-now-66"><span><span class="type">Enemy In Spotlight Now</span></span> (66)</a></li>
+<li><a class="reference internal" href="#kill-driver-67-68"><span><span class="type">Kill Driver</span></span> (67+68)</a></li>
+<li><a class="reference internal" href="#vehicle-taken-69-70"><span><span class="type">Vehicle Taken</span></span> (69+70)</a></li>
+<li><a class="reference internal" href="#abduction-71-74"><span><span class="type">Abduction</span></span> (71-74)</a></li>
+<li><a class="reference internal" href="#super-weapon-activation-75-76"><span><span class="type">Super Weapon Activation</span></span> (75+76)</a></li>
+<li><a class="reference internal" href="#super-weapon-near-waypoint-77"><span><span class="type">Super Weapon Near Waypoint</span></span> (77)</a></li>
+<li><a class="reference internal" href="#reverse-engineered-78"><span><span class="type">Reverse Engineered</span></span> (78)</a></li>
+<li><a class="reference internal" href="#reverse-engineering-79-80"><span><span class="type">Reverse Engineering</span></span> (79+80)</a></li>
+<li><a class="reference internal" href="#house-owns-techno-type-81-82"><span><span class="type">House Owns Techno Type</span></span> (81+82)</a></li>
+<li><a class="reference internal" href="#attacked-or-destroyed-by-83-84"><span><span class="type">Attacked Or Destroyed By</span></span> (83+84)</a></li>
+<li><a class="reference internal" href="#destroyed-by-house-85"><span><span class="type">Destroyed By House</span></span> (85)</a></li>
+<li><a class="reference internal" href="#techno-type-doesn-t-exist-more-than-86"><span><span class="type">Techno Type Doesn&#8217;t Exist More Than</span></span> (86)</a></li>
+<li><a class="reference internal" href="#all-keepalives-destroyed-87-88"><span><span class="type">All KeepAlives Destroyed</span></span> (87+88)</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="triggeractions.html"
+                        title="previous chapter">Trigger Actions</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="turretrot.html"
+                        title="next chapter">Turret <span><span class="type">ROT</span></span></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="trigger-events">
+<h1>Trigger Events<a class="headerlink" href="#trigger-events" title="Permalink to this headline">¶</a></h1>
+<p><span class="game docutils literal">Ares</span> adds the following Trigger Events to <span class="game docutils literal">Yuri&#8217;s Revenge</span>.</p>
+<p>In this section, the following terms are used:</p>
+<p>Events that are <em>persistent</em> need to be satisfied only once and the game will
+remember that they occured. Events that are not persistent thus have to be
+satisfied the very instant for the event to fire.</p>
+<p>An event is <em>incidental</em> if the event is actually satisfied by triggering that
+very event. Incidental events occur at a specific point in time and are tied to
+some specific action taking place. An example would be <cite>Spied By</cite> (2),
+which is triggered the moment a Spy enters a building.</p>
+<p>An event is <em>situational</em> if it depends on the circumstances of the match and
+thus is satisfied at any point in time the condition is currently true. That is,
+the condition is usually satisfied over a period of time and can potentially
+change over time. Examples are <cite>No Factories Left</cite> (17) and <cite>Low
+Power</cite> (30).</p>
+<p>This means that a trigger with two non-persistent incidental events will never
+fire, because they are raised one after another, not simultaneously, and thus
+can never be satisfied at the same time.</p>
+<p>It also means that if a trigger contains a chain of events, and it includes one
+non-persistent incidental event, it will have to be the last event satisfied to
+fire the trigger and execute the actions.</p>
+<p>See <a class="reference internal" href="editorsupport.html"><em>Editor Support</em></a> on how to use the new Trigger
+Events from map editors.</p>
+<div class="section" id="electromagnetic-pulse-62-65">
+<span id="index-0"></span><h2><span><span class="type">Electromagnetic Pulse</span></span> (62-65)<a class="headerlink" href="#electromagnetic-pulse-62-65" title="Permalink to this headline">¶</a></h2>
+<p><cite>62,0,0</cite> Under EMP: Triggers when the attached object is disabled by EMP
+(works like Trigger Event <cite>53</cite> in <span class="game docutils literal">Tiberian Sun</span>).</p>
+<p><cite>63,0,&lt;house&gt;</cite> Under EMP By House: Triggers when the specified house
+disables the attached object by EMP.</p>
+<p><cite>64,0,0</cite> Removed EMP: Triggers when the attached object is reactivated by
+a &#8220;healing&#8221; EMP.</p>
+<p><cite>65,0,&lt;house&gt;</cite> Removed EMP By House: Triggers when the specified house
+reactivates the attached object by a &#8220;healing&#8221; EMP.</p>
+<p>These are all incidental and non-persistent.</p>
+<p>When deactivating an object, event <cite>63</cite> is triggered before <cite>62</cite>
+and when reactivating, <cite>65</cite> is triggered before <cite>64</cite>. This is to
+allow a specific house to take precedence over the general case.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="enemy-in-spotlight-now-66">
+<span id="index-1"></span><h2><span><span class="type">Enemy In Spotlight Now</span></span> (66)<a class="headerlink" href="#enemy-in-spotlight-now-66" title="Permalink to this headline">¶</a></h2>
+<p><cite>66,0,0</cite> Enemy In Spotlight Now: Triggers when the attached building&#8217;s
+searching spotlight found an enemy. This works like event <cite>54</cite> in
+<span class="game docutils literal">Firestorm</span>.</p>
+<p>This works like event <cite>Enemy In Spotlight</cite> (35) with the minor difference
+that the game will not remember if this event occurred.</p>
+<p>This event is incidental and non-persistent.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="kill-driver-67-68">
+<span id="index-2"></span><h2><span><span class="type">Kill Driver</span></span> (67+68)<a class="headerlink" href="#kill-driver-67-68" title="Permalink to this headline">¶</a></h2>
+<p><cite>67,0,0</cite> Driver Killed: Triggers when the driver of the attached object
+has been killed.</p>
+<p><cite>68,0,&lt;house&gt;</cite> Driver Killed By House: Triggers when the specified house
+kills the driver of the attached object.</p>
+<p>Both events are incidental and persistent.</p>
+<p>When killing a driver, event <cite>68</cite> is triggered before <cite>67</cite>. This
+is to allow a specific house to take precedence over the general case.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="vehicle-taken-69-70">
+<span id="index-3"></span><h2><span><span class="type">Vehicle Taken</span></span> (69+70)<a class="headerlink" href="#vehicle-taken-69-70" title="Permalink to this headline">¶</a></h2>
+<p><cite>69,0,0</cite> Vehicle Taken: Triggers when a driver or Vehicle Thief enters
+the attached object.</p>
+<p><cite>70,0,&lt;house&gt;</cite> Vehicle Taken By House: Triggers when a driver or Vehicle
+Thief of the specified house enters the attached object.</p>
+<p>Both events are incidental and persistent.</p>
+<p>When taking a vehicle, event <cite>70</cite> is triggered before <cite>69</cite>. This
+is to allow a specific house to take precedence over the general case. Both
+trigger before the <cite>Entered By</cite> event.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="abduction-71-74">
+<span id="index-4"></span><h2><span><span class="type">Abduction</span></span> (71-74)<a class="headerlink" href="#abduction-71-74" title="Permalink to this headline">¶</a></h2>
+<p><cite>71,0,0</cite> Abducted: Triggers when the attached object is abducted.</p>
+<p><cite>72,0,&lt;house&gt;</cite> Abducted By House: Triggers when the specified house
+abducts the attached object.</p>
+<p><cite>73,0,0</cite> Abducts Something: Triggers when the attached object abducts
+something.</p>
+<p><cite>74,0,&lt;house&gt;</cite> Abducts Something Of House: Triggers when an attached
+object abducts something of the specified house.</p>
+<p>These events are all incidental and non-persistent.</p>
+<p>When an object is abducted, event <cite>72</cite> is triggered before <cite>71</cite>
+and when abducting an object, <cite>74</cite> is triggered before <cite>73</cite>. This
+is to allow a specific house to take precedence over the general case.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="super-weapon-activation-75-76">
+<span id="index-5"></span><h2><span><span class="type">Super Weapon Activation</span></span> (75+76)<a class="headerlink" href="#super-weapon-activation-75-76" title="Permalink to this headline">¶</a></h2>
+<p><cite>75,0,&lt;super weapon&gt;</cite> Super Weapon Activated: Triggers when the owning
+house fires the super weapon.</p>
+<p><cite>76,0,&lt;super weapon&gt;</cite> Super Weapon Deactivated: Triggers when the owning
+house deactivates the super weapon. Only Charge-Drain super weapon types
+deactivate.</p>
+<p>Both events are incidental and persistent.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="super-weapon-near-waypoint-77">
+<span id="index-6"></span><h2><span><span class="type">Super Weapon Near Waypoint</span></span> (77)<a class="headerlink" href="#super-weapon-near-waypoint-77" title="Permalink to this headline">¶</a></h2>
+<p><cite>77,2,&lt;waypoint&gt;,&lt;super weapon ID&gt;</cite> Super Weapon Activated Near Waypoint:
+Triggers when the named super weapon is used near the waypoint.</p>
+<p>This event is incidental and persistent.</p>
+<p>The definition of <em>near</em> is the same as for <cite>Comes Near Waypoint</cite>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="reverse-engineered-78">
+<span id="index-7"></span><h2><span><span class="type">Reverse Engineered</span></span> (78)<a class="headerlink" href="#reverse-engineered-78" title="Permalink to this headline">¶</a></h2>
+<p><cite>78,2,0,&lt;techno type id&gt;</cite> Reverse Engineered: Triggers while the owning
+house has access to reverse engineered techno type.</p>
+<p>This event is situational and non-persistent.</p>
+<p>This event will trigger for the type a unit has been reversed as when put into a
+reverse engineering structure, that is, respecting <span><code class="docutils literal"><span class="pre">ReversedAs=</span></code></span>.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="reverse-engineering-79-80">
+<span id="index-8"></span><h2><span><span class="type">Reverse Engineering</span></span> (79+80)<a class="headerlink" href="#reverse-engineering-79-80" title="Permalink to this headline">¶</a></h2>
+<p><cite>79,0,0</cite> Reverse Engineers Anything: Triggers when the attached building
+successfully reverse engineers any type.</p>
+<p><cite>80,2,0,&lt;techno type id&gt;</cite> Reverse Engineers Type: Triggers when the
+attached building successfully reverse engineers the specific type.</p>
+<p>Both events are incidental and persistent.</p>
+<p>This event will trigger for the original type that is put into a reverse
+engineering structure, not respecting <span><code class="docutils literal"><span class="pre">ReversedAs=</span></code></span>. It will however only
+trigger if a unit has been reversed successfully, that is, only once per
+reversed type, respecting <span><code class="docutils literal"><span class="pre">ReversedAs=</span></code></span>.</p>
+<p>When reverse engineering, event <cite>80</cite> is triggered before <cite>79</cite>.
+This is to allow a specific house to take precedence over the general case.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="house-owns-techno-type-81-82">
+<span id="index-9"></span><h2><span><span class="type">House Owns Techno Type</span></span> (81+82)<a class="headerlink" href="#house-owns-techno-type-81-82" title="Permalink to this headline">¶</a></h2>
+<p><cite>81,2,&lt;count&gt;,&lt;techno type id&gt;</cite> House Owns Techno Type: Triggers while
+the owning house has at least count instances of the specified techno type.</p>
+<p><cite>82,2,&lt;count&gt;,&lt;techno type id&gt;</cite> House Doesn&#8217;t Own Techno Type: Triggers
+while the owning house has fewer than count instances of the specified techno
+type.</p>
+<p>Both events are situational and non-persistent.</p>
+<p>These mirror the <cite>Tech Type Exists</cite> (60) and <cite>Tech Type Doesn&#8217;t
+Exist</cite> (61), but they only check the owning house instead of all houses.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="attacked-or-destroyed-by-83-84">
+<span id="index-10"></span><h2><span><span class="type">Attacked Or Destroyed By</span></span> (83+84)<a class="headerlink" href="#attacked-or-destroyed-by-83-84" title="Permalink to this headline">¶</a></h2>
+<p><cite>83,0,0</cite> Attacked Or Destroyed By Anybody: Triggers when the attached
+object is attacked or destroyed by any attack (even ones without source).</p>
+<p><cite>84,0,&lt;house&gt;</cite> Attacked Or Destroyed By House: Triggers when the attached
+object is attacked or destroyed by an attack where the source is owned by a
+specific house.</p>
+<p>Both events are incidental and non-persistent.</p>
+<p>These mirror the <cite>Attacked By Anybody</cite> (6) and <cite>Attacked By House</cite>
+(44) trigger events, but they will fire even if the object just has been
+destroyed with the first strike, that is, also for fatal hits.</p>
+<p>Unlike the original game, the house-specific event will fire first to allow the
+more specific event to take precedence over the less specific one.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="destroyed-by-house-85">
+<span id="index-11"></span><h2><span><span class="type">Destroyed By House</span></span> (85)<a class="headerlink" href="#destroyed-by-house-85" title="Permalink to this headline">¶</a></h2>
+<p><cite>85,0,&lt;house&gt;</cite> Destroyed By House: Triggers when the attached object is
+destroyed by any attack where the source is owned by a specific house.</p>
+<p>This event is incidental and persistent.</p>
+<p>The house-specific event <cite>85</cite> will fire before the generic event
+<cite>Destroyed By Anybody</cite> (7) to allow the more specific event to take
+precedence over the less specific one.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="techno-type-doesn-t-exist-more-than-86">
+<span id="index-12"></span><h2><span><span class="type">Techno Type Doesn&#8217;t Exist More Than</span></span> (86)<a class="headerlink" href="#techno-type-doesn-t-exist-more-than-86" title="Permalink to this headline">¶</a></h2>
+<p><cite>86,2,&lt;count&gt;,&lt;techno type id&gt;</cite> Techno Type Doesn&#8217;t Exist More Than:
+Triggers while there are no more than count instances of the specified techno
+type.</p>
+<p>This event is situational and non-persistent.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+<div class="section" id="all-keepalives-destroyed-87-88">
+<span id="index-13"></span><h2><span><span class="type">All KeepAlives Destroyed</span></span> (87+88)<a class="headerlink" href="#all-keepalives-destroyed-87-88" title="Permalink to this headline">¶</a></h2>
+<p><cite>87,0,&lt;house&gt;</cite> All KeepAlives Destroyed: Triggers when the specified
+house has no more <span><code class="docutils literal"><span class="pre">KeepAlive=yes</span></code></span> objects.</p>
+<p><cite>88,0,&lt;house&gt;</cite> All KeepAlive Buildings Destroyed: Triggers when the
+specified house has no more buildings with <span><code class="docutils literal"><span class="pre">KeepAlive=yes</span></code></span>.</p>
+<p>Both events are situational and persistent.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="turretrot.html" title="Turret ROT"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="triggeractions.html" title="Trigger Actions"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2020, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

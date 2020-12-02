@@ -14,4 +14,5 @@ Weapons
 	electricbolts
 	waves
 	laser
+	railgun
 	projectilerange

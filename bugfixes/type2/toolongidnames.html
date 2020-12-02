@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Warning When a Too Long ID is Used &mdash; Ares 3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 3.0 documentation" href="../../index.html" />
+    <link rel="up" title="Fixes to Mod Logics" href="index.html" />
+    <link rel="next" title="Unit Instances Not Counting Towards BuildLimit" href="unitinstancesnotcountingtowardsbuildlimit.html" />
+    <link rel="prev" title="The 100-Unit Bug" href="the100unitbug.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="unitinstancesnotcountingtowardsbuildlimit.html" title="Unit Instances Not Counting Towards BuildLimit"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="the100unitbug.html" title="The 100-Unit Bug"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Bug Fixes</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Fixes to Mod Logics</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="the100unitbug.html"
+                        title="previous chapter">The 100-Unit Bug</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="unitinstancesnotcountingtowardsbuildlimit.html"
+                        title="next chapter">Unit Instances Not Counting Towards <span><span class="type">BuildLimit</span></span></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="warning-when-a-too-long-id-is-used">
+<span id="index-0"></span><h1>Warning When a Too Long ID is Used<a class="headerlink" href="#warning-when-a-too-long-id-is-used" title="Permalink to this headline">¶</a></h1>
+<p>If the game tries to instantiate a type with an ID longer than 24 characters,
+<span class="game docutils literal">Ares</span> will show a dialog pointing out the ID used. This happens if a type
+list includes a too long ID directly, or for example, if the game automatically
+adds a too long type ID it encountered to the list while parsing an INI section.
+This always indicates a bug, and this always is a bug present in a modded INI
+or map file.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This feature does not catch too long IDs present in INI sections that
+are not automatically added to the type list while parsing. Searching for the
+exact ID will just fail. Only if the tag is read by <span class="game docutils literal">Ares</span>, a warning
+will be emitted in the debug log.</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="unitinstancesnotcountingtowardsbuildlimit.html" title="Unit Instances Not Counting Towards BuildLimit"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="the100unitbug.html" title="The 100-Unit Bug"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Bug Fixes</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Fixes to Mod Logics</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2020, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Factories and Cloning &mdash; Ares 2.0p1 documentation</title>
+    <title>Factories and Cloning &mdash; Ares 3.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0p1',
+        VERSION:     '3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0p1 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 3.0 documentation" href="../../index.html" />
     <link rel="up" title="Buildings" href="index.html" />
     <link rel="next" title="Fakes" href="fakes.html" />
     <link rel="prev" title="Enemy Wrench" href="enemywrench.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="enemywrench.html" title="Enemy Wrench"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Buildings</a> &raquo;</li> 
       </ul>
@@ -128,6 +128,11 @@ Vats. Defaults to <cite>no</cite>.</dd>
 <dd>Whether or not this infantry or unit can be cloned by <span><code class="docutils literal"><span class="pre">Cloning=yes</span></code></span>,
 <span><code class="docutils literal"><span class="pre">CloningFacility=yes</span></code></span> or their respective <span><code class="docutils literal"><span class="pre">ClonedAt</span></code></span> buildings.
 Defaults to <cite>yes</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[InfantryOrVehicle]►ClonedAs=</span></code><span class="type definition"> (TechnoType)</span></span></dt>
+<dd>The type to use as override when producing a clone of this object. If not set,
+the clones will be made of the same type as this object. Units can only be
+cloned as <span class="type docutils literal">VehicleType</span>, and infantry can only be cloned as
+<span class="type docutils literal">InfantryType</span>. Defaults to <cite>none</cite>.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[InfantryOrVehicle]►ClonedAt=</span></code><span class="type definition"> (list of BuildingTypes)</span></span></dt>
 <dd><p class="first">Each building of the types mentioned in the list owned by the same house will
 kick out an extra clone of this object for free. If a building is blocked, the
@@ -148,6 +153,9 @@ and <span><code class="docutils literal"><span class="pre">YuriBarracks=yes</spa
 </dl>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 0.2.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 3.0.</span></p>
 </div>
 </div>
 </div>
@@ -170,13 +178,13 @@ and <span><code class="docutils literal"><span class="pre">YuriBarracks=yes</spa
         <li class="right" >
           <a href="enemywrench.html" title="Enemy Wrench"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Buildings</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2019, The Ares Contributors.
+        &copy; Copyright 2020, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

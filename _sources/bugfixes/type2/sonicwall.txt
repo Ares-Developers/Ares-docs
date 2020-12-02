@@ -1,0 +1,11 @@
+ Waves; Sonic waves respect Wall=no
+
+
+Sonic Waves Respect Wall=no
+
+
+Yuri's Revenge hardcoded sonic waves to always destroy wall section
+overlay. With Ares they will only do so if the warhead has
+Wall=yes set.
+
+ 3.0

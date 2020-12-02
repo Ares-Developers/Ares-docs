@@ -1,6 +1,6 @@
  Spies; Multiple effects on a single building
 
-Spy Behavior
+Spy Effects
 
 
 Yuri's Revenge only permits a Spy to achieve one effect on infiltrating,
@@ -59,18 +59,23 @@ Power
 Money
 
 
-[BuildingType]SpyEffect.StolenMoneyAmount=integer - credits
-  **NEW EFFECT** The amount of credits that will be stolen from the enemy upon
-  spying this enemy building.
-  
-  The amount of money ultimately stolen from the enemy is always capped by the
-  amount of money they presently have (i.e. if
-  SpyEffect.StolenMoneyAmount=500 but the enemy only has 200 credits then
-  you will only gain 200 credits from spying the building).
+The amount of money ultimately stolen from the enemy is always capped by the
+amount of money they presently have.
+
 [BuildingType]SpyEffect.StolenMoneyPercentage=float - percentage
   The percentage of the enemy's current credits that will be stolen from the
-  enemy upon spying this enemy building. Only has an effect if
-  SpyEffect.StolenMoneyAmount=0.
+  enemy upon spying this enemy building. Defaults to 0%.
+[BuildingType]SpyEffect.StolenMoneyAmount=integer - credits
+  **NEW EFFECT** The fixed amount of credits that will be stolen from the enemy
+  upon spying this enemy building. Defaults to 0.
+
+  If used together with SpyEffect.StolenMoneyPercentage, this defines the
+  maximum amount of money to steal.
+
+   If you want to express "Take three quarters of the enemy's
+    money, but no more than 10,000 credits", use both tags:
+    SpyEffect.StolenMoneyPercentage=75% and
+    SpyEffect.StolenMoneyAmount=10000.
 
 
 

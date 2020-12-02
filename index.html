@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Ares Documentation &mdash; Ares 2.0p1 documentation</title>
+    <title>Ares Documentation &mdash; Ares 3.0 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '2.0p1',
+        VERSION:     '3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0p1 documentation" href="#" />
+    <link rel="top" title="Ares 3.0 documentation" href="#" />
     <link rel="next" title="Compatibility Notes" href="notes.html" /> 
   </head>
   <body role="document">
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="notes.html" title="Compatibility Notes"
              accesskey="N">next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">Ares 2.0p1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="#">Ares 3.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -227,6 +227,10 @@ documentations of those programs for further details.</p>
 <li class="toctree-l3"><a class="reference internal" href="new/droppod.html#miscellaneous">Miscellaneous</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="new/editorsupport.html">Editor Support</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new/editorsupport.html#finalalert2"><span><span class="type">FinalAlert2</span></span></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="new/enemyuiname.html"><span><span class="type">EnemyUIName</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/evatypes.html">EVA Types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/facings.html"><span><span class="type">Facings</span></span> on Units</a></li>
@@ -247,6 +251,7 @@ documentations of those programs for further details.</p>
 <li class="toctree-l3"><a class="reference internal" href="new/hardcodedunitproperties.html#isdesolator"><span><span class="type">IsDesolator</span></span></a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="new/harvesters.html">Harvesters, Slave Miners, and Slaves</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/hijackers.html">Hijackers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/hunterseeker.html">Hunter Seeker</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/hunterseeker.html#global-settings">Global Settings</a></li>
@@ -256,12 +261,14 @@ documentations of those programs for further details.</p>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="new/infantryelectrocuted.html"><span><span class="type">InfantryElectrocuted</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/initialpayload.html">Initial Payload (Troop Crawlers)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/keepalive.html">Keep Alive</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/killingdrivers.html">Killing Drivers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/killingdrivers.html#warhead-settings">Warhead Settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/killingdrivers.html#protected-drivers">Protected Drivers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/killingdrivers.html#reclaim-vehicles">Reclaim Vehicles</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="new/losteva.html">Unit or Structure Lost EVA Report</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/makeinfantryowner.html"><span><span class="type">MakeInfantryOwner</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/manual.html">Manual Control</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/manual.html#no-manual-target-selection">No Manual Target Selection</a></li>
@@ -309,6 +316,7 @@ documentations of those programs for further details.</p>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="new/radarjammers.html">Radar Jammers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/radialindicators.html">Radial Indicators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/reload.html"><span><span class="type">ReloadAmount</span></span> and <span><span class="type">EmptyReloadAmount</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/reverseengineerlogic.html">Reverse Engineer logic</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/saboteur.html">Saboteurs</a></li>
@@ -317,9 +325,16 @@ documentations of those programs for further details.</p>
 <li class="toctree-l3"><a class="reference internal" href="new/scripts.html#gather-at-enemy-53"><span><span class="type">Gather at Enemy</span></span> (53)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/scripts.html#gather-at-base-54"><span><span class="type">Gather at Base</span></span> (54)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/scripts.html#iron-curtain-55"><span><span class="type">Iron Curtain</span></span> (55)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/scripts.html#auxiliary-power-65"><span><span class="type">Auxiliary Power</span></span> (65)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/scripts.html#kill-drivers-66"><span><span class="type">Kill Drivers</span></span> (66)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/scripts.html#take-vehicles-67"><span><span class="type">Take Vehicles</span></span> (67)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/scripts.html#convert-type-68"><span><span class="type">Convert Type</span></span> (68)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/scripts.html#sonar-reveal-69"><span><span class="type">Sonar Reveal</span></span> (69)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/scripts.html#disable-weapons-70"><span><span class="type">Disable Weapons</span></span> (70)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="new/selfheal.html">Self Heal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/sellunit.html">Sell Units</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/sight.html">Sight</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/spawners.html">Spawners</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/spawners.html#flying-aircraft-carriers">Flying Aircraft Carriers</a></li>
@@ -334,15 +349,41 @@ documentations of those programs for further details.</p>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="new/teamretaliate.html">Team Retaliate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new/triggeractions.html">Trigger Actions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new/triggeractions.html#activate-firestorm-92"><span><span class="type">Activate Firestorm</span></span> (92)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/triggeractions.html#deactivate-firestorm-93"><span><span class="type">Deactivate Firestorm</span></span> (93)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/triggeractions.html#auxiliary-power-146"><span><span class="type">Auxiliary Power</span></span> (146)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/triggeractions.html#kill-drivers-of-147"><span><span class="type">Kill Drivers Of</span></span> (147)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/triggeractions.html#set-eva-voice-148"><span><span class="type">Set EVA Voice</span></span> (148)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/triggeractions.html#set-group-149"><span><span class="type">Set Group</span></span> (149)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="new/triggerevents.html">Trigger Events</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="new/triggerevents.html#electromagnetic-pulse-62-65"><span><span class="type">Electromagnetic Pulse</span></span> (62-65)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/triggerevents.html#enemy-in-spotlight-now-66"><span><span class="type">Enemy In Spotlight Now</span></span> (66)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/triggerevents.html#kill-driver-67-68"><span><span class="type">Kill Driver</span></span> (67+68)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/triggerevents.html#vehicle-taken-69-70"><span><span class="type">Vehicle Taken</span></span> (69+70)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/triggerevents.html#abduction-71-74"><span><span class="type">Abduction</span></span> (71-74)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/triggerevents.html#super-weapon-activation-75-76"><span><span class="type">Super Weapon Activation</span></span> (75+76)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/triggerevents.html#super-weapon-near-waypoint-77"><span><span class="type">Super Weapon Near Waypoint</span></span> (77)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/triggerevents.html#reverse-engineered-78"><span><span class="type">Reverse Engineered</span></span> (78)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/triggerevents.html#reverse-engineering-79-80"><span><span class="type">Reverse Engineering</span></span> (79+80)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/triggerevents.html#house-owns-techno-type-81-82"><span><span class="type">House Owns Techno Type</span></span> (81+82)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/triggerevents.html#attacked-or-destroyed-by-83-84"><span><span class="type">Attacked Or Destroyed By</span></span> (83+84)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/triggerevents.html#destroyed-by-house-85"><span><span class="type">Destroyed By House</span></span> (85)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/triggerevents.html#techno-type-doesn-t-exist-more-than-86"><span><span class="type">Techno Type Doesn&#8217;t Exist More Than</span></span> (86)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/triggerevents.html#all-keepalives-destroyed-87-88"><span><span class="type">All KeepAlives Destroyed</span></span> (87+88)</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="new/turretrot.html">Turret <span><span class="type">ROT</span></span></a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/typeconversion.html">Type Conversion</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/typeconversion.html#on-promotion">On Promotion</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/typeconversion.html#via-issimpledeployer">Via <span><span class="type">IsSimpleDeployer</span></span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/typeconversion.html#when-transitioning-between-land-and-water">When Transitioning Between Land and Water</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/typeconversion.html#triggered-by-team-script">Triggered by Team Script</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="new/typeselect.html">Type Selection Groups</a></li>
-<li class="toctree-l2"><a class="reference internal" href="new/unitlost.html">Unit Lost EVA Report</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/veteranabilities.html">Veteran and Elite Abilities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="new/sidescountries/index.html">Sides &amp; Countries</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/sidescountries/index.html#sides">Sides</a></li>
@@ -352,6 +393,8 @@ documentations of those programs for further details.</p>
 <li class="toctree-l2"><a class="reference internal" href="new/buildings/index.html">Buildings</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/academy.html">Academies</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/assaulter.html">Assaulter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/buildings/basebuilding.html">Extending Base Space of the AI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/buildings/basebuilding.html#prefer-to-build-in-the-ai-s-inner-base">Prefer to build in the AI&#8217;s Inner Base</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/buildcount.html">Build More Buildings of a Type</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/buildingslam.html">Building Slam</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/builduptime.html">Buildup and Sell Time</a></li>
@@ -366,11 +409,12 @@ documentations of those programs for further details.</p>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/passablestructures.html">Passable Structures</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/prismforwarding.html">Prism Forwarding</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/producecash.html">Oil Derricks (<span><span class="type">ProduceCash</span></span>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/buildings/refineries.html">Refineries</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/repair.html">Repair and Insufficient Funds</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/repair.html#buildings-not-repairable-by-engineers">Buildings not repairable by Engineers</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/secretlabs.html">Secret Labs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/solidbuildings.html">Solid Buildings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="new/buildings/spybehavior.html">Spy Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/buildings/spyeffects.html">Spy Effects</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/techstructures.html">Tech Structures Return to Neutral</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/techstructures.html#tech-structure-notifications">Tech Structure Notifications</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/buildings/togglepower.html">Toggle Power</a></li>
@@ -407,6 +451,7 @@ documentations of those programs for further details.</p>
 <li class="toctree-l3"><a class="reference internal" href="new/weapons/electricbolts.html">Electric Bolts</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/weapons/waves.html">Waves</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/weapons/laser.html"><span><span class="type">LaserThickness</span></span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/weapons/railgun.html">Detached Railgun Beams</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/weapons/projectilerange.html"><span><span class="type">ProjectileRange</span></span></a></li>
 </ul>
 </li>
@@ -428,12 +473,14 @@ documentations of those programs for further details.</p>
 <li class="toctree-l3"><a class="reference internal" href="new/warheads/infantry.html">Infantry-related Settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/warheads/berserk.html">Berserk</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/warheads/deathweapon.html">Suppress Death Weapons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/warheads/diesound.html">Override Die Sounds and Voices</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/warheads/unitlost.html">Suppress Unit Lost Message</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/warheads/culling.html"><span><span class="type">Culling</span></span></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="new/superweapons/index.html">Super Weapons</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="new/superweapons/buildings.html">Building Options</a></li>
-<li class="toctree-l3"><a class="reference internal" href="new/superweapons/general.html">General properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="new/superweapons/general.html">General Settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/superweapons/availability.html">Availability</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/superweapons/hardcoded.html">Hardcoded Values</a></li>
 <li class="toctree-l3"><a class="reference internal" href="new/superweapons/targeting.html">Targeting</a></li>
@@ -503,10 +550,11 @@ documentations of those programs for further details.</p>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ui-features/keyboardcommandshotkeys.html#disabling-keyboard-commands">Disabling Keyboard Commands</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ui-features/loadingscreen.html">Loading Screen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ui-features/loneplayerskirmish.html">Lone Player Skirmish</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui-features/loneplayerskirmish.html">Lone Player and Single Team Skirmish</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ui-features/menubuttoncustomization.html">Menu Button Customization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ui-features/modinfo.html">Mod-specific Information</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ui-features/newgameresolutions.html">New Game Resolutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui-features/queueunts.html">Queue More Than One Unit with a Single Click</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ui-features/randommapgenerator.html">Random Map Generator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ui-features/releasenote.html">Release Note</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ui-features/savegames.html">Save Games</a></li>
@@ -554,11 +602,11 @@ documentations of those programs for further details.</p>
         <li class="right" >
           <a href="notes.html" title="Compatibility Notes"
              >next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">Ares 2.0p1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="#">Ares 3.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2019, The Ares Contributors.
+        &copy; Copyright 2020, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

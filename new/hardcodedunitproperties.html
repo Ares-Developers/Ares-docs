@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Hard-coded Unit Properties &mdash; Ares 2.0p1 documentation</title>
+    <title>Hard-coded Unit Properties &mdash; Ares 3.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0p1',
+        VERSION:     '3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,9 +24,9 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0p1 documentation" href="../index.html" />
+    <link rel="top" title="Ares 3.0 documentation" href="../index.html" />
     <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
-    <link rel="next" title="Hijackers" href="hijackers.html" />
+    <link rel="next" title="Harvesters, Slave Miners, and Slaves" href="harvesters.html" />
     <link rel="prev" title="Gunner IFVs" href="gunner.html" /> 
   </head>
   <body role="document">
@@ -37,12 +37,12 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="hijackers.html" title="Hijackers"
+          <a href="harvesters.html" title="Harvesters, Slave Miners, and Slaves"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="gunner.html" title="Gunner IFVs"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
@@ -61,8 +61,8 @@
   <p class="topless"><a href="gunner.html"
                         title="previous chapter"><span><span class="type">Gunner</span></span> IFVs</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="hijackers.html"
-                        title="next chapter">Hijackers</a></p>
+  <p class="topless"><a href="harvesters.html"
+                        title="next chapter">Harvesters, Slave Miners, and Slaves</a></p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../search.html" method="get">
@@ -108,16 +108,24 @@ the <span><code class="docutils literal"><span class="pre">[COW]</span></code></
 <div class="section" id="isdesolator">
 <span id="index-1"></span><h2><span><span class="type">IsDesolator</span></span><a class="headerlink" href="#isdesolator" title="Permalink to this headline">¶</a></h2>
 <p>The <span><code class="docutils literal"><span class="pre">[DESO]</span></code></span> was hard-coded to have different deploy-weapon firing timing
-than other units. The change to the timing appears to be related to the unit&#8217;s
-art <span><code class="docutils literal"><span class="pre">Sequence</span></code></span> although the exact effect has not been investigated. You can
-now set <span><code class="docutils literal"><span class="pre">IsDesolator=yes</span></code></span> on other <span class="type docutils literal">InfantryTypes</span> or, indeed,
-<span><code class="docutils literal"><span class="pre">IsDesolator=no</span></code></span> on the <span><code class="docutils literal"><span class="pre">[DESO]</span></code></span>.</p>
+than other units to coincide with the unit&#8217;s art <span><code class="docutils literal"><span class="pre">Sequence</span></code></span>.</p>
+<p>Deployable infantry that is also <span><code class="docutils literal"><span class="pre">ImmuneToRadiation=yes</span></code></span> has an additional
+hardcoded effect which causes the unit to automatically fire at the ground when
+deployed, depending on the radiation of the cell the unit is deployed on and the
+<span><code class="docutils literal"><span class="pre">RadLevel</span></code></span> of the infantry&#8217;s secondary weapon.</p>
+<p>You can now set <span><code class="docutils literal"><span class="pre">IsDesolator=yes</span></code></span> on other <span class="type docutils literal">InfantryTypes</span> or,
+indeed, <span><code class="docutils literal"><span class="pre">IsDesolator=no</span></code></span> on the <span><code class="docutils literal"><span class="pre">[DESO]</span></code></span>.</p>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[InfantryType]►IsDesolator=</span></code><span class="type definition"> (boolean)</span></span></dt>
-<dd>Defaults to <cite>yes</cite> for <span><code class="docutils literal"><span class="pre">[DESO]</span></code></span>, otherwise to <cite>no</cite>.</dd>
+<dd>Whether the firing timing and deploy behavior is changed for this infantry
+unit as described above. Defaults to <cite>yes</cite> for <span><code class="docutils literal"><span class="pre">[DESO]</span></code></span>, otherwise
+to <cite>no</cite>.</dd>
 </dl>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 0.1.</span></p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified">Changed in version 3.0.</span></p>
 </div>
 </div>
 </div>
@@ -135,17 +143,17 @@ now set <span><code class="docutils literal"><span class="pre">IsDesolator=yes</
           <a href="../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="hijackers.html" title="Hijackers"
+          <a href="harvesters.html" title="Harvesters, Slave Miners, and Slaves"
              >next</a> |</li>
         <li class="right" >
           <a href="gunner.html" title="Gunner IFVs"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2019, The Ares Contributors.
+        &copy; Copyright 2020, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

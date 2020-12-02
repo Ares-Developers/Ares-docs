@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Compatibility Notes &mdash; Ares 2.0p1 documentation</title>
+    <title>Compatibility Notes &mdash; Ares 3.0 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '2.0p1',
+        VERSION:     '3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0p1 documentation" href="index.html" />
+    <link rel="top" title="Ares 3.0 documentation" href="index.html" />
     <link rel="next" title="What’s New" href="whatsnew.html" />
     <link rel="prev" title="Ares Documentation" href="index.html" /> 
   </head>
@@ -41,7 +41,7 @@
         <li class="right" >
           <a href="index.html" title="Ares Documentation"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Ares 2.0p1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 3.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -57,7 +57,6 @@
 <li><a class="reference internal" href="#required-changes-for-mods-using-ares">Required Changes For Mods Using Ares</a><ul>
 <li><a class="reference internal" href="#rulesmd-ini">rulesmd.ini</a></li>
 <li><a class="reference internal" href="#artmd-ini">artmd.ini</a></li>
-<li><a class="reference internal" href="#bombcurs-shp">bombcurs.shp</a></li>
 <li><a class="reference internal" href="#ares-mix">ares.mix</a></li>
 </ul>
 </li>
@@ -112,7 +111,7 @@ which happily let it happen. Unfortunately, this is exactly the way
 <span class="game docutils literal">Syringe</span>/<span class="game docutils literal">Ares</span> works, making it a so-called &#8220;false positive&#8221;.</p>
 <p>In order for <span class="game docutils literal">Syringe</span>/<span class="game docutils literal">Ares</span> to work with <span class="game docutils literal">Comodo Internet
 Security</span>, you have to make the following changes to Comodo&#8217;s settings
-(<a class="reference external" href="http://forums.renegadeprojects.com/showthread.php?tid=1714&amp;pid=17592#pid17592">courtesy of eva-251</a>):</p>
+(<a class="reference external" href="https://www.forums.renegadeprojects.com/showthread.php?tid=1714&amp;pid=17592#pid17592">courtesy of eva-251</a>):</p>
 <ol class="arabic simple">
 <li><code class="file docutils literal"><span class="pre">gamemd.exe</span></code> and <code class="file docutils literal"><span class="pre">Syringe.exe</span></code> need to be in the &#8220;Trusted Files&#8221;
 list.</li>
@@ -160,6 +159,10 @@ your mod does not receive any unexpected changes from simply being run whilst
 <p>Add <cite>APOCEXP</cite> to the end of the <span class="type docutils literal">Animations</span> list. Because
 <span class="game docutils literal">Ares</span> doesn&#8217;t automatically add types into the list when parsing tags,
 the game no longer knows about this Apocalypse Tank weapon animation.</p>
+<dl class="docutils">
+<dt><span><code class="docutils literal"><span class="pre">[NADEPT]►UnitSell=no</span></code></span></dt>
+<dd>See <a class="reference internal" href="bugfixes/type1/unitselldock.html"><em>Selling Unit on Dock Structures</em></a>.</dd>
+</dl>
 </div>
 <div class="section" id="artmd-ini">
 <h2>artmd.ini<a class="headerlink" href="#artmd-ini" title="Permalink to this headline">¶</a></h2>
@@ -168,18 +171,17 @@ the game no longer knows about this Apocalypse Tank weapon animation.</p>
 <dd>See <a class="reference internal" href="bugfixes/type2/radbeamsandwavesusingthewrongflh.html"><em>RadBeams And Waves Using The Wrong FLH</em></a>.</dd>
 </dl>
 </div>
-<div class="section" id="bombcurs-shp">
-<h2>bombcurs.shp<a class="headerlink" href="#bombcurs-shp" title="Permalink to this headline">¶</a></h2>
-<p>The <code class="file docutils literal"><span class="pre">bombcurs.shp</span></code> animation needs to have its last frame removed if you
-don&#8217;t want to see the previously unused skull image. See
-<a class="reference internal" href="new/weapons/ivanbombs.html#custom-ivan-bombs"><span>IvanBomb.FlickerRate</span></a>.</p>
-</div>
 <div class="section" id="ares-mix">
 <h2>ares.mix<a class="headerlink" href="#ares-mix" title="Permalink to this headline">¶</a></h2>
-<p>Mods should not include their own version of <code class="file docutils literal"><span class="pre">ares.mix</span></code>. This new MIX file
-is bundled with <span class="game docutils literal">Ares</span> to provide any new/modified files that <span class="game docutils literal">Ares</span>
-changes/additions rely on. This MIX file presently includes:</p>
-<p><code class="file docutils literal"><span class="pre">ares.csf</span></code> includes a few new strings:</p>
+<p>This new MIX file is bundled with <span class="game docutils literal">Ares</span> to provide any new/modified files
+that <span class="game docutils literal">Ares</span> changes/additions rely on. This file should always be
+distributed together with the other <span class="game docutils literal">Ares</span> files and updated whenever
+<span class="game docutils literal">Ares</span> is updated.</p>
+<p>Mods should include neither their own version of <code class="file docutils literal"><span class="pre">ares.mix</span></code> nor a version
+that does not belong to the respective version of <span class="game docutils literal">Ares</span>.</p>
+<p>This MIX file presently includes:</p>
+<p><code class="file docutils literal"><span class="pre">ares.csf</span></code> and additional language dependent files include a few new
+strings:</p>
 <ul class="simple">
 <li><cite>GUI:SelectCampaign=Select your Campaign</cite></li>
 <li><cite>GUI:PlayMission=Play</cite></li>
@@ -199,6 +201,22 @@ changes/additions rely on. This MIX file presently includes:</p>
 &#8216;SCRN.date-time.BMP&#8217; file in Red Alert 2 run directory.)</cite></li>
 <li><cite>TXT_RELEASE=Launch</cite></li>
 <li><cite>TXT_FAKE=Fake</cite></li>
+<li><cite>MSG:CannotFire=Cannot fire at the moment. Activation aborted.</cite></li>
+<li><cite>TXT_DEVELOPMENT=Development</cite></li>
+<li><cite>TXT_DUMP_AI_BASE_PLAN=AI Base Plan Logger</cite></li>
+<li><cite>TXT_DUMP_AI_BASE_PLAN_DESC=Dumps the AI Base Plans to the log.</cite></li>
+<li><cite>TXT_AI_CONTROL=AI Control</cite></li>
+<li><cite>TXT_AI_CONTROL_DESC=Let the AI assume control.</cite></li>
+<li><cite>TXT_DUMP_MEMORY=Dump Memory</cite></li>
+<li><cite>TXT_DUMP_MEMORY_DESC=Dumps the current process&#8217;s memory.</cite></li>
+<li><cite>TXT_DUMP_TYPES=Dump Types</cite></li>
+<li><cite>TXT_DUMP_TYPES_DESC=Dumps the current type lists to the log.</cite></li>
+<li><cite>TXT_FPS_COUNTER=FPS Counter</cite></li>
+<li><cite>TXT_FPS_COUNTER_DESC=Displays the current and an average of frames per second.</cite></li>
+<li><cite>TXT_MAP_SNAPSHOT=Map Snapshot</cite></li>
+<li><cite>TXT_MAP_SNAPSHOT_DESC=Saves the currently played map.</cite></li>
+<li><cite>TXT_TOGGLE_POWER=Toggle Power Mode</cite></li>
+<li><cite>TXT_TOGGLE_POWER_DESC=Turn toggle power mode on / off.</cite></li>
 </ul>
 </div>
 </div>
@@ -221,11 +239,11 @@ changes/additions rely on. This MIX file presently includes:</p>
         <li class="right" >
           <a href="index.html" title="Ares Documentation"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Ares 2.0p1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 3.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2019, The Ares Contributors.
+        &copy; Copyright 2020, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

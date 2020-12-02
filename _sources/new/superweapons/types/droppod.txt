@@ -17,7 +17,7 @@ pods.
 Default values for general tags:
 
 [SuperWeapon]SW.AITargeting=enumeration
-  Defaults to ParaDrop.
+  Defaults to DropPod.
 [SuperWeapon]EVA.Detected=EVA event
   Defaults to EVA_DropPodDetected.
 [SuperWeapon]EVA.Ready=EVA event
@@ -55,3 +55,4 @@ See Drop Pods for information about the global defaults
 and other related additions.
 
  0.7
+ 3.0

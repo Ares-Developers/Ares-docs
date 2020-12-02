@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Type=Battery &mdash; Ares 3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 3.0 documentation" href="../../../index.html" />
+    <link rel="up" title="Settings by Super Weapon Type" href="index.html" />
+    <link rel="next" title="Tiberium" href="../../tiberium/index.html" />
+    <link rel="prev" title="Type=EMPulse" href="empulse.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../tiberium/index.html" title="Tiberium"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="empulse.html" title="Type=EMPulse"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">Settings by Super Weapon Type</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="empulse.html"
+                        title="previous chapter"><span><span class="type">Type=EMPulse</span></span></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../../tiberium/index.html"
+                        title="next chapter">Tiberium</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="type-battery">
+<span id="index-0"></span><h1><span><span class="type">Type=Battery</span></span><a class="headerlink" href="#type-battery" title="Permalink to this headline">¶</a></h1>
+<p>According to early previews it was planned for <span class="game docutils literal">Tiberian Sun</span> to include a
+battery super weapon that would bridge power outages. As there are no traces of
+it anywhere in the game aside from a leftover cameo image, <span class="game docutils literal">Ares</span> uses
+some artistic license to implement this super weapon type.</p>
+<p>This super weapon uses the Charge/Drain logic: once activated, the effect
+will persist for a duration determined by <span><code class="docutils literal"><span class="pre">SW.ChargeToDrainRatio</span></code></span>, after
+which it will automatically shut down and the super weapon will restart its
+charging process.</p>
+<p>Default values for general tags:</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►SW.AITargeting=</span></code><span class="type definition"> (enumeration)</span></span></dt>
+<dd>Defaults to <cite>LowPower</cite>.</dd>
+</dl>
+<p>As long as the super weapon is active, the following effects can be applied to
+the owning player:</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Battery.Power=</span></code><span class="type definition"> (integer - power)</span></span></dt>
+<dd>The amount of auxiliary power given to a house while the super weapon is
+active. The power is not provided by any particular building and will thus be
+constant even if the base is heavily damaged. Defaults to <cite>0</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Battery.Overpower=</span></code><span class="type definition"> (list of BuildingTypes)</span></span></dt>
+<dd>The types of buildings this super weapon will temporarily overpower.
+Overpowered buildings use the secondary weapon instead of the primary weapon.
+While this works the same as Tesla Troopers overpowering the Tesla Coil, the
+building types are not required to have <span><code class="docutils literal"><span class="pre">Overpowerable=yes</span></code></span> set. Defaults
+to <cite>none</cite>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Battery.KeepOnline=</span></code><span class="type definition"> (list of BuildingTypes)</span></span></dt>
+<dd><p class="first">The types of buildings this super weapon will temporarily keep online. No
+matter the power level, buildings of this type will still be powered up. Can
+be combined with <span><code class="docutils literal"><span class="pre">Battery.Overpower</span></code></span> to create defenses that are kept
+online and overpowered. Defaults to <cite>none</cite>.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Not all building effects might function while the base has no power,
+but it is possible to keep the radar online even during low power situations
+by adding the building that provides the radar to this list.</p>
+</div>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../tiberium/index.html" title="Tiberium"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="empulse.html" title="Type=EMPulse"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >Super Weapons</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >Settings by Super Weapon Type</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2020, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

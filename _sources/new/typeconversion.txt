@@ -21,11 +21,16 @@ The following are fully supported:
 
 + changing Strength will keep the units health the same
 + changing Armor
-+ Ammo is deduced if new type has less Ammo
++ Ammo is reduced if new type has less Ammo
 + Cloakable is applied again
 + Spotlight is removed or created
 + AttachEffect on the type is removed or created
 + ROT and TurretROT are reset
++ All prerequisites are rechecked once a unit converts
+
+ Converted units no longer count as original units for
+  BuildLimit checks. As with all other prerequisite checks, units will
+  not be disallowed to convert, even if it violates BuildLimit rules.
 
  2.0
 
@@ -122,3 +127,34 @@ weapons, armor and so on.
   water. Defaults to none.
 
  2.0
+
+
+.. _convert-script:
+
+ TechnoTypes; Type change by Script Action
+
+Triggered by Team Script
+
+
+This tag generalizes the relationship that existed since Tiberian Sun,
+where team members of the hardcoded UnitType\ s [TRUCKA]► and
+[TRUCKB]► could be converted between each other by two Team Scripts. This
+gave the impression of cargo trucks loading or unloading, which was the only
+purpose of this logic and limited to exactly this combination of types.
+
+Ares allows to define a type to convert to for each individual type. See
+Convert Type Team Script for how to trigger the
+conversion.
+
+[TechnoType]Convert.Script=TechnoType
+  The type to convert an object to when executing the Convert Type Team Script.
+  Defaults to none.
+
+Because the type changes immediately when the conversion is triggered, you
+cannot generally assume the units to be standing still, idling. Thus, changing
+locomotors is not supported, while changing other movement settings or weapons
+might not work reliably. It is possible to change type settings unrelated to
+moving and firing, though: Add the ability to deploy, remove the restriction to
+manually unload, change the image or the Death Weapon, ...
+
+ 3.0

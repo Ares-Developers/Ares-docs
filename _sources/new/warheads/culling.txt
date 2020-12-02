@@ -1,0 +1,49 @@
+
+  Warheads; Culling effect for ordinary warheads
+  Culling; Supported on ordinary warheads
+
+Culling
+
+
+With Ares the culling effect used by naval parasites like Squids can
+also be applied to conventional warheads. Culling is responsibile for dealing a
+deadly blow once the victim is below a certain health percentage.
+
+[Warhead]Culling.RookieBelowHealth=integer - percentage
+
+[Warhead]Culling.VeteranBelowHealth=integer - percentage
+
+[Warhead]Culling.EliteBelowHealth=integer - percentage
+  The health a victim unit must fall below to be culled by a hit using this
+  warhead. Use 1 to 100 to represent percentages of full
+  health; use 0, -1, and -2 to represent health
+  states critical/red, damaged/yellow, and healthy/green respectively.
+  Requires Culling=yes.
+
+  Defaults to 0 for Culling.RookieBelowHealth and
+  Culling.VeteranBelowHealth, to -1 for
+  Culling.EliteBelowHealth.
+
+  The default is the behavior of parasites with Culling=yes: They cull
+  units with critical health if the firer is rookie or veteran, and also cull
+  damaged units (yellow) if firer is elite.
+
+
+[Warhead]Culling.Chance=integer - percentage
+
+[Warhead]Culling.RookieChance=integer - percentage
+
+[Warhead]Culling.VeteranChance=integer - percentage
+
+[Warhead]Culling.EliteChance=integer - percentage
+  The chance that a cullable unit is actually culled by a hit using this
+  warhead. Requires Culling=yes. Defaults to 100 (always).
+
+  Use Culling.Chance to set the chance for all veterancy levels.
+
+   This chance is applied every time damage is dealt using this
+    warhead, not once per victim. That means with 70 there is a 70%
+    chance of culling on the first hit, and a 91% chance of culling the unit
+    on the second hit.
+
+ 3.0

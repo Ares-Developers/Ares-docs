@@ -6,33 +6,36 @@
 Operator
 
 
-Any TechnoType can now require a specific InfantryType to be
-among its passengers before it will function.
+BuildingType\ s and VehicleType\ s can now require specific
+InfantryType\ s or VehicleType\ s to be among its passengers
+before they will function.
 
-[TechnoType]Operator=string, either an InfantryType or "_ANY_"
-  Specifies the InfantryType that must be among the TechnoType's
-  passengers before the TechnoType will function. If "_ANY_"
-  (sans quotes) is specified then it doesn't matter which InfantryType
-  is inside as long as some InfantryType is. Use none to remove
-  the requirement of having an operator. Defaults to none.
-
+[TechnoType]Operator=list of TechnoTypes or "_ANY_"
+  Specifies a list of InfantryType\ s and VehicleType\ s of
+  which at least one unit must be among the passengers before this object will
+  function. If "_ANY_" (sans quotes) is specified, then it does not
+  matter which passenger is inside, as long as any is. Use none to
+  remove the requirement of having an operator. Defaults to none.
 
 On the TechnoType you will need to set Passengers=1 (or higher)
 and SizeLimit=1 (or higher).
 
-For BuildingTypes you will also need to set InfantryAbsorb=yes.
+For BuildingTypes you will also need to set InfantryAbsorb=yes or
+UnitAbsorb=yes.
 
 If the needed passenger is not inside then the TechnoType will power
 down in a similar fashion to the Robot Tank when the Robot Control Centre is
 offline -- the unit will not be able to move or fire.
 
-BuildingTypes without their Operator will not be able to fire their
+BuildingType\ s without their Operator will not be able to fire their
 weapon, if they have one.
 
 No other building-specific functions will be affected (e.g. providing power,
 being a factory, undeploying, super weapons, radar, etc).
 
-Mirage Tanks without their Operator will still maintain their disguise.
+Units and structures will not cloak themselves if they are not operated, but
+they can still be cloaked by Cloak Generators. Mirage Tanks without their
+Operator will still maintain their disguise.
 
 
 + Operator logic has no effect on Service Depots -- the Operator cannot enter.
@@ -64,3 +67,4 @@ Mirage Tanks without their Operator will still maintain their disguise.
   AI from building anything that requires an Operator.
 
  0.1
+ 3.0

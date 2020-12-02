@@ -1,0 +1,16 @@
+ Bugs; MulitplayPassive houses anger AI players
+
+
+MultiplayPassive=yes Houses Anger Players
+
+
+AI players pick their favorite enemy by detecting which enemy player caused the
+most damage and destruction. If the neutral houses caused some damage near the
+start of the match (which could also happen if Oil Derricks blew up), AI players
+might pick a neutral house as their enemy to go after and thus start a war
+against civilians.
+
+With Ares, MultiplayPassive=yes countries are no longer eligible
+to be picked as favorite enemy.
+
+ 3.0

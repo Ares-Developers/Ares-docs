@@ -1,0 +1,14 @@
+ Spawners; NoSpawnAlt and Turret
+
+
+NoSpawnAlt and Turret
+
+
+To store the spawn-less voxel, spawner units with NoSpawnAlt=yes used the
+same storage space normally used for turrets. Thus, spawner units which should
+have a spawn-less voxel cannot also have a turret at the same time.
+
+Ares reworked this feature and makes it possible to combine turrets and
+spawn-less voxels.
+
+ 3.0

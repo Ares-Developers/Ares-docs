@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Culling &mdash; Ares 3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 3.0 documentation" href="../../index.html" />
+    <link rel="up" title="Warheads" href="index.html" />
+    <link rel="next" title="Super Weapons" href="../superweapons/index.html" />
+    <link rel="prev" title="Suppress Unit Lost Message" href="unitlost.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../superweapons/index.html" title="Super Weapons"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="unitlost.html" title="Suppress Unit Lost Message"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Warheads</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="unitlost.html"
+                        title="previous chapter">Suppress Unit Lost Message</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../superweapons/index.html"
+                        title="next chapter">Super Weapons</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="culling">
+<span id="index-0"></span><h1><span><span class="type">Culling</span></span><a class="headerlink" href="#culling" title="Permalink to this headline">¶</a></h1>
+<p>With <span class="game docutils literal">Ares</span> the culling effect used by naval parasites like Squids can
+also be applied to conventional warheads. Culling is responsibile for dealing a
+deadly blow once the victim is below a certain health percentage.</p>
+<p><span><code class="definition docutils literal"><span class="pre">[Warhead]►Culling.RookieBelowHealth=</span></code><span class="type definition"> (integer - percentage)</span></span></p>
+<p><span><code class="definition docutils literal"><span class="pre">[Warhead]►Culling.VeteranBelowHealth=</span></code><span class="type definition"> (integer - percentage)</span></span></p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►Culling.EliteBelowHealth=</span></code><span class="type definition"> (integer - percentage)</span></span></dt>
+<dd><p class="first">The health a victim unit must fall below to be culled by a hit using this
+warhead. Use <cite>1</cite> to <cite>100</cite> to represent percentages of full
+health; use <cite>0</cite>, <cite>-1</cite>, and <cite>-2</cite> to represent health
+states critical/red, damaged/yellow, and healthy/green respectively.
+Requires <span><code class="docutils literal"><span class="pre">Culling=yes</span></code></span>.</p>
+<p>Defaults to <cite>0</cite> for <span><code class="docutils literal"><span class="pre">Culling.RookieBelowHealth</span></code></span> and
+<span><code class="docutils literal"><span class="pre">Culling.VeteranBelowHealth</span></code></span>, to <cite>-1</cite> for
+<span><code class="docutils literal"><span class="pre">Culling.EliteBelowHealth</span></code></span>.</p>
+<p class="last">The default is the behavior of parasites with <span><code class="docutils literal"><span class="pre">Culling=yes</span></code></span>: They cull
+units with critical health if the firer is rookie or veteran, and also cull
+damaged units (yellow) if firer is elite.</p>
+</dd>
+</dl>
+<p><span><code class="definition docutils literal"><span class="pre">[Warhead]►Culling.Chance=</span></code><span class="type definition"> (integer - percentage)</span></span></p>
+<p><span><code class="definition docutils literal"><span class="pre">[Warhead]►Culling.RookieChance=</span></code><span class="type definition"> (integer - percentage)</span></span></p>
+<p><span><code class="definition docutils literal"><span class="pre">[Warhead]►Culling.VeteranChance=</span></code><span class="type definition"> (integer - percentage)</span></span></p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[Warhead]►Culling.EliteChance=</span></code><span class="type definition"> (integer - percentage)</span></span></dt>
+<dd><p class="first">The chance that a cullable unit is actually culled by a hit using this
+warhead. Requires <span><code class="docutils literal"><span class="pre">Culling=yes</span></code></span>. Defaults to <cite>100</cite> (always).</p>
+<p>Use <span><code class="docutils literal"><span class="pre">Culling.Chance</span></code></span> to set the chance for all veterancy levels.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This chance is applied every time damage is dealt using this
+warhead, not once per victim. That means with <cite>70</cite> there is a 70%
+chance of culling on the first hit, and a 91% chance of culling the unit
+on the second hit.</p>
+</div>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../superweapons/index.html" title="Super Weapons"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="unitlost.html" title="Suppress Unit Lost Message"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Warheads</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2020, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

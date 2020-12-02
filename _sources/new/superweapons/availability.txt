@@ -10,6 +10,9 @@ This does not affect the way DisableableFromShell works. Only the super
 weapon set as SuperWeapon is checked for this tag, and the building
 becomes unbuildable even if the super weapon is unavailable.
 
+Even if all super weapons a building provides are disabled by whatever
+restriction, it will still play the Super animation.
+
 
 
   Super Weapons; Availability by country
@@ -75,3 +78,65 @@ become available if its AuxBuilding requirement is satisfied.
   availability do not support building animations.
 
  0.9
+
+
+ Super Weapons; Available only for human or AI players
+
+Only for Human or AI Players
+
+
+Super weapons can be restricted to be used by houses controlled by human or AI
+players only. This allows to hide special super weapons the AI might use to gain
+an advantage from human players.
+
+[SuperWeapon]SW.AllowPlayer=boolean
+  Whether this super weapon will be available to human players. Defaults to
+  yes.
+
+[SuperWeapon]SW.AllowAI=boolean
+  Whether this super weapon will be available to AI players. Defaults to
+  yes.
+
+ 3.0
+
+
+ Super Weapons; Available only a number of times
+
+Limited Number of Shots
+
+
+Super weapons can become unavailable after having been fired a certain number of
+times. The super weapon cameo will disappear after the super weapon became
+unavailable.
+
+[SuperWeapon]SW.Shots=integer
+  How often this super weapon is allowed to fire before becoming unavailable.
+  Use -1 to allow unlimited firing. Is not supported for Charge Drain
+  super weapons. Defaults to -1.
+
+ Super weapons granted by crates or map actions will also count against
+  this limit. This might change in the future.
+
+ 3.0
+
+
+ Super Weapons; Available without building
+
+Always Granted Without Building
+
+
+With Ares it is possible to use super weapons that are not tied to a
+building that provides them. Instead, the always granted super weapon will
+become immediately.
+
+This setting still respects AuxBuilding, SW.AuxBuidings,
+SW.NegBuildings, SW.ForbiddenHouses, SW.RequiredHouses,
+SW.AllowPlayer and SW.AllowAI.
+
+[SuperWeapon]SW.AlwaysGranted=boolean
+  Whether this super weapon is not provided by any particular building but is
+  instead always available as long as the player has not been defeated. Defaults
+  to no.
+
+ 3.0
+

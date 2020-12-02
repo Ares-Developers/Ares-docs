@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>What’s New &mdash; Ares 2.0p1 documentation</title>
+    <title>What’s New &mdash; Ares 3.0 documentation</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '2.0p1',
+        VERSION:     '3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0p1 documentation" href="index.html" />
+    <link rel="top" title="Ares 3.0 documentation" href="index.html" />
     <link rel="next" title="Migration Guide" href="migration.html" />
     <link rel="prev" title="Compatibility Notes" href="notes.html" /> 
   </head>
@@ -41,7 +41,7 @@
         <li class="right" >
           <a href="notes.html" title="Compatibility Notes"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Ares 2.0p1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 3.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -78,6 +78,37 @@
 <p>This section contains non-exhaustive lists of features and bugfixes that were
 added to a particular version of <span class="game docutils literal">Ares</span>. Internal changes, optimizations
 and updates are mentioned here only if they are notable.</p>
+<p class="rubric">Ares 3.0</p>
+<ul class="simple">
+<li><strong>Super Weapons</strong> can be <a class="reference internal" href="new/superweapons/availability.html"><em>limited to human or AI players, only provide a
+limited number of shots, or be granted without any building</em></a>, <a class="reference internal" href="new/superweapons/general.html"><em>charged initially or charge in the
+background without any building to provide them</em></a>,
+<a class="reference internal" href="new/superweapons/targeting.html"><em>can be fired according to AI targeting rules, but at the player&#8217;s
+command, with fully customizable constraints</em></a>.
+A <a class="reference internal" href="new/superweapons/types/battery.html"><em>new Battery super weapon type</em></a> has
+been added, as well as <a class="reference internal" href="new/superweapons/targeting.html"><em>some new AI targeting modes</em></a>.</li>
+<li><strong>Trigger Actions</strong> <a class="reference internal" href="new/triggeractions.html"><em>provide auxiliary power, kill drivers, change the
+EVA voice or the group units belong to dynamically</em></a></li>
+<li><strong>Trigger Events</strong> raised for <a class="reference internal" href="new/triggerevents.html"><em>EMP, spotlights, killing drivers,
+tanking vehicles, abduction, reverse engineering, super weapon use, houses
+owning a certain object type, a certain house destroying an object, no more
+objects of a certain type existing, and a house having no more objects keeping
+the player alive</em></a></li>
+<li><strong>Team Scripts</strong> have been added to <a class="reference internal" href="new/scripts.html"><em>provide auxiliary power, kill
+drivers, capture vehicles, convert the type, cause sonar detection, and
+disable weapons</em></a></li>
+<li><strong>Short Games</strong> <a class="reference internal" href="new/keepalive.html"><em>end only if the player has no more units or structures
+that keep them alive</em></a></li>
+<li><strong>Harvesters</strong> allow to <a class="reference internal" href="new/harvesters.html"><em>customize the global scan and distance settings</em></a></li>
+<li><strong>Refineries</strong> allow to slightly <a class="reference internal" href="new/buildings/refineries.html"><em>customize dock unloading cells and
+facings</em></a></li>
+<li><strong>Warheads</strong> support <a class="reference internal" href="new/warheads/culling.html"><em>culling enemies like the Squid parasite attack does</em></a></li>
+<li><strong>Railguns</strong> can be <a class="reference internal" href="new/weapons/railgun.html"><em>detached and fire before the last one has
+disappeared</em></a></li>
+<li><strong>Selling Units</strong> can be <a class="reference internal" href="new/sellunit.html"><em>customized per type, and buildings can be set
+to allow selling units</em></a></li>
+<li><strong>Bugfixes</strong> have been added to solve <a class="reference internal" href="bugfixes/type1/burstabuse.html"><em>burst abuse</em></a>, <a class="reference internal" href="bugfixes/type1/guardapproachtarget.html"><em>IFVs chasing aircraft</em></a>, an <a class="reference internal" href="bugfixes/type1/infantrydeploy.html"><em>infantry deploy jam</em></a></li>
+</ul>
 <p class="rubric">Ares 2.0</p>
 <ul class="simple">
 <li><strong>Type Conversions</strong> can switch a unit type when <a class="reference internal" href="new/typeconversion.html"><em>deploying, promoting or
@@ -90,7 +121,7 @@ moving into or out of water</em></a></li>
 super weapon with <a class="reference internal" href="new/superweapons/targeting.html"><em>Iron Curtain Targeting</em></a>
 to support teams</li>
 <li><strong>Build Time</strong> can be <a class="reference internal" href="new/buildtime.html"><em>customized for each type</em></a></li>
-<li><strong>Spy Effects</strong> to <a class="reference internal" href="new/buildings/spybehavior.html"><em>build buildings, naval units or aircraft as veteran</em></a></li>
+<li><strong>Spy Effects</strong> to <a class="reference internal" href="new/buildings/spyeffects.html"><em>build buildings, naval units or aircraft as veteran</em></a></li>
 </ul>
 <p class="rubric">Ares 1.0</p>
 <ul class="simple">
@@ -143,7 +174,7 @@ be customized</li>
 round of ammunition</em></a>, and <a class="reference internal" href="new/aircraftreload.html"><em>aircraft with individual reload
 rate</em></a>.</li>
 <li><strong>Self Heal</strong> <a class="reference internal" href="new/selfheal.html"><em>made customizable</em></a></li>
-<li><strong>Spies</strong> can steal plans for <a class="reference internal" href="new/buildings/spybehavior.html"><em>one-time or permanent super weapons</em></a>, and they can be deceived by <a class="reference internal" href="new/buildings/fakes.html"><em>deploying
+<li><strong>Spies</strong> can steal plans for <a class="reference internal" href="new/buildings/spyeffects.html"><em>one-time or permanent super weapons</em></a>, and they can be deceived by <a class="reference internal" href="new/buildings/fakes.html"><em>deploying
 fake buildings</em></a></li>
 <li><strong>Disallow</strong> players from getting the <a class="reference internal" href="new/manual.html"><em>enter or no-enter cursor on
 transports or the area guard cursor on medics</em></a></li>
@@ -249,7 +280,7 @@ transports</em></a></li>
 <li><strong>Veterancy</strong> <a class="reference internal" href="new/customizableinsignia.html"><em>insignia can be hidden for enemy players</em></a></li>
 <li><strong>Engineers and Technicians</strong> can be <a class="reference internal" href="new/sidescountries/defaultside.html"><em>defined for each side</em></a>, and <a class="reference internal" href="new/survivors.html"><em>they can spawn as survivors</em></a></li>
 <li><strong>C4 veteran ability</strong> has been restored back <a class="reference internal" href="bugfixes/type2/c4veteranability.html"><em>into working state</em></a></li>
-<li><strong>EVA message</strong> <a class="reference internal" href="new/unitlost.html"><em>in case a unit is destroyed</em></a></li>
+<li><strong>EVA message</strong> <a class="reference internal" href="new/losteva.html"><em>in case a unit is destroyed</em></a></li>
 </ul>
 <p class="rubric">Ares 0.4</p>
 <ul class="simple">
@@ -258,7 +289,7 @@ battlefield</em></a> for a variety of new features and play styles</li>
 <li><strong>Super weapon additions</strong> with <a class="reference internal" href="new/superweapons/cost.html"><em>cameos being grayed out</em></a>, and a new <a class="reference internal" href="new/superweapons/evaevents.html"><em>EVA event for selecting targets</em></a></li>
 <li><strong>Aircraft</strong> now <a class="reference internal" href="new/crashableaircraft.html"><em>supports Crashable</em></a></li>
 <li><strong>Pips</strong> <a class="reference internal" href="new/pips.html"><em>support more than only the hardcoded values</em></a></li>
-<li><strong>Spy Effects</strong> now support <a class="reference internal" href="new/buildings/spybehavior.html"><em>PCX cameos and persistent radar reveal</em></a>, and <a class="reference internal" href="bugfixes/type1/spyingalliedbuildings.html"><em>spies can no longer infiltrate allied
+<li><strong>Spy Effects</strong> now support <a class="reference internal" href="new/buildings/spyeffects.html"><em>PCX cameos and persistent radar reveal</em></a>, and <a class="reference internal" href="bugfixes/type1/spyingalliedbuildings.html"><em>spies can no longer infiltrate allied
 buildings</em></a></li>
 <li><strong>Gate</strong> <a class="reference internal" href="new/buildings/gates.html"><em>sounds are now customizable</em></a></li>
 <li><strong>Veteran Buildings</strong> <a class="reference internal" href="new/sidescountries/defaultcountry.html"><em>added to the country options</em></a></li>
@@ -297,11 +328,11 @@ supported</em></a></li>
         <li class="right" >
           <a href="notes.html" title="Compatibility Notes"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Ares 2.0p1 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">Ares 3.0 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2019, The Ares Contributors.
+        &copy; Copyright 2020, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Random Map Generator &mdash; Ares 2.0p1 documentation</title>
+    <title>Random Map Generator &mdash; Ares 3.0 documentation</title>
     
     <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '2.0p1',
+        VERSION:     '3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,10 +24,10 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0p1 documentation" href="../index.html" />
+    <link rel="top" title="Ares 3.0 documentation" href="../index.html" />
     <link rel="up" title="User Interface Features" href="index.html" />
     <link rel="next" title="Release Note" href="releasenote.html" />
-    <link rel="prev" title="New Game Resolutions" href="newgameresolutions.html" /> 
+    <link rel="prev" title="Queue More Than One Unit with a Single Click" href="queueunts.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -40,17 +40,17 @@
           <a href="releasenote.html" title="Release Note"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="newgameresolutions.html" title="New Game Resolutions"
+          <a href="queueunts.html" title="Queue More Than One Unit with a Single Click"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">User Interface Features</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="newgameresolutions.html"
-                        title="previous chapter">New Game Resolutions</a></p>
+  <p class="topless"><a href="queueunts.html"
+                        title="previous chapter">Queue More Than One Unit with a Single Click</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="releasenote.html"
                         title="next chapter">Release Note</a></p>
@@ -79,13 +79,13 @@
 <span id="index-3"></span><h1>Random Map Generator<a class="headerlink" href="#random-map-generator" title="Permalink to this headline">¶</a></h1>
 <p><span class="game docutils literal">Ares</span> lets you create random maps using some new map styles &#8211;
 Archipelago terrain and the Desert tileset.</p>
-<p>The RMG will now place bridges at random on maps that include rivers.</p>
+<p>The Random Map Generator will now place bridges at random on maps that include
+rivers.</p>
 <p>Random Map Generator enhancements:</p>
-<p>A new checkbox &#8211; <cite>Place Urban Areas</cite> &#8211; allows the user to add an assortment of
-streets and urban combat buildings at random spots throughout the generated map.
-The objects placed by this feature can be modified by adding the heading
-<span><code class="docutils literal"><span class="pre">[Urban]</span></code></span> in the <code class="file docutils literal"><span class="pre">rmgmd.ini</span></code> file, and adding the following lists
-after <span><code class="docutils literal"><span class="pre">Structures=</span></code></span>, <span><code class="docutils literal"><span class="pre">Vehicles=</span></code></span> and <span><code class="docutils literal"><span class="pre">Infantry=</span></code></span> respectively:</p>
+<p>A new checkbox &#8211; <cite>Create Urban Areas</cite> &#8211; allows the user to add an assortment
+of streets and urban combat buildings at random spots throughout the generated
+map. The objects placed by this feature can be modified by adding the heading
+<span><code class="docutils literal"><span class="pre">[Urban]</span></code></span> in the <code class="file docutils literal"><span class="pre">rmgmd.ini</span></code> file, and adding the following lists:</p>
 <dl class="docutils">
 <dt><span><code class="definition docutils literal"><span class="pre">[Urban]►Structures=</span></code><span class="type definition"> (list of BuildingTypes)</span></span></dt>
 <dd>Defaults to <cite>CABUNK01,CABUNK02,CAARMY01,CAARMY02,CAARMY03,CAARMY04,
@@ -98,9 +98,8 @@ CACHIG03,CANEWY01,CANEWY14,CANWY09,CANWY26,CANWY25,CATEXS07</cite>.</dd>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Urban areas generated in the minimap preview do not always correspond
-to content generated ingame, especially in Desert maps &#8211; this is still being
-investigated. In addition, there are reports of this feature not working at
-all with certain settings. (Known issue: <a class="reference external" href="https://bugs.launchpad.net/ares/+bug/enable-the-generation-of-urban-areas-and-add-a-checkbox-to-control-it">#794</a>)</p>
+to content generated ingame, especially in Desert maps. In addition, there are
+reports of this feature not working at all with certain settings.</p>
 </div>
 <div class="versionadded">
 <p><span class="versionmodified">New in version 0.1.</span></p>
@@ -123,14 +122,14 @@ all with certain settings. (Known issue: <a class="reference external" href="htt
           <a href="releasenote.html" title="Release Note"
              >next</a> |</li>
         <li class="right" >
-          <a href="newgameresolutions.html" title="New Game Resolutions"
+          <a href="queueunts.html" title="Queue More Than One Unit with a Single Click"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >User Interface Features</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2019, The Ares Contributors.
+        &copy; Copyright 2020, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

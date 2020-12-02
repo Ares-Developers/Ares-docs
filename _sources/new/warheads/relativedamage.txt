@@ -17,13 +17,13 @@ DeployedDamage for infantry. Suppressing parasites is also not supported.
 
 [Warhead]RelativeDamage=boolean
   Deal damage relative to Strength or current health instead of
-  dealing conventional damage. If set to yes, the four tags below are
-  used depending on target type. If a tag is not defined, no damage is dealt.
+  dealing conventional damage. If set to yes, the tags below are used
+  depending on target type. If a tag is not defined, no damage is dealt.
   Defaults to no.
 
    A dummy Damage is needed on this warhead for targeting, even
-    though finally the value is not used. If Damage is negative (like for
-    healing weapons), the Relative Damage will be negative also.
+    though the value ultimately is not used. If Damage is negative (like
+    for healing weapons), the Relative Damage will be negative also.
 
 [Warhead]RelativeDamage.Buildings=integer - percent
 
@@ -32,6 +32,8 @@ DeployedDamage for infantry. Suppressing parasites is also not supported.
 [Warhead]RelativeDamage.Infantry=integer - percent
 
 [Warhead]RelativeDamage.Vehicles=integer - percent
+
+[Warhead]RelativeDamage.Terrain=integer - percent
   The damage defined as percentage from either Strength, if positive, or
   current health, if negative. Supported values range from -100 to
   100. A value of 0 deals no damage. Defaults to 0.
@@ -40,3 +42,4 @@ Relative Damage considers Organic=yes vehicles as infantry and
 ConsideredAircraft=yes vehicles as aircraft.
 
  0.E
+ 3.0

@@ -9,8 +9,10 @@ Inefficient Map Events
 Map events `TechType exists` and `TechType does not exist` were implemented
 inefficiently. Both iterated all available types each frame to resolve an ID to
 a type and then iterated all technos to count the number of existing technos of
-this type. Ares caches the type information. Ares also optimizes
-summing up the techno count by using the house counters of each house, if the
-type is Insignificant=no and DontScore=no.
+this type. Ares always caches the type information and also optimizes
+summing up the techno count by either using the house counters of each house, if
+the type is Insignificant=no and DontScore=no or at least only
+checking the list of the relevant object type otherwise.
 
  0.3
+ 3.0

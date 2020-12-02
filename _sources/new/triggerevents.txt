@@ -1,0 +1,316 @@
+Trigger Events
+
+
+Ares adds the following Trigger Events to Yuri's Revenge.
+
+In this section, the following terms are used:
+
+Events that are *persistent* need to be satisfied only once and the game will
+remember that they occured. Events that are not persistent thus have to be
+satisfied the very instant for the event to fire.
+
+An event is *incidental* if the event is actually satisfied by triggering that
+very event. Incidental events occur at a specific point in time and are tied to
+some specific action taking place. An example would be Spied By (2),
+which is triggered the moment a Spy enters a building.
+
+An event is *situational* if it depends on the circumstances of the match and
+thus is satisfied at any point in time the condition is currently true. That is,
+the condition is usually satisfied over a period of time and can potentially
+change over time. Examples are No Factories Left (17) and Low
+Power (30).
+
+This means that a trigger with two non-persistent incidental events will never
+fire, because they are raised one after another, not simultaneously, and thus
+can never be satisfied at the same time.
+
+It also means that if a trigger contains a chain of events, and it includes one
+non-persistent incidental event, it will have to be the last event satisfied to
+fire the trigger and execute the actions.
+
+See Editor Support on how to use the new Trigger
+Events from map editors.
+
+
+ Trigger Events; Electromagnetic Pulse
+
+Electromagnetic Pulse (62-65)
+
+
+62,0,0 Under EMP: Triggers when the attached object is disabled by EMP
+(works like Trigger Event 53 in Tiberian Sun).
+
+63,0,<house> Under EMP By House: Triggers when the specified house
+disables the attached object by EMP.
+
+64,0,0 Removed EMP: Triggers when the attached object is reactivated by
+a "healing" EMP.
+
+65,0,<house> Removed EMP By House: Triggers when the specified house
+reactivates the attached object by a "healing" EMP.
+
+These are all incidental and non-persistent.
+
+When deactivating an object, event 63 is triggered before 62
+and when reactivating, 65 is triggered before 64. This is to
+allow a specific house to take precedence over the general case.
+
+ 3.0
+
+
+
+ Trigger Events; Enemy In Spotlight Now
+
+Enemy In Spotlight Now (66)
+
+
+66,0,0 Enemy In Spotlight Now: Triggers when the attached building's
+searching spotlight found an enemy. This works like event 54 in
+Firestorm.
+
+This works like event Enemy In Spotlight (35) with the minor difference
+that the game will not remember if this event occurred.
+
+This event is incidental and non-persistent.
+
+ 3.0
+
+
+
+ Trigger Events; Kill Driver
+
+Kill Driver (67+68)
+
+
+67,0,0 Driver Killed: Triggers when the driver of the attached object
+has been killed.
+
+68,0,<house> Driver Killed By House: Triggers when the specified house
+kills the driver of the attached object.
+
+Both events are incidental and persistent.
+
+When killing a driver, event 68 is triggered before 67. This
+is to allow a specific house to take precedence over the general case.
+
+ 3.0
+
+
+
+ Trigger Events; Vehicle Taken
+
+Vehicle Taken (69+70)
+
+
+69,0,0 Vehicle Taken: Triggers when a driver or Vehicle Thief enters
+the attached object.
+
+70,0,<house> Vehicle Taken By House: Triggers when a driver or Vehicle
+Thief of the specified house enters the attached object.
+
+Both events are incidental and persistent.
+
+When taking a vehicle, event 70 is triggered before 69. This
+is to allow a specific house to take precedence over the general case. Both
+trigger before the Entered By event.
+
+ 3.0
+
+
+
+ Trigger Events; Abduction
+
+Abduction (71-74)
+
+
+71,0,0 Abducted: Triggers when the attached object is abducted.
+
+72,0,<house> Abducted By House: Triggers when the specified house
+abducts the attached object.
+
+73,0,0 Abducts Something: Triggers when the attached object abducts
+something.
+
+74,0,<house> Abducts Something Of House: Triggers when an attached
+object abducts something of the specified house.
+
+These events are all incidental and non-persistent.
+
+When an object is abducted, event 72 is triggered before 71
+and when abducting an object, 74 is triggered before 73. This
+is to allow a specific house to take precedence over the general case.
+
+ 3.0
+
+
+
+ Trigger Events; Super Weapon Activation
+
+Super Weapon Activation (75+76)
+
+
+75,0,<super weapon> Super Weapon Activated: Triggers when the owning
+house fires the super weapon.
+
+76,0,<super weapon> Super Weapon Deactivated: Triggers when the owning
+house deactivates the super weapon. Only Charge-Drain super weapon types
+deactivate.
+
+Both events are incidental and persistent.
+
+ 3.0
+
+
+
+ Trigger Events; Super Weapon Near Waypoint
+
+Super Weapon Near Waypoint (77)
+
+
+77,2,<waypoint>,<super weapon ID> Super Weapon Activated Near Waypoint:
+Triggers when the named super weapon is used near the waypoint.
+
+This event is incidental and persistent.
+
+The definition of *near* is the same as for Comes Near Waypoint.
+
+ 3.0
+
+
+
+ Trigger Events; Reverse Engineered
+
+Reverse Engineered (78)
+
+
+78,2,0,<techno type id> Reverse Engineered: Triggers while the owning
+house has access to reverse engineered techno type.
+
+This event is situational and non-persistent.
+
+This event will trigger for the type a unit has been reversed as when put into a
+reverse engineering structure, that is, respecting ReversedAs=.
+
+ 3.0
+
+
+
+ Trigger Events; Reverse Engineering
+
+Reverse Engineering (79+80)
+
+
+79,0,0 Reverse Engineers Anything: Triggers when the attached building
+successfully reverse engineers any type.
+
+80,2,0,<techno type id> Reverse Engineers Type: Triggers when the
+attached building successfully reverse engineers the specific type.
+
+Both events are incidental and persistent.
+
+This event will trigger for the original type that is put into a reverse
+engineering structure, not respecting ReversedAs=. It will however only
+trigger if a unit has been reversed successfully, that is, only once per
+reversed type, respecting ReversedAs=.
+
+When reverse engineering, event 80 is triggered before 79.
+This is to allow a specific house to take precedence over the general case.
+
+ 3.0
+
+
+
+ Trigger Events; House Owns Techno Type
+
+House Owns Techno Type (81+82)
+
+
+81,2,<count>,<techno type id> House Owns Techno Type: Triggers while
+the owning house has at least count instances of the specified techno type.
+
+82,2,<count>,<techno type id> House Doesn't Own Techno Type: Triggers
+while the owning house has fewer than count instances of the specified techno
+type.
+
+Both events are situational and non-persistent.
+
+These mirror the Tech Type Exists (60) and Tech Type Doesn't
+Exist (61), but they only check the owning house instead of all houses.
+
+ 3.0
+
+
+
+ Trigger Events; Attacked Or Destroyed By
+
+Attacked Or Destroyed By (83+84)
+
+
+83,0,0 Attacked Or Destroyed By Anybody: Triggers when the attached
+object is attacked or destroyed by any attack (even ones without source).
+
+84,0,<house> Attacked Or Destroyed By House: Triggers when the attached
+object is attacked or destroyed by an attack where the source is owned by a
+specific house.
+
+Both events are incidental and non-persistent.
+
+These mirror the Attacked By Anybody (6) and Attacked By House
+(44) trigger events, but they will fire even if the object just has been
+destroyed with the first strike, that is, also for fatal hits.
+
+Unlike the original game, the house-specific event will fire first to allow the
+more specific event to take precedence over the less specific one.
+
+ 3.0
+
+
+
+ Trigger Events; Destroyed By House
+
+Destroyed By House (85)
+
+
+85,0,<house> Destroyed By House: Triggers when the attached object is
+destroyed by any attack where the source is owned by a specific house.
+
+This event is incidental and persistent.
+
+The house-specific event 85 will fire before the generic event
+Destroyed By Anybody (7) to allow the more specific event to take
+precedence over the less specific one.
+
+ 3.0
+
+
+
+ Trigger Events; Techno Type Doesn't Exist More Than
+
+Techno Type Doesn't Exist More Than (86)
+
+
+86,2,<count>,<techno type id> Techno Type Doesn't Exist More Than:
+Triggers while there are no more than count instances of the specified techno
+type.
+
+This event is situational and non-persistent.
+
+ 3.0
+
+
+
+ Trigger Events; All KeepAlives Destroyed
+
+All KeepAlives Destroyed (87+88)
+
+
+87,0,<house> All KeepAlives Destroyed: Triggers when the specified
+house has no more KeepAlive=yes objects.
+
+88,0,<house> All KeepAlive Buildings Destroyed: Triggers when the
+specified house has no more buildings with KeepAlive=yes.
+
+Both events are situational and persistent.
+
+ 3.0
+

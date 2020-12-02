@@ -3,7 +3,7 @@
 Crate Settings
 
 
-Money creates do not only award the amounts set in the rules, but also vary the
+Money crates do not only award the amounts set in the rules, but also vary the
 amount randomly by 900 credits. This can be customized using this new tag.
 
 [CrateRules]RandomCrateMoney=integer - credits

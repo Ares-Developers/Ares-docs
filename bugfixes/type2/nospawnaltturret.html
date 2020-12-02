@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>NoSpawnAlt and Turret &mdash; Ares 3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Ares 3.0 documentation" href="../../index.html" />
+    <link rel="up" title="Fixes to Mod Logics" href="index.html" />
+    <link rel="next" title="Occupiers are always trained even if Trainable=no" href="occupiersalwaystrained.html" />
+    <link rel="prev" title="New Construction Options" href="newconstructionoptions.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="occupiersalwaystrained.html" title="Occupiers are always trained even if Trainable=no"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="newconstructionoptions.html" title="New Construction Options"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Bug Fixes</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Fixes to Mod Logics</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="newconstructionoptions.html"
+                        title="previous chapter">New Construction Options</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="occupiersalwaystrained.html"
+                        title="next chapter">Occupiers are always trained even if <span><span class="type">Trainable=no</span></span></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="nospawnalt-and-turret">
+<span id="index-0"></span><h1><span><span class="type">NoSpawnAlt</span></span> and <span><span class="type">Turret</span></span><a class="headerlink" href="#nospawnalt-and-turret" title="Permalink to this headline">¶</a></h1>
+<p>To store the spawn-less voxel, spawner units with <span><code class="docutils literal"><span class="pre">NoSpawnAlt=yes</span></code></span> used the
+same storage space normally used for turrets. Thus, spawner units which should
+have a spawn-less voxel cannot also have a turret at the same time.</p>
+<p><span class="game docutils literal">Ares</span> reworked this feature and makes it possible to combine turrets and
+spawn-less voxels.</p>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="occupiersalwaystrained.html" title="Occupiers are always trained even if Trainable=no"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="newconstructionoptions.html" title="New Construction Options"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Bug Fixes</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >Fixes to Mod Logics</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2020, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

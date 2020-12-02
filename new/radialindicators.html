@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Radial Indicators &mdash; Ares 3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 3.0 documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="ReloadAmount and EmptyReloadAmount" href="reload.html" />
+    <link rel="prev" title="Radar Jammers" href="radarjammers.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="reload.html" title="ReloadAmount and EmptyReloadAmount"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="radarjammers.html" title="Radar Jammers"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="radarjammers.html"
+                        title="previous chapter">Radar Jammers</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="reload.html"
+                        title="next chapter"><span><span class="type">ReloadAmount</span></span> and <span><span class="type">EmptyReloadAmount</span></span></a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="radial-indicators">
+<span id="index-0"></span><h1>Radial Indicators<a class="headerlink" href="#radial-indicators" title="Permalink to this headline">¶</a></h1>
+<p>Radial Indicators were a feature for buildings that could visualize the range of
+its weapons or of some ranged effect it provided like a Stealh Generator. The
+radius was determined automatically by checking certain functions the building
+had, and it could only be turned on or off using a setting.</p>
+<p>With <span class="game docutils literal">Ares</span> it is possible to customize the range with a setting, which
+could be used to override the automatically picked radius, or to give a Radial
+Indicator to a building that by default would not have one. Radial Indicators
+can now also be enabled for units.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►RadialIndicatorRadius=</span></code><span class="type definition"> (integer - cells)</span></span></dt>
+<dd><p class="first">Overrides the radius of the radial indicator for this unit or structure.
+Requires <span><code class="docutils literal"><span class="pre">HasRadialIndicator=yes</span></code></span>. The default is determined by the game.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Units only support non-sweeping, non-concentric radial indicators.</p>
+</div>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="reload.html" title="ReloadAmount and EmptyReloadAmount"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="radarjammers.html" title="Radar Jammers"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2020, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

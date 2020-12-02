@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Sell Units &mdash; Ares 3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/customstyle.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Ares 3.0 documentation" href="../index.html" />
+    <link rel="up" title="New &amp; Enhanced In-Game Logic" href="index.html" />
+    <link rel="next" title="Sight" href="sight.html" />
+    <link rel="prev" title="Self Heal" href="selfheal.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="sight.html" title="Sight"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="selfheal.html" title="Self Heal"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="selfheal.html"
+                        title="previous chapter">Self Heal</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="sight.html"
+                        title="next chapter">Sight</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="sell-units">
+<span id="index-0"></span><h1>Sell Units<a class="headerlink" href="#sell-units" title="Permalink to this headline">¶</a></h1>
+<p>With <span class="game docutils literal">Ares</span>, selling units when they dock at buildings like Repair Depots
+can be disabled per structure, and specific units can be made unsellable on dock
+structures.</p>
+<dl class="docutils">
+<dt><span><code class="definition docutils literal"><span class="pre">[BuildingType]►UnitSell=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether this building can sell docked units. Human players can click the Sell
+button and move it over the docked unit. The cursor will change to the
+SellUnit cursor. Defaults to <span><code class="docutils literal"><span class="pre">UnitRepair</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[TechnoType]►Unsellable=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether this unit can be sold at <span><code class="docutils literal"><span class="pre">UnitSell=yes</span></code></span> docking structures.
+Defaults to <span><code class="docutils literal"><span class="pre">[General]►UnitsUnsellable=</span></code></span>.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[General]►UnitsUnsellable=</span></code><span class="type definition"> (boolean)</span></span></dt>
+<dd>Whether units are by default <span><code class="docutils literal"><span class="pre">Unsellable=yes</span></code></span> and thus not sellable at
+<span><code class="docutils literal"><span class="pre">UnitSell=yes</span></code></span> docking structures. Defaults to <cite>no</cite>.</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified">New in version 3.0.</span></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="sight.html" title="Sight"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="selfheal.html" title="Self Heal"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Ares 3.0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2020, The Ares Contributors.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+
+  Super Weapons; Several default cursor animations enabled
+  Mouse Cursors; Some mouse cursors are now animated
+
+
+Animated Cursors
+
+
+Several mouse cursors contain multiple frames but only display the first one.
+Ares enables these animations for the Paradrop,
+Chronosphere, IronCurtain, Detonate, and
+IvanBomb cursors.
+
+ 0.2
+ 3.0

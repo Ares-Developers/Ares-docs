@@ -27,7 +27,7 @@ crash when a new animation of these types is about to be created.
   Whether new [AudioVisual]►SmallFire and [AudioVisual]►LargeFire
   animations should be randomly created close to the location of this animation
   when expiring. For a complete description of behavior and requirements, refer
-  to Flamer on ModEnc . Defaults
-  to no.
+  to Flamer on ModEnc .
+  Defaults to no.
 
  0.8

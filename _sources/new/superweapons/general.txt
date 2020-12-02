@@ -1,6 +1,12 @@
  single: Super Weapons; Area of effect, affected houses and types, ...
 
-General properties
+General Settings
+
+
+ 0.1
+
+
+Common Settings
 
 
 [SuperWeapon]SW.Range=float,integer
@@ -10,12 +16,28 @@ General properties
   circle with 7 cells diameter, SW.Range=4,6 defines a rectangle 4 cells
   wide and 6 cells high. The range is no longer bound to cell spread's
   limitation of a maximum range of 10.
+[SuperWeapon]SW.Deferment=integer - frames
+  The number of frames after the fired super weapon takes effect. Not all super
+  weapons support deferment.
 [SuperWeapon]SW.CreateRadarEvent=boolean
   Creates a radar event rectangle for every player centered above the super
   weapon's target cell.
+[SuperWeapon]SW.ShowCameo=boolean
+  Sets whether this super weapon will appear in the side bar. This setting is
+  ignored if SW.AutoFire=no is set. Defaults to yes.
+[SuperWeapon]SW.TimerVisibility=enumeration none|owner|allies|team|enemies|all
+  Defines who can see the super weapon timer, if ShowTimer=yes. Observers
+  are considered to be allied to all players. Defaults to all.
+[SuperWeapon]SW.Group=integer
+  Distinguish multiple super weapons of the same type. Defaults to 0.
+
+
+Affected Targets
+
+
 [SuperWeapon]SW.AffectsHouse=enumeration none|owner|allies|team|enemies|all
   Which houses items are affected by this super weapon. You can combine multiple
-  values by comma. team equals owner,allies, all
+  values by comma. team equals owner,allies, and all
   equals owner,allies,enemies. Defaults to team for the Force
   Shield, to all otherwise.
 [SuperWeapon]SW.AffectsTarget=enumeration none|land|water|empty|infantry|units|buildings
@@ -26,16 +48,24 @@ General properties
   valid. For example, SW.AffectsTarget=land,buildings affects all
   buildings that aren't water-bound, SW.AffectsTarget=water affects every
   water cell, occupied or empty.
-[SuperWeapon]SW.ShowCameo=boolean
-  Sets whether this super weapon will appear in the side bar. This setting is
-  ignored if SW.AutoFire=no is set. Defaults to yes.
-[SuperWeapon]SW.Deferment=integer - frames
-  The number of frames after the fired super weapon takes effect. Not all super
-  weapons support deferment.
-[SuperWeapon]SW.TimerVisibility=enumeration none|owner|allies|team|enemies|all
-  Defines who can see the super weapon timer, if ShowTimer=yes. Observers
-  are considered to be allied to all players. Defaults to all.
-[SuperWeapon]SW.Group=integer
-  Distinguish multiple super weapons of the same type. Defaults to 0.
 
- 0.1
+
+Charging Settings
+
+
+[SuperWeapon]SW.InitialReady=boolean
+  Whether the first super weapon of this type will be ready to fire immediately
+  after the super weapon becomes available. Once the super weapon has been
+  fired once, it will recharge normally. Defaults to no.
+[SuperWeapon]SW.VirtualCharge=boolean
+  Once the super weapon becomes available, it will charge continuously, even if
+  the the owning player loses all buildings that provide it. The super weapon
+  will continue to charge in the background or outside the map. When the cameo
+  is removed and added again, the super weapon will appear with the cameo charge
+  already partially progressed instead of restarting to charge. Defaults to
+  no.
+
+   Virtual charge is not supported on UseChargeDrain=yes super
+    weapons.
+
+ 3.0

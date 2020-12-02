@@ -1,0 +1,15 @@
+ Gap Generators; Radius can be greater than 127 cells
+
+
+Gap Generator Radius can be greater than 127 Cells
+
+
+Due to Yuri's Revenge using a too small data type, the radius for the
+Gap Generators could not be greater than 127 cells. Ares reimplemented
+the tags and now GapRadiusInCells= and SuperGapRadiusInCells=
+support greater values.
+
+ Use this new freedom with caution. Including too many cells can cause
+  lag.
+
+ 3.0

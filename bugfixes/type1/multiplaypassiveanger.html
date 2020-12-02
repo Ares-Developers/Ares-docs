@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Animated Super Weapon Cursor &mdash; Ares 2.0p1 documentation</title>
+    <title>MultiplayPassive=yes Houses Anger Players &mdash; Ares 3.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0p1',
+        VERSION:     '3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,10 +24,10 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0p1 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 3.0 documentation" href="../../index.html" />
     <link rel="up" title="Fixes to Original Bugs" href="index.html" />
-    <link rel="next" title="Infantry Cannot Enter Battle Bunkers in Red Health" href="battlebunkerredhealth.html" />
-    <link rel="prev" title="AI Targeting Cloaked Objects With Major Super Weapons" href="aitargetingcloakedobjectswithmajorsuperweapons.html" /> 
+    <link rel="next" title="NoSpawnAlt and Temporal Warheads" href="nospawnalttemporal.html" />
+    <link rel="prev" title="Misleading Veteran Naval Cameos" href="misleadingveterannavalcameos.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -37,12 +37,12 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="battlebunkerredhealth.html" title="Infantry Cannot Enter Battle Bunkers in Red Health"
+          <a href="nospawnalttemporal.html" title="NoSpawnAlt and Temporal Warheads"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="aitargetingcloakedobjectswithmajorsuperweapons.html" title="AI Targeting Cloaked Objects With Major Super Weapons"
+          <a href="misleadingveterannavalcameos.html" title="Misleading Veteran Naval Cameos"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Bug Fixes</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Fixes to Original Bugs</a> &raquo;</li> 
       </ul>
@@ -50,11 +50,11 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="aitargetingcloakedobjectswithmajorsuperweapons.html"
-                        title="previous chapter">AI Targeting Cloaked Objects With Major Super Weapons</a></p>
+  <p class="topless"><a href="misleadingveterannavalcameos.html"
+                        title="previous chapter">Misleading Veteran Naval Cameos</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="battlebunkerredhealth.html"
-                        title="next chapter">Infantry Cannot Enter Battle Bunkers in Red Health</a></p>
+  <p class="topless"><a href="nospawnalttemporal.html"
+                        title="next chapter"><span><span class="type">NoSpawnAlt</span></span> and <span><span class="type">Temporal</span></span> Warheads</a></p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
@@ -76,13 +76,17 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="animated-super-weapon-cursor">
-<span id="index-0"></span><h1>Animated Super Weapon Cursor<a class="headerlink" href="#animated-super-weapon-cursor" title="Permalink to this headline">¶</a></h1>
-<p>Several super weapon cursors contain multiple frames but only display the first
-one. <span class="game docutils literal">Ares</span> enables these animations for the Paradrop, Chronoshift and
-Iron Curtain cursors.</p>
+  <div class="section" id="multiplaypassive-yes-houses-anger-players">
+<span id="index-0"></span><h1><span><span class="type">MultiplayPassive=yes</span></span> Houses Anger Players<a class="headerlink" href="#multiplaypassive-yes-houses-anger-players" title="Permalink to this headline">¶</a></h1>
+<p>AI players pick their favorite enemy by detecting which enemy player caused the
+most damage and destruction. If the neutral houses caused some damage near the
+start of the match (which could also happen if Oil Derricks blew up), AI players
+might pick a neutral house as their enemy to go after and thus start a war
+against civilians.</p>
+<p>With <span class="game docutils literal">Ares</span>, <span><code class="docutils literal"><span class="pre">MultiplayPassive=yes</span></code></span> countries are no longer eligible
+to be picked as favorite enemy.</p>
 <div class="versionadded">
-<p><span class="versionmodified">New in version 0.2.</span></p>
+<p><span class="versionmodified">New in version 3.0.</span></p>
 </div>
 </div>
 
@@ -99,18 +103,18 @@ Iron Curtain cursors.</p>
           <a href="../../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="battlebunkerredhealth.html" title="Infantry Cannot Enter Battle Bunkers in Red Health"
+          <a href="nospawnalttemporal.html" title="NoSpawnAlt and Temporal Warheads"
              >next</a> |</li>
         <li class="right" >
-          <a href="aitargetingcloakedobjectswithmajorsuperweapons.html" title="AI Targeting Cloaked Objects With Major Super Weapons"
+          <a href="misleadingveterannavalcameos.html" title="Misleading Veteran Naval Cameos"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Bug Fixes</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Fixes to Original Bugs</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2019, The Ares Contributors.
+        &copy; Copyright 2020, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

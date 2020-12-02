@@ -1,0 +1,17 @@
+ Buildings; Unloading settings for Refineries
+
+Refineries
+
+
+The following tags have to be defined on the Refinery's image in
+artmd.ini.
+
+[BuildingImage]DockUnloadCell=2 integers - cell offset
+  The cell a harvester will dock on when unloading on this refinery. The cell is
+  required to be passable. Defaults to 3,1.
+
+[BuildingImage]DockUnloadFacing=integer - facing32
+  The facing a harvester will turn to when docking on this refinery. Defaults to
+  8 (east).
+
+ 3.0

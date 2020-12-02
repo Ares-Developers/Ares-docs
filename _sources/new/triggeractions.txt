@@ -1,0 +1,108 @@
+Trigger Actions
+
+
+Ares adds the following Trigger Actions to Yuri's Revenge.
+
+See Editor Support on how to use the new Trigger
+Actions from map editors.
+
+
+ Trigger Actions; Activate Firestorm
+
+Activate Firestorm (92)
+
+
+Activates the Firestorm Wall sections for the house owning the trigger,
+regardless of charge state of the super weapon. The Firestorm will not drain the
+charge, but it will shut down once the house loses power.
+
+These map action is only supported for non-human controlled houses.
+
+The format is 92,0,0,0,0,0,0,A.
+
+ 0.5
+
+
+
+ Trigger Actions; Deactivate Firestorm
+
+Deactivate Firestorm (93)
+
+
+Dectivates the Firestorm Wall sections for the house owning the trigger. Use
+this only to turn off a Firestorm that was activated using Trigger Action
+92.
+
+These map action is only supported for non-human controlled houses.
+
+The format is 93,0,0,0,0,0,0,A.
+
+ 0.5
+
+
+
+ Trigger Actions; Auxiliary Power
+
+Auxiliary Power (146)
+
+
+Permanently adds an amount to the specified house's auxiliary power. Can be
+negative to create a drain or remove previously given auxiliary power. Applying
+this effect multiple times is cumulative.
+
+The format is 146,11,<house id>,0,0,0,0,<power>.
+
+ 3.0
+
+
+
+ Trigger Actions; Kill Drivers
+
+Kill Drivers Of (147)
+
+
+Kills all drivers of the units that have the trigger attached that contains this
+action. This action respects Protected Drivers, Iron Curtain and all the other
+mechanisms that prevent drivers being killed.
+
+All affected units will change to the country specified by the house index.
+Use -1 to change the owner to the house called Special.
+
+The format is 147,0,<house id>,0,0,0,0,A.
+
+ 3.0
+
+
+
+ Trigger Actions; Set EVA Voice
+
+Set EVA Voice (148)
+
+
+Sets the player's EVA voice. The builtin EVAs are 0, 1, and
+2 for Allied, Russian and Yuri respectively. Higher numbers represent
+the custom EVAs. Use -1 to disable EVA.
+
+This implements the Firestorm trigger actions Disable EVA (102)
+and Enable EVA (103).
+
+The format is 148,0,<eva index>,0,0,0,0,A.
+
+ 3.0
+
+
+
+ Trigger Actions; Set Group
+
+Set Group (149)
+
+
+Sets the group number for the object that triggered this action. This can be
+used to make units available for recruitment through TeamTypes and
+TaskForces.
+
+This implements the Firestorm trigger action Set Group (104).
+
+The format is 149,0,<group number>,0,0,0,0,A.
+
+ 3.0

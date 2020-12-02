@@ -84,11 +84,6 @@ minor bugs and also extend it to provide a full set of Prism networking options.
   </extras/PrismForwarding.xls> to see the effect this has on the damage
   dealt by your prism networks.
 
-[BuildingType]PrismForwarding.MyHeight=integer - leptons
-  The height (in leptons) at which this tower's "prism receiver" is considered
-  to be, so that support towers know where to aim their support beams. Defaults
-  to [General]►PrismSupportHeight.
-
 [BuildingType]PrismForwarding.ToAllies=boolean
   Whether or not this Prism Tower is allowed to support allied towers. Defaults
   to no.

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Messages &mdash; Ares 2.0p1 documentation</title>
+    <title>Messages &mdash; Ares 3.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '2.0p1',
+        VERSION:     '3.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Ares 2.0p1 documentation" href="../../index.html" />
+    <link rel="top" title="Ares 3.0 documentation" href="../../index.html" />
     <link rel="up" title="Super Weapons" href="index.html" />
     <link rel="next" title="Cameo Overlay Texts" href="cameooverlay.html" />
     <link rel="prev" title="EVA Events" href="evaevents.html" /> 
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="evaevents.html" title="EVA Events"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">Super Weapons</a> &raquo;</li> 
       </ul>
@@ -96,6 +96,9 @@ right now because another super weapon is active.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Message.InsufficientFunds=</span></code><span class="type definition"> (CSF label)</span></span></dt>
 <dd>Message displayed if the firing player doesn&#8217;t have enough money to launch
 this super weapon.</dd>
+<dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Message.CannotFire=</span></code><span class="type definition"> (CSF label)</span></span></dt>
+<dd>Message displayed to the owning player if firing a super weapon using
+AITargeting fails. Defaults to <cite>MSG:CannotFire</cite>.</dd>
 <dt><span><code class="definition docutils literal"><span class="pre">[SuperWeapon]►Message.FirerColor=</span></code><span class="type definition"> (boolean)</span></span></dt>
 <dd>Messages are displayed in the firing house&#8217;s color scheme. Defaults to
 <cite>no</cite>.</dd>
@@ -127,13 +130,13 @@ player&#8217;s color scheme. This is not respected if
         <li class="right" >
           <a href="evaevents.html" title="EVA Events"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 2.0p1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Ares 3.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >New &amp; Enhanced In-Game Logic</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >Super Weapons</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2019, The Ares Contributors.
+        &copy; Copyright 2020, The Ares Contributors.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>

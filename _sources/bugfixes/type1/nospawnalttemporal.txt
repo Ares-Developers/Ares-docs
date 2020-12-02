@@ -1,0 +1,15 @@
+
+  Temporal; NoSpawnAlt units visual glitch
+  Spawners; NoSpawnAlt and Temporal attacks
+
+
+NoSpawnAlt and Temporal Warheads
+
+
+NoSpawnAlt=yes units always displayed their spawn-less body voxel when
+attacked by Temporal weapons: When a Chrono Legionnaire attacked a
+Destroyer, its docked Osprey would disappear the moment the vessel froze. This
+does not happen any more and spawner units will now always use the body voxel
+displaying their proper state.
+
+ 3.0
